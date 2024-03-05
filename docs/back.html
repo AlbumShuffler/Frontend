@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+  <script src="main.js"></script>
+</head>
+
+<body class="container">
+  <div id="elm-node"></div>
+  <script>
+    const node = document.getElementById('elm-node');
+    var app = Elm.Main.init({
+      node: node
+    });
+
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2)
+        return parts.pop().split(";").shift();
+    }
+
+    function setCookie(name, value) {
+      document.cookie = name + "=" + value + "; path=/";
+    }
+
+    app.ports.fetchCookies.subscribe(str => {
+      const value = getCookie('previousState');
+      console.log('retrieved cookie', value);
+      if (!value) {
+        app.ports.cookieReceiver.send('');
+      } else {
+        app.ports.cookieReceiver.send(value);
+      }
+    });
+
+    app.ports.setCookie.subscribe(str => {
+      console.log('setting cookie', str);
+      setCookie('previousState', str);
+    });
+
+  </script>
+</body>
+
+</html>
