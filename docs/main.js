@@ -5393,7 +5393,7 @@ var $author$project$Main$view = function (model) {
 														A2($elm$html$Html$Attributes$style, 'z-index', '1'),
 														A2($elm$html$Html$Attributes$style, 'aspect-ratio', '1'),
 														A2($elm$html$Html$Attributes$style, 'height', '100%'),
-														A2($elm$html$Html$Attributes$style, 'opacity', '0.30'),
+														A2($elm$html$Html$Attributes$style, 'opacity', '0.7'),
 														A2($elm$html$Html$Attributes$style, 'background', 'linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)'),
 														A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
 														A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
@@ -5564,7 +5564,7 @@ var $author$project$Main$view = function (model) {
 								_List_fromArray(
 									[
 										$elm$html$Html$Attributes$class('z-1'),
-										A2($elm$html$Html$Attributes$style, 'opacity', '0.4'),
+										A2($elm$html$Html$Attributes$style, 'opacity', '0.7'),
 										A2($elm$html$Html$Attributes$style, 'width', '239.62px'),
 										A2($elm$html$Html$Attributes$style, 'height', '244.60px'),
 										A2($elm$html$Html$Attributes$style, 'left', 'calc(50vw - 120px)'),
