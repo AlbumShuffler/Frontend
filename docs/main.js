@@ -5292,6 +5292,7 @@ var $author$project$Main$view = function (model) {
 	var coverCenterX = $elm$core$String$fromInt(60) + '%';
 	var boxShadowSize = '150px';
 	var backgroundImageWidth = 640;
+	var coverMaxWidth = 'min(95vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)');
 	var backgroundImageUrl = 'https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703';
 	var backgroundImageHeight = 640;
 	var backgroundImageAspectRatio = $elm$core$String$fromFloat(backgroundImageWidth / backgroundImageHeight);
@@ -5366,10 +5367,7 @@ var $author$project$Main$view = function (model) {
 														$elm$html$Html$Attributes$class('center-in-relative-parent'),
 														A2($elm$html$Html$Attributes$style, 'z-index', '2'),
 														A2($elm$html$Html$Attributes$style, 'max-height', '100%'),
-														A2(
-														$elm$html$Html$Attributes$style,
-														'max-width',
-														'min(95vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + ')')),
+														A2($elm$html$Html$Attributes$style, 'max-width', coverMaxWidth),
 														A2($elm$html$Html$Attributes$style, 'border-radius', '20px'),
 														A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet),
 														$elm$html$Html$Attributes$alt('album cover')
@@ -5396,7 +5394,7 @@ var $author$project$Main$view = function (model) {
 														A2($elm$html$Html$Attributes$style, 'aspect-ratio', '1'),
 														A2($elm$html$Html$Attributes$style, 'height', '100%'),
 														A2($elm$html$Html$Attributes$style, 'opacity', '0.30'),
-														A2($elm$html$Html$Attributes$style, 'background', 'linear-gradient(45deg, #DF030E 0%%, #04A5E3 100%%)'),
+														A2($elm$html$Html$Attributes$style, 'background', 'linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)'),
 														A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
 														A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
 														A2($elm$html$Html$Attributes$style, 'filter', 'blur(' + (boxShadowSize + ')'))
@@ -5572,7 +5570,7 @@ var $author$project$Main$view = function (model) {
 										A2($elm$html$Html$Attributes$style, 'left', 'calc(50vw - 120px)'),
 										A2($elm$html$Html$Attributes$style, 'top', 'calc(100vh)'),
 										A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-										A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-54.55deg)'),
+										A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
 										A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0')
 									]),
 								_List_fromArray(
