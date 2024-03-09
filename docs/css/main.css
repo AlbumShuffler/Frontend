@@ -4,8 +4,8 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     overflow: hidden;
     margin: 0;
 }
@@ -144,6 +144,7 @@ body {
     background-position: 60% 50%;
     "background-image: url(/img/cover.png);
     */
+    height: 100lvh;
     background-size: 250vh;
     background-color: #00000055;
 }
