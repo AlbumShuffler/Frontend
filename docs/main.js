@@ -5290,7 +5290,7 @@ var $author$project$Main$view = function (model) {
 	var coverSourceSet = 'https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703 640w';
 	var coverCenterY = $elm$core$String$fromInt(50) + '%';
 	var coverCenterX = $elm$core$String$fromInt(60) + '%';
-	var boxShadowSize = '150px';
+	var boxShadowSize = '75px';
 	var backgroundImageWidth = 640;
 	var coverMaxWidth = 'min(95vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)');
 	var backgroundImageUrl = 'https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703';
@@ -5303,7 +5303,7 @@ var $author$project$Main$view = function (model) {
 		_List_fromArray(
 			[
 				$elm$html$Html$Attributes$id('background-image-container'),
-				$elm$html$Html$Attributes$class('h-100 w-100'),
+				$elm$html$Html$Attributes$class(''),
 				A2($elm$html$Html$Attributes$style, 'background-image', 'url(' + (backgroundImageUrl + ')')),
 				A2($elm$html$Html$Attributes$style, 'background-position', coverCenterX + (' ' + coverCenterY))
 			]),
@@ -5314,7 +5314,7 @@ var $author$project$Main$view = function (model) {
 				_List_fromArray(
 					[
 						$elm$html$Html$Attributes$id('background-color-overlay'),
-						$elm$html$Html$Attributes$class('h-100vh')
+						$elm$html$Html$Attributes$class('')
 					]),
 				_List_fromArray(
 					[
@@ -5342,7 +5342,7 @@ var $author$project$Main$view = function (model) {
 								_List_fromArray(
 									[
 										$elm$html$Html$Attributes$class('d-flex justify-content-center'),
-										A2($elm$html$Html$Attributes$style, 'max-height', 'calc(80vh - 300px)')
+										A2($elm$html$Html$Attributes$style, 'max-height', 'calc(80svh - 300px)')
 									]),
 								_List_fromArray(
 									[
@@ -5355,7 +5355,8 @@ var $author$project$Main$view = function (model) {
 												A2(
 												$elm$html$Html$Attributes$style,
 												'width',
-												'min(95vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)'))
+												'min(95vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)')),
+												A2($elm$html$Html$Attributes$style, 'max-height', 'calc(80svh - 300px)')
 											]),
 										_List_fromArray(
 											[
@@ -5563,6 +5564,7 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
+										$elm$html$Html$Attributes$id('hide-on-mini'),
 										$elm$html$Html$Attributes$class('z-1'),
 										A2($elm$html$Html$Attributes$style, 'opacity', '0.7'),
 										A2($elm$html$Html$Attributes$style, 'width', '239.62px'),

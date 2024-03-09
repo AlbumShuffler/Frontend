@@ -101,7 +101,7 @@ view : Model -> Html Msg
 view model =
     let
         coverMaxWidth = "min(95vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"
-        boxShadowSize = "150px"
+        boxShadowSize = "75px"
         albumId = "abcdefghij"
         albumName = "100/Die Toteninsel"
         urlToOpenAlbum = "https://example.com"
@@ -116,11 +116,11 @@ view model =
         xLink      = Html.a [ class "ml-05 p-20", href "https://x.com/b0wter" ] [ img [ class "social-button", src "img/x.svg", alt "Link to X" ] [] ]
     in
         div [ id "background-image-container"
-            , class "h-100 w-100"
+            , class ""
             , style "background-image" ("url(" ++ backgroundImageUrl ++ ")")
             , style "background-position" (coverCenterX ++ " " ++ coverCenterY) 
             ] [
-            div [ id "background-color-overlay", class "h-100vh" ] [
+            div [ id "background-color-overlay", class "" ] [
                 div [ id "layout-container", class "d-flex justify-content-space-between no-wrap-column" ] [
                     
                     -- social links
@@ -131,8 +131,8 @@ view model =
 
                     -- cover
                     div
-                    [ class "d-flex justify-content-center", style "max-height" "calc(80vh - 300px)" ]
-                    [ div [ style "position" "relative", style "aspect-ratio" backgroundImageAspectRatio, style "width" ("min(95vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)") ]
+                    [ class "d-flex justify-content-center", style "max-height" "calc(80svh - 300px)" ]
+                    [ div [ style "position" "relative", style "aspect-ratio" backgroundImageAspectRatio, style "width" ("min(95vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"), style "max-height" "calc(80svh - 300px)" ]
                       [ img [ id "cover-img"
                             , class "center-in-relative-parent"
                             , style "z-index" "2"
@@ -182,7 +182,7 @@ view model =
                     ],
 
                     -- colored shapes
-                    div [ class "z-1", style "opacity" "0.7", style "width" "239.62px", style "height" "244.60px", style "left" "calc(50vw - 120px)", style "top" "calc(100vh)", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0" ]
+                    div [ id "hide-on-mini", class "z-1", style "opacity" "0.7", style "width" "239.62px", style "height" "244.60px", style "left" "calc(50vw - 120px)", style "top" "calc(100vh)", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0" ]
                     [ div [ class "z-1", style "width" "133.77px", style "height" "179.56px", style "left" "0", style "top" "0", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0", style "background" "#DF030E", style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px", style "filter" "blur(210.86px)"] []
                     , div [ class "z-1", style "width" "133.54px", style "height" "183.31px", style "left" "119.12px", style "top" "-28.67px", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0", style "background" "#04A5E3", style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px", style "filter" "blur(210.86px)"] []
                     ]

@@ -126,9 +126,16 @@ body {
     color:white;
 }
 
+@media screen and (max-device-width: 375px) {
+    #hide-on-mini {
+        display: none;
+    }
+}
+
 #layout-container {
     height: 87.5vh;
-    backdrop-filter: blur(3px)
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 #background-image-container {
