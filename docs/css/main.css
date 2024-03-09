@@ -152,6 +152,7 @@ body {
 #background-color-overlay {
     background: #000000d9;
     overflow: hidden;
+    height: 100%;
 }
 
 .d-flex {
