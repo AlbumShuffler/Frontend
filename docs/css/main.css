@@ -1,66 +1,73 @@
-@font-face {
-    font-family: 'Urbanist';
-    src: url(../fonts/urbanist.woff2);
+body {
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
 }
 
-body {
-    /* width: 100vw;
-    height: 100vh; */
+#background-image-container {
+    /*
+    background image and position need to be set dynamically
+    background-position: 60% 50%;
+    "background-image: url(/img/cover.png);
+    */
+    height: 100lvh;
+    background-size: 250vh;
+}
+
+#background-color-overlay {
+    background: #000000e0;
     overflow: hidden;
-    margin: 0;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#inner-layout-container {
+    /*
+    We use `align-items` instead of `justify-content` to center the
+    elements horizontally because we use `flex-column`
+    */
+    align-items: center;
+    justify-content: center;
 }
 
 #cover-img {
+    object-fit: contain;
+    max-height: 100%;
     border-radius: 20px;
+    width: 100%;
 }
 
 #cover-text {
     font-family: 'Urbanist', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    height: 20vh;
+    line-height: 20vh;
     color: white;
     text-shadow: 0 0 10px black;
     width: 100%;
     text-align: center;
 }
 
-.row-1 {
-    height: 12.5vh;
+@media only screen and (max-height: 600px) {
+    #cover-img {
+        display: none;
+    }
 }
 
-.row-3 {
-    height: 37.5vh;
+@media only screen and (max-height: 600px) {
+    #cover-text {
+        display: unset !important;
+    }
 }
 
-.h-100 {
-    height: 100%;
+.non-styled-link {
+    text-decoration: none;
+    color:white;
 }
 
-.h-100vh {
-    height: 100vh;
-}
-
-.w-100 {
-    width: 100%;
-}
-
-.w-100vw {
-    width: 100vw;
-}
-
-.justify-content-center {
-    justify-content: center;
-}
-
-.justify-content-space-between {
-    justify-content: space-between;
-}
-
-.no-wrap-column {
-    flex-flow: column nowrap;
-}
-
-.align-items-center {
-    align-items: center;
+.small-text {
+    font-size: 0.75rem;
 }
 
 .mr-05 {
@@ -91,67 +98,7 @@ body {
     height: 1.5rem;
 }
 
-.center-in-relative-parent {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.disabled-text-color {
-    color: #aaa;
-}
-
-@media only screen and (max-height: 600px) {
-    #cover-img {
-        display: none;
-    }
-}
-
-@media only screen and (max-height: 600px) {
-    #cover-text {
-        display: unset !important;
-    }
-}
-
-.z-1 {
-    z-index: -1;
-}
-
-.z-2 {
-    z-index: 2;
-}
-
-.non-styled-link {
-    text-decoration: none;
-    color:white;
-}
-
-@media screen and (max-device-width: 375px) {
-    #hide-on-mini {
-        display: none;
-    }
-}
-
-#layout-container {
-    height: 87.5vh;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-#background-image-container {
-    /*
-    background image and position need to be set dynamically
-    background-position: 60% 50%;
-    "background-image: url(/img/cover.png);
-    */
-    height: 100lvh;
-    background-size: 250vh;
-    background-color: #00000055;
-}
-
-#background-color-overlay {
-    background: #000000d9;
-    overflow: hidden;
+.h-100 {
     height: 100%;
 }
 
@@ -159,6 +106,22 @@ body {
     display: flex;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
 .flex-justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
     justify-content: center;
 }

@@ -100,7 +100,8 @@ update msg model =
 view : Model -> Html Msg
 view model =
     let
-        coverMaxWidth = "min(95vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"
+        coverMaxWidth = "min(90vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"
+        coverMaxHeight = "min(60vh, 90vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"
         boxShadowSize = "75px"
         albumId = "abcdefghij"
         albumName = "100/Die Toteninsel"
@@ -112,80 +113,66 @@ view model =
         coverCenterX = (60 |> String.fromInt) ++ "%"
         coverCenterY = (50 |> String.fromInt) ++ "%"
         backgroundImageAspectRatio = (backgroundImageWidth / backgroundImageHeight) |> String.fromFloat
-        githubLink = Html.a [ class "mr-05 p-20", href "https://github.com/b0wter/shuffler" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
-        xLink      = Html.a [ class "ml-05 p-20", href "https://x.com/b0wter" ] [ img [ class "social-button", src "img/x.svg", alt "Link to X" ] [] ]
+        githubLink = Html.a [ class "mr-05 p-15", href "https://github.com/b0wter/shuffler" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
+        xLink      = Html.a [ class "ml-05 p-15", href "https://x.com/b0wter" ] [ img [ class "social-button", src "img/x.svg", alt "Link to X" ] [] ]
     in
-        div [ id "background-image-container"
-            , class ""
-            , style "background-image" ("url(" ++ backgroundImageUrl ++ ")")
-            , style "background-position" (coverCenterX ++ " " ++ coverCenterY) 
-            ] [
-            div [ id "background-color-overlay", class "" ] [
-                div [ id "layout-container", class "d-flex justify-content-space-between no-wrap-column" ] [
-                    
-                    -- social links
-                    div 
-                    [ class "d-flex justify-content-center align-items-center", style "height" "100px", style "margin-top" "5vh" ]
-                    [ githubLink, xLink ],
-                    
-
-                    -- cover
-                    div
-                    [ class "d-flex justify-content-center", style "max-height" "calc(80svh - 300px)" ]
-                    [ div [ style "position" "relative", style "aspect-ratio" backgroundImageAspectRatio, style "width" ("min(95vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"), style "max-height" "calc(80svh - 300px)" ]
-                      [ img [ id "cover-img"
-                            , class "center-in-relative-parent"
-                            , style "z-index" "2"
-                            , style "max-height" "100%"
-                            , style "max-width" coverMaxWidth
-                            , style "border-radius" "20px"
-                            , attribute "srcset" coverSourceSet
-                            , alt "album cover" ] []
-                      , div [ id "cover-text", class "center-in-relative-parent", style "display" "none" ] [ text albumName ]
-                      , div [ class "center-in-relative-parent"
-                            , style "z-index" "1"
-                            , style "aspect-ratio" "1"
-                            , style "height" "100%"
-                            , style "opacity" "0.7"
-                            , style "background" "linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)"
-                            , style "box-shadow" (boxShadowSize ++ " " ++ boxShadowSize ++ " " ++ boxShadowSize), style "border-radius" "20.02px", style "filter" ("blur(" ++ boxShadowSize ++")") ] [] ]
-                    ],
-
-                    div []
-                    [
-                      -- album controls (prev, play, next)
-                      div 
-                      [ class "d-flex align-items-center justify-content-center" ]
-                      [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/empty-circle.svg" ] []
-                      , a [ href urlToOpenAlbum ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
-                      , a [ href "/" ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
-                      ]
-
-                      -- blacklist controls
-                    , div
-                      [ style "text-decoration" "none", style "color" "white" ]
-                      [ div []
-                        [ div [ style "font-family" "urbanist, sans-serif", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center" ] [ text "0 albums on blacklist"]
-                        , div 
-                          [ style "font-family" "urbanist, sans-serif", style "font-weight" "1000", style "height" "5rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center"]
-                          [ a [ href ("block/" ++ albumId), class "z-2 non-styled-link d-flex align-items-center mr-10" ]
-                            [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt "block current album" ] []
-                            , div [] [ text "add" ]
-                            ]
-                          , a [ href "clearAll", class "z-2 non-styled-link d-flex align-items-center ml-10" ]
-                            [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist"] []
-                            , div [] [ text "clear" ]
-                            ]
-                          ]
-                        ]
-                      ]
-                    ],
-
-                    -- colored shapes
-                    div [ id "hide-on-mini", class "z-1", style "opacity" "0.7", style "width" "239.62px", style "height" "244.60px", style "left" "calc(50vw - 120px)", style "top" "calc(100vh)", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0" ]
-                    [ div [ class "z-1", style "width" "133.77px", style "height" "179.56px", style "left" "0", style "top" "0", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0", style "background" "#DF030E", style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px", style "filter" "blur(210.86px)"] []
-                    , div [ class "z-1", style "width" "133.54px", style "height" "183.31px", style "left" "119.12px", style "top" "-28.67px", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0", style "background" "#04A5E3", style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px", style "filter" "blur(210.86px)"] []
-                    ]
-                ]
+        div
+        [ id "background-image-container"
+        , style "background-image" ("url(" ++ backgroundImageUrl ++ ")")
+        , style "background-position" (coverCenterX ++ " " ++ coverCenterY) 
+        ]
+        [ div 
+          [ id "background-color-overlay"
+          ] 
+          [ div 
+            [ id "inner-layout-container"
+            , class "d-flex flex-column"
+            , style "height" "100svh"
             ]
+            [ div 
+              [] 
+              [ div 
+                [ class "d-flex justify-content-center align-items-center" ]
+                [ githubLink, xLink ]
+              ]
+            , div 
+              [ style "flex-grow" "1"
+              , style "max-width" coverMaxWidth
+              , style "max-height" coverMaxHeight
+              ]
+              [ img 
+                [ id "cover-img"
+                , attribute "srcset" coverSourceSet
+                ]
+                []
+              , div
+                [ style "opacity" "0.7"
+                , style "background" "linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)"
+                , style "box-shadow" (boxShadowSize ++ " " ++ boxShadowSize ++ " " ++ boxShadowSize), style "border-radius" "20.02px", style "filter" ("blur(" ++ boxShadowSize ++")")
+                ]
+                [ ]
+              , div [ id "cover-text", style "display" "none" ] [ text albumName ]
+              ]
+            , div 
+              [ class "d-flex align-items-center justify-content-center" ]
+              [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/empty-circle.svg" ] []
+              , a [ href urlToOpenAlbum ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
+              , a [ href "/" ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
+              ]
+            , div
+              [ style "text-decoration" "none", style "color" "white" ]
+              [ div []
+              [ div 
+                [ style "font-family" "urbanist, sans-serif", style "font-weight" "1000", style "height" "4rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center" ]
+                [ a
+                  [ href ("block/" ++ albumId), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
+                  [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt "block current album" ] [], div [] [ text "block" ] ]
+                , a
+                  [ href "clearAll", class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
+                  [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist"] [], div [] [ text "clear blocked" ] ]
+                ]
+              ]
+            ]
+            ]
+          ]
         ]

@@ -5252,7 +5252,7 @@ var $author$project$Main$view = function (model) {
 		$elm$html$Html$a,
 		_List_fromArray(
 			[
-				$elm$html$Html$Attributes$class('ml-05 p-20'),
+				$elm$html$Html$Attributes$class('ml-05 p-15'),
 				$elm$html$Html$Attributes$href('https://x.com/b0wter')
 			]),
 		_List_fromArray(
@@ -5272,7 +5272,7 @@ var $author$project$Main$view = function (model) {
 		$elm$html$Html$a,
 		_List_fromArray(
 			[
-				$elm$html$Html$Attributes$class('mr-05 p-20'),
+				$elm$html$Html$Attributes$class('mr-05 p-15'),
 				$elm$html$Html$Attributes$href('https://github.com/b0wter/shuffler')
 			]),
 		_List_fromArray(
@@ -5292,7 +5292,8 @@ var $author$project$Main$view = function (model) {
 	var coverCenterX = $elm$core$String$fromInt(60) + '%';
 	var boxShadowSize = '75px';
 	var backgroundImageWidth = 640;
-	var coverMaxWidth = 'min(95vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)');
+	var coverMaxHeight = 'min(60vh, 90vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)');
+	var coverMaxWidth = 'min(90vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)');
 	var backgroundImageUrl = 'https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703';
 	var backgroundImageHeight = 640;
 	var backgroundImageAspectRatio = $elm$core$String$fromFloat(backgroundImageWidth / backgroundImageHeight);
@@ -5303,7 +5304,6 @@ var $author$project$Main$view = function (model) {
 		_List_fromArray(
 			[
 				$elm$html$Html$Attributes$id('background-image-container'),
-				$elm$html$Html$Attributes$class(''),
 				A2($elm$html$Html$Attributes$style, 'background-image', 'url(' + (backgroundImageUrl + ')')),
 				A2($elm$html$Html$Attributes$style, 'background-position', coverCenterX + (' ' + coverCenterY))
 			]),
@@ -5313,8 +5313,7 @@ var $author$project$Main$view = function (model) {
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$id('background-color-overlay'),
-						$elm$html$Html$Attributes$class('')
+						$elm$html$Html$Attributes$id('background-color-overlay')
 					]),
 				_List_fromArray(
 					[
@@ -5322,87 +5321,12 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$id('layout-container'),
-								$elm$html$Html$Attributes$class('d-flex justify-content-space-between no-wrap-column')
+								$elm$html$Html$Attributes$id('inner-layout-container'),
+								$elm$html$Html$Attributes$class('d-flex flex-column'),
+								A2($elm$html$Html$Attributes$style, 'height', '100svh')
 							]),
 						_List_fromArray(
 							[
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center'),
-										A2($elm$html$Html$Attributes$style, 'height', '100px'),
-										A2($elm$html$Html$Attributes$style, 'margin-top', '5vh')
-									]),
-								_List_fromArray(
-									[githubLink, xLink])),
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('d-flex justify-content-center'),
-										A2($elm$html$Html$Attributes$style, 'max-height', 'calc(80svh - 300px)')
-									]),
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$div,
-										_List_fromArray(
-											[
-												A2($elm$html$Html$Attributes$style, 'position', 'relative'),
-												A2($elm$html$Html$Attributes$style, 'aspect-ratio', backgroundImageAspectRatio),
-												A2(
-												$elm$html$Html$Attributes$style,
-												'width',
-												'min(95vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)')),
-												A2($elm$html$Html$Attributes$style, 'max-height', 'calc(80svh - 300px)')
-											]),
-										_List_fromArray(
-											[
-												A2(
-												$elm$html$Html$img,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$id('cover-img'),
-														$elm$html$Html$Attributes$class('center-in-relative-parent'),
-														A2($elm$html$Html$Attributes$style, 'z-index', '2'),
-														A2($elm$html$Html$Attributes$style, 'max-height', '100%'),
-														A2($elm$html$Html$Attributes$style, 'max-width', coverMaxWidth),
-														A2($elm$html$Html$Attributes$style, 'border-radius', '20px'),
-														A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet),
-														$elm$html$Html$Attributes$alt('album cover')
-													]),
-												_List_Nil),
-												A2(
-												$elm$html$Html$div,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$id('cover-text'),
-														$elm$html$Html$Attributes$class('center-in-relative-parent'),
-														A2($elm$html$Html$Attributes$style, 'display', 'none')
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text(albumName)
-													])),
-												A2(
-												$elm$html$Html$div,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('center-in-relative-parent'),
-														A2($elm$html$Html$Attributes$style, 'z-index', '1'),
-														A2($elm$html$Html$Attributes$style, 'aspect-ratio', '1'),
-														A2($elm$html$Html$Attributes$style, 'height', '100%'),
-														A2($elm$html$Html$Attributes$style, 'opacity', '0.7'),
-														A2($elm$html$Html$Attributes$style, 'background', 'linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)'),
-														A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
-														A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
-														A2($elm$html$Html$Attributes$style, 'filter', 'blur(' + (boxShadowSize + ')'))
-													]),
-												_List_Nil)
-											]))
-									])),
 								A2(
 								$elm$html$Html$div,
 								_List_Nil,
@@ -5412,7 +5336,76 @@ var $author$project$Main$view = function (model) {
 										$elm$html$Html$div,
 										_List_fromArray(
 											[
-												$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center')
+												$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
+											]),
+										_List_fromArray(
+											[githubLink, xLink]))
+									])),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										A2($elm$html$Html$Attributes$style, 'flex-grow', '1'),
+										A2($elm$html$Html$Attributes$style, 'max-width', coverMaxWidth),
+										A2($elm$html$Html$Attributes$style, 'max-height', coverMaxHeight)
+									]),
+								_List_fromArray(
+									[
+										A2(
+										$elm$html$Html$img,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$id('cover-img'),
+												A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet)
+											]),
+										_List_Nil),
+										A2(
+										$elm$html$Html$div,
+										_List_fromArray(
+											[
+												A2($elm$html$Html$Attributes$style, 'opacity', '0.7'),
+												A2($elm$html$Html$Attributes$style, 'background', 'linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)'),
+												A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
+												A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
+												A2($elm$html$Html$Attributes$style, 'filter', 'blur(' + (boxShadowSize + ')'))
+											]),
+										_List_Nil),
+										A2(
+										$elm$html$Html$div,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$id('cover-text'),
+												A2($elm$html$Html$Attributes$style, 'display', 'none')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text(albumName)
+											]))
+									])),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center')
+									]),
+								_List_fromArray(
+									[
+										A2(
+										$elm$html$Html$img,
+										_List_fromArray(
+											[
+												A2($elm$html$Html$Attributes$style, 'padding', '1.5rem'),
+												A2($elm$html$Html$Attributes$style, 'height', '25px'),
+												A2($elm$html$Html$Attributes$style, 'width', '25px'),
+												A2($elm$html$Html$Attributes$style, 'transform', 'scaleX(-1)'),
+												$elm$html$Html$Attributes$src('img/empty-circle.svg')
+											]),
+										_List_Nil),
+										A2(
+										$elm$html$Html$a,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$href(urlToOpenAlbum)
 											]),
 										_List_fromArray(
 											[
@@ -5420,197 +5413,113 @@ var $author$project$Main$view = function (model) {
 												$elm$html$Html$img,
 												_List_fromArray(
 													[
-														A2($elm$html$Html$Attributes$style, 'padding', '1.5rem'),
-														A2($elm$html$Html$Attributes$style, 'height', '25px'),
-														A2($elm$html$Html$Attributes$style, 'width', '25px'),
-														A2($elm$html$Html$Attributes$style, 'transform', 'scaleX(-1)'),
-														$elm$html$Html$Attributes$src('img/empty-circle.svg')
+														A2($elm$html$Html$Attributes$style, 'height', '10rem'),
+														$elm$html$Html$Attributes$src('img/play.svg'),
+														$elm$html$Html$Attributes$alt('play current album on Spotify')
 													]),
-												_List_Nil),
-												A2(
-												$elm$html$Html$a,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$href(urlToOpenAlbum)
-													]),
-												_List_fromArray(
-													[
-														A2(
-														$elm$html$Html$img,
-														_List_fromArray(
-															[
-																A2($elm$html$Html$Attributes$style, 'height', '10rem'),
-																$elm$html$Html$Attributes$src('img/play.svg'),
-																$elm$html$Html$Attributes$alt('play current album on Spotify')
-															]),
-														_List_Nil)
-													])),
-												A2(
-												$elm$html$Html$a,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$href('/')
-													]),
-												_List_fromArray(
-													[
-														A2(
-														$elm$html$Html$img,
-														_List_fromArray(
-															[
-																$elm$html$Html$Attributes$class('p-15'),
-																$elm$html$Html$Attributes$src('img/next.svg'),
-																$elm$html$Html$Attributes$alt('get next suggestion')
-															]),
-														_List_Nil)
-													]))
+												_List_Nil)
 											])),
 										A2(
-										$elm$html$Html$div,
+										$elm$html$Html$a,
 										_List_fromArray(
 											[
-												A2($elm$html$Html$Attributes$style, 'text-decoration', 'none'),
-												A2($elm$html$Html$Attributes$style, 'color', 'white')
+												$elm$html$Html$Attributes$href('/')
 											]),
 										_List_fromArray(
 											[
 												A2(
-												$elm$html$Html$div,
-												_List_Nil,
+												$elm$html$Html$img,
 												_List_fromArray(
 													[
-														A2(
-														$elm$html$Html$div,
-														_List_fromArray(
-															[
-																A2($elm$html$Html$Attributes$style, 'font-family', 'urbanist, sans-serif'),
-																A2($elm$html$Html$Attributes$style, 'text-transform', 'uppercase'),
-																$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
-															]),
-														_List_fromArray(
-															[
-																$elm$html$Html$text('0 albums on blacklist')
-															])),
-														A2(
-														$elm$html$Html$div,
-														_List_fromArray(
-															[
-																A2($elm$html$Html$Attributes$style, 'font-family', 'urbanist, sans-serif'),
-																A2($elm$html$Html$Attributes$style, 'font-weight', '1000'),
-																A2($elm$html$Html$Attributes$style, 'height', '5rem'),
-																A2($elm$html$Html$Attributes$style, 'text-transform', 'uppercase'),
-																$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
-															]),
-														_List_fromArray(
-															[
-																A2(
-																$elm$html$Html$a,
-																_List_fromArray(
-																	[
-																		$elm$html$Html$Attributes$href('block/' + albumId),
-																		$elm$html$Html$Attributes$class('z-2 non-styled-link d-flex align-items-center mr-10')
-																	]),
-																_List_fromArray(
-																	[
-																		A2(
-																		$elm$html$Html$img,
-																		_List_fromArray(
-																			[
-																				A2($elm$html$Html$Attributes$style, 'height', '2rem'),
-																				$elm$html$Html$Attributes$class('mr-05'),
-																				$elm$html$Html$Attributes$src('img/block.svg'),
-																				$elm$html$Html$Attributes$alt('block current album')
-																			]),
-																		_List_Nil),
-																		A2(
-																		$elm$html$Html$div,
-																		_List_Nil,
-																		_List_fromArray(
-																			[
-																				$elm$html$Html$text('add')
-																			]))
-																	])),
-																A2(
-																$elm$html$Html$a,
-																_List_fromArray(
-																	[
-																		$elm$html$Html$Attributes$href('clearAll'),
-																		$elm$html$Html$Attributes$class('z-2 non-styled-link d-flex align-items-center ml-10')
-																	]),
-																_List_fromArray(
-																	[
-																		A2(
-																		$elm$html$Html$img,
-																		_List_fromArray(
-																			[
-																				A2($elm$html$Html$Attributes$style, 'height', '2rem'),
-																				$elm$html$Html$Attributes$class('mr-05'),
-																				$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
-																				$elm$html$Html$Attributes$alt('clear album blacklist')
-																			]),
-																		_List_Nil),
-																		A2(
-																		$elm$html$Html$div,
-																		_List_Nil,
-																		_List_fromArray(
-																			[
-																				$elm$html$Html$text('clear')
-																			]))
-																	]))
-															]))
-													]))
+														$elm$html$Html$Attributes$class('p-15'),
+														$elm$html$Html$Attributes$src('img/next.svg'),
+														$elm$html$Html$Attributes$alt('get next suggestion')
+													]),
+												_List_Nil)
 											]))
 									])),
 								A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
-										$elm$html$Html$Attributes$id('hide-on-mini'),
-										$elm$html$Html$Attributes$class('z-1'),
-										A2($elm$html$Html$Attributes$style, 'opacity', '0.7'),
-										A2($elm$html$Html$Attributes$style, 'width', '239.62px'),
-										A2($elm$html$Html$Attributes$style, 'height', '244.60px'),
-										A2($elm$html$Html$Attributes$style, 'left', 'calc(50vw - 120px)'),
-										A2($elm$html$Html$Attributes$style, 'top', 'calc(100vh)'),
-										A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-										A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
-										A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0')
+										A2($elm$html$Html$Attributes$style, 'text-decoration', 'none'),
+										A2($elm$html$Html$Attributes$style, 'color', 'white')
 									]),
 								_List_fromArray(
 									[
 										A2(
 										$elm$html$Html$div,
+										_List_Nil,
 										_List_fromArray(
 											[
-												$elm$html$Html$Attributes$class('z-1'),
-												A2($elm$html$Html$Attributes$style, 'width', '133.77px'),
-												A2($elm$html$Html$Attributes$style, 'height', '179.56px'),
-												A2($elm$html$Html$Attributes$style, 'left', '0'),
-												A2($elm$html$Html$Attributes$style, 'top', '0'),
-												A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-												A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
-												A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0'),
-												A2($elm$html$Html$Attributes$style, 'background', '#DF030E'),
-												A2($elm$html$Html$Attributes$style, 'box-shadow', '210.86053466796875px 210.86053466796875px 210.86053466796875px'),
-												A2($elm$html$Html$Attributes$style, 'filter', 'blur(210.86px)')
-											]),
-										_List_Nil),
-										A2(
-										$elm$html$Html$div,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('z-1'),
-												A2($elm$html$Html$Attributes$style, 'width', '133.54px'),
-												A2($elm$html$Html$Attributes$style, 'height', '183.31px'),
-												A2($elm$html$Html$Attributes$style, 'left', '119.12px'),
-												A2($elm$html$Html$Attributes$style, 'top', '-28.67px'),
-												A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-												A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
-												A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0'),
-												A2($elm$html$Html$Attributes$style, 'background', '#04A5E3'),
-												A2($elm$html$Html$Attributes$style, 'box-shadow', '210.86053466796875px 210.86053466796875px 210.86053466796875px'),
-												A2($elm$html$Html$Attributes$style, 'filter', 'blur(210.86px)')
-											]),
-										_List_Nil)
+												A2(
+												$elm$html$Html$div,
+												_List_fromArray(
+													[
+														A2($elm$html$Html$Attributes$style, 'font-family', 'urbanist, sans-serif'),
+														A2($elm$html$Html$Attributes$style, 'font-weight', '1000'),
+														A2($elm$html$Html$Attributes$style, 'height', '4rem'),
+														A2($elm$html$Html$Attributes$style, 'text-transform', 'uppercase'),
+														$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
+													]),
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$a,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$href('block/' + albumId),
+																$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center mr-10')
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$elm$html$Html$img,
+																_List_fromArray(
+																	[
+																		A2($elm$html$Html$Attributes$style, 'height', '2rem'),
+																		$elm$html$Html$Attributes$class('mr-05'),
+																		$elm$html$Html$Attributes$src('img/block.svg'),
+																		$elm$html$Html$Attributes$alt('block current album')
+																	]),
+																_List_Nil),
+																A2(
+																$elm$html$Html$div,
+																_List_Nil,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$text('block')
+																	]))
+															])),
+														A2(
+														$elm$html$Html$a,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$href('clearAll'),
+																$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center ml-10')
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$elm$html$Html$img,
+																_List_fromArray(
+																	[
+																		A2($elm$html$Html$Attributes$style, 'height', '2rem'),
+																		$elm$html$Html$Attributes$class('mr-05'),
+																		$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
+																		$elm$html$Html$Attributes$alt('clear album blacklist')
+																	]),
+																_List_Nil),
+																A2(
+																$elm$html$Html$div,
+																_List_Nil,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$text('clear blocked')
+																	]))
+															]))
+													]))
+											]))
 									]))
 							]))
 					]))
