@@ -5228,7 +5228,6 @@ var $elm$virtual_dom$VirtualDom$attribute = F2(
 var $elm$html$Html$Attributes$attribute = $elm$virtual_dom$VirtualDom$attribute;
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$core$String$fromFloat = _String_fromNumber;
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -5293,10 +5292,9 @@ var $author$project$Main$view = function (model) {
 	var boxShadowSize = '75px';
 	var backgroundImageWidth = 640;
 	var coverMaxHeight = 'min(60vh, 90vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)');
-	var coverMaxWidth = 'min(90vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)');
+	var coverMaxWidth = 'min(80vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)');
 	var backgroundImageUrl = 'https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703';
 	var backgroundImageHeight = 640;
-	var backgroundImageAspectRatio = $elm$core$String$fromFloat(backgroundImageWidth / backgroundImageHeight);
 	var albumName = '100/Die Toteninsel';
 	var albumId = 'abcdefghij';
 	return A2(

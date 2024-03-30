@@ -100,7 +100,7 @@ update msg model =
 view : Model -> Html Msg
 view model =
     let
-        coverMaxWidth = "min(90vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"
+        coverMaxWidth = "min(80vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"
         coverMaxHeight = "min(60vh, 90vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"
         boxShadowSize = "75px"
         albumId = "abcdefghij"
@@ -112,7 +112,7 @@ view model =
         backgroundImageHeight = 640
         coverCenterX = (60 |> String.fromInt) ++ "%"
         coverCenterY = (50 |> String.fromInt) ++ "%"
-        backgroundImageAspectRatio = (backgroundImageWidth / backgroundImageHeight) |> String.fromFloat
+        --backgroundImageAspectRatio = (backgroundImageWidth / backgroundImageHeight) |> String.fromFloat
         githubLink = Html.a [ class "mr-05 p-15", href "https://github.com/b0wter/shuffler" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
         xLink      = Html.a [ class "ml-05 p-15", href "https://x.com/b0wter" ] [ img [ class "social-button", src "img/x.svg", alt "Link to X" ] [] ]
     in
