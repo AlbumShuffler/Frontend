@@ -137,24 +137,41 @@ view model =
               ]
             , div 
               [ style "flex-grow" "1"
-              , style "max-width" coverMaxWidth
+              , style "width" coverMaxWidth
               , style "max-height" coverMaxHeight
               ]
-              [ img 
-                [ id "cover-img"
-                , attribute "srcset" coverSourceSet
+              [ div
+                [ style "width" coverMaxWidth, style "position" "relative", style "height" "100%" ]
+                [ img 
+                  [ id "cover-img"
+                  , attribute "srcset" coverSourceSet
+                  , style "position" "absolute"
+                  , style "top" "0"
+                  , style "bottom" "0"
+                  , style "width" coverMaxWidth
+                  , style "z-index" "1"
+                  ]
+                  []
+                , div
+                  [ id "cover-glow"
+                  , style "opacity" "0.7"
+                  , style "position" "absolute"
+                  , style "top" "0"
+                  , style "bottom" "0"
+                  , style "width" coverMaxWidth
+                  , style "z-index" "0"
+                  , style "max-height" coverMaxWidth
+                  , style "background" "linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)"
+                  , style "box-shadow" (boxShadowSize ++ " " ++ boxShadowSize ++ " " ++ boxShadowSize), style "border-radius" "20.02px", style "filter" ("blur(7.5vw)")
+                  ]
+                  [ ]
                 ]
-                []
-              , div
-                [ style "opacity" "0.7"
-                , style "background" "linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)"
-                , style "box-shadow" (boxShadowSize ++ " " ++ boxShadowSize ++ " " ++ boxShadowSize), style "border-radius" "20.02px", style "filter" ("blur(" ++ boxShadowSize ++")")
-                ]
-                [ ]
               , div [ id "cover-text", style "display" "none" ] [ text albumName ]
               ]
             , div 
-              [ class "d-flex align-items-center justify-content-center" ]
+              [ class "d-flex align-items-center justify-content-center"
+              , style "z-index" "1"
+              ]
               [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/empty-circle.svg" ] []
               , a [ href urlToOpenAlbum ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
               , a [ href "/" ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]

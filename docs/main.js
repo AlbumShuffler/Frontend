@@ -5344,30 +5344,53 @@ var $author$project$Main$view = function (model) {
 								_List_fromArray(
 									[
 										A2($elm$html$Html$Attributes$style, 'flex-grow', '1'),
-										A2($elm$html$Html$Attributes$style, 'max-width', coverMaxWidth),
+										A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
 										A2($elm$html$Html$Attributes$style, 'max-height', coverMaxHeight)
 									]),
 								_List_fromArray(
 									[
 										A2(
-										$elm$html$Html$img,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$id('cover-img'),
-												A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet)
-											]),
-										_List_Nil),
-										A2(
 										$elm$html$Html$div,
 										_List_fromArray(
 											[
-												A2($elm$html$Html$Attributes$style, 'opacity', '0.7'),
-												A2($elm$html$Html$Attributes$style, 'background', 'linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)'),
-												A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
-												A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
-												A2($elm$html$Html$Attributes$style, 'filter', 'blur(' + (boxShadowSize + ')'))
+												A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
+												A2($elm$html$Html$Attributes$style, 'position', 'relative'),
+												A2($elm$html$Html$Attributes$style, 'height', '100%')
 											]),
-										_List_Nil),
+										_List_fromArray(
+											[
+												A2(
+												$elm$html$Html$img,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$id('cover-img'),
+														A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet),
+														A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
+														A2($elm$html$Html$Attributes$style, 'top', '0'),
+														A2($elm$html$Html$Attributes$style, 'bottom', '0'),
+														A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
+														A2($elm$html$Html$Attributes$style, 'z-index', '1')
+													]),
+												_List_Nil),
+												A2(
+												$elm$html$Html$div,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$id('cover-glow'),
+														A2($elm$html$Html$Attributes$style, 'opacity', '0.7'),
+														A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
+														A2($elm$html$Html$Attributes$style, 'top', '0'),
+														A2($elm$html$Html$Attributes$style, 'bottom', '0'),
+														A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
+														A2($elm$html$Html$Attributes$style, 'z-index', '0'),
+														A2($elm$html$Html$Attributes$style, 'max-height', coverMaxWidth),
+														A2($elm$html$Html$Attributes$style, 'background', 'linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)'),
+														A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
+														A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
+														A2($elm$html$Html$Attributes$style, 'filter', 'blur(7.5vw)')
+													]),
+												_List_Nil)
+											])),
 										A2(
 										$elm$html$Html$div,
 										_List_fromArray(
@@ -5384,7 +5407,8 @@ var $author$project$Main$view = function (model) {
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
-										$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center')
+										$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center'),
+										A2($elm$html$Html$Attributes$style, 'z-index', '1')
 									]),
 								_List_fromArray(
 									[

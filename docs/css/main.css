@@ -56,6 +56,19 @@ body {
 }
 
 @media only screen and (max-height: 600px) {
+    #cover-glow {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-height: 600px) and (orientation: landscape) {
+    #cover-glow {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 600px) {
     #cover-text {
         display: unset !important;
     }
