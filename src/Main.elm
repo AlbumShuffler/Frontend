@@ -100,16 +100,17 @@ update msg model =
 view : Model -> Html Msg
 view model =
     let
-        coverMaxWidth = "min(80vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"
-        coverMaxHeight = "min(60vh, 90vw, " ++ (backgroundImageWidth |> String.fromInt) ++ "px)"
+        coverMaxWidth = "min(80vw, " ++ (coverImageWidth |> String.fromInt) ++ "px)"
+        coverMaxHeight = "min(60vh, 90vw, " ++ (coverImageWidth |> String.fromInt) ++ "px)"
         boxShadowSize = "75px"
         albumId = "abcdefghij"
         albumName = "100/Die Toteninsel"
         urlToOpenAlbum = "https://example.com"
         coverSourceSet = "https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703 640w"
         backgroundImageUrl = "https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703"
-        backgroundImageWidth = 640
-        backgroundImageHeight = 640
+        coverImageWidth = 640
+        coverImageHeight = 640
+        coverAspectRatio = coverImageWidth / coverImageHeight
         coverCenterX = (60 |> String.fromInt) ++ "%"
         coverCenterY = (50 |> String.fromInt) ++ "%"
         --backgroundImageAspectRatio = (backgroundImageWidth / backgroundImageHeight) |> String.fromFloat
@@ -154,14 +155,8 @@ view model =
                   []
                 , div
                   [ id "cover-glow"
-                  , style "opacity" "0.7"
-                  , style "position" "absolute"
-                  , style "top" "0"
-                  , style "bottom" "0"
-                  , style "width" coverMaxWidth
-                  , style "z-index" "0"
+                  , style "aspect-ratio" (coverAspectRatio |> String.fromFloat)
                   , style "max-height" coverMaxWidth
-                  , style "background" "linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)"
                   , style "box-shadow" (boxShadowSize ++ " " ++ boxShadowSize ++ " " ++ boxShadowSize), style "border-radius" "20.02px", style "filter" ("blur(7.5vw)")
                   ]
                   [ ]

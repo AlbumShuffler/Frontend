@@ -31,6 +31,23 @@ body {
     justify-content: center;
 }
 
+#cover-glow {
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    background: linear-gradient(45deg, #DF030E 0%, #04A5E3 100%);
+    /*
+    Additional options are required but need to be set dynamically;
+     * aspect-ratio
+     * max-height
+     * box-shadow
+    */
+}
+
 #cover-img {
     object-fit: contain;
     max-height: 100%;
@@ -64,7 +81,7 @@ body {
 
 @media only screen and (min-height: 600px) and (orientation: landscape) {
     #cover-glow {
-        display: none;
+        filter: blur(35px) !important
     }
 }
 

@@ -5228,6 +5228,7 @@ var $elm$virtual_dom$VirtualDom$attribute = F2(
 var $elm$html$Html$Attributes$attribute = $elm$virtual_dom$VirtualDom$attribute;
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$core$String$fromFloat = _String_fromNumber;
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -5287,14 +5288,15 @@ var $author$project$Main$view = function (model) {
 				_List_Nil)
 			]));
 	var coverSourceSet = 'https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703 640w';
+	var coverImageWidth = 640;
+	var coverMaxHeight = 'min(60vh, 90vw, ' + ($elm$core$String$fromInt(coverImageWidth) + 'px)');
+	var coverMaxWidth = 'min(80vw, ' + ($elm$core$String$fromInt(coverImageWidth) + 'px)');
+	var coverImageHeight = 640;
 	var coverCenterY = $elm$core$String$fromInt(50) + '%';
 	var coverCenterX = $elm$core$String$fromInt(60) + '%';
+	var coverAspectRatio = coverImageWidth / coverImageHeight;
 	var boxShadowSize = '75px';
-	var backgroundImageWidth = 640;
-	var coverMaxHeight = 'min(60vh, 90vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)');
-	var coverMaxWidth = 'min(80vw, ' + ($elm$core$String$fromInt(backgroundImageWidth) + 'px)');
 	var backgroundImageUrl = 'https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703';
-	var backgroundImageHeight = 640;
 	var albumName = '100/Die Toteninsel';
 	var albumId = 'abcdefghij';
 	return A2(
@@ -5377,14 +5379,11 @@ var $author$project$Main$view = function (model) {
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$id('cover-glow'),
-														A2($elm$html$Html$Attributes$style, 'opacity', '0.7'),
-														A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-														A2($elm$html$Html$Attributes$style, 'top', '0'),
-														A2($elm$html$Html$Attributes$style, 'bottom', '0'),
-														A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
-														A2($elm$html$Html$Attributes$style, 'z-index', '0'),
+														A2(
+														$elm$html$Html$Attributes$style,
+														'aspect-ratio',
+														$elm$core$String$fromFloat(coverAspectRatio)),
 														A2($elm$html$Html$Attributes$style, 'max-height', coverMaxWidth),
-														A2($elm$html$Html$Attributes$style, 'background', 'linear-gradient(45deg, #DF030E 0%, #04A5E3 100%)'),
 														A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
 														A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
 														A2($elm$html$Html$Attributes$style, 'filter', 'blur(7.5vw)')
