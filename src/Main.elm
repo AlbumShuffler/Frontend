@@ -142,7 +142,7 @@ view model =
               , style "max-height" coverMaxHeight
               ]
               [ div
-                [ style "width" coverMaxWidth, style "position" "relative", style "height" "100%" ]
+                [ id "cover-container", style "width" coverMaxWidth, style "position" "relative", style "height" "100%" ]
                 [ img 
                   [ id "cover-img"
                   , attribute "srcset" coverSourceSet

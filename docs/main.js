@@ -5355,6 +5355,7 @@ var $author$project$Main$view = function (model) {
 										$elm$html$Html$div,
 										_List_fromArray(
 											[
+												$elm$html$Html$Attributes$id('cover-container'),
 												A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
 												A2($elm$html$Html$Attributes$style, 'position', 'relative'),
 												A2($elm$html$Html$Attributes$style, 'height', '100%')

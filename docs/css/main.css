@@ -58,8 +58,8 @@ body {
 #cover-text {
     font-family: 'Urbanist', sans-serif;
     font-size: 2.5rem;
-    height: 20vh;
-    line-height: 20vh;
+    height: 100%;
+    align-content: center;
     color: white;
     text-shadow: 0 0 10px black;
     width: 100%;
@@ -67,13 +67,7 @@ body {
 }
 
 @media only screen and (max-height: 600px) {
-    #cover-img {
-        display: none;
-    }
-}
-
-@media only screen and (max-height: 600px) {
-    #cover-glow {
+    #cover-container {
         display: none;
     }
 }
@@ -92,7 +86,7 @@ body {
 
 @media only screen and (max-height: 600px) {
     #cover-text {
-        display: unset !important;
+        display: block !important;
     }
 }
 
