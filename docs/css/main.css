@@ -90,6 +90,12 @@ body {
     }
 }
 
+@media only screen and (max-height: 335px) and (orientation: landscape) {
+    #social-links-container {
+        display: none;
+    }
+}
+
 .non-styled-link {
     text-decoration: none;
     color:white;

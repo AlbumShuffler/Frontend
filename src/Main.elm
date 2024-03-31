@@ -131,7 +131,7 @@ view model =
             , style "height" "100svh"
             ]
             [ div 
-              [] 
+              [ id "social-links-container" ] 
               [ div 
                 [ class "d-flex justify-content-center align-items-center" ]
                 [ githubLink, xLink ]
