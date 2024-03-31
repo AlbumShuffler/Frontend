@@ -155,6 +155,7 @@ view model =
                   []
                 , div
                   [ id "cover-glow"
+                  , style "max-width" coverMaxWidth
                   , style "aspect-ratio" (coverAspectRatio |> String.fromFloat)
                   , style "max-height" coverMaxWidth
                   , style "box-shadow" (boxShadowSize ++ " " ++ boxShadowSize ++ " " ++ boxShadowSize), style "border-radius" "20.02px", style "filter" ("blur(7.5vw)")

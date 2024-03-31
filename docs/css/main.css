@@ -78,10 +78,15 @@ body {
     }
 }
 
-
 @media only screen and (min-height: 600px) and (orientation: landscape) {
     #cover-glow {
         filter: blur(35px) !important
+    }
+}
+
+@media only screen and (min-height: 1080px) and (orientation: portrait) {
+    #cover-glow {
+        filter: blur(20px) !important
     }
 }
 

@@ -5379,6 +5379,7 @@ var $author$project$Main$view = function (model) {
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$id('cover-glow'),
+														A2($elm$html$Html$Attributes$style, 'max-width', coverMaxWidth),
 														A2(
 														$elm$html$Html$Attributes$style,
 														'aspect-ratio',
