@@ -4370,6 +4370,107 @@ function _Browser_load(url)
 		}
 	}));
 }
+
+
+// CREATE
+
+var _Regex_never = /.^/;
+
+var _Regex_fromStringWith = F2(function(options, string)
+{
+	var flags = 'g';
+	if (options.multiline) { flags += 'm'; }
+	if (options.caseInsensitive) { flags += 'i'; }
+
+	try
+	{
+		return $elm$core$Maybe$Just(new RegExp(string, flags));
+	}
+	catch(error)
+	{
+		return $elm$core$Maybe$Nothing;
+	}
+});
+
+
+// USE
+
+var _Regex_contains = F2(function(re, string)
+{
+	return string.match(re) !== null;
+});
+
+
+var _Regex_findAtMost = F3(function(n, re, str)
+{
+	var out = [];
+	var number = 0;
+	var string = str;
+	var lastIndex = re.lastIndex;
+	var prevLastIndex = -1;
+	var result;
+	while (number++ < n && (result = re.exec(string)))
+	{
+		if (prevLastIndex == re.lastIndex) break;
+		var i = result.length - 1;
+		var subs = new Array(i);
+		while (i > 0)
+		{
+			var submatch = result[i];
+			subs[--i] = submatch
+				? $elm$core$Maybe$Just(submatch)
+				: $elm$core$Maybe$Nothing;
+		}
+		out.push(A4($elm$regex$Regex$Match, result[0], result.index, number, _List_fromArray(subs)));
+		prevLastIndex = re.lastIndex;
+	}
+	re.lastIndex = lastIndex;
+	return _List_fromArray(out);
+});
+
+
+var _Regex_replaceAtMost = F4(function(n, re, replacer, string)
+{
+	var count = 0;
+	function jsReplacer(match)
+	{
+		if (count++ >= n)
+		{
+			return match;
+		}
+		var i = arguments.length - 3;
+		var submatches = new Array(i);
+		while (i > 0)
+		{
+			var submatch = arguments[i];
+			submatches[--i] = submatch
+				? $elm$core$Maybe$Just(submatch)
+				: $elm$core$Maybe$Nothing;
+		}
+		return replacer(A4($elm$regex$Regex$Match, match, arguments[arguments.length - 2], count, _List_fromArray(submatches)));
+	}
+	return string.replace(re, jsReplacer);
+});
+
+var _Regex_splitAtMost = F3(function(n, re, str)
+{
+	var string = str;
+	var out = [];
+	var start = re.lastIndex;
+	var restoreLastIndex = re.lastIndex;
+	while (n--)
+	{
+		var result = re.exec(string);
+		if (!result) break;
+		out.push(string.slice(start, result.index));
+		start = re.lastIndex;
+	}
+	out.push(string.slice(start));
+	re.lastIndex = restoreLastIndex;
+	return _List_fromArray(out);
+});
+
+var _Regex_infinity = Infinity;
 var $elm$core$Basics$EQ = {$: 'EQ'};
 var $elm$core$Basics$GT = {$: 'GT'};
 var $elm$core$Basics$LT = {$: 'LT'};
@@ -5159,7 +5260,11 @@ var $elm$core$Task$perform = F2(
 				A2($elm$core$Task$map, toMessage, task)));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Main$emptyModel = {album: $elm$core$Maybe$Nothing, blacklistedAlbums: _List_Nil};
+var $author$project$Main$exampleAlbum2 = {coverHeight: 1417, coverUrl: 'https://cdn.smehost.net/hcmssmeappscom-delabelsprod/produkte/hoerspiele/ddf_cd_088.jpg', coverWidth: 1429, id: 'klmnopqrstu', name: '088/Vampir im Internet', urlToOpen: 'https://example.com'};
+var $author$project$Main$emptyModel = {
+	album: $elm$core$Maybe$Just($author$project$Main$exampleAlbum2),
+	blacklistedAlbums: _List_Nil
+};
 var $elm$json$Json$Encode$null = _Json_encodeNull;
 var $author$project$Main$fetchCookies = _Platform_outgoingPort(
 	'fetchCookies',
@@ -5194,19 +5299,24 @@ var $elm$json$Json$Encode$string = _Json_wrap;
 var $author$project$Main$setCookie = _Platform_outgoingPort('setCookie', $elm$json$Json$Encode$string);
 var $author$project$Main$update = F2(
 	function (msg, model) {
-		if (msg.$ === 'Reset') {
-			return _Utils_Tuple2(
-				$author$project$Main$emptyModel,
-				$author$project$Main$setCookie(
-					$author$project$Main$modelToCookie($author$project$Main$emptyModel)));
-		} else {
-			var text = msg.a;
-			var albumsToBlacklist = $author$project$Main$deconstructCookie(text);
-			return _Utils_Tuple2(
-				_Utils_update(
-					model,
-					{blacklistedAlbums: albumsToBlacklist}),
-				$elm$core$Platform$Cmd$none);
+		switch (msg.$) {
+			case 'Reset':
+				return _Utils_Tuple2(
+					$author$project$Main$emptyModel,
+					$author$project$Main$setCookie(
+						$author$project$Main$modelToCookie($author$project$Main$emptyModel)));
+			case 'GotCookie':
+				var text = msg.a;
+				var albumsToBlacklist = $author$project$Main$deconstructCookie(text);
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{blacklistedAlbums: albumsToBlacklist}),
+					$elm$core$Platform$Cmd$none);
+			case 'NextAlbum':
+				return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+			default:
+				return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
 		}
 	});
 var $elm$html$Html$a = _VirtualDom_node('a');
@@ -5229,6 +5339,7 @@ var $elm$html$Html$Attributes$attribute = $elm$virtual_dom$VirtualDom$attribute;
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$core$String$fromFloat = _String_fromNumber;
+var $elm$core$Basics$ge = _Utils_ge;
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -5247,309 +5358,393 @@ var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$Main$view = function (model) {
-	var xLink = A2(
-		$elm$html$Html$a,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('ml-05 p-15'),
-				$elm$html$Html$Attributes$href('https://x.com/b0wter')
-			]),
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$img,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('social-button'),
-						$elm$html$Html$Attributes$src('img/x.svg'),
-						$elm$html$Html$Attributes$alt('Link to X')
-					]),
-				_List_Nil)
-			]));
-	var urlToOpenAlbum = 'https://example.com';
-	var githubLink = A2(
-		$elm$html$Html$a,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('mr-05 p-15'),
-				$elm$html$Html$Attributes$href('https://github.com/b0wter/shuffler')
-			]),
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$img,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('social-button'),
-						$elm$html$Html$Attributes$src('img/github.svg'),
-						$elm$html$Html$Attributes$alt('Link to GitHub')
-					]),
-				_List_Nil)
-			]));
-	var coverSourceSet = 'https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703 640w';
-	var coverImageWidth = 640;
-	var coverMaxHeight = 'min(60vh, 90vw, ' + ($elm$core$String$fromInt(coverImageWidth) + 'px)');
-	var coverMaxWidth = 'min(80vw, ' + ($elm$core$String$fromInt(coverImageWidth) + 'px)');
-	var coverImageHeight = 640;
-	var coverCenterY = $elm$core$String$fromInt(50) + '%';
-	var coverCenterX = $elm$core$String$fromInt(60) + '%';
-	var coverAspectRatio = coverImageWidth / coverImageHeight;
-	var boxShadowSize = '75px';
-	var backgroundImageUrl = 'https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703';
-	var albumName = '100/Die Toteninsel';
-	var albumId = 'abcdefghij';
+var $elm$core$Maybe$andThen = F2(
+	function (callback, maybeValue) {
+		if (maybeValue.$ === 'Just') {
+			var value = maybeValue.a;
+			return callback(value);
+		} else {
+			return $elm$core$Maybe$Nothing;
+		}
+	});
+var $elm$regex$Regex$Match = F4(
+	function (match, index, number, submatches) {
+		return {index: index, match: match, number: number, submatches: submatches};
+	});
+var $elm$regex$Regex$find = _Regex_findAtMost(_Regex_infinity);
+var $elm$regex$Regex$fromStringWith = _Regex_fromStringWith;
+var $elm$regex$Regex$fromString = function (string) {
 	return A2(
-		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$id('background-image-container'),
-				A2($elm$html$Html$Attributes$style, 'background-image', 'url(' + (backgroundImageUrl + ')')),
-				A2($elm$html$Html$Attributes$style, 'background-position', coverCenterX + (' ' + coverCenterY))
-			]),
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$div,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$id('background-color-overlay')
-					]),
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$div,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$id('inner-layout-container'),
-								$elm$html$Html$Attributes$class('d-flex flex-column'),
-								A2($elm$html$Html$Attributes$style, 'height', '100svh')
-							]),
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$id('social-links-container')
-									]),
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$div,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
-											]),
-										_List_fromArray(
-											[githubLink, xLink]))
-									])),
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										A2($elm$html$Html$Attributes$style, 'flex-grow', '1'),
-										A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
-										A2($elm$html$Html$Attributes$style, 'max-height', coverMaxHeight)
-									]),
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$div,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$id('cover-container'),
-												A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
-												A2($elm$html$Html$Attributes$style, 'position', 'relative'),
-												A2($elm$html$Html$Attributes$style, 'height', '100%')
-											]),
-										_List_fromArray(
-											[
-												A2(
-												$elm$html$Html$img,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$id('cover-img'),
-														A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet),
-														A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-														A2($elm$html$Html$Attributes$style, 'top', '0'),
-														A2($elm$html$Html$Attributes$style, 'bottom', '0'),
-														A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
-														A2($elm$html$Html$Attributes$style, 'z-index', '1')
-													]),
-												_List_Nil),
-												A2(
-												$elm$html$Html$div,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$id('cover-glow'),
-														A2($elm$html$Html$Attributes$style, 'max-width', coverMaxWidth),
-														A2(
-														$elm$html$Html$Attributes$style,
-														'aspect-ratio',
-														$elm$core$String$fromFloat(coverAspectRatio)),
-														A2($elm$html$Html$Attributes$style, 'max-height', coverMaxWidth),
-														A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
-														A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
-														A2($elm$html$Html$Attributes$style, 'filter', 'blur(7.5vw)')
-													]),
-												_List_Nil)
-											])),
-										A2(
-										$elm$html$Html$div,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$id('cover-text'),
-												A2($elm$html$Html$Attributes$style, 'display', 'none')
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text(albumName)
-											]))
-									])),
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center'),
-										A2($elm$html$Html$Attributes$style, 'z-index', '1')
-									]),
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$img,
-										_List_fromArray(
-											[
-												A2($elm$html$Html$Attributes$style, 'padding', '1.5rem'),
-												A2($elm$html$Html$Attributes$style, 'height', '25px'),
-												A2($elm$html$Html$Attributes$style, 'width', '25px'),
-												A2($elm$html$Html$Attributes$style, 'transform', 'scaleX(-1)'),
-												$elm$html$Html$Attributes$src('img/empty-circle.svg')
-											]),
-										_List_Nil),
-										A2(
-										$elm$html$Html$a,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$href(urlToOpenAlbum)
-											]),
-										_List_fromArray(
-											[
-												A2(
-												$elm$html$Html$img,
-												_List_fromArray(
-													[
-														A2($elm$html$Html$Attributes$style, 'height', '10rem'),
-														$elm$html$Html$Attributes$src('img/play.svg'),
-														$elm$html$Html$Attributes$alt('play current album on Spotify')
-													]),
-												_List_Nil)
-											])),
-										A2(
-										$elm$html$Html$a,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$href('/')
-											]),
-										_List_fromArray(
-											[
-												A2(
-												$elm$html$Html$img,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('p-15'),
-														$elm$html$Html$Attributes$src('img/next.svg'),
-														$elm$html$Html$Attributes$alt('get next suggestion')
-													]),
-												_List_Nil)
-											]))
-									])),
-								A2(
-								$elm$html$Html$div,
-								_List_fromArray(
-									[
-										A2($elm$html$Html$Attributes$style, 'text-decoration', 'none'),
-										A2($elm$html$Html$Attributes$style, 'color', 'white')
-									]),
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$div,
-										_List_Nil,
-										_List_fromArray(
-											[
-												A2(
-												$elm$html$Html$div,
-												_List_fromArray(
-													[
-														A2($elm$html$Html$Attributes$style, 'font-family', 'urbanist, sans-serif'),
-														A2($elm$html$Html$Attributes$style, 'font-weight', '1000'),
-														A2($elm$html$Html$Attributes$style, 'height', '4rem'),
-														A2($elm$html$Html$Attributes$style, 'text-transform', 'uppercase'),
-														$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
-													]),
-												_List_fromArray(
-													[
-														A2(
-														$elm$html$Html$a,
-														_List_fromArray(
-															[
-																$elm$html$Html$Attributes$href('block/' + albumId),
-																$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center mr-10')
-															]),
-														_List_fromArray(
-															[
-																A2(
-																$elm$html$Html$img,
-																_List_fromArray(
-																	[
-																		A2($elm$html$Html$Attributes$style, 'height', '2rem'),
-																		$elm$html$Html$Attributes$class('mr-05'),
-																		$elm$html$Html$Attributes$src('img/block.svg'),
-																		$elm$html$Html$Attributes$alt('block current album')
-																	]),
-																_List_Nil),
-																A2(
-																$elm$html$Html$div,
-																_List_Nil,
-																_List_fromArray(
-																	[
-																		$elm$html$Html$text('block')
-																	]))
-															])),
-														A2(
-														$elm$html$Html$a,
-														_List_fromArray(
-															[
-																$elm$html$Html$Attributes$href('clearAll'),
-																$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center ml-10')
-															]),
-														_List_fromArray(
-															[
-																A2(
-																$elm$html$Html$img,
-																_List_fromArray(
-																	[
-																		A2($elm$html$Html$Attributes$style, 'height', '2rem'),
-																		$elm$html$Html$Attributes$class('mr-05'),
-																		$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
-																		$elm$html$Html$Attributes$alt('clear album blacklist')
-																	]),
-																_List_Nil),
-																A2(
-																$elm$html$Html$div,
-																_List_Nil,
-																_List_fromArray(
-																	[
-																		$elm$html$Html$text('clear blocked')
-																	]))
-															]))
-													]))
-											]))
-									]))
-							]))
-					]))
-			]));
+		$elm$regex$Regex$fromStringWith,
+		{caseInsensitive: false, multiline: false},
+		string);
+};
+var $elm$core$List$head = function (list) {
+	if (list.b) {
+		var x = list.a;
+		var xs = list.b;
+		return $elm$core$Maybe$Just(x);
+	} else {
+		return $elm$core$Maybe$Nothing;
+	}
+};
+var $elm$core$Maybe$map = F2(
+	function (f, maybe) {
+		if (maybe.$ === 'Just') {
+			var value = maybe.a;
+			return $elm$core$Maybe$Just(
+				f(value));
+		} else {
+			return $elm$core$Maybe$Nothing;
+		}
+	});
+var $elm$regex$Regex$never = _Regex_never;
+var $elm$core$Maybe$withDefault = F2(
+	function (_default, maybe) {
+		if (maybe.$ === 'Just') {
+			var value = maybe.a;
+			return value;
+		} else {
+			return _default;
+		}
+	});
+var $author$project$Main$tryAlbumNumberFrom = function (input) {
+	var albumNumber = A2(
+		$elm$core$Maybe$withDefault,
+		$elm$regex$Regex$never,
+		$elm$regex$Regex$fromString('\\d\\d\\d'));
+	return A2(
+		$elm$core$Maybe$andThen,
+		$elm$core$String$toInt,
+		A2(
+			$elm$core$Maybe$map,
+			function (match) {
+				return match.match;
+			},
+			$elm$core$List$head(
+				A2($elm$regex$Regex$find, albumNumber, input))));
+};
+var $author$project$Main$view = function (model) {
+	var _v0 = model.album;
+	if (_v0.$ === 'Nothing') {
+		return A2(
+			$elm$html$Html$div,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('no album :(')
+				]));
+	} else {
+		var album = _v0.a;
+		var xLink = A2(
+			$elm$html$Html$a,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('ml-05 p-15'),
+					$elm$html$Html$Attributes$href('https://x.com/b0wter')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$img,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('social-button'),
+							$elm$html$Html$Attributes$src('img/x.svg'),
+							$elm$html$Html$Attributes$alt('Link to X')
+						]),
+					_List_Nil)
+				]));
+		var githubLink = A2(
+			$elm$html$Html$a,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('mr-05 p-15'),
+					$elm$html$Html$Attributes$href('https://github.com/b0wter/shuffler')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$img,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('social-button'),
+							$elm$html$Html$Attributes$src('img/github.svg'),
+							$elm$html$Html$Attributes$alt('Link to GitHub')
+						]),
+					_List_Nil)
+				]));
+		var coverMaxWidth = 'min(80vw, ' + ($elm$core$String$fromInt(album.coverWidth) + 'px)');
+		var coverMaxHeight = 'min(60vh, 90vw, ' + ($elm$core$String$fromInt(album.coverWidth) + 'px)');
+		var coverCenterY = $elm$core$String$fromInt(50) + '%';
+		var coverAspectRatio = album.coverWidth / album.coverHeight;
+		var boxShadowSize = '75px';
+		var backgroundImageUrl = album.coverUrl;
+		var coverSourceSet = backgroundImageUrl + (' ' + ($elm$core$String$fromInt(album.coverWidth) + 'w'));
+		var backgroundFadeEase = '3000ms';
+		var backgroundFadeDuration = '5000ms';
+		var albumNumber = A2(
+			$elm$core$Maybe$withDefault,
+			0,
+			$author$project$Main$tryAlbumNumberFrom(album.name));
+		var coverCenterX = (albumNumber >= 126) ? ($elm$core$String$fromInt(60) + '%') : ($elm$core$String$fromInt(50) + '%');
+		return A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$id('background-image-container'),
+					A2($elm$html$Html$Attributes$style, 'background-image', 'url(' + (backgroundImageUrl + ')')),
+					A2($elm$html$Html$Attributes$style, 'background-position', coverCenterX + (' ' + coverCenterY))
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$div,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$id('background-color-overlay'),
+							A2($elm$html$Html$Attributes$style, '-webkit-transition', 'background ' + (backgroundFadeDuration + ' linear')),
+							A2($elm$html$Html$Attributes$style, '-moz-transition', 'background ' + (backgroundFadeDuration + ' linear')),
+							A2($elm$html$Html$Attributes$style, '-o-transition', 'background ' + (backgroundFadeDuration + ' linear')),
+							A2($elm$html$Html$Attributes$style, 'transition', 'background ' + (backgroundFadeDuration + ' linear'))
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$id('inner-layout-container'),
+									$elm$html$Html$Attributes$class('d-flex flex-column'),
+									A2($elm$html$Html$Attributes$style, 'height', '100svh')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$id('social-links-container')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
+												]),
+											_List_fromArray(
+												[githubLink, xLink]))
+										])),
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											A2($elm$html$Html$Attributes$style, 'flex-grow', '1'),
+											A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
+											A2($elm$html$Html$Attributes$style, 'max-height', coverMaxHeight)
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$id('cover-container'),
+													$elm$html$Html$Attributes$class('u--fadein'),
+													A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
+													A2($elm$html$Html$Attributes$style, 'position', 'relative'),
+													A2($elm$html$Html$Attributes$style, 'height', '100%')
+												]),
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$img,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$id('cover-img'),
+															A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet),
+															A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
+															A2($elm$html$Html$Attributes$style, 'top', '0'),
+															A2($elm$html$Html$Attributes$style, 'bottom', '0'),
+															A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
+															A2($elm$html$Html$Attributes$style, 'z-index', '1')
+														]),
+													_List_Nil),
+													A2(
+													$elm$html$Html$div,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$id('cover-glow'),
+															A2($elm$html$Html$Attributes$style, 'max-width', coverMaxWidth),
+															A2(
+															$elm$html$Html$Attributes$style,
+															'aspect-ratio',
+															$elm$core$String$fromFloat(coverAspectRatio)),
+															A2($elm$html$Html$Attributes$style, 'max-height', coverMaxWidth),
+															A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
+															A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
+															A2($elm$html$Html$Attributes$style, 'filter', 'blur(7.5vw)')
+														]),
+													_List_Nil)
+												])),
+											A2(
+											$elm$html$Html$div,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$id('cover-text'),
+													A2($elm$html$Html$Attributes$style, 'display', 'none')
+												]),
+											_List_fromArray(
+												[
+													$elm$html$Html$text(album.name)
+												]))
+										])),
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center'),
+											A2($elm$html$Html$Attributes$style, 'z-index', '1')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$img,
+											_List_fromArray(
+												[
+													A2($elm$html$Html$Attributes$style, 'padding', '1.5rem'),
+													A2($elm$html$Html$Attributes$style, 'height', '25px'),
+													A2($elm$html$Html$Attributes$style, 'width', '25px'),
+													A2($elm$html$Html$Attributes$style, 'transform', 'scaleX(-1)'),
+													$elm$html$Html$Attributes$src('img/empty-circle.svg')
+												]),
+											_List_Nil),
+											A2(
+											$elm$html$Html$a,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$href(album.urlToOpen)
+												]),
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$img,
+													_List_fromArray(
+														[
+															A2($elm$html$Html$Attributes$style, 'height', '10rem'),
+															$elm$html$Html$Attributes$src('img/play.svg'),
+															$elm$html$Html$Attributes$alt('play current album on Spotify')
+														]),
+													_List_Nil)
+												])),
+											A2(
+											$elm$html$Html$a,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$href('/')
+												]),
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$img,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$class('p-15'),
+															$elm$html$Html$Attributes$src('img/next.svg'),
+															$elm$html$Html$Attributes$alt('get next suggestion')
+														]),
+													_List_Nil)
+												]))
+										])),
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											A2($elm$html$Html$Attributes$style, 'text-decoration', 'none'),
+											A2($elm$html$Html$Attributes$style, 'color', 'white')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$div,
+											_List_Nil,
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$div,
+													_List_fromArray(
+														[
+															A2($elm$html$Html$Attributes$style, 'font-family', 'urbanist, sans-serif'),
+															A2($elm$html$Html$Attributes$style, 'font-weight', '1000'),
+															A2($elm$html$Html$Attributes$style, 'height', '4rem'),
+															A2($elm$html$Html$Attributes$style, 'text-transform', 'uppercase'),
+															$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
+														]),
+													_List_fromArray(
+														[
+															A2(
+															$elm$html$Html$a,
+															_List_fromArray(
+																[
+																	$elm$html$Html$Attributes$href('block/' + album.id),
+																	$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center mr-10')
+																]),
+															_List_fromArray(
+																[
+																	A2(
+																	$elm$html$Html$img,
+																	_List_fromArray(
+																		[
+																			A2($elm$html$Html$Attributes$style, 'height', '2rem'),
+																			$elm$html$Html$Attributes$class('mr-05'),
+																			$elm$html$Html$Attributes$src('img/block.svg'),
+																			$elm$html$Html$Attributes$alt('block current album')
+																		]),
+																	_List_Nil),
+																	A2(
+																	$elm$html$Html$div,
+																	_List_Nil,
+																	_List_fromArray(
+																		[
+																			$elm$html$Html$text('block')
+																		]))
+																])),
+															A2(
+															$elm$html$Html$a,
+															_List_fromArray(
+																[
+																	$elm$html$Html$Attributes$href('clearAll'),
+																	$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center ml-10')
+																]),
+															_List_fromArray(
+																[
+																	A2(
+																	$elm$html$Html$img,
+																	_List_fromArray(
+																		[
+																			A2($elm$html$Html$Attributes$style, 'height', '2rem'),
+																			$elm$html$Html$Attributes$class('mr-05'),
+																			$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
+																			$elm$html$Html$Attributes$alt('clear album blacklist')
+																		]),
+																	_List_Nil),
+																	A2(
+																	$elm$html$Html$div,
+																	_List_Nil,
+																	_List_fromArray(
+																		[
+																			$elm$html$Html$text('clear blocked')
+																		]))
+																]))
+														]))
+												]))
+										]))
+								]))
+						]))
+				]));
+	}
 };
 var $author$project$Main$main = $elm$browser$Browser$element(
 	{init: $author$project$Main$init, subscriptions: $author$project$Main$subscriptions, update: $author$project$Main$update, view: $author$project$Main$view});
