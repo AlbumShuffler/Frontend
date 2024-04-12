@@ -5,6 +5,11 @@ import Debug
 import Html exposing (Html, a, div, img, text)
 import Html.Attributes exposing (..)
 import Regex
+import Random
+import Random.Extra
+import Html.Events exposing (onClick)
+import Random.List
+import Array exposing(Array)
 
 
 type alias Flags =
@@ -13,7 +18,8 @@ type alias Flags =
 
 type alias Model =
     { blacklistedAlbums : List String
-    , album : Maybe Album
+    , albums: Array Album
+    , current: Int
     }
 
 
@@ -60,9 +66,9 @@ exampleAlbum3 =
     }
 
 
-albumStorage : List Album
+albumStorage : Array Album
 albumStorage =
-    [ exampleAlbum1, exampleAlbum2, exampleAlbum3 ]
+    [ exampleAlbum1, exampleAlbum2, exampleAlbum3 ] |> Array.fromList
 
 
 type alias AlbumArt =
@@ -81,6 +87,9 @@ port fetchCookies : () -> Cmd msg
 port setCookie : String -> Cmd msg
 
 
+port changeAlbum : String -> Cmd msg
+
+
 subscriptions : Model -> Sub Msg
 subscriptions model =
     cookieReceiver GotCookie
@@ -89,7 +98,8 @@ subscriptions model =
 emptyModel : Model
 emptyModel =
     { blacklistedAlbums = []
-    , album = Just exampleAlbum2
+    , albums = albumStorage
+    , current = 0
     }
 
 
@@ -108,11 +118,12 @@ type Msg
     | GotCookie String
     | NextAlbum
     | PreviousAlbum
+    | AlbumsShuffled (List Album)
 
 
 init : Flags -> ( Model, Cmd Msg )
 init _ =
-    ( emptyModel, fetchCookies () )
+    ( emptyModel, Cmd.batch [ fetchCookies (), albumStorage |> startShuffleAlbums ] )
 
 
 deconstructCookie : String -> List String
@@ -139,6 +150,14 @@ updateModelFromCookie content model =
     { model | blacklistedAlbums = albumsToBlacklist }
 
 
+startShuffleAlbums : Array Album -> Cmd Msg
+startShuffleAlbums albums =
+    let
+        generator = Random.List.shuffle (albums |> Array.toList)
+    in
+        generator |> Random.generate AlbumsShuffled 
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -153,10 +172,16 @@ update msg model =
             ( { model | blacklistedAlbums = albumsToBlacklist }, Cmd.none )
 
         NextAlbum ->
-            ( model, Cmd.none )
+            let
+                newModel = { model | current = modBy (model.albums |> Array.length) (model.current + 1) }
+            in
+            ( newModel, Cmd.none )
 
         PreviousAlbum ->
             ( model, Cmd.none )
+
+        AlbumsShuffled albums ->
+            ({ model | albums = albums |> Array.fromList }, Cmd.none)
 
 
 tryAlbumNumberFrom : String -> Maybe Int
@@ -173,7 +198,7 @@ tryAlbumNumberFrom input =
 
 view : Model -> Html Msg
 view model =
-    case model.album of
+    case model.albums |> Array.get model.current of
         Nothing ->
             div [] [ text "no album :(" ]
 
@@ -247,7 +272,7 @@ view model =
                             , style "max-height" coverMaxHeight
                             ]
                             [ div
-                                [ id "cover-container", class "u--fadein", style "width" coverMaxWidth, style "position" "relative", style "height" "100%" ]
+                                [ id "cover-container", class "", style "width" coverMaxWidth, style "position" "relative", style "height" "100%" ]
                                 [ img
                                     [ id "cover-img"
                                     , attribute "srcset" coverSourceSet
@@ -277,7 +302,7 @@ view model =
                             ]
                             [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/empty-circle.svg" ] []
                             , a [ href album.urlToOpen ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
-                            , a [ href "/" ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
+                            , a [ href "#", onClick NextAlbum ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
                             ]
                         , div
                             [ style "text-decoration" "none", style "color" "white" ]
