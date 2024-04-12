@@ -178,7 +178,10 @@ update msg model =
             ( newModel, Cmd.none )
 
         PreviousAlbum ->
-            ( model, Cmd.none )
+            let
+                newModel = { model | current = modBy (model.albums |> Array.length) (model.current - 1) }
+            in
+            ( newModel, Cmd.none )
 
         AlbumsShuffled albums ->
             ({ model | albums = albums |> Array.fromList }, Cmd.none)
@@ -300,7 +303,7 @@ view model =
                             [ class "d-flex align-items-center justify-content-center"
                             , style "z-index" "1"
                             ]
-                            [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/empty-circle.svg" ] []
+                            [ a [ href "#", onClick PreviousAlbum ] [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/next.svg" ] [] ]
                             , a [ href album.urlToOpen ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
                             , a [ href "#", onClick NextAlbum ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
                             ]
