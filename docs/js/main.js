@@ -9175,18 +9175,27 @@ var $author$project$Main$view = function (model) {
 											_List_fromArray(
 												[
 													A2(
-													$elm$html$Html$img,
+													$elm$html$Html$a,
 													_List_fromArray(
 														[
-															$elm$html$Html$Attributes$id('cover-img'),
-															A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet),
-															A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-															A2($elm$html$Html$Attributes$style, 'top', '0'),
-															A2($elm$html$Html$Attributes$style, 'bottom', '0'),
-															A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
-															A2($elm$html$Html$Attributes$style, 'z-index', '1')
+															$elm$html$Html$Attributes$href(album.urlToOpen)
 														]),
-													_List_Nil),
+													_List_fromArray(
+														[
+															A2(
+															$elm$html$Html$img,
+															_List_fromArray(
+																[
+																	$elm$html$Html$Attributes$id('cover-img'),
+																	A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet),
+																	A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
+																	A2($elm$html$Html$Attributes$style, 'top', '0'),
+																	A2($elm$html$Html$Attributes$style, 'bottom', '0'),
+																	A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
+																	A2($elm$html$Html$Attributes$style, 'z-index', '1')
+																]),
+															_List_Nil)
+														])),
 													A2(
 													$elm$html$Html$div,
 													_List_fromArray(

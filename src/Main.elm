@@ -232,7 +232,9 @@ view model =
                             ]
                             [ div
                                 [ id "cover-container", class "", style "width" coverMaxWidth, style "position" "relative", style "height" "100%" ]
-                                [ img
+                                [ a
+                                  [ href album.urlToOpen ]
+                                  [ img
                                     [ id "cover-img"
                                     , attribute "srcset" coverSourceSet
                                     , style "position" "absolute"
@@ -242,6 +244,7 @@ view model =
                                     , style "z-index" "1"
                                     ]
                                     []
+                                  ]
                                 , div
                                     [ id "cover-glow"
                                     , style "max-width" coverMaxWidth
