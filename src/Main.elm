@@ -10,6 +10,9 @@ import Random.Extra
 import Html.Events exposing (onClick)
 import Random.List
 import Array exposing(Array)
+import Albums exposing(Album, CoverImage)
+import AlbumStorage exposing(albumStorage)
+import List.Extra as List
 
 
 type alias Flags =
@@ -21,54 +24,6 @@ type alias Model =
     , albums: Array Album
     , current: Int
     }
-
-
-type alias Album =
-    { id : String
-    , name : String
-    , coverUrl : String
-    , coverWidth : Int
-    , coverHeight : Int
-    , urlToOpen : String
-    }
-
-
-exampleAlbum1 : Album
-exampleAlbum1 =
-    { id = "abcdefghij"
-    , name = "132/Haus des Schreckens"
-    , coverUrl = "https://i.scdn.co/image/ab67616d0000b2731af90c3630a08b8a3ec60703"
-    , coverWidth = 640
-    , coverHeight = 640
-    , urlToOpen = "https://example.com"
-    }
-
-
-exampleAlbum2 : Album
-exampleAlbum2 =
-    { id = "klmnopqrstu"
-    , name = "088/Vampir im Internet"
-    , coverUrl = "https://cdn.smehost.net/hcmssmeappscom-delabelsprod/produkte/hoerspiele/ddf_cd_088.jpg"
-    , coverWidth = 1429
-    , coverHeight = 1417
-    , urlToOpen = "https://example.com"
-    }
-
-
-exampleAlbum3 : Album
-exampleAlbum3 =
-    { id = "vwxyz123456"
-    , name = "099/Rufmord"
-    , coverUrl = "https://cdn.smehost.net/hcmssmeappscom-delabelsprod/produkte/hoerspiele/ddf_cd_099.jpg"
-    , coverWidth = 1429
-    , coverHeight = 1417
-    , urlToOpen = "https://example.com"
-    }
-
-
-albumStorage : Array Album
-albumStorage =
-    [ exampleAlbum1, exampleAlbum2, exampleAlbum3 ] |> Array.fromList
 
 
 type alias AlbumArt =
@@ -98,7 +53,7 @@ subscriptions model =
 emptyModel : Model
 emptyModel =
     { blacklistedAlbums = []
-    , albums = albumStorage
+    , albums = AlbumStorage.albumStorage
     , current = 0
     }
 
@@ -207,23 +162,24 @@ view model =
 
         Just album ->
             let
+                largestCover = album.covers |> List.maximumBy (\a -> a.width) |> Maybe.withDefault { width = 640, height = 640, url = "https://fakeimg.pl/640x640" }
                 coverMaxWidth =
-                    "min(80vw, " ++ (album.coverWidth |> String.fromInt) ++ "px)"
+                    "min(80vw, " ++ (largestCover.width |> String.fromInt) ++ "px)"
 
                 coverMaxHeight =
-                    "min(60vh, 90vw, " ++ (album.coverWidth |> String.fromInt) ++ "px)"
+                    "min(60vh, 90vw, " ++ (largestCover.width |> String.fromInt) ++ "px)"
 
                 boxShadowSize =
                     "75px"
 
                 backgroundImageUrl =
-                    album.coverUrl
+                    largestCover.url
 
                 coverSourceSet =
-                    backgroundImageUrl ++ " " ++ (album.coverWidth |> String.fromInt) ++ "w"
+                    backgroundImageUrl ++ " " ++ (largestCover.width |> String.fromInt) ++ "w"
 
                 coverAspectRatio =
-                    (album.coverWidth |> toFloat) / (album.coverHeight |> toFloat)
+                    (largestCover.width |> toFloat) / (largestCover.height |> toFloat)
 
                 albumNumber =
                     album.name |> tryAlbumNumberFrom |> Maybe.withDefault 0
