@@ -5390,7 +5390,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3Sv5tE8PcAlGY6Ys2ISQXF',
 			name: 'Folge 226: Die Spur der Toten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3Sv5tE8PcAlGY6Ys2ISQXF'
 		},
 			{
 			covers: _List_fromArray(
@@ -5401,7 +5401,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0FuC7q4bJG41g1naKBx4ot',
 			name: 'Folge 225: und der Puppenmacher',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0FuC7q4bJG41g1naKBx4ot'
 		},
 			{
 			covers: _List_fromArray(
@@ -5412,7 +5412,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7JhdaReI98XYFrzb3jJPFa',
 			name: 'Folge 224: Die Yacht des Verrats',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7JhdaReI98XYFrzb3jJPFa'
 		},
 			{
 			covers: _List_fromArray(
@@ -5423,7 +5423,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0oZaQfEwMWY2TfviD4fEdV',
 			name: 'Adventskalender - Böser die Glocken nie klingen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0oZaQfEwMWY2TfviD4fEdV'
 		},
 			{
 			covers: _List_fromArray(
@@ -5434,7 +5434,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4UCwiqC6kHQIsODPuJ0GoZ',
 			name: 'Kai Schwind liest... und das Bergmonster',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4UCwiqC6kHQIsODPuJ0GoZ'
 		},
 			{
 			covers: _List_fromArray(
@@ -5445,7 +5445,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '451jKBwuSNrNgLlqEAZfra',
 			name: 'Folge 223: und der Knochenmann',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/451jKBwuSNrNgLlqEAZfra'
 		},
 			{
 			covers: _List_fromArray(
@@ -5456,7 +5456,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6xZHTtiSBFxKdV2rJVHj2V',
 			name: 'Klaas Heufer-Umlauf liest... und der schrullige Millionär',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6xZHTtiSBFxKdV2rJVHj2V'
 		},
 			{
 			covers: _List_fromArray(
@@ -5467,7 +5467,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3o2Gwvg8lqLNRnlV1v1s5K',
 			name: 'Folge 222: und die Gesetzlosen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3o2Gwvg8lqLNRnlV1v1s5K'
 		},
 			{
 			covers: _List_fromArray(
@@ -5478,7 +5478,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '77aMP5aTkzIaVW1SPxvLxy',
 			name: 'Mai Thi Nguyen-Kim liest... und die rätselhaften Bilder',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/77aMP5aTkzIaVW1SPxvLxy'
 		},
 			{
 			covers: _List_fromArray(
@@ -5489,7 +5489,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1KpVSqapKAUAtAepWWxPWs',
 			name: 'Folge 221: Manuskript des Satans',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1KpVSqapKAUAtAepWWxPWs'
 		},
 			{
 			covers: _List_fromArray(
@@ -5500,7 +5500,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2Z5khV1jYxMvc5peWZdnwC',
 			name: 'Holger Mahlich liest...und die gefährliche Erbschaft',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2Z5khV1jYxMvc5peWZdnwC'
 		},
 			{
 			covers: _List_fromArray(
@@ -5511,7 +5511,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '67Ipucoa0blx27O3sV7yAi',
 			name: 'Erbe des Drachen (Das Original-Hörspiel zum Kinofilm)',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/67Ipucoa0blx27O3sV7yAi'
 		},
 			{
 			covers: _List_fromArray(
@@ -5522,7 +5522,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '01i4iyB40EU7Qgd6EgKoZt',
 			name: 'Folge 220: Im Wald der Gefahren',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/01i4iyB40EU7Qgd6EgKoZt'
 		},
 			{
 			covers: _List_fromArray(
@@ -5533,7 +5533,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3IxPhnYxh3qACTa2GBYVUw',
 			name: 'Eckart Dux liest...und der Höhlenmensch',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3IxPhnYxh3qACTa2GBYVUw'
 		},
 			{
 			covers: _List_fromArray(
@@ -5544,7 +5544,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6ewdyVIW2LurJhYGU0UBAa',
 			name: 'Folge 219: und die Teufelsklippe',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6ewdyVIW2LurJhYGU0UBAa'
 		},
 			{
 			covers: _List_fromArray(
@@ -5555,7 +5555,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0lwfVPSf5Zs5PTGkcSgSeo',
 			name: 'Nicholas Müller liest... und die silberne Spinne',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0lwfVPSf5Zs5PTGkcSgSeo'
 		},
 			{
 			covers: _List_fromArray(
@@ -5566,7 +5566,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4qHjQN4qvZu9x27O5LOn2G',
 			name: 'Jan Böhmermann liest... und die flüsternde Mumie',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4qHjQN4qvZu9x27O5LOn2G'
 		},
 			{
 			covers: _List_fromArray(
@@ -5577,7 +5577,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5u2wd0lYukcINw8dUFCREq',
 			name: 'Adventskalender - Eine schreckliche Bescherung',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5u2wd0lYukcINw8dUFCREq'
 		},
 			{
 			covers: _List_fromArray(
@@ -5588,7 +5588,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2WwOKZLpFWrvw3O9CISod1',
 			name: 'Folge 218: Im Netz der Lügen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2WwOKZLpFWrvw3O9CISod1'
 		},
 			{
 			covers: _List_fromArray(
@@ -5599,7 +5599,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1WlRnNunbHpnRTTVkxMRnd',
 			name: 'Folge 217: und der Kristallschädel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1WlRnNunbHpnRTTVkxMRnd'
 		},
 			{
 			covers: _List_fromArray(
@@ -5610,7 +5610,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2BkEUZY7Da7bqlUjmMA2Cq',
 			name: 'Folge 216: Die Schwingen des Unheils',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2BkEUZY7Da7bqlUjmMA2Cq'
 		},
 			{
 			covers: _List_fromArray(
@@ -5621,7 +5621,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '76pYNMMVZTiuNy3IoXcavU',
 			name: 'Folge 215: und die verlorene Zeit',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/76pYNMMVZTiuNy3IoXcavU'
 		},
 			{
 			covers: _List_fromArray(
@@ -5632,7 +5632,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2uMs1XZBdGdZuXOY7draw4',
 			name: 'und der dreiäugige Totenkopf (Kopfhörer-Hörspiel)',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2uMs1XZBdGdZuXOY7draw4'
 		},
 			{
 			covers: _List_fromArray(
@@ -5643,7 +5643,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7FVn5TYEbQbWM6r8unRaCe',
 			name: 'und das versunkene Schiff (Kopfhörer-Hörspiel)',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7FVn5TYEbQbWM6r8unRaCe'
 		},
 			{
 			covers: _List_fromArray(
@@ -5654,7 +5654,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6T5D7KpnftvfLaYPp94U4y',
 			name: 'Das Grab der Inka-Mumie (Kopfhörer-Hörspiel)',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6T5D7KpnftvfLaYPp94U4y'
 		},
 			{
 			covers: _List_fromArray(
@@ -5665,7 +5665,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1cJ3fNx6K47p4eDFqhnvsA',
 			name: 'Folge 214: und der Geisterbunker',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1cJ3fNx6K47p4eDFqhnvsA'
 		},
 			{
 			covers: _List_fromArray(
@@ -5676,7 +5676,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5yI3MACumg0ZjPSRUOFmoB',
 			name: 'Karin Lieneweg liest...und der sprechende Totenkopf',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5yI3MACumg0ZjPSRUOFmoB'
 		},
 			{
 			covers: _List_fromArray(
@@ -5687,7 +5687,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4BZfSV9maCil4l4yftT74F',
 			name: 'Folge 213: Der Fluch der Medusa',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4BZfSV9maCil4l4yftT74F'
 		},
 			{
 			covers: _List_fromArray(
@@ -5698,7 +5698,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5KIQUoxcSBlPN3ie9xVmnA',
 			name: 'Sascha Draeger liest...und der gestohlene Preis',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5KIQUoxcSBlPN3ie9xVmnA'
 		},
 			{
 			covers: _List_fromArray(
@@ -5709,7 +5709,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2zHMeFNQQxKOmUgmppOjIM',
 			name: 'Folge 212: und der weiße Leopard',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2zHMeFNQQxKOmUgmppOjIM'
 		},
 			{
 			covers: _List_fromArray(
@@ -5720,7 +5720,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6heVFpJImaEoJT3TEtlSMl',
 			name: 'Axel Prahl liest...und die schwarze Katze',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6heVFpJImaEoJT3TEtlSMl'
 		},
 			{
 			covers: _List_fromArray(
@@ -5731,7 +5731,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7pZotNNAYOkeHNvJRKzYRk',
 			name: 'Folge 211: und der Jadekönig',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7pZotNNAYOkeHNvJRKzYRk'
 		},
 			{
 			covers: _List_fromArray(
@@ -5742,7 +5742,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4u8yNY4Un2nErgeNRMFeh3',
 			name: 'Jürgen Thormann liest... und der Zauberspiegel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4u8yNY4Un2nErgeNRMFeh3'
 		},
 			{
 			covers: _List_fromArray(
@@ -5753,7 +5753,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3ieWqOL150wJOcft7iZHKZ',
 			name: 'Folge 210: und die schweigende Grotte',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3ieWqOL150wJOcft7iZHKZ'
 		},
 			{
 			covers: _List_fromArray(
@@ -5764,7 +5764,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7fsdjOiouCHQ9Rlmrz7ZIa',
 			name: 'Judy Winter liest...und der Ameisenmensch',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7fsdjOiouCHQ9Rlmrz7ZIa'
 		},
 			{
 			covers: _List_fromArray(
@@ -5775,7 +5775,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0q4FbI22wSMrzgWh5vgHi9',
 			name: 'Folge 209: Kreaturen der Nacht',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0q4FbI22wSMrzgWh5vgHi9'
 		},
 			{
 			covers: _List_fromArray(
@@ -5786,7 +5786,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6WgRUQY49NRG6JT6dJ4xEq',
 			name: '208/Kelch des Schicksals',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6WgRUQY49NRG6JT6dJ4xEq'
 		},
 			{
 			covers: _List_fromArray(
@@ -5797,7 +5797,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3t9NGa2A9SGvipHoU5Bc6m',
 			name: 'und das Grab der Maya (Kopfhörer-Hörspiel)',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3t9NGa2A9SGvipHoU5Bc6m'
 		},
 			{
 			covers: _List_fromArray(
@@ -5808,7 +5808,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4vj4Dq2q7fyvwY7UCj2vin',
 			name: 'und das Grab der Maya',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4vj4Dq2q7fyvwY7UCj2vin'
 		},
 			{
 			covers: _List_fromArray(
@@ -5819,7 +5819,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7ynXpeQRwzqKiv8WVh7c7B',
 			name: 'Adventskalender - O du finstere',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7ynXpeQRwzqKiv8WVh7c7B'
 		},
 			{
 			covers: _List_fromArray(
@@ -5830,7 +5830,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6BxvBG51szGmlg5x3F1rHj',
 			name: '207/Die falschen Detektive',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6BxvBG51szGmlg5x3F1rHj'
 		},
 			{
 			covers: _List_fromArray(
@@ -5841,7 +5841,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5YuHQZqJWP3EmAvMSoWeTs',
 			name: 'Katrin Fröhlich liest ...und die singende Schlange',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5YuHQZqJWP3EmAvMSoWeTs'
 		},
 			{
 			covers: _List_fromArray(
@@ -5852,7 +5852,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7khAMIQlYBmW7mI9cphDhJ',
 			name: '206/und der Mottenmann',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7khAMIQlYBmW7mI9cphDhJ'
 		},
 			{
 			covers: _List_fromArray(
@@ -5863,7 +5863,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0VmZF3nyMuhRDcyVY0MuE1',
 			name: 'Oliver Kalkofe liest ...und der lachende Schatten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0VmZF3nyMuhRDcyVY0MuE1'
 		},
 			{
 			covers: _List_fromArray(
@@ -5874,7 +5874,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2Sw9FBHOoT6fBhYxHsRFxq',
 			name: '205/Das rätselhafte Erbe',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2Sw9FBHOoT6fBhYxHsRFxq'
 		},
 			{
 			covers: _List_fromArray(
@@ -5885,7 +5885,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1PO7K8YvBHLa5d6jIuTkaj',
 			name: 'Tim Grobe liest ...und der Fluch des Rubins',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1PO7K8YvBHLa5d6jIuTkaj'
 		},
 			{
 			covers: _List_fromArray(
@@ -5896,7 +5896,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1yMMjH3tDN9GyXiADzTkL9',
 			name: '204/Der dunkle Wächter',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1yMMjH3tDN9GyXiADzTkL9'
 		},
 			{
 			covers: _List_fromArray(
@@ -5907,7 +5907,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5femMu6wEiqpYJ2O6FxwFH',
 			name: 'Henning May liest ...und der seltsame Wecker (feat. Henning May)',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5femMu6wEiqpYJ2O6FxwFH'
 		},
 			{
 			covers: _List_fromArray(
@@ -5918,7 +5918,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '76M62o1rdKEqTN1JIbGdGV',
 			name: 'und der dreiäugige Totenkopf',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/76M62o1rdKEqTN1JIbGdGV'
 		},
 			{
 			covers: _List_fromArray(
@@ -5929,7 +5929,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '79Drf49yNdGLBzzHMGGmBz',
 			name: '203/Tauchgang ins Ungewisse',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/79Drf49yNdGLBzzHMGGmBz'
 		},
 			{
 			covers: _List_fromArray(
@@ -5940,7 +5940,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5q9quwSbPpYxoAzMSKGfIw',
 			name: 'Jessica Schwarz liest ...und der magische Kreis',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5q9quwSbPpYxoAzMSKGfIw'
 		},
 			{
 			covers: _List_fromArray(
@@ -5951,7 +5951,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '14OPACj7jtzXOrgxis7pu2',
 			name: 'Bela B liest... und der tanzende Teufel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/14OPACj7jtzXOrgxis7pu2'
 		},
 			{
 			covers: _List_fromArray(
@@ -5962,7 +5962,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4Exxckn0GwbhnGl6N4um2N',
 			name: '202/Das weiße Grab',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4Exxckn0GwbhnGl6N4um2N'
 		},
 			{
 			covers: _List_fromArray(
@@ -5973,7 +5973,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3qqFfEjRLF7pxUpWw2g0P5',
 			name: 'Oliver Rohrbeck liest ...und der Super-Papagei',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3qqFfEjRLF7pxUpWw2g0P5'
 		},
 			{
 			covers: _List_fromArray(
@@ -5984,7 +5984,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1uPmiAn5sBUdGCbAeiPTNG',
 			name: 'Jens Wawrczeck liest ...und das Gespensterschloß',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1uPmiAn5sBUdGCbAeiPTNG'
 		},
 			{
 			covers: _List_fromArray(
@@ -5995,7 +5995,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5oCCy3K7JBWfdfp4QNhYxA',
 			name: 'Andreas Fröhlich liest...und der Karpatenhund',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5oCCy3K7JBWfdfp4QNhYxA'
 		},
 			{
 			covers: _List_fromArray(
@@ -6006,7 +6006,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3yzJOoR3024vkb7WXRVtFr',
 			name: 'Jannik Schümann liest ...und der Phantomsee',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3yzJOoR3024vkb7WXRVtFr'
 		},
 			{
 			covers: _List_fromArray(
@@ -6017,7 +6017,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6UN8m07SmIzyDe63H0oljL',
 			name: 'und das versunkene Schiff',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6UN8m07SmIzyDe63H0oljL'
 		},
 			{
 			covers: _List_fromArray(
@@ -6028,7 +6028,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2EzmlFDy8q8etqohlJpaaB',
 			name: 'Anna Thalbach liest ... und die Geisterinsel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2EzmlFDy8q8etqohlJpaaB'
 		},
 			{
 			covers: _List_fromArray(
@@ -6039,7 +6039,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4FxNfDSXqAg8N1D8NBtvZ5',
 			name: '201/Höhenangst',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4FxNfDSXqAg8N1D8NBtvZ5'
 		},
 			{
 			covers: _List_fromArray(
@@ -6050,7 +6050,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4QQ2iK81MWMhK2Qqr1AO0R',
 			name: 'Bastian Pastewka liest... und der grüne Geist',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4QQ2iK81MWMhK2Qqr1AO0R'
 		},
 			{
 			covers: _List_fromArray(
@@ -6061,7 +6061,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '09Ckx1JLgPsQHHGuSIt2j3',
 			name: '200/Feuriges Auge',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/09Ckx1JLgPsQHHGuSIt2j3'
 		},
 			{
 			covers: _List_fromArray(
@@ -6072,7 +6072,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7bTKP2hU0LRks1bXN1R7ko',
 			name: '199/und der grüne Kobold',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7bTKP2hU0LRks1bXN1R7ko'
 		},
 			{
 			covers: _List_fromArray(
@@ -6083,7 +6083,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4piiNuehCc4VjN8NBIcnRt',
 			name: '198/Die Legende der Gaukler',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4piiNuehCc4VjN8NBIcnRt'
 		},
 			{
 			covers: _List_fromArray(
@@ -6094,7 +6094,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '39K0Sczt1mIbW33lB5RNer',
 			name: 'Und die schwarze Katze',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/39K0Sczt1mIbW33lB5RNer'
 		},
 			{
 			covers: _List_fromArray(
@@ -6105,7 +6105,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0GRoTtX1wI16M7GSnnN96R',
 			name: '197/Im Auge des Sturms',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0GRoTtX1wI16M7GSnnN96R'
 		},
 			{
 			covers: _List_fromArray(
@@ -6116,7 +6116,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '39a7bHWZyWPxwukCHPrTly',
 			name: '196/Geheimnis des Bauchredners',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/39a7bHWZyWPxwukCHPrTly'
 		},
 			{
 			covers: _List_fromArray(
@@ -6127,7 +6127,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7ehMwTyKuIM4zdiltMxE4X',
 			name: 'und der schwarze Tag (Sechs Kurzgeschichten)',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7ehMwTyKuIM4zdiltMxE4X'
 		},
 			{
 			covers: _List_fromArray(
@@ -6138,7 +6138,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3pbXIzVk7CA5VM2ltxu9TN',
 			name: '195/Im Reich der Ungeheuer',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3pbXIzVk7CA5VM2ltxu9TN'
 		},
 			{
 			covers: _List_fromArray(
@@ -6149,7 +6149,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2oKngJQA5TdxF5QcP3uZEf',
 			name: '194/und die Zeitreisende',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2oKngJQA5TdxF5QcP3uZEf'
 		},
 			{
 			covers: _List_fromArray(
@@ -6160,7 +6160,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4m6VlVOWfrUVhWWrueMo7p',
 			name: '193/Schrecken aus der Tiefe',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4m6VlVOWfrUVhWWrueMo7p'
 		},
 			{
 			covers: _List_fromArray(
@@ -6171,7 +6171,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1qag2AiFcxXU1UaIgrDFff',
 			name: '192/im Bann des Drachen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1qag2AiFcxXU1UaIgrDFff'
 		},
 			{
 			covers: _List_fromArray(
@@ -6182,7 +6182,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2ICtKWqLqMBTzi7UeByhKd',
 			name: '191/Verbrechen im Nichts',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2ICtKWqLqMBTzi7UeByhKd'
 		},
 			{
 			covers: _List_fromArray(
@@ -6193,7 +6193,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '100ZHoBX994GlckxjoGpma',
 			name: '190/und die Kammer der Rätsel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/100ZHoBX994GlckxjoGpma'
 		},
 			{
 			covers: _List_fromArray(
@@ -6204,7 +6204,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '02MXdFaVMz0qQJjmivjI8g',
 			name: '189/und der unsichtbare Passagier',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/02MXdFaVMz0qQJjmivjI8g'
 		},
 			{
 			covers: _List_fromArray(
@@ -6215,7 +6215,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3egVVb6Zt0LdS6agBMGsiJ',
 			name: 'Und das kalte Auge',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3egVVb6Zt0LdS6agBMGsiJ'
 		},
 			{
 			covers: _List_fromArray(
@@ -6226,7 +6226,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '22soWryC08ctyMNb6NrMGD',
 			name: '188/Signale aus dem Jenseits',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/22soWryC08ctyMNb6NrMGD'
 		},
 			{
 			covers: _List_fromArray(
@@ -6237,7 +6237,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7mH8vdj0TkiPO6fMHBCvYj',
 			name: 'und der Tornadojäger',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7mH8vdj0TkiPO6fMHBCvYj'
 		},
 			{
 			covers: _List_fromArray(
@@ -6248,7 +6248,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6uj8JeIgluMibSu8Divkbh',
 			name: '187/und das silberne Amulett',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6uj8JeIgluMibSu8Divkbh'
 		},
 			{
 			covers: _List_fromArray(
@@ -6259,7 +6259,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7osWCNCcvGfqP31G7281iL',
 			name: 'Das Grab der Inka-Mumie',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7osWCNCcvGfqP31G7281iL'
 		},
 			{
 			covers: _List_fromArray(
@@ -6270,7 +6270,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5kevid18ttcAPK1vk0kLtc',
 			name: '186/Insel des Vergessens',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5kevid18ttcAPK1vk0kLtc'
 		},
 			{
 			covers: _List_fromArray(
@@ -6281,7 +6281,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7eHh5PAxQBt5KBWzd3a10G',
 			name: '185/und der Mann ohne Augen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7eHh5PAxQBt5KBWzd3a10G'
 		},
 			{
 			covers: _List_fromArray(
@@ -6292,7 +6292,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5B7w9vkfh979tEyzwkLk9k',
 			name: '184/und der Hexengarten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5B7w9vkfh979tEyzwkLk9k'
 		},
 			{
 			covers: _List_fromArray(
@@ -6303,7 +6303,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1qhlRmclvYWkrYkLnFxFZN',
 			name: '183/und der letzte Song',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1qhlRmclvYWkrYkLnFxFZN'
 		},
 			{
 			covers: _List_fromArray(
@@ -6314,7 +6314,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4zCPToY7AoTqvOKf4HRqAN',
 			name: '182/Im Haus des Henkers',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4zCPToY7AoTqvOKf4HRqAN'
 		},
 			{
 			covers: _List_fromArray(
@@ -6325,7 +6325,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '18xyskqkEGnVfVFhznkFIK',
 			name: '181/Das Kabinett des Zauberers',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/18xyskqkEGnVfVFhznkFIK'
 		},
 			{
 			covers: _List_fromArray(
@@ -6336,7 +6336,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3L3ztKRWI0d7JwZga12WCb',
 			name: 'Outro - FdW',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3L3ztKRWI0d7JwZga12WCb'
 		},
 			{
 			covers: _List_fromArray(
@@ -6347,7 +6347,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4lLOJQU6QBH5cxmERE77La',
 			name: 'und der Zeitgeist (Sechs Kurzgeschichten)',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4lLOJQU6QBH5cxmERE77La'
 		},
 			{
 			covers: _List_fromArray(
@@ -6358,7 +6358,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6tioH9PNiZbmUT54MsiX5k',
 			name: '180/und die flüsternden Puppen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6tioH9PNiZbmUT54MsiX5k'
 		},
 			{
 			covers: _List_fromArray(
@@ -6369,7 +6369,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4IZ7Lsm5le7HJPtaGLCrjO',
 			name: '179/Die Rache des Untoten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4IZ7Lsm5le7HJPtaGLCrjO'
 		},
 			{
 			covers: _List_fromArray(
@@ -6380,7 +6380,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5iobM2gNVymvP8XqnRnHVR',
 			name: 'Adventskalender - Stille Nacht, düstere Nacht',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5iobM2gNVymvP8XqnRnHVR'
 		},
 			{
 			covers: _List_fromArray(
@@ -6391,7 +6391,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3w5glP0mzKfTanzXpAjN27',
 			name: '178/Der gefiederte Schrecken',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3w5glP0mzKfTanzXpAjN27'
 		},
 			{
 			covers: _List_fromArray(
@@ -6402,7 +6402,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0w6Khy7kpqTXrEDITf0rZ0',
 			name: '177/Der Geist des Goldgräbers',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0w6Khy7kpqTXrEDITf0rZ0'
 		},
 			{
 			covers: _List_fromArray(
@@ -6413,7 +6413,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4qbxSVpr3NxRjdIVC411ue',
 			name: '176/und der gestohlene Sieg',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4qbxSVpr3NxRjdIVC411ue'
 		},
 			{
 			covers: _List_fromArray(
@@ -6424,7 +6424,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4uggmrJ3Xpm1e2tcz6laze',
 			name: '175/Schattenwelt',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4uggmrJ3Xpm1e2tcz6laze'
 		},
 			{
 			covers: _List_fromArray(
@@ -6435,7 +6435,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5RoL0jdWMoJ8KRFVOeFYtX',
 			name: '174/und das Tuch der Toten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5RoL0jdWMoJ8KRFVOeFYtX'
 		},
 			{
 			covers: _List_fromArray(
@@ -6446,7 +6446,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2ALDCHCHdawewN1sduWVQQ',
 			name: '173/Dämon der Rache',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2ALDCHCHdawewN1sduWVQQ'
 		},
 			{
 			covers: _List_fromArray(
@@ -6457,7 +6457,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6Anfub4AoVHg9bhJ7js0L0',
 			name: '172/und der Eisenmann',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6Anfub4AoVHg9bhJ7js0L0'
 		},
 			{
 			covers: _List_fromArray(
@@ -6468,7 +6468,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6YbaUGc6ZeR1YnDFGQJV8F',
 			name: '171/und das Phantom aus dem Meer',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6YbaUGc6ZeR1YnDFGQJV8F'
 		},
 			{
 			covers: _List_fromArray(
@@ -6479,7 +6479,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '62CKj2RCiWDDUtBWTn4KxQ',
 			name: '170/Straße des Grauens',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/62CKj2RCiWDDUtBWTn4KxQ'
 		},
 			{
 			covers: _List_fromArray(
@@ -6490,7 +6490,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5PEHeYcUhz1Aq02ZB1pUgJ',
 			name: '169/Die Spur des Spielers',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5PEHeYcUhz1Aq02ZB1pUgJ'
 		},
 			{
 			covers: _List_fromArray(
@@ -6501,7 +6501,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '77aawQqgLQZxPb9kwSg0JR',
 			name: '168/GPS-Gangster',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/77aawQqgLQZxPb9kwSg0JR'
 		},
 			{
 			covers: _List_fromArray(
@@ -6512,7 +6512,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2AEzTekSWfyfzJH56jmhET',
 			name: 'Das Rätsel der Sieben',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2AEzTekSWfyfzJH56jmhET'
 		},
 			{
 			covers: _List_fromArray(
@@ -6523,7 +6523,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7kskBahbrQWCOiaXKuoPjE',
 			name: '167/und das blaue Biest',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7kskBahbrQWCOiaXKuoPjE'
 		},
 			{
 			covers: _List_fromArray(
@@ -6534,7 +6534,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '427kScPIeUSfoNKCNercMC',
 			name: '166/und die brennende Stadt',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/427kScPIeUSfoNKCNercMC'
 		},
 			{
 			covers: _List_fromArray(
@@ -6545,7 +6545,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4izJKxYT4fTwIZjoXNgkX7',
 			name: '165/Im Schatten des Giganten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4izJKxYT4fTwIZjoXNgkX7'
 		},
 			{
 			covers: _List_fromArray(
@@ -6556,7 +6556,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3An657Q0wkVp4nIDg2zpcB',
 			name: '164/Fußball-Teufel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3An657Q0wkVp4nIDg2zpcB'
 		},
 			{
 			covers: _List_fromArray(
@@ -6567,7 +6567,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4fv0pPN7ZjbUiejSTxTPZh',
 			name: '163/und der verschollene Pilot',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4fv0pPN7ZjbUiejSTxTPZh'
 		},
 			{
 			covers: _List_fromArray(
@@ -6578,7 +6578,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7beppYTqtHAEPKoXyodssF',
 			name: '162/und der schreiende Nebel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7beppYTqtHAEPKoXyodssF'
 		},
 			{
 			covers: _List_fromArray(
@@ -6589,7 +6589,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1GEzdjI5N25iuGjvypRscs',
 			name: '161/Die blutenden Bilder',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1GEzdjI5N25iuGjvypRscs'
 		},
 			{
 			covers: _List_fromArray(
@@ -6600,7 +6600,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2F6VxgWbGCUpTU9ux6Dtbi',
 			name: '160/Geheimnisvolle Botschaften',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2F6VxgWbGCUpTU9ux6Dtbi'
 		},
 			{
 			covers: _List_fromArray(
@@ -6611,7 +6611,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4rCAnDrNJ96srnBEoA0ISj',
 			name: '159/Nacht der Tiger',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4rCAnDrNJ96srnBEoA0ISj'
 		},
 			{
 			covers: _List_fromArray(
@@ -6622,7 +6622,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2qFuUJMx8w4VEO0Zdf8jFJ',
 			name: 'Der 5. Advent',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2qFuUJMx8w4VEO0Zdf8jFJ'
 		},
 			{
 			covers: _List_fromArray(
@@ -6633,7 +6633,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3uFt95otJjaxH8o40tPtIS',
 			name: '158/und der Feuergeist',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3uFt95otJjaxH8o40tPtIS'
 		},
 			{
 			covers: _List_fromArray(
@@ -6644,7 +6644,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1nL3AddBvZ845zMyXRowgs',
 			name: 'Und die Geisterlampe',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1nL3AddBvZ845zMyXRowgs'
 		},
 			{
 			covers: _List_fromArray(
@@ -6655,7 +6655,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0pdXEEgKjfh4H0aZg4IOTS',
 			name: '157/Im Zeichen der Schlangen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0pdXEEgKjfh4H0aZg4IOTS'
 		},
 			{
 			covers: _List_fromArray(
@@ -6666,7 +6666,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '78wUIvkGT2CdWW0ngeEy8V',
 			name: '156/Im Netz des Drachen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/78wUIvkGT2CdWW0ngeEy8V'
 		},
 			{
 			covers: _List_fromArray(
@@ -6677,7 +6677,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '623V90QowsF4WSqV3cHGKf',
 			name: '155/und der Meister des Todes',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/623V90QowsF4WSqV3cHGKf'
 		},
 			{
 			covers: _List_fromArray(
@@ -6688,7 +6688,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3uggg8gNlh1kpBxLeOfFTV',
 			name: '154/Botschaft aus der Unterwelt',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3uggg8gNlh1kpBxLeOfFTV'
 		},
 			{
 			covers: _List_fromArray(
@@ -6699,7 +6699,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7nxSEeJiQwI34VwnWT83C9',
 			name: '153/und das Fußballphantom',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7nxSEeJiQwI34VwnWT83C9'
 		},
 			{
 			covers: _List_fromArray(
@@ -6710,7 +6710,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5iNeANVy4supl8HowB9V2h',
 			name: '152/Skateboardfieber',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5iNeANVy4supl8HowB9V2h'
 		},
 			{
 			covers: _List_fromArray(
@@ -6721,7 +6721,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3u0OSCwiOblOhm4dKjwLN5',
 			name: '151/Schwarze Sonne',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3u0OSCwiOblOhm4dKjwLN5'
 		},
 			{
 			covers: _List_fromArray(
@@ -6732,7 +6732,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2Bxdn8Gn8vEy4UiTOc8cBK',
 			name: 'High Strung - Unter Hochspannung',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2Bxdn8Gn8vEy4UiTOc8cBK'
 		},
 			{
 			covers: _List_fromArray(
@@ -6743,7 +6743,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6cPgVsZ6TPyVIP9BHP5ty5',
 			name: '150/Geisterbucht',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6cPgVsZ6TPyVIP9BHP5ty5'
 		},
 			{
 			covers: _List_fromArray(
@@ -6754,7 +6754,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7K7dfMc3VwHOKtENI1BWTD',
 			name: '149/Der namenlose Gegner',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7K7dfMc3VwHOKtENI1BWTD'
 		},
 			{
 			covers: _List_fromArray(
@@ -6765,7 +6765,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2uOsf31oenHRd4DVxCSjn9',
 			name: '148/und die feurige Flut',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2uOsf31oenHRd4DVxCSjn9'
 		},
 			{
 			covers: _List_fromArray(
@@ -6776,7 +6776,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '35aU9bfmxPGdjiRA4JMuFd',
 			name: '147/Grusel auf Campbell Castle',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/35aU9bfmxPGdjiRA4JMuFd'
 		},
 			{
 			covers: _List_fromArray(
@@ -6787,7 +6787,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3D9Jf4mdOBoeyrKpffYBvy',
 			name: '146/Der Biss der Bestie',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3D9Jf4mdOBoeyrKpffYBvy'
 		},
 			{
 			covers: _List_fromArray(
@@ -6798,7 +6798,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5ffcg4OqrmksOKmy98PLGM',
 			name: 'Brainwash - Gefangene Gedanken',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5ffcg4OqrmksOKmy98PLGM'
 		},
 			{
 			covers: _List_fromArray(
@@ -6809,7 +6809,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5RBu5WK95Q6BtWfA4o3Vgs',
 			name: 'Brainwash - Gefangene Gedanken',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5RBu5WK95Q6BtWfA4o3Vgs'
 		},
 			{
 			covers: _List_fromArray(
@@ -6820,7 +6820,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6TjzBTmeDakBgh5NOGj1BC',
 			name: '145/Die Rache der Samurai',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6TjzBTmeDakBgh5NOGj1BC'
 		},
 			{
 			covers: _List_fromArray(
@@ -6831,7 +6831,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2RxTF6MhAVOtudVNOyHTQz',
 			name: '144/Zwillinge der Finsternis',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2RxTF6MhAVOtudVNOyHTQz'
 		},
 			{
 			covers: _List_fromArray(
@@ -6842,7 +6842,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '27Y40VQIXBb9LCLsRvMhSa',
 			name: '144/Zwillinge der Finsternis',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/27Y40VQIXBb9LCLsRvMhSa'
 		},
 			{
 			covers: _List_fromArray(
@@ -6853,7 +6853,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '249qkyRcqMAoKJhXwrTYtE',
 			name: 'House of Horrors - Haus der Angst',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/249qkyRcqMAoKJhXwrTYtE'
 		},
 			{
 			covers: _List_fromArray(
@@ -6864,7 +6864,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4Y7Pxv7pzLmKVJowmBwOkd',
 			name: '143/und die Poker-Hölle',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4Y7Pxv7pzLmKVJowmBwOkd'
 		},
 			{
 			covers: _List_fromArray(
@@ -6875,7 +6875,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '71moidSHTwJsc2N70axEce',
 			name: '142/Tödliches Eis',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/71moidSHTwJsc2N70axEce'
 		},
 			{
 			covers: _List_fromArray(
@@ -6886,7 +6886,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3JJeehFIJTxhrltC6e44VT',
 			name: 'Und der dreiTag',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3JJeehFIJTxhrltC6e44VT'
 		},
 			{
 			covers: _List_fromArray(
@@ -6897,7 +6897,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6gxj68DOHRSVlEM4xzwtRy',
 			name: '141/und die Fußball-Falle',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6gxj68DOHRSVlEM4xzwtRy'
 		},
 			{
 			covers: _List_fromArray(
@@ -6908,7 +6908,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3HxAtK23R2gFkW000mdaFT',
 			name: '140/Stadt der Vampire',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3HxAtK23R2gFkW000mdaFT'
 		},
 			{
 			covers: _List_fromArray(
@@ -6919,7 +6919,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6RJf8I60kNhnYxlnw7eTGv',
 			name: '139/Das Geheimnis der Diva',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6RJf8I60kNhnYxlnw7eTGv'
 		},
 			{
 			covers: _List_fromArray(
@@ -6930,7 +6930,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '79enDMGQWH7LQ5weNB96g7',
 			name: '138/Die geheime Treppe',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/79enDMGQWH7LQ5weNB96g7'
 		},
 			{
 			covers: _List_fromArray(
@@ -6941,7 +6941,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3m7fR2wOkytZHq9m4QeBkB',
 			name: '137/Pfad der Angst',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3m7fR2wOkytZHq9m4QeBkB'
 		},
 			{
 			covers: _List_fromArray(
@@ -6952,7 +6952,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5HiWGQmaCRaxdaon49Iw9S',
 			name: '136/und das versunkene Dorf',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5HiWGQmaCRaxdaon49Iw9S'
 		},
 			{
 			covers: _List_fromArray(
@@ -6963,7 +6963,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0V8G13FK8oGJV8Nde4Q2M1',
 			name: '135/Fluch des Piraten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0V8G13FK8oGJV8Nde4Q2M1'
 		},
 			{
 			covers: _List_fromArray(
@@ -6974,7 +6974,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0TmWLedytkxVuP9b5Hqeqq',
 			name: '135/Fluch des Piraten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0TmWLedytkxVuP9b5Hqeqq'
 		},
 			{
 			covers: _List_fromArray(
@@ -6985,7 +6985,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3tSAywypwRoPw608n5JseQ',
 			name: '133/ Fels der Dämonen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3tSAywypwRoPw608n5JseQ'
 		},
 			{
 			covers: _List_fromArray(
@@ -6996,7 +6996,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1Cta130Rwp5vH1ddfAChbU',
 			name: '134/Der tote Mönch',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1Cta130Rwp5vH1ddfAChbU'
 		},
 			{
 			covers: _List_fromArray(
@@ -7007,7 +7007,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1juMQy6yZVmk9Za6HeiicB',
 			name: '133/Fels der Dämonen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1juMQy6yZVmk9Za6HeiicB'
 		},
 			{
 			covers: _List_fromArray(
@@ -7018,7 +7018,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7AUJHA63c3Hy6k47pSK5KB',
 			name: '132/Spuk im Netz',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7AUJHA63c3Hy6k47pSK5KB'
 		},
 			{
 			covers: _List_fromArray(
@@ -7029,7 +7029,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '23wcElHGWpunC23ggr4PcW',
 			name: '132/Spuk im Netz',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/23wcElHGWpunC23ggr4PcW'
 		},
 			{
 			covers: _List_fromArray(
@@ -7040,7 +7040,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4eorcDi9eRfsi7X0A91Z7u',
 			name: '131/Haus des Schreckens',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4eorcDi9eRfsi7X0A91Z7u'
 		},
 			{
 			covers: _List_fromArray(
@@ -7051,7 +7051,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5l5CFSjzSdhbflqmplcTFX',
 			name: '130/Der Fluch des Drachen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5l5CFSjzSdhbflqmplcTFX'
 		},
 			{
 			covers: _List_fromArray(
@@ -7062,7 +7062,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0sCs2S5YTEN0UT1fwWpvKw',
 			name: 'Das verfluchte Schloss',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0sCs2S5YTEN0UT1fwWpvKw'
 		},
 			{
 			covers: _List_fromArray(
@@ -7073,7 +7073,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1lD4RdnibVS7QhtZqCal9E',
 			name: '129/SMS aus dem Grab',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1lD4RdnibVS7QhtZqCal9E'
 		},
 			{
 			covers: _List_fromArray(
@@ -7084,7 +7084,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3XXYXmCEe185oHxigCRo97',
 			name: '128/Schatten über Hollywood',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3XXYXmCEe185oHxigCRo97'
 		},
 			{
 			covers: _List_fromArray(
@@ -7095,7 +7095,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0mp5HVWlYinEYa7Y4Q2vau',
 			name: '127/Schwarze Madonna',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0mp5HVWlYinEYa7Y4Q2vau'
 		},
 			{
 			covers: _List_fromArray(
@@ -7106,7 +7106,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0AnyLaLPx339iGaxjqVfob',
 			name: '126/Schrecken aus dem Moor',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0AnyLaLPx339iGaxjqVfob'
 		},
 			{
 			covers: _List_fromArray(
@@ -7117,7 +7117,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0sIRyuExi7jBQmOpHyyY78',
 			name: '125/Feuermond',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0sIRyuExi7jBQmOpHyyY78'
 		},
 			{
 			covers: _List_fromArray(
@@ -7128,7 +7128,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0LoesJ9VnJPrlvIDz4u4Xt',
 			name: '124/Geister-Canyon',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0LoesJ9VnJPrlvIDz4u4Xt'
 		},
 			{
 			covers: _List_fromArray(
@@ -7139,7 +7139,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3HgetGSMzg6bGM6b67YZcj',
 			name: '123/Fußballfieber',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3HgetGSMzg6bGM6b67YZcj'
 		},
 			{
 			covers: _List_fromArray(
@@ -7150,7 +7150,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '68NWcgqeCQMZ3QcPJXBhzH',
 			name: '122/und der Geisterzug',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/68NWcgqeCQMZ3QcPJXBhzH'
 		},
 			{
 			covers: _List_fromArray(
@@ -7161,7 +7161,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '59WTBKsGdomSgMztadw3uL',
 			name: 'Das Geheimnis der Geisterinsel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/59WTBKsGdomSgMztadw3uL'
 		},
 			{
 			covers: _List_fromArray(
@@ -7172,7 +7172,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6d21lwV9Imn3ObWUyV1UN2',
 			name: '121/Spur ins Nichts',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6d21lwV9Imn3ObWUyV1UN2'
 		},
 			{
 			covers: _List_fromArray(
@@ -7183,7 +7183,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6fVTJQKJBku1yaOmZOnfwg',
 			name: '120/Der schwarze Skorpion',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6fVTJQKJBku1yaOmZOnfwg'
 		},
 			{
 			covers: _List_fromArray(
@@ -7194,7 +7194,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1GKXpMQRKEyZI8pL62VUIP',
 			name: '118/Das düstere Vermächtnis',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1GKXpMQRKEyZI8pL62VUIP'
 		},
 			{
 			covers: _List_fromArray(
@@ -7205,7 +7205,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3piMnopGsrEAKd1EZxsU3i',
 			name: '116/Codename: Cobra',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3piMnopGsrEAKd1EZxsU3i'
 		},
 			{
 			covers: _List_fromArray(
@@ -7216,7 +7216,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3rxr4SLE2EG0EAlpSeI99o',
 			name: '117/Der finstere Rivale',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3rxr4SLE2EG0EAlpSeI99o'
 		},
 			{
 			covers: _List_fromArray(
@@ -7227,7 +7227,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5Hafee7JOUqNVqtsrCtrTZ',
 			name: '115/Auf tödlichem Kurs',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5Hafee7JOUqNVqtsrCtrTZ'
 		},
 			{
 			covers: _List_fromArray(
@@ -7238,7 +7238,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5L2KCw21QT3JKg1KKuqSeF',
 			name: '114/Die Villa der Toten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5L2KCw21QT3JKg1KKuqSeF'
 		},
 			{
 			covers: _List_fromArray(
@@ -7249,7 +7249,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3bFvjy9IyWd7GrzN2dr0Hi',
 			name: '113/Das Auge des Drachen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3bFvjy9IyWd7GrzN2dr0Hi'
 		},
 			{
 			covers: _List_fromArray(
@@ -7260,7 +7260,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0WBhXS0uAYuL1sYb6vjYeS',
 			name: '112/Schlucht der Dämonen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0WBhXS0uAYuL1sYb6vjYeS'
 		},
 			{
 			covers: _List_fromArray(
@@ -7271,7 +7271,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7b9OiVsktCZyldiAnjkVDx',
 			name: '111/Die Höhle des Grauens',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7b9OiVsktCZyldiAnjkVDx'
 		},
 			{
 			covers: _List_fromArray(
@@ -7282,7 +7282,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1OBHPhBUih26oQTqxLvJTQ',
 			name: '110/Panik im Park',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1OBHPhBUih26oQTqxLvJTQ'
 		},
 			{
 			covers: _List_fromArray(
@@ -7293,7 +7293,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4RZllDAKF3DeDz6jZJFXTa',
 			name: '109/Gefährliches Quiz',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4RZllDAKF3DeDz6jZJFXTa'
 		},
 			{
 			covers: _List_fromArray(
@@ -7304,7 +7304,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3v4W4AFaI8uO7J88ojaSkS',
 			name: '108/Die sieben Tore',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3v4W4AFaI8uO7J88ojaSkS'
 		},
 			{
 			covers: _List_fromArray(
@@ -7315,7 +7315,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3kBby5GJMI4U97XljKcPFD',
 			name: '107/und der Schatz der Mönche',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3kBby5GJMI4U97XljKcPFD'
 		},
 			{
 			covers: _List_fromArray(
@@ -7326,7 +7326,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4uJPgDMOIRfoAumwwmpRbR',
 			name: 'Master of Chess',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4uJPgDMOIRfoAumwwmpRbR'
 		},
 			{
 			covers: _List_fromArray(
@@ -7337,7 +7337,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4eX1wH67TDcYPZ1ZsjtPb6',
 			name: '106/Der Mann ohne Kopf',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4eX1wH67TDcYPZ1ZsjtPb6'
 		},
 			{
 			covers: _List_fromArray(
@@ -7348,7 +7348,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6Mi4Smq7Fn8qNOg6Xnf0In',
 			name: '105/Der Nebelberg',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6Mi4Smq7Fn8qNOg6Xnf0In'
 		},
 			{
 			covers: _List_fromArray(
@@ -7359,7 +7359,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6joRNVLN69v3eSnxM86BSM',
 			name: '104/Gift per e-mail',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6joRNVLN69v3eSnxM86BSM'
 		},
 			{
 			covers: _List_fromArray(
@@ -7370,7 +7370,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4ADdmpObDUmBdvyJ9oNz5o',
 			name: '103/Das Erbe des Meisterdiebes',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4ADdmpObDUmBdvyJ9oNz5o'
 		},
 			{
 			covers: _List_fromArray(
@@ -7381,7 +7381,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3NYWEuwAPt4PIJ4OeNxmzO',
 			name: '102/Doppelte Täuschung',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3NYWEuwAPt4PIJ4OeNxmzO'
 		},
 			{
 			covers: _List_fromArray(
@@ -7392,7 +7392,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1DZAe0qMw8Pq9EPoX6gETA',
 			name: '101/und das Hexen-Handy',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1DZAe0qMw8Pq9EPoX6gETA'
 		},
 			{
 			covers: _List_fromArray(
@@ -7403,7 +7403,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4KXnXnpFRnQsjeZHpNC7X9',
 			name: 'Super-Papagei 2004',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4KXnXnpFRnQsjeZHpNC7X9'
 		},
 			{
 			covers: _List_fromArray(
@@ -7414,7 +7414,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6zwBnyiy9Hy9TAser0DOuL',
 			name: '100/Toteninsel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6zwBnyiy9Hy9TAser0DOuL'
 		},
 			{
 			covers: _List_fromArray(
@@ -7425,7 +7425,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0bC2ZiWlcizdzpwCt8vbkV',
 			name: '100/Toteninsel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0bC2ZiWlcizdzpwCt8vbkV'
 		},
 			{
 			covers: _List_fromArray(
@@ -7436,7 +7436,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3haGZZ8x7PyaGxiqcLmLf9',
 			name: '099/Rufmord',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3haGZZ8x7PyaGxiqcLmLf9'
 		},
 			{
 			covers: _List_fromArray(
@@ -7447,7 +7447,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4C4o7tHpT20QrdsvmI70uI',
 			name: '098/Tal des Schreckens',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4C4o7tHpT20QrdsvmI70uI'
 		},
 			{
 			covers: _List_fromArray(
@@ -7458,7 +7458,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2bfJa4PRKVb7as86HZv8Df',
 			name: '097/Insektenstachel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2bfJa4PRKVb7as86HZv8Df'
 		},
 			{
 			covers: _List_fromArray(
@@ -7469,7 +7469,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5ub4r9Q0YVMrWuOEesu6dR',
 			name: '096/und der rote Rächer',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5ub4r9Q0YVMrWuOEesu6dR'
 		},
 			{
 			covers: _List_fromArray(
@@ -7480,7 +7480,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3UHj03eU7OnDuMVCTLbmcj',
 			name: '094/Das schwarze Monster',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3UHj03eU7OnDuMVCTLbmcj'
 		},
 			{
 			covers: _List_fromArray(
@@ -7491,7 +7491,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7a9rwqPkVdU4FC2cWFudVO',
 			name: '093/und das Geisterschiff',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7a9rwqPkVdU4FC2cWFudVO'
 		},
 			{
 			covers: _List_fromArray(
@@ -7502,7 +7502,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7yMRFgR8FRyWwiLHzQQa2B',
 			name: '092/Todesflug',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7yMRFgR8FRyWwiLHzQQa2B'
 		},
 			{
 			covers: _List_fromArray(
@@ -7513,7 +7513,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0Jh7gzQaOscoFndb3raq2l',
 			name: '091/Labyrinth der Götter',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0Jh7gzQaOscoFndb3raq2l'
 		},
 			{
 			covers: _List_fromArray(
@@ -7524,7 +7524,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2dlgtHB8z7ZhSl1fsSb0Ic',
 			name: '090/Der Feuerteufel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2dlgtHB8z7ZhSl1fsSb0Ic'
 		},
 			{
 			covers: _List_fromArray(
@@ -7535,7 +7535,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3TcIn19pVz5LXE8UleuLuX',
 			name: '089/Tödliche Spur',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3TcIn19pVz5LXE8UleuLuX'
 		},
 			{
 			covers: _List_fromArray(
@@ -7546,7 +7546,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3CZCwdMpj2jnjI43ZlnY5T',
 			name: '088/Vampir im Internet',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3CZCwdMpj2jnjI43ZlnY5T'
 		},
 			{
 			covers: _List_fromArray(
@@ -7557,7 +7557,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1KpWkUQaj5ECJsrb8SrPl4',
 			name: '087/Wolfsgesicht',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1KpWkUQaj5ECJsrb8SrPl4'
 		},
 			{
 			covers: _List_fromArray(
@@ -7568,7 +7568,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4uF9MjchYgq5jjPi5x5YZy',
 			name: '086/Nacht in Angst',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4uF9MjchYgq5jjPi5x5YZy'
 		},
 			{
 			covers: _List_fromArray(
@@ -7579,7 +7579,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2eeodcwD9HXpcA2rvoFkIq',
 			name: '085/Feuerturm',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2eeodcwD9HXpcA2rvoFkIq'
 		},
 			{
 			covers: _List_fromArray(
@@ -7590,7 +7590,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3bhsXwKIDwVK5LTkDCICp0',
 			name: '084/Musik des Teufels',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3bhsXwKIDwVK5LTkDCICp0'
 		},
 			{
 			covers: _List_fromArray(
@@ -7601,7 +7601,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3yofHdHiOLtVZlxWCZ4XBB',
 			name: '083/Meuterei auf hoher See',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3yofHdHiOLtVZlxWCZ4XBB'
 		},
 			{
 			covers: _List_fromArray(
@@ -7612,7 +7612,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7iysTnwaaFrPPWAuUyyi0c',
 			name: '082/Die Karten des Bösen',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7iysTnwaaFrPPWAuUyyi0c'
 		},
 			{
 			covers: _List_fromArray(
@@ -7623,7 +7623,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2s5u6hCaMpTIvZtBRvQzha',
 			name: '081/Verdeckte Fouls',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2s5u6hCaMpTIvZtBRvQzha'
 		},
 			{
 			covers: _List_fromArray(
@@ -7634,7 +7634,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4izXuApLzBWtWHrFqgcrxL',
 			name: '080/Geheimakte Ufo',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4izXuApLzBWtWHrFqgcrxL'
 		},
 			{
 			covers: _List_fromArray(
@@ -7645,7 +7645,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1rDYlXZy6vN4wqqQ6buqOr',
 			name: '079/Im Bann des Voodoo',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1rDYlXZy6vN4wqqQ6buqOr'
 		},
 			{
 			covers: _List_fromArray(
@@ -7656,7 +7656,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6t7Y1H4dUM0d4JycenVskN',
 			name: '078/Das leere Grab',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6t7Y1H4dUM0d4JycenVskN'
 		},
 			{
 			covers: _List_fromArray(
@@ -7667,7 +7667,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3CMN8Y4kjoG4sFwlOEpfsV',
 			name: '077/Pistenteufel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3CMN8Y4kjoG4sFwlOEpfsV'
 		},
 			{
 			covers: _List_fromArray(
@@ -7678,7 +7678,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6RDPGc2budsdTw1lj8f2O5',
 			name: '076/Stimmen aus dem Nichts',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6RDPGc2budsdTw1lj8f2O5'
 		},
 			{
 			covers: _List_fromArray(
@@ -7689,7 +7689,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2IqfdlQamN3vCWN3CKLEVI',
 			name: '075/Die Spur des Raben',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2IqfdlQamN3vCWN3CKLEVI'
 		},
 			{
 			covers: _List_fromArray(
@@ -7700,7 +7700,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '69VLqtWA1bpguYRCFRAxQl',
 			name: '074/und das brennende Schwert',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/69VLqtWA1bpguYRCFRAxQl'
 		},
 			{
 			covers: _List_fromArray(
@@ -7711,7 +7711,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1K8kXLhNnHSdPvtUwf74DE',
 			name: '073/Poltergeist',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1K8kXLhNnHSdPvtUwf74DE'
 		},
 			{
 			covers: _List_fromArray(
@@ -7722,7 +7722,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2GQjkF0ceIse6jVZkUuAQc',
 			name: '072/Dreckiger Deal',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2GQjkF0ceIse6jVZkUuAQc'
 		},
 			{
 			covers: _List_fromArray(
@@ -7733,7 +7733,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6EEN6onzbHIOxnwUkGfKhv',
 			name: '071/Die verschwundene Seglerin',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6EEN6onzbHIOxnwUkGfKhv'
 		},
 			{
 			covers: _List_fromArray(
@@ -7744,7 +7744,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4mlQEwk6I0XuksZCYTtatz',
 			name: '070/Schüsse aus dem Dunkel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4mlQEwk6I0XuksZCYTtatz'
 		},
 			{
 			covers: _List_fromArray(
@@ -7755,7 +7755,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2erJcBofKBO6GFMqDPppsU',
 			name: '069/Späte Rache',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2erJcBofKBO6GFMqDPppsU'
 		},
 			{
 			covers: _List_fromArray(
@@ -7766,7 +7766,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '21pUsEhxssm6fvumGFmi35',
 			name: '068/und der Schatz im Bergsee',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/21pUsEhxssm6fvumGFmi35'
 		},
 			{
 			covers: _List_fromArray(
@@ -7777,7 +7777,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7Hjk98j1FSrHV5IHWmeeFh',
 			name: '067/und das Geheimnis der Särge',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7Hjk98j1FSrHV5IHWmeeFh'
 		},
 			{
 			covers: _List_fromArray(
@@ -7788,7 +7788,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6qj4LD0zotutkIgEg9OvDj',
 			name: '066/und die Schattenmänner',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6qj4LD0zotutkIgEg9OvDj'
 		},
 			{
 			covers: _List_fromArray(
@@ -7799,7 +7799,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '62z7yW4RKhhuAp0RklmNvc',
 			name: '065/Diamantenschmuggel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/62z7yW4RKhhuAp0RklmNvc'
 		},
 			{
 			covers: _List_fromArray(
@@ -7810,7 +7810,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0tmMvsGyWRzVckCYgkvve3',
 			name: '064/Geisterstadt',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0tmMvsGyWRzVckCYgkvve3'
 		},
 			{
 			covers: _List_fromArray(
@@ -7821,7 +7821,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5GPTZKrD7eaCp9p6VOBuIN',
 			name: '063/Fußball-Gangster',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5GPTZKrD7eaCp9p6VOBuIN'
 		},
 			{
 			covers: _List_fromArray(
@@ -7832,7 +7832,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0biXUv1uGUaVsPcw8nAZCY',
 			name: '062/Spuk im Hotel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0biXUv1uGUaVsPcw8nAZCY'
 		},
 			{
 			covers: _List_fromArray(
@@ -7843,7 +7843,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '26M4ktHp3isOX6XJazAxPn',
 			name: '061/und die Rache des Tigers',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/26M4ktHp3isOX6XJazAxPn'
 		},
 			{
 			covers: _List_fromArray(
@@ -7854,7 +7854,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7cBoiWgh1bTMZmCwJE0eMu',
 			name: '060/Dopingmixer',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7cBoiWgh1bTMZmCwJE0eMu'
 		},
 			{
 			covers: _List_fromArray(
@@ -7865,7 +7865,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2qcA1EqAoUsqxXqIivY6Zc',
 			name: '059/Giftiges Wasser',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2qcA1EqAoUsqxXqIivY6Zc'
 		},
 			{
 			covers: _List_fromArray(
@@ -7876,7 +7876,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6DWykdlgf60Mq02hPAGYVD',
 			name: '058/und der verrückte Maler',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6DWykdlgf60Mq02hPAGYVD'
 		},
 			{
 			covers: _List_fromArray(
@@ -7887,7 +7887,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5W6dRiaeSVE7zUBYHbepak',
 			name: '057/Tatort Zirkus',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5W6dRiaeSVE7zUBYHbepak'
 		},
 			{
 			covers: _List_fromArray(
@@ -7898,7 +7898,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3fotka2Hbq0N7V9KKWIDdw',
 			name: '056/Angriff der Computer-Viren',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3fotka2Hbq0N7V9KKWIDdw'
 		},
 			{
 			covers: _List_fromArray(
@@ -7909,7 +7909,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4oH2GUWlSSsSgVkxyPVHX1',
 			name: '055/Gekaufte Spieler',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4oH2GUWlSSsSgVkxyPVHX1'
 		},
 			{
 			covers: _List_fromArray(
@@ -7920,7 +7920,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1Fg15cBLFliy6Kr60QqRan',
 			name: '054/Gefahr im Verzug',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1Fg15cBLFliy6Kr60QqRan'
 		},
 			{
 			covers: _List_fromArray(
@@ -7931,7 +7931,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0F9ebKwTd5RNZZOu49lWuF',
 			name: '053/und die Automafia',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0F9ebKwTd5RNZZOu49lWuF'
 		},
 			{
 			covers: _List_fromArray(
@@ -7942,7 +7942,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3pXJh2A9gYzNt22rEIE5q7',
 			name: '052/und die Musikpiraten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3pXJh2A9gYzNt22rEIE5q7'
 		},
 			{
 			covers: _List_fromArray(
@@ -7953,7 +7953,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '71kiy6INV3LzsCddpTZoHf',
 			name: '051/und der riskante Ritt',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/71kiy6INV3LzsCddpTZoHf'
 		},
 			{
 			covers: _List_fromArray(
@@ -7964,7 +7964,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6DKfjDIB1BSYRGAi2YJYm3',
 			name: '050/und der verschwundene Filmstar',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6DKfjDIB1BSYRGAi2YJYm3'
 		},
 			{
 			covers: _List_fromArray(
@@ -7975,7 +7975,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7t2SteAH5OnLLC1ghTAmka',
 			name: '049/und die Comic-Diebe',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7t2SteAH5OnLLC1ghTAmka'
 		},
 			{
 			covers: _List_fromArray(
@@ -7986,7 +7986,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5IRxm1lo35PttzU8YLslZy',
 			name: '048/und die gefährlichen Fässer',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5IRxm1lo35PttzU8YLslZy'
 		},
 			{
 			covers: _List_fromArray(
@@ -7997,7 +7997,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3iWNsrEs9D0FFlKFfscdvL',
 			name: '047/und der giftige Gockel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3iWNsrEs9D0FFlKFfscdvL'
 		},
 			{
 			covers: _List_fromArray(
@@ -8008,7 +8008,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6YX4i7aMCYmn20zvAFM3lG',
 			name: '046/und der schrullige Millionär',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6YX4i7aMCYmn20zvAFM3lG'
 		},
 			{
 			covers: _List_fromArray(
@@ -8019,7 +8019,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '39mWWzaUZp0AXyN9Vnp4od',
 			name: '045/und das Gold der Wikinger',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/39mWWzaUZp0AXyN9Vnp4od'
 		},
 			{
 			covers: _List_fromArray(
@@ -8030,7 +8030,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6JNNLdq9ELeKENK3RmxLWQ',
 			name: '044/und der gestohlene Preis',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6JNNLdq9ELeKENK3RmxLWQ'
 		},
 			{
 			covers: _List_fromArray(
@@ -8041,7 +8041,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '48QVzskevXtA0KpJjXzvb1',
 			name: '043/und der höllische Werwolf',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/48QVzskevXtA0KpJjXzvb1'
 		},
 			{
 			covers: _List_fromArray(
@@ -8052,7 +8052,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '24bba3w45LGGm7ps3qonkc',
 			name: '042/und der weinende Sarg',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/24bba3w45LGGm7ps3qonkc'
 		},
 			{
 			covers: _List_fromArray(
@@ -8063,7 +8063,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5KUXX8H2LNsuik46M5XLx0',
 			name: '041/und das Volk der Winde',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5KUXX8H2LNsuik46M5XLx0'
 		},
 			{
 			covers: _List_fromArray(
@@ -8074,7 +8074,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2IIw1KESZrJQBFdZQAWcKY',
 			name: '040/und der Automarder',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2IIw1KESZrJQBFdZQAWcKY'
 		},
 			{
 			covers: _List_fromArray(
@@ -8085,7 +8085,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0AKPkUh4ElyZNipc0lZoiR',
 			name: '039/und die Perlenvögel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0AKPkUh4ElyZNipc0lZoiR'
 		},
 			{
 			covers: _List_fromArray(
@@ -8096,7 +8096,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6d3Pavm0enVICdOvBEqxYA',
 			name: '038/und der unsichtbare Gegner',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6d3Pavm0enVICdOvBEqxYA'
 		},
 			{
 			covers: _List_fromArray(
@@ -8107,7 +8107,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6R4gnRHXKgw2cxneWgTiEL',
 			name: '037/und der heimliche Hehler',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6R4gnRHXKgw2cxneWgTiEL'
 		},
 			{
 			covers: _List_fromArray(
@@ -8118,7 +8118,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4R24oyyqxGkczNpqWGCXBZ',
 			name: '036/und der Super-Wal',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4R24oyyqxGkczNpqWGCXBZ'
 		},
 			{
 			covers: _List_fromArray(
@@ -8129,7 +8129,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2REEfC6tVMiYv1eKMlGiOX',
 			name: '035/und der Höhlenmensch',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2REEfC6tVMiYv1eKMlGiOX'
 		},
 			{
 			covers: _List_fromArray(
@@ -8140,7 +8140,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2L18qTB1EfS4FuBk2M6QwV',
 			name: '034/und der rote Pirat',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2L18qTB1EfS4FuBk2M6QwV'
 		},
 			{
 			covers: _List_fromArray(
@@ -8151,7 +8151,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1imKVIfJIM0vKNymevqKjP',
 			name: '033/und die bedrohte Ranch',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1imKVIfJIM0vKNymevqKjP'
 		},
 			{
 			covers: _List_fromArray(
@@ -8162,7 +8162,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7K3VEzD1rm0dgUGBi1i5PW',
 			name: '032/und der Ameisenmensch',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7K3VEzD1rm0dgUGBi1i5PW'
 		},
 			{
 			covers: _List_fromArray(
@@ -8173,7 +8173,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0tPetsUWuZIC0E85x6eVN5',
 			name: '031/und das Narbengesicht',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0tPetsUWuZIC0E85x6eVN5'
 		},
 			{
 			covers: _List_fromArray(
@@ -8184,7 +8184,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0zV9pnaXLuogDr6prsvb4M',
 			name: '030/und das Riff der Haie',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0zV9pnaXLuogDr6prsvb4M'
 		},
 			{
 			covers: _List_fromArray(
@@ -8195,7 +8195,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5JHijjtr65MjdNOnNvD3Ec',
 			name: '029/Die Originalmusik',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5JHijjtr65MjdNOnNvD3Ec'
 		},
 			{
 			covers: _List_fromArray(
@@ -8206,7 +8206,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7Dbd2rya9glmBLVxclcU4d',
 			name: '028/und der Doppelgänger',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7Dbd2rya9glmBLVxclcU4d'
 		},
 			{
 			covers: _List_fromArray(
@@ -8217,7 +8217,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2AisAUu4deLpNi6g6qlTLC',
 			name: '027/und der magische Kreis',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2AisAUu4deLpNi6g6qlTLC'
 		},
 			{
 			covers: _List_fromArray(
@@ -8228,7 +8228,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2NSreywe8UbWo7BJVY3Spk',
 			name: '026/und die Silbermine',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2NSreywe8UbWo7BJVY3Spk'
 		},
 			{
 			covers: _List_fromArray(
@@ -8239,7 +8239,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6RXr8BmKNSK9Zk11k0I7Dl',
 			name: '025/und die singende Schlange',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6RXr8BmKNSK9Zk11k0I7Dl'
 		},
 			{
 			covers: _List_fromArray(
@@ -8250,7 +8250,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '211IEWHi59nUsHx8li8G9r',
 			name: '024/und die silberne Spinne',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/211IEWHi59nUsHx8li8G9r'
 		},
 			{
 			covers: _List_fromArray(
@@ -8261,7 +8261,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '67qFOAxbhNRHEIeOjQ9Zkp',
 			name: '023/und das Aztekenschwert',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/67qFOAxbhNRHEIeOjQ9Zkp'
 		},
 			{
 			covers: _List_fromArray(
@@ -8272,7 +8272,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '7i50aK2wKvszWNnay4DtxP',
 			name: '022/und der verschwundene Schatz',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/7i50aK2wKvszWNnay4DtxP'
 		},
 			{
 			covers: _List_fromArray(
@@ -8283,7 +8283,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4KEZWleMTT8lDaQDLgozFc',
 			name: '095/Botschaft von Geisterhand',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4KEZWleMTT8lDaQDLgozFc'
 		},
 			{
 			covers: _List_fromArray(
@@ -8294,7 +8294,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2koZEkq7vQnHjMP73gVXCo',
 			name: '021/und der tanzende Teufel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2koZEkq7vQnHjMP73gVXCo'
 		},
 			{
 			covers: _List_fromArray(
@@ -8305,7 +8305,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5ilbdbGu5eQRUIsbslyiLe',
 			name: '020/und die flammende Spur',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5ilbdbGu5eQRUIsbslyiLe'
 		},
 			{
 			covers: _List_fromArray(
@@ -8316,7 +8316,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3JqJ2zIt3UzKug7onmbmAo',
 			name: '019/und der Teufelsberg',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3JqJ2zIt3UzKug7onmbmAo'
 		},
 			{
 			covers: _List_fromArray(
@@ -8327,7 +8327,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '1yqICFWBL4l7fJkrFWvfWL',
 			name: '018/und die Geisterinsel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/1yqICFWBL4l7fJkrFWvfWL'
 		},
 			{
 			covers: _List_fromArray(
@@ -8338,7 +8338,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0CMsNalUakIcv6znyVLALr',
 			name: '017/und die gefährliche Erbschaft',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0CMsNalUakIcv6znyVLALr'
 		},
 			{
 			covers: _List_fromArray(
@@ -8349,7 +8349,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '16dOhg07DVqoSxlS7ToLM5',
 			name: '016/und der Zauberspiegel',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/16dOhg07DVqoSxlS7ToLM5'
 		},
 			{
 			covers: _List_fromArray(
@@ -8360,7 +8360,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2dQYcaTRh5qEYk2oH7WoBC',
 			name: '015/und der rasende Löwe',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2dQYcaTRh5qEYk2oH7WoBC'
 		},
 			{
 			covers: _List_fromArray(
@@ -8371,7 +8371,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3O5STjjugoL5cNKfeRuBiU',
 			name: '014/und das Bergmonster',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3O5STjjugoL5cNKfeRuBiU'
 		},
 			{
 			covers: _List_fromArray(
@@ -8382,7 +8382,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2AZ7zFBophWEIuBPjAG60I',
 			name: '013/und der lachende Schatten',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2AZ7zFBophWEIuBPjAG60I'
 		},
 			{
 			covers: _List_fromArray(
@@ -8393,7 +8393,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0bSrvyOjOzFoFJfx3uaFgk',
 			name: '012/und der seltsame Wecker',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0bSrvyOjOzFoFJfx3uaFgk'
 		},
 			{
 			covers: _List_fromArray(
@@ -8404,7 +8404,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '07EhJ6uxWcQQWKeXJ1e8Lb',
 			name: '011/und das Gespensterschloss',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/07EhJ6uxWcQQWKeXJ1e8Lb'
 		},
 			{
 			covers: _List_fromArray(
@@ -8415,7 +8415,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4h75QQIxW1etThTuw6vWzg',
 			name: '010/und die flüsternde Mumie',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4h75QQIxW1etThTuw6vWzg'
 		},
 			{
 			covers: _List_fromArray(
@@ -8426,7 +8426,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0aNqdp5ayuUNsOdUwu8x0b',
 			name: '009/und die rätselhaften Bilder',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0aNqdp5ayuUNsOdUwu8x0b'
 		},
 			{
 			covers: _List_fromArray(
@@ -8437,7 +8437,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '6MRsf5IcfqJIogaNqtESnh',
 			name: '008/und der grüne Geist',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/6MRsf5IcfqJIogaNqtESnh'
 		},
 			{
 			covers: _List_fromArray(
@@ -8448,7 +8448,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '3nGyW4ETDrDpInYEAQCyYS',
 			name: '007/und der unheimliche Drache',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/3nGyW4ETDrDpInYEAQCyYS'
 		},
 			{
 			covers: _List_fromArray(
@@ -8459,7 +8459,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '54eP8BYMR270sTqklv83V0',
 			name: '006/und der sprechende Totenkopf',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/54eP8BYMR270sTqklv83V0'
 		},
 			{
 			covers: _List_fromArray(
@@ -8470,7 +8470,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '5YWM39RnabpxekZuHriTam',
 			name: '005/und der Fluch des Rubins',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/5YWM39RnabpxekZuHriTam'
 		},
 			{
 			covers: _List_fromArray(
@@ -8481,7 +8481,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '2w902iYtkf0ipmTImyLlsL',
 			name: '004/und die schwarze Katze',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/2w902iYtkf0ipmTImyLlsL'
 		},
 			{
 			covers: _List_fromArray(
@@ -8492,7 +8492,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '61OtrnMm1lqoMgMRb1aw7g',
 			name: '003/und der Karpatenhund',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/61OtrnMm1lqoMgMRb1aw7g'
 		},
 			{
 			covers: _List_fromArray(
@@ -8503,7 +8503,7 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '0xldqK4Ocdt8dwQSxUzt6x',
 			name: '002/und der Phantomsee',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/0xldqK4Ocdt8dwQSxUzt6x'
 		},
 			{
 			covers: _List_fromArray(
@@ -8514,17 +8514,97 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 				]),
 			id: '4N9tvSjWfZXx3eHKblYEWQ',
 			name: '001/und der Super-Papagei',
-			urlToOpen: 'https://open.spotify.com/artist/3meJIgRw7YleJrmbpbJK6S'
+			urlToOpen: 'https://open.spotify.com/album/4N9tvSjWfZXx3eHKblYEWQ'
 		}
 		]));
-var $elm$core$Platform$Cmd$batch = _Platform_batch;
-var $author$project$Main$emptyModel = {albums: $author$project$AlbumStorage$albumStorage, blacklistedAlbums: _List_Nil, current: 0};
+var $author$project$Main$emptyModel = {albums: $author$project$AlbumStorage$albumStorage, blacklistedAlbums: _List_Nil, current: 0, isInitialized: false};
 var $elm$json$Json$Encode$null = _Json_encodeNull;
 var $author$project$Main$fetchCookies = _Platform_outgoingPort(
 	'fetchCookies',
 	function ($) {
 		return $elm$json$Json$Encode$null;
 	});
+var $author$project$Main$init = function (_v0) {
+	return _Utils_Tuple2(
+		$author$project$Main$emptyModel,
+		$author$project$Main$fetchCookies(_Utils_Tuple0));
+};
+var $author$project$Main$GotCookie = function (a) {
+	return {$: 'GotCookie', a: a};
+};
+var $elm$json$Json$Decode$string = _Json_decodeString;
+var $author$project$Main$cookieReceiver = _Platform_incomingPort('cookieReceiver', $elm$json$Json$Decode$string);
+var $author$project$Main$subscriptions = function (_v0) {
+	return $author$project$Main$cookieReceiver($author$project$Main$GotCookie);
+};
+var $elm$core$Platform$Cmd$batch = _Platform_batch;
+var $author$project$Main$deconstructCookie = function (content) {
+	return (content === '') ? _List_Nil : _List_Nil;
+};
+var $elm$core$Array$filter = F2(
+	function (isGood, array) {
+		return $elm$core$Array$fromList(
+			A3(
+				$elm$core$Array$foldr,
+				F2(
+					function (x, xs) {
+						return isGood(x) ? A2($elm$core$List$cons, x, xs) : xs;
+					}),
+				_List_Nil,
+				array));
+	});
+var $elm$core$Array$length = function (_v0) {
+	var len = _v0.a;
+	return len;
+};
+var $elm$core$Debug$log = _Debug_log;
+var $elm$core$List$any = F2(
+	function (isOkay, list) {
+		any:
+		while (true) {
+			if (!list.b) {
+				return false;
+			} else {
+				var x = list.a;
+				var xs = list.b;
+				if (isOkay(x)) {
+					return true;
+				} else {
+					var $temp$isOkay = isOkay,
+						$temp$list = xs;
+					isOkay = $temp$isOkay;
+					list = $temp$list;
+					continue any;
+				}
+			}
+		}
+	});
+var $elm$core$List$member = F2(
+	function (x, xs) {
+		return A2(
+			$elm$core$List$any,
+			function (a) {
+				return _Utils_eq(a, x);
+			},
+			xs);
+	});
+var $elm$core$Basics$modBy = _Basics_modBy;
+var $elm$core$Basics$neq = _Utils_notEqual;
+var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
+var $elm$core$Basics$not = _Basics_not;
+var $elm$json$Json$Encode$list = F2(
+	function (func, entries) {
+		return _Json_wrap(
+			A3(
+				$elm$core$List$foldl,
+				_Json_addEntry(func),
+				_Json_emptyArray(_Utils_Tuple0),
+				entries));
+	});
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $author$project$Main$setBlacklistedAlbums = _Platform_outgoingPort(
+	'setBlacklistedAlbums',
+	$elm$json$Json$Encode$list($elm$json$Json$Encode$string));
 var $author$project$Main$AlbumsShuffled = function (a) {
 	return {$: 'AlbumsShuffled', a: a};
 };
@@ -8756,57 +8836,33 @@ var $author$project$Main$startShuffleAlbums = function (albums) {
 		$elm$core$Array$toList(albums));
 	return A2($elm$random$Random$generate, $author$project$Main$AlbumsShuffled, generator);
 };
-var $author$project$Main$init = function (_v0) {
-	return _Utils_Tuple2(
-		$author$project$Main$emptyModel,
-		$elm$core$Platform$Cmd$batch(
-			_List_fromArray(
-				[
-					$author$project$Main$fetchCookies(_Utils_Tuple0),
-					$author$project$Main$startShuffleAlbums($author$project$AlbumStorage$albumStorage)
-				])));
-};
-var $author$project$Main$GotCookie = function (a) {
-	return {$: 'GotCookie', a: a};
-};
-var $elm$json$Json$Decode$string = _Json_decodeString;
-var $author$project$Main$cookieReceiver = _Platform_incomingPort('cookieReceiver', $elm$json$Json$Decode$string);
-var $author$project$Main$subscriptions = function (model) {
-	return $author$project$Main$cookieReceiver($author$project$Main$GotCookie);
-};
-var $author$project$Main$deconstructCookie = function (content) {
-	return _List_Nil;
-};
-var $elm$core$Array$length = function (_v0) {
-	var len = _v0.a;
-	return len;
-};
-var $elm$core$Basics$modBy = _Basics_modBy;
-var $author$project$Main$constructCookie = function (albums) {
-	return '';
-};
-var $author$project$Main$modelToCookie = function (model) {
-	return $author$project$Main$constructCookie(model.blacklistedAlbums);
-};
-var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
-var $elm$json$Json$Encode$string = _Json_wrap;
-var $author$project$Main$setCookie = _Platform_outgoingPort('setCookie', $elm$json$Json$Encode$string);
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
 			case 'Reset':
 				return _Utils_Tuple2(
 					$author$project$Main$emptyModel,
-					$author$project$Main$setCookie(
-						$author$project$Main$modelToCookie($author$project$Main$emptyModel)));
+					$elm$core$Platform$Cmd$batch(
+						_List_fromArray(
+							[
+								$author$project$Main$setBlacklistedAlbums(_List_Nil),
+								$author$project$Main$startShuffleAlbums($author$project$Main$emptyModel.albums)
+							])));
 			case 'GotCookie':
 				var text = msg.a;
 				var albumsToBlacklist = $author$project$Main$deconstructCookie(text);
+				var filteredAlbums = A2(
+					$elm$core$Array$filter,
+					function (a) {
+						return !A2($elm$core$List$member, a.id, albumsToBlacklist);
+					},
+					model.albums);
+				var _v1 = A2($elm$core$Debug$log, 'GotCookie', text);
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{blacklistedAlbums: albumsToBlacklist}),
-					$elm$core$Platform$Cmd$none);
+						{albums: filteredAlbums, blacklistedAlbums: albumsToBlacklist}),
+					$author$project$Main$startShuffleAlbums(filteredAlbums));
 			case 'NextAlbum':
 				var newModel = _Utils_update(
 					model,
@@ -8816,6 +8872,10 @@ var $author$project$Main$update = F2(
 							$elm$core$Array$length(model.albums),
 							model.current + 1)
 					});
+				var _v2 = A2(
+					$elm$core$Debug$log,
+					'counter',
+					$elm$core$String$fromInt(newModel.current));
 				return _Utils_Tuple2(newModel, $elm$core$Platform$Cmd$none);
 			case 'PreviousAlbum':
 				var newModel = _Utils_update(
@@ -8826,20 +8886,44 @@ var $author$project$Main$update = F2(
 							$elm$core$Array$length(model.albums),
 							model.current - 1)
 					});
+				var _v3 = A2(
+					$elm$core$Debug$log,
+					'counter',
+					$elm$core$String$fromInt(newModel.current));
 				return _Utils_Tuple2(newModel, $elm$core$Platform$Cmd$none);
+			case 'BlackListAlbum':
+				var albumId = msg.a;
+				var updatedModel = _Utils_update(
+					model,
+					{
+						albums: A2(
+							$elm$core$Array$filter,
+							function (a) {
+								return !_Utils_eq(a.id, albumId);
+							},
+							model.albums)
+					});
+				var newCmd = $author$project$Main$setBlacklistedAlbums(
+					A2($elm$core$List$cons, albumId, model.blacklistedAlbums));
+				return _Utils_Tuple2(updatedModel, newCmd);
 			default:
 				var albums = msg.a;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
 						{
-							albums: $elm$core$Array$fromList(albums)
+							albums: $elm$core$Array$fromList(albums),
+							isInitialized: true
 						}),
 					$elm$core$Platform$Cmd$none);
 		}
 	});
+var $author$project$Main$BlackListAlbum = function (a) {
+	return {$: 'BlackListAlbum', a: a};
+};
 var $author$project$Main$NextAlbum = {$: 'NextAlbum'};
 var $author$project$Main$PreviousAlbum = {$: 'PreviousAlbum'};
+var $author$project$Main$Reset = {$: 'Reset'};
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -9031,354 +9115,366 @@ var $author$project$Main$tryAlbumNumberFrom = function (input) {
 				A2($elm$regex$Regex$find, albumNumber, input))));
 };
 var $author$project$Main$view = function (model) {
-	var _v0 = A2($elm$core$Array$get, model.current, model.albums);
-	if (_v0.$ === 'Nothing') {
+	if (!model.isInitialized) {
 		return A2(
 			$elm$html$Html$div,
 			_List_Nil,
 			_List_fromArray(
 				[
-					$elm$html$Html$text('no album :(')
+					$elm$html$Html$text('loading...')
 				]));
 	} else {
-		var album = _v0.a;
-		var xLink = A2(
-			$elm$html$Html$a,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('ml-05 p-15'),
-					$elm$html$Html$Attributes$href('https://x.com/b0wter')
-				]),
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$img,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('social-button'),
-							$elm$html$Html$Attributes$src('img/x.svg'),
-							$elm$html$Html$Attributes$alt('Link to X')
-						]),
-					_List_Nil)
-				]));
-		var largestCover = A2(
-			$elm$core$Maybe$withDefault,
-			{height: 640, url: 'https://fakeimg.pl/640x640', width: 640},
-			A2(
-				$elm_community$list_extra$List$Extra$maximumBy,
-				function (a) {
-					return a.width;
-				},
-				album.covers));
-		var githubLink = A2(
-			$elm$html$Html$a,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('mr-05 p-15'),
-					$elm$html$Html$Attributes$href('https://github.com/b0wter/shuffler')
-				]),
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$img,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('social-button'),
-							$elm$html$Html$Attributes$src('img/github.svg'),
-							$elm$html$Html$Attributes$alt('Link to GitHub')
-						]),
-					_List_Nil)
-				]));
-		var coverMaxWidth = 'min(80vw, ' + ($elm$core$String$fromInt(largestCover.width) + 'px)');
-		var coverMaxHeight = 'min(60vh, 90vw, ' + ($elm$core$String$fromInt(largestCover.width) + 'px)');
-		var coverCenterY = $elm$core$String$fromInt(50) + '%';
-		var coverAspectRatio = largestCover.width / largestCover.height;
-		var boxShadowSize = '75px';
-		var backgroundImageUrl = largestCover.url;
-		var coverSourceSet = backgroundImageUrl + (' ' + ($elm$core$String$fromInt(largestCover.width) + 'w'));
-		var backgroundFadeEase = '3000ms';
-		var backgroundFadeDuration = '5000ms';
-		var albumNumber = A2(
-			$elm$core$Maybe$withDefault,
-			0,
-			$author$project$Main$tryAlbumNumberFrom(album.name));
-		var coverCenterX = (albumNumber >= 126) ? ($elm$core$String$fromInt(60) + '%') : ($elm$core$String$fromInt(50) + '%');
-		return A2(
-			$elm$html$Html$div,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$id('background-image-container'),
-					A2($elm$html$Html$Attributes$style, 'background-image', 'url(' + (backgroundImageUrl + ')')),
-					A2($elm$html$Html$Attributes$style, 'background-position', coverCenterX + (' ' + coverCenterY))
-				]),
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$div,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$id('background-color-overlay'),
-							A2($elm$html$Html$Attributes$style, '-webkit-transition', 'background ' + (backgroundFadeDuration + ' linear')),
-							A2($elm$html$Html$Attributes$style, '-moz-transition', 'background ' + (backgroundFadeDuration + ' linear')),
-							A2($elm$html$Html$Attributes$style, '-o-transition', 'background ' + (backgroundFadeDuration + ' linear')),
-							A2($elm$html$Html$Attributes$style, 'transition', 'background ' + (backgroundFadeDuration + ' linear'))
-						]),
-					_List_fromArray(
-						[
-							A2(
-							$elm$html$Html$div,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$id('inner-layout-container'),
-									$elm$html$Html$Attributes$class('d-flex flex-column'),
-									A2($elm$html$Html$Attributes$style, 'height', '100svh')
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$div,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$id('social-links-container')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$div,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
-												]),
-											_List_fromArray(
-												[githubLink, xLink]))
-										])),
-									A2(
-									$elm$html$Html$div,
-									_List_fromArray(
-										[
-											A2($elm$html$Html$Attributes$style, 'flex-grow', '1'),
-											A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
-											A2($elm$html$Html$Attributes$style, 'max-height', coverMaxHeight)
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$div,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$id('cover-container'),
-													$elm$html$Html$Attributes$class(''),
-													A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
-													A2($elm$html$Html$Attributes$style, 'position', 'relative'),
-													A2($elm$html$Html$Attributes$style, 'height', '100%')
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$a,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$href(album.urlToOpen)
-														]),
-													_List_fromArray(
-														[
-															A2(
-															$elm$html$Html$img,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$id('cover-img'),
-																	A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet),
-																	A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-																	A2($elm$html$Html$Attributes$style, 'top', '0'),
-																	A2($elm$html$Html$Attributes$style, 'bottom', '0'),
-																	A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
-																	A2($elm$html$Html$Attributes$style, 'z-index', '1')
-																]),
-															_List_Nil)
-														])),
-													A2(
-													$elm$html$Html$div,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$id('cover-glow'),
-															A2($elm$html$Html$Attributes$style, 'max-width', coverMaxWidth),
-															A2(
-															$elm$html$Html$Attributes$style,
-															'aspect-ratio',
-															$elm$core$String$fromFloat(coverAspectRatio)),
-															A2($elm$html$Html$Attributes$style, 'max-height', coverMaxWidth),
-															A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
-															A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
-															A2($elm$html$Html$Attributes$style, 'filter', 'blur(7.5vw)')
-														]),
-													_List_Nil)
-												])),
-											A2(
-											$elm$html$Html$div,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$id('cover-text'),
-													A2($elm$html$Html$Attributes$style, 'display', 'none')
-												]),
-											_List_fromArray(
-												[
-													$elm$html$Html$text(album.name)
-												]))
-										])),
-									A2(
-									$elm$html$Html$div,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center'),
-											A2($elm$html$Html$Attributes$style, 'z-index', '1')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$a,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$href('#'),
-													$elm$html$Html$Events$onClick($author$project$Main$PreviousAlbum)
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$img,
-													_List_fromArray(
-														[
-															A2($elm$html$Html$Attributes$style, 'padding', '1.5rem'),
-															A2($elm$html$Html$Attributes$style, 'height', '25px'),
-															A2($elm$html$Html$Attributes$style, 'width', '25px'),
-															A2($elm$html$Html$Attributes$style, 'transform', 'scaleX(-1)'),
-															$elm$html$Html$Attributes$src('img/next.svg')
-														]),
-													_List_Nil)
-												])),
-											A2(
-											$elm$html$Html$a,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$href(album.urlToOpen)
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$img,
-													_List_fromArray(
-														[
-															A2($elm$html$Html$Attributes$style, 'height', '10rem'),
-															$elm$html$Html$Attributes$src('img/play.svg'),
-															$elm$html$Html$Attributes$alt('play current album on Spotify')
-														]),
-													_List_Nil)
-												])),
-											A2(
-											$elm$html$Html$a,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$href('#'),
-													$elm$html$Html$Events$onClick($author$project$Main$NextAlbum)
-												]),
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$img,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$class('p-15'),
-															$elm$html$Html$Attributes$src('img/next.svg'),
-															$elm$html$Html$Attributes$alt('get next suggestion')
-														]),
-													_List_Nil)
-												]))
-										])),
-									A2(
-									$elm$html$Html$div,
-									_List_fromArray(
-										[
-											A2($elm$html$Html$Attributes$style, 'text-decoration', 'none'),
-											A2($elm$html$Html$Attributes$style, 'color', 'white')
-										]),
-									_List_fromArray(
-										[
-											A2(
-											$elm$html$Html$div,
-											_List_Nil,
-											_List_fromArray(
-												[
-													A2(
-													$elm$html$Html$div,
-													_List_fromArray(
-														[
-															A2($elm$html$Html$Attributes$style, 'font-family', 'urbanist, sans-serif'),
-															A2($elm$html$Html$Attributes$style, 'font-weight', '1000'),
-															A2($elm$html$Html$Attributes$style, 'height', '4rem'),
-															A2($elm$html$Html$Attributes$style, 'text-transform', 'uppercase'),
-															$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
-														]),
-													_List_fromArray(
-														[
-															A2(
-															$elm$html$Html$a,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$href('block/' + album.id),
-																	$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center mr-10')
-																]),
-															_List_fromArray(
-																[
-																	A2(
-																	$elm$html$Html$img,
-																	_List_fromArray(
-																		[
-																			A2($elm$html$Html$Attributes$style, 'height', '2rem'),
-																			$elm$html$Html$Attributes$class('mr-05'),
-																			$elm$html$Html$Attributes$src('img/block.svg'),
-																			$elm$html$Html$Attributes$alt('block current album')
-																		]),
-																	_List_Nil),
-																	A2(
-																	$elm$html$Html$div,
-																	_List_Nil,
-																	_List_fromArray(
-																		[
-																			$elm$html$Html$text('block')
-																		]))
-																])),
-															A2(
-															$elm$html$Html$a,
-															_List_fromArray(
-																[
-																	$elm$html$Html$Attributes$href('clearAll'),
-																	$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center ml-10')
-																]),
-															_List_fromArray(
-																[
-																	A2(
-																	$elm$html$Html$img,
-																	_List_fromArray(
-																		[
-																			A2($elm$html$Html$Attributes$style, 'height', '2rem'),
-																			$elm$html$Html$Attributes$class('mr-05'),
-																			$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
-																			$elm$html$Html$Attributes$alt('clear album blacklist')
-																		]),
-																	_List_Nil),
-																	A2(
-																	$elm$html$Html$div,
-																	_List_Nil,
-																	_List_fromArray(
-																		[
-																			$elm$html$Html$text('clear blocked')
-																		]))
-																]))
-														]))
-												]))
-										]))
-								]))
-						]))
-				]));
+		var _v0 = A2($elm$core$Array$get, model.current, model.albums);
+		if (_v0.$ === 'Nothing') {
+			return A2(
+				$elm$html$Html$div,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text('no album :(')
+					]));
+		} else {
+			var album = _v0.a;
+			var xLink = A2(
+				$elm$html$Html$a,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('ml-05 p-15'),
+						$elm$html$Html$Attributes$href('https://x.com/b0wter')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$img,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('social-button'),
+								$elm$html$Html$Attributes$src('img/x.svg'),
+								$elm$html$Html$Attributes$alt('Link to X')
+							]),
+						_List_Nil)
+					]));
+			var largestCover = A2(
+				$elm$core$Maybe$withDefault,
+				{height: 640, url: 'https://fakeimg.pl/640x640', width: 640},
+				A2(
+					$elm_community$list_extra$List$Extra$maximumBy,
+					function (a) {
+						return a.width;
+					},
+					album.covers));
+			var githubLink = A2(
+				$elm$html$Html$a,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('mr-05 p-15'),
+						$elm$html$Html$Attributes$href('https://github.com/b0wter/shuffler')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$img,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('social-button'),
+								$elm$html$Html$Attributes$src('img/github.svg'),
+								$elm$html$Html$Attributes$alt('Link to GitHub')
+							]),
+						_List_Nil)
+					]));
+			var coverMaxWidth = 'min(80vw, ' + ($elm$core$String$fromInt(largestCover.width) + 'px)');
+			var coverMaxHeight = 'min(60vh, 90vw, ' + ($elm$core$String$fromInt(largestCover.width) + 'px)');
+			var coverCenterY = $elm$core$String$fromInt(50) + '%';
+			var coverAspectRatio = largestCover.width / largestCover.height;
+			var boxShadowSize = '75px';
+			var backgroundImageUrl = largestCover.url;
+			var coverSourceSet = backgroundImageUrl + (' ' + ($elm$core$String$fromInt(largestCover.width) + 'w'));
+			var backgroundFadeEase = '3000ms';
+			var backgroundFadeDuration = '5000ms';
+			var albumNumber = A2(
+				$elm$core$Maybe$withDefault,
+				0,
+				$author$project$Main$tryAlbumNumberFrom(album.name));
+			var coverCenterX = (albumNumber >= 126) ? ($elm$core$String$fromInt(60) + '%') : ($elm$core$String$fromInt(50) + '%');
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$id('background-image-container'),
+						A2($elm$html$Html$Attributes$style, 'background-image', 'url(' + (backgroundImageUrl + ')')),
+						A2($elm$html$Html$Attributes$style, 'background-position', coverCenterX + (' ' + coverCenterY))
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$id('background-color-overlay'),
+								A2($elm$html$Html$Attributes$style, '-webkit-transition', 'background ' + (backgroundFadeDuration + ' linear')),
+								A2($elm$html$Html$Attributes$style, '-moz-transition', 'background ' + (backgroundFadeDuration + ' linear')),
+								A2($elm$html$Html$Attributes$style, '-o-transition', 'background ' + (backgroundFadeDuration + ' linear')),
+								A2($elm$html$Html$Attributes$style, 'transition', 'background ' + (backgroundFadeDuration + ' linear'))
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$id('inner-layout-container'),
+										$elm$html$Html$Attributes$class('d-flex flex-column'),
+										A2($elm$html$Html$Attributes$style, 'height', '100svh')
+									]),
+								_List_fromArray(
+									[
+										A2(
+										$elm$html$Html$div,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$id('social-links-container')
+											]),
+										_List_fromArray(
+											[
+												A2(
+												$elm$html$Html$div,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
+													]),
+												_List_fromArray(
+													[githubLink, xLink]))
+											])),
+										A2(
+										$elm$html$Html$div,
+										_List_fromArray(
+											[
+												A2($elm$html$Html$Attributes$style, 'flex-grow', '1'),
+												A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
+												A2($elm$html$Html$Attributes$style, 'max-height', coverMaxHeight)
+											]),
+										_List_fromArray(
+											[
+												A2(
+												$elm$html$Html$div,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$id('cover-container'),
+														$elm$html$Html$Attributes$class(''),
+														A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
+														A2($elm$html$Html$Attributes$style, 'position', 'relative'),
+														A2($elm$html$Html$Attributes$style, 'height', '100%')
+													]),
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$a,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$href(album.urlToOpen)
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$elm$html$Html$img,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Attributes$id('cover-img'),
+																		A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet),
+																		A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
+																		A2($elm$html$Html$Attributes$style, 'top', '0'),
+																		A2($elm$html$Html$Attributes$style, 'bottom', '0'),
+																		A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
+																		A2($elm$html$Html$Attributes$style, 'z-index', '1')
+																	]),
+																_List_Nil)
+															])),
+														A2(
+														$elm$html$Html$div,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$id('cover-glow'),
+																A2($elm$html$Html$Attributes$style, 'max-width', coverMaxWidth),
+																A2(
+																$elm$html$Html$Attributes$style,
+																'aspect-ratio',
+																$elm$core$String$fromFloat(coverAspectRatio)),
+																A2($elm$html$Html$Attributes$style, 'max-height', coverMaxWidth),
+																A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
+																A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
+																A2($elm$html$Html$Attributes$style, 'filter', 'blur(7.5vw)')
+															]),
+														_List_Nil)
+													])),
+												A2(
+												$elm$html$Html$div,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$id('cover-text'),
+														A2($elm$html$Html$Attributes$style, 'display', 'none')
+													]),
+												_List_fromArray(
+													[
+														$elm$html$Html$text(album.name)
+													]))
+											])),
+										A2(
+										$elm$html$Html$div,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center'),
+												A2($elm$html$Html$Attributes$style, 'z-index', '1')
+											]),
+										_List_fromArray(
+											[
+												A2(
+												$elm$html$Html$a,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$href('#'),
+														$elm$html$Html$Events$onClick($author$project$Main$PreviousAlbum)
+													]),
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$img,
+														_List_fromArray(
+															[
+																A2($elm$html$Html$Attributes$style, 'padding', '1.5rem'),
+																A2($elm$html$Html$Attributes$style, 'height', '25px'),
+																A2($elm$html$Html$Attributes$style, 'width', '25px'),
+																A2($elm$html$Html$Attributes$style, 'transform', 'scaleX(-1)'),
+																$elm$html$Html$Attributes$src('img/next.svg')
+															]),
+														_List_Nil)
+													])),
+												A2(
+												$elm$html$Html$a,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$href(album.urlToOpen)
+													]),
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$img,
+														_List_fromArray(
+															[
+																A2($elm$html$Html$Attributes$style, 'height', '10rem'),
+																$elm$html$Html$Attributes$src('img/play.svg'),
+																$elm$html$Html$Attributes$alt('play current album on Spotify')
+															]),
+														_List_Nil)
+													])),
+												A2(
+												$elm$html$Html$a,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$href('#'),
+														$elm$html$Html$Events$onClick($author$project$Main$NextAlbum)
+													]),
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$img,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('p-15'),
+																$elm$html$Html$Attributes$src('img/next.svg'),
+																$elm$html$Html$Attributes$alt('get next suggestion')
+															]),
+														_List_Nil)
+													]))
+											])),
+										A2(
+										$elm$html$Html$div,
+										_List_fromArray(
+											[
+												A2($elm$html$Html$Attributes$style, 'text-decoration', 'none'),
+												A2($elm$html$Html$Attributes$style, 'color', 'white')
+											]),
+										_List_fromArray(
+											[
+												A2(
+												$elm$html$Html$div,
+												_List_Nil,
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$div,
+														_List_fromArray(
+															[
+																A2($elm$html$Html$Attributes$style, 'cursor', 'pointer'),
+																A2($elm$html$Html$Attributes$style, 'font-family', 'urbanist, sans-serif'),
+																A2($elm$html$Html$Attributes$style, 'font-weight', '1000'),
+																A2($elm$html$Html$Attributes$style, 'height', '4rem'),
+																A2($elm$html$Html$Attributes$style, 'text-transform', 'uppercase'),
+																$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
+															]),
+														_List_fromArray(
+															[
+																A2(
+																$elm$html$Html$a,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Events$onClick(
+																		$author$project$Main$BlackListAlbum(album.id)),
+																		$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center mr-10')
+																	]),
+																_List_fromArray(
+																	[
+																		A2(
+																		$elm$html$Html$img,
+																		_List_fromArray(
+																			[
+																				A2($elm$html$Html$Attributes$style, 'height', '2rem'),
+																				$elm$html$Html$Attributes$class('mr-05'),
+																				$elm$html$Html$Attributes$src('img/block.svg'),
+																				$elm$html$Html$Attributes$alt('block current album')
+																			]),
+																		_List_Nil),
+																		A2(
+																		$elm$html$Html$div,
+																		_List_Nil,
+																		_List_fromArray(
+																			[
+																				$elm$html$Html$text('block')
+																			]))
+																	])),
+																A2(
+																$elm$html$Html$a,
+																_List_fromArray(
+																	[
+																		$elm$html$Html$Events$onClick($author$project$Main$Reset),
+																		$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center ml-10')
+																	]),
+																_List_fromArray(
+																	[
+																		A2(
+																		$elm$html$Html$img,
+																		_List_fromArray(
+																			[
+																				A2($elm$html$Html$Attributes$style, 'height', '2rem'),
+																				$elm$html$Html$Attributes$class('mr-05'),
+																				$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
+																				$elm$html$Html$Attributes$alt('clear album blacklist')
+																			]),
+																		_List_Nil),
+																		A2(
+																		$elm$html$Html$div,
+																		_List_Nil,
+																		_List_fromArray(
+																			[
+																				$elm$html$Html$text('clear blocked')
+																			]))
+																	]))
+															]))
+													]))
+											]))
+									]))
+							]))
+					]));
+		}
 	}
 };
 var $author$project$Main$main = $elm$browser$Browser$element(
