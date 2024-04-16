@@ -43,41 +43,29 @@
 <body style="background-color: black;" onload="">
   <div id="elm-node"></div>
   <script>
+    const blacklistedAlbumsKey = "blacklisted-albums";
     const node = document.getElementById('elm-node');
     var app = Elm.Main.init({
       node: node
     });
 
-    function getCookie(name) {
-      var value = "; " + document.cookie;
-      var parts = value.split("; " + name + "=");
-      if (parts.length === 2)
-        return parts.pop().split(";").shift();
-    }
-
-    function setCookie(name, value) {
-      document.cookie = name + "=" + value + "; path=/";
-    }
-
     function setBlacklistedAlbums(albumIdList) {
       console.log('backlisting', albumIdList.length, 'albums');
-      console.log('setBlacklistedAlbums', albumIdList);
+      localStorage.removeItem(blacklistedAlbumsKey);
+      localStorage.setItem(blacklistedAlbumsKey, JSON.stringify(albumIdList));
     }
+    app.ports.setBlacklistedAlbums.subscribe(albumIdList => setBlacklistedAlbums(albumIdList));
 
-    app.ports.fetchCookies.subscribe(str => {
-      const value = getCookie('previousState');
-      console.log('retrieved cookie', value);
-      if (!value) {
-        app.ports.cookieReceiver.send('');
+    function fetchBlacklistedAlbums() {
+      const content = localStorage.getItem(blacklistedAlbumsKey);
+      if (content) {
+        const deserialized = JSON.parse(content);
+        app.ports.blacklistReceiver.send(deserialized);
       } else {
-        app.ports.cookieReceiver.send(value);
+        app.ports.blacklistReceiver.send([]);
       }
-    });
-
-    app.ports.setCookie.subscribe(str => {
-      console.log('setting cookie', str);
-      setCookie('previousState', str);
-    });
+    }
+    app.ports.fetchBlacklisted.subscribe(fetchBlacklistedAlbums);
 
   </script>
 </body>

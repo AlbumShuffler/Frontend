@@ -8519,28 +8519,28 @@ var $author$project$AlbumStorage$albumStorage = $elm$core$Array$fromList(
 		]));
 var $author$project$Main$emptyModel = {albums: $author$project$AlbumStorage$albumStorage, blacklistedAlbums: _List_Nil, current: 0, isInitialized: false};
 var $elm$json$Json$Encode$null = _Json_encodeNull;
-var $author$project$Main$fetchCookies = _Platform_outgoingPort(
-	'fetchCookies',
+var $author$project$Main$fetchBlacklisted = _Platform_outgoingPort(
+	'fetchBlacklisted',
 	function ($) {
 		return $elm$json$Json$Encode$null;
 	});
 var $author$project$Main$init = function (_v0) {
 	return _Utils_Tuple2(
 		$author$project$Main$emptyModel,
-		$author$project$Main$fetchCookies(_Utils_Tuple0));
+		$author$project$Main$fetchBlacklisted(_Utils_Tuple0));
 };
-var $author$project$Main$GotCookie = function (a) {
-	return {$: 'GotCookie', a: a};
+var $author$project$Main$GotBlacklist = function (a) {
+	return {$: 'GotBlacklist', a: a};
 };
+var $elm$json$Json$Decode$list = _Json_decodeList;
 var $elm$json$Json$Decode$string = _Json_decodeString;
-var $author$project$Main$cookieReceiver = _Platform_incomingPort('cookieReceiver', $elm$json$Json$Decode$string);
+var $author$project$Main$blacklistReceiver = _Platform_incomingPort(
+	'blacklistReceiver',
+	$elm$json$Json$Decode$list($elm$json$Json$Decode$string));
 var $author$project$Main$subscriptions = function (_v0) {
-	return $author$project$Main$cookieReceiver($author$project$Main$GotCookie);
+	return $author$project$Main$blacklistReceiver($author$project$Main$GotBlacklist);
 };
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
-var $author$project$Main$deconstructCookie = function (content) {
-	return (content === '') ? _List_Nil : _List_Nil;
-};
 var $elm$core$Array$filter = F2(
 	function (isGood, array) {
 		return $elm$core$Array$fromList(
@@ -8848,16 +8848,16 @@ var $author$project$Main$update = F2(
 								$author$project$Main$setBlacklistedAlbums(_List_Nil),
 								$author$project$Main$startShuffleAlbums($author$project$Main$emptyModel.albums)
 							])));
-			case 'GotCookie':
+			case 'GotBlacklist':
 				var text = msg.a;
-				var albumsToBlacklist = $author$project$Main$deconstructCookie(text);
+				var albumsToBlacklist = text;
 				var filteredAlbums = A2(
 					$elm$core$Array$filter,
 					function (a) {
 						return !A2($elm$core$List$member, a.id, albumsToBlacklist);
 					},
 					model.albums);
-				var _v1 = A2($elm$core$Debug$log, 'GotCookie', text);
+				var _v1 = A2($elm$core$Debug$log, 'GotBlacklist', text);
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
@@ -8872,14 +8872,6 @@ var $author$project$Main$update = F2(
 							$elm$core$Array$length(model.albums),
 							model.current + 1)
 					});
-				var _v2 = A2(
-					$elm$core$Debug$log,
-					'counter',
-					$elm$core$String$fromInt(newModel.current));
-				var _v3 = A2(
-					$elm$core$Debug$log,
-					'album count',
-					$elm$core$Array$length(model.albums));
 				return _Utils_Tuple2(newModel, $elm$core$Platform$Cmd$none);
 			case 'PreviousAlbum':
 				var newModel = _Utils_update(
@@ -8890,14 +8882,6 @@ var $author$project$Main$update = F2(
 							$elm$core$Array$length(model.albums),
 							model.current - 1)
 					});
-				var _v4 = A2(
-					$elm$core$Debug$log,
-					'counter',
-					$elm$core$String$fromInt(newModel.current));
-				var _v5 = A2(
-					$elm$core$Debug$log,
-					'album count',
-					$elm$core$Array$length(model.albums));
 				return _Utils_Tuple2(newModel, $elm$core$Platform$Cmd$none);
 			case 'BlackListAlbum':
 				var albumId = msg.a;

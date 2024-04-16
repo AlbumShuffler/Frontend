@@ -33,13 +33,10 @@ type alias AlbumArt =
     }
 
 
-port cookieReceiver : (String -> msg) -> Sub msg
+port blacklistReceiver : (List String -> msg) -> Sub msg
 
 
-port fetchCookies : () -> Cmd msg
-
-
-port setCookie : String -> Cmd msg
+port fetchBlacklisted : () -> Cmd msg
 
 
 port setBlacklistedAlbums : List String -> Cmd msg
@@ -47,7 +44,7 @@ port setBlacklistedAlbums : List String -> Cmd msg
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    cookieReceiver GotCookie
+    blacklistReceiver GotBlacklist
 
 
 emptyModel : Model
@@ -71,7 +68,7 @@ main =
 
 type Msg
     = Reset
-    | GotCookie String
+    | GotBlacklist (List String)
     | NextAlbum
     | PreviousAlbum
     | AlbumsShuffled (List Album)
@@ -80,33 +77,7 @@ type Msg
 
 init : Flags -> ( Model, Cmd Msg )
 init _ =
-    ( emptyModel, fetchCookies () )
-
-
-deconstructCookie : String -> List String
-deconstructCookie content =
-    if content == "" then []
-    else
-        []
-
-
-constructCookie : List String -> String
-constructCookie albumsIds =
-    ""
-
-
-modelToCookie : Model -> String
-modelToCookie model =
-    constructCookie model.blacklistedAlbums
-
-
-updateModelFromCookie : String -> Model -> Model
-updateModelFromCookie content model =
-    let
-        albumsToBlacklist =
-            deconstructCookie content
-    in
-    { model | blacklistedAlbums = albumsToBlacklist }
+    ( emptyModel, fetchBlacklisted () )
 
 
 startShuffleAlbums : Array Album -> Cmd Msg
@@ -123,10 +94,10 @@ update msg model =
         Reset ->
             ( emptyModel, Cmd.batch [ setBlacklistedAlbums [], emptyModel.albums |> startShuffleAlbums ] )
 
-        GotCookie text ->
+        GotBlacklist text ->
             let
-                _ = Debug.log "GotCookie" text
-                albumsToBlacklist = text |> deconstructCookie
+                _ = Debug.log "GotBlacklist" text
+                albumsToBlacklist = text 
                 filteredAlbums = model.albums |> Array.filter (\a -> not (albumsToBlacklist |> List.member a.id))
             in
             ( { model | blacklistedAlbums = albumsToBlacklist, albums = filteredAlbums }, filteredAlbums |> startShuffleAlbums )
@@ -134,22 +105,19 @@ update msg model =
         NextAlbum ->
             let
                 newModel = { model | current = modBy (model.albums |> Array.length) (model.current + 1) }
-                _ = Debug.log "counter" (newModel.current |> String.fromInt)
-                _ = Debug.log "album count" (model.albums |> Array.length)
             in
             ( newModel, Cmd.none )
 
         PreviousAlbum ->
             let
                 newModel = { model | current = modBy (model.albums |> Array.length) (model.current - 1) }
-                _ = Debug.log "counter" (newModel.current |> String.fromInt)
-                _ = Debug.log "album count" (model.albums |> Array.length)
             in
             ( newModel, Cmd.none )
 
         BlackListAlbum albumId ->
-            {- Blacklisting an album invalidates the shuffled albums.
-            -}
+            {- Blacklisting an album removes it from the current album array.
+               Since the array is traversed by a counter nothing needs to change as the counter will now
+               point to the next album. -}
             let
                 updatedModel = 
                     { model 
@@ -157,7 +125,6 @@ update msg model =
                         , blacklistedAlbums = albumId :: model.blacklistedAlbums }
                 newCmd = setBlacklistedAlbums (albumId :: model.blacklistedAlbums)
             in
-            
                 ( updatedModel, newCmd )
 
         AlbumsShuffled albums ->
