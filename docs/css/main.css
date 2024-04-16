@@ -160,3 +160,28 @@ body {
 .justify-content-center {
     justify-content: center;
 }
+
+.disabled {
+    pointer-events: none;
+    filter: brightness(25%);
+}
+
+.white-text {
+    color: white;
+}
+
+.status-text-container {
+    height: 100vh;
+    width: calc(100vw - 2rem);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.status-text {
+    width: 100%;
+    color: white;
+    font-family: monospace;
+    font-size: 2rem;
+    text-align: center;
+}

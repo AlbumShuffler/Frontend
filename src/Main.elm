@@ -39,6 +39,9 @@ port cookieReceiver : (String -> msg) -> Sub msg
 port fetchCookies : () -> Cmd msg
 
 
+port setCookie : String -> Cmd msg
+
+
 port setBlacklistedAlbums : List String -> Cmd msg
 
 
@@ -132,6 +135,7 @@ update msg model =
             let
                 newModel = { model | current = modBy (model.albums |> Array.length) (model.current + 1) }
                 _ = Debug.log "counter" (newModel.current |> String.fromInt)
+                _ = Debug.log "album count" (model.albums |> Array.length)
             in
             ( newModel, Cmd.none )
 
@@ -139,6 +143,7 @@ update msg model =
             let
                 newModel = { model | current = modBy (model.albums |> Array.length) (model.current - 1) }
                 _ = Debug.log "counter" (newModel.current |> String.fromInt)
+                _ = Debug.log "album count" (model.albums |> Array.length)
             in
             ( newModel, Cmd.none )
 
@@ -146,7 +151,10 @@ update msg model =
             {- Blacklisting an album invalidates the shuffled albums.
             -}
             let
-                updatedModel = { model | albums = model.albums |> Array.filter (\a -> a.id /= albumId) }
+                updatedModel = 
+                    { model 
+                        | albums = model.albums |> Array.filter (\a -> a.id /= albumId)
+                        , blacklistedAlbums = albumId :: model.blacklistedAlbums }
                 newCmd = setBlacklistedAlbums (albumId :: model.blacklistedAlbums)
             in
             
@@ -171,11 +179,19 @@ tryAlbumNumberFrom input =
 view : Model -> Html Msg
 view model =
     if model.isInitialized == False then
-        div [] [ text "loading..." ]
+        div 
+            [ class "white-text status-text-container"]
+            [ div [ class "status-text" ] [ text "Loading ..." ] ]
+    else if model.isInitialized == True && (model.albums |> Array.isEmpty) && (model.blacklistedAlbums |> (not << List.isEmpty)) then
+        div 
+            [ class "white-text status-text-container"]
+            [ a [ onClick Reset, class "status-text", style "cursor" "pointer" ] [ text ("No albums available but " ++ (model.blacklistedAlbums |> List.length |> String.fromInt) ++ " are blacklisteed. Clear blacklist?" ) ] ]
     else
     case model.albums |> Array.get model.current of
         Nothing ->
-            div [] [ text "no album :(" ]
+            div 
+                [ class "white-text status-text-container"]
+                [ div [ class "status-text" ] [ text "No album data available :(" ] ]
 
         Just album ->
             let
@@ -216,8 +232,14 @@ view model =
                 xLink =
                     Html.a [ class "ml-05 p-15", href "https://x.com/b0wter" ] [ img [ class "social-button", src "img/x.svg", alt "Link to X" ] [] ]
 
-                backgroundFadeDuration = "5000ms"
+                backgroundFadeDuration = "0" {-"5000ms"-}
                 backgroundFadeEase = "3000ms"
+
+                blockedText =
+                    if model.blacklistedAlbums == [] then
+                        "clear blocked (none)"
+                    else
+                        "Blocked: " ++ (model.blacklistedAlbums |> String.join ", ")
             in
             div
                 [ id "background-image-container"
@@ -291,9 +313,14 @@ view model =
                                     [ a
                                         [ onClick (BlackListAlbum album.id), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
                                         [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt "block current album" ] [], div [] [ text "block" ] ]
-                                    , a
-                                        [ onClick Reset, class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
-                                        [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist" ] [], div [] [ text "clear blocked" ] ]
+                                    , if model.blacklistedAlbums |> List.isEmpty then
+                                        a 
+                                            [ class "z-2 small-text non-styled-link d-flex align-items-center ml-10 disabled" ]
+                                            [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist" ] [], div [] [ text "clear blocked" ] ]
+                                      else
+                                        a
+                                            [ onClick Reset, class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
+                                            [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist" ] [], div [] [ text ("clear blocked (" ++ (model.blacklistedAlbums |> List.length |> String.fromInt) ++ ")") ] ]
                                     ]
                                 ]
                             ]
