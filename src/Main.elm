@@ -6,11 +6,10 @@ import Html exposing (Html, a, div, img, text)
 import Html.Attributes exposing (..)
 import Regex
 import Random
-import Random.Extra
 import Html.Events exposing (onClick)
 import Random.List
 import Array exposing(Array)
-import Albums exposing(Album, CoverImage)
+import Albums exposing(Album)
 import AlbumStorage exposing(albumStorage)
 import List.Extra as List
 
@@ -23,6 +22,7 @@ type alias Model =
     { blacklistedAlbums : List String
     , albums: Array Album
     , current: Int
+    , isInitialized: Bool
     }
 
 
@@ -39,22 +39,20 @@ port cookieReceiver : (String -> msg) -> Sub msg
 port fetchCookies : () -> Cmd msg
 
 
-port setCookie : String -> Cmd msg
-
-
-port changeAlbum : String -> Cmd msg
+port setBlacklistedAlbums : List String -> Cmd msg
 
 
 subscriptions : Model -> Sub Msg
-subscriptions model =
+subscriptions _ =
     cookieReceiver GotCookie
 
 
 emptyModel : Model
 emptyModel =
     { blacklistedAlbums = []
-    , albums = AlbumStorage.albumStorage
+    , albums = albumStorage
     , current = 0
+    , isInitialized = False
     }
 
 
@@ -74,20 +72,23 @@ type Msg
     | NextAlbum
     | PreviousAlbum
     | AlbumsShuffled (List Album)
+    | BlackListAlbum String
 
 
 init : Flags -> ( Model, Cmd Msg )
 init _ =
-    ( emptyModel, Cmd.batch [ fetchCookies (), albumStorage |> startShuffleAlbums ] )
+    ( emptyModel, fetchCookies () )
 
 
 deconstructCookie : String -> List String
 deconstructCookie content =
-    []
+    if content == "" then []
+    else
+        []
 
 
 constructCookie : List String -> String
-constructCookie albums =
+constructCookie albumsIds =
     ""
 
 
@@ -117,29 +118,42 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Reset ->
-            ( emptyModel, setCookie (emptyModel |> modelToCookie) )
+            ( emptyModel, Cmd.batch [ setBlacklistedAlbums [], emptyModel.albums |> startShuffleAlbums ] )
 
         GotCookie text ->
             let
-                albumsToBlacklist =
-                    text |> deconstructCookie
+                _ = Debug.log "GotCookie" text
+                albumsToBlacklist = text |> deconstructCookie
+                filteredAlbums = model.albums |> Array.filter (\a -> not (albumsToBlacklist |> List.member a.id))
             in
-            ( { model | blacklistedAlbums = albumsToBlacklist }, Cmd.none )
+            ( { model | blacklistedAlbums = albumsToBlacklist, albums = filteredAlbums }, filteredAlbums |> startShuffleAlbums )
 
         NextAlbum ->
             let
                 newModel = { model | current = modBy (model.albums |> Array.length) (model.current + 1) }
+                _ = Debug.log "counter" (newModel.current |> String.fromInt)
             in
             ( newModel, Cmd.none )
 
         PreviousAlbum ->
             let
                 newModel = { model | current = modBy (model.albums |> Array.length) (model.current - 1) }
+                _ = Debug.log "counter" (newModel.current |> String.fromInt)
             in
             ( newModel, Cmd.none )
 
+        BlackListAlbum albumId ->
+            {- Blacklisting an album invalidates the shuffled albums.
+            -}
+            let
+                updatedModel = { model | albums = model.albums |> Array.filter (\a -> a.id /= albumId) }
+                newCmd = setBlacklistedAlbums (albumId :: model.blacklistedAlbums)
+            in
+            
+                ( updatedModel, newCmd )
+
         AlbumsShuffled albums ->
-            ({ model | albums = albums |> Array.fromList }, Cmd.none)
+            ({ model | albums = albums |> Array.fromList, isInitialized = True }, Cmd.none)
 
 
 tryAlbumNumberFrom : String -> Maybe Int
@@ -156,6 +170,9 @@ tryAlbumNumberFrom input =
 
 view : Model -> Html Msg
 view model =
+    if model.isInitialized == False then
+        div [] [ text "loading..." ]
+    else
     case model.albums |> Array.get model.current of
         Nothing ->
             div [] [ text "no album :(" ]
@@ -270,12 +287,12 @@ view model =
                             [ style "text-decoration" "none", style "color" "white" ]
                             [ div []
                                 [ div
-                                    [ style "font-family" "urbanist, sans-serif", style "font-weight" "1000", style "height" "4rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center" ]
+                                    [ style "cursor" "pointer", style "font-family" "urbanist, sans-serif", style "font-weight" "1000", style "height" "4rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center" ]
                                     [ a
-                                        [ href ("block/" ++ album.id), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
+                                        [ onClick (BlackListAlbum album.id), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
                                         [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt "block current album" ] [], div [] [ text "block" ] ]
                                     , a
-                                        [ href "clearAll", class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
+                                        [ onClick Reset, class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
                                         [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist" ] [], div [] [ text "clear blocked" ] ]
                                     ]
                                 ]

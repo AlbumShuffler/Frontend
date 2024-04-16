@@ -59,6 +59,11 @@
       document.cookie = name + "=" + value + "; path=/";
     }
 
+    function setBlacklistedAlbums(albumIdList) {
+      console.log('backlisting', albumIdList.length, 'albums');
+      console.log('setBlacklistedAlbums', albumIdList);
+    }
+
     app.ports.fetchCookies.subscribe(str => {
       const value = getCookie('previousState');
       console.log('retrieved cookie', value);
