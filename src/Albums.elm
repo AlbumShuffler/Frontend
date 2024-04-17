@@ -1,4 +1,6 @@
-module Albums exposing ( Album, CoverImage )
+module Albums exposing ( Album, ArtistInfo, CoverImage, ArtistWithAlbums )
+
+import Array exposing(Array)
 
 type alias CoverImage =
     { url : String
@@ -7,9 +9,23 @@ type alias CoverImage =
     }
 
 
+type alias ArtistInfo =
+    { name: String
+    , imageUrl: String
+    , shortName: String
+    , httpFriendlyShortName: String
+    }
+
+
 type alias Album =
     { id : String
     , name : String
     , urlToOpen : String
     , covers: List CoverImage
+    }
+
+
+type alias ArtistWithAlbums =
+    { artist: ArtistInfo
+    , albums: Array Album
     }

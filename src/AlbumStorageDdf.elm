@@ -1,7 +1,17 @@
-module AlbumStorage exposing ( albumStorage )
+module AlbumStorageDdf exposing ( albumStorage, artistInfo )
 
 import Array exposing(Array)
-import Albums exposing (Album)
+import Albums exposing (Album, ArtistInfo)
+
+
+artistInfo : ArtistInfo
+artistInfo =
+  { name = "Die drei ???" 
+  , imageUrl = "https://i.scdn.co/image/ab6761610000e5eb7de827ab626c867816052015" 
+  , shortName = "DDF"
+  , httpFriendlyShortName = "ddf"
+  }
+
 
 albumStorage : Array Album
 albumStorage =
@@ -2308,24 +2318,6 @@ albumStorage =
               }
             ]
       }
-    , { id = "5ffcg4OqrmksOKmy98PLGM"
-      , name = "Brainwash - Gefangene Gedanken"
-      , urlToOpen = "https://open.spotify.com/album/5ffcg4OqrmksOKmy98PLGM"
-      , covers =
-            [ { url = "https://i.scdn.co/image/ab67616d0000b273aea776857547a21f9503103f" 
-              , width = 640 
-              , height = 640 
-              }
-            , { url = "https://i.scdn.co/image/ab67616d00001e02aea776857547a21f9503103f"
-              , width = 300 
-              , height = 300 
-              }
-            , { url = "https://i.scdn.co/image/ab67616d00004851aea776857547a21f9503103f"
-              , width = 64 
-              , height = 64 
-              }
-            ]
-      }
     , { id = "5RBu5WK95Q6BtWfA4o3Vgs"
       , name = "Brainwash - Gefangene Gedanken"
       , urlToOpen = "https://open.spotify.com/album/5RBu5WK95Q6BtWfA4o3Vgs"
@@ -2375,24 +2367,6 @@ albumStorage =
               , height = 300 
               }
             , { url = "https://i.scdn.co/image/ab67616d00004851f283bdbdd13c7d1b7c6f84b7"
-              , width = 64 
-              , height = 64 
-              }
-            ]
-      }
-    , { id = "27Y40VQIXBb9LCLsRvMhSa"
-      , name = "144/Zwillinge der Finsternis"
-      , urlToOpen = "https://open.spotify.com/album/27Y40VQIXBb9LCLsRvMhSa"
-      , covers =
-            [ { url = "https://i.scdn.co/image/ab67616d0000b2735c4aaa8fdcc68c79fbab59b2" 
-              , width = 640 
-              , height = 640 
-              }
-            , { url = "https://i.scdn.co/image/ab67616d00001e025c4aaa8fdcc68c79fbab59b2"
-              , width = 300 
-              , height = 300 
-              }
-            , { url = "https://i.scdn.co/image/ab67616d000048515c4aaa8fdcc68c79fbab59b2"
               , width = 64 
               , height = 64 
               }
@@ -2614,24 +2588,6 @@ albumStorage =
               }
             ]
       }
-    , { id = "3tSAywypwRoPw608n5JseQ"
-      , name = "133/ Fels der Dämonen"
-      , urlToOpen = "https://open.spotify.com/album/3tSAywypwRoPw608n5JseQ"
-      , covers =
-            [ { url = "https://i.scdn.co/image/ab67616d0000b27394548bbc10da62fb9c4de875" 
-              , width = 640 
-              , height = 640 
-              }
-            , { url = "https://i.scdn.co/image/ab67616d00001e0294548bbc10da62fb9c4de875"
-              , width = 300 
-              , height = 300 
-              }
-            , { url = "https://i.scdn.co/image/ab67616d0000485194548bbc10da62fb9c4de875"
-              , width = 64 
-              , height = 64 
-              }
-            ]
-      }
     , { id = "1Cta130Rwp5vH1ddfAChbU"
       , name = "134/Der tote Mönch"
       , urlToOpen = "https://open.spotify.com/album/1Cta130Rwp5vH1ddfAChbU"
@@ -2663,24 +2619,6 @@ albumStorage =
               , height = 300 
               }
             , { url = "https://i.scdn.co/image/ab67616d0000485189c779dd1a32247b311a481f"
-              , width = 64 
-              , height = 64 
-              }
-            ]
-      }
-    , { id = "7AUJHA63c3Hy6k47pSK5KB"
-      , name = "132/Spuk im Netz"
-      , urlToOpen = "https://open.spotify.com/album/7AUJHA63c3Hy6k47pSK5KB"
-      , covers =
-            [ { url = "https://i.scdn.co/image/ab67616d0000b27346ec23d853d5ac989f7c907f" 
-              , width = 640 
-              , height = 640 
-              }
-            , { url = "https://i.scdn.co/image/ab67616d00001e0246ec23d853d5ac989f7c907f"
-              , width = 300 
-              , height = 300 
-              }
-            , { url = "https://i.scdn.co/image/ab67616d0000485146ec23d853d5ac989f7c907f"
               , width = 64 
               , height = 64 
               }
@@ -3329,24 +3267,6 @@ albumStorage =
               , height = 300 
               }
             , { url = "https://i.scdn.co/image/ab67616d0000485180945825ee2a30bc4349dc5a"
-              , width = 64 
-              , height = 64 
-              }
-            ]
-      }
-    , { id = "0bC2ZiWlcizdzpwCt8vbkV"
-      , name = "100/Toteninsel"
-      , urlToOpen = "https://open.spotify.com/album/0bC2ZiWlcizdzpwCt8vbkV"
-      , covers =
-            [ { url = "https://i.scdn.co/image/ab67616d0000b2739e6d0466774b88897de6708c" 
-              , width = 640 
-              , height = 640 
-              }
-            , { url = "https://i.scdn.co/image/ab67616d00001e029e6d0466774b88897de6708c"
-              , width = 300 
-              , height = 300 
-              }
-            , { url = "https://i.scdn.co/image/ab67616d000048519e6d0466774b88897de6708c"
               , width = 64 
               , height = 64 
               }

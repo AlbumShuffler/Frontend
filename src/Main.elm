@@ -10,7 +10,7 @@ import Html.Events exposing (onClick)
 import Random.List
 import Array exposing(Array)
 import Albums exposing(Album)
-import AlbumStorage exposing(albumStorage)
+import ArtistsWithAlbums exposing(albumStorage)
 import List.Extra as List
 
 
@@ -49,8 +49,23 @@ subscriptions _ =
 
 emptyModel : Model
 emptyModel =
+    let
+        albums = 
+            albumStorage 
+            |> List.find (\a -> a.artist.name |> String.contains "Die drei")
+            |> Maybe.map (\a -> a.albums)
+            |> Maybe.withDefault Array.empty
+        filteredAlbumNames =
+            [ "Outro"
+            , "liest..."
+            , "Originalmusik"
+            ]
+        filteredAlbums =
+            albums 
+            |> Array.filter (\a -> not <| (filteredAlbumNames |> List.any (\name -> a.name |> String.contains name)))
+    in
     { blacklistedAlbums = []
-    , albums = albumStorage
+    , albums = filteredAlbums
     , current = 0
     , isInitialized = False
     }
