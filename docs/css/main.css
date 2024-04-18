@@ -39,9 +39,9 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
-    background: linear-gradient(45deg, #DF030E 0%, #04A5E3 100%);
     /*
     Additional options are required but need to be set dynamically;
+     * background: linear-gradient(45deg, #DF030E 0%, #04A5E3 100%);
      * aspect-ratio
      * max-height
      * box-shadow

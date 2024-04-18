@@ -6,10 +6,13 @@ import Albums exposing (Album, ArtistInfo)
 
 artistInfo : ArtistInfo
 artistInfo =
-  { name = "Fünf Freunde" 
+  { id = "1hD52edfn6aNsK3fb5c2OT"
+  , name = "Fünf Freunde" 
   , imageUrl = "https://i.scdn.co/image/ab6761610000e5ebfd1fc9ff3040cfb38d7225ac" 
   , shortName = "FF"
   , httpFriendlyShortName = "ff"
+  , coverColorA = "#D91E27"
+  , coverColorB = "#F2C716"
   }
 
 

@@ -6,10 +6,13 @@ import Albums exposing (Album, ArtistInfo)
 
 artistInfo : ArtistInfo
 artistInfo =
-  { name = "Die drei ???" 
+  { id = "3meJIgRw7YleJrmbpbJK6S"
+  , name = "Die drei ???" 
   , imageUrl = "https://i.scdn.co/image/ab6761610000e5eb7de827ab626c867816052015" 
   , shortName = "DDF"
   , httpFriendlyShortName = "ddf"
+  , coverColorA = "#DF030E"
+  , coverColorB = "#04A5E3"
   }
 
 

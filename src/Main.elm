@@ -12,6 +12,11 @@ import Array exposing(Array)
 import Albums exposing(Album)
 import ArtistsWithAlbums exposing(albumStorage)
 import List.Extra as List
+import Albums exposing (ArtistInfo)
+
+
+defaultArtistShortName : String
+defaultArtistShortName = "ddf"
 
 
 type alias Flags =
@@ -23,6 +28,7 @@ type alias Model =
     , albums: Array Album
     , current: Int
     , isInitialized: Bool
+    , currentArtist: Maybe ArtistInfo
     }
 
 
@@ -47,12 +53,14 @@ subscriptions _ =
     blacklistReceiver GotBlacklist
 
 
-emptyModel : Model
-emptyModel =
+emptyModel : String -> Model
+emptyModel artistShortName =
     let
+        artistWithAlbums =
+            albumStorage
+            |> List.find (\a -> (a.artist.httpFriendlyShortName |> String.toLower) == (artistShortName |> String.toLower))
         albums = 
-            albumStorage 
-            |> List.find (\a -> a.artist.name |> String.contains "Die drei")
+            artistWithAlbums
             |> Maybe.map (\a -> a.albums)
             |> Maybe.withDefault Array.empty
         filteredAlbumNames =
@@ -68,6 +76,7 @@ emptyModel =
     , albums = filteredAlbums
     , current = 0
     , isInitialized = False
+    , currentArtist = artistWithAlbums |> Maybe.map (\a -> a.artist)
     }
 
 
@@ -92,7 +101,7 @@ type Msg
 
 init : Flags -> ( Model, Cmd Msg )
 init _ =
-    ( emptyModel, fetchBlacklisted () )
+    ( emptyModel defaultArtistShortName, fetchBlacklisted () )
 
 
 startShuffleAlbums : Array Album -> Cmd Msg
@@ -107,7 +116,10 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Reset ->
-            ( emptyModel, Cmd.batch [ setBlacklistedAlbums [], emptyModel.albums |> startShuffleAlbums ] )
+            let
+                resetModel = (model.currentArtist |> Maybe.map (\a -> a.httpFriendlyShortName) |> Maybe.withDefault defaultArtistShortName) |> emptyModel
+            in
+                ( resetModel, Cmd.batch [ setBlacklistedAlbums [], resetModel.albums |> startShuffleAlbums ] )
 
         GotBlacklist text ->
             let
@@ -169,13 +181,23 @@ view model =
             [ class "white-text status-text-container"]
             [ a [ onClick Reset, class "status-text", style "cursor" "pointer" ] [ text ("No albums available but " ++ (model.blacklistedAlbums |> List.length |> String.fromInt) ++ " are blacklisteed. Clear blacklist?" ) ] ]
     else
-    case model.albums |> Array.get model.current of
-        Nothing ->
+    case (model.albums |> Array.get model.current, model.currentArtist) of
+        (Nothing, Just _) ->
             div 
                 [ class "white-text status-text-container"]
                 [ div [ class "status-text" ] [ text "No album data available :(" ] ]
 
-        Just album ->
+        (Just _, Nothing) ->
+            div 
+                [ class "white-text status-text-container"]
+                [ div [ class "status-text" ] [ text "No artist data available :(" ] ]
+
+        (Nothing, Nothing) ->
+            div 
+                [ class "white-text status-text-container"]
+                [ div [ class "status-text" ] [ text "Neither artist nor album data available :(" ] ]
+
+        (Just album, Just artist) ->
             let
                 largestCover = album.covers |> List.maximumBy (\a -> a.width) |> Maybe.withDefault { width = 640, height = 640, url = "https://fakeimg.pl/640x640" }
                 coverMaxWidth =
@@ -222,6 +244,9 @@ view model =
                         "clear blocked (none)"
                     else
                         "Blocked: " ++ (model.blacklistedAlbums |> String.join ", ")
+
+                backgroundGlowStyle =
+                    style "background" ("linear-gradient(45deg, " ++ artist.coverColorA ++ " , " ++ artist.coverColorB ++ " 100%)")
             in
             div
                 [ id "background-image-container"
@@ -274,6 +299,7 @@ view model =
                                     , style "box-shadow" (boxShadowSize ++ " " ++ boxShadowSize ++ " " ++ boxShadowSize)
                                     , style "border-radius" "20.02px"
                                     , style "filter" "blur(7.5vw)"
+                                    , backgroundGlowStyle
                                     ]
                                     []
                                 ]

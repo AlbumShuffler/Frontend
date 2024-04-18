@@ -6,10 +6,13 @@ import Albums exposing (Album, ArtistInfo)
 
 artistInfo : ArtistInfo
 artistInfo =
-  { name = "TKKG Retro-Archiv" 
+  { id = "0i38tQX5j4gZ0KS3eCMoIl"
+  , name = "TKKG Retro-Archiv" 
   , imageUrl = "https://i.scdn.co/image/ab6761610000e5eb60367627a2292ba3bc27fe58" 
   , shortName = "TKKG(R)"
   , httpFriendlyShortName = "tkkgr"
+  , coverColorA = "#C40004"
+  , coverColorB = "#FFEC01"
   }
 
 
