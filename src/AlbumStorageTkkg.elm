@@ -11,6 +11,7 @@ artistInfo =
   , imageUrl = "https://i.scdn.co/image/ab6761610000e5eb1e8366050ddb70f1267cde51" 
   , shortName = "TKKG"
   , httpFriendlyShortName = "tkkg"
+  , icon = "img/tkkg_transparent.png"
   , coverColorA = "#0B2D74"
   , coverColorB = "#0F40A6"
   }

@@ -12853,10 +12853,10 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 			urlToOpen: 'https://open.spotify.com/album/699XT7D0ROiM2lVjwHAHg9'
 		}
 		]));
-var $author$project$AlbumStorageDdf$artistInfo = {coverColorA: '#DF030E', coverColorB: '#04A5E3', httpFriendlyShortName: 'ddf', id: '3meJIgRw7YleJrmbpbJK6S', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb7de827ab626c867816052015', name: 'Die drei ???', shortName: 'DDF'};
-var $author$project$AlbumStorageFf$artistInfo = {coverColorA: '#D91E27', coverColorB: '#F2C716', httpFriendlyShortName: 'ff', id: '1hD52edfn6aNsK3fb5c2OT', imageUrl: 'https://i.scdn.co/image/ab6761610000e5ebfd1fc9ff3040cfb38d7225ac', name: 'Fünf Freunde', shortName: 'FF'};
-var $author$project$AlbumStorageTkkg$artistInfo = {coverColorA: '#0B2D74', coverColorB: '#0F40A6', httpFriendlyShortName: 'tkkg', id: '61qDotnjM0jnY5lkfOP7ve', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb1e8366050ddb70f1267cde51', name: 'TKKG', shortName: 'TKKG'};
-var $author$project$AlbumStorageTkkgr$artistInfo = {coverColorA: '#C40004', coverColorB: '#FFEC01', httpFriendlyShortName: 'tkkgr', id: '0i38tQX5j4gZ0KS3eCMoIl', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb60367627a2292ba3bc27fe58', name: 'TKKG Retro-Archiv', shortName: 'TKKG(R)'};
+var $author$project$AlbumStorageDdf$artistInfo = {coverColorA: '#DF030E', coverColorB: '#04A5E3', httpFriendlyShortName: 'ddf', icon: 'img/ddf_transparent.png', id: '3meJIgRw7YleJrmbpbJK6S', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb7de827ab626c867816052015', name: 'Die drei ???', shortName: 'DDF'};
+var $author$project$AlbumStorageFf$artistInfo = {coverColorA: '#D91E27', coverColorB: '#F2C716', httpFriendlyShortName: 'ff', icon: 'img/ff_transparent.png', id: '1hD52edfn6aNsK3fb5c2OT', imageUrl: 'https://i.scdn.co/image/ab6761610000e5ebfd1fc9ff3040cfb38d7225ac', name: 'Fünf Freunde', shortName: 'FF'};
+var $author$project$AlbumStorageTkkg$artistInfo = {coverColorA: '#0B2D74', coverColorB: '#0F40A6', httpFriendlyShortName: 'tkkg', icon: 'img/tkkg_transparent.png', id: '61qDotnjM0jnY5lkfOP7ve', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb1e8366050ddb70f1267cde51', name: 'TKKG', shortName: 'TKKG'};
+var $author$project$AlbumStorageTkkgr$artistInfo = {coverColorA: '#C40004', coverColorB: '#FFEC01', httpFriendlyShortName: 'tkkgr', icon: 'img/tkkg_retro_transparent.png', id: '0i38tQX5j4gZ0KS3eCMoIl', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb60367627a2292ba3bc27fe58', name: 'TKKG Retro-Archiv', shortName: 'TKKG(R)'};
 var $author$project$ArtistsWithAlbums$albumStorage = _List_fromArray(
 	[
 		{albums: $author$project$AlbumStorageDdf$albumStorage, artist: $author$project$AlbumStorageDdf$artistInfo},
@@ -12941,7 +12941,7 @@ var $elm$core$Maybe$withDefault = F2(
 	});
 var $author$project$Main$emptyModel = function (artistShortName) {
 	var filteredAlbumNames = _List_fromArray(
-		['Outro', 'liest...', 'Originalmusik']);
+		['Outro', 'liest...', 'liest ...', 'Originalmusik']);
 	var artistWithAlbums = A2(
 		$elm_community$list_extra$List$Extra$find,
 		function (a) {
@@ -13006,7 +13006,6 @@ var $author$project$Main$blacklistReceiver = _Platform_incomingPort(
 var $author$project$Main$subscriptions = function (_v0) {
 	return $author$project$Main$blacklistReceiver($author$project$Main$GotBlacklist);
 };
-var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Array$length = function (_v0) {
 	var len = _v0.a;
 	return len;
@@ -13023,6 +13022,7 @@ var $elm$core$List$member = F2(
 	});
 var $elm$core$Basics$modBy = _Basics_modBy;
 var $elm$core$Basics$neq = _Utils_notEqual;
+var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $elm$json$Json$Encode$list = F2(
 	function (func, entries) {
@@ -13268,28 +13268,32 @@ var $author$project$Main$startShuffleAlbums = function (albums) {
 		$elm$core$Array$toList(albums));
 	return A2($elm$random$Random$generate, $author$project$Main$AlbumsShuffled, generator);
 };
+var $author$project$Main$resetModel = function (artist) {
+	var resettedModel = $author$project$Main$emptyModel(
+		A2(
+			$elm$core$Maybe$withDefault,
+			$author$project$Main$defaultArtistShortName,
+			A2(
+				$elm$core$Maybe$map,
+				function (a) {
+					return a.httpFriendlyShortName;
+				},
+				artist)));
+	return _Utils_Tuple2(
+		resettedModel,
+		$elm$core$Platform$Cmd$batch(
+			_List_fromArray(
+				[
+					$author$project$Main$setBlacklistedAlbums(_List_Nil),
+					$author$project$Main$startShuffleAlbums(resettedModel.albums)
+				])));
+};
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
 			case 'Reset':
-				var resetModel = $author$project$Main$emptyModel(
-					A2(
-						$elm$core$Maybe$withDefault,
-						$author$project$Main$defaultArtistShortName,
-						A2(
-							$elm$core$Maybe$map,
-							function (a) {
-								return a.httpFriendlyShortName;
-							},
-							model.currentArtist)));
-				return _Utils_Tuple2(
-					resetModel,
-					$elm$core$Platform$Cmd$batch(
-						_List_fromArray(
-							[
-								$author$project$Main$setBlacklistedAlbums(_List_Nil),
-								$author$project$Main$startShuffleAlbums(resetModel.albums)
-							])));
+				var artist = msg.a;
+				return $author$project$Main$resetModel(artist);
 			case 'GotBlacklist':
 				var text = msg.a;
 				var albumsToBlacklist = text;
@@ -13360,14 +13364,14 @@ var $author$project$Main$update = F2(
 					$elm$core$Platform$Cmd$none);
 			default:
 				var newArtist = msg.a;
-				return _Utils_Tuple2(
+				return _Utils_eq(
+					$elm$core$Maybe$Just(newArtist),
+					model.currentArtist) ? _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{
-							currentArtist: $elm$core$Maybe$Just(newArtist),
-							isArtistOverlayOpen: false
-						}),
-					$elm$core$Platform$Cmd$none);
+						{isArtistOverlayOpen: false}),
+					$elm$core$Platform$Cmd$none) : $author$project$Main$resetModel(
+					$elm$core$Maybe$Just(newArtist));
 		}
 	});
 var $author$project$Main$BlackListAlbum = function (a) {
@@ -13381,7 +13385,9 @@ var $author$project$Main$OpenArtistOverlay = function (a) {
 	return {$: 'OpenArtistOverlay', a: a};
 };
 var $author$project$Main$PreviousAlbum = {$: 'PreviousAlbum'};
-var $author$project$Main$Reset = {$: 'Reset'};
+var $author$project$Main$Reset = function (a) {
+	return {$: 'Reset', a: a};
+};
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -13604,7 +13610,8 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$a,
 						_List_fromArray(
 							[
-								$elm$html$Html$Events$onClick($author$project$Main$Reset),
+								$elm$html$Html$Events$onClick(
+								$author$project$Main$Reset(model.currentArtist)),
 								$elm$html$Html$Attributes$class('status-text pointer')
 							]),
 						_List_fromArray(
@@ -13688,28 +13695,6 @@ var $author$project$Main$view = function (model) {
 				} else {
 					var album = _v0.a.a;
 					var artist = _v0.b.a;
-					var xLink = _List_fromArray(
-						[
-							A2(
-							$elm$html$Html$a,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('ml-05 p-15'),
-									$elm$html$Html$Attributes$href('https://x.com/b0wter')
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$img,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$class('social-button'),
-											$elm$html$Html$Attributes$src('img/x.svg'),
-											$elm$html$Html$Attributes$alt('Link to X')
-										]),
-									_List_Nil)
-								]))
-						]);
 					var overlayItem = function (a) {
 						return A2(
 							$elm$html$Html$a,
@@ -13823,7 +13808,7 @@ var $author$project$Main$view = function (model) {
 								_List_fromArray(
 									[
 										$elm$html$Html$Attributes$class('social-button'),
-										$elm$html$Html$Attributes$src('img/ddf_transparent.png'),
+										$elm$html$Html$Attributes$src(artist.icon),
 										$elm$html$Html$Attributes$alt('Current artist: ' + artist.name)
 									]),
 								_List_Nil),
@@ -14118,7 +14103,8 @@ var $author$project$Main$view = function (model) {
 																		$elm$html$Html$a,
 																		_List_fromArray(
 																			[
-																				$elm$html$Html$Events$onClick($author$project$Main$Reset),
+																				$elm$html$Html$Events$onClick(
+																				$author$project$Main$Reset(model.currentArtist)),
 																				$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center ml-10')
 																			]),
 																		_List_fromArray(

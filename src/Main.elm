@@ -9,10 +9,10 @@ import Html exposing (Html, a, div, img, text)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
 import List.Extra as List
+import Platform.Cmd as Cmd
 import Random
 import Random.List
 import Regex
-import Albums exposing (ArtistWithAlbums)
 
 
 defaultArtistShortName : String
@@ -70,6 +70,7 @@ emptyModel artistShortName =
         filteredAlbumNames =
             [ "Outro"
             , "liest..."
+            , "liest ..."
             , "Originalmusik"
             ]
 
@@ -97,7 +98,7 @@ main =
 
 
 type Msg
-    = Reset 
+    = Reset (Maybe ArtistInfo)
     | GotBlacklist (List String)
     | NextAlbum
     | PreviousAlbum
@@ -121,15 +122,23 @@ startShuffleAlbums albums =
     generator |> Random.generate AlbumsShuffled
 
 
+resetModel : Maybe ArtistInfo -> ( Model, Cmd Msg )
+resetModel artist =
+    let
+        resettedModel =
+            artist
+                |> Maybe.map (\a -> a.httpFriendlyShortName)
+                |> Maybe.withDefault defaultArtistShortName
+                |> emptyModel
+    in
+    ( resettedModel, Cmd.batch [ setBlacklistedAlbums [], resettedModel.albums |> startShuffleAlbums ] )
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Reset ->
-            let
-                resetModel =
-                    (model.currentArtist |> Maybe.map (\a -> a.httpFriendlyShortName) |> Maybe.withDefault defaultArtistShortName) |> emptyModel
-            in
-            ( resetModel, Cmd.batch [ setBlacklistedAlbums [], resetModel.albums |> startShuffleAlbums ] )
+        Reset artist ->
+            artist |> resetModel
 
         GotBlacklist text ->
             let
@@ -182,7 +191,11 @@ update msg model =
             ( { model | isArtistOverlayOpen = True }, Cmd.none )
 
         CloseArtistOverlay newArtist ->
-            ( { model | isArtistOverlayOpen = False, currentArtist = Just newArtist }, Cmd.none )
+            if Just newArtist == model.currentArtist then
+                ( { model | isArtistOverlayOpen = False }, Cmd.none )
+
+            else
+                Just newArtist |> resetModel
 
 
 tryAlbumNumberFrom : String -> Maybe Int
@@ -207,7 +220,7 @@ view model =
     else if model.isInitialized == True && (model.albums |> Array.isEmpty) && (model.blacklistedAlbums |> (not << List.isEmpty)) then
         div
             [ class "white-text status-text-container" ]
-            [ a [ onClick Reset, class "status-text pointer"  ] [ text ("No albums available but " ++ (model.blacklistedAlbums |> List.length |> String.fromInt) ++ " are blacklisteed. Clear blacklist?") ] ]
+            [ a [ onClick (Reset model.currentArtist), class "status-text pointer" ] [ text ("No albums available but " ++ (model.blacklistedAlbums |> List.length |> String.fromInt) ++ " are blacklisteed. Clear blacklist?") ] ]
 
     else
         case ( model.albums |> Array.get model.current, model.currentArtist ) of
@@ -266,13 +279,11 @@ view model =
                         Html.a [ class "mr-05 p-15", href "https://github.com/b0wter/shuffler" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
 
                     artistImage =
-                        a 
+                        a
                             [ class "ml-05 p-15 d-flex align-items-center white-text pointer", onClick (OpenArtistOverlay artist) ]
-                            [ img [ class "social-button", src "img/ddf_transparent.png", alt ("Current artist: " ++ artist.name) ] []
-                            , div [ class "ml-025", style "font-size" "9px"] [ text "▼" ] ]
-
-                    xLink =
-                        [ Html.a [ class "ml-05 p-15", href "https://x.com/b0wter" ] [ img [ class "social-button", src "img/x.svg", alt "Link to X" ] [] ] ]
+                            [ img [ class "social-button", src artist.icon, alt ("Current artist: " ++ artist.name) ] []
+                            , div [ class "ml-025", style "font-size" "9px" ] [ text "▼" ]
+                            ]
 
                     backgroundFadeDuration =
                         "0"
@@ -289,20 +300,23 @@ view model =
                         Html.a
                             [ onClick (CloseArtistOverlay a) ]
                             [ img [ class "artist-list", src a.imageUrl ] []
-                            , div [ class "mb-10 artist-list-caption"] [ text a.name ]
+                            , div [ class "mb-10 artist-list-caption" ] [ text a.name ]
                             ]
 
                     overlayGrid : List ArtistInfo -> Html Msg
                     overlayGrid artists =
                         div
-                            [ class "artist-list m-20"]
+                            [ class "artist-list m-20" ]
                             (artists |> List.map overlayItem)
 
                     overlay =
                         let
                             display =
-                                if model.isArtistOverlayOpen then style "display" "flex"
-                                else style "display" "none"
+                                if model.isArtistOverlayOpen then
+                                    style "display" "flex"
+
+                                else
+                                    style "display" "none"
                         in
                         div
                             [ id "artist-selection-overview", class "white-text urbanist-font", display ]
@@ -314,8 +328,8 @@ view model =
                     , style "background-image" ("url(" ++ backgroundImageUrl ++ ")")
                     , style "background-position" (coverCenterX ++ " " ++ coverCenterY)
                     ]
-                    [   overlay
-                    ,   div
+                    [ overlay
+                    , div
                         [ id "background-color-overlay"
                         , style "-webkit-transition" ("background " ++ backgroundFadeDuration ++ " linear")
                         , style "-moz-transition" ("background " ++ backgroundFadeDuration ++ " linear")
@@ -331,7 +345,9 @@ view model =
                                 [ id "social-links-container" ]
                                 [ div
                                     [ class "d-flex justify-content-center align-items-center" ]
-                                    [ githubLink, artistImage ] {- xLink ] -}
+                                    [ githubLink, artistImage ]
+
+                                {- xLink ] -}
                                 ]
                             , div
                                 [ style "flex-grow" "1"
@@ -390,7 +406,7 @@ view model =
 
                                           else
                                             a
-                                                [ onClick Reset, class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
+                                                [ onClick (Reset model.currentArtist), class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
                                                 [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist" ] [], div [] [ text ("clear blocked (" ++ (model.blacklistedAlbums |> List.length |> String.fromInt) ++ ")") ] ]
                                         ]
                                     ]

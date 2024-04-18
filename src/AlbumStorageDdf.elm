@@ -11,6 +11,7 @@ artistInfo =
   , imageUrl = "https://i.scdn.co/image/ab6761610000e5eb7de827ab626c867816052015" 
   , shortName = "DDF"
   , httpFriendlyShortName = "ddf"
+  , icon = "img/ddf_transparent.png"
   , coverColorA = "#DF030E"
   , coverColorB = "#04A5E3"
   }

@@ -15,6 +15,7 @@ type alias ArtistInfo =
     , shortName: String
     , httpFriendlyShortName: String
     , id: String
+    , icon: String
     , coverColorA: String
     , coverColorB: String
     }
