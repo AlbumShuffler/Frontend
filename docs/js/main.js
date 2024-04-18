@@ -13695,36 +13695,40 @@ var $author$project$Main$view = function (model) {
 				} else {
 					var album = _v0.a.a;
 					var artist = _v0.b.a;
-					var overlayItem = function (a) {
-						return A2(
-							$elm$html$Html$a,
-							_List_fromArray(
-								[
-									$elm$html$Html$Events$onClick(
-									$author$project$Main$CloseArtistOverlay(a))
-								]),
-							_List_fromArray(
-								[
-									A2(
-									$elm$html$Html$img,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$class('artist-list'),
-											$elm$html$Html$Attributes$src(a.imageUrl)
-										]),
-									_List_Nil),
-									A2(
-									$elm$html$Html$div,
-									_List_fromArray(
-										[
-											$elm$html$Html$Attributes$class('mb-10 artist-list-caption')
-										]),
-									_List_fromArray(
-										[
-											$elm$html$Html$text(a.name)
-										]))
-								]));
-					};
+					var overlayItem = F2(
+						function (isSelected, a) {
+							var isSelectedClass = isSelected ? ' artist-list-selected-element' : '';
+							var _v5 = A2($elm$core$Debug$log, a.name, isSelectedClass);
+							var _v6 = A2($elm$core$Debug$log, 'comparing ' + artist.id, a.id);
+							return A2(
+								$elm$html$Html$a,
+								_List_fromArray(
+									[
+										$elm$html$Html$Events$onClick(
+										$author$project$Main$CloseArtistOverlay(a))
+									]),
+								_List_fromArray(
+									[
+										A2(
+										$elm$html$Html$img,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('mb-025 artist-list' + isSelectedClass),
+												$elm$html$Html$Attributes$src(a.imageUrl)
+											]),
+										_List_Nil),
+										A2(
+										$elm$html$Html$div,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$class('mb-10 artist-list-caption')
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text(a.name)
+											]))
+									]));
+						});
 					var overlayGrid = function (artists) {
 						return A2(
 							$elm$html$Html$div,
@@ -13732,7 +13736,13 @@ var $author$project$Main$view = function (model) {
 								[
 									$elm$html$Html$Attributes$class('artist-list m-20')
 								]),
-							A2($elm$core$List$map, overlayItem, artists));
+							A2(
+								$elm$core$List$map,
+								function (a) {
+									var isCurrentArtist = _Utils_eq(artist, a);
+									return A2(overlayItem, isCurrentArtist, a);
+								},
+								artists));
 					};
 					var overlay = function () {
 						var display = model.isArtistOverlayOpen ? A2($elm$html$Html$Attributes$style, 'display', 'flex') : A2($elm$html$Html$Attributes$style, 'display', 'none');

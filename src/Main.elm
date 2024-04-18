@@ -295,11 +295,16 @@ view model =
                     backgroundGlowStyle =
                         style "background" ("linear-gradient(45deg, " ++ artist.coverColorA ++ " , " ++ artist.coverColorB ++ " 100%)")
 
-                    overlayItem : ArtistInfo -> Html Msg
-                    overlayItem a =
+                    overlayItem : Bool -> ArtistInfo -> Html Msg
+                    overlayItem isSelected a =
+                        let
+                            isSelectedClass = if isSelected then " artist-list-selected-element" else ""
+                            _ = Debug.log a.name isSelectedClass
+                            _ = Debug.log ("comparing " ++ artist.id) a.id
+                        in
                         Html.a
                             [ onClick (CloseArtistOverlay a) ]
-                            [ img [ class "artist-list", src a.imageUrl ] []
+                            [ img [ class ("mb-025 artist-list" ++ isSelectedClass), src a.imageUrl ] []
                             , div [ class "mb-10 artist-list-caption" ] [ text a.name ]
                             ]
 
@@ -307,7 +312,11 @@ view model =
                     overlayGrid artists =
                         div
                             [ class "artist-list m-20" ]
-                            (artists |> List.map overlayItem)
+                            (artists |> List.map (\a -> 
+                                let
+                                    isCurrentArtist = artist == a
+                                in
+                                overlayItem isCurrentArtist a))
 
                     overlay =
                         let

@@ -117,6 +117,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.mb-025 {
+    margin-bottom: 0.25rem;
+}
+
 .mr-05 {
     margin-right: 0.5rem;
 }
@@ -231,7 +235,7 @@ body {
     left: 0;
     right: 0;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,12 +250,17 @@ body {
 .artist-list img {
     width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 
 .artist-list-caption {
     text-align: center;
     font-weight: 1000;
     text-transform: uppercase;
+}
+
+.artist-list-selected-element {
+    box-shadow: 0 0 10px 1px white;
 }
 
 @media (max-width: 1024px) {
