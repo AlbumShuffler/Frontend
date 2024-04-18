@@ -12980,6 +12980,7 @@ var $author$project$Main$emptyModel = function (artistShortName) {
 				return a.artist;
 			},
 			artistWithAlbums),
+		isArtistOverlayOpen: false,
 		isInitialized: false
 	};
 };
@@ -13340,7 +13341,7 @@ var $author$project$Main$update = F2(
 				var newCmd = $author$project$Main$setBlacklistedAlbums(
 					A2($elm$core$List$cons, albumId, model.blacklistedAlbums));
 				return _Utils_Tuple2(updatedModel, newCmd);
-			default:
+			case 'AlbumsShuffled':
 				var albums = msg.a;
 				return _Utils_Tuple2(
 					_Utils_update(
@@ -13350,12 +13351,35 @@ var $author$project$Main$update = F2(
 							isInitialized: true
 						}),
 					$elm$core$Platform$Cmd$none);
+			case 'OpenArtistOverlay':
+				var currentArtist = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{isArtistOverlayOpen: true}),
+					$elm$core$Platform$Cmd$none);
+			default:
+				var newArtist = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{
+							currentArtist: $elm$core$Maybe$Just(newArtist),
+							isArtistOverlayOpen: false
+						}),
+					$elm$core$Platform$Cmd$none);
 		}
 	});
 var $author$project$Main$BlackListAlbum = function (a) {
 	return {$: 'BlackListAlbum', a: a};
 };
+var $author$project$Main$CloseArtistOverlay = function (a) {
+	return {$: 'CloseArtistOverlay', a: a};
+};
 var $author$project$Main$NextAlbum = {$: 'NextAlbum'};
+var $author$project$Main$OpenArtistOverlay = function (a) {
+	return {$: 'OpenArtistOverlay', a: a};
+};
 var $author$project$Main$PreviousAlbum = {$: 'PreviousAlbum'};
 var $author$project$Main$Reset = {$: 'Reset'};
 var $elm$html$Html$a = _VirtualDom_node('a');
@@ -13581,8 +13605,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Events$onClick($author$project$Main$Reset),
-								$elm$html$Html$Attributes$class('status-text'),
-								A2($elm$html$Html$Attributes$style, 'cursor', 'pointer')
+								$elm$html$Html$Attributes$class('status-text pointer')
 							]),
 						_List_fromArray(
 							[
@@ -13665,25 +13688,88 @@ var $author$project$Main$view = function (model) {
 				} else {
 					var album = _v0.a.a;
 					var artist = _v0.b.a;
-					var xLink = A2(
-						$elm$html$Html$a,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$class('ml-05 p-15'),
-								$elm$html$Html$Attributes$href('https://x.com/b0wter')
-							]),
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$img,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$class('social-button'),
-										$elm$html$Html$Attributes$src('img/x.svg'),
-										$elm$html$Html$Attributes$alt('Link to X')
-									]),
-								_List_Nil)
-							]));
+					var xLink = _List_fromArray(
+						[
+							A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('ml-05 p-15'),
+									$elm$html$Html$Attributes$href('https://x.com/b0wter')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$img,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('social-button'),
+											$elm$html$Html$Attributes$src('img/x.svg'),
+											$elm$html$Html$Attributes$alt('Link to X')
+										]),
+									_List_Nil)
+								]))
+						]);
+					var overlayItem = function (a) {
+						return A2(
+							$elm$html$Html$a,
+							_List_fromArray(
+								[
+									$elm$html$Html$Events$onClick(
+									$author$project$Main$CloseArtistOverlay(a))
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$img,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('artist-list'),
+											$elm$html$Html$Attributes$src(a.imageUrl)
+										]),
+									_List_Nil),
+									A2(
+									$elm$html$Html$div,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('mb-10 artist-list-caption')
+										]),
+									_List_fromArray(
+										[
+											$elm$html$Html$text(a.name)
+										]))
+								]));
+					};
+					var overlayGrid = function (artists) {
+						return A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('artist-list m-20')
+								]),
+							A2($elm$core$List$map, overlayItem, artists));
+					};
+					var overlay = function () {
+						var display = model.isArtistOverlayOpen ? A2($elm$html$Html$Attributes$style, 'display', 'flex') : A2($elm$html$Html$Attributes$style, 'display', 'none');
+						return A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$id('artist-selection-overview'),
+									$elm$html$Html$Attributes$class('white-text urbanist-font'),
+									display
+								]),
+							_List_fromArray(
+								[
+									overlayGrid(
+									A2(
+										$elm$core$List$map,
+										function (a) {
+											return a.artist;
+										},
+										$author$project$ArtistsWithAlbums$albumStorage))
+								]));
+					}();
 					var largestCover = A2(
 						$elm$core$Maybe$withDefault,
 						{height: 640, url: 'https://fakeimg.pl/640x640', width: 640},
@@ -13717,12 +13803,42 @@ var $author$project$Main$view = function (model) {
 					var coverCenterY = $elm$core$String$fromInt(50) + '%';
 					var coverAspectRatio = largestCover.width / largestCover.height;
 					var boxShadowSize = '75px';
-					var blockedText = _Utils_eq(model.blacklistedAlbums, _List_Nil) ? 'clear blocked (none)' : ('Blocked: ' + A2($elm$core$String$join, ', ', model.blacklistedAlbums));
 					var backgroundImageUrl = largestCover.url;
 					var coverSourceSet = backgroundImageUrl + (' ' + ($elm$core$String$fromInt(largestCover.width) + 'w'));
 					var backgroundGlowStyle = A2($elm$html$Html$Attributes$style, 'background', 'linear-gradient(45deg, ' + (artist.coverColorA + (' , ' + (artist.coverColorB + ' 100%)'))));
 					var backgroundFadeEase = '3000ms';
 					var backgroundFadeDuration = '0';
+					var artistImage = A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('ml-05 p-15 d-flex align-items-center white-text pointer'),
+								$elm$html$Html$Events$onClick(
+								$author$project$Main$OpenArtistOverlay(artist))
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$img,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('social-button'),
+										$elm$html$Html$Attributes$src('img/ddf_transparent.png'),
+										$elm$html$Html$Attributes$alt('Current artist: ' + artist.name)
+									]),
+								_List_Nil),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('ml-025'),
+										A2($elm$html$Html$Attributes$style, 'font-size', '9px')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('▼')
+									]))
+							]));
 					var albumNumber = A2(
 						$elm$core$Maybe$withDefault,
 						0,
@@ -13738,6 +13854,7 @@ var $author$project$Main$view = function (model) {
 							]),
 						_List_fromArray(
 							[
+								overlay,
 								A2(
 								$elm$html$Html$div,
 								_List_fromArray(
@@ -13775,7 +13892,7 @@ var $author$project$Main$view = function (model) {
 																$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
 															]),
 														_List_fromArray(
-															[githubLink, xLink]))
+															[githubLink, artistImage]))
 													])),
 												A2(
 												$elm$html$Html$div,
@@ -13937,12 +14054,10 @@ var $author$project$Main$view = function (model) {
 																$elm$html$Html$div,
 																_List_fromArray(
 																	[
-																		A2($elm$html$Html$Attributes$style, 'cursor', 'pointer'),
-																		A2($elm$html$Html$Attributes$style, 'font-family', 'urbanist, sans-serif'),
 																		A2($elm$html$Html$Attributes$style, 'font-weight', '1000'),
 																		A2($elm$html$Html$Attributes$style, 'height', '4rem'),
 																		A2($elm$html$Html$Attributes$style, 'text-transform', 'uppercase'),
-																		$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
+																		$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center pointer urbanist-font')
 																	]),
 																_List_fromArray(
 																	[
