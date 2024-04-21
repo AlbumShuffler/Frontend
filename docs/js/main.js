@@ -15408,7 +15408,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Attributes$class('mr-05 p-15'),
-								$elm$html$Html$Attributes$href('https://github.com/b0wter/shuffler')
+								$elm$html$Html$Attributes$href('https://github.com/b0wter/shuffler-frontend')
 							]),
 						_List_fromArray(
 							[

@@ -276,7 +276,7 @@ view model =
                         (50 |> String.fromInt) ++ "%"
 
                     githubLink =
-                        Html.a [ class "mr-05 p-15", href "https://github.com/b0wter/shuffler" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
+                        Html.a [ class "mr-05 p-15", href "https://github.com/b0wter/shuffler-frontend" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
 
                     artistImage =
                         a
