@@ -5344,6 +5344,9 @@ var $elm$core$Task$perform = F2(
 	});
 var $elm$browser$Browser$element = _Browser_element;
 var $author$project$Main$defaultArtistShortName = 'ddf';
+var $author$project$AlbumIds$AlbumId = function (a) {
+	return {$: 'AlbumId', a: a};
+};
 var $elm$core$Array$fromListHelp = F3(
 	function (list, nodeList, nodeListSize) {
 		fromListHelp:
@@ -5389,7 +5392,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022343257bb6ea89abaf23074c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512343257bb6ea89abaf23074c', width: 64}
 				]),
-			id: '3Sv5tE8PcAlGY6Ys2ISQXF',
+			id: $author$project$AlbumIds$AlbumId('3Sv5tE8PcAlGY6Ys2ISQXF'),
 			name: 'Folge 226: Die Spur der Toten',
 			urlToOpen: 'https://open.spotify.com/album/3Sv5tE8PcAlGY6Ys2ISQXF'
 		},
@@ -5400,7 +5403,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02312f2992744d99954b01f81a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851312f2992744d99954b01f81a', width: 64}
 				]),
-			id: '0FuC7q4bJG41g1naKBx4ot',
+			id: $author$project$AlbumIds$AlbumId('0FuC7q4bJG41g1naKBx4ot'),
 			name: 'Folge 225: und der Puppenmacher',
 			urlToOpen: 'https://open.spotify.com/album/0FuC7q4bJG41g1naKBx4ot'
 		},
@@ -5411,7 +5414,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d7457d9305c333af2d504c79', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d7457d9305c333af2d504c79', width: 64}
 				]),
-			id: '7JhdaReI98XYFrzb3jJPFa',
+			id: $author$project$AlbumIds$AlbumId('7JhdaReI98XYFrzb3jJPFa'),
 			name: 'Folge 224: Die Yacht des Verrats',
 			urlToOpen: 'https://open.spotify.com/album/7JhdaReI98XYFrzb3jJPFa'
 		},
@@ -5422,7 +5425,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02332701bdaae77957693c6569', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851332701bdaae77957693c6569', width: 64}
 				]),
-			id: '0oZaQfEwMWY2TfviD4fEdV',
+			id: $author$project$AlbumIds$AlbumId('0oZaQfEwMWY2TfviD4fEdV'),
 			name: 'Adventskalender - Böser die Glocken nie klingen',
 			urlToOpen: 'https://open.spotify.com/album/0oZaQfEwMWY2TfviD4fEdV'
 		},
@@ -5433,7 +5436,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025df9d92322a1f4428de8271d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515df9d92322a1f4428de8271d', width: 64}
 				]),
-			id: '4UCwiqC6kHQIsODPuJ0GoZ',
+			id: $author$project$AlbumIds$AlbumId('4UCwiqC6kHQIsODPuJ0GoZ'),
 			name: 'Kai Schwind liest... und das Bergmonster',
 			urlToOpen: 'https://open.spotify.com/album/4UCwiqC6kHQIsODPuJ0GoZ'
 		},
@@ -5444,7 +5447,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e37da75bbad97a220ee3ee6c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e37da75bbad97a220ee3ee6c', width: 64}
 				]),
-			id: '451jKBwuSNrNgLlqEAZfra',
+			id: $author$project$AlbumIds$AlbumId('451jKBwuSNrNgLlqEAZfra'),
 			name: 'Folge 223: und der Knochenmann',
 			urlToOpen: 'https://open.spotify.com/album/451jKBwuSNrNgLlqEAZfra'
 		},
@@ -5455,7 +5458,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022e845d2a16ac538415a2e506', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512e845d2a16ac538415a2e506', width: 64}
 				]),
-			id: '6xZHTtiSBFxKdV2rJVHj2V',
+			id: $author$project$AlbumIds$AlbumId('6xZHTtiSBFxKdV2rJVHj2V'),
 			name: 'Klaas Heufer-Umlauf liest... und der schrullige Millionär',
 			urlToOpen: 'https://open.spotify.com/album/6xZHTtiSBFxKdV2rJVHj2V'
 		},
@@ -5466,7 +5469,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ac186438a7df50806f06a5ca', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ac186438a7df50806f06a5ca', width: 64}
 				]),
-			id: '3o2Gwvg8lqLNRnlV1v1s5K',
+			id: $author$project$AlbumIds$AlbumId('3o2Gwvg8lqLNRnlV1v1s5K'),
 			name: 'Folge 222: und die Gesetzlosen',
 			urlToOpen: 'https://open.spotify.com/album/3o2Gwvg8lqLNRnlV1v1s5K'
 		},
@@ -5477,7 +5480,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027a257189780470a21b13d08a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517a257189780470a21b13d08a', width: 64}
 				]),
-			id: '77aMP5aTkzIaVW1SPxvLxy',
+			id: $author$project$AlbumIds$AlbumId('77aMP5aTkzIaVW1SPxvLxy'),
 			name: 'Mai Thi Nguyen-Kim liest... und die rätselhaften Bilder',
 			urlToOpen: 'https://open.spotify.com/album/77aMP5aTkzIaVW1SPxvLxy'
 		},
@@ -5488,7 +5491,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022173fc7af2170f213c2058ce', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512173fc7af2170f213c2058ce', width: 64}
 				]),
-			id: '1KpVSqapKAUAtAepWWxPWs',
+			id: $author$project$AlbumIds$AlbumId('1KpVSqapKAUAtAepWWxPWs'),
 			name: 'Folge 221: Manuskript des Satans',
 			urlToOpen: 'https://open.spotify.com/album/1KpVSqapKAUAtAepWWxPWs'
 		},
@@ -5499,7 +5502,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b41759225f368a06182422fd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b41759225f368a06182422fd', width: 64}
 				]),
-			id: '2Z5khV1jYxMvc5peWZdnwC',
+			id: $author$project$AlbumIds$AlbumId('2Z5khV1jYxMvc5peWZdnwC'),
 			name: 'Holger Mahlich liest...und die gefährliche Erbschaft',
 			urlToOpen: 'https://open.spotify.com/album/2Z5khV1jYxMvc5peWZdnwC'
 		},
@@ -5510,7 +5513,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028e71d2b3820de0e58fb40096', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518e71d2b3820de0e58fb40096', width: 64}
 				]),
-			id: '67Ipucoa0blx27O3sV7yAi',
+			id: $author$project$AlbumIds$AlbumId('67Ipucoa0blx27O3sV7yAi'),
 			name: 'Erbe des Drachen (Das Original-Hörspiel zum Kinofilm)',
 			urlToOpen: 'https://open.spotify.com/album/67Ipucoa0blx27O3sV7yAi'
 		},
@@ -5521,7 +5524,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f46bde5de61bb0dea42b0df1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f46bde5de61bb0dea42b0df1', width: 64}
 				]),
-			id: '01i4iyB40EU7Qgd6EgKoZt',
+			id: $author$project$AlbumIds$AlbumId('01i4iyB40EU7Qgd6EgKoZt'),
 			name: 'Folge 220: Im Wald der Gefahren',
 			urlToOpen: 'https://open.spotify.com/album/01i4iyB40EU7Qgd6EgKoZt'
 		},
@@ -5532,7 +5535,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02321cec3b384aac2b95ebda4b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851321cec3b384aac2b95ebda4b', width: 64}
 				]),
-			id: '3IxPhnYxh3qACTa2GBYVUw',
+			id: $author$project$AlbumIds$AlbumId('3IxPhnYxh3qACTa2GBYVUw'),
 			name: 'Eckart Dux liest...und der Höhlenmensch',
 			urlToOpen: 'https://open.spotify.com/album/3IxPhnYxh3qACTa2GBYVUw'
 		},
@@ -5543,7 +5546,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c16fa39d829813f43466fe2b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c16fa39d829813f43466fe2b', width: 64}
 				]),
-			id: '6ewdyVIW2LurJhYGU0UBAa',
+			id: $author$project$AlbumIds$AlbumId('6ewdyVIW2LurJhYGU0UBAa'),
 			name: 'Folge 219: und die Teufelsklippe',
 			urlToOpen: 'https://open.spotify.com/album/6ewdyVIW2LurJhYGU0UBAa'
 		},
@@ -5554,7 +5557,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020477da7288f69a258a73cc80', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510477da7288f69a258a73cc80', width: 64}
 				]),
-			id: '0lwfVPSf5Zs5PTGkcSgSeo',
+			id: $author$project$AlbumIds$AlbumId('0lwfVPSf5Zs5PTGkcSgSeo'),
 			name: 'Nicholas Müller liest... und die silberne Spinne',
 			urlToOpen: 'https://open.spotify.com/album/0lwfVPSf5Zs5PTGkcSgSeo'
 		},
@@ -5565,7 +5568,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020b682a9792a5e1501cea04b6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510b682a9792a5e1501cea04b6', width: 64}
 				]),
-			id: '4qHjQN4qvZu9x27O5LOn2G',
+			id: $author$project$AlbumIds$AlbumId('4qHjQN4qvZu9x27O5LOn2G'),
 			name: 'Jan Böhmermann liest... und die flüsternde Mumie',
 			urlToOpen: 'https://open.spotify.com/album/4qHjQN4qvZu9x27O5LOn2G'
 		},
@@ -5576,7 +5579,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ee1915833d2e9791008bf502', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ee1915833d2e9791008bf502', width: 64}
 				]),
-			id: '5u2wd0lYukcINw8dUFCREq',
+			id: $author$project$AlbumIds$AlbumId('5u2wd0lYukcINw8dUFCREq'),
 			name: 'Adventskalender - Eine schreckliche Bescherung',
 			urlToOpen: 'https://open.spotify.com/album/5u2wd0lYukcINw8dUFCREq'
 		},
@@ -5587,7 +5590,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025519a645e4580ab3e34d6e8f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515519a645e4580ab3e34d6e8f', width: 64}
 				]),
-			id: '2WwOKZLpFWrvw3O9CISod1',
+			id: $author$project$AlbumIds$AlbumId('2WwOKZLpFWrvw3O9CISod1'),
 			name: 'Folge 218: Im Netz der Lügen',
 			urlToOpen: 'https://open.spotify.com/album/2WwOKZLpFWrvw3O9CISod1'
 		},
@@ -5598,7 +5601,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0218b45bb3ee94c1822232b860', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485118b45bb3ee94c1822232b860', width: 64}
 				]),
-			id: '1WlRnNunbHpnRTTVkxMRnd',
+			id: $author$project$AlbumIds$AlbumId('1WlRnNunbHpnRTTVkxMRnd'),
 			name: 'Folge 217: und der Kristallschädel',
 			urlToOpen: 'https://open.spotify.com/album/1WlRnNunbHpnRTTVkxMRnd'
 		},
@@ -5609,7 +5612,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e6fa2fe2022773bb27c5f199', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e6fa2fe2022773bb27c5f199', width: 64}
 				]),
-			id: '2BkEUZY7Da7bqlUjmMA2Cq',
+			id: $author$project$AlbumIds$AlbumId('2BkEUZY7Da7bqlUjmMA2Cq'),
 			name: 'Folge 216: Die Schwingen des Unheils',
 			urlToOpen: 'https://open.spotify.com/album/2BkEUZY7Da7bqlUjmMA2Cq'
 		},
@@ -5620,7 +5623,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023ef0cee1d730df291780cea0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513ef0cee1d730df291780cea0', width: 64}
 				]),
-			id: '76pYNMMVZTiuNy3IoXcavU',
+			id: $author$project$AlbumIds$AlbumId('76pYNMMVZTiuNy3IoXcavU'),
 			name: 'Folge 215: und die verlorene Zeit',
 			urlToOpen: 'https://open.spotify.com/album/76pYNMMVZTiuNy3IoXcavU'
 		},
@@ -5631,7 +5634,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0229361d23be44f5af66a6b777', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485129361d23be44f5af66a6b777', width: 64}
 				]),
-			id: '2uMs1XZBdGdZuXOY7draw4',
+			id: $author$project$AlbumIds$AlbumId('2uMs1XZBdGdZuXOY7draw4'),
 			name: 'und der dreiäugige Totenkopf (Kopfhörer-Hörspiel)',
 			urlToOpen: 'https://open.spotify.com/album/2uMs1XZBdGdZuXOY7draw4'
 		},
@@ -5642,7 +5645,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0279db0a40810fa2946daaf8cf', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485179db0a40810fa2946daaf8cf', width: 64}
 				]),
-			id: '7FVn5TYEbQbWM6r8unRaCe',
+			id: $author$project$AlbumIds$AlbumId('7FVn5TYEbQbWM6r8unRaCe'),
 			name: 'und das versunkene Schiff (Kopfhörer-Hörspiel)',
 			urlToOpen: 'https://open.spotify.com/album/7FVn5TYEbQbWM6r8unRaCe'
 		},
@@ -5653,7 +5656,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0270243a8cd78e001c345b33d6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485170243a8cd78e001c345b33d6', width: 64}
 				]),
-			id: '6T5D7KpnftvfLaYPp94U4y',
+			id: $author$project$AlbumIds$AlbumId('6T5D7KpnftvfLaYPp94U4y'),
 			name: 'Das Grab der Inka-Mumie (Kopfhörer-Hörspiel)',
 			urlToOpen: 'https://open.spotify.com/album/6T5D7KpnftvfLaYPp94U4y'
 		},
@@ -5664,7 +5667,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022cac6a2ab2f69032fddacc44', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512cac6a2ab2f69032fddacc44', width: 64}
 				]),
-			id: '1cJ3fNx6K47p4eDFqhnvsA',
+			id: $author$project$AlbumIds$AlbumId('1cJ3fNx6K47p4eDFqhnvsA'),
 			name: 'Folge 214: und der Geisterbunker',
 			urlToOpen: 'https://open.spotify.com/album/1cJ3fNx6K47p4eDFqhnvsA'
 		},
@@ -5675,7 +5678,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e41528e7c4430835d9a3d7a7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e41528e7c4430835d9a3d7a7', width: 64}
 				]),
-			id: '5yI3MACumg0ZjPSRUOFmoB',
+			id: $author$project$AlbumIds$AlbumId('5yI3MACumg0ZjPSRUOFmoB'),
 			name: 'Karin Lieneweg liest...und der sprechende Totenkopf',
 			urlToOpen: 'https://open.spotify.com/album/5yI3MACumg0ZjPSRUOFmoB'
 		},
@@ -5686,7 +5689,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021105e9be1f6a2860fd9eb2db', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511105e9be1f6a2860fd9eb2db', width: 64}
 				]),
-			id: '4BZfSV9maCil4l4yftT74F',
+			id: $author$project$AlbumIds$AlbumId('4BZfSV9maCil4l4yftT74F'),
 			name: 'Folge 213: Der Fluch der Medusa',
 			urlToOpen: 'https://open.spotify.com/album/4BZfSV9maCil4l4yftT74F'
 		},
@@ -5697,7 +5700,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b110610a842e2f364ba6250e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b110610a842e2f364ba6250e', width: 64}
 				]),
-			id: '5KIQUoxcSBlPN3ie9xVmnA',
+			id: $author$project$AlbumIds$AlbumId('5KIQUoxcSBlPN3ie9xVmnA'),
 			name: 'Sascha Draeger liest...und der gestohlene Preis',
 			urlToOpen: 'https://open.spotify.com/album/5KIQUoxcSBlPN3ie9xVmnA'
 		},
@@ -5708,7 +5711,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f1b7c01ee282543d37e97f4b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f1b7c01ee282543d37e97f4b', width: 64}
 				]),
-			id: '2zHMeFNQQxKOmUgmppOjIM',
+			id: $author$project$AlbumIds$AlbumId('2zHMeFNQQxKOmUgmppOjIM'),
 			name: 'Folge 212: und der weiße Leopard',
 			urlToOpen: 'https://open.spotify.com/album/2zHMeFNQQxKOmUgmppOjIM'
 		},
@@ -5719,7 +5722,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026d7f57716890ae1014137600', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516d7f57716890ae1014137600', width: 64}
 				]),
-			id: '6heVFpJImaEoJT3TEtlSMl',
+			id: $author$project$AlbumIds$AlbumId('6heVFpJImaEoJT3TEtlSMl'),
 			name: 'Axel Prahl liest...und die schwarze Katze',
 			urlToOpen: 'https://open.spotify.com/album/6heVFpJImaEoJT3TEtlSMl'
 		},
@@ -5730,7 +5733,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0292d4e749fc6dca3aee268cdb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485192d4e749fc6dca3aee268cdb', width: 64}
 				]),
-			id: '7pZotNNAYOkeHNvJRKzYRk',
+			id: $author$project$AlbumIds$AlbumId('7pZotNNAYOkeHNvJRKzYRk'),
 			name: 'Folge 211: und der Jadekönig',
 			urlToOpen: 'https://open.spotify.com/album/7pZotNNAYOkeHNvJRKzYRk'
 		},
@@ -5741,7 +5744,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025b004bf5fcce8b9e2b509163', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515b004bf5fcce8b9e2b509163', width: 64}
 				]),
-			id: '4u8yNY4Un2nErgeNRMFeh3',
+			id: $author$project$AlbumIds$AlbumId('4u8yNY4Un2nErgeNRMFeh3'),
 			name: 'Jürgen Thormann liest... und der Zauberspiegel',
 			urlToOpen: 'https://open.spotify.com/album/4u8yNY4Un2nErgeNRMFeh3'
 		},
@@ -5752,7 +5755,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027cfecb40f059d5144b2067a2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517cfecb40f059d5144b2067a2', width: 64}
 				]),
-			id: '3ieWqOL150wJOcft7iZHKZ',
+			id: $author$project$AlbumIds$AlbumId('3ieWqOL150wJOcft7iZHKZ'),
 			name: 'Folge 210: und die schweigende Grotte',
 			urlToOpen: 'https://open.spotify.com/album/3ieWqOL150wJOcft7iZHKZ'
 		},
@@ -5763,7 +5766,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02be9055782cdcaed9e6df1c60', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851be9055782cdcaed9e6df1c60', width: 64}
 				]),
-			id: '7fsdjOiouCHQ9Rlmrz7ZIa',
+			id: $author$project$AlbumIds$AlbumId('7fsdjOiouCHQ9Rlmrz7ZIa'),
 			name: 'Judy Winter liest...und der Ameisenmensch',
 			urlToOpen: 'https://open.spotify.com/album/7fsdjOiouCHQ9Rlmrz7ZIa'
 		},
@@ -5774,7 +5777,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022ca77f19a9c8e0ebfba60adc', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512ca77f19a9c8e0ebfba60adc', width: 64}
 				]),
-			id: '0q4FbI22wSMrzgWh5vgHi9',
+			id: $author$project$AlbumIds$AlbumId('0q4FbI22wSMrzgWh5vgHi9'),
 			name: 'Folge 209: Kreaturen der Nacht',
 			urlToOpen: 'https://open.spotify.com/album/0q4FbI22wSMrzgWh5vgHi9'
 		},
@@ -5785,7 +5788,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0230a42eb708efe79fc35b0e10', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485130a42eb708efe79fc35b0e10', width: 64}
 				]),
-			id: '6WgRUQY49NRG6JT6dJ4xEq',
+			id: $author$project$AlbumIds$AlbumId('6WgRUQY49NRG6JT6dJ4xEq'),
 			name: '208/Kelch des Schicksals',
 			urlToOpen: 'https://open.spotify.com/album/6WgRUQY49NRG6JT6dJ4xEq'
 		},
@@ -5796,7 +5799,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022fa85ff14fac4ef5d3b7cdd3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512fa85ff14fac4ef5d3b7cdd3', width: 64}
 				]),
-			id: '3t9NGa2A9SGvipHoU5Bc6m',
+			id: $author$project$AlbumIds$AlbumId('3t9NGa2A9SGvipHoU5Bc6m'),
 			name: 'und das Grab der Maya (Kopfhörer-Hörspiel)',
 			urlToOpen: 'https://open.spotify.com/album/3t9NGa2A9SGvipHoU5Bc6m'
 		},
@@ -5807,7 +5810,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d6bde10679cf9215db2fd071', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d6bde10679cf9215db2fd071', width: 64}
 				]),
-			id: '4vj4Dq2q7fyvwY7UCj2vin',
+			id: $author$project$AlbumIds$AlbumId('4vj4Dq2q7fyvwY7UCj2vin'),
 			name: 'und das Grab der Maya',
 			urlToOpen: 'https://open.spotify.com/album/4vj4Dq2q7fyvwY7UCj2vin'
 		},
@@ -5818,7 +5821,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a9ac37c2ff7fe5fb5f29a45e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a9ac37c2ff7fe5fb5f29a45e', width: 64}
 				]),
-			id: '7ynXpeQRwzqKiv8WVh7c7B',
+			id: $author$project$AlbumIds$AlbumId('7ynXpeQRwzqKiv8WVh7c7B'),
 			name: 'Adventskalender - O du finstere',
 			urlToOpen: 'https://open.spotify.com/album/7ynXpeQRwzqKiv8WVh7c7B'
 		},
@@ -5829,7 +5832,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b7cb427c9c5bf0fabfebb834', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b7cb427c9c5bf0fabfebb834', width: 64}
 				]),
-			id: '6BxvBG51szGmlg5x3F1rHj',
+			id: $author$project$AlbumIds$AlbumId('6BxvBG51szGmlg5x3F1rHj'),
 			name: '207/Die falschen Detektive',
 			urlToOpen: 'https://open.spotify.com/album/6BxvBG51szGmlg5x3F1rHj'
 		},
@@ -5840,7 +5843,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0294d60d1755b040dd874a29b0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485194d60d1755b040dd874a29b0', width: 64}
 				]),
-			id: '5YuHQZqJWP3EmAvMSoWeTs',
+			id: $author$project$AlbumIds$AlbumId('5YuHQZqJWP3EmAvMSoWeTs'),
 			name: 'Katrin Fröhlich liest ...und die singende Schlange',
 			urlToOpen: 'https://open.spotify.com/album/5YuHQZqJWP3EmAvMSoWeTs'
 		},
@@ -5851,7 +5854,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0278d660cdc7db65b7cf350c2a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485178d660cdc7db65b7cf350c2a', width: 64}
 				]),
-			id: '7khAMIQlYBmW7mI9cphDhJ',
+			id: $author$project$AlbumIds$AlbumId('7khAMIQlYBmW7mI9cphDhJ'),
 			name: '206/und der Mottenmann',
 			urlToOpen: 'https://open.spotify.com/album/7khAMIQlYBmW7mI9cphDhJ'
 		},
@@ -5862,7 +5865,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022839fcc33eb0e5588b8dd8bd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512839fcc33eb0e5588b8dd8bd', width: 64}
 				]),
-			id: '0VmZF3nyMuhRDcyVY0MuE1',
+			id: $author$project$AlbumIds$AlbumId('0VmZF3nyMuhRDcyVY0MuE1'),
 			name: 'Oliver Kalkofe liest ...und der lachende Schatten',
 			urlToOpen: 'https://open.spotify.com/album/0VmZF3nyMuhRDcyVY0MuE1'
 		},
@@ -5873,7 +5876,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020a86444fa60c5a785daaa878', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510a86444fa60c5a785daaa878', width: 64}
 				]),
-			id: '2Sw9FBHOoT6fBhYxHsRFxq',
+			id: $author$project$AlbumIds$AlbumId('2Sw9FBHOoT6fBhYxHsRFxq'),
 			name: '205/Das rätselhafte Erbe',
 			urlToOpen: 'https://open.spotify.com/album/2Sw9FBHOoT6fBhYxHsRFxq'
 		},
@@ -5884,7 +5887,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0222d5d85ad46702845c750932', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485122d5d85ad46702845c750932', width: 64}
 				]),
-			id: '1PO7K8YvBHLa5d6jIuTkaj',
+			id: $author$project$AlbumIds$AlbumId('1PO7K8YvBHLa5d6jIuTkaj'),
 			name: 'Tim Grobe liest ...und der Fluch des Rubins',
 			urlToOpen: 'https://open.spotify.com/album/1PO7K8YvBHLa5d6jIuTkaj'
 		},
@@ -5895,7 +5898,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0263d3ae8ad1d3d5c4c34d9a19', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485163d3ae8ad1d3d5c4c34d9a19', width: 64}
 				]),
-			id: '1yMMjH3tDN9GyXiADzTkL9',
+			id: $author$project$AlbumIds$AlbumId('1yMMjH3tDN9GyXiADzTkL9'),
 			name: '204/Der dunkle Wächter',
 			urlToOpen: 'https://open.spotify.com/album/1yMMjH3tDN9GyXiADzTkL9'
 		},
@@ -5906,7 +5909,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cb3eefa4f8040f8e23a733fa', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cb3eefa4f8040f8e23a733fa', width: 64}
 				]),
-			id: '5femMu6wEiqpYJ2O6FxwFH',
+			id: $author$project$AlbumIds$AlbumId('5femMu6wEiqpYJ2O6FxwFH'),
 			name: 'Henning May liest ...und der seltsame Wecker (feat. Henning May)',
 			urlToOpen: 'https://open.spotify.com/album/5femMu6wEiqpYJ2O6FxwFH'
 		},
@@ -5917,7 +5920,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0248134250ee8e358a9ede821c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485148134250ee8e358a9ede821c', width: 64}
 				]),
-			id: '76M62o1rdKEqTN1JIbGdGV',
+			id: $author$project$AlbumIds$AlbumId('76M62o1rdKEqTN1JIbGdGV'),
 			name: 'und der dreiäugige Totenkopf',
 			urlToOpen: 'https://open.spotify.com/album/76M62o1rdKEqTN1JIbGdGV'
 		},
@@ -5928,7 +5931,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ca3db67c80ca900074fa8939', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ca3db67c80ca900074fa8939', width: 64}
 				]),
-			id: '79Drf49yNdGLBzzHMGGmBz',
+			id: $author$project$AlbumIds$AlbumId('79Drf49yNdGLBzzHMGGmBz'),
 			name: '203/Tauchgang ins Ungewisse',
 			urlToOpen: 'https://open.spotify.com/album/79Drf49yNdGLBzzHMGGmBz'
 		},
@@ -5939,7 +5942,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02722abef9d6176a7daea03a72', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851722abef9d6176a7daea03a72', width: 64}
 				]),
-			id: '5q9quwSbPpYxoAzMSKGfIw',
+			id: $author$project$AlbumIds$AlbumId('5q9quwSbPpYxoAzMSKGfIw'),
 			name: 'Jessica Schwarz liest ...und der magische Kreis',
 			urlToOpen: 'https://open.spotify.com/album/5q9quwSbPpYxoAzMSKGfIw'
 		},
@@ -5950,7 +5953,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e2d60b7cc46ad63d8369c3bf', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e2d60b7cc46ad63d8369c3bf', width: 64}
 				]),
-			id: '14OPACj7jtzXOrgxis7pu2',
+			id: $author$project$AlbumIds$AlbumId('14OPACj7jtzXOrgxis7pu2'),
 			name: 'Bela B liest... und der tanzende Teufel',
 			urlToOpen: 'https://open.spotify.com/album/14OPACj7jtzXOrgxis7pu2'
 		},
@@ -5961,7 +5964,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bc33f1471e6be485ab78fb16', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bc33f1471e6be485ab78fb16', width: 64}
 				]),
-			id: '4Exxckn0GwbhnGl6N4um2N',
+			id: $author$project$AlbumIds$AlbumId('4Exxckn0GwbhnGl6N4um2N'),
 			name: '202/Das weiße Grab',
 			urlToOpen: 'https://open.spotify.com/album/4Exxckn0GwbhnGl6N4um2N'
 		},
@@ -5972,7 +5975,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026b72b523e718a8cf86bc595a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516b72b523e718a8cf86bc595a', width: 64}
 				]),
-			id: '3qqFfEjRLF7pxUpWw2g0P5',
+			id: $author$project$AlbumIds$AlbumId('3qqFfEjRLF7pxUpWw2g0P5'),
 			name: 'Oliver Rohrbeck liest ...und der Super-Papagei',
 			urlToOpen: 'https://open.spotify.com/album/3qqFfEjRLF7pxUpWw2g0P5'
 		},
@@ -5983,7 +5986,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0272261d20240df6a6118cd276', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485172261d20240df6a6118cd276', width: 64}
 				]),
-			id: '1uPmiAn5sBUdGCbAeiPTNG',
+			id: $author$project$AlbumIds$AlbumId('1uPmiAn5sBUdGCbAeiPTNG'),
 			name: 'Jens Wawrczeck liest ...und das Gespensterschloß',
 			urlToOpen: 'https://open.spotify.com/album/1uPmiAn5sBUdGCbAeiPTNG'
 		},
@@ -5994,7 +5997,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028d3382fd6c03d24b41a5daef', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518d3382fd6c03d24b41a5daef', width: 64}
 				]),
-			id: '5oCCy3K7JBWfdfp4QNhYxA',
+			id: $author$project$AlbumIds$AlbumId('5oCCy3K7JBWfdfp4QNhYxA'),
 			name: 'Andreas Fröhlich liest...und der Karpatenhund',
 			urlToOpen: 'https://open.spotify.com/album/5oCCy3K7JBWfdfp4QNhYxA'
 		},
@@ -6005,7 +6008,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024eba9e1187a0bd858c4961a4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514eba9e1187a0bd858c4961a4', width: 64}
 				]),
-			id: '3yzJOoR3024vkb7WXRVtFr',
+			id: $author$project$AlbumIds$AlbumId('3yzJOoR3024vkb7WXRVtFr'),
 			name: 'Jannik Schümann liest ...und der Phantomsee',
 			urlToOpen: 'https://open.spotify.com/album/3yzJOoR3024vkb7WXRVtFr'
 		},
@@ -6016,7 +6019,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02980c937b43748adc2ba795e7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851980c937b43748adc2ba795e7', width: 64}
 				]),
-			id: '6UN8m07SmIzyDe63H0oljL',
+			id: $author$project$AlbumIds$AlbumId('6UN8m07SmIzyDe63H0oljL'),
 			name: 'und das versunkene Schiff',
 			urlToOpen: 'https://open.spotify.com/album/6UN8m07SmIzyDe63H0oljL'
 		},
@@ -6027,7 +6030,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021b75d0b84c32623d26703286', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511b75d0b84c32623d26703286', width: 64}
 				]),
-			id: '2EzmlFDy8q8etqohlJpaaB',
+			id: $author$project$AlbumIds$AlbumId('2EzmlFDy8q8etqohlJpaaB'),
 			name: 'Anna Thalbach liest ... und die Geisterinsel',
 			urlToOpen: 'https://open.spotify.com/album/2EzmlFDy8q8etqohlJpaaB'
 		},
@@ -6038,7 +6041,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e67533cb79d13ca95633f3f0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e67533cb79d13ca95633f3f0', width: 64}
 				]),
-			id: '4FxNfDSXqAg8N1D8NBtvZ5',
+			id: $author$project$AlbumIds$AlbumId('4FxNfDSXqAg8N1D8NBtvZ5'),
 			name: '201/Höhenangst',
 			urlToOpen: 'https://open.spotify.com/album/4FxNfDSXqAg8N1D8NBtvZ5'
 		},
@@ -6049,7 +6052,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e15a2b23cd8a7d4a5be2ecad', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e15a2b23cd8a7d4a5be2ecad', width: 64}
 				]),
-			id: '4QQ2iK81MWMhK2Qqr1AO0R',
+			id: $author$project$AlbumIds$AlbumId('4QQ2iK81MWMhK2Qqr1AO0R'),
 			name: 'Bastian Pastewka liest... und der grüne Geist',
 			urlToOpen: 'https://open.spotify.com/album/4QQ2iK81MWMhK2Qqr1AO0R'
 		},
@@ -6060,7 +6063,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0252c0f5ffda1043b41fe52969', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485152c0f5ffda1043b41fe52969', width: 64}
 				]),
-			id: '09Ckx1JLgPsQHHGuSIt2j3',
+			id: $author$project$AlbumIds$AlbumId('09Ckx1JLgPsQHHGuSIt2j3'),
 			name: '200/Feuriges Auge',
 			urlToOpen: 'https://open.spotify.com/album/09Ckx1JLgPsQHHGuSIt2j3'
 		},
@@ -6071,7 +6074,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023c7d48d33037a919bfa5508c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513c7d48d33037a919bfa5508c', width: 64}
 				]),
-			id: '7bTKP2hU0LRks1bXN1R7ko',
+			id: $author$project$AlbumIds$AlbumId('7bTKP2hU0LRks1bXN1R7ko'),
 			name: '199/und der grüne Kobold',
 			urlToOpen: 'https://open.spotify.com/album/7bTKP2hU0LRks1bXN1R7ko'
 		},
@@ -6082,7 +6085,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021e11dc983c38b729c760adc6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511e11dc983c38b729c760adc6', width: 64}
 				]),
-			id: '4piiNuehCc4VjN8NBIcnRt',
+			id: $author$project$AlbumIds$AlbumId('4piiNuehCc4VjN8NBIcnRt'),
 			name: '198/Die Legende der Gaukler',
 			urlToOpen: 'https://open.spotify.com/album/4piiNuehCc4VjN8NBIcnRt'
 		},
@@ -6093,7 +6096,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e167f6aaba96633ba97c7a6b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e167f6aaba96633ba97c7a6b', width: 64}
 				]),
-			id: '39K0Sczt1mIbW33lB5RNer',
+			id: $author$project$AlbumIds$AlbumId('39K0Sczt1mIbW33lB5RNer'),
 			name: 'Und die schwarze Katze',
 			urlToOpen: 'https://open.spotify.com/album/39K0Sczt1mIbW33lB5RNer'
 		},
@@ -6104,7 +6107,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0295228787bf6722ba125ba780', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485195228787bf6722ba125ba780', width: 64}
 				]),
-			id: '0GRoTtX1wI16M7GSnnN96R',
+			id: $author$project$AlbumIds$AlbumId('0GRoTtX1wI16M7GSnnN96R'),
 			name: '197/Im Auge des Sturms',
 			urlToOpen: 'https://open.spotify.com/album/0GRoTtX1wI16M7GSnnN96R'
 		},
@@ -6115,7 +6118,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026cc1cf7afc510fb1abd840ec', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516cc1cf7afc510fb1abd840ec', width: 64}
 				]),
-			id: '39a7bHWZyWPxwukCHPrTly',
+			id: $author$project$AlbumIds$AlbumId('39a7bHWZyWPxwukCHPrTly'),
 			name: '196/Geheimnis des Bauchredners',
 			urlToOpen: 'https://open.spotify.com/album/39a7bHWZyWPxwukCHPrTly'
 		},
@@ -6126,7 +6129,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028f1325b5c4e39037888952f5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518f1325b5c4e39037888952f5', width: 64}
 				]),
-			id: '7ehMwTyKuIM4zdiltMxE4X',
+			id: $author$project$AlbumIds$AlbumId('7ehMwTyKuIM4zdiltMxE4X'),
 			name: 'und der schwarze Tag (Sechs Kurzgeschichten)',
 			urlToOpen: 'https://open.spotify.com/album/7ehMwTyKuIM4zdiltMxE4X'
 		},
@@ -6137,7 +6140,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021567fb7801a75fab70fbd170', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511567fb7801a75fab70fbd170', width: 64}
 				]),
-			id: '3pbXIzVk7CA5VM2ltxu9TN',
+			id: $author$project$AlbumIds$AlbumId('3pbXIzVk7CA5VM2ltxu9TN'),
 			name: '195/Im Reich der Ungeheuer',
 			urlToOpen: 'https://open.spotify.com/album/3pbXIzVk7CA5VM2ltxu9TN'
 		},
@@ -6148,7 +6151,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021a873873dce1e3e04c87ab21', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511a873873dce1e3e04c87ab21', width: 64}
 				]),
-			id: '2oKngJQA5TdxF5QcP3uZEf',
+			id: $author$project$AlbumIds$AlbumId('2oKngJQA5TdxF5QcP3uZEf'),
 			name: '194/und die Zeitreisende',
 			urlToOpen: 'https://open.spotify.com/album/2oKngJQA5TdxF5QcP3uZEf'
 		},
@@ -6159,7 +6162,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027a55ff0895dabb76421152f8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517a55ff0895dabb76421152f8', width: 64}
 				]),
-			id: '4m6VlVOWfrUVhWWrueMo7p',
+			id: $author$project$AlbumIds$AlbumId('4m6VlVOWfrUVhWWrueMo7p'),
 			name: '193/Schrecken aus der Tiefe',
 			urlToOpen: 'https://open.spotify.com/album/4m6VlVOWfrUVhWWrueMo7p'
 		},
@@ -6170,7 +6173,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bcc00d301f9004805a6daedd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bcc00d301f9004805a6daedd', width: 64}
 				]),
-			id: '1qag2AiFcxXU1UaIgrDFff',
+			id: $author$project$AlbumIds$AlbumId('1qag2AiFcxXU1UaIgrDFff'),
 			name: '192/im Bann des Drachen',
 			urlToOpen: 'https://open.spotify.com/album/1qag2AiFcxXU1UaIgrDFff'
 		},
@@ -6181,7 +6184,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029dcb689b096b7a96c30ddbe8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519dcb689b096b7a96c30ddbe8', width: 64}
 				]),
-			id: '2ICtKWqLqMBTzi7UeByhKd',
+			id: $author$project$AlbumIds$AlbumId('2ICtKWqLqMBTzi7UeByhKd'),
 			name: '191/Verbrechen im Nichts',
 			urlToOpen: 'https://open.spotify.com/album/2ICtKWqLqMBTzi7UeByhKd'
 		},
@@ -6192,7 +6195,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0238991b19472359d2ca4498dd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485138991b19472359d2ca4498dd', width: 64}
 				]),
-			id: '100ZHoBX994GlckxjoGpma',
+			id: $author$project$AlbumIds$AlbumId('100ZHoBX994GlckxjoGpma'),
 			name: '190/und die Kammer der Rätsel',
 			urlToOpen: 'https://open.spotify.com/album/100ZHoBX994GlckxjoGpma'
 		},
@@ -6203,7 +6206,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024adb71fa5ccd222ffc9094ba', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514adb71fa5ccd222ffc9094ba', width: 64}
 				]),
-			id: '02MXdFaVMz0qQJjmivjI8g',
+			id: $author$project$AlbumIds$AlbumId('02MXdFaVMz0qQJjmivjI8g'),
 			name: '189/und der unsichtbare Passagier',
 			urlToOpen: 'https://open.spotify.com/album/02MXdFaVMz0qQJjmivjI8g'
 		},
@@ -6214,7 +6217,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e1fda9bbaabac431a9814150', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e1fda9bbaabac431a9814150', width: 64}
 				]),
-			id: '3egVVb6Zt0LdS6agBMGsiJ',
+			id: $author$project$AlbumIds$AlbumId('3egVVb6Zt0LdS6agBMGsiJ'),
 			name: 'Und das kalte Auge',
 			urlToOpen: 'https://open.spotify.com/album/3egVVb6Zt0LdS6agBMGsiJ'
 		},
@@ -6225,7 +6228,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023a8ba4f56a5b403d0758082b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513a8ba4f56a5b403d0758082b', width: 64}
 				]),
-			id: '22soWryC08ctyMNb6NrMGD',
+			id: $author$project$AlbumIds$AlbumId('22soWryC08ctyMNb6NrMGD'),
 			name: '188/Signale aus dem Jenseits',
 			urlToOpen: 'https://open.spotify.com/album/22soWryC08ctyMNb6NrMGD'
 		},
@@ -6236,7 +6239,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026b0de580c5d7e90ff02e2e2b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516b0de580c5d7e90ff02e2e2b', width: 64}
 				]),
-			id: '7mH8vdj0TkiPO6fMHBCvYj',
+			id: $author$project$AlbumIds$AlbumId('7mH8vdj0TkiPO6fMHBCvYj'),
 			name: 'und der Tornadojäger',
 			urlToOpen: 'https://open.spotify.com/album/7mH8vdj0TkiPO6fMHBCvYj'
 		},
@@ -6247,7 +6250,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02082728beff0e90864d9af1d7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851082728beff0e90864d9af1d7', width: 64}
 				]),
-			id: '6uj8JeIgluMibSu8Divkbh',
+			id: $author$project$AlbumIds$AlbumId('6uj8JeIgluMibSu8Divkbh'),
 			name: '187/und das silberne Amulett',
 			urlToOpen: 'https://open.spotify.com/album/6uj8JeIgluMibSu8Divkbh'
 		},
@@ -6258,7 +6261,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cdc026ed0ecaff10a72416f0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cdc026ed0ecaff10a72416f0', width: 64}
 				]),
-			id: '7osWCNCcvGfqP31G7281iL',
+			id: $author$project$AlbumIds$AlbumId('7osWCNCcvGfqP31G7281iL'),
 			name: 'Das Grab der Inka-Mumie',
 			urlToOpen: 'https://open.spotify.com/album/7osWCNCcvGfqP31G7281iL'
 		},
@@ -6269,7 +6272,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c119a7d9d8bcf3d6265b2ce5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c119a7d9d8bcf3d6265b2ce5', width: 64}
 				]),
-			id: '5kevid18ttcAPK1vk0kLtc',
+			id: $author$project$AlbumIds$AlbumId('5kevid18ttcAPK1vk0kLtc'),
 			name: '186/Insel des Vergessens',
 			urlToOpen: 'https://open.spotify.com/album/5kevid18ttcAPK1vk0kLtc'
 		},
@@ -6280,7 +6283,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022ab04561f6dd10d93057bdff', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512ab04561f6dd10d93057bdff', width: 64}
 				]),
-			id: '7eHh5PAxQBt5KBWzd3a10G',
+			id: $author$project$AlbumIds$AlbumId('7eHh5PAxQBt5KBWzd3a10G'),
 			name: '185/und der Mann ohne Augen',
 			urlToOpen: 'https://open.spotify.com/album/7eHh5PAxQBt5KBWzd3a10G'
 		},
@@ -6291,7 +6294,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0290dce028e8607b629320bc05', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485190dce028e8607b629320bc05', width: 64}
 				]),
-			id: '5B7w9vkfh979tEyzwkLk9k',
+			id: $author$project$AlbumIds$AlbumId('5B7w9vkfh979tEyzwkLk9k'),
 			name: '184/und der Hexengarten',
 			urlToOpen: 'https://open.spotify.com/album/5B7w9vkfh979tEyzwkLk9k'
 		},
@@ -6302,7 +6305,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d85d746b8f4fd287d4c3e6e2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d85d746b8f4fd287d4c3e6e2', width: 64}
 				]),
-			id: '1qhlRmclvYWkrYkLnFxFZN',
+			id: $author$project$AlbumIds$AlbumId('1qhlRmclvYWkrYkLnFxFZN'),
 			name: '183/und der letzte Song',
 			urlToOpen: 'https://open.spotify.com/album/1qhlRmclvYWkrYkLnFxFZN'
 		},
@@ -6313,7 +6316,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c34d36fd9ae7838173854d6c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c34d36fd9ae7838173854d6c', width: 64}
 				]),
-			id: '4zCPToY7AoTqvOKf4HRqAN',
+			id: $author$project$AlbumIds$AlbumId('4zCPToY7AoTqvOKf4HRqAN'),
 			name: '182/Im Haus des Henkers',
 			urlToOpen: 'https://open.spotify.com/album/4zCPToY7AoTqvOKf4HRqAN'
 		},
@@ -6324,7 +6327,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020017b0120cc39fd0c3038508', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510017b0120cc39fd0c3038508', width: 64}
 				]),
-			id: '18xyskqkEGnVfVFhznkFIK',
+			id: $author$project$AlbumIds$AlbumId('18xyskqkEGnVfVFhznkFIK'),
 			name: '181/Das Kabinett des Zauberers',
 			urlToOpen: 'https://open.spotify.com/album/18xyskqkEGnVfVFhznkFIK'
 		},
@@ -6335,7 +6338,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029496d46637b0e569bdd00ccb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519496d46637b0e569bdd00ccb', width: 64}
 				]),
-			id: '3L3ztKRWI0d7JwZga12WCb',
+			id: $author$project$AlbumIds$AlbumId('3L3ztKRWI0d7JwZga12WCb'),
 			name: 'Outro - FdW',
 			urlToOpen: 'https://open.spotify.com/album/3L3ztKRWI0d7JwZga12WCb'
 		},
@@ -6346,7 +6349,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0240bc7671cc0b127ada5886cd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485140bc7671cc0b127ada5886cd', width: 64}
 				]),
-			id: '4lLOJQU6QBH5cxmERE77La',
+			id: $author$project$AlbumIds$AlbumId('4lLOJQU6QBH5cxmERE77La'),
 			name: 'und der Zeitgeist (Sechs Kurzgeschichten)',
 			urlToOpen: 'https://open.spotify.com/album/4lLOJQU6QBH5cxmERE77La'
 		},
@@ -6357,7 +6360,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d23523197ffd23d8c8cd9d40', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d23523197ffd23d8c8cd9d40', width: 64}
 				]),
-			id: '6tioH9PNiZbmUT54MsiX5k',
+			id: $author$project$AlbumIds$AlbumId('6tioH9PNiZbmUT54MsiX5k'),
 			name: '180/und die flüsternden Puppen',
 			urlToOpen: 'https://open.spotify.com/album/6tioH9PNiZbmUT54MsiX5k'
 		},
@@ -6368,7 +6371,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02285729b514e4b225b526c831', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851285729b514e4b225b526c831', width: 64}
 				]),
-			id: '4IZ7Lsm5le7HJPtaGLCrjO',
+			id: $author$project$AlbumIds$AlbumId('4IZ7Lsm5le7HJPtaGLCrjO'),
 			name: '179/Die Rache des Untoten',
 			urlToOpen: 'https://open.spotify.com/album/4IZ7Lsm5le7HJPtaGLCrjO'
 		},
@@ -6379,7 +6382,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0248a42f6dc0e9d09ebb1ebbcc', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485148a42f6dc0e9d09ebb1ebbcc', width: 64}
 				]),
-			id: '5iobM2gNVymvP8XqnRnHVR',
+			id: $author$project$AlbumIds$AlbumId('5iobM2gNVymvP8XqnRnHVR'),
 			name: 'Adventskalender - Stille Nacht, düstere Nacht',
 			urlToOpen: 'https://open.spotify.com/album/5iobM2gNVymvP8XqnRnHVR'
 		},
@@ -6390,7 +6393,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02666fbf7a8e324e3ad58aece3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851666fbf7a8e324e3ad58aece3', width: 64}
 				]),
-			id: '3w5glP0mzKfTanzXpAjN27',
+			id: $author$project$AlbumIds$AlbumId('3w5glP0mzKfTanzXpAjN27'),
 			name: '178/Der gefiederte Schrecken',
 			urlToOpen: 'https://open.spotify.com/album/3w5glP0mzKfTanzXpAjN27'
 		},
@@ -6401,7 +6404,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028e7ff0aa1075e93b5488ea9f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518e7ff0aa1075e93b5488ea9f', width: 64}
 				]),
-			id: '0w6Khy7kpqTXrEDITf0rZ0',
+			id: $author$project$AlbumIds$AlbumId('0w6Khy7kpqTXrEDITf0rZ0'),
 			name: '177/Der Geist des Goldgräbers',
 			urlToOpen: 'https://open.spotify.com/album/0w6Khy7kpqTXrEDITf0rZ0'
 		},
@@ -6412,7 +6415,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029178c8031a2bb802b2dba3f7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519178c8031a2bb802b2dba3f7', width: 64}
 				]),
-			id: '4qbxSVpr3NxRjdIVC411ue',
+			id: $author$project$AlbumIds$AlbumId('4qbxSVpr3NxRjdIVC411ue'),
 			name: '176/und der gestohlene Sieg',
 			urlToOpen: 'https://open.spotify.com/album/4qbxSVpr3NxRjdIVC411ue'
 		},
@@ -6423,7 +6426,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022d5a3aa39e31ef20ef03835d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512d5a3aa39e31ef20ef03835d', width: 64}
 				]),
-			id: '4uggmrJ3Xpm1e2tcz6laze',
+			id: $author$project$AlbumIds$AlbumId('4uggmrJ3Xpm1e2tcz6laze'),
 			name: '175/Schattenwelt',
 			urlToOpen: 'https://open.spotify.com/album/4uggmrJ3Xpm1e2tcz6laze'
 		},
@@ -6434,7 +6437,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029075efa474f3eed7e091ddb3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519075efa474f3eed7e091ddb3', width: 64}
 				]),
-			id: '5RoL0jdWMoJ8KRFVOeFYtX',
+			id: $author$project$AlbumIds$AlbumId('5RoL0jdWMoJ8KRFVOeFYtX'),
 			name: '174/und das Tuch der Toten',
 			urlToOpen: 'https://open.spotify.com/album/5RoL0jdWMoJ8KRFVOeFYtX'
 		},
@@ -6445,7 +6448,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f2b462ada5672836b61d1c40', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f2b462ada5672836b61d1c40', width: 64}
 				]),
-			id: '2ALDCHCHdawewN1sduWVQQ',
+			id: $author$project$AlbumIds$AlbumId('2ALDCHCHdawewN1sduWVQQ'),
 			name: '173/Dämon der Rache',
 			urlToOpen: 'https://open.spotify.com/album/2ALDCHCHdawewN1sduWVQQ'
 		},
@@ -6456,7 +6459,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f1232695ca5e820d6f767185', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f1232695ca5e820d6f767185', width: 64}
 				]),
-			id: '6Anfub4AoVHg9bhJ7js0L0',
+			id: $author$project$AlbumIds$AlbumId('6Anfub4AoVHg9bhJ7js0L0'),
 			name: '172/und der Eisenmann',
 			urlToOpen: 'https://open.spotify.com/album/6Anfub4AoVHg9bhJ7js0L0'
 		},
@@ -6467,7 +6470,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0257bd67c0f2da824f49ecbf54', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485157bd67c0f2da824f49ecbf54', width: 64}
 				]),
-			id: '6YbaUGc6ZeR1YnDFGQJV8F',
+			id: $author$project$AlbumIds$AlbumId('6YbaUGc6ZeR1YnDFGQJV8F'),
 			name: '171/und das Phantom aus dem Meer',
 			urlToOpen: 'https://open.spotify.com/album/6YbaUGc6ZeR1YnDFGQJV8F'
 		},
@@ -6478,7 +6481,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cf44e735ff12cfb4ce1c6f52', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cf44e735ff12cfb4ce1c6f52', width: 64}
 				]),
-			id: '62CKj2RCiWDDUtBWTn4KxQ',
+			id: $author$project$AlbumIds$AlbumId('62CKj2RCiWDDUtBWTn4KxQ'),
 			name: '170/Straße des Grauens',
 			urlToOpen: 'https://open.spotify.com/album/62CKj2RCiWDDUtBWTn4KxQ'
 		},
@@ -6489,7 +6492,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020fa069b67bba65a9b1e11687', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510fa069b67bba65a9b1e11687', width: 64}
 				]),
-			id: '5PEHeYcUhz1Aq02ZB1pUgJ',
+			id: $author$project$AlbumIds$AlbumId('5PEHeYcUhz1Aq02ZB1pUgJ'),
 			name: '169/Die Spur des Spielers',
 			urlToOpen: 'https://open.spotify.com/album/5PEHeYcUhz1Aq02ZB1pUgJ'
 		},
@@ -6500,7 +6503,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0233321991f509a888c40509eb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485133321991f509a888c40509eb', width: 64}
 				]),
-			id: '77aawQqgLQZxPb9kwSg0JR',
+			id: $author$project$AlbumIds$AlbumId('77aawQqgLQZxPb9kwSg0JR'),
 			name: '168/GPS-Gangster',
 			urlToOpen: 'https://open.spotify.com/album/77aawQqgLQZxPb9kwSg0JR'
 		},
@@ -6511,7 +6514,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0269b8947b4e88fcd124c0b8e9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485169b8947b4e88fcd124c0b8e9', width: 64}
 				]),
-			id: '2AEzTekSWfyfzJH56jmhET',
+			id: $author$project$AlbumIds$AlbumId('2AEzTekSWfyfzJH56jmhET'),
 			name: 'Das Rätsel der Sieben',
 			urlToOpen: 'https://open.spotify.com/album/2AEzTekSWfyfzJH56jmhET'
 		},
@@ -6522,7 +6525,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ed6e891582ef3132238429d5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ed6e891582ef3132238429d5', width: 64}
 				]),
-			id: '7kskBahbrQWCOiaXKuoPjE',
+			id: $author$project$AlbumIds$AlbumId('7kskBahbrQWCOiaXKuoPjE'),
 			name: '167/und das blaue Biest',
 			urlToOpen: 'https://open.spotify.com/album/7kskBahbrQWCOiaXKuoPjE'
 		},
@@ -6533,7 +6536,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c53fe181f9b626a2180e7d97', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c53fe181f9b626a2180e7d97', width: 64}
 				]),
-			id: '427kScPIeUSfoNKCNercMC',
+			id: $author$project$AlbumIds$AlbumId('427kScPIeUSfoNKCNercMC'),
 			name: '166/und die brennende Stadt',
 			urlToOpen: 'https://open.spotify.com/album/427kScPIeUSfoNKCNercMC'
 		},
@@ -6544,7 +6547,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cc8d3cd078f1ed5e6fd5b6b3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cc8d3cd078f1ed5e6fd5b6b3', width: 64}
 				]),
-			id: '4izJKxYT4fTwIZjoXNgkX7',
+			id: $author$project$AlbumIds$AlbumId('4izJKxYT4fTwIZjoXNgkX7'),
 			name: '165/Im Schatten des Giganten',
 			urlToOpen: 'https://open.spotify.com/album/4izJKxYT4fTwIZjoXNgkX7'
 		},
@@ -6555,7 +6558,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028957890a758e26e123f6f24b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518957890a758e26e123f6f24b', width: 64}
 				]),
-			id: '3An657Q0wkVp4nIDg2zpcB',
+			id: $author$project$AlbumIds$AlbumId('3An657Q0wkVp4nIDg2zpcB'),
 			name: '164/Fußball-Teufel',
 			urlToOpen: 'https://open.spotify.com/album/3An657Q0wkVp4nIDg2zpcB'
 		},
@@ -6566,7 +6569,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024c132f86698ff0fbd6f8f12e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514c132f86698ff0fbd6f8f12e', width: 64}
 				]),
-			id: '4fv0pPN7ZjbUiejSTxTPZh',
+			id: $author$project$AlbumIds$AlbumId('4fv0pPN7ZjbUiejSTxTPZh'),
 			name: '163/und der verschollene Pilot',
 			urlToOpen: 'https://open.spotify.com/album/4fv0pPN7ZjbUiejSTxTPZh'
 		},
@@ -6577,7 +6580,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d242d4bf2e7eefac5504cfec', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d242d4bf2e7eefac5504cfec', width: 64}
 				]),
-			id: '7beppYTqtHAEPKoXyodssF',
+			id: $author$project$AlbumIds$AlbumId('7beppYTqtHAEPKoXyodssF'),
 			name: '162/und der schreiende Nebel',
 			urlToOpen: 'https://open.spotify.com/album/7beppYTqtHAEPKoXyodssF'
 		},
@@ -6588,7 +6591,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028f453c711437006dd6da2551', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518f453c711437006dd6da2551', width: 64}
 				]),
-			id: '1GEzdjI5N25iuGjvypRscs',
+			id: $author$project$AlbumIds$AlbumId('1GEzdjI5N25iuGjvypRscs'),
 			name: '161/Die blutenden Bilder',
 			urlToOpen: 'https://open.spotify.com/album/1GEzdjI5N25iuGjvypRscs'
 		},
@@ -6599,7 +6602,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e10c1dcc9f9ecc07f577c077', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e10c1dcc9f9ecc07f577c077', width: 64}
 				]),
-			id: '2F6VxgWbGCUpTU9ux6Dtbi',
+			id: $author$project$AlbumIds$AlbumId('2F6VxgWbGCUpTU9ux6Dtbi'),
 			name: '160/Geheimnisvolle Botschaften',
 			urlToOpen: 'https://open.spotify.com/album/2F6VxgWbGCUpTU9ux6Dtbi'
 		},
@@ -6610,7 +6613,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cabeab1310cc1583253d3619', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cabeab1310cc1583253d3619', width: 64}
 				]),
-			id: '4rCAnDrNJ96srnBEoA0ISj',
+			id: $author$project$AlbumIds$AlbumId('4rCAnDrNJ96srnBEoA0ISj'),
 			name: '159/Nacht der Tiger',
 			urlToOpen: 'https://open.spotify.com/album/4rCAnDrNJ96srnBEoA0ISj'
 		},
@@ -6621,7 +6624,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025aca6ab743013c0e7539ce06', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515aca6ab743013c0e7539ce06', width: 64}
 				]),
-			id: '2qFuUJMx8w4VEO0Zdf8jFJ',
+			id: $author$project$AlbumIds$AlbumId('2qFuUJMx8w4VEO0Zdf8jFJ'),
 			name: 'Der 5. Advent',
 			urlToOpen: 'https://open.spotify.com/album/2qFuUJMx8w4VEO0Zdf8jFJ'
 		},
@@ -6632,7 +6635,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022d29b1488378e41a00bdc86b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512d29b1488378e41a00bdc86b', width: 64}
 				]),
-			id: '3uFt95otJjaxH8o40tPtIS',
+			id: $author$project$AlbumIds$AlbumId('3uFt95otJjaxH8o40tPtIS'),
 			name: '158/und der Feuergeist',
 			urlToOpen: 'https://open.spotify.com/album/3uFt95otJjaxH8o40tPtIS'
 		},
@@ -6643,7 +6646,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023b47ec9e1c0d5be3e334cb66', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513b47ec9e1c0d5be3e334cb66', width: 64}
 				]),
-			id: '1nL3AddBvZ845zMyXRowgs',
+			id: $author$project$AlbumIds$AlbumId('1nL3AddBvZ845zMyXRowgs'),
 			name: 'Und die Geisterlampe',
 			urlToOpen: 'https://open.spotify.com/album/1nL3AddBvZ845zMyXRowgs'
 		},
@@ -6654,7 +6657,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02737f6623e3b1daae840e36a9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851737f6623e3b1daae840e36a9', width: 64}
 				]),
-			id: '0pdXEEgKjfh4H0aZg4IOTS',
+			id: $author$project$AlbumIds$AlbumId('0pdXEEgKjfh4H0aZg4IOTS'),
 			name: '157/Im Zeichen der Schlangen',
 			urlToOpen: 'https://open.spotify.com/album/0pdXEEgKjfh4H0aZg4IOTS'
 		},
@@ -6665,7 +6668,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0247c43a07885dbced251b72d3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485147c43a07885dbced251b72d3', width: 64}
 				]),
-			id: '78wUIvkGT2CdWW0ngeEy8V',
+			id: $author$project$AlbumIds$AlbumId('78wUIvkGT2CdWW0ngeEy8V'),
 			name: '156/Im Netz des Drachen',
 			urlToOpen: 'https://open.spotify.com/album/78wUIvkGT2CdWW0ngeEy8V'
 		},
@@ -6676,7 +6679,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d3b4ea9e547ffb052d4c6ab7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d3b4ea9e547ffb052d4c6ab7', width: 64}
 				]),
-			id: '623V90QowsF4WSqV3cHGKf',
+			id: $author$project$AlbumIds$AlbumId('623V90QowsF4WSqV3cHGKf'),
 			name: '155/und der Meister des Todes',
 			urlToOpen: 'https://open.spotify.com/album/623V90QowsF4WSqV3cHGKf'
 		},
@@ -6687,7 +6690,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023ede375dd1a9cb8cd5eba922', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513ede375dd1a9cb8cd5eba922', width: 64}
 				]),
-			id: '3uggg8gNlh1kpBxLeOfFTV',
+			id: $author$project$AlbumIds$AlbumId('3uggg8gNlh1kpBxLeOfFTV'),
 			name: '154/Botschaft aus der Unterwelt',
 			urlToOpen: 'https://open.spotify.com/album/3uggg8gNlh1kpBxLeOfFTV'
 		},
@@ -6698,7 +6701,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fb378d3d6028237aeeafc91e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fb378d3d6028237aeeafc91e', width: 64}
 				]),
-			id: '7nxSEeJiQwI34VwnWT83C9',
+			id: $author$project$AlbumIds$AlbumId('7nxSEeJiQwI34VwnWT83C9'),
 			name: '153/und das Fußballphantom',
 			urlToOpen: 'https://open.spotify.com/album/7nxSEeJiQwI34VwnWT83C9'
 		},
@@ -6709,7 +6712,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a3ec0e98597e3412cac23343', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a3ec0e98597e3412cac23343', width: 64}
 				]),
-			id: '5iNeANVy4supl8HowB9V2h',
+			id: $author$project$AlbumIds$AlbumId('5iNeANVy4supl8HowB9V2h'),
 			name: '152/Skateboardfieber',
 			urlToOpen: 'https://open.spotify.com/album/5iNeANVy4supl8HowB9V2h'
 		},
@@ -6720,7 +6723,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02df29122dd4c65a827cfa4f5b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851df29122dd4c65a827cfa4f5b', width: 64}
 				]),
-			id: '3u0OSCwiOblOhm4dKjwLN5',
+			id: $author$project$AlbumIds$AlbumId('3u0OSCwiOblOhm4dKjwLN5'),
 			name: '151/Schwarze Sonne',
 			urlToOpen: 'https://open.spotify.com/album/3u0OSCwiOblOhm4dKjwLN5'
 		},
@@ -6731,7 +6734,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b1b4963fd7e17e71162e1ec0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b1b4963fd7e17e71162e1ec0', width: 64}
 				]),
-			id: '2Bxdn8Gn8vEy4UiTOc8cBK',
+			id: $author$project$AlbumIds$AlbumId('2Bxdn8Gn8vEy4UiTOc8cBK'),
 			name: 'High Strung - Unter Hochspannung',
 			urlToOpen: 'https://open.spotify.com/album/2Bxdn8Gn8vEy4UiTOc8cBK'
 		},
@@ -6742,7 +6745,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f0c748c284cc737bb30b1fab', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f0c748c284cc737bb30b1fab', width: 64}
 				]),
-			id: '6cPgVsZ6TPyVIP9BHP5ty5',
+			id: $author$project$AlbumIds$AlbumId('6cPgVsZ6TPyVIP9BHP5ty5'),
 			name: '150/Geisterbucht',
 			urlToOpen: 'https://open.spotify.com/album/6cPgVsZ6TPyVIP9BHP5ty5'
 		},
@@ -6753,7 +6756,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a4a04c78b49bc9e500c9fcee', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a4a04c78b49bc9e500c9fcee', width: 64}
 				]),
-			id: '7K7dfMc3VwHOKtENI1BWTD',
+			id: $author$project$AlbumIds$AlbumId('7K7dfMc3VwHOKtENI1BWTD'),
 			name: '149/Der namenlose Gegner',
 			urlToOpen: 'https://open.spotify.com/album/7K7dfMc3VwHOKtENI1BWTD'
 		},
@@ -6764,7 +6767,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0231b0c53b003f5fc1894caf4b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485131b0c53b003f5fc1894caf4b', width: 64}
 				]),
-			id: '2uOsf31oenHRd4DVxCSjn9',
+			id: $author$project$AlbumIds$AlbumId('2uOsf31oenHRd4DVxCSjn9'),
 			name: '148/und die feurige Flut',
 			urlToOpen: 'https://open.spotify.com/album/2uOsf31oenHRd4DVxCSjn9'
 		},
@@ -6775,7 +6778,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020f900f5b76227564e2ac52d0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510f900f5b76227564e2ac52d0', width: 64}
 				]),
-			id: '35aU9bfmxPGdjiRA4JMuFd',
+			id: $author$project$AlbumIds$AlbumId('35aU9bfmxPGdjiRA4JMuFd'),
 			name: '147/Grusel auf Campbell Castle',
 			urlToOpen: 'https://open.spotify.com/album/35aU9bfmxPGdjiRA4JMuFd'
 		},
@@ -6786,7 +6789,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b7b5a83fc96967a77a41c681', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b7b5a83fc96967a77a41c681', width: 64}
 				]),
-			id: '3D9Jf4mdOBoeyrKpffYBvy',
+			id: $author$project$AlbumIds$AlbumId('3D9Jf4mdOBoeyrKpffYBvy'),
 			name: '146/Der Biss der Bestie',
 			urlToOpen: 'https://open.spotify.com/album/3D9Jf4mdOBoeyrKpffYBvy'
 		},
@@ -6797,7 +6800,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a5f99b0715333a2e0316a8a2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a5f99b0715333a2e0316a8a2', width: 64}
 				]),
-			id: '5RBu5WK95Q6BtWfA4o3Vgs',
+			id: $author$project$AlbumIds$AlbumId('5RBu5WK95Q6BtWfA4o3Vgs'),
 			name: 'Brainwash - Gefangene Gedanken',
 			urlToOpen: 'https://open.spotify.com/album/5RBu5WK95Q6BtWfA4o3Vgs'
 		},
@@ -6808,7 +6811,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0200797e0abeef149d3662ffb3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485100797e0abeef149d3662ffb3', width: 64}
 				]),
-			id: '6TjzBTmeDakBgh5NOGj1BC',
+			id: $author$project$AlbumIds$AlbumId('6TjzBTmeDakBgh5NOGj1BC'),
 			name: '145/Die Rache der Samurai',
 			urlToOpen: 'https://open.spotify.com/album/6TjzBTmeDakBgh5NOGj1BC'
 		},
@@ -6819,7 +6822,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f283bdbdd13c7d1b7c6f84b7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f283bdbdd13c7d1b7c6f84b7', width: 64}
 				]),
-			id: '2RxTF6MhAVOtudVNOyHTQz',
+			id: $author$project$AlbumIds$AlbumId('2RxTF6MhAVOtudVNOyHTQz'),
 			name: '144/Zwillinge der Finsternis',
 			urlToOpen: 'https://open.spotify.com/album/2RxTF6MhAVOtudVNOyHTQz'
 		},
@@ -6830,7 +6833,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021f5fe86b88a361fd67a8cd29', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511f5fe86b88a361fd67a8cd29', width: 64}
 				]),
-			id: '249qkyRcqMAoKJhXwrTYtE',
+			id: $author$project$AlbumIds$AlbumId('249qkyRcqMAoKJhXwrTYtE'),
 			name: 'House of Horrors - Haus der Angst',
 			urlToOpen: 'https://open.spotify.com/album/249qkyRcqMAoKJhXwrTYtE'
 		},
@@ -6841,7 +6844,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b149627e961840b411ca5b6e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b149627e961840b411ca5b6e', width: 64}
 				]),
-			id: '4Y7Pxv7pzLmKVJowmBwOkd',
+			id: $author$project$AlbumIds$AlbumId('4Y7Pxv7pzLmKVJowmBwOkd'),
 			name: '143/und die Poker-Hölle',
 			urlToOpen: 'https://open.spotify.com/album/4Y7Pxv7pzLmKVJowmBwOkd'
 		},
@@ -6852,7 +6855,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f0c418735c4c3a3e05c24a0d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f0c418735c4c3a3e05c24a0d', width: 64}
 				]),
-			id: '71moidSHTwJsc2N70axEce',
+			id: $author$project$AlbumIds$AlbumId('71moidSHTwJsc2N70axEce'),
 			name: '142/Tödliches Eis',
 			urlToOpen: 'https://open.spotify.com/album/71moidSHTwJsc2N70axEce'
 		},
@@ -6863,7 +6866,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0222daea68bf2efd750a4e0155', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485122daea68bf2efd750a4e0155', width: 64}
 				]),
-			id: '3JJeehFIJTxhrltC6e44VT',
+			id: $author$project$AlbumIds$AlbumId('3JJeehFIJTxhrltC6e44VT'),
 			name: 'Und der dreiTag',
 			urlToOpen: 'https://open.spotify.com/album/3JJeehFIJTxhrltC6e44VT'
 		},
@@ -6874,7 +6877,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f686875a92eb009b64b11b25', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f686875a92eb009b64b11b25', width: 64}
 				]),
-			id: '6gxj68DOHRSVlEM4xzwtRy',
+			id: $author$project$AlbumIds$AlbumId('6gxj68DOHRSVlEM4xzwtRy'),
 			name: '141/und die Fußball-Falle',
 			urlToOpen: 'https://open.spotify.com/album/6gxj68DOHRSVlEM4xzwtRy'
 		},
@@ -6885,7 +6888,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024162c0149a67f725fafbda9c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514162c0149a67f725fafbda9c', width: 64}
 				]),
-			id: '3HxAtK23R2gFkW000mdaFT',
+			id: $author$project$AlbumIds$AlbumId('3HxAtK23R2gFkW000mdaFT'),
 			name: '140/Stadt der Vampire',
 			urlToOpen: 'https://open.spotify.com/album/3HxAtK23R2gFkW000mdaFT'
 		},
@@ -6896,7 +6899,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0247d5f1896f1c4be3f3cb0288', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485147d5f1896f1c4be3f3cb0288', width: 64}
 				]),
-			id: '6RJf8I60kNhnYxlnw7eTGv',
+			id: $author$project$AlbumIds$AlbumId('6RJf8I60kNhnYxlnw7eTGv'),
 			name: '139/Das Geheimnis der Diva',
 			urlToOpen: 'https://open.spotify.com/album/6RJf8I60kNhnYxlnw7eTGv'
 		},
@@ -6907,7 +6910,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0278fdf6976bd9764e411a36a0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485178fdf6976bd9764e411a36a0', width: 64}
 				]),
-			id: '79enDMGQWH7LQ5weNB96g7',
+			id: $author$project$AlbumIds$AlbumId('79enDMGQWH7LQ5weNB96g7'),
 			name: '138/Die geheime Treppe',
 			urlToOpen: 'https://open.spotify.com/album/79enDMGQWH7LQ5weNB96g7'
 		},
@@ -6918,7 +6921,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fd62ba11135fd7b4be4cd678', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fd62ba11135fd7b4be4cd678', width: 64}
 				]),
-			id: '3m7fR2wOkytZHq9m4QeBkB',
+			id: $author$project$AlbumIds$AlbumId('3m7fR2wOkytZHq9m4QeBkB'),
 			name: '137/Pfad der Angst',
 			urlToOpen: 'https://open.spotify.com/album/3m7fR2wOkytZHq9m4QeBkB'
 		},
@@ -6929,7 +6932,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0273bbf4a75a61d03ffe08c091', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485173bbf4a75a61d03ffe08c091', width: 64}
 				]),
-			id: '5HiWGQmaCRaxdaon49Iw9S',
+			id: $author$project$AlbumIds$AlbumId('5HiWGQmaCRaxdaon49Iw9S'),
 			name: '136/und das versunkene Dorf',
 			urlToOpen: 'https://open.spotify.com/album/5HiWGQmaCRaxdaon49Iw9S'
 		},
@@ -6940,7 +6943,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c2461c7126aca0c41330b030', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c2461c7126aca0c41330b030', width: 64}
 				]),
-			id: '0V8G13FK8oGJV8Nde4Q2M1',
+			id: $author$project$AlbumIds$AlbumId('0V8G13FK8oGJV8Nde4Q2M1'),
 			name: '135/Fluch des Piraten',
 			urlToOpen: 'https://open.spotify.com/album/0V8G13FK8oGJV8Nde4Q2M1'
 		},
@@ -6951,7 +6954,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0278896011fd97eb63ca6fa654', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485178896011fd97eb63ca6fa654', width: 64}
 				]),
-			id: '0TmWLedytkxVuP9b5Hqeqq',
+			id: $author$project$AlbumIds$AlbumId('0TmWLedytkxVuP9b5Hqeqq'),
 			name: '135/Fluch des Piraten',
 			urlToOpen: 'https://open.spotify.com/album/0TmWLedytkxVuP9b5Hqeqq'
 		},
@@ -6962,7 +6965,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c2e62b4b930b54db934dbc1b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c2e62b4b930b54db934dbc1b', width: 64}
 				]),
-			id: '1Cta130Rwp5vH1ddfAChbU',
+			id: $author$project$AlbumIds$AlbumId('1Cta130Rwp5vH1ddfAChbU'),
 			name: '134/Der tote Mönch',
 			urlToOpen: 'https://open.spotify.com/album/1Cta130Rwp5vH1ddfAChbU'
 		},
@@ -6973,7 +6976,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0289c779dd1a32247b311a481f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485189c779dd1a32247b311a481f', width: 64}
 				]),
-			id: '1juMQy6yZVmk9Za6HeiicB',
+			id: $author$project$AlbumIds$AlbumId('1juMQy6yZVmk9Za6HeiicB'),
 			name: '133/Fels der Dämonen',
 			urlToOpen: 'https://open.spotify.com/album/1juMQy6yZVmk9Za6HeiicB'
 		},
@@ -6984,7 +6987,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ebff189258d828960ad77f14', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ebff189258d828960ad77f14', width: 64}
 				]),
-			id: '23wcElHGWpunC23ggr4PcW',
+			id: $author$project$AlbumIds$AlbumId('23wcElHGWpunC23ggr4PcW'),
 			name: '132/Spuk im Netz',
 			urlToOpen: 'https://open.spotify.com/album/23wcElHGWpunC23ggr4PcW'
 		},
@@ -6995,7 +6998,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021af90c3630a08b8a3ec60703', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511af90c3630a08b8a3ec60703', width: 64}
 				]),
-			id: '4eorcDi9eRfsi7X0A91Z7u',
+			id: $author$project$AlbumIds$AlbumId('4eorcDi9eRfsi7X0A91Z7u'),
 			name: '131/Haus des Schreckens',
 			urlToOpen: 'https://open.spotify.com/album/4eorcDi9eRfsi7X0A91Z7u'
 		},
@@ -7006,7 +7009,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0264d02b215ce0e4f6686155fd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485164d02b215ce0e4f6686155fd', width: 64}
 				]),
-			id: '5l5CFSjzSdhbflqmplcTFX',
+			id: $author$project$AlbumIds$AlbumId('5l5CFSjzSdhbflqmplcTFX'),
 			name: '130/Der Fluch des Drachen',
 			urlToOpen: 'https://open.spotify.com/album/5l5CFSjzSdhbflqmplcTFX'
 		},
@@ -7017,7 +7020,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027e726f5a4d48169ea5ce8f72', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517e726f5a4d48169ea5ce8f72', width: 64}
 				]),
-			id: '0sCs2S5YTEN0UT1fwWpvKw',
+			id: $author$project$AlbumIds$AlbumId('0sCs2S5YTEN0UT1fwWpvKw'),
 			name: 'Das verfluchte Schloss',
 			urlToOpen: 'https://open.spotify.com/album/0sCs2S5YTEN0UT1fwWpvKw'
 		},
@@ -7028,7 +7031,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a174478a2c172a88f3b5ddfd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a174478a2c172a88f3b5ddfd', width: 64}
 				]),
-			id: '1lD4RdnibVS7QhtZqCal9E',
+			id: $author$project$AlbumIds$AlbumId('1lD4RdnibVS7QhtZqCal9E'),
 			name: '129/SMS aus dem Grab',
 			urlToOpen: 'https://open.spotify.com/album/1lD4RdnibVS7QhtZqCal9E'
 		},
@@ -7039,7 +7042,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b47cbcad32c5efdb8fd95789', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b47cbcad32c5efdb8fd95789', width: 64}
 				]),
-			id: '3XXYXmCEe185oHxigCRo97',
+			id: $author$project$AlbumIds$AlbumId('3XXYXmCEe185oHxigCRo97'),
 			name: '128/Schatten über Hollywood',
 			urlToOpen: 'https://open.spotify.com/album/3XXYXmCEe185oHxigCRo97'
 		},
@@ -7050,7 +7053,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0213a17d36e8f6f8832dc622fb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485113a17d36e8f6f8832dc622fb', width: 64}
 				]),
-			id: '0mp5HVWlYinEYa7Y4Q2vau',
+			id: $author$project$AlbumIds$AlbumId('0mp5HVWlYinEYa7Y4Q2vau'),
 			name: '127/Schwarze Madonna',
 			urlToOpen: 'https://open.spotify.com/album/0mp5HVWlYinEYa7Y4Q2vau'
 		},
@@ -7061,7 +7064,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029f9cca8534e700550610316c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519f9cca8534e700550610316c', width: 64}
 				]),
-			id: '0AnyLaLPx339iGaxjqVfob',
+			id: $author$project$AlbumIds$AlbumId('0AnyLaLPx339iGaxjqVfob'),
 			name: '126/Schrecken aus dem Moor',
 			urlToOpen: 'https://open.spotify.com/album/0AnyLaLPx339iGaxjqVfob'
 		},
@@ -7072,7 +7075,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0223eb1a466879a783317b586e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485123eb1a466879a783317b586e', width: 64}
 				]),
-			id: '0sIRyuExi7jBQmOpHyyY78',
+			id: $author$project$AlbumIds$AlbumId('0sIRyuExi7jBQmOpHyyY78'),
 			name: '125/Feuermond',
 			urlToOpen: 'https://open.spotify.com/album/0sIRyuExi7jBQmOpHyyY78'
 		},
@@ -7083,7 +7086,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02773e640683d4123d7e6b76c0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851773e640683d4123d7e6b76c0', width: 64}
 				]),
-			id: '0LoesJ9VnJPrlvIDz4u4Xt',
+			id: $author$project$AlbumIds$AlbumId('0LoesJ9VnJPrlvIDz4u4Xt'),
 			name: '124/Geister-Canyon',
 			urlToOpen: 'https://open.spotify.com/album/0LoesJ9VnJPrlvIDz4u4Xt'
 		},
@@ -7094,7 +7097,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c7bd58873b275bc532c8f1ab', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c7bd58873b275bc532c8f1ab', width: 64}
 				]),
-			id: '3HgetGSMzg6bGM6b67YZcj',
+			id: $author$project$AlbumIds$AlbumId('3HgetGSMzg6bGM6b67YZcj'),
 			name: '123/Fußballfieber',
 			urlToOpen: 'https://open.spotify.com/album/3HgetGSMzg6bGM6b67YZcj'
 		},
@@ -7105,7 +7108,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02be232fbe5735eead5214cac8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851be232fbe5735eead5214cac8', width: 64}
 				]),
-			id: '68NWcgqeCQMZ3QcPJXBhzH',
+			id: $author$project$AlbumIds$AlbumId('68NWcgqeCQMZ3QcPJXBhzH'),
 			name: '122/und der Geisterzug',
 			urlToOpen: 'https://open.spotify.com/album/68NWcgqeCQMZ3QcPJXBhzH'
 		},
@@ -7116,7 +7119,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d12afb15026dc752cf624a5c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d12afb15026dc752cf624a5c', width: 64}
 				]),
-			id: '59WTBKsGdomSgMztadw3uL',
+			id: $author$project$AlbumIds$AlbumId('59WTBKsGdomSgMztadw3uL'),
 			name: 'Das Geheimnis der Geisterinsel',
 			urlToOpen: 'https://open.spotify.com/album/59WTBKsGdomSgMztadw3uL'
 		},
@@ -7127,7 +7130,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e54726f6d0ffb620ba37c245', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e54726f6d0ffb620ba37c245', width: 64}
 				]),
-			id: '6d21lwV9Imn3ObWUyV1UN2',
+			id: $author$project$AlbumIds$AlbumId('6d21lwV9Imn3ObWUyV1UN2'),
 			name: '121/Spur ins Nichts',
 			urlToOpen: 'https://open.spotify.com/album/6d21lwV9Imn3ObWUyV1UN2'
 		},
@@ -7138,7 +7141,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c49db9ae4ed6297801ff06ce', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c49db9ae4ed6297801ff06ce', width: 64}
 				]),
-			id: '6fVTJQKJBku1yaOmZOnfwg',
+			id: $author$project$AlbumIds$AlbumId('6fVTJQKJBku1yaOmZOnfwg'),
 			name: '120/Der schwarze Skorpion',
 			urlToOpen: 'https://open.spotify.com/album/6fVTJQKJBku1yaOmZOnfwg'
 		},
@@ -7149,7 +7152,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02381a69a5e31b95da673fd94d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851381a69a5e31b95da673fd94d', width: 64}
 				]),
-			id: '1GKXpMQRKEyZI8pL62VUIP',
+			id: $author$project$AlbumIds$AlbumId('1GKXpMQRKEyZI8pL62VUIP'),
 			name: '118/Das düstere Vermächtnis',
 			urlToOpen: 'https://open.spotify.com/album/1GKXpMQRKEyZI8pL62VUIP'
 		},
@@ -7160,7 +7163,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022a5ee3faae3f2269976e8dfc', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512a5ee3faae3f2269976e8dfc', width: 64}
 				]),
-			id: '3piMnopGsrEAKd1EZxsU3i',
+			id: $author$project$AlbumIds$AlbumId('3piMnopGsrEAKd1EZxsU3i'),
 			name: '116/Codename: Cobra',
 			urlToOpen: 'https://open.spotify.com/album/3piMnopGsrEAKd1EZxsU3i'
 		},
@@ -7171,7 +7174,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02087e42e930f26bb7737e0bd5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851087e42e930f26bb7737e0bd5', width: 64}
 				]),
-			id: '3rxr4SLE2EG0EAlpSeI99o',
+			id: $author$project$AlbumIds$AlbumId('3rxr4SLE2EG0EAlpSeI99o'),
 			name: '117/Der finstere Rivale',
 			urlToOpen: 'https://open.spotify.com/album/3rxr4SLE2EG0EAlpSeI99o'
 		},
@@ -7182,7 +7185,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e6547000f12a054eb77fc963', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e6547000f12a054eb77fc963', width: 64}
 				]),
-			id: '5Hafee7JOUqNVqtsrCtrTZ',
+			id: $author$project$AlbumIds$AlbumId('5Hafee7JOUqNVqtsrCtrTZ'),
 			name: '115/Auf tödlichem Kurs',
 			urlToOpen: 'https://open.spotify.com/album/5Hafee7JOUqNVqtsrCtrTZ'
 		},
@@ -7193,7 +7196,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025fd7a3b166aed5b9e94b957f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515fd7a3b166aed5b9e94b957f', width: 64}
 				]),
-			id: '5L2KCw21QT3JKg1KKuqSeF',
+			id: $author$project$AlbumIds$AlbumId('5L2KCw21QT3JKg1KKuqSeF'),
 			name: '114/Die Villa der Toten',
 			urlToOpen: 'https://open.spotify.com/album/5L2KCw21QT3JKg1KKuqSeF'
 		},
@@ -7204,7 +7207,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022de3607281551ed6006a3a31', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512de3607281551ed6006a3a31', width: 64}
 				]),
-			id: '3bFvjy9IyWd7GrzN2dr0Hi',
+			id: $author$project$AlbumIds$AlbumId('3bFvjy9IyWd7GrzN2dr0Hi'),
 			name: '113/Das Auge des Drachen',
 			urlToOpen: 'https://open.spotify.com/album/3bFvjy9IyWd7GrzN2dr0Hi'
 		},
@@ -7215,7 +7218,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cbbe8a5338c426a0f2924a28', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cbbe8a5338c426a0f2924a28', width: 64}
 				]),
-			id: '0WBhXS0uAYuL1sYb6vjYeS',
+			id: $author$project$AlbumIds$AlbumId('0WBhXS0uAYuL1sYb6vjYeS'),
 			name: '112/Schlucht der Dämonen',
 			urlToOpen: 'https://open.spotify.com/album/0WBhXS0uAYuL1sYb6vjYeS'
 		},
@@ -7226,7 +7229,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025a931f16edad1c6d9cc1bb53', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515a931f16edad1c6d9cc1bb53', width: 64}
 				]),
-			id: '7b9OiVsktCZyldiAnjkVDx',
+			id: $author$project$AlbumIds$AlbumId('7b9OiVsktCZyldiAnjkVDx'),
 			name: '111/Die Höhle des Grauens',
 			urlToOpen: 'https://open.spotify.com/album/7b9OiVsktCZyldiAnjkVDx'
 		},
@@ -7237,7 +7240,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022353b202c0b40d82be03a9ef', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512353b202c0b40d82be03a9ef', width: 64}
 				]),
-			id: '1OBHPhBUih26oQTqxLvJTQ',
+			id: $author$project$AlbumIds$AlbumId('1OBHPhBUih26oQTqxLvJTQ'),
 			name: '110/Panik im Park',
 			urlToOpen: 'https://open.spotify.com/album/1OBHPhBUih26oQTqxLvJTQ'
 		},
@@ -7248,7 +7251,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c4278034761a0813a6a3e738', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c4278034761a0813a6a3e738', width: 64}
 				]),
-			id: '4RZllDAKF3DeDz6jZJFXTa',
+			id: $author$project$AlbumIds$AlbumId('4RZllDAKF3DeDz6jZJFXTa'),
 			name: '109/Gefährliches Quiz',
 			urlToOpen: 'https://open.spotify.com/album/4RZllDAKF3DeDz6jZJFXTa'
 		},
@@ -7259,7 +7262,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02df2af81904cbb1dbc2df2e8d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851df2af81904cbb1dbc2df2e8d', width: 64}
 				]),
-			id: '3v4W4AFaI8uO7J88ojaSkS',
+			id: $author$project$AlbumIds$AlbumId('3v4W4AFaI8uO7J88ojaSkS'),
 			name: '108/Die sieben Tore',
 			urlToOpen: 'https://open.spotify.com/album/3v4W4AFaI8uO7J88ojaSkS'
 		},
@@ -7270,7 +7273,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0292b901c952011fd97448b86f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485192b901c952011fd97448b86f', width: 64}
 				]),
-			id: '3kBby5GJMI4U97XljKcPFD',
+			id: $author$project$AlbumIds$AlbumId('3kBby5GJMI4U97XljKcPFD'),
 			name: '107/und der Schatz der Mönche',
 			urlToOpen: 'https://open.spotify.com/album/3kBby5GJMI4U97XljKcPFD'
 		},
@@ -7281,7 +7284,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02398f444d7f49e1b44c5c8acc', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851398f444d7f49e1b44c5c8acc', width: 64}
 				]),
-			id: '4uJPgDMOIRfoAumwwmpRbR',
+			id: $author$project$AlbumIds$AlbumId('4uJPgDMOIRfoAumwwmpRbR'),
 			name: 'Master of Chess',
 			urlToOpen: 'https://open.spotify.com/album/4uJPgDMOIRfoAumwwmpRbR'
 		},
@@ -7292,7 +7295,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020098553cfb28f108dba3a502', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510098553cfb28f108dba3a502', width: 64}
 				]),
-			id: '4eX1wH67TDcYPZ1ZsjtPb6',
+			id: $author$project$AlbumIds$AlbumId('4eX1wH67TDcYPZ1ZsjtPb6'),
 			name: '106/Der Mann ohne Kopf',
 			urlToOpen: 'https://open.spotify.com/album/4eX1wH67TDcYPZ1ZsjtPb6'
 		},
@@ -7303,7 +7306,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d0ae111071f608da802435d1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d0ae111071f608da802435d1', width: 64}
 				]),
-			id: '6Mi4Smq7Fn8qNOg6Xnf0In',
+			id: $author$project$AlbumIds$AlbumId('6Mi4Smq7Fn8qNOg6Xnf0In'),
 			name: '105/Der Nebelberg',
 			urlToOpen: 'https://open.spotify.com/album/6Mi4Smq7Fn8qNOg6Xnf0In'
 		},
@@ -7314,7 +7317,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0219f7e2f7a86ca99d5575d0a5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485119f7e2f7a86ca99d5575d0a5', width: 64}
 				]),
-			id: '6joRNVLN69v3eSnxM86BSM',
+			id: $author$project$AlbumIds$AlbumId('6joRNVLN69v3eSnxM86BSM'),
 			name: '104/Gift per e-mail',
 			urlToOpen: 'https://open.spotify.com/album/6joRNVLN69v3eSnxM86BSM'
 		},
@@ -7325,7 +7328,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02eecb447a0575319bd4ac9e1a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851eecb447a0575319bd4ac9e1a', width: 64}
 				]),
-			id: '4ADdmpObDUmBdvyJ9oNz5o',
+			id: $author$project$AlbumIds$AlbumId('4ADdmpObDUmBdvyJ9oNz5o'),
 			name: '103/Das Erbe des Meisterdiebes',
 			urlToOpen: 'https://open.spotify.com/album/4ADdmpObDUmBdvyJ9oNz5o'
 		},
@@ -7336,7 +7339,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0237f76af0db2d6a179f028cae', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485137f76af0db2d6a179f028cae', width: 64}
 				]),
-			id: '3NYWEuwAPt4PIJ4OeNxmzO',
+			id: $author$project$AlbumIds$AlbumId('3NYWEuwAPt4PIJ4OeNxmzO'),
 			name: '102/Doppelte Täuschung',
 			urlToOpen: 'https://open.spotify.com/album/3NYWEuwAPt4PIJ4OeNxmzO'
 		},
@@ -7347,7 +7350,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d34be4cc65fa0efc47f8b3b1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d34be4cc65fa0efc47f8b3b1', width: 64}
 				]),
-			id: '1DZAe0qMw8Pq9EPoX6gETA',
+			id: $author$project$AlbumIds$AlbumId('1DZAe0qMw8Pq9EPoX6gETA'),
 			name: '101/und das Hexen-Handy',
 			urlToOpen: 'https://open.spotify.com/album/1DZAe0qMw8Pq9EPoX6gETA'
 		},
@@ -7358,7 +7361,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021d00680cbaa231468512c228', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511d00680cbaa231468512c228', width: 64}
 				]),
-			id: '4KXnXnpFRnQsjeZHpNC7X9',
+			id: $author$project$AlbumIds$AlbumId('4KXnXnpFRnQsjeZHpNC7X9'),
 			name: 'Super-Papagei 2004',
 			urlToOpen: 'https://open.spotify.com/album/4KXnXnpFRnQsjeZHpNC7X9'
 		},
@@ -7369,7 +7372,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0280945825ee2a30bc4349dc5a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485180945825ee2a30bc4349dc5a', width: 64}
 				]),
-			id: '6zwBnyiy9Hy9TAser0DOuL',
+			id: $author$project$AlbumIds$AlbumId('6zwBnyiy9Hy9TAser0DOuL'),
 			name: '100/Toteninsel',
 			urlToOpen: 'https://open.spotify.com/album/6zwBnyiy9Hy9TAser0DOuL'
 		},
@@ -7380,7 +7383,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024c5078f069ebe7ef846a4472', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514c5078f069ebe7ef846a4472', width: 64}
 				]),
-			id: '3haGZZ8x7PyaGxiqcLmLf9',
+			id: $author$project$AlbumIds$AlbumId('3haGZZ8x7PyaGxiqcLmLf9'),
 			name: '099/Rufmord',
 			urlToOpen: 'https://open.spotify.com/album/3haGZZ8x7PyaGxiqcLmLf9'
 		},
@@ -7391,7 +7394,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024f9c9e397bc7f074772bd500', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514f9c9e397bc7f074772bd500', width: 64}
 				]),
-			id: '4C4o7tHpT20QrdsvmI70uI',
+			id: $author$project$AlbumIds$AlbumId('4C4o7tHpT20QrdsvmI70uI'),
 			name: '098/Tal des Schreckens',
 			urlToOpen: 'https://open.spotify.com/album/4C4o7tHpT20QrdsvmI70uI'
 		},
@@ -7402,7 +7405,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02588d4b40847324a1a3bcc43b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851588d4b40847324a1a3bcc43b', width: 64}
 				]),
-			id: '2bfJa4PRKVb7as86HZv8Df',
+			id: $author$project$AlbumIds$AlbumId('2bfJa4PRKVb7as86HZv8Df'),
 			name: '097/Insektenstachel',
 			urlToOpen: 'https://open.spotify.com/album/2bfJa4PRKVb7as86HZv8Df'
 		},
@@ -7413,7 +7416,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0246ee395d079d72f171bef653', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485146ee395d079d72f171bef653', width: 64}
 				]),
-			id: '5ub4r9Q0YVMrWuOEesu6dR',
+			id: $author$project$AlbumIds$AlbumId('5ub4r9Q0YVMrWuOEesu6dR'),
 			name: '096/und der rote Rächer',
 			urlToOpen: 'https://open.spotify.com/album/5ub4r9Q0YVMrWuOEesu6dR'
 		},
@@ -7424,7 +7427,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028d72e8ad25c9b53e82b34cbb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518d72e8ad25c9b53e82b34cbb', width: 64}
 				]),
-			id: '3UHj03eU7OnDuMVCTLbmcj',
+			id: $author$project$AlbumIds$AlbumId('3UHj03eU7OnDuMVCTLbmcj'),
 			name: '094/Das schwarze Monster',
 			urlToOpen: 'https://open.spotify.com/album/3UHj03eU7OnDuMVCTLbmcj'
 		},
@@ -7435,7 +7438,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cb17fbf445910767655a3028', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cb17fbf445910767655a3028', width: 64}
 				]),
-			id: '7a9rwqPkVdU4FC2cWFudVO',
+			id: $author$project$AlbumIds$AlbumId('7a9rwqPkVdU4FC2cWFudVO'),
 			name: '093/und das Geisterschiff',
 			urlToOpen: 'https://open.spotify.com/album/7a9rwqPkVdU4FC2cWFudVO'
 		},
@@ -7446,7 +7449,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b4e43deef6192a9bb631fc63', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b4e43deef6192a9bb631fc63', width: 64}
 				]),
-			id: '7yMRFgR8FRyWwiLHzQQa2B',
+			id: $author$project$AlbumIds$AlbumId('7yMRFgR8FRyWwiLHzQQa2B'),
 			name: '092/Todesflug',
 			urlToOpen: 'https://open.spotify.com/album/7yMRFgR8FRyWwiLHzQQa2B'
 		},
@@ -7457,7 +7460,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02654d32b58e16b58c804b5c10', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851654d32b58e16b58c804b5c10', width: 64}
 				]),
-			id: '0Jh7gzQaOscoFndb3raq2l',
+			id: $author$project$AlbumIds$AlbumId('0Jh7gzQaOscoFndb3raq2l'),
 			name: '091/Labyrinth der Götter',
 			urlToOpen: 'https://open.spotify.com/album/0Jh7gzQaOscoFndb3raq2l'
 		},
@@ -7468,7 +7471,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023bf099f684b8a9a054cc4963', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513bf099f684b8a9a054cc4963', width: 64}
 				]),
-			id: '2dlgtHB8z7ZhSl1fsSb0Ic',
+			id: $author$project$AlbumIds$AlbumId('2dlgtHB8z7ZhSl1fsSb0Ic'),
 			name: '090/Der Feuerteufel',
 			urlToOpen: 'https://open.spotify.com/album/2dlgtHB8z7ZhSl1fsSb0Ic'
 		},
@@ -7479,7 +7482,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0242f79d24a75f555cc7b0e5e0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485142f79d24a75f555cc7b0e5e0', width: 64}
 				]),
-			id: '3TcIn19pVz5LXE8UleuLuX',
+			id: $author$project$AlbumIds$AlbumId('3TcIn19pVz5LXE8UleuLuX'),
 			name: '089/Tödliche Spur',
 			urlToOpen: 'https://open.spotify.com/album/3TcIn19pVz5LXE8UleuLuX'
 		},
@@ -7490,7 +7493,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ade7f6d660fda30327d3f385', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ade7f6d660fda30327d3f385', width: 64}
 				]),
-			id: '3CZCwdMpj2jnjI43ZlnY5T',
+			id: $author$project$AlbumIds$AlbumId('3CZCwdMpj2jnjI43ZlnY5T'),
 			name: '088/Vampir im Internet',
 			urlToOpen: 'https://open.spotify.com/album/3CZCwdMpj2jnjI43ZlnY5T'
 		},
@@ -7501,7 +7504,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0244c680f940d157eb316f4894', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485144c680f940d157eb316f4894', width: 64}
 				]),
-			id: '1KpWkUQaj5ECJsrb8SrPl4',
+			id: $author$project$AlbumIds$AlbumId('1KpWkUQaj5ECJsrb8SrPl4'),
 			name: '087/Wolfsgesicht',
 			urlToOpen: 'https://open.spotify.com/album/1KpWkUQaj5ECJsrb8SrPl4'
 		},
@@ -7512,7 +7515,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0226b7ae0b099c6a24717666ca', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485126b7ae0b099c6a24717666ca', width: 64}
 				]),
-			id: '4uF9MjchYgq5jjPi5x5YZy',
+			id: $author$project$AlbumIds$AlbumId('4uF9MjchYgq5jjPi5x5YZy'),
 			name: '086/Nacht in Angst',
 			urlToOpen: 'https://open.spotify.com/album/4uF9MjchYgq5jjPi5x5YZy'
 		},
@@ -7523,7 +7526,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d67e953a55891e24dca35560', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d67e953a55891e24dca35560', width: 64}
 				]),
-			id: '2eeodcwD9HXpcA2rvoFkIq',
+			id: $author$project$AlbumIds$AlbumId('2eeodcwD9HXpcA2rvoFkIq'),
 			name: '085/Feuerturm',
 			urlToOpen: 'https://open.spotify.com/album/2eeodcwD9HXpcA2rvoFkIq'
 		},
@@ -7534,7 +7537,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024c2231ecc6f5a334d7f7fad2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514c2231ecc6f5a334d7f7fad2', width: 64}
 				]),
-			id: '3bhsXwKIDwVK5LTkDCICp0',
+			id: $author$project$AlbumIds$AlbumId('3bhsXwKIDwVK5LTkDCICp0'),
 			name: '084/Musik des Teufels',
 			urlToOpen: 'https://open.spotify.com/album/3bhsXwKIDwVK5LTkDCICp0'
 		},
@@ -7545,7 +7548,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020d0eabdf92a0297d227819e9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510d0eabdf92a0297d227819e9', width: 64}
 				]),
-			id: '3yofHdHiOLtVZlxWCZ4XBB',
+			id: $author$project$AlbumIds$AlbumId('3yofHdHiOLtVZlxWCZ4XBB'),
 			name: '083/Meuterei auf hoher See',
 			urlToOpen: 'https://open.spotify.com/album/3yofHdHiOLtVZlxWCZ4XBB'
 		},
@@ -7556,7 +7559,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024caa5f8a9f018ddb3f91e23e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514caa5f8a9f018ddb3f91e23e', width: 64}
 				]),
-			id: '7iysTnwaaFrPPWAuUyyi0c',
+			id: $author$project$AlbumIds$AlbumId('7iysTnwaaFrPPWAuUyyi0c'),
 			name: '082/Die Karten des Bösen',
 			urlToOpen: 'https://open.spotify.com/album/7iysTnwaaFrPPWAuUyyi0c'
 		},
@@ -7567,7 +7570,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f3011b0648c8f650e822476c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f3011b0648c8f650e822476c', width: 64}
 				]),
-			id: '2s5u6hCaMpTIvZtBRvQzha',
+			id: $author$project$AlbumIds$AlbumId('2s5u6hCaMpTIvZtBRvQzha'),
 			name: '081/Verdeckte Fouls',
 			urlToOpen: 'https://open.spotify.com/album/2s5u6hCaMpTIvZtBRvQzha'
 		},
@@ -7578,7 +7581,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023b114ffdd62ab393de5354f0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513b114ffdd62ab393de5354f0', width: 64}
 				]),
-			id: '4izXuApLzBWtWHrFqgcrxL',
+			id: $author$project$AlbumIds$AlbumId('4izXuApLzBWtWHrFqgcrxL'),
 			name: '080/Geheimakte Ufo',
 			urlToOpen: 'https://open.spotify.com/album/4izXuApLzBWtWHrFqgcrxL'
 		},
@@ -7589,7 +7592,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0220cb5ae09b0daea1ad4c53c3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485120cb5ae09b0daea1ad4c53c3', width: 64}
 				]),
-			id: '1rDYlXZy6vN4wqqQ6buqOr',
+			id: $author$project$AlbumIds$AlbumId('1rDYlXZy6vN4wqqQ6buqOr'),
 			name: '079/Im Bann des Voodoo',
 			urlToOpen: 'https://open.spotify.com/album/1rDYlXZy6vN4wqqQ6buqOr'
 		},
@@ -7600,7 +7603,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e677666d78d8b94f9fe18088', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e677666d78d8b94f9fe18088', width: 64}
 				]),
-			id: '6t7Y1H4dUM0d4JycenVskN',
+			id: $author$project$AlbumIds$AlbumId('6t7Y1H4dUM0d4JycenVskN'),
 			name: '078/Das leere Grab',
 			urlToOpen: 'https://open.spotify.com/album/6t7Y1H4dUM0d4JycenVskN'
 		},
@@ -7611,7 +7614,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024cabd18fdc0cf778426d0553', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514cabd18fdc0cf778426d0553', width: 64}
 				]),
-			id: '3CMN8Y4kjoG4sFwlOEpfsV',
+			id: $author$project$AlbumIds$AlbumId('3CMN8Y4kjoG4sFwlOEpfsV'),
 			name: '077/Pistenteufel',
 			urlToOpen: 'https://open.spotify.com/album/3CMN8Y4kjoG4sFwlOEpfsV'
 		},
@@ -7622,7 +7625,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02eb1fdaace1fbbdf693b21e12', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851eb1fdaace1fbbdf693b21e12', width: 64}
 				]),
-			id: '6RDPGc2budsdTw1lj8f2O5',
+			id: $author$project$AlbumIds$AlbumId('6RDPGc2budsdTw1lj8f2O5'),
 			name: '076/Stimmen aus dem Nichts',
 			urlToOpen: 'https://open.spotify.com/album/6RDPGc2budsdTw1lj8f2O5'
 		},
@@ -7633,7 +7636,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ce89fa1312e47c5c7536acfd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ce89fa1312e47c5c7536acfd', width: 64}
 				]),
-			id: '2IqfdlQamN3vCWN3CKLEVI',
+			id: $author$project$AlbumIds$AlbumId('2IqfdlQamN3vCWN3CKLEVI'),
 			name: '075/Die Spur des Raben',
 			urlToOpen: 'https://open.spotify.com/album/2IqfdlQamN3vCWN3CKLEVI'
 		},
@@ -7644,7 +7647,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d9e08cc5f3d5080185f1692f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d9e08cc5f3d5080185f1692f', width: 64}
 				]),
-			id: '69VLqtWA1bpguYRCFRAxQl',
+			id: $author$project$AlbumIds$AlbumId('69VLqtWA1bpguYRCFRAxQl'),
 			name: '074/und das brennende Schwert',
 			urlToOpen: 'https://open.spotify.com/album/69VLqtWA1bpguYRCFRAxQl'
 		},
@@ -7655,7 +7658,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02619dc63786747c9dc030d6f6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851619dc63786747c9dc030d6f6', width: 64}
 				]),
-			id: '1K8kXLhNnHSdPvtUwf74DE',
+			id: $author$project$AlbumIds$AlbumId('1K8kXLhNnHSdPvtUwf74DE'),
 			name: '073/Poltergeist',
 			urlToOpen: 'https://open.spotify.com/album/1K8kXLhNnHSdPvtUwf74DE'
 		},
@@ -7666,7 +7669,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0258f27abd2d23ca13e48eb54f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485158f27abd2d23ca13e48eb54f', width: 64}
 				]),
-			id: '2GQjkF0ceIse6jVZkUuAQc',
+			id: $author$project$AlbumIds$AlbumId('2GQjkF0ceIse6jVZkUuAQc'),
 			name: '072/Dreckiger Deal',
 			urlToOpen: 'https://open.spotify.com/album/2GQjkF0ceIse6jVZkUuAQc'
 		},
@@ -7677,7 +7680,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f2abdc24f93b2ea1f583b09a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f2abdc24f93b2ea1f583b09a', width: 64}
 				]),
-			id: '6EEN6onzbHIOxnwUkGfKhv',
+			id: $author$project$AlbumIds$AlbumId('6EEN6onzbHIOxnwUkGfKhv'),
 			name: '071/Die verschwundene Seglerin',
 			urlToOpen: 'https://open.spotify.com/album/6EEN6onzbHIOxnwUkGfKhv'
 		},
@@ -7688,7 +7691,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e5d817cd9ad8cfcfd9125df6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e5d817cd9ad8cfcfd9125df6', width: 64}
 				]),
-			id: '4mlQEwk6I0XuksZCYTtatz',
+			id: $author$project$AlbumIds$AlbumId('4mlQEwk6I0XuksZCYTtatz'),
 			name: '070/Schüsse aus dem Dunkel',
 			urlToOpen: 'https://open.spotify.com/album/4mlQEwk6I0XuksZCYTtatz'
 		},
@@ -7699,7 +7702,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a0fcc7d291d25cb9dc61c216', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a0fcc7d291d25cb9dc61c216', width: 64}
 				]),
-			id: '2erJcBofKBO6GFMqDPppsU',
+			id: $author$project$AlbumIds$AlbumId('2erJcBofKBO6GFMqDPppsU'),
 			name: '069/Späte Rache',
 			urlToOpen: 'https://open.spotify.com/album/2erJcBofKBO6GFMqDPppsU'
 		},
@@ -7710,7 +7713,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02454154cd9c03cec5238d1e94', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851454154cd9c03cec5238d1e94', width: 64}
 				]),
-			id: '21pUsEhxssm6fvumGFmi35',
+			id: $author$project$AlbumIds$AlbumId('21pUsEhxssm6fvumGFmi35'),
 			name: '068/und der Schatz im Bergsee',
 			urlToOpen: 'https://open.spotify.com/album/21pUsEhxssm6fvumGFmi35'
 		},
@@ -7721,7 +7724,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cca08a3eabfc454ebeed3711', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cca08a3eabfc454ebeed3711', width: 64}
 				]),
-			id: '7Hjk98j1FSrHV5IHWmeeFh',
+			id: $author$project$AlbumIds$AlbumId('7Hjk98j1FSrHV5IHWmeeFh'),
 			name: '067/und das Geheimnis der Särge',
 			urlToOpen: 'https://open.spotify.com/album/7Hjk98j1FSrHV5IHWmeeFh'
 		},
@@ -7732,7 +7735,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027babb9909a09316ec73ccaad', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517babb9909a09316ec73ccaad', width: 64}
 				]),
-			id: '6qj4LD0zotutkIgEg9OvDj',
+			id: $author$project$AlbumIds$AlbumId('6qj4LD0zotutkIgEg9OvDj'),
 			name: '066/und die Schattenmänner',
 			urlToOpen: 'https://open.spotify.com/album/6qj4LD0zotutkIgEg9OvDj'
 		},
@@ -7743,7 +7746,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021f529295cce35763989fd148', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511f529295cce35763989fd148', width: 64}
 				]),
-			id: '62z7yW4RKhhuAp0RklmNvc',
+			id: $author$project$AlbumIds$AlbumId('62z7yW4RKhhuAp0RklmNvc'),
 			name: '065/Diamantenschmuggel',
 			urlToOpen: 'https://open.spotify.com/album/62z7yW4RKhhuAp0RklmNvc'
 		},
@@ -7754,7 +7757,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0204ba4780b66f258a3cd441c9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485104ba4780b66f258a3cd441c9', width: 64}
 				]),
-			id: '0tmMvsGyWRzVckCYgkvve3',
+			id: $author$project$AlbumIds$AlbumId('0tmMvsGyWRzVckCYgkvve3'),
 			name: '064/Geisterstadt',
 			urlToOpen: 'https://open.spotify.com/album/0tmMvsGyWRzVckCYgkvve3'
 		},
@@ -7765,7 +7768,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d8487e9880060cc95729431b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d8487e9880060cc95729431b', width: 64}
 				]),
-			id: '5GPTZKrD7eaCp9p6VOBuIN',
+			id: $author$project$AlbumIds$AlbumId('5GPTZKrD7eaCp9p6VOBuIN'),
 			name: '063/Fußball-Gangster',
 			urlToOpen: 'https://open.spotify.com/album/5GPTZKrD7eaCp9p6VOBuIN'
 		},
@@ -7776,7 +7779,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02752fdd90d486ca2db672b679', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851752fdd90d486ca2db672b679', width: 64}
 				]),
-			id: '0biXUv1uGUaVsPcw8nAZCY',
+			id: $author$project$AlbumIds$AlbumId('0biXUv1uGUaVsPcw8nAZCY'),
 			name: '062/Spuk im Hotel',
 			urlToOpen: 'https://open.spotify.com/album/0biXUv1uGUaVsPcw8nAZCY'
 		},
@@ -7787,7 +7790,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f4b8620352e4ad4f881fcff2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f4b8620352e4ad4f881fcff2', width: 64}
 				]),
-			id: '26M4ktHp3isOX6XJazAxPn',
+			id: $author$project$AlbumIds$AlbumId('26M4ktHp3isOX6XJazAxPn'),
 			name: '061/und die Rache des Tigers',
 			urlToOpen: 'https://open.spotify.com/album/26M4ktHp3isOX6XJazAxPn'
 		},
@@ -7798,7 +7801,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f3a2b7f3d1470290d598aecf', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f3a2b7f3d1470290d598aecf', width: 64}
 				]),
-			id: '7cBoiWgh1bTMZmCwJE0eMu',
+			id: $author$project$AlbumIds$AlbumId('7cBoiWgh1bTMZmCwJE0eMu'),
 			name: '060/Dopingmixer',
 			urlToOpen: 'https://open.spotify.com/album/7cBoiWgh1bTMZmCwJE0eMu'
 		},
@@ -7809,7 +7812,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ce7a7ca0406350458176cae7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ce7a7ca0406350458176cae7', width: 64}
 				]),
-			id: '2qcA1EqAoUsqxXqIivY6Zc',
+			id: $author$project$AlbumIds$AlbumId('2qcA1EqAoUsqxXqIivY6Zc'),
 			name: '059/Giftiges Wasser',
 			urlToOpen: 'https://open.spotify.com/album/2qcA1EqAoUsqxXqIivY6Zc'
 		},
@@ -7820,7 +7823,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023c87f9c84d96214175193ded', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513c87f9c84d96214175193ded', width: 64}
 				]),
-			id: '6DWykdlgf60Mq02hPAGYVD',
+			id: $author$project$AlbumIds$AlbumId('6DWykdlgf60Mq02hPAGYVD'),
 			name: '058/und der verrückte Maler',
 			urlToOpen: 'https://open.spotify.com/album/6DWykdlgf60Mq02hPAGYVD'
 		},
@@ -7831,7 +7834,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023da006f111c8c1424c4041e0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513da006f111c8c1424c4041e0', width: 64}
 				]),
-			id: '5W6dRiaeSVE7zUBYHbepak',
+			id: $author$project$AlbumIds$AlbumId('5W6dRiaeSVE7zUBYHbepak'),
 			name: '057/Tatort Zirkus',
 			urlToOpen: 'https://open.spotify.com/album/5W6dRiaeSVE7zUBYHbepak'
 		},
@@ -7842,7 +7845,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027ad14d2b95a8d088ea3fec28', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517ad14d2b95a8d088ea3fec28', width: 64}
 				]),
-			id: '3fotka2Hbq0N7V9KKWIDdw',
+			id: $author$project$AlbumIds$AlbumId('3fotka2Hbq0N7V9KKWIDdw'),
 			name: '056/Angriff der Computer-Viren',
 			urlToOpen: 'https://open.spotify.com/album/3fotka2Hbq0N7V9KKWIDdw'
 		},
@@ -7853,7 +7856,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02676bdcded23a5f0a5bb034a2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851676bdcded23a5f0a5bb034a2', width: 64}
 				]),
-			id: '4oH2GUWlSSsSgVkxyPVHX1',
+			id: $author$project$AlbumIds$AlbumId('4oH2GUWlSSsSgVkxyPVHX1'),
 			name: '055/Gekaufte Spieler',
 			urlToOpen: 'https://open.spotify.com/album/4oH2GUWlSSsSgVkxyPVHX1'
 		},
@@ -7864,7 +7867,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d86adc8ae21f94f9e0083037', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d86adc8ae21f94f9e0083037', width: 64}
 				]),
-			id: '1Fg15cBLFliy6Kr60QqRan',
+			id: $author$project$AlbumIds$AlbumId('1Fg15cBLFliy6Kr60QqRan'),
 			name: '054/Gefahr im Verzug',
 			urlToOpen: 'https://open.spotify.com/album/1Fg15cBLFliy6Kr60QqRan'
 		},
@@ -7875,7 +7878,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028388f7155e69af21b68b05e7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518388f7155e69af21b68b05e7', width: 64}
 				]),
-			id: '0F9ebKwTd5RNZZOu49lWuF',
+			id: $author$project$AlbumIds$AlbumId('0F9ebKwTd5RNZZOu49lWuF'),
 			name: '053/und die Automafia',
 			urlToOpen: 'https://open.spotify.com/album/0F9ebKwTd5RNZZOu49lWuF'
 		},
@@ -7886,7 +7889,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023a999a94e6618455692574b8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513a999a94e6618455692574b8', width: 64}
 				]),
-			id: '3pXJh2A9gYzNt22rEIE5q7',
+			id: $author$project$AlbumIds$AlbumId('3pXJh2A9gYzNt22rEIE5q7'),
 			name: '052/und die Musikpiraten',
 			urlToOpen: 'https://open.spotify.com/album/3pXJh2A9gYzNt22rEIE5q7'
 		},
@@ -7897,7 +7900,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d93183ce852662f21f208c93', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d93183ce852662f21f208c93', width: 64}
 				]),
-			id: '71kiy6INV3LzsCddpTZoHf',
+			id: $author$project$AlbumIds$AlbumId('71kiy6INV3LzsCddpTZoHf'),
 			name: '051/und der riskante Ritt',
 			urlToOpen: 'https://open.spotify.com/album/71kiy6INV3LzsCddpTZoHf'
 		},
@@ -7908,7 +7911,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027656b06426382e26e7927ce3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517656b06426382e26e7927ce3', width: 64}
 				]),
-			id: '6DKfjDIB1BSYRGAi2YJYm3',
+			id: $author$project$AlbumIds$AlbumId('6DKfjDIB1BSYRGAi2YJYm3'),
 			name: '050/und der verschwundene Filmstar',
 			urlToOpen: 'https://open.spotify.com/album/6DKfjDIB1BSYRGAi2YJYm3'
 		},
@@ -7919,7 +7922,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020b7ef9d9d81296a8fb03b2e3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510b7ef9d9d81296a8fb03b2e3', width: 64}
 				]),
-			id: '7t2SteAH5OnLLC1ghTAmka',
+			id: $author$project$AlbumIds$AlbumId('7t2SteAH5OnLLC1ghTAmka'),
 			name: '049/und die Comic-Diebe',
 			urlToOpen: 'https://open.spotify.com/album/7t2SteAH5OnLLC1ghTAmka'
 		},
@@ -7930,7 +7933,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0285076eb654debecdff9f1966', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485185076eb654debecdff9f1966', width: 64}
 				]),
-			id: '5IRxm1lo35PttzU8YLslZy',
+			id: $author$project$AlbumIds$AlbumId('5IRxm1lo35PttzU8YLslZy'),
 			name: '048/und die gefährlichen Fässer',
 			urlToOpen: 'https://open.spotify.com/album/5IRxm1lo35PttzU8YLslZy'
 		},
@@ -7941,7 +7944,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029a5d121daae0aea583baf896', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519a5d121daae0aea583baf896', width: 64}
 				]),
-			id: '3iWNsrEs9D0FFlKFfscdvL',
+			id: $author$project$AlbumIds$AlbumId('3iWNsrEs9D0FFlKFfscdvL'),
 			name: '047/und der giftige Gockel',
 			urlToOpen: 'https://open.spotify.com/album/3iWNsrEs9D0FFlKFfscdvL'
 		},
@@ -7952,7 +7955,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a2c864b4cba739aa335de1db', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a2c864b4cba739aa335de1db', width: 64}
 				]),
-			id: '6YX4i7aMCYmn20zvAFM3lG',
+			id: $author$project$AlbumIds$AlbumId('6YX4i7aMCYmn20zvAFM3lG'),
 			name: '046/und der schrullige Millionär',
 			urlToOpen: 'https://open.spotify.com/album/6YX4i7aMCYmn20zvAFM3lG'
 		},
@@ -7963,7 +7966,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02deab510f8978c1ab101f8719', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851deab510f8978c1ab101f8719', width: 64}
 				]),
-			id: '39mWWzaUZp0AXyN9Vnp4od',
+			id: $author$project$AlbumIds$AlbumId('39mWWzaUZp0AXyN9Vnp4od'),
 			name: '045/und das Gold der Wikinger',
 			urlToOpen: 'https://open.spotify.com/album/39mWWzaUZp0AXyN9Vnp4od'
 		},
@@ -7974,7 +7977,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028d32e333fed9e96d0c8565d2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518d32e333fed9e96d0c8565d2', width: 64}
 				]),
-			id: '6JNNLdq9ELeKENK3RmxLWQ',
+			id: $author$project$AlbumIds$AlbumId('6JNNLdq9ELeKENK3RmxLWQ'),
 			name: '044/und der gestohlene Preis',
 			urlToOpen: 'https://open.spotify.com/album/6JNNLdq9ELeKENK3RmxLWQ'
 		},
@@ -7985,7 +7988,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a9a124f568bb71f006233405', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a9a124f568bb71f006233405', width: 64}
 				]),
-			id: '48QVzskevXtA0KpJjXzvb1',
+			id: $author$project$AlbumIds$AlbumId('48QVzskevXtA0KpJjXzvb1'),
 			name: '043/und der höllische Werwolf',
 			urlToOpen: 'https://open.spotify.com/album/48QVzskevXtA0KpJjXzvb1'
 		},
@@ -7996,7 +7999,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a656cae556eb72350db10422', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a656cae556eb72350db10422', width: 64}
 				]),
-			id: '24bba3w45LGGm7ps3qonkc',
+			id: $author$project$AlbumIds$AlbumId('24bba3w45LGGm7ps3qonkc'),
 			name: '042/und der weinende Sarg',
 			urlToOpen: 'https://open.spotify.com/album/24bba3w45LGGm7ps3qonkc'
 		},
@@ -8007,7 +8010,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02326f163e8c446829641d4d8e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851326f163e8c446829641d4d8e', width: 64}
 				]),
-			id: '5KUXX8H2LNsuik46M5XLx0',
+			id: $author$project$AlbumIds$AlbumId('5KUXX8H2LNsuik46M5XLx0'),
 			name: '041/und das Volk der Winde',
 			urlToOpen: 'https://open.spotify.com/album/5KUXX8H2LNsuik46M5XLx0'
 		},
@@ -8018,7 +8021,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0205282c5247237cb6957d623d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485105282c5247237cb6957d623d', width: 64}
 				]),
-			id: '2IIw1KESZrJQBFdZQAWcKY',
+			id: $author$project$AlbumIds$AlbumId('2IIw1KESZrJQBFdZQAWcKY'),
 			name: '040/und der Automarder',
 			urlToOpen: 'https://open.spotify.com/album/2IIw1KESZrJQBFdZQAWcKY'
 		},
@@ -8029,7 +8032,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ee8a7e5179348160a2a58fa4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ee8a7e5179348160a2a58fa4', width: 64}
 				]),
-			id: '0AKPkUh4ElyZNipc0lZoiR',
+			id: $author$project$AlbumIds$AlbumId('0AKPkUh4ElyZNipc0lZoiR'),
 			name: '039/und die Perlenvögel',
 			urlToOpen: 'https://open.spotify.com/album/0AKPkUh4ElyZNipc0lZoiR'
 		},
@@ -8040,7 +8043,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e87d75cd1871f89732c2448b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e87d75cd1871f89732c2448b', width: 64}
 				]),
-			id: '6d3Pavm0enVICdOvBEqxYA',
+			id: $author$project$AlbumIds$AlbumId('6d3Pavm0enVICdOvBEqxYA'),
 			name: '038/und der unsichtbare Gegner',
 			urlToOpen: 'https://open.spotify.com/album/6d3Pavm0enVICdOvBEqxYA'
 		},
@@ -8051,7 +8054,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d323602889318c69616b97f6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d323602889318c69616b97f6', width: 64}
 				]),
-			id: '6R4gnRHXKgw2cxneWgTiEL',
+			id: $author$project$AlbumIds$AlbumId('6R4gnRHXKgw2cxneWgTiEL'),
 			name: '037/und der heimliche Hehler',
 			urlToOpen: 'https://open.spotify.com/album/6R4gnRHXKgw2cxneWgTiEL'
 		},
@@ -8062,7 +8065,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020f20e31dba0ce8c04a76ba15', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510f20e31dba0ce8c04a76ba15', width: 64}
 				]),
-			id: '4R24oyyqxGkczNpqWGCXBZ',
+			id: $author$project$AlbumIds$AlbumId('4R24oyyqxGkczNpqWGCXBZ'),
 			name: '036/und der Super-Wal',
 			urlToOpen: 'https://open.spotify.com/album/4R24oyyqxGkczNpqWGCXBZ'
 		},
@@ -8073,7 +8076,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e1bd55376650652d72db0c19', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e1bd55376650652d72db0c19', width: 64}
 				]),
-			id: '2REEfC6tVMiYv1eKMlGiOX',
+			id: $author$project$AlbumIds$AlbumId('2REEfC6tVMiYv1eKMlGiOX'),
 			name: '035/und der Höhlenmensch',
 			urlToOpen: 'https://open.spotify.com/album/2REEfC6tVMiYv1eKMlGiOX'
 		},
@@ -8084,7 +8087,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028dc647cb547bde4b45d3e6dd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518dc647cb547bde4b45d3e6dd', width: 64}
 				]),
-			id: '2L18qTB1EfS4FuBk2M6QwV',
+			id: $author$project$AlbumIds$AlbumId('2L18qTB1EfS4FuBk2M6QwV'),
 			name: '034/und der rote Pirat',
 			urlToOpen: 'https://open.spotify.com/album/2L18qTB1EfS4FuBk2M6QwV'
 		},
@@ -8095,7 +8098,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028159c7cd9cc9d2b38a3c2f9b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518159c7cd9cc9d2b38a3c2f9b', width: 64}
 				]),
-			id: '1imKVIfJIM0vKNymevqKjP',
+			id: $author$project$AlbumIds$AlbumId('1imKVIfJIM0vKNymevqKjP'),
 			name: '033/und die bedrohte Ranch',
 			urlToOpen: 'https://open.spotify.com/album/1imKVIfJIM0vKNymevqKjP'
 		},
@@ -8106,7 +8109,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020184c93524a6bd2d3c722d80', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510184c93524a6bd2d3c722d80', width: 64}
 				]),
-			id: '7K3VEzD1rm0dgUGBi1i5PW',
+			id: $author$project$AlbumIds$AlbumId('7K3VEzD1rm0dgUGBi1i5PW'),
 			name: '032/und der Ameisenmensch',
 			urlToOpen: 'https://open.spotify.com/album/7K3VEzD1rm0dgUGBi1i5PW'
 		},
@@ -8117,7 +8120,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020ba222df97d099fb846c3321', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510ba222df97d099fb846c3321', width: 64}
 				]),
-			id: '0tPetsUWuZIC0E85x6eVN5',
+			id: $author$project$AlbumIds$AlbumId('0tPetsUWuZIC0E85x6eVN5'),
 			name: '031/und das Narbengesicht',
 			urlToOpen: 'https://open.spotify.com/album/0tPetsUWuZIC0E85x6eVN5'
 		},
@@ -8128,7 +8131,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026238a5d048e44c91f698a91e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516238a5d048e44c91f698a91e', width: 64}
 				]),
-			id: '0zV9pnaXLuogDr6prsvb4M',
+			id: $author$project$AlbumIds$AlbumId('0zV9pnaXLuogDr6prsvb4M'),
 			name: '030/und das Riff der Haie',
 			urlToOpen: 'https://open.spotify.com/album/0zV9pnaXLuogDr6prsvb4M'
 		},
@@ -8139,7 +8142,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f7641a1768d1d479ef498e96', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f7641a1768d1d479ef498e96', width: 64}
 				]),
-			id: '5JHijjtr65MjdNOnNvD3Ec',
+			id: $author$project$AlbumIds$AlbumId('5JHijjtr65MjdNOnNvD3Ec'),
 			name: '029/Die Originalmusik',
 			urlToOpen: 'https://open.spotify.com/album/5JHijjtr65MjdNOnNvD3Ec'
 		},
@@ -8150,7 +8153,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02483740d2f5111b560d127da1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851483740d2f5111b560d127da1', width: 64}
 				]),
-			id: '7Dbd2rya9glmBLVxclcU4d',
+			id: $author$project$AlbumIds$AlbumId('7Dbd2rya9glmBLVxclcU4d'),
 			name: '028/und der Doppelgänger',
 			urlToOpen: 'https://open.spotify.com/album/7Dbd2rya9glmBLVxclcU4d'
 		},
@@ -8161,7 +8164,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02438a03c2832248ec4934ddc4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851438a03c2832248ec4934ddc4', width: 64}
 				]),
-			id: '2AisAUu4deLpNi6g6qlTLC',
+			id: $author$project$AlbumIds$AlbumId('2AisAUu4deLpNi6g6qlTLC'),
 			name: '027/und der magische Kreis',
 			urlToOpen: 'https://open.spotify.com/album/2AisAUu4deLpNi6g6qlTLC'
 		},
@@ -8172,7 +8175,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023992de3d05e2af52f5125ee1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513992de3d05e2af52f5125ee1', width: 64}
 				]),
-			id: '2NSreywe8UbWo7BJVY3Spk',
+			id: $author$project$AlbumIds$AlbumId('2NSreywe8UbWo7BJVY3Spk'),
 			name: '026/und die Silbermine',
 			urlToOpen: 'https://open.spotify.com/album/2NSreywe8UbWo7BJVY3Spk'
 		},
@@ -8183,7 +8186,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023a1b9f502429b809d468075a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513a1b9f502429b809d468075a', width: 64}
 				]),
-			id: '6RXr8BmKNSK9Zk11k0I7Dl',
+			id: $author$project$AlbumIds$AlbumId('6RXr8BmKNSK9Zk11k0I7Dl'),
 			name: '025/und die singende Schlange',
 			urlToOpen: 'https://open.spotify.com/album/6RXr8BmKNSK9Zk11k0I7Dl'
 		},
@@ -8194,7 +8197,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0220435a7b108a189265e3f5c6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485120435a7b108a189265e3f5c6', width: 64}
 				]),
-			id: '211IEWHi59nUsHx8li8G9r',
+			id: $author$project$AlbumIds$AlbumId('211IEWHi59nUsHx8li8G9r'),
 			name: '024/und die silberne Spinne',
 			urlToOpen: 'https://open.spotify.com/album/211IEWHi59nUsHx8li8G9r'
 		},
@@ -8205,7 +8208,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026c2bba436af8f0693392287e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516c2bba436af8f0693392287e', width: 64}
 				]),
-			id: '67qFOAxbhNRHEIeOjQ9Zkp',
+			id: $author$project$AlbumIds$AlbumId('67qFOAxbhNRHEIeOjQ9Zkp'),
 			name: '023/und das Aztekenschwert',
 			urlToOpen: 'https://open.spotify.com/album/67qFOAxbhNRHEIeOjQ9Zkp'
 		},
@@ -8216,7 +8219,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023ab5f4d4d51ba4eca891ebd5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513ab5f4d4d51ba4eca891ebd5', width: 64}
 				]),
-			id: '7i50aK2wKvszWNnay4DtxP',
+			id: $author$project$AlbumIds$AlbumId('7i50aK2wKvszWNnay4DtxP'),
 			name: '022/und der verschwundene Schatz',
 			urlToOpen: 'https://open.spotify.com/album/7i50aK2wKvszWNnay4DtxP'
 		},
@@ -8227,7 +8230,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0256d04f1f087c046da9189c06', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485156d04f1f087c046da9189c06', width: 64}
 				]),
-			id: '4KEZWleMTT8lDaQDLgozFc',
+			id: $author$project$AlbumIds$AlbumId('4KEZWleMTT8lDaQDLgozFc'),
 			name: '095/Botschaft von Geisterhand',
 			urlToOpen: 'https://open.spotify.com/album/4KEZWleMTT8lDaQDLgozFc'
 		},
@@ -8238,7 +8241,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0225c506f0736d03286670b368', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485125c506f0736d03286670b368', width: 64}
 				]),
-			id: '2koZEkq7vQnHjMP73gVXCo',
+			id: $author$project$AlbumIds$AlbumId('2koZEkq7vQnHjMP73gVXCo'),
 			name: '021/und der tanzende Teufel',
 			urlToOpen: 'https://open.spotify.com/album/2koZEkq7vQnHjMP73gVXCo'
 		},
@@ -8249,7 +8252,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02aa10f94060ce1f0352a0d513', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851aa10f94060ce1f0352a0d513', width: 64}
 				]),
-			id: '5ilbdbGu5eQRUIsbslyiLe',
+			id: $author$project$AlbumIds$AlbumId('5ilbdbGu5eQRUIsbslyiLe'),
 			name: '020/und die flammende Spur',
 			urlToOpen: 'https://open.spotify.com/album/5ilbdbGu5eQRUIsbslyiLe'
 		},
@@ -8260,7 +8263,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ee5e4b11a71edc5c62877ef5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ee5e4b11a71edc5c62877ef5', width: 64}
 				]),
-			id: '3JqJ2zIt3UzKug7onmbmAo',
+			id: $author$project$AlbumIds$AlbumId('3JqJ2zIt3UzKug7onmbmAo'),
 			name: '019/und der Teufelsberg',
 			urlToOpen: 'https://open.spotify.com/album/3JqJ2zIt3UzKug7onmbmAo'
 		},
@@ -8271,7 +8274,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c5d04c7c5441fd77e9791fa7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c5d04c7c5441fd77e9791fa7', width: 64}
 				]),
-			id: '1yqICFWBL4l7fJkrFWvfWL',
+			id: $author$project$AlbumIds$AlbumId('1yqICFWBL4l7fJkrFWvfWL'),
 			name: '018/und die Geisterinsel',
 			urlToOpen: 'https://open.spotify.com/album/1yqICFWBL4l7fJkrFWvfWL'
 		},
@@ -8282,7 +8285,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02427b347396b793e22f4b259c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851427b347396b793e22f4b259c', width: 64}
 				]),
-			id: '0CMsNalUakIcv6znyVLALr',
+			id: $author$project$AlbumIds$AlbumId('0CMsNalUakIcv6znyVLALr'),
 			name: '017/und die gefährliche Erbschaft',
 			urlToOpen: 'https://open.spotify.com/album/0CMsNalUakIcv6znyVLALr'
 		},
@@ -8293,7 +8296,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0226eed2aeb7d8d27a3fd5bd31', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485126eed2aeb7d8d27a3fd5bd31', width: 64}
 				]),
-			id: '16dOhg07DVqoSxlS7ToLM5',
+			id: $author$project$AlbumIds$AlbumId('16dOhg07DVqoSxlS7ToLM5'),
 			name: '016/und der Zauberspiegel',
 			urlToOpen: 'https://open.spotify.com/album/16dOhg07DVqoSxlS7ToLM5'
 		},
@@ -8304,7 +8307,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024377c9c6e1b2921537d28aef', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514377c9c6e1b2921537d28aef', width: 64}
 				]),
-			id: '2dQYcaTRh5qEYk2oH7WoBC',
+			id: $author$project$AlbumIds$AlbumId('2dQYcaTRh5qEYk2oH7WoBC'),
 			name: '015/und der rasende Löwe',
 			urlToOpen: 'https://open.spotify.com/album/2dQYcaTRh5qEYk2oH7WoBC'
 		},
@@ -8315,7 +8318,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028a84c23e892ef9539e045a1a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518a84c23e892ef9539e045a1a', width: 64}
 				]),
-			id: '3O5STjjugoL5cNKfeRuBiU',
+			id: $author$project$AlbumIds$AlbumId('3O5STjjugoL5cNKfeRuBiU'),
 			name: '014/und das Bergmonster',
 			urlToOpen: 'https://open.spotify.com/album/3O5STjjugoL5cNKfeRuBiU'
 		},
@@ -8326,7 +8329,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022ff34dc0745ba2056a2d6fd2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512ff34dc0745ba2056a2d6fd2', width: 64}
 				]),
-			id: '2AZ7zFBophWEIuBPjAG60I',
+			id: $author$project$AlbumIds$AlbumId('2AZ7zFBophWEIuBPjAG60I'),
 			name: '013/und der lachende Schatten',
 			urlToOpen: 'https://open.spotify.com/album/2AZ7zFBophWEIuBPjAG60I'
 		},
@@ -8337,7 +8340,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0261db3ef53570c46ef3bc86fa', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485161db3ef53570c46ef3bc86fa', width: 64}
 				]),
-			id: '0bSrvyOjOzFoFJfx3uaFgk',
+			id: $author$project$AlbumIds$AlbumId('0bSrvyOjOzFoFJfx3uaFgk'),
 			name: '012/und der seltsame Wecker',
 			urlToOpen: 'https://open.spotify.com/album/0bSrvyOjOzFoFJfx3uaFgk'
 		},
@@ -8348,7 +8351,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027313518ec36070a3a6d4ea5a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517313518ec36070a3a6d4ea5a', width: 64}
 				]),
-			id: '07EhJ6uxWcQQWKeXJ1e8Lb',
+			id: $author$project$AlbumIds$AlbumId('07EhJ6uxWcQQWKeXJ1e8Lb'),
 			name: '011/und das Gespensterschloss',
 			urlToOpen: 'https://open.spotify.com/album/07EhJ6uxWcQQWKeXJ1e8Lb'
 		},
@@ -8359,7 +8362,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020d5263d1eedebfe821815b32', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510d5263d1eedebfe821815b32', width: 64}
 				]),
-			id: '4h75QQIxW1etThTuw6vWzg',
+			id: $author$project$AlbumIds$AlbumId('4h75QQIxW1etThTuw6vWzg'),
 			name: '010/und die flüsternde Mumie',
 			urlToOpen: 'https://open.spotify.com/album/4h75QQIxW1etThTuw6vWzg'
 		},
@@ -8370,7 +8373,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0276c25883ce89b0b852faaa35', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485176c25883ce89b0b852faaa35', width: 64}
 				]),
-			id: '0aNqdp5ayuUNsOdUwu8x0b',
+			id: $author$project$AlbumIds$AlbumId('0aNqdp5ayuUNsOdUwu8x0b'),
 			name: '009/und die rätselhaften Bilder',
 			urlToOpen: 'https://open.spotify.com/album/0aNqdp5ayuUNsOdUwu8x0b'
 		},
@@ -8381,7 +8384,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0274e205c46d3b6be37bcdde12', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485174e205c46d3b6be37bcdde12', width: 64}
 				]),
-			id: '6MRsf5IcfqJIogaNqtESnh',
+			id: $author$project$AlbumIds$AlbumId('6MRsf5IcfqJIogaNqtESnh'),
 			name: '008/und der grüne Geist',
 			urlToOpen: 'https://open.spotify.com/album/6MRsf5IcfqJIogaNqtESnh'
 		},
@@ -8392,7 +8395,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e691293acd166f1cda30037a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e691293acd166f1cda30037a', width: 64}
 				]),
-			id: '3nGyW4ETDrDpInYEAQCyYS',
+			id: $author$project$AlbumIds$AlbumId('3nGyW4ETDrDpInYEAQCyYS'),
 			name: '007/und der unheimliche Drache',
 			urlToOpen: 'https://open.spotify.com/album/3nGyW4ETDrDpInYEAQCyYS'
 		},
@@ -8403,7 +8406,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ef7f97120b07faed7046c8ae', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ef7f97120b07faed7046c8ae', width: 64}
 				]),
-			id: '54eP8BYMR270sTqklv83V0',
+			id: $author$project$AlbumIds$AlbumId('54eP8BYMR270sTqklv83V0'),
 			name: '006/und der sprechende Totenkopf',
 			urlToOpen: 'https://open.spotify.com/album/54eP8BYMR270sTqklv83V0'
 		},
@@ -8414,7 +8417,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c26392a38973202a8c883483', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c26392a38973202a8c883483', width: 64}
 				]),
-			id: '5YWM39RnabpxekZuHriTam',
+			id: $author$project$AlbumIds$AlbumId('5YWM39RnabpxekZuHriTam'),
 			name: '005/und der Fluch des Rubins',
 			urlToOpen: 'https://open.spotify.com/album/5YWM39RnabpxekZuHriTam'
 		},
@@ -8425,7 +8428,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d172a3a7a6097a6bb8cfe3a8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d172a3a7a6097a6bb8cfe3a8', width: 64}
 				]),
-			id: '2w902iYtkf0ipmTImyLlsL',
+			id: $author$project$AlbumIds$AlbumId('2w902iYtkf0ipmTImyLlsL'),
 			name: '004/und die schwarze Katze',
 			urlToOpen: 'https://open.spotify.com/album/2w902iYtkf0ipmTImyLlsL'
 		},
@@ -8436,7 +8439,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0270a612558ca677da494c1cb2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485170a612558ca677da494c1cb2', width: 64}
 				]),
-			id: '61OtrnMm1lqoMgMRb1aw7g',
+			id: $author$project$AlbumIds$AlbumId('61OtrnMm1lqoMgMRb1aw7g'),
 			name: '003/und der Karpatenhund',
 			urlToOpen: 'https://open.spotify.com/album/61OtrnMm1lqoMgMRb1aw7g'
 		},
@@ -8447,7 +8450,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e11332718f590d25361b0354', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e11332718f590d25361b0354', width: 64}
 				]),
-			id: '0xldqK4Ocdt8dwQSxUzt6x',
+			id: $author$project$AlbumIds$AlbumId('0xldqK4Ocdt8dwQSxUzt6x'),
 			name: '002/und der Phantomsee',
 			urlToOpen: 'https://open.spotify.com/album/0xldqK4Ocdt8dwQSxUzt6x'
 		},
@@ -8458,7 +8461,7 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023b3c021d48b2f0ee16f7d217', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513b3c021d48b2f0ee16f7d217', width: 64}
 				]),
-			id: '4N9tvSjWfZXx3eHKblYEWQ',
+			id: $author$project$AlbumIds$AlbumId('4N9tvSjWfZXx3eHKblYEWQ'),
 			name: '001/und der Super-Papagei',
 			urlToOpen: 'https://open.spotify.com/album/4N9tvSjWfZXx3eHKblYEWQ'
 		}
@@ -8473,7 +8476,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02231cea674889237c6b7bcb29', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851231cea674889237c6b7bcb29', width: 64}
 				]),
-			id: '3xIGmydqrJOShru5bQmSVa',
+			id: $author$project$AlbumIds$AlbumId('3xIGmydqrJOShru5bQmSVa'),
 			name: 'Folge 95: Geheime Zeichen',
 			urlToOpen: 'https://open.spotify.com/album/3xIGmydqrJOShru5bQmSVa'
 		},
@@ -8484,7 +8487,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bfffc8f2a48803021c9cfef7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bfffc8f2a48803021c9cfef7', width: 64}
 				]),
-			id: '2SW10jAJqdxfbJZCW6hlEF',
+			id: $author$project$AlbumIds$AlbumId('2SW10jAJqdxfbJZCW6hlEF'),
 			name: 'Mini-Fall/Die Piratenbande (Mini-Fall 03)',
 			urlToOpen: 'https://open.spotify.com/album/2SW10jAJqdxfbJZCW6hlEF'
 		},
@@ -8495,7 +8498,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0251faf41bf0a9ded536853d77', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485151faf41bf0a9ded536853d77', width: 64}
 				]),
-			id: '4I3xNROKxdLC2GFcpp8o2R',
+			id: $author$project$AlbumIds$AlbumId('4I3xNROKxdLC2GFcpp8o2R'),
 			name: 'Folge 94: Falsche Vampire',
 			urlToOpen: 'https://open.spotify.com/album/4I3xNROKxdLC2GFcpp8o2R'
 		},
@@ -8506,7 +8509,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0264efc25345a96c26cdac317f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485164efc25345a96c26cdac317f', width: 64}
 				]),
-			id: '5o3ryPeYmpRkmgEv4hnDmJ',
+			id: $author$project$AlbumIds$AlbumId('5o3ryPeYmpRkmgEv4hnDmJ'),
 			name: 'Adventskalender - 24 Tage Weihnachtsspuk',
 			urlToOpen: 'https://open.spotify.com/album/5o3ryPeYmpRkmgEv4hnDmJ'
 		},
@@ -8517,7 +8520,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027f7171f1d31d5b10fb0b0c92', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517f7171f1d31d5b10fb0b0c92', width: 64}
 				]),
-			id: '6FLO3ExDCl0GwkzjCQGq0x',
+			id: $author$project$AlbumIds$AlbumId('6FLO3ExDCl0GwkzjCQGq0x'),
 			name: 'Folge 93: Die Geistermühle',
 			urlToOpen: 'https://open.spotify.com/album/6FLO3ExDCl0GwkzjCQGq0x'
 		},
@@ -8528,7 +8531,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0201f4c8ebcac54aa50b9205d1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485101f4c8ebcac54aa50b9205d1', width: 64}
 				]),
-			id: '2AeYE1PVAulFFJlfp6GYZL',
+			id: $author$project$AlbumIds$AlbumId('2AeYE1PVAulFFJlfp6GYZL'),
 			name: 'Mini-Fall/Die Räuberjagd',
 			urlToOpen: 'https://open.spotify.com/album/2AeYE1PVAulFFJlfp6GYZL'
 		},
@@ -8539,7 +8542,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c44fd2f8a2eb34d2adf26487', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c44fd2f8a2eb34d2adf26487', width: 64}
 				]),
-			id: '4793v2qgBpisdJjWcSCjt2',
+			id: $author$project$AlbumIds$AlbumId('4793v2qgBpisdJjWcSCjt2'),
 			name: 'Folge 92: Spuk im Leuchtturm',
 			urlToOpen: 'https://open.spotify.com/album/4793v2qgBpisdJjWcSCjt2'
 		},
@@ -8550,7 +8553,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025fbe80d354e3197606dcbf13', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515fbe80d354e3197606dcbf13', width: 64}
 				]),
-			id: '1IrBxq3kgqabhcp6xfIezB',
+			id: $author$project$AlbumIds$AlbumId('1IrBxq3kgqabhcp6xfIezB'),
 			name: 'Mini-Fall/Vorsicht, Zaubertinte!',
 			urlToOpen: 'https://open.spotify.com/album/1IrBxq3kgqabhcp6xfIezB'
 		},
@@ -8561,7 +8564,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029c6568aed19b926455fc10e5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519c6568aed19b926455fc10e5', width: 64}
 				]),
-			id: '3cbOXb1xkJF65KRjBBqlmL',
+			id: $author$project$AlbumIds$AlbumId('3cbOXb1xkJF65KRjBBqlmL'),
 			name: 'Folge 91: Gefahr im Spiegelkabinett',
 			urlToOpen: 'https://open.spotify.com/album/3cbOXb1xkJF65KRjBBqlmL'
 		},
@@ -8572,7 +8575,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0229db10f4944680a9f7f7f60d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485129db10f4944680a9f7f7f60d', width: 64}
 				]),
-			id: '41Wrbk3iySSFbBnbixychu',
+			id: $author$project$AlbumIds$AlbumId('41Wrbk3iySSFbBnbixychu'),
 			name: 'Folge 90: Flug ins Nichts',
 			urlToOpen: 'https://open.spotify.com/album/41Wrbk3iySSFbBnbixychu'
 		},
@@ -8583,7 +8586,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0267d3d2d917e1783d4ffc42e6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485167d3d2d917e1783d4ffc42e6', width: 64}
 				]),
-			id: '5MXAyx7ZeQGGbHdR1HEbtU',
+			id: $author$project$AlbumIds$AlbumId('5MXAyx7ZeQGGbHdR1HEbtU'),
 			name: 'Adventskalender - 24 Tage eingeschneit',
 			urlToOpen: 'https://open.spotify.com/album/5MXAyx7ZeQGGbHdR1HEbtU'
 		},
@@ -8594,7 +8597,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027f0b83382835dc4c4d4ec4e8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517f0b83382835dc4c4d4ec4e8', width: 64}
 				]),
-			id: '7HIZJWnLo11Fsv68HPhjgj',
+			id: $author$project$AlbumIds$AlbumId('7HIZJWnLo11Fsv68HPhjgj'),
 			name: 'Folge 89: Im Geistergarten',
 			urlToOpen: 'https://open.spotify.com/album/7HIZJWnLo11Fsv68HPhjgj'
 		},
@@ -8605,7 +8608,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e26770b07eea81752fe5c4b5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e26770b07eea81752fe5c4b5', width: 64}
 				]),
-			id: '1wzirotAAliqPA1p0GPl08',
+			id: $author$project$AlbumIds$AlbumId('1wzirotAAliqPA1p0GPl08'),
 			name: 'Folge 88: Schatz aus dem All',
 			urlToOpen: 'https://open.spotify.com/album/1wzirotAAliqPA1p0GPl08'
 		},
@@ -8616,7 +8619,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025c765ae7916cf96edeedd028', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515c765ae7916cf96edeedd028', width: 64}
 				]),
-			id: '3M7f1Ta7DdY49Cj0bsHchW',
+			id: $author$project$AlbumIds$AlbumId('3M7f1Ta7DdY49Cj0bsHchW'),
 			name: 'Folge 87: Das Geisterspiel',
 			urlToOpen: 'https://open.spotify.com/album/3M7f1Ta7DdY49Cj0bsHchW'
 		},
@@ -8627,7 +8630,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f033185cc58310a1e253c108', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f033185cc58310a1e253c108', width: 64}
 				]),
-			id: '3CVr8yD3EmmbTAD3mgdkst',
+			id: $author$project$AlbumIds$AlbumId('3CVr8yD3EmmbTAD3mgdkst'),
 			name: 'Folge 86: Riesen in Rocky Beach',
 			urlToOpen: 'https://open.spotify.com/album/3CVr8yD3EmmbTAD3mgdkst'
 		},
@@ -8638,7 +8641,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e1019b3acdee54f7535d472f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e1019b3acdee54f7535d472f', width: 64}
 				]),
-			id: '2FRfGv6pQommVYHmqJKqU5',
+			id: $author$project$AlbumIds$AlbumId('2FRfGv6pQommVYHmqJKqU5'),
 			name: 'Folge 85: Falscher Alarm',
 			urlToOpen: 'https://open.spotify.com/album/2FRfGv6pQommVYHmqJKqU5'
 		},
@@ -8649,7 +8652,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0271669617bbc9900658520187', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485171669617bbc9900658520187', width: 64}
 				]),
-			id: '5ZcAMixtzUYEBZNVSrixNE',
+			id: $author$project$AlbumIds$AlbumId('5ZcAMixtzUYEBZNVSrixNE'),
 			name: 'Adventskalender - 24 Tage Chaos im Zoo',
 			urlToOpen: 'https://open.spotify.com/album/5ZcAMixtzUYEBZNVSrixNE'
 		},
@@ -8660,7 +8663,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0209988e9d1da207c3528f53d6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485109988e9d1da207c3528f53d6', width: 64}
 				]),
-			id: '11uIA0NksKWJ2xjjTMvO8x',
+			id: $author$project$AlbumIds$AlbumId('11uIA0NksKWJ2xjjTMvO8x'),
 			name: 'Folge 84: Tatort Skater-Park',
 			urlToOpen: 'https://open.spotify.com/album/11uIA0NksKWJ2xjjTMvO8x'
 		},
@@ -8671,7 +8674,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024ed77c444dc4093549d15559', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514ed77c444dc4093549d15559', width: 64}
 				]),
-			id: '0rjlBTxlkcd3aFoYS1HPCn',
+			id: $author$project$AlbumIds$AlbumId('0rjlBTxlkcd3aFoYS1HPCn'),
 			name: 'Folge 83: Fußball-Diebe',
 			urlToOpen: 'https://open.spotify.com/album/0rjlBTxlkcd3aFoYS1HPCn'
 		},
@@ -8682,7 +8685,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f19cf89ed26ddd1875b019ef', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f19cf89ed26ddd1875b019ef', width: 64}
 				]),
-			id: '5n6gdqMbunkR1J0MhqTaV8',
+			id: $author$project$AlbumIds$AlbumId('5n6gdqMbunkR1J0MhqTaV8'),
 			name: 'Folge 82: Die Delfin-Piraten',
 			urlToOpen: 'https://open.spotify.com/album/5n6gdqMbunkR1J0MhqTaV8'
 		},
@@ -8693,7 +8696,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020ce9634828f912a3e300d6cd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510ce9634828f912a3e300d6cd', width: 64}
 				]),
-			id: '3NOIKGCYKsL3nCCgzksldt',
+			id: $author$project$AlbumIds$AlbumId('3NOIKGCYKsL3nCCgzksldt'),
 			name: 'Folge 81: Turbo-Rennen',
 			urlToOpen: 'https://open.spotify.com/album/3NOIKGCYKsL3nCCgzksldt'
 		},
@@ -8704,7 +8707,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022f78a5d30d5856957105c995', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512f78a5d30d5856957105c995', width: 64}
 				]),
-			id: '5EeUZitOFX7Nad5yp2CFud',
+			id: $author$project$AlbumIds$AlbumId('5EeUZitOFX7Nad5yp2CFud'),
 			name: '080/Gefährlicher Nebel',
 			urlToOpen: 'https://open.spotify.com/album/5EeUZitOFX7Nad5yp2CFud'
 		},
@@ -8715,7 +8718,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ea2c91abdc1ef6d436b3a61e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ea2c91abdc1ef6d436b3a61e', width: 64}
 				]),
-			id: '5GOZBi4hHD6rvJI1zp7ryf',
+			id: $author$project$AlbumIds$AlbumId('5GOZBi4hHD6rvJI1zp7ryf'),
 			name: '079/Achtung, Abenteuer!',
 			urlToOpen: 'https://open.spotify.com/album/5GOZBi4hHD6rvJI1zp7ryf'
 		},
@@ -8726,7 +8729,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024af1d18d20a87f49559a35f8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514af1d18d20a87f49559a35f8', width: 64}
 				]),
-			id: '15aFL9eaT1bjrURanvEKEn',
+			id: $author$project$AlbumIds$AlbumId('15aFL9eaT1bjrURanvEKEn'),
 			name: '078/Schrottplatz in Gefahr',
 			urlToOpen: 'https://open.spotify.com/album/15aFL9eaT1bjrURanvEKEn'
 		},
@@ -8737,7 +8740,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0241d1a9421e0b0c8e9568fba0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485141d1a9421e0b0c8e9568fba0', width: 64}
 				]),
-			id: '75If2drFgUUJdC6eQ0dZYl',
+			id: $author$project$AlbumIds$AlbumId('75If2drFgUUJdC6eQ0dZYl'),
 			name: '077/Die Musikdiebe',
 			urlToOpen: 'https://open.spotify.com/album/75If2drFgUUJdC6eQ0dZYl'
 		},
@@ -8748,7 +8751,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027b35f1912f7fe1e1ee325a03', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517b35f1912f7fe1e1ee325a03', width: 64}
 				]),
-			id: '6nSehzQCvelIRQu84k5N7E',
+			id: $author$project$AlbumIds$AlbumId('6nSehzQCvelIRQu84k5N7E'),
 			name: '076/Blinde Passagiere',
 			urlToOpen: 'https://open.spotify.com/album/6nSehzQCvelIRQu84k5N7E'
 		},
@@ -8759,7 +8762,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a2fb4748ffdd348d9466fe02', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a2fb4748ffdd348d9466fe02', width: 64}
 				]),
-			id: '4M3VGzWy7xxm93zGw0xqAU',
+			id: $author$project$AlbumIds$AlbumId('4M3VGzWy7xxm93zGw0xqAU'),
 			name: '075/Der Fußball-Roboter',
 			urlToOpen: 'https://open.spotify.com/album/4M3VGzWy7xxm93zGw0xqAU'
 		},
@@ -8770,7 +8773,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e9a09c4f0a0a8ecb4c19b095', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e9a09c4f0a0a8ecb4c19b095', width: 64}
 				]),
-			id: '7KEMmRYdYTyOkHaoocjwp7',
+			id: $author$project$AlbumIds$AlbumId('7KEMmRYdYTyOkHaoocjwp7'),
 			name: '074/Das Schienen-Monster',
 			urlToOpen: 'https://open.spotify.com/album/7KEMmRYdYTyOkHaoocjwp7'
 		},
@@ -8781,7 +8784,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a71f1d96f3d83e362aa47072', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a71f1d96f3d83e362aa47072', width: 64}
 				]),
-			id: '7JrHsowbMVguSku3JG2tLS',
+			id: $author$project$AlbumIds$AlbumId('7JrHsowbMVguSku3JG2tLS'),
 			name: '073/Surfstrand in Gefahr',
 			urlToOpen: 'https://open.spotify.com/album/7JrHsowbMVguSku3JG2tLS'
 		},
@@ -8792,7 +8795,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bf0d49278a5379ed3f38c81c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bf0d49278a5379ed3f38c81c', width: 64}
 				]),
-			id: '0xynCTUxYMlBA1IcPfAgKq',
+			id: $author$project$AlbumIds$AlbumId('0xynCTUxYMlBA1IcPfAgKq'),
 			name: '072/Die Laser-Falle',
 			urlToOpen: 'https://open.spotify.com/album/0xynCTUxYMlBA1IcPfAgKq'
 		},
@@ -8803,7 +8806,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027a5764d903735d7e97e5f43b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517a5764d903735d7e97e5f43b', width: 64}
 				]),
-			id: '0tuslnSb2vi63lqnROhlSl',
+			id: $author$project$AlbumIds$AlbumId('0tuslnSb2vi63lqnROhlSl'),
 			name: 'Adventskalender - 24 Tage im Weihnachtszirkus',
 			urlToOpen: 'https://open.spotify.com/album/0tuslnSb2vi63lqnROhlSl'
 		},
@@ -8814,7 +8817,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02afbb4e9559ad3183d112116f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851afbb4e9559ad3183d112116f', width: 64}
 				]),
-			id: '1RrOzTtLYceG05edrb7YNQ',
+			id: $author$project$AlbumIds$AlbumId('1RrOzTtLYceG05edrb7YNQ'),
 			name: '071/Tatort Trampolin',
 			urlToOpen: 'https://open.spotify.com/album/1RrOzTtLYceG05edrb7YNQ'
 		},
@@ -8825,7 +8828,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02114126e610c1e7301a93e882', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851114126e610c1e7301a93e882', width: 64}
 				]),
-			id: '1ntNbHEo93jDj2JgZtLMrS',
+			id: $author$project$AlbumIds$AlbumId('1ntNbHEo93jDj2JgZtLMrS'),
 			name: '070/Aufbruch ins All',
 			urlToOpen: 'https://open.spotify.com/album/1ntNbHEo93jDj2JgZtLMrS'
 		},
@@ -8836,7 +8839,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0281fa18a8804b8b02731945e1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485181fa18a8804b8b02731945e1', width: 64}
 				]),
-			id: '6QpCsN1do9sWdzxMzP6vAm',
+			id: $author$project$AlbumIds$AlbumId('6QpCsN1do9sWdzxMzP6vAm'),
 			name: '069/Die Rätselfalle',
 			urlToOpen: 'https://open.spotify.com/album/6QpCsN1do9sWdzxMzP6vAm'
 		},
@@ -8847,7 +8850,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026972e5f163f3376e24d05017', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516972e5f163f3376e24d05017', width: 64}
 				]),
-			id: '0zDRwoqvJYhvfhcvQYzfcZ',
+			id: $author$project$AlbumIds$AlbumId('0zDRwoqvJYhvfhcvQYzfcZ'),
 			name: '068/Chaos im Dunkeln',
 			urlToOpen: 'https://open.spotify.com/album/0zDRwoqvJYhvfhcvQYzfcZ'
 		},
@@ -8858,7 +8861,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a2bf2e257a27ce92fe0945b6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a2bf2e257a27ce92fe0945b6', width: 64}
 				]),
-			id: '5qvokPibHLO3e47oV4wyhz',
+			id: $author$project$AlbumIds$AlbumId('5qvokPibHLO3e47oV4wyhz'),
 			name: '067/Der goldene Drache',
 			urlToOpen: 'https://open.spotify.com/album/5qvokPibHLO3e47oV4wyhz'
 		},
@@ -8869,7 +8872,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02524bc84639b04c3b2e7bbf51', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851524bc84639b04c3b2e7bbf51', width: 64}
 				]),
-			id: '6xSlKWjaEpc6SMJ69uVKYT',
+			id: $author$project$AlbumIds$AlbumId('6xSlKWjaEpc6SMJ69uVKYT'),
 			name: '066/Geheimnis im Meer',
 			urlToOpen: 'https://open.spotify.com/album/6xSlKWjaEpc6SMJ69uVKYT'
 		},
@@ -8880,7 +8883,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029547c11b4f57252c1ae76be0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519547c11b4f57252c1ae76be0', width: 64}
 				]),
-			id: '0Pg0kbjNl7PC22ghcSqKih',
+			id: $author$project$AlbumIds$AlbumId('0Pg0kbjNl7PC22ghcSqKih'),
 			name: 'Adventskalender',
 			urlToOpen: 'https://open.spotify.com/album/0Pg0kbjNl7PC22ghcSqKih'
 		},
@@ -8891,7 +8894,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025a66ef1673945efe895eed1a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515a66ef1673945efe895eed1a', width: 64}
 				]),
-			id: '4ErYqkUdfkAmsgltEPJKH7',
+			id: $author$project$AlbumIds$AlbumId('4ErYqkUdfkAmsgltEPJKH7'),
 			name: '065/Mission Goldhund',
 			urlToOpen: 'https://open.spotify.com/album/4ErYqkUdfkAmsgltEPJKH7'
 		},
@@ -8902,7 +8905,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02471176cec591137f97f2cec3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851471176cec591137f97f2cec3', width: 64}
 				]),
-			id: '6Om3zELCMatFreSN4FMeOG',
+			id: $author$project$AlbumIds$AlbumId('6Om3zELCMatFreSN4FMeOG'),
 			name: '064/In der Schatzhöhle',
 			urlToOpen: 'https://open.spotify.com/album/6Om3zELCMatFreSN4FMeOG'
 		},
@@ -8913,7 +8916,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e59b2c9c816a5e948aaa15ce', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e59b2c9c816a5e948aaa15ce', width: 64}
 				]),
-			id: '39QjW5XIE81HsWRjjyaVH0',
+			id: $author$project$AlbumIds$AlbumId('39QjW5XIE81HsWRjjyaVH0'),
 			name: '063/Monster-Wolken',
 			urlToOpen: 'https://open.spotify.com/album/39QjW5XIE81HsWRjjyaVH0'
 		},
@@ -8924,7 +8927,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0260e3945f0743e9901f309b8c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485160e3945f0743e9901f309b8c', width: 64}
 				]),
-			id: '3KD5QNC2k1328SsuYFIjiq',
+			id: $author$project$AlbumIds$AlbumId('3KD5QNC2k1328SsuYFIjiq'),
 			name: '062/Gefahr im Dschungel',
 			urlToOpen: 'https://open.spotify.com/album/3KD5QNC2k1328SsuYFIjiq'
 		},
@@ -8935,7 +8938,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0270687f58b2e826d0aad6a69b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485170687f58b2e826d0aad6a69b', width: 64}
 				]),
-			id: '2ZQKn9GVeJalLEuh3BvuOB',
+			id: $author$project$AlbumIds$AlbumId('2ZQKn9GVeJalLEuh3BvuOB'),
 			name: '061/Alarm im Dino-Park',
 			urlToOpen: 'https://open.spotify.com/album/2ZQKn9GVeJalLEuh3BvuOB'
 		},
@@ -8946,7 +8949,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e6c60a44f3efed3f8975421b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e6c60a44f3efed3f8975421b', width: 64}
 				]),
-			id: '5XKW97txqaNv82dIUDWf6D',
+			id: $author$project$AlbumIds$AlbumId('5XKW97txqaNv82dIUDWf6D'),
 			name: '060/Gespensterjagd',
 			urlToOpen: 'https://open.spotify.com/album/5XKW97txqaNv82dIUDWf6D'
 		},
@@ -8957,7 +8960,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fcf5fe0d2e1b2fba4556f423', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fcf5fe0d2e1b2fba4556f423', width: 64}
 				]),
-			id: '66YZOif5ogyl1O0rFT28HM',
+			id: $author$project$AlbumIds$AlbumId('66YZOif5ogyl1O0rFT28HM'),
 			name: '059/Fußballhelden',
 			urlToOpen: 'https://open.spotify.com/album/66YZOif5ogyl1O0rFT28HM'
 		},
@@ -8968,7 +8971,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0277fb91113e71b40d0971b8d7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485177fb91113e71b40d0971b8d7', width: 64}
 				]),
-			id: '2KpYeQgAWPq3skEUb1A8qb',
+			id: $author$project$AlbumIds$AlbumId('2KpYeQgAWPq3skEUb1A8qb'),
 			name: '058/Spur des Drachen',
 			urlToOpen: 'https://open.spotify.com/album/2KpYeQgAWPq3skEUb1A8qb'
 		},
@@ -8979,7 +8982,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022ac6e611c31d824c35c46575', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512ac6e611c31d824c35c46575', width: 64}
 				]),
-			id: '23RIS8PEXnZUs0AwqmstMS',
+			id: $author$project$AlbumIds$AlbumId('23RIS8PEXnZUs0AwqmstMS'),
 			name: '057/Der Weihnachtsdieb',
 			urlToOpen: 'https://open.spotify.com/album/23RIS8PEXnZUs0AwqmstMS'
 		},
@@ -8990,7 +8993,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023b5f101159170219a3bda6b3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513b5f101159170219a3bda6b3', width: 64}
 				]),
-			id: '0zmK2RPZSiThN6xwxDFNrL',
+			id: $author$project$AlbumIds$AlbumId('0zmK2RPZSiThN6xwxDFNrL'),
 			name: '056/Das Rätsel der Könige',
 			urlToOpen: 'https://open.spotify.com/album/0zmK2RPZSiThN6xwxDFNrL'
 		},
@@ -9001,7 +9004,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028b43f3723a260ac6d516f8c1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518b43f3723a260ac6d516f8c1', width: 64}
 				]),
-			id: '2UNXd8SieHWtTM5g0VMeGv',
+			id: $author$project$AlbumIds$AlbumId('2UNXd8SieHWtTM5g0VMeGv'),
 			name: '055/Der schwarze Joker',
 			urlToOpen: 'https://open.spotify.com/album/2UNXd8SieHWtTM5g0VMeGv'
 		},
@@ -9012,7 +9015,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0277d4691e0746fb37320f9bca', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485177d4691e0746fb37320f9bca', width: 64}
 				]),
-			id: '4bM4QL65khBjHgvAEW1glL',
+			id: $author$project$AlbumIds$AlbumId('4bM4QL65khBjHgvAEW1glL'),
 			name: '054/Zombie-Alarm',
 			urlToOpen: 'https://open.spotify.com/album/4bM4QL65khBjHgvAEW1glL'
 		},
@@ -9023,7 +9026,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0201159baf0f3774e2e8a7d87f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485101159baf0f3774e2e8a7d87f', width: 64}
 				]),
-			id: '4SVQrvQkXzYC1nU7DfDJx2',
+			id: $author$project$AlbumIds$AlbumId('4SVQrvQkXzYC1nU7DfDJx2'),
 			name: 'Adventskalender - Ein Rätsel in 24 Tagen',
 			urlToOpen: 'https://open.spotify.com/album/4SVQrvQkXzYC1nU7DfDJx2'
 		},
@@ -9034,7 +9037,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027a8d774bfa80d91f97ad0af8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517a8d774bfa80d91f97ad0af8', width: 64}
 				]),
-			id: '7d8GIfIRWUNIZZXc5bjsrT',
+			id: $author$project$AlbumIds$AlbumId('7d8GIfIRWUNIZZXc5bjsrT'),
 			name: 'Adventskalender - 24 Tage im Weihnachtsland',
 			urlToOpen: 'https://open.spotify.com/album/7d8GIfIRWUNIZZXc5bjsrT'
 		},
@@ -9045,7 +9048,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0261bb72e92694f2e9d36219fb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485161bb72e92694f2e9d36219fb', width: 64}
 				]),
-			id: '3ahySlDFUrzxatkaJUC2hV',
+			id: $author$project$AlbumIds$AlbumId('3ahySlDFUrzxatkaJUC2hV'),
 			name: '053/Geheimnis der Tiere',
 			urlToOpen: 'https://open.spotify.com/album/3ahySlDFUrzxatkaJUC2hV'
 		},
@@ -9056,7 +9059,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b918b08449e2d13bb54ab5c4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b918b08449e2d13bb54ab5c4', width: 64}
 				]),
-			id: '6g5MSdVTrKY3f1ZzsqUhXw',
+			id: $author$project$AlbumIds$AlbumId('6g5MSdVTrKY3f1ZzsqUhXw'),
 			name: '052/Mächtige Magier',
 			urlToOpen: 'https://open.spotify.com/album/6g5MSdVTrKY3f1ZzsqUhXw'
 		},
@@ -9067,7 +9070,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d292bef65c720423a922af66', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d292bef65c720423a922af66', width: 64}
 				]),
-			id: '2Vu69KfWoS6eAzwnhqssWk',
+			id: $author$project$AlbumIds$AlbumId('2Vu69KfWoS6eAzwnhqssWk'),
 			name: '051/Tatort Kletterpark',
 			urlToOpen: 'https://open.spotify.com/album/2Vu69KfWoS6eAzwnhqssWk'
 		},
@@ -9078,7 +9081,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02985849157addc6243e77e6f3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851985849157addc6243e77e6f3', width: 64}
 				]),
-			id: '7zUg7xSxAAkwntDiX1yhGJ',
+			id: $author$project$AlbumIds$AlbumId('7zUg7xSxAAkwntDiX1yhGJ'),
 			name: '050/Schatz der Piraten',
 			urlToOpen: 'https://open.spotify.com/album/7zUg7xSxAAkwntDiX1yhGJ'
 		},
@@ -9089,7 +9092,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c276e1e6a3b1efad416cd692', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c276e1e6a3b1efad416cd692', width: 64}
 				]),
-			id: '105UQAEjLpiqUCUK6x6i3g',
+			id: $author$project$AlbumIds$AlbumId('105UQAEjLpiqUCUK6x6i3g'),
 			name: '048/Tanz der Skelette',
 			urlToOpen: 'https://open.spotify.com/album/105UQAEjLpiqUCUK6x6i3g'
 		},
@@ -9100,7 +9103,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029f74ad497ed8a48b81143fbd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519f74ad497ed8a48b81143fbd', width: 64}
 				]),
-			id: '42cBTxTbzCzbYm0sd4VUxU',
+			id: $author$project$AlbumIds$AlbumId('42cBTxTbzCzbYm0sd4VUxU'),
 			name: '047/Falsche Fußball-Freunde',
 			urlToOpen: 'https://open.spotify.com/album/42cBTxTbzCzbYm0sd4VUxU'
 		},
@@ -9111,7 +9114,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0287933e865bff365b57d80aa6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485187933e865bff365b57d80aa6', width: 64}
 				]),
-			id: '6eQDj0n1wU2dEXO7vr1Bmm',
+			id: $author$project$AlbumIds$AlbumId('6eQDj0n1wU2dEXO7vr1Bmm'),
 			name: '046/Jagd auf das Dino-Ei',
 			urlToOpen: 'https://open.spotify.com/album/6eQDj0n1wU2dEXO7vr1Bmm'
 		},
@@ -9122,7 +9125,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028cf20611b5f0e2749ecae9dc', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518cf20611b5f0e2749ecae9dc', width: 64}
 				]),
-			id: '4Al8xe9LlMxHWhIddbienL',
+			id: $author$project$AlbumIds$AlbumId('4Al8xe9LlMxHWhIddbienL'),
 			name: '045/Ein Fall für Superhelden',
 			urlToOpen: 'https://open.spotify.com/album/4Al8xe9LlMxHWhIddbienL'
 		},
@@ -9133,7 +9136,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c0e2b002e3b50e8b49db071a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c0e2b002e3b50e8b49db071a', width: 64}
 				]),
-			id: '5fIxmzKdFvtbRIeRBEeptA',
+			id: $author$project$AlbumIds$AlbumId('5fIxmzKdFvtbRIeRBEeptA'),
 			name: '044/Monster in Rocky Beach',
 			urlToOpen: 'https://open.spotify.com/album/5fIxmzKdFvtbRIeRBEeptA'
 		},
@@ -9144,7 +9147,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022cd0a447c965c5c6b825eed0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512cd0a447c965c5c6b825eed0', width: 64}
 				]),
-			id: '5J0AsPaix5KTMNjTFpj624',
+			id: $author$project$AlbumIds$AlbumId('5J0AsPaix5KTMNjTFpj624'),
 			name: '043/Duell der Ritter',
 			urlToOpen: 'https://open.spotify.com/album/5J0AsPaix5KTMNjTFpj624'
 		},
@@ -9155,7 +9158,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029a1e011f3bdc73aa383db17f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519a1e011f3bdc73aa383db17f', width: 64}
 				]),
-			id: '6sS4r99PFfzH6Gxc1Z3evg',
+			id: $author$project$AlbumIds$AlbumId('6sS4r99PFfzH6Gxc1Z3evg'),
 			name: '042/Fußballgötter',
 			urlToOpen: 'https://open.spotify.com/album/6sS4r99PFfzH6Gxc1Z3evg'
 		},
@@ -9166,7 +9169,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02361f23cc9e1fb50df5f57c05', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851361f23cc9e1fb50df5f57c05', width: 64}
 				]),
-			id: '3ixBUKtl7HtxSZECC3YnNb',
+			id: $author$project$AlbumIds$AlbumId('3ixBUKtl7HtxSZECC3YnNb'),
 			name: '041/Insel der Haie',
 			urlToOpen: 'https://open.spotify.com/album/3ixBUKtl7HtxSZECC3YnNb'
 		},
@@ -9177,7 +9180,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02456f397e2b2b71395e3eeefd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851456f397e2b2b71395e3eeefd', width: 64}
 				]),
-			id: '12IDORrv50mRmb7501PgiI',
+			id: $author$project$AlbumIds$AlbumId('12IDORrv50mRmb7501PgiI'),
 			name: '040/Brennendes Eis',
 			urlToOpen: 'https://open.spotify.com/album/12IDORrv50mRmb7501PgiI'
 		},
@@ -9188,7 +9191,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f8ce1bbb4ebaf721fbe8e9e6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f8ce1bbb4ebaf721fbe8e9e6', width: 64}
 				]),
-			id: '6NkPN8kGJftA5ZURbZTKve',
+			id: $author$project$AlbumIds$AlbumId('6NkPN8kGJftA5ZURbZTKve'),
 			name: '039/Der verrückte Erfinder',
 			urlToOpen: 'https://open.spotify.com/album/6NkPN8kGJftA5ZURbZTKve'
 		},
@@ -9199,7 +9202,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b75b145f738a1e91bf9f3f2c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b75b145f738a1e91bf9f3f2c', width: 64}
 				]),
-			id: '7o6y1qwFIJolo0ZKUpPTR9',
+			id: $author$project$AlbumIds$AlbumId('7o6y1qwFIJolo0ZKUpPTR9'),
 			name: '038/Stunde der Wahrheit',
 			urlToOpen: 'https://open.spotify.com/album/7o6y1qwFIJolo0ZKUpPTR9'
 		},
@@ -9210,7 +9213,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ac3a7e06c6f691cea0dc2e0b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ac3a7e06c6f691cea0dc2e0b', width: 64}
 				]),
-			id: '24r6U8cWYIB4bQeMGhNB2Q',
+			id: $author$project$AlbumIds$AlbumId('24r6U8cWYIB4bQeMGhNB2Q'),
 			name: '037/Der Fluch der Indianer',
 			urlToOpen: 'https://open.spotify.com/album/24r6U8cWYIB4bQeMGhNB2Q'
 		},
@@ -9221,7 +9224,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027f872297501bd203d824daf6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517f872297501bd203d824daf6', width: 64}
 				]),
-			id: '6GUPPV35zx22eO4g9tctKN',
+			id: $author$project$AlbumIds$AlbumId('6GUPPV35zx22eO4g9tctKN'),
 			name: '036/Mission Mars',
 			urlToOpen: 'https://open.spotify.com/album/6GUPPV35zx22eO4g9tctKN'
 		},
@@ -9232,7 +9235,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e443b137e1404a51cd715c56', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e443b137e1404a51cd715c56', width: 64}
 				]),
-			id: '1bK1QqLOaESZgs2pXYY4J6',
+			id: $author$project$AlbumIds$AlbumId('1bK1QqLOaESZgs2pXYY4J6'),
 			name: '035/Im Wilden Westen',
 			urlToOpen: 'https://open.spotify.com/album/1bK1QqLOaESZgs2pXYY4J6'
 		},
@@ -9243,7 +9246,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c1f9f753b20b48e82fed6ab4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c1f9f753b20b48e82fed6ab4', width: 64}
 				]),
-			id: '7ATza45Jb2B3MhSD0icgPi',
+			id: $author$project$AlbumIds$AlbumId('7ATza45Jb2B3MhSD0icgPi'),
 			name: '034/Falsches Gold',
 			urlToOpen: 'https://open.spotify.com/album/7ATza45Jb2B3MhSD0icgPi'
 		},
@@ -9254,7 +9257,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0274f060a34ff5f5d029254b38', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485174f060a34ff5f5d029254b38', width: 64}
 				]),
-			id: '5cJ4xmPFjEhOCQIBoYwmWi',
+			id: $author$project$AlbumIds$AlbumId('5cJ4xmPFjEhOCQIBoYwmWi'),
 			name: '033/Nacht im Kerker',
 			urlToOpen: 'https://open.spotify.com/album/5cJ4xmPFjEhOCQIBoYwmWi'
 		},
@@ -9265,7 +9268,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02aadef40886ceec7f21f1e45a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851aadef40886ceec7f21f1e45a', width: 64}
 				]),
-			id: '3UzZjgfXxnjPigAfCYQCr5',
+			id: $author$project$AlbumIds$AlbumId('3UzZjgfXxnjPigAfCYQCr5'),
 			name: '032/Die Gruselfalle',
 			urlToOpen: 'https://open.spotify.com/album/3UzZjgfXxnjPigAfCYQCr5'
 		},
@@ -9276,7 +9279,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028580a1bb3b7375baf452547b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518580a1bb3b7375baf452547b', width: 64}
 				]),
-			id: '49GuQzqAa08WMB8fjtEBj4',
+			id: $author$project$AlbumIds$AlbumId('49GuQzqAa08WMB8fjtEBj4'),
 			name: '031/Rückkehr der Saurier',
 			urlToOpen: 'https://open.spotify.com/album/49GuQzqAa08WMB8fjtEBj4'
 		},
@@ -9287,7 +9290,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fca6edf9e29235c7bfa6f226', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fca6edf9e29235c7bfa6f226', width: 64}
 				]),
-			id: '5Dlq8pYslsD1dstLQR7NFw',
+			id: $author$project$AlbumIds$AlbumId('5Dlq8pYslsD1dstLQR7NFw'),
 			name: '030/Im Geisterschiff',
 			urlToOpen: 'https://open.spotify.com/album/5Dlq8pYslsD1dstLQR7NFw'
 		},
@@ -9298,7 +9301,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021192c2a856f8592dd1a6db9a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511192c2a856f8592dd1a6db9a', width: 64}
 				]),
-			id: '4fIWqTa6s849HB2NInOgyF',
+			id: $author$project$AlbumIds$AlbumId('4fIWqTa6s849HB2NInOgyF'),
 			name: '029/Monsterpilze',
 			urlToOpen: 'https://open.spotify.com/album/4fIWqTa6s849HB2NInOgyF'
 		},
@@ -9309,7 +9312,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bf99590d6c6432c286517813', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bf99590d6c6432c286517813', width: 64}
 				]),
-			id: '4BTfGkg67lPD7pnV9YABGC',
+			id: $author$project$AlbumIds$AlbumId('4BTfGkg67lPD7pnV9YABGC'),
 			name: '028/Diamantenjagd',
 			urlToOpen: 'https://open.spotify.com/album/4BTfGkg67lPD7pnV9YABGC'
 		},
@@ -9320,7 +9323,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02394fe0cfa0f07bde1a024816', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851394fe0cfa0f07bde1a024816', width: 64}
 				]),
-			id: '0BiK4U6FaICuYqpUQ553Qo',
+			id: $author$project$AlbumIds$AlbumId('0BiK4U6FaICuYqpUQ553Qo'),
 			name: '027/Die Schokofalle',
 			urlToOpen: 'https://open.spotify.com/album/0BiK4U6FaICuYqpUQ553Qo'
 		},
@@ -9331,7 +9334,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e79e919801a43249e08443d0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e79e919801a43249e08443d0', width: 64}
 				]),
-			id: '7zlnjYjJotwmyxPWee0s9W',
+			id: $author$project$AlbumIds$AlbumId('7zlnjYjJotwmyxPWee0s9W'),
 			name: '026/Fußball-Alarm',
 			urlToOpen: 'https://open.spotify.com/album/7zlnjYjJotwmyxPWee0s9W'
 		},
@@ -9342,7 +9345,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fef74e7276d071978640f04c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fef74e7276d071978640f04c', width: 64}
 				]),
-			id: '5nCCuIqR5MsRi3tI90Vu4T',
+			id: $author$project$AlbumIds$AlbumId('5nCCuIqR5MsRi3tI90Vu4T'),
 			name: '025/In letzter Sekunde',
 			urlToOpen: 'https://open.spotify.com/album/5nCCuIqR5MsRi3tI90Vu4T'
 		},
@@ -9353,7 +9356,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0211eb8a5b14af27e82480e9ac', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485111eb8a5b14af27e82480e9ac', width: 64}
 				]),
-			id: '1GsVIL0B05ykaxM0sjjik8',
+			id: $author$project$AlbumIds$AlbumId('1GsVIL0B05ykaxM0sjjik8'),
 			name: '024/Im Bann des Zauberers',
 			urlToOpen: 'https://open.spotify.com/album/1GsVIL0B05ykaxM0sjjik8'
 		},
@@ -9364,7 +9367,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020932a0708b098ae5623034a3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510932a0708b098ae5623034a3', width: 64}
 				]),
-			id: '1cCB23DWt7mRHBFvTsX87C',
+			id: $author$project$AlbumIds$AlbumId('1cCB23DWt7mRHBFvTsX87C'),
 			name: '049/Der singende Geist',
 			urlToOpen: 'https://open.spotify.com/album/1cCB23DWt7mRHBFvTsX87C'
 		},
@@ -9375,7 +9378,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a63e6b5a3cd67a151c5ecc67', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a63e6b5a3cd67a151c5ecc67', width: 64}
 				]),
-			id: '5PEjckgsqkxbpDlgz30wTk',
+			id: $author$project$AlbumIds$AlbumId('5PEjckgsqkxbpDlgz30wTk'),
 			name: '023/Feuer in Rocky Beach',
 			urlToOpen: 'https://open.spotify.com/album/5PEjckgsqkxbpDlgz30wTk'
 		},
@@ -9386,7 +9389,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ec590be3a8ce4a01b2744290', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ec590be3a8ce4a01b2744290', width: 64}
 				]),
-			id: '2ILrLgqLA1pterp2pZoChc',
+			id: $author$project$AlbumIds$AlbumId('2ILrLgqLA1pterp2pZoChc'),
 			name: '022/Einarmige Banditen',
 			urlToOpen: 'https://open.spotify.com/album/2ILrLgqLA1pterp2pZoChc'
 		},
@@ -9397,7 +9400,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02aff9ac46c4253d03575a9911', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851aff9ac46c4253d03575a9911', width: 64}
 				]),
-			id: '3sMdBpUspSRJxhr2oze3le',
+			id: $author$project$AlbumIds$AlbumId('3sMdBpUspSRJxhr2oze3le'),
 			name: '021/Die Geisterjäger',
 			urlToOpen: 'https://open.spotify.com/album/3sMdBpUspSRJxhr2oze3le'
 		},
@@ -9408,7 +9411,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02223b6839f90855c098455e81', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851223b6839f90855c098455e81', width: 64}
 				]),
-			id: '0WwfV73hIbVsEfIUJxFCMN',
+			id: $author$project$AlbumIds$AlbumId('0WwfV73hIbVsEfIUJxFCMN'),
 			name: '020/Die Schmugglerinsel',
 			urlToOpen: 'https://open.spotify.com/album/0WwfV73hIbVsEfIUJxFCMN'
 		},
@@ -9419,7 +9422,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fbed0f6c99c1ddb5a3de3bf0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fbed0f6c99c1ddb5a3de3bf0', width: 64}
 				]),
-			id: '5NmTdnYuPpnDlF9zBTnwHT',
+			id: $author$project$AlbumIds$AlbumId('5NmTdnYuPpnDlF9zBTnwHT'),
 			name: '019/Spur in die Wildnis',
 			urlToOpen: 'https://open.spotify.com/album/5NmTdnYuPpnDlF9zBTnwHT'
 		},
@@ -9430,7 +9433,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f16e3e0914eda3b1c0b27435', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f16e3e0914eda3b1c0b27435', width: 64}
 				]),
-			id: '5Z6HPLDixzbX8TNK889Fr8',
+			id: $author$project$AlbumIds$AlbumId('5Z6HPLDixzbX8TNK889Fr8'),
 			name: '018/Mission Maulwurf',
 			urlToOpen: 'https://open.spotify.com/album/5Z6HPLDixzbX8TNK889Fr8'
 		},
@@ -9441,7 +9444,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ce8c101375618001ba6588de', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ce8c101375618001ba6588de', width: 64}
 				]),
-			id: '2RJHP6Kw1jZrp56WCqtiQW',
+			id: $author$project$AlbumIds$AlbumId('2RJHP6Kw1jZrp56WCqtiQW'),
 			name: '017/Rettet Atlantis!',
 			urlToOpen: 'https://open.spotify.com/album/2RJHP6Kw1jZrp56WCqtiQW'
 		},
@@ -9452,7 +9455,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ff5d0b75f33fbee81d58f40a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ff5d0b75f33fbee81d58f40a', width: 64}
 				]),
-			id: '2xo9X40JoJuDO64Iy5mpNY',
+			id: $author$project$AlbumIds$AlbumId('2xo9X40JoJuDO64Iy5mpNY'),
 			name: '016/Der magische Brunnen',
 			urlToOpen: 'https://open.spotify.com/album/2xo9X40JoJuDO64Iy5mpNY'
 		},
@@ -9463,7 +9466,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d3e02b09cbbf796eadd00d35', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d3e02b09cbbf796eadd00d35', width: 64}
 				]),
-			id: '3Dn23cUQU7RehW7QeBt3cJ',
+			id: $author$project$AlbumIds$AlbumId('3Dn23cUQU7RehW7QeBt3cJ'),
 			name: '015/In der Geisterstadt',
 			urlToOpen: 'https://open.spotify.com/album/3Dn23cUQU7RehW7QeBt3cJ'
 		},
@@ -9474,7 +9477,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fa7d6b3255b2d9455ba1b363', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fa7d6b3255b2d9455ba1b363', width: 64}
 				]),
-			id: '1WTFQcnnJZRhRLkA6Pemom',
+			id: $author$project$AlbumIds$AlbumId('1WTFQcnnJZRhRLkA6Pemom'),
 			name: '014/Gefahr aus dem All',
 			urlToOpen: 'https://open.spotify.com/album/1WTFQcnnJZRhRLkA6Pemom'
 		},
@@ -9485,7 +9488,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02369263e27ea131e478d9d6dd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851369263e27ea131e478d9d6dd', width: 64}
 				]),
-			id: '7xFfmSVyP8y9gcXRPG7xmT',
+			id: $author$project$AlbumIds$AlbumId('7xFfmSVyP8y9gcXRPG7xmT'),
 			name: '013/Im Reich der Rätsel',
 			urlToOpen: 'https://open.spotify.com/album/7xFfmSVyP8y9gcXRPG7xmT'
 		},
@@ -9496,7 +9499,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e81ac99bc15871f625fdcceb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e81ac99bc15871f625fdcceb', width: 64}
 				]),
-			id: '3aYsZOOX3BVsCcHC0MQq3f',
+			id: $author$project$AlbumIds$AlbumId('3aYsZOOX3BVsCcHC0MQq3f'),
 			name: '012/Internetpiraten',
 			urlToOpen: 'https://open.spotify.com/album/3aYsZOOX3BVsCcHC0MQq3f'
 		},
@@ -9507,7 +9510,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f59681b7755f4bc0ed79e661', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f59681b7755f4bc0ed79e661', width: 64}
 				]),
-			id: '6GPxCYDZkEqCLPc7BeCFYb',
+			id: $author$project$AlbumIds$AlbumId('6GPxCYDZkEqCLPc7BeCFYb'),
 			name: '011/Fluch des Goldes',
 			urlToOpen: 'https://open.spotify.com/album/6GPxCYDZkEqCLPc7BeCFYb'
 		},
@@ -9518,7 +9521,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022d2d56cf42e8669f3d4a5837', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512d2d56cf42e8669f3d4a5837', width: 64}
 				]),
-			id: '6PRRmyf0vuFwPeuVLdDq4q',
+			id: $author$project$AlbumIds$AlbumId('6PRRmyf0vuFwPeuVLdDq4q'),
 			name: '010/Spuk in Rocky Beach',
 			urlToOpen: 'https://open.spotify.com/album/6PRRmyf0vuFwPeuVLdDq4q'
 		},
@@ -9529,7 +9532,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024c1c2ac7bef7269f27eecbc3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514c1c2ac7bef7269f27eecbc3', width: 64}
 				]),
-			id: '7A5GQZrirxYgjWCTGpbnbs',
+			id: $author$project$AlbumIds$AlbumId('7A5GQZrirxYgjWCTGpbnbs'),
 			name: '009/SOS über den Wolken',
 			urlToOpen: 'https://open.spotify.com/album/7A5GQZrirxYgjWCTGpbnbs'
 		},
@@ -9540,7 +9543,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025c7f65e95f2d2f3e0b85b2df', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515c7f65e95f2d2f3e0b85b2df', width: 64}
 				]),
-			id: '3RRqQIyDs7AkO3TPbmuRpt',
+			id: $author$project$AlbumIds$AlbumId('3RRqQIyDs7AkO3TPbmuRpt'),
 			name: '008/Nacht unter Wölfen',
 			urlToOpen: 'https://open.spotify.com/album/3RRqQIyDs7AkO3TPbmuRpt'
 		},
@@ -9551,7 +9554,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02dfd8b8cc826b1b02de8a6cc5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851dfd8b8cc826b1b02de8a6cc5', width: 64}
 				]),
-			id: '2rleLzoiSWt5IVyZpkkVHA',
+			id: $author$project$AlbumIds$AlbumId('2rleLzoiSWt5IVyZpkkVHA'),
 			name: '007/Gruft der Piraten',
 			urlToOpen: 'https://open.spotify.com/album/2rleLzoiSWt5IVyZpkkVHA'
 		},
@@ -9562,7 +9565,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027d655efcd6acea1b902caf4a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517d655efcd6acea1b902caf4a', width: 64}
 				]),
-			id: '4TSPWdUo2J4w6VuwQgUK2e',
+			id: $author$project$AlbumIds$AlbumId('4TSPWdUo2J4w6VuwQgUK2e'),
 			name: '006/Gefahr im Gruselgarten',
 			urlToOpen: 'https://open.spotify.com/album/4TSPWdUo2J4w6VuwQgUK2e'
 		},
@@ -9573,7 +9576,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023fd64dd83c0d3a7fe3370a60', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513fd64dd83c0d3a7fe3370a60', width: 64}
 				]),
-			id: '1wNy1x9hCcnmU1vhT7S2Tc',
+			id: $author$project$AlbumIds$AlbumId('1wNy1x9hCcnmU1vhT7S2Tc'),
 			name: '005/Flucht in die Zukunft',
 			urlToOpen: 'https://open.spotify.com/album/1wNy1x9hCcnmU1vhT7S2Tc'
 		},
@@ -9584,7 +9587,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0270c7c26dc7a1b152b581cf23', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485170c7c26dc7a1b152b581cf23', width: 64}
 				]),
-			id: '30w9IzSbHHevllaU299TMh',
+			id: $author$project$AlbumIds$AlbumId('30w9IzSbHHevllaU299TMh'),
 			name: '004/Chaos vor der Kamera',
 			urlToOpen: 'https://open.spotify.com/album/30w9IzSbHHevllaU299TMh'
 		},
@@ -9595,7 +9598,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020d9e068defeb50399324e50e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510d9e068defeb50399324e50e', width: 64}
 				]),
-			id: '0jhxRM2HsImXg5W28JfUv8',
+			id: $author$project$AlbumIds$AlbumId('0jhxRM2HsImXg5W28JfUv8'),
 			name: '003/Invasion der Fliegen',
 			urlToOpen: 'https://open.spotify.com/album/0jhxRM2HsImXg5W28JfUv8'
 		},
@@ -9606,7 +9609,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ecf6240d0429ec8069380d8a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ecf6240d0429ec8069380d8a', width: 64}
 				]),
-			id: '50d2KMK7GtbCTfLqxDfHIS',
+			id: $author$project$AlbumIds$AlbumId('50d2KMK7GtbCTfLqxDfHIS'),
 			name: '002/Radio Rocky Beach',
 			urlToOpen: 'https://open.spotify.com/album/50d2KMK7GtbCTfLqxDfHIS'
 		},
@@ -9617,7 +9620,7 @@ var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025cffe8a80b9933f9164d7a54', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515cffe8a80b9933f9164d7a54', width: 64}
 				]),
-			id: '5mQg8r5ivI0IX5bTV57KyN',
+			id: $author$project$AlbumIds$AlbumId('5mQg8r5ivI0IX5bTV57KyN'),
 			name: '001/Panik im Paradies',
 			urlToOpen: 'https://open.spotify.com/album/5mQg8r5ivI0IX5bTV57KyN'
 		}
@@ -9632,7 +9635,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fa8715993b6fdac18d751d04', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fa8715993b6fdac18d751d04', width: 64}
 				]),
-			id: '7Kqd2LwNPvAYUHqlDXiEwa',
+			id: $author$project$AlbumIds$AlbumId('7Kqd2LwNPvAYUHqlDXiEwa'),
 			name: 'Folge 159: und das riesige Reptil',
 			urlToOpen: 'https://open.spotify.com/album/7Kqd2LwNPvAYUHqlDXiEwa'
 		},
@@ -9643,7 +9646,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026dabb27eacd258503558c7fa', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516dabb27eacd258503558c7fa', width: 64}
 				]),
-			id: '0ZilG3oZQo0c23WQlVAllp',
+			id: $author$project$AlbumIds$AlbumId('0ZilG3oZQo0c23WQlVAllp'),
 			name: 'Folge 158: und das verlorene Maß',
 			urlToOpen: 'https://open.spotify.com/album/0ZilG3oZQo0c23WQlVAllp'
 		},
@@ -9654,7 +9657,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027df45792915ae4b97cd91691', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517df45792915ae4b97cd91691', width: 64}
 				]),
-			id: '7rSCIhERMraymP4Ci5whK5',
+			id: $author$project$AlbumIds$AlbumId('7rSCIhERMraymP4Ci5whK5'),
 			name: 'Folge 157: und das seltsame Haus in der Schlucht',
 			urlToOpen: 'https://open.spotify.com/album/7rSCIhERMraymP4Ci5whK5'
 		},
@@ -9665,7 +9668,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02faa4606d45e68ce4620d51ef', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851faa4606d45e68ce4620d51ef', width: 64}
 				]),
-			id: '2Zn3Tstqsf6H3JG4AdqoQH',
+			id: $author$project$AlbumIds$AlbumId('2Zn3Tstqsf6H3JG4AdqoQH'),
 			name: 'Folge 156: und die verlassene Villa',
 			urlToOpen: 'https://open.spotify.com/album/2Zn3Tstqsf6H3JG4AdqoQH'
 		},
@@ -9676,7 +9679,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028c7bb774491b693d31a03a4c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518c7bb774491b693d31a03a4c', width: 64}
 				]),
-			id: '6aMVk0x5m36k6WK1MsJ97R',
+			id: $author$project$AlbumIds$AlbumId('6aMVk0x5m36k6WK1MsJ97R'),
 			name: 'Folge 155: und das Erbe der Lady Thornton',
 			urlToOpen: 'https://open.spotify.com/album/6aMVk0x5m36k6WK1MsJ97R'
 		},
@@ -9687,7 +9690,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b46cfa707bda3074ead13431', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b46cfa707bda3074ead13431', width: 64}
 				]),
-			id: '2DMgS6HtLTrTowuUaLlEN2',
+			id: $author$project$AlbumIds$AlbumId('2DMgS6HtLTrTowuUaLlEN2'),
 			name: 'Folge 154: und die Geheimbotschaft in der Ruine',
 			urlToOpen: 'https://open.spotify.com/album/2DMgS6HtLTrTowuUaLlEN2'
 		},
@@ -9698,7 +9701,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0222d83a4ee5624001ed4008d4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485122d83a4ee5624001ed4008d4', width: 64}
 				]),
-			id: '3ZacPvwuH9jZze5p9I5rBL',
+			id: $author$project$AlbumIds$AlbumId('3ZacPvwuH9jZze5p9I5rBL'),
 			name: 'Folge 153: und der weiße Hai',
 			urlToOpen: 'https://open.spotify.com/album/3ZacPvwuH9jZze5p9I5rBL'
 		},
@@ -9709,7 +9712,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028e97f79db69b22a01fb18333', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518e97f79db69b22a01fb18333', width: 64}
 				]),
-			id: '6wgnQKNX26heGTGrvZV95p',
+			id: $author$project$AlbumIds$AlbumId('6wgnQKNX26heGTGrvZV95p'),
 			name: 'Folge 152: und das Geheimnis der Kelly Brüder',
 			urlToOpen: 'https://open.spotify.com/album/6wgnQKNX26heGTGrvZV95p'
 		},
@@ -9720,7 +9723,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b00cf55a137032eb01e4be75', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b00cf55a137032eb01e4be75', width: 64}
 				]),
-			id: '2p3j8JvKKwO0D5D3UU05Ou',
+			id: $author$project$AlbumIds$AlbumId('2p3j8JvKKwO0D5D3UU05Ou'),
 			name: 'Folge 151: und das unterirdische Versteck',
 			urlToOpen: 'https://open.spotify.com/album/2p3j8JvKKwO0D5D3UU05Ou'
 		},
@@ -9731,7 +9734,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023af5e7aacf515dd1bd57d4b8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513af5e7aacf515dd1bd57d4b8', width: 64}
 				]),
-			id: '663itkaq3LIGH2C6qYS5F4',
+			id: $author$project$AlbumIds$AlbumId('663itkaq3LIGH2C6qYS5F4'),
 			name: 'Folge 150: und der Verrat auf dem Hausboot',
 			urlToOpen: 'https://open.spotify.com/album/663itkaq3LIGH2C6qYS5F4'
 		},
@@ -9742,7 +9745,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c7134d87735ddad87110527f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c7134d87735ddad87110527f', width: 64}
 				]),
-			id: '5OFleTDaNNHpMEuFGl1oeD',
+			id: $author$project$AlbumIds$AlbumId('5OFleTDaNNHpMEuFGl1oeD'),
 			name: 'Folge 149: und der Schatz in der Drachenschlucht',
 			urlToOpen: 'https://open.spotify.com/album/5OFleTDaNNHpMEuFGl1oeD'
 		},
@@ -9753,7 +9756,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c6bd86a1e2405ac277063de4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c6bd86a1e2405ac277063de4', width: 64}
 				]),
-			id: '3KlFZkxeOGOyRe7BeyoBDS',
+			id: $author$project$AlbumIds$AlbumId('3KlFZkxeOGOyRe7BeyoBDS'),
 			name: 'Folge 148: und die Lichter in der Niemandsbucht',
 			urlToOpen: 'https://open.spotify.com/album/3KlFZkxeOGOyRe7BeyoBDS'
 		},
@@ -9764,7 +9767,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024efe6096f8e5b11badfcc3c0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514efe6096f8e5b11badfcc3c0', width: 64}
 				]),
-			id: '0wQETnTMpsQGqTYi6bzS8o',
+			id: $author$project$AlbumIds$AlbumId('0wQETnTMpsQGqTYi6bzS8o'),
 			name: 'Folge 147: und das unheimliche Dorf im See',
 			urlToOpen: 'https://open.spotify.com/album/0wQETnTMpsQGqTYi6bzS8o'
 		},
@@ -9775,7 +9778,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026d1142c43365debd0ec6ec00', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516d1142c43365debd0ec6ec00', width: 64}
 				]),
-			id: '1LBl7Q25TbtHtD6bJGX7Tn',
+			id: $author$project$AlbumIds$AlbumId('1LBl7Q25TbtHtD6bJGX7Tn'),
 			name: 'Folge 146: und die verdächtige Fahrradbotin',
 			urlToOpen: 'https://open.spotify.com/album/1LBl7Q25TbtHtD6bJGX7Tn'
 		},
@@ -9786,7 +9789,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0213c5a7f568ddf7508ada9be1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485113c5a7f568ddf7508ada9be1', width: 64}
 				]),
-			id: '1MSUqIRZ02rYLly5YOsVYQ',
+			id: $author$project$AlbumIds$AlbumId('1MSUqIRZ02rYLly5YOsVYQ'),
 			name: 'Adventskalender - Fünf Freunde und das Abenteuer im Wald',
 			urlToOpen: 'https://open.spotify.com/album/1MSUqIRZ02rYLly5YOsVYQ'
 		},
@@ -9797,7 +9800,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f839688ca8ed26cf721c8ad3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f839688ca8ed26cf721c8ad3', width: 64}
 				]),
-			id: '4pxQKdeE98Vyg8dVjKsMC6',
+			id: $author$project$AlbumIds$AlbumId('4pxQKdeE98Vyg8dVjKsMC6'),
 			name: 'Folge 145: und die Suche nach dem Mondgestein',
 			urlToOpen: 'https://open.spotify.com/album/4pxQKdeE98Vyg8dVjKsMC6'
 		},
@@ -9808,7 +9811,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025687c8a04a2ddabfb5b7ff1b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515687c8a04a2ddabfb5b7ff1b', width: 64}
 				]),
-			id: '1fx1KSS14TS3bqYRk8Dzqj',
+			id: $author$project$AlbumIds$AlbumId('1fx1KSS14TS3bqYRk8Dzqj'),
 			name: 'Folge 144: und die große Meuterei',
 			urlToOpen: 'https://open.spotify.com/album/1fx1KSS14TS3bqYRk8Dzqj'
 		},
@@ -9819,7 +9822,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0228a30b558cca6d32dc8ad639', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485128a30b558cca6d32dc8ad639', width: 64}
 				]),
-			id: '0HQSazMxcRgtiP3HmQK8sQ',
+			id: $author$project$AlbumIds$AlbumId('0HQSazMxcRgtiP3HmQK8sQ'),
 			name: 'Folge 143: und die verschwundene Riesenschildkröte',
 			urlToOpen: 'https://open.spotify.com/album/0HQSazMxcRgtiP3HmQK8sQ'
 		},
@@ -9830,7 +9833,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029972095ba1d1d802a5ab970b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519972095ba1d1d802a5ab970b', width: 64}
 				]),
-			id: '7dgAjR8rW0xv0knBYJlqVP',
+			id: $author$project$AlbumIds$AlbumId('7dgAjR8rW0xv0knBYJlqVP'),
 			name: 'Folge 142: und der mysteriöse Dieb',
 			urlToOpen: 'https://open.spotify.com/album/7dgAjR8rW0xv0knBYJlqVP'
 		},
@@ -9841,7 +9844,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f6321e4995ac9f52d2722a48', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f6321e4995ac9f52d2722a48', width: 64}
 				]),
-			id: '4WbOKUvwd1d8fi1cRRxMXJ',
+			id: $author$project$AlbumIds$AlbumId('4WbOKUvwd1d8fi1cRRxMXJ'),
 			name: 'Folge 141: und das rätselhafte Spukhaus',
 			urlToOpen: 'https://open.spotify.com/album/4WbOKUvwd1d8fi1cRRxMXJ'
 		},
@@ -9852,7 +9855,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02017e4bdb7b61693c6c5bb593', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851017e4bdb7b61693c6c5bb593', width: 64}
 				]),
-			id: '1kabjjRCVKzJs8pkTOpFyS',
+			id: $author$project$AlbumIds$AlbumId('1kabjjRCVKzJs8pkTOpFyS'),
 			name: '140/und das geheimnisvolle Licht',
 			urlToOpen: 'https://open.spotify.com/album/1kabjjRCVKzJs8pkTOpFyS'
 		},
@@ -9863,7 +9866,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02aa0e506a7da2a10f1d6f005e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851aa0e506a7da2a10f1d6f005e', width: 64}
 				]),
-			id: '2evSFTbb7Kj2EVN1HHo66J',
+			id: $author$project$AlbumIds$AlbumId('2evSFTbb7Kj2EVN1HHo66J'),
 			name: '139/und die Geisterstadt',
 			urlToOpen: 'https://open.spotify.com/album/2evSFTbb7Kj2EVN1HHo66J'
 		},
@@ -9874,7 +9877,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d52c1620a6b8811e3b39f703', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d52c1620a6b8811e3b39f703', width: 64}
 				]),
-			id: '2H46tTqNpMkpR55YN3TAc5',
+			id: $author$project$AlbumIds$AlbumId('2H46tTqNpMkpR55YN3TAc5'),
 			name: '138/am Ende der Welt',
 			urlToOpen: 'https://open.spotify.com/album/2H46tTqNpMkpR55YN3TAc5'
 		},
@@ -9885,7 +9888,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ece3d53421d37fa727e5752c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ece3d53421d37fa727e5752c', width: 64}
 				]),
-			id: '5yoGMEr5doaWJnTlmXfNVV',
+			id: $author$project$AlbumIds$AlbumId('5yoGMEr5doaWJnTlmXfNVV'),
 			name: '137/und der Schokoladendieb von London',
 			urlToOpen: 'https://open.spotify.com/album/5yoGMEr5doaWJnTlmXfNVV'
 		},
@@ -9896,7 +9899,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027d549fd332b40720a76f411c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517d549fd332b40720a76f411c', width: 64}
 				]),
-			id: '61tT5XI9GX40z31yexaoS8',
+			id: $author$project$AlbumIds$AlbumId('61tT5XI9GX40z31yexaoS8'),
 			name: '136/und der wütende Stier',
 			urlToOpen: 'https://open.spotify.com/album/61tT5XI9GX40z31yexaoS8'
 		},
@@ -9907,7 +9910,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020d528287f1a77a30f272029b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510d528287f1a77a30f272029b', width: 64}
 				]),
-			id: '1XEcqpqo05AEb6geQhldoR',
+			id: $author$project$AlbumIds$AlbumId('1XEcqpqo05AEb6geQhldoR'),
 			name: '135/und die verdächtige Ölfirma',
 			urlToOpen: 'https://open.spotify.com/album/1XEcqpqo05AEb6geQhldoR'
 		},
@@ -9918,7 +9921,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fe80ac5153fe605df2aca737', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fe80ac5153fe605df2aca737', width: 64}
 				]),
-			id: '6AN2eovtiP3NXkgcMfNt8k',
+			id: $author$project$AlbumIds$AlbumId('6AN2eovtiP3NXkgcMfNt8k'),
 			name: '134/und die unheimliche Achterbahn',
 			urlToOpen: 'https://open.spotify.com/album/6AN2eovtiP3NXkgcMfNt8k'
 		},
@@ -9929,7 +9932,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0252a77182f90f5378051310e7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485152a77182f90f5378051310e7', width: 64}
 				]),
-			id: '6DOXgeV49OTiik0kUVppDL',
+			id: $author$project$AlbumIds$AlbumId('6DOXgeV49OTiik0kUVppDL'),
 			name: '133/und der Esel in der Tropfsteinhöhle',
 			urlToOpen: 'https://open.spotify.com/album/6DOXgeV49OTiik0kUVppDL'
 		},
@@ -9940,7 +9943,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0242eee23490325e1acbc1bb34', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485142eee23490325e1acbc1bb34', width: 64}
 				]),
-			id: '5sOpvlONkSUPgi09ME8Gki',
+			id: $author$project$AlbumIds$AlbumId('5sOpvlONkSUPgi09ME8Gki'),
 			name: '132/und das Rätsel um den Stromausfall',
 			urlToOpen: 'https://open.spotify.com/album/5sOpvlONkSUPgi09ME8Gki'
 		},
@@ -9951,7 +9954,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028623d3f2d6fb0c23071a7e2d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518623d3f2d6fb0c23071a7e2d', width: 64}
 				]),
-			id: '2TtW4W6HAHWbPcKrQd5x5y',
+			id: $author$project$AlbumIds$AlbumId('2TtW4W6HAHWbPcKrQd5x5y'),
 			name: '131/verfolgen die Fahrraddiebe',
 			urlToOpen: 'https://open.spotify.com/album/2TtW4W6HAHWbPcKrQd5x5y'
 		},
@@ -9962,7 +9965,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ce68cb6b1f5fd1a60ee78881', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ce68cb6b1f5fd1a60ee78881', width: 64}
 				]),
-			id: '2Jee9XPRgwhGWe7SM6ISXd',
+			id: $author$project$AlbumIds$AlbumId('2Jee9XPRgwhGWe7SM6ISXd'),
 			name: '130/und die Glocke der Wikinger',
 			urlToOpen: 'https://open.spotify.com/album/2Jee9XPRgwhGWe7SM6ISXd'
 		},
@@ -9973,7 +9976,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022406d1fa0412f69e8da23a73', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512406d1fa0412f69e8da23a73', width: 64}
 				]),
-			id: '1wvCvWOhELxrXklMXcZM5D',
+			id: $author$project$AlbumIds$AlbumId('1wvCvWOhELxrXklMXcZM5D'),
 			name: '129/und die kleinen Detektive',
 			urlToOpen: 'https://open.spotify.com/album/1wvCvWOhELxrXklMXcZM5D'
 		},
@@ -9984,7 +9987,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0240207481dece5040a07098ba', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485140207481dece5040a07098ba', width: 64}
 				]),
-			id: '7yFFnG7vxrccj0pjLpOVSq',
+			id: $author$project$AlbumIds$AlbumId('7yFFnG7vxrccj0pjLpOVSq'),
 			name: '128/und der unsichtbare Feind',
 			urlToOpen: 'https://open.spotify.com/album/7yFFnG7vxrccj0pjLpOVSq'
 		},
@@ -9995,7 +9998,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021e1a958f43d68ae99b2749ab', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511e1a958f43d68ae99b2749ab', width: 64}
 				]),
-			id: '3VAxpuOINfqGTBUnSyvPNF',
+			id: $author$project$AlbumIds$AlbumId('3VAxpuOINfqGTBUnSyvPNF'),
 			name: '127/und die Teufelsbucht',
 			urlToOpen: 'https://open.spotify.com/album/3VAxpuOINfqGTBUnSyvPNF'
 		},
@@ -10006,7 +10009,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ad28d07dd48cb1ad95615004', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ad28d07dd48cb1ad95615004', width: 64}
 				]),
-			id: '3uTZGVVhXzJ3KU1ZBxPH6d',
+			id: $author$project$AlbumIds$AlbumId('3uTZGVVhXzJ3KU1ZBxPH6d'),
 			name: '126/und die gefährlichen Wurzeln',
 			urlToOpen: 'https://open.spotify.com/album/3uTZGVVhXzJ3KU1ZBxPH6d'
 		},
@@ -10017,7 +10020,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02451ee920c146ec99034f359c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851451ee920c146ec99034f359c', width: 64}
 				]),
-			id: '2akmTQWswD0lQBMedOyhUU',
+			id: $author$project$AlbumIds$AlbumId('2akmTQWswD0lQBMedOyhUU'),
 			name: 'Fünf Freunde und das Tal der Dinosaurier - Das Original-Hörspiel zum Kinofilm',
 			urlToOpen: 'https://open.spotify.com/album/2akmTQWswD0lQBMedOyhUU'
 		},
@@ -10028,7 +10031,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029411a1ff7f6e45c208b5dca7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519411a1ff7f6e45c208b5dca7', width: 64}
 				]),
-			id: '7exgOwKsg2MuiHI4Pb5Ewv',
+			id: $author$project$AlbumIds$AlbumId('7exgOwKsg2MuiHI4Pb5Ewv'),
 			name: '125/und die gemeine Falle',
 			urlToOpen: 'https://open.spotify.com/album/7exgOwKsg2MuiHI4Pb5Ewv'
 		},
@@ -10039,7 +10042,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b001d3f31e3d5e31b9954816', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b001d3f31e3d5e31b9954816', width: 64}
 				]),
-			id: '2MdUrlBdCIa6RanKfQTcv8',
+			id: $author$project$AlbumIds$AlbumId('2MdUrlBdCIa6RanKfQTcv8'),
 			name: '124/auf der Suche nach Timmy',
 			urlToOpen: 'https://open.spotify.com/album/2MdUrlBdCIa6RanKfQTcv8'
 		},
@@ -10050,7 +10053,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0242de123125064c65fab27ee0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485142de123125064c65fab27ee0', width: 64}
 				]),
-			id: '6V5J8fOkRDDXxsxAHi0Ut4',
+			id: $author$project$AlbumIds$AlbumId('6V5J8fOkRDDXxsxAHi0Ut4'),
 			name: '123/und der Zug im Dunkeln',
 			urlToOpen: 'https://open.spotify.com/album/6V5J8fOkRDDXxsxAHi0Ut4'
 		},
@@ -10061,7 +10064,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02960ce8779cedf1aa4297e7be', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851960ce8779cedf1aa4297e7be', width: 64}
 				]),
-			id: '0oX0xTrbf5mm6J9nTMQKGJ',
+			id: $author$project$AlbumIds$AlbumId('0oX0xTrbf5mm6J9nTMQKGJ'),
 			name: '122/und der Großalarm in Kirrin',
 			urlToOpen: 'https://open.spotify.com/album/0oX0xTrbf5mm6J9nTMQKGJ'
 		},
@@ -10072,7 +10075,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d28a9bf76dde887b38304cee', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d28a9bf76dde887b38304cee', width: 64}
 				]),
-			id: '2mH1pMOtZ0rPAHhQ8lnVex',
+			id: $author$project$AlbumIds$AlbumId('2mH1pMOtZ0rPAHhQ8lnVex'),
 			name: '121/und die verlassene Jagdhütte',
 			urlToOpen: 'https://open.spotify.com/album/2mH1pMOtZ0rPAHhQ8lnVex'
 		},
@@ -10083,7 +10086,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b177e7c836f291b737b9e767', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b177e7c836f291b737b9e767', width: 64}
 				]),
-			id: '4NllbPOq0cMAD4NQZ8NIEC',
+			id: $author$project$AlbumIds$AlbumId('4NllbPOq0cMAD4NQZ8NIEC'),
 			name: '120/und die doppelte Erfindung',
 			urlToOpen: 'https://open.spotify.com/album/4NllbPOq0cMAD4NQZ8NIEC'
 		},
@@ -10094,7 +10097,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0272194f196859f4e4f9c76e0c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485172194f196859f4e4f9c76e0c', width: 64}
 				]),
-			id: '66yMv3N4xjf7yfx8xAFnjk',
+			id: $author$project$AlbumIds$AlbumId('66yMv3N4xjf7yfx8xAFnjk'),
 			name: '119/und das versunkene Schiff',
 			urlToOpen: 'https://open.spotify.com/album/66yMv3N4xjf7yfx8xAFnjk'
 		},
@@ -10105,7 +10108,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021563534a6cf308765703f916', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511563534a6cf308765703f916', width: 64}
 				]),
-			id: '2WkrFpSG4nZDMmlO58E6sD',
+			id: $author$project$AlbumIds$AlbumId('2WkrFpSG4nZDMmlO58E6sD'),
 			name: '118/und der falsche Patient',
 			urlToOpen: 'https://open.spotify.com/album/2WkrFpSG4nZDMmlO58E6sD'
 		},
@@ -10116,7 +10119,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0223d52640781f719a04a39266', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485123d52640781f719a04a39266', width: 64}
 				]),
-			id: '7m39uymt9bZuhztX8iRtjw',
+			id: $author$project$AlbumIds$AlbumId('7m39uymt9bZuhztX8iRtjw'),
 			name: '117/und der Wolf in den Highlands',
 			urlToOpen: 'https://open.spotify.com/album/7m39uymt9bZuhztX8iRtjw'
 		},
@@ -10127,7 +10130,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0248181ccc37bcb981d35fb469', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485148181ccc37bcb981d35fb469', width: 64}
 				]),
-			id: '7qL5b8h2mQSNwIokYvHTcd',
+			id: $author$project$AlbumIds$AlbumId('7qL5b8h2mQSNwIokYvHTcd'),
 			name: '116/und der chinesische Pflanzenzauber',
 			urlToOpen: 'https://open.spotify.com/album/7qL5b8h2mQSNwIokYvHTcd'
 		},
@@ -10138,7 +10141,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029fce96c6b45a4d9acd8c5b10', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519fce96c6b45a4d9acd8c5b10', width: 64}
 				]),
-			id: '19fDVxsjnraxX7EiyPaYrf',
+			id: $author$project$AlbumIds$AlbumId('19fDVxsjnraxX7EiyPaYrf'),
 			name: '115/helfen den Flutopfern',
 			urlToOpen: 'https://open.spotify.com/album/19fDVxsjnraxX7EiyPaYrf'
 		},
@@ -10149,7 +10152,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02abcc5b8cbc770778b83a4fc5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851abcc5b8cbc770778b83a4fc5', width: 64}
 				]),
-			id: '0nPeO3y0Zf8aG5EAqxTFyR',
+			id: $author$project$AlbumIds$AlbumId('0nPeO3y0Zf8aG5EAqxTFyR'),
 			name: '114/und der Skandal auf der Freilichtbühne',
 			urlToOpen: 'https://open.spotify.com/album/0nPeO3y0Zf8aG5EAqxTFyR'
 		},
@@ -10160,7 +10163,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0225f929147b5629feeb346618', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485125f929147b5629feeb346618', width: 64}
 				]),
-			id: '4dcEoyqGRRV17uwsRByHG4',
+			id: $author$project$AlbumIds$AlbumId('4dcEoyqGRRV17uwsRByHG4'),
 			name: '113/und das Feuer auf der Felseninsel',
 			urlToOpen: 'https://open.spotify.com/album/4dcEoyqGRRV17uwsRByHG4'
 		},
@@ -10171,7 +10174,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c069537e7d21f6e013dd55c2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c069537e7d21f6e013dd55c2', width: 64}
 				]),
-			id: '1NwFaXCdP89xzoFTmriE0l',
+			id: $author$project$AlbumIds$AlbumId('1NwFaXCdP89xzoFTmriE0l'),
 			name: '112/und der Delfin in der Felsenbucht',
 			urlToOpen: 'https://open.spotify.com/album/1NwFaXCdP89xzoFTmriE0l'
 		},
@@ -10182,7 +10185,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b56549b35f244dee74cf7df1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b56549b35f244dee74cf7df1', width: 64}
 				]),
-			id: '0YO812T6aOroGX98fT3bME',
+			id: $author$project$AlbumIds$AlbumId('0YO812T6aOroGX98fT3bME'),
 			name: '111/und das Geheimverlies im Schloss',
 			urlToOpen: 'https://open.spotify.com/album/0YO812T6aOroGX98fT3bME'
 		},
@@ -10193,7 +10196,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d261b94aab579f7647c433e2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d261b94aab579f7647c433e2', width: 64}
 				]),
-			id: '5sBbygDrYQfmrU7kMXUcZX',
+			id: $author$project$AlbumIds$AlbumId('5sBbygDrYQfmrU7kMXUcZX'),
 			name: '110/auf dem Pfad der Küstenschmuggler',
 			urlToOpen: 'https://open.spotify.com/album/5sBbygDrYQfmrU7kMXUcZX'
 		},
@@ -10204,7 +10207,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b8ea25439c0e644a6fd84092', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b8ea25439c0e644a6fd84092', width: 64}
 				]),
-			id: '6DKW0i593WcqpKBl0xx2Zb',
+			id: $author$project$AlbumIds$AlbumId('6DKW0i593WcqpKBl0xx2Zb'),
 			name: '04/Das Original-Hörspiel zum Kinofilm',
 			urlToOpen: 'https://open.spotify.com/album/6DKW0i593WcqpKBl0xx2Zb'
 		},
@@ -10215,7 +10218,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028575945e4b7727a75953c176', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518575945e4b7727a75953c176', width: 64}
 				]),
-			id: '5SN5o60yKKZTU2uuZNn5Dq',
+			id: $author$project$AlbumIds$AlbumId('5SN5o60yKKZTU2uuZNn5Dq'),
 			name: '109/und die mysteriöse Botschaft',
 			urlToOpen: 'https://open.spotify.com/album/5SN5o60yKKZTU2uuZNn5Dq'
 		},
@@ -10226,7 +10229,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a23035d4a3eba1d0bd794673', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a23035d4a3eba1d0bd794673', width: 64}
 				]),
-			id: '2McZvjpPKOHdb8Eu7Cu9vt',
+			id: $author$project$AlbumIds$AlbumId('2McZvjpPKOHdb8Eu7Cu9vt'),
 			name: '108/und die Entführung im Skigebiet',
 			urlToOpen: 'https://open.spotify.com/album/2McZvjpPKOHdb8Eu7Cu9vt'
 		},
@@ -10237,7 +10240,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025b57d7ad305db82e2d1fa5cb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515b57d7ad305db82e2d1fa5cb', width: 64}
 				]),
-			id: '0Hq1SKPJFP0g75PWisli8G',
+			id: $author$project$AlbumIds$AlbumId('0Hq1SKPJFP0g75PWisli8G'),
 			name: '107/und die Nacht im Safari-Park',
 			urlToOpen: 'https://open.spotify.com/album/0Hq1SKPJFP0g75PWisli8G'
 		},
@@ -10248,7 +10251,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e1274c9bda46516d82a39716', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e1274c9bda46516d82a39716', width: 64}
 				]),
-			id: '4RfwChkrM1deq4fad67E1a',
+			id: $author$project$AlbumIds$AlbumId('4RfwChkrM1deq4fad67E1a'),
 			name: '106/und das geheimnisvolle Polarschiff',
 			urlToOpen: 'https://open.spotify.com/album/4RfwChkrM1deq4fad67E1a'
 		},
@@ -10259,7 +10262,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bd847c666a9d2c8d23cdcb86', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bd847c666a9d2c8d23cdcb86', width: 64}
 				]),
-			id: '48AuM6VSUHPR2Xk2Nmx3cu',
+			id: $author$project$AlbumIds$AlbumId('48AuM6VSUHPR2Xk2Nmx3cu'),
 			name: '105/und das magische Spinnennetz',
 			urlToOpen: 'https://open.spotify.com/album/48AuM6VSUHPR2Xk2Nmx3cu'
 		},
@@ -10270,7 +10273,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c9b7e0b02e72dc9be510a2e6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c9b7e0b02e72dc9be510a2e6', width: 64}
 				]),
-			id: '1hM6Tv4HKwuRnGNbtN4lLz',
+			id: $author$project$AlbumIds$AlbumId('1hM6Tv4HKwuRnGNbtN4lLz'),
 			name: '03/Das Original-Hörspiel zum Kinofilm',
 			urlToOpen: 'https://open.spotify.com/album/1hM6Tv4HKwuRnGNbtN4lLz'
 		},
@@ -10281,7 +10284,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029cae42904f3071026d0a2ae4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519cae42904f3071026d0a2ae4', width: 64}
 				]),
-			id: '3z1g2zjc3aigQ1arAgQuF2',
+			id: $author$project$AlbumIds$AlbumId('3z1g2zjc3aigQ1arAgQuF2'),
 			name: '104/und die Jagd nach der Diebesbande',
 			urlToOpen: 'https://open.spotify.com/album/3z1g2zjc3aigQ1arAgQuF2'
 		},
@@ -10292,7 +10295,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024c40239285926b84a5507850', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514c40239285926b84a5507850', width: 64}
 				]),
-			id: '5N7Dfn8jUp8SId7CybhP6Q',
+			id: $author$project$AlbumIds$AlbumId('5N7Dfn8jUp8SId7CybhP6Q'),
 			name: '103/und die giftigen Feuerquallen',
 			urlToOpen: 'https://open.spotify.com/album/5N7Dfn8jUp8SId7CybhP6Q'
 		},
@@ -10303,7 +10306,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a7c9b5b26cf3fe3d3f785a1b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a7c9b5b26cf3fe3d3f785a1b', width: 64}
 				]),
-			id: '2cEEvRONOp9cLUYudoaO3i',
+			id: $author$project$AlbumIds$AlbumId('2cEEvRONOp9cLUYudoaO3i'),
 			name: '102/und die goldene Maske des Pharao',
 			urlToOpen: 'https://open.spotify.com/album/2cEEvRONOp9cLUYudoaO3i'
 		},
@@ -10314,7 +10317,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b9a46bc4cf62687919ccda49', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b9a46bc4cf62687919ccda49', width: 64}
 				]),
-			id: '6GpIAoh3k8slwVBsNHUqqX',
+			id: $author$project$AlbumIds$AlbumId('6GpIAoh3k8slwVBsNHUqqX'),
 			name: '101/und der vergessene Schatz',
 			urlToOpen: 'https://open.spotify.com/album/6GpIAoh3k8slwVBsNHUqqX'
 		},
@@ -10325,7 +10328,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02182e2b8a40dac1efada17afe', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851182e2b8a40dac1efada17afe', width: 64}
 				]),
-			id: '7MJOaVJijHPPdc7ERn6W3h',
+			id: $author$project$AlbumIds$AlbumId('7MJOaVJijHPPdc7ERn6W3h'),
 			name: '100/und das Gorillakind in Gefahr',
 			urlToOpen: 'https://open.spotify.com/album/7MJOaVJijHPPdc7ERn6W3h'
 		},
@@ -10336,7 +10339,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02293872f31bb53e64095d7342', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851293872f31bb53e64095d7342', width: 64}
 				]),
-			id: '7GgmiV6ZH3yklTQpIrgQCC',
+			id: $author$project$AlbumIds$AlbumId('7GgmiV6ZH3yklTQpIrgQCC'),
 			name: '02/Das Original-Hörspiel zum Kinofilm',
 			urlToOpen: 'https://open.spotify.com/album/7GgmiV6ZH3yklTQpIrgQCC'
 		},
@@ -10347,7 +10350,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029de5544821c1fb7950d9b11b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519de5544821c1fb7950d9b11b', width: 64}
 				]),
-			id: '1nFkBK73s1YS93ZWFRDbF5',
+			id: $author$project$AlbumIds$AlbumId('1nFkBK73s1YS93ZWFRDbF5'),
 			name: '099/und der seltsame Leuchtturm',
 			urlToOpen: 'https://open.spotify.com/album/1nFkBK73s1YS93ZWFRDbF5'
 		},
@@ -10358,7 +10361,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bad2f813c4cda57acf1f9fb6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bad2f813c4cda57acf1f9fb6', width: 64}
 				]),
-			id: '0cX49g0wBtvDryEyU5FhwA',
+			id: $author$project$AlbumIds$AlbumId('0cX49g0wBtvDryEyU5FhwA'),
 			name: '098/und die Legende der Zwillingseiche',
 			urlToOpen: 'https://open.spotify.com/album/0cX49g0wBtvDryEyU5FhwA'
 		},
@@ -10369,7 +10372,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fa5fb3707ce24ed4a8f25ecb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fa5fb3707ce24ed4a8f25ecb', width: 64}
 				]),
-			id: '0a8k5a76wziBi7sXXXkAEv',
+			id: $author$project$AlbumIds$AlbumId('0a8k5a76wziBi7sXXXkAEv'),
 			name: '097/auf der Spur der Silberdiebe',
 			urlToOpen: 'https://open.spotify.com/album/0a8k5a76wziBi7sXXXkAEv'
 		},
@@ -10380,7 +10383,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023f6e329ceb2e1a7348173a2a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513f6e329ceb2e1a7348173a2a', width: 64}
 				]),
-			id: '5Vj6YBjqO0DqRy4Tukg41u',
+			id: $author$project$AlbumIds$AlbumId('5Vj6YBjqO0DqRy4Tukg41u'),
 			name: '096/und das gefährliche Treibgut',
 			urlToOpen: 'https://open.spotify.com/album/5Vj6YBjqO0DqRy4Tukg41u'
 		},
@@ -10391,7 +10394,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0234d381145a0f3f1577342931', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485134d381145a0f3f1577342931', width: 64}
 				]),
-			id: '3TM4JQFuCVRI3tKP8fl6yp',
+			id: $author$project$AlbumIds$AlbumId('3TM4JQFuCVRI3tKP8fl6yp'),
 			name: '095/in der Höhle des Urmenschen',
 			urlToOpen: 'https://open.spotify.com/album/3TM4JQFuCVRI3tKP8fl6yp'
 		},
@@ -10402,7 +10405,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02eec85bdb9212c648ed727d70', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851eec85bdb9212c648ed727d70', width: 64}
 				]),
-			id: '3ZWewGEaOLmtAwxiPYvtSh',
+			id: $author$project$AlbumIds$AlbumId('3ZWewGEaOLmtAwxiPYvtSh'),
 			name: 'Der Original-Soundtrack zum Kinofilm',
 			urlToOpen: 'https://open.spotify.com/album/3ZWewGEaOLmtAwxiPYvtSh'
 		},
@@ -10413,7 +10416,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f523efb3d9903c04ac0f5d0d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f523efb3d9903c04ac0f5d0d', width: 64}
 				]),
-			id: '3dDoz1yLMHx0n6rllLAXeV',
+			id: $author$project$AlbumIds$AlbumId('3dDoz1yLMHx0n6rllLAXeV'),
 			name: '01/Das Original-Hörspiel zum Kinofilm',
 			urlToOpen: 'https://open.spotify.com/album/3dDoz1yLMHx0n6rllLAXeV'
 		},
@@ -10424,7 +10427,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a508ef78de9d0a358bc2510a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a508ef78de9d0a358bc2510a', width: 64}
 				]),
-			id: '6jXHqJzpe6vtywUv5jIHHE',
+			id: $author$project$AlbumIds$AlbumId('6jXHqJzpe6vtywUv5jIHHE'),
 			name: '094/und die Sturmflut',
 			urlToOpen: 'https://open.spotify.com/album/6jXHqJzpe6vtywUv5jIHHE'
 		},
@@ -10435,7 +10438,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ca793522146cffef1c52e359', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ca793522146cffef1c52e359', width: 64}
 				]),
-			id: '22KZteRiQXIeJimUZ2TbK3',
+			id: $author$project$AlbumIds$AlbumId('22KZteRiQXIeJimUZ2TbK3'),
 			name: '093/und das Geheimnis des Winterwaldes',
 			urlToOpen: 'https://open.spotify.com/album/22KZteRiQXIeJimUZ2TbK3'
 		},
@@ -10446,7 +10449,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c88c141a9717e9833c71ee78', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c88c141a9717e9833c71ee78', width: 64}
 				]),
-			id: '6pOqvlELjegUu4JxJNeKQR',
+			id: $author$project$AlbumIds$AlbumId('6pOqvlELjegUu4JxJNeKQR'),
 			name: '092/auf der Insel der Seeräuber',
 			urlToOpen: 'https://open.spotify.com/album/6pOqvlELjegUu4JxJNeKQR'
 		},
@@ -10457,7 +10460,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02014ff8ab7caaf8b93770d4d2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851014ff8ab7caaf8b93770d4d2', width: 64}
 				]),
-			id: '2G3MuFljF6VMDESi6Vonll',
+			id: $author$project$AlbumIds$AlbumId('2G3MuFljF6VMDESi6Vonll'),
 			name: '091/und der Schatz aus dem U-Boot',
 			urlToOpen: 'https://open.spotify.com/album/2G3MuFljF6VMDESi6Vonll'
 		},
@@ -10468,7 +10471,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0285411e7b72e385020c45a1ac', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485185411e7b72e385020c45a1ac', width: 64}
 				]),
-			id: '6vNpPneJaDekq3fidhNPN7',
+			id: $author$project$AlbumIds$AlbumId('6vNpPneJaDekq3fidhNPN7'),
 			name: '090/retten die Honigbienen',
 			urlToOpen: 'https://open.spotify.com/album/6vNpPneJaDekq3fidhNPN7'
 		},
@@ -10479,7 +10482,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029a5e06b75e4734b30cd8324e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519a5e06b75e4734b30cd8324e', width: 64}
 				]),
-			id: '6g0meqQ9kw3Y0UFiWzyJ7k',
+			id: $author$project$AlbumIds$AlbumId('6g0meqQ9kw3Y0UFiWzyJ7k'),
 			name: '089/und das Familienwappen',
 			urlToOpen: 'https://open.spotify.com/album/6g0meqQ9kw3Y0UFiWzyJ7k'
 		},
@@ -10490,7 +10493,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0269d7b894a83d68917eb74e47', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485169d7b894a83d68917eb74e47', width: 64}
 				]),
-			id: '6MMT7DkAPlVeTz6hvvXXW0',
+			id: $author$project$AlbumIds$AlbumId('6MMT7DkAPlVeTz6hvvXXW0'),
 			name: '088/und das Gespenst von Canterbury',
 			urlToOpen: 'https://open.spotify.com/album/6MMT7DkAPlVeTz6hvvXXW0'
 		},
@@ -10501,7 +10504,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02edf602653a077ffcb349df75', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851edf602653a077ffcb349df75', width: 64}
 				]),
-			id: '3Qud7esyANFkH9t13BEPUw',
+			id: $author$project$AlbumIds$AlbumId('3Qud7esyANFkH9t13BEPUw'),
 			name: '087/und das rätselhafte Sternbild',
 			urlToOpen: 'https://open.spotify.com/album/3Qud7esyANFkH9t13BEPUw'
 		},
@@ -10512,7 +10515,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0295d38ee35a2479d233398647', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485195d38ee35a2479d233398647', width: 64}
 				]),
-			id: '1niKUvurX2rFPMkFdYSvGk',
+			id: $author$project$AlbumIds$AlbumId('1niKUvurX2rFPMkFdYSvGk'),
 			name: '086/und die verbotenen Blüten',
 			urlToOpen: 'https://open.spotify.com/album/1niKUvurX2rFPMkFdYSvGk'
 		},
@@ -10523,7 +10526,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f45c82f5839a94d14692fa6a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f45c82f5839a94d14692fa6a', width: 64}
 				]),
-			id: '7vGPi7jFvzn6d5RgQnle6h',
+			id: $author$project$AlbumIds$AlbumId('7vGPi7jFvzn6d5RgQnle6h'),
 			name: '085/und der verschwundene Wikingerhelm',
 			urlToOpen: 'https://open.spotify.com/album/7vGPi7jFvzn6d5RgQnle6h'
 		},
@@ -10534,7 +10537,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025e1c822cba413f47acbb0187', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515e1c822cba413f47acbb0187', width: 64}
 				]),
-			id: '2OeNjbHqDfve97D2q0NJJg',
+			id: $author$project$AlbumIds$AlbumId('2OeNjbHqDfve97D2q0NJJg'),
 			name: '084/und der Gesang der Sirenen',
 			urlToOpen: 'https://open.spotify.com/album/2OeNjbHqDfve97D2q0NJJg'
 		},
@@ -10545,7 +10548,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0274d55266c18019207330656d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485174d55266c18019207330656d', width: 64}
 				]),
-			id: '6xtKrk6LQFbEjERrUlPkzT',
+			id: $author$project$AlbumIds$AlbumId('6xtKrk6LQFbEjERrUlPkzT'),
 			name: '083/und das Abenteuer im Hundeschlitten',
 			urlToOpen: 'https://open.spotify.com/album/6xtKrk6LQFbEjERrUlPkzT'
 		},
@@ -10556,7 +10559,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c7cc5f6e9e2181d37dfd78fa', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c7cc5f6e9e2181d37dfd78fa', width: 64}
 				]),
-			id: '7DFYLos47Brgbc0r4Nb7vt',
+			id: $author$project$AlbumIds$AlbumId('7DFYLos47Brgbc0r4Nb7vt'),
 			name: '082/und der verhängnisvolle Treibsand',
 			urlToOpen: 'https://open.spotify.com/album/7DFYLos47Brgbc0r4Nb7vt'
 		},
@@ -10567,7 +10570,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02434a2796166a8da2f0f194a8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851434a2796166a8da2f0f194a8', width: 64}
 				]),
-			id: '2Yk0FlTxdQwOBiyazcL7E9',
+			id: $author$project$AlbumIds$AlbumId('2Yk0FlTxdQwOBiyazcL7E9'),
 			name: '081/und das Höhlen-Labyrinth',
 			urlToOpen: 'https://open.spotify.com/album/2Yk0FlTxdQwOBiyazcL7E9'
 		},
@@ -10578,7 +10581,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028a39d04f87bac063a804dd52', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518a39d04f87bac063a804dd52', width: 64}
 				]),
-			id: '0dUM4mpdxdrhu5n2FqvhgJ',
+			id: $author$project$AlbumIds$AlbumId('0dUM4mpdxdrhu5n2FqvhgJ'),
 			name: '080/und das gefährliche Antoniusfeuer',
 			urlToOpen: 'https://open.spotify.com/album/0dUM4mpdxdrhu5n2FqvhgJ'
 		},
@@ -10589,7 +10592,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f176c838532cc81d7456770f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f176c838532cc81d7456770f', width: 64}
 				]),
-			id: '6Ob5DYYECuqRisjiNvL5GM',
+			id: $author$project$AlbumIds$AlbumId('6Ob5DYYECuqRisjiNvL5GM'),
 			name: '079/und das Rätsel des Drachenbootes',
 			urlToOpen: 'https://open.spotify.com/album/6Ob5DYYECuqRisjiNvL5GM'
 		},
@@ -10600,7 +10603,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f2e277310375ad8388283d28', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f2e277310375ad8388283d28', width: 64}
 				]),
-			id: '0Oe8F56HOoKhJX7tvlvL11',
+			id: $author$project$AlbumIds$AlbumId('0Oe8F56HOoKhJX7tvlvL11'),
 			name: '078/und die Piraten-Bande',
 			urlToOpen: 'https://open.spotify.com/album/0Oe8F56HOoKhJX7tvlvL11'
 		},
@@ -10611,7 +10614,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029ba0e1c46dfda268c407aef8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519ba0e1c46dfda268c407aef8', width: 64}
 				]),
-			id: '7xBJ98nCNVCOclOSnYOzeI',
+			id: $author$project$AlbumIds$AlbumId('7xBJ98nCNVCOclOSnYOzeI'),
 			name: '077/und das unheimliche Bergmonster',
 			urlToOpen: 'https://open.spotify.com/album/7xBJ98nCNVCOclOSnYOzeI'
 		},
@@ -10622,7 +10625,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02435b1eb477985f9155b9608f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851435b1eb477985f9155b9608f', width: 64}
 				]),
-			id: '0l8qQcC2q5BiOSYUoQCllH',
+			id: $author$project$AlbumIds$AlbumId('0l8qQcC2q5BiOSYUoQCllH'),
 			name: '076//und das Geheimnis des Maskottchens',
 			urlToOpen: 'https://open.spotify.com/album/0l8qQcC2q5BiOSYUoQCllH'
 		},
@@ -10633,7 +10636,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f62318a00343ce74a725d963', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f62318a00343ce74a725d963', width: 64}
 				]),
-			id: '166ZxOtFgr5y5McnH27vwU',
+			id: $author$project$AlbumIds$AlbumId('166ZxOtFgr5y5McnH27vwU'),
 			name: '075/und das unheimliche Hexenhaus',
 			urlToOpen: 'https://open.spotify.com/album/166ZxOtFgr5y5McnH27vwU'
 		},
@@ -10644,7 +10647,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02babc9fd010f33aaafb9eeda8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851babc9fd010f33aaafb9eeda8', width: 64}
 				]),
-			id: '5He2m6kpqw58EYAbBOpxhf',
+			id: $author$project$AlbumIds$AlbumId('5He2m6kpqw58EYAbBOpxhf'),
 			name: '074/verfolgen den Wilderer',
 			urlToOpen: 'https://open.spotify.com/album/5He2m6kpqw58EYAbBOpxhf'
 		},
@@ -10655,7 +10658,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027b0adef065cfe47818c8c4f8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517b0adef065cfe47818c8c4f8', width: 64}
 				]),
-			id: '0nwiPm3ZUes1vNBto5sxN4',
+			id: $author$project$AlbumIds$AlbumId('0nwiPm3ZUes1vNBto5sxN4'),
 			name: '073/und das Rätsel der Zinnmine',
 			urlToOpen: 'https://open.spotify.com/album/0nwiPm3ZUes1vNBto5sxN4'
 		},
@@ -10666,7 +10669,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c0e67736a0f1fa9278ceb52c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c0e67736a0f1fa9278ceb52c', width: 64}
 				]),
-			id: '6e4bQvU28sgg4OIhqhDvmp',
+			id: $author$project$AlbumIds$AlbumId('6e4bQvU28sgg4OIhqhDvmp'),
 			name: '072/auf der Spur der Entführer',
 			urlToOpen: 'https://open.spotify.com/album/6e4bQvU28sgg4OIhqhDvmp'
 		},
@@ -10677,7 +10680,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0202f53928750bf78dd20f3047', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485102f53928750bf78dd20f3047', width: 64}
 				]),
-			id: '4Y6aidArNM8JD6z85nRHv4',
+			id: $author$project$AlbumIds$AlbumId('4Y6aidArNM8JD6z85nRHv4'),
 			name: '071/und der Verrat an Bord',
 			urlToOpen: 'https://open.spotify.com/album/4Y6aidArNM8JD6z85nRHv4'
 		},
@@ -10688,7 +10691,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02755ca28dca32ffb4aa09a191', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851755ca28dca32ffb4aa09a191', width: 64}
 				]),
-			id: '4K5VhGgTc0HHpqxnOnpY3b',
+			id: $author$project$AlbumIds$AlbumId('4K5VhGgTc0HHpqxnOnpY3b'),
 			name: '070/und die Rückkehr zur Gespensterinsel',
 			urlToOpen: 'https://open.spotify.com/album/4K5VhGgTc0HHpqxnOnpY3b'
 		},
@@ -10699,7 +10702,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d31395182390afaa1f4a62c4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d31395182390afaa1f4a62c4', width: 64}
 				]),
-			id: '5c6cJEmVIZMCDoIM8C4mBJ',
+			id: $author$project$AlbumIds$AlbumId('5c6cJEmVIZMCDoIM8C4mBJ'),
 			name: '069/und die Gefahr für die Felseninsel',
 			urlToOpen: 'https://open.spotify.com/album/5c6cJEmVIZMCDoIM8C4mBJ'
 		},
@@ -10710,7 +10713,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02914248cb2ed93e47deca5e0f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851914248cb2ed93e47deca5e0f', width: 64}
 				]),
-			id: '4H8aT42VazYkjXLA30Rs46',
+			id: $author$project$AlbumIds$AlbumId('4H8aT42VazYkjXLA30Rs46'),
 			name: '068/und die Druiden von Stonehenge',
 			urlToOpen: 'https://open.spotify.com/album/4H8aT42VazYkjXLA30Rs46'
 		},
@@ -10721,7 +10724,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024d2d1d83ec1d5a6a5653bd49', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514d2d1d83ec1d5a6a5653bd49', width: 64}
 				]),
-			id: '1Un1S8omjGi2weFV5s8krP',
+			id: $author$project$AlbumIds$AlbumId('1Un1S8omjGi2weFV5s8krP'),
 			name: '067/und der unheimliche Brandstifter',
 			urlToOpen: 'https://open.spotify.com/album/1Un1S8omjGi2weFV5s8krP'
 		},
@@ -10732,7 +10735,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a6452da6ff98881c3b2beda2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a6452da6ff98881c3b2beda2', width: 64}
 				]),
-			id: '1RUrpfazmZTqx95YxWHQTA',
+			id: $author$project$AlbumIds$AlbumId('1RUrpfazmZTqx95YxWHQTA'),
 			name: '066/und das Seeungeheuer',
 			urlToOpen: 'https://open.spotify.com/album/1RUrpfazmZTqx95YxWHQTA'
 		},
@@ -10743,7 +10746,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020eabb70eba8e9f7cf1fb4816', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510eabb70eba8e9f7cf1fb4816', width: 64}
 				]),
-			id: '3VISsuJBFrcP7NxAo3aQWl',
+			id: $author$project$AlbumIds$AlbumId('3VISsuJBFrcP7NxAo3aQWl'),
 			name: '065/und die schwarze Festung',
 			urlToOpen: 'https://open.spotify.com/album/3VISsuJBFrcP7NxAo3aQWl'
 		},
@@ -10754,7 +10757,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a441448575d915e8b38339f7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a441448575d915e8b38339f7', width: 64}
 				]),
-			id: '3UDg2jZxtAu2FzZYWPFida',
+			id: $author$project$AlbumIds$AlbumId('3UDg2jZxtAu2FzZYWPFida'),
 			name: '064/geraten unter Verdacht',
 			urlToOpen: 'https://open.spotify.com/album/3UDg2jZxtAu2FzZYWPFida'
 		},
@@ -10765,7 +10768,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0294d85b1fa64016131f5a5c11', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485194d85b1fa64016131f5a5c11', width: 64}
 				]),
-			id: '3MULBnI2WPbx3fwThf5mu1',
+			id: $author$project$AlbumIds$AlbumId('3MULBnI2WPbx3fwThf5mu1'),
 			name: '063/und der Stein des Pharao',
 			urlToOpen: 'https://open.spotify.com/album/3MULBnI2WPbx3fwThf5mu1'
 		},
@@ -10776,7 +10779,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e0ef7a786cfd22d5ec42fe42', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e0ef7a786cfd22d5ec42fe42', width: 64}
 				]),
-			id: '6m9zlu731zUcXa6s6YwNH7',
+			id: $author$project$AlbumIds$AlbumId('6m9zlu731zUcXa6s6YwNH7'),
 			name: '062/und das Spuk-Festival',
 			urlToOpen: 'https://open.spotify.com/album/6m9zlu731zUcXa6s6YwNH7'
 		},
@@ -10787,7 +10790,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025bd90901b367dbcdab88add6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515bd90901b367dbcdab88add6', width: 64}
 				]),
-			id: '6c97zHkOHsOazhPs5o04My',
+			id: $author$project$AlbumIds$AlbumId('6c97zHkOHsOazhPs5o04My'),
 			name: '061/und die Aufregung im Raubtierhaus',
 			urlToOpen: 'https://open.spotify.com/album/6c97zHkOHsOazhPs5o04My'
 		},
@@ -10798,7 +10801,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0239ed056712aa2f97d2a7d507', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485139ed056712aa2f97d2a7d507', width: 64}
 				]),
-			id: '6EhVUKOjpa6zOR3HJrmQSw',
+			id: $author$project$AlbumIds$AlbumId('6EhVUKOjpa6zOR3HJrmQSw'),
 			name: '060/tauchen unter',
 			urlToOpen: 'https://open.spotify.com/album/6EhVUKOjpa6zOR3HJrmQSw'
 		},
@@ -10809,7 +10812,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0250edba949fbf4cecc52b0154', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485150edba949fbf4cecc52b0154', width: 64}
 				]),
-			id: '45PizjOsP8gWSGoEwpyj8q',
+			id: $author$project$AlbumIds$AlbumId('45PizjOsP8gWSGoEwpyj8q'),
 			name: '059/und das Abenteuer im Schnee',
 			urlToOpen: 'https://open.spotify.com/album/45PizjOsP8gWSGoEwpyj8q'
 		},
@@ -10820,7 +10823,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f9ca3aee8a7a66b8d773e94e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f9ca3aee8a7a66b8d773e94e', width: 64}
 				]),
-			id: '4QKoFx1seuUXKjZkAzCY4x',
+			id: $author$project$AlbumIds$AlbumId('4QKoFx1seuUXKjZkAzCY4x'),
 			name: '058/und die afrikanische Statue',
 			urlToOpen: 'https://open.spotify.com/album/4QKoFx1seuUXKjZkAzCY4x'
 		},
@@ -10831,7 +10834,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d219dae38ddb7f3297ed3484', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d219dae38ddb7f3297ed3484', width: 64}
 				]),
-			id: '5IyZl2UWrXvzEZxgTNmRYs',
+			id: $author$project$AlbumIds$AlbumId('5IyZl2UWrXvzEZxgTNmRYs'),
 			name: '057/und der fliegende Teppich',
 			urlToOpen: 'https://open.spotify.com/album/5IyZl2UWrXvzEZxgTNmRYs'
 		},
@@ -10842,7 +10845,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024bbf721deb9b13b51992415f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514bbf721deb9b13b51992415f', width: 64}
 				]),
-			id: '2qpNu6Uzrrt2YG6wksmCj9',
+			id: $author$project$AlbumIds$AlbumId('2qpNu6Uzrrt2YG6wksmCj9'),
 			name: '056/und die geheimnisvolle Erbschaft',
 			urlToOpen: 'https://open.spotify.com/album/2qpNu6Uzrrt2YG6wksmCj9'
 		},
@@ -10853,7 +10856,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025084ee885c99725430fc298b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515084ee885c99725430fc298b', width: 64}
 				]),
-			id: '10MCeSGudi98fDs54Yo3LZ',
+			id: $author$project$AlbumIds$AlbumId('10MCeSGudi98fDs54Yo3LZ'),
 			name: '055/und die goldene Schlange',
 			urlToOpen: 'https://open.spotify.com/album/10MCeSGudi98fDs54Yo3LZ'
 		},
@@ -10864,7 +10867,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022b22219b4d4b0c4c268a0353', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512b22219b4d4b0c4c268a0353', width: 64}
 				]),
-			id: '63LJzNuzHOR8zyhICkhZ3U',
+			id: $author$project$AlbumIds$AlbumId('63LJzNuzHOR8zyhICkhZ3U'),
 			name: '054/suchen den Stern des Nordens',
 			urlToOpen: 'https://open.spotify.com/album/63LJzNuzHOR8zyhICkhZ3U'
 		},
@@ -10875,7 +10878,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bbe6178d2e11aca6d546f7f7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bbe6178d2e11aca6d546f7f7', width: 64}
 				]),
-			id: '7KL5tfLbkTgJ3SW23YpnLH',
+			id: $author$project$AlbumIds$AlbumId('7KL5tfLbkTgJ3SW23YpnLH'),
 			name: '053/und die geheimnisvollen Kornkreise',
 			urlToOpen: 'https://open.spotify.com/album/7KL5tfLbkTgJ3SW23YpnLH'
 		},
@@ -10886,7 +10889,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026828f5f32458e75cb4b0f4c8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516828f5f32458e75cb4b0f4c8', width: 64}
 				]),
-			id: '6K9b0vkwZu1As1Ynymut6e',
+			id: $author$project$AlbumIds$AlbumId('6K9b0vkwZu1As1Ynymut6e'),
 			name: '052/und das Phantom von Sherwood Forest',
 			urlToOpen: 'https://open.spotify.com/album/6K9b0vkwZu1As1Ynymut6e'
 		},
@@ -10897,7 +10900,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027831cf9c6d9e17ce340334bc', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517831cf9c6d9e17ce340334bc', width: 64}
 				]),
-			id: '1Y3pOmF4IXHU08Rop0TTN0',
+			id: $author$project$AlbumIds$AlbumId('1Y3pOmF4IXHU08Rop0TTN0'),
 			name: '051/und der Eisenbahnraub',
 			urlToOpen: 'https://open.spotify.com/album/1Y3pOmF4IXHU08Rop0TTN0'
 		},
@@ -10908,7 +10911,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021e5547de98a63939421147eb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511e5547de98a63939421147eb', width: 64}
 				]),
-			id: '5FFMI41Qtmi70WSUZhSH0Z',
+			id: $author$project$AlbumIds$AlbumId('5FFMI41Qtmi70WSUZhSH0Z'),
 			name: '050/Timmy in Gefahr',
 			urlToOpen: 'https://open.spotify.com/album/5FFMI41Qtmi70WSUZhSH0Z'
 		},
@@ -10919,7 +10922,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022347dc07e2ae51f60658f296', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512347dc07e2ae51f60658f296', width: 64}
 				]),
-			id: '32saLGUXvsHEw0hKYNr0yI',
+			id: $author$project$AlbumIds$AlbumId('32saLGUXvsHEw0hKYNr0yI'),
 			name: '049/und die Frau ohne Gedächtnis',
 			urlToOpen: 'https://open.spotify.com/album/32saLGUXvsHEw0hKYNr0yI'
 		},
@@ -10930,7 +10933,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020c649066f1ef7f8f39a609a6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510c649066f1ef7f8f39a609a6', width: 64}
 				]),
-			id: '1TDoizBwEYox8icnxRtNc5',
+			id: $author$project$AlbumIds$AlbumId('1TDoizBwEYox8icnxRtNc5'),
 			name: '048/und die Schrift der Tempelritter',
 			urlToOpen: 'https://open.spotify.com/album/1TDoizBwEYox8icnxRtNc5'
 		},
@@ -10941,7 +10944,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026795b1ce33512fc9cfcbaf7e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516795b1ce33512fc9cfcbaf7e', width: 64}
 				]),
-			id: '0TP7S0UMx4ekRfkWYLNRAN',
+			id: $author$project$AlbumIds$AlbumId('0TP7S0UMx4ekRfkWYLNRAN'),
 			name: '047/und der singende Schrank',
 			urlToOpen: 'https://open.spotify.com/album/0TP7S0UMx4ekRfkWYLNRAN'
 		},
@@ -10952,7 +10955,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0275fbe3903dfa5fcb55adfd7f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485175fbe3903dfa5fcb55adfd7f', width: 64}
 				]),
-			id: '5C9uMZlffC4HuHBA1VWHTH',
+			id: $author$project$AlbumIds$AlbumId('5C9uMZlffC4HuHBA1VWHTH'),
 			name: '046/lösen das Rätsel des Landschulheims',
 			urlToOpen: 'https://open.spotify.com/album/5C9uMZlffC4HuHBA1VWHTH'
 		},
@@ -10963,7 +10966,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0232e3e721534be904f4be2f3d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485132e3e721534be904f4be2f3d', width: 64}
 				]),
-			id: '09HT8wAayNt5y4EWA7Hont',
+			id: $author$project$AlbumIds$AlbumId('09HT8wAayNt5y4EWA7Hont'),
 			name: '045/und das Bootshaus in der Nebelbucht',
 			urlToOpen: 'https://open.spotify.com/album/09HT8wAayNt5y4EWA7Hont'
 		},
@@ -10974,7 +10977,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ee5c06065b5d883bbc215d2c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ee5c06065b5d883bbc215d2c', width: 64}
 				]),
-			id: '325FWbbT8I4Bsjfq7MRCSw',
+			id: $author$project$AlbumIds$AlbumId('325FWbbT8I4Bsjfq7MRCSw'),
 			name: '044/und die Flaschenpost',
 			urlToOpen: 'https://open.spotify.com/album/325FWbbT8I4Bsjfq7MRCSw'
 		},
@@ -10985,7 +10988,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02376522059f492279c6f1f249', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851376522059f492279c6f1f249', width: 64}
 				]),
-			id: '4QvS9DYUA9FI97z5uignYO',
+			id: $author$project$AlbumIds$AlbumId('4QvS9DYUA9FI97z5uignYO'),
 			name: '043/und der unheimliche Mönch',
 			urlToOpen: 'https://open.spotify.com/album/4QvS9DYUA9FI97z5uignYO'
 		},
@@ -10996,7 +10999,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e838fdfef602d33aa67d2897', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e838fdfef602d33aa67d2897', width: 64}
 				]),
-			id: '34QraAd9TYolYLJln84Fcq',
+			id: $author$project$AlbumIds$AlbumId('34QraAd9TYolYLJln84Fcq'),
 			name: '042/und der Dolch des Piraten',
 			urlToOpen: 'https://open.spotify.com/album/34QraAd9TYolYLJln84Fcq'
 		},
@@ -11007,7 +11010,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e02ce2d9eb2f71d3d3b928b7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e02ce2d9eb2f71d3d3b928b7', width: 64}
 				]),
-			id: '14oT9rq1E7KG10UyohENQz',
+			id: $author$project$AlbumIds$AlbumId('14oT9rq1E7KG10UyohENQz'),
 			name: '041/und die Spur des Dinosauriers',
 			urlToOpen: 'https://open.spotify.com/album/14oT9rq1E7KG10UyohENQz'
 		},
@@ -11018,7 +11021,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d36ab1c5882a58ff2d288386', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d36ab1c5882a58ff2d288386', width: 64}
 				]),
-			id: '6yL9LUp5Yf9Lmd5B85QmV1',
+			id: $author$project$AlbumIds$AlbumId('6yL9LUp5Yf9Lmd5B85QmV1'),
 			name: '040/und das verschwundene Pferd',
 			urlToOpen: 'https://open.spotify.com/album/6yL9LUp5Yf9Lmd5B85QmV1'
 		},
@@ -11029,7 +11032,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0244f57aec90b55eadf2847cdf', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485144f57aec90b55eadf2847cdf', width: 64}
 				]),
-			id: '1GRTlGk1VE2IsaAtn65rFT',
+			id: $author$project$AlbumIds$AlbumId('1GRTlGk1VE2IsaAtn65rFT'),
 			name: '039/und das Monster im Moor',
 			urlToOpen: 'https://open.spotify.com/album/1GRTlGk1VE2IsaAtn65rFT'
 		},
@@ -11040,7 +11043,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c7b11150852e67aefa281dd4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c7b11150852e67aefa281dd4', width: 64}
 				]),
-			id: '4YjfEt3QFakmPHX0PrBe9n',
+			id: $author$project$AlbumIds$AlbumId('4YjfEt3QFakmPHX0PrBe9n'),
 			name: '038/und das rätselhafte Medaillon',
 			urlToOpen: 'https://open.spotify.com/album/4YjfEt3QFakmPHX0PrBe9n'
 		},
@@ -11051,7 +11054,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029534358aa195cc6125386116', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519534358aa195cc6125386116', width: 64}
 				]),
-			id: '2d1Kmo2rQbpJK1mfAlPyou',
+			id: $author$project$AlbumIds$AlbumId('2d1Kmo2rQbpJK1mfAlPyou'),
 			name: '037/und das Abenteuer im Ballon',
 			urlToOpen: 'https://open.spotify.com/album/2d1Kmo2rQbpJK1mfAlPyou'
 		},
@@ -11062,7 +11065,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0293bff5be12e982bbb74ffa26', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485193bff5be12e982bbb74ffa26', width: 64}
 				]),
-			id: '16k5VHiYdyJlLZ1HDnHMTu',
+			id: $author$project$AlbumIds$AlbumId('16k5VHiYdyJlLZ1HDnHMTu'),
 			name: '036/gefangen im Hünengrab',
 			urlToOpen: 'https://open.spotify.com/album/16k5VHiYdyJlLZ1HDnHMTu'
 		},
@@ -11073,7 +11076,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c5152841e77b219bcc107237', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c5152841e77b219bcc107237', width: 64}
 				]),
-			id: '0pNx8acv1Khae0a6cqYMxx',
+			id: $author$project$AlbumIds$AlbumId('0pNx8acv1Khae0a6cqYMxx'),
 			name: '035/und die gestohlene Briefmarke',
 			urlToOpen: 'https://open.spotify.com/album/0pNx8acv1Khae0a6cqYMxx'
 		},
@@ -11084,7 +11087,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b90bf472c138c3132b03dcbc', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b90bf472c138c3132b03dcbc', width: 64}
 				]),
-			id: '07t7JTdTe3EJxrVuBpDlam',
+			id: $author$project$AlbumIds$AlbumId('07t7JTdTe3EJxrVuBpDlam'),
 			name: '034/und die Gespensterinsel',
 			urlToOpen: 'https://open.spotify.com/album/07t7JTdTe3EJxrVuBpDlam'
 		},
@@ -11095,7 +11098,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02735770417486efcc291db631', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851735770417486efcc291db631', width: 64}
 				]),
-			id: '3TjAvJy8Jp1gTdcYpzyQrG',
+			id: $author$project$AlbumIds$AlbumId('3TjAvJy8Jp1gTdcYpzyQrG'),
 			name: '033/entdecken den Geheimgang',
 			urlToOpen: 'https://open.spotify.com/album/3TjAvJy8Jp1gTdcYpzyQrG'
 		},
@@ -11106,7 +11109,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c17d58de2abbff41cca49330', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c17d58de2abbff41cca49330', width: 64}
 				]),
-			id: '4l6hSvAivAqYTwAJNpuGUl',
+			id: $author$project$AlbumIds$AlbumId('4l6hSvAivAqYTwAJNpuGUl'),
 			name: '032/und das Geheimnis des Oldtimers',
 			urlToOpen: 'https://open.spotify.com/album/4l6hSvAivAqYTwAJNpuGUl'
 		},
@@ -11117,7 +11120,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023d0c951cffc72fafb73da13b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513d0c951cffc72fafb73da13b', width: 64}
 				]),
-			id: '1rVETlFNVsiTZ8XOcSAG0y',
+			id: $author$project$AlbumIds$AlbumId('1rVETlFNVsiTZ8XOcSAG0y'),
 			name: '031/in der Geisterbahn',
 			urlToOpen: 'https://open.spotify.com/album/1rVETlFNVsiTZ8XOcSAG0y'
 		},
@@ -11128,7 +11131,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f93cb0f37ae8a0087df1ad81', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f93cb0f37ae8a0087df1ad81', width: 64}
 				]),
-			id: '0LLPKdB0JAu4ChP4VSBnLs',
+			id: $author$project$AlbumIds$AlbumId('0LLPKdB0JAu4ChP4VSBnLs'),
 			name: '030/auf gefährlichen Pfaden',
 			urlToOpen: 'https://open.spotify.com/album/0LLPKdB0JAu4ChP4VSBnLs'
 		},
@@ -11139,7 +11142,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029794ce6cf252703edd9ff49d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519794ce6cf252703edd9ff49d', width: 64}
 				]),
-			id: '6xqvtpo28RddZoNoUCC4Ln',
+			id: $author$project$AlbumIds$AlbumId('6xqvtpo28RddZoNoUCC4Ln'),
 			name: '029/und die Schwarze Maske',
 			urlToOpen: 'https://open.spotify.com/album/6xqvtpo28RddZoNoUCC4Ln'
 		},
@@ -11150,7 +11153,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d69cd958201e01d03cbac6b2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d69cd958201e01d03cbac6b2', width: 64}
 				]),
-			id: '2G5pUbYCwZF7JGxGlEEMHX',
+			id: $author$project$AlbumIds$AlbumId('2G5pUbYCwZF7JGxGlEEMHX'),
 			name: '028/und die geheimnisvolle Stadt',
 			urlToOpen: 'https://open.spotify.com/album/2G5pUbYCwZF7JGxGlEEMHX'
 		},
@@ -11161,7 +11164,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cd8320616678e2824108e963', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cd8320616678e2824108e963', width: 64}
 				]),
-			id: '7c0inxL7ps7oQ9FmXj0lL2',
+			id: $author$project$AlbumIds$AlbumId('7c0inxL7ps7oQ9FmXj0lL2'),
 			name: '027/und die goldene Truhe',
 			urlToOpen: 'https://open.spotify.com/album/7c0inxL7ps7oQ9FmXj0lL2'
 		},
@@ -11172,7 +11175,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cf71e20c1ff097e5b9ea37d4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cf71e20c1ff097e5b9ea37d4', width: 64}
 				]),
-			id: '1O8JeQXHM6GkksezdglGuw',
+			id: $author$project$AlbumIds$AlbumId('1O8JeQXHM6GkksezdglGuw'),
 			name: '026/und die Perlenschmuggler',
 			urlToOpen: 'https://open.spotify.com/album/1O8JeQXHM6GkksezdglGuw'
 		},
@@ -11183,7 +11186,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0287316c1b7b6f4a2f5c3b3509', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485187316c1b7b6f4a2f5c3b3509', width: 64}
 				]),
-			id: '5DLMGNCegLz67iifFwWiDd',
+			id: $author$project$AlbumIds$AlbumId('5DLMGNCegLz67iifFwWiDd'),
 			name: '025/und die Flugzeugentführer',
 			urlToOpen: 'https://open.spotify.com/album/5DLMGNCegLz67iifFwWiDd'
 		},
@@ -11194,7 +11197,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0203f3be0d6909b0452344bea2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485103f3be0d6909b0452344bea2', width: 64}
 				]),
-			id: '6ZJG6HTgrYmXl15UsyPJ3N',
+			id: $author$project$AlbumIds$AlbumId('6ZJG6HTgrYmXl15UsyPJ3N'),
 			name: '024/im Fernsehen',
 			urlToOpen: 'https://open.spotify.com/album/6ZJG6HTgrYmXl15UsyPJ3N'
 		},
@@ -11205,7 +11208,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025d102a66912dc0752eb26e7e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515d102a66912dc0752eb26e7e', width: 64}
 				]),
-			id: '7KT79rYzrmQcSkMRqTRcFS',
+			id: $author$project$AlbumIds$AlbumId('7KT79rYzrmQcSkMRqTRcFS'),
 			name: '023/und die Jagd nach den Smaragden',
 			urlToOpen: 'https://open.spotify.com/album/7KT79rYzrmQcSkMRqTRcFS'
 		},
@@ -11216,7 +11219,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0224617f6f9c6d8e56239de9c2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485124617f6f9c6d8e56239de9c2', width: 64}
 				]),
-			id: '7lH0VALZVG4EWR9Mjumkc0',
+			id: $author$project$AlbumIds$AlbumId('7lH0VALZVG4EWR9Mjumkc0'),
 			name: '022/und die Museumsbande',
 			urlToOpen: 'https://open.spotify.com/album/7lH0VALZVG4EWR9Mjumkc0'
 		},
@@ -11227,7 +11230,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027e539fd8c3b995ce49f11ab5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517e539fd8c3b995ce49f11ab5', width: 64}
 				]),
-			id: '6q0JbsC5Cz4AL1JSJzUIQ8',
+			id: $author$project$AlbumIds$AlbumId('6q0JbsC5Cz4AL1JSJzUIQ8'),
 			name: '021/auf neuen Abenteuern',
 			urlToOpen: 'https://open.spotify.com/album/6q0JbsC5Cz4AL1JSJzUIQ8'
 		},
@@ -11238,7 +11241,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0277cac78b938f539cd417f88e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485177cac78b938f539cd417f88e', width: 64}
 				]),
-			id: '30X7YEF6VsbqY7YiiNdaTv',
+			id: $author$project$AlbumIds$AlbumId('30X7YEF6VsbqY7YiiNdaTv'),
 			name: '020/erforschen die Schatzinsel',
 			urlToOpen: 'https://open.spotify.com/album/30X7YEF6VsbqY7YiiNdaTv'
 		},
@@ -11249,7 +11252,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a696f5fe7231d947a96a55cd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a696f5fe7231d947a96a55cd', width: 64}
 				]),
-			id: '2N0HMpaXpx9NCmivgzcnqZ',
+			id: $author$project$AlbumIds$AlbumId('2N0HMpaXpx9NCmivgzcnqZ'),
 			name: '019/auf Schmugglerjagd',
 			urlToOpen: 'https://open.spotify.com/album/2N0HMpaXpx9NCmivgzcnqZ'
 		},
@@ -11260,7 +11263,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b350e35ddc8b0c336c85b917', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b350e35ddc8b0c336c85b917', width: 64}
 				]),
-			id: '3Dkdr202NIt7jCSwNNyGCY',
+			id: $author$project$AlbumIds$AlbumId('3Dkdr202NIt7jCSwNNyGCY'),
 			name: '018/auf geheimnisvollen Spuren',
 			urlToOpen: 'https://open.spotify.com/album/3Dkdr202NIt7jCSwNNyGCY'
 		},
@@ -11271,7 +11274,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0298825e1838a5bd3ed8896dfe', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485198825e1838a5bd3ed8896dfe', width: 64}
 				]),
-			id: '3QmaekbwAghuJ5nGi7waz4',
+			id: $author$project$AlbumIds$AlbumId('3QmaekbwAghuJ5nGi7waz4'),
 			name: '017/auf großer Fahrt',
 			urlToOpen: 'https://open.spotify.com/album/3QmaekbwAghuJ5nGi7waz4'
 		},
@@ -11282,7 +11285,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025e1035847d97cbc9c9d3933a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515e1035847d97cbc9c9d3933a', width: 64}
 				]),
-			id: '2R4v7Ul9pBuYixU3Z12jOq',
+			id: $author$project$AlbumIds$AlbumId('2R4v7Ul9pBuYixU3Z12jOq'),
 			name: '016/auf dem Leuchtturm',
 			urlToOpen: 'https://open.spotify.com/album/2R4v7Ul9pBuYixU3Z12jOq'
 		},
@@ -11293,7 +11296,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021f75dc4fc1ef9a1afaf64136', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511f75dc4fc1ef9a1afaf64136', width: 64}
 				]),
-			id: '2EYXrVYSW2yvzdacdZXdCN',
+			id: $author$project$AlbumIds$AlbumId('2EYXrVYSW2yvzdacdZXdCN'),
 			name: '015/wittern ein Geheimnis',
 			urlToOpen: 'https://open.spotify.com/album/2EYXrVYSW2yvzdacdZXdCN'
 		},
@@ -11304,7 +11307,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a16c548ef430474ce2d44bd8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a16c548ef430474ce2d44bd8', width: 64}
 				]),
-			id: '1AuEwi9nwzYDbr6ELO3iQ7',
+			id: $author$project$AlbumIds$AlbumId('1AuEwi9nwzYDbr6ELO3iQ7'),
 			name: '014/machen eine Entdeckung',
 			urlToOpen: 'https://open.spotify.com/album/1AuEwi9nwzYDbr6ELO3iQ7'
 		},
@@ -11315,7 +11318,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0288464e62c537e17618a01e90', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485188464e62c537e17618a01e90', width: 64}
 				]),
-			id: '6PtodneZRZqjBRbqGEUBYq',
+			id: $author$project$AlbumIds$AlbumId('6PtodneZRZqjBRbqGEUBYq'),
 			name: '013/jagen die Entführer',
 			urlToOpen: 'https://open.spotify.com/album/6PtodneZRZqjBRbqGEUBYq'
 		},
@@ -11326,7 +11329,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ddb9e814cee90bc099cf9c70', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ddb9e814cee90bc099cf9c70', width: 64}
 				]),
-			id: '4vG33WvVt4u3kaLxkGfjts',
+			id: $author$project$AlbumIds$AlbumId('4vG33WvVt4u3kaLxkGfjts'),
 			name: '012/auf der Felseninsel',
 			urlToOpen: 'https://open.spotify.com/album/4vG33WvVt4u3kaLxkGfjts'
 		},
@@ -11337,7 +11340,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02736e74ede3f864aa9c7d9739', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851736e74ede3f864aa9c7d9739', width: 64}
 				]),
-			id: '0zW2tRB2mekUQdMClmLsTV',
+			id: $author$project$AlbumIds$AlbumId('0zW2tRB2mekUQdMClmLsTV'),
 			name: '011/geraten in Schwierigkeiten',
 			urlToOpen: 'https://open.spotify.com/album/0zW2tRB2mekUQdMClmLsTV'
 		},
@@ -11348,7 +11351,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02743f045e917552a6ef909a1c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851743f045e917552a6ef909a1c', width: 64}
 				]),
-			id: '5fFMNQtye6cjBXSt38axNj',
+			id: $author$project$AlbumIds$AlbumId('5fFMNQtye6cjBXSt38axNj'),
 			name: '009/im alten Turm',
 			urlToOpen: 'https://open.spotify.com/album/5fFMNQtye6cjBXSt38axNj'
 		},
@@ -11359,7 +11362,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ca324261beb70b0ba8fbf810', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ca324261beb70b0ba8fbf810', width: 64}
 				]),
-			id: '0pZAAAYIBruAZZkqg9K6PX',
+			id: $author$project$AlbumIds$AlbumId('0pZAAAYIBruAZZkqg9K6PX'),
 			name: '006/helfen ihrem Kameraden',
 			urlToOpen: 'https://open.spotify.com/album/0pZAAAYIBruAZZkqg9K6PX'
 		},
@@ -11370,7 +11373,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029e202e2d721c3df40870736b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519e202e2d721c3df40870736b', width: 64}
 				]),
-			id: '5gCYYcivqoJL2voJg5K1ou',
+			id: $author$project$AlbumIds$AlbumId('5gCYYcivqoJL2voJg5K1ou'),
 			name: '005/und der Zauberer Wu',
 			urlToOpen: 'https://open.spotify.com/album/5gCYYcivqoJL2voJg5K1ou'
 		},
@@ -11381,7 +11384,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02677e74f5d421556e17a36a50', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851677e74f5d421556e17a36a50', width: 64}
 				]),
-			id: '6Uou6b83FPi6q0BNQi4Px2',
+			id: $author$project$AlbumIds$AlbumId('6Uou6b83FPi6q0BNQi4Px2'),
 			name: '004/als Retter in der Not',
 			urlToOpen: 'https://open.spotify.com/album/6Uou6b83FPi6q0BNQi4Px2'
 		},
@@ -11392,7 +11395,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0250f52c0579b6cc40bc498831', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485150f52c0579b6cc40bc498831', width: 64}
 				]),
-			id: '3M4cqtKzzPRWUdwxoFiBnz',
+			id: $author$project$AlbumIds$AlbumId('3M4cqtKzzPRWUdwxoFiBnz'),
 			name: '003/und das Burgverlies',
 			urlToOpen: 'https://open.spotify.com/album/3M4cqtKzzPRWUdwxoFiBnz'
 		},
@@ -11403,7 +11406,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0218b6cc3db166ffd7d62660ef', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485118b6cc3db166ffd7d62660ef', width: 64}
 				]),
-			id: '7tfESyt6scRuKPzOAXF4PC',
+			id: $author$project$AlbumIds$AlbumId('7tfESyt6scRuKPzOAXF4PC'),
 			name: '002/im Zeltlager',
 			urlToOpen: 'https://open.spotify.com/album/7tfESyt6scRuKPzOAXF4PC'
 		},
@@ -11414,7 +11417,7 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025b1a547d35487dc9d37a6de9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515b1a547d35487dc9d37a6de9', width: 64}
 				]),
-			id: '7Hx03j0oo3eLfuijiUXAHg',
+			id: $author$project$AlbumIds$AlbumId('7Hx03j0oo3eLfuijiUXAHg'),
 			name: '001/beim Wanderzirkus',
 			urlToOpen: 'https://open.spotify.com/album/7Hx03j0oo3eLfuijiUXAHg'
 		}
@@ -11429,7 +11432,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ba7ec1e28a29aed63b8f3718', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ba7ec1e28a29aed63b8f3718', width: 64}
 				]),
-			id: '0a4wVcZXBQscT2vuhFpPiK',
+			id: $author$project$AlbumIds$AlbumId('0a4wVcZXBQscT2vuhFpPiK'),
 			name: '041/Rückkehr aus dem Totenland',
 			urlToOpen: 'https://open.spotify.com/album/0a4wVcZXBQscT2vuhFpPiK'
 		},
@@ -11440,7 +11443,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c4340ad6173f5019ef3eb8ad', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c4340ad6173f5019ef3eb8ad', width: 64}
 				]),
-			id: '7JwVMCynTyUCVP7MQXfLMa',
+			id: $author$project$AlbumIds$AlbumId('7JwVMCynTyUCVP7MQXfLMa'),
 			name: '040/Das Orakel des Unheils',
 			urlToOpen: 'https://open.spotify.com/album/7JwVMCynTyUCVP7MQXfLMa'
 		},
@@ -11451,7 +11454,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02babf7803431fe0c67e599995', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851babf7803431fe0c67e599995', width: 64}
 				]),
-			id: '1bPR2nzf4qsqWlB7firtz1',
+			id: $author$project$AlbumIds$AlbumId('1bPR2nzf4qsqWlB7firtz1'),
 			name: '039/Das Feld beim Krähenhaus',
 			urlToOpen: 'https://open.spotify.com/album/1bPR2nzf4qsqWlB7firtz1'
 		},
@@ -11462,7 +11465,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026790ca38e9463d4fd33478d8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516790ca38e9463d4fd33478d8', width: 64}
 				]),
-			id: '30uaNuNAk3sImmBsL8YZPt',
+			id: $author$project$AlbumIds$AlbumId('30uaNuNAk3sImmBsL8YZPt'),
 			name: '038/Der glühende Mönch',
 			urlToOpen: 'https://open.spotify.com/album/30uaNuNAk3sImmBsL8YZPt'
 		},
@@ -11473,7 +11476,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0219cfaaba2c1a2ac09f331db9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485119cfaaba2c1a2ac09f331db9', width: 64}
 				]),
-			id: '3trVlEw7g1hQxdb5wU8bEZ',
+			id: $author$project$AlbumIds$AlbumId('3trVlEw7g1hQxdb5wU8bEZ'),
 			name: '037/Das Moor der Vergangenen',
 			urlToOpen: 'https://open.spotify.com/album/3trVlEw7g1hQxdb5wU8bEZ'
 		},
@@ -11484,7 +11487,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025ea30bfe1032e51f58b48dab', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515ea30bfe1032e51f58b48dab', width: 64}
 				]),
-			id: '0nZXSqm1UQPmcP4MawBRJy',
+			id: $author$project$AlbumIds$AlbumId('0nZXSqm1UQPmcP4MawBRJy'),
 			name: '036/Geschöpf der bösen Träume',
 			urlToOpen: 'https://open.spotify.com/album/0nZXSqm1UQPmcP4MawBRJy'
 		},
@@ -11495,7 +11498,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d25ef0138c868ce59083cea9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d25ef0138c868ce59083cea9', width: 64}
 				]),
-			id: '5ZXy5Bz2cVK1y9H7wLp1bG',
+			id: $author$project$AlbumIds$AlbumId('5ZXy5Bz2cVK1y9H7wLp1bG'),
 			name: '035/Verirrt im Spinnenwald',
 			urlToOpen: 'https://open.spotify.com/album/5ZXy5Bz2cVK1y9H7wLp1bG'
 		},
@@ -11506,7 +11509,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022c88bfface9586f32dc1e598', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512c88bfface9586f32dc1e598', width: 64}
 				]),
-			id: '2ew1hyzMxQc2bAp0KatPOs',
+			id: $author$project$AlbumIds$AlbumId('2ew1hyzMxQc2bAp0KatPOs'),
 			name: '034/Die einäugigen Puppen',
 			urlToOpen: 'https://open.spotify.com/album/2ew1hyzMxQc2bAp0KatPOs'
 		},
@@ -11517,7 +11520,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024cfc546105714a8016d44196', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514cfc546105714a8016d44196', width: 64}
 				]),
-			id: '1mWALaBj7EexbtibGLmAsZ',
+			id: $author$project$AlbumIds$AlbumId('1mWALaBj7EexbtibGLmAsZ'),
 			name: '033/Das Schloss des Blutmalers',
 			urlToOpen: 'https://open.spotify.com/album/1mWALaBj7EexbtibGLmAsZ'
 		},
@@ -11528,7 +11531,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bc80326674eb03b91311782e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bc80326674eb03b91311782e', width: 64}
 				]),
-			id: '01VHWlPRHkqwFPp0WtmQZ5',
+			id: $author$project$AlbumIds$AlbumId('01VHWlPRHkqwFPp0WtmQZ5'),
 			name: '032/Hauptrolle: tot',
 			urlToOpen: 'https://open.spotify.com/album/01VHWlPRHkqwFPp0WtmQZ5'
 		},
@@ -11539,7 +11542,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b85c89eadbe5a0f53c32db58', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b85c89eadbe5a0f53c32db58', width: 64}
 				]),
-			id: '74LgIPfaXk0dB4d17bhxYL',
+			id: $author$project$AlbumIds$AlbumId('74LgIPfaXk0dB4d17bhxYL'),
 			name: '031/Das Menschenkabinett',
 			urlToOpen: 'https://open.spotify.com/album/74LgIPfaXk0dB4d17bhxYL'
 		},
@@ -11550,7 +11553,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0269a3322e42a2930a7f526cef', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485169a3322e42a2930a7f526cef', width: 64}
 				]),
-			id: '0j7WSaEq9vMj5qqfEL2uBy',
+			id: $author$project$AlbumIds$AlbumId('0j7WSaEq9vMj5qqfEL2uBy'),
 			name: '030/Der Seelenkünder II',
 			urlToOpen: 'https://open.spotify.com/album/0j7WSaEq9vMj5qqfEL2uBy'
 		},
@@ -11561,7 +11564,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bd041fc0a09902ab3b376865', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bd041fc0a09902ab3b376865', width: 64}
 				]),
-			id: '25Wl1t6ZIurjI28oE6ISaM',
+			id: $author$project$AlbumIds$AlbumId('25Wl1t6ZIurjI28oE6ISaM'),
 			name: '029/Der Seelenkünder I',
 			urlToOpen: 'https://open.spotify.com/album/25Wl1t6ZIurjI28oE6ISaM'
 		},
@@ -11572,7 +11575,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fcc24fdd10b672a0a166d938', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fcc24fdd10b672a0a166d938', width: 64}
 				]),
-			id: '60rNEZqzvDRlDv89SM4UYj',
+			id: $author$project$AlbumIds$AlbumId('60rNEZqzvDRlDv89SM4UYj'),
 			name: '028/Der Leere Raum',
 			urlToOpen: 'https://open.spotify.com/album/60rNEZqzvDRlDv89SM4UYj'
 		},
@@ -11583,7 +11586,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0269cce5ce202db48165e5bf40', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485169cce5ce202db48165e5bf40', width: 64}
 				]),
-			id: '6a0WXcz5NmFZTnUuM18dlw',
+			id: $author$project$AlbumIds$AlbumId('6a0WXcz5NmFZTnUuM18dlw'),
 			name: '027/Eiland der Gespenster',
 			urlToOpen: 'https://open.spotify.com/album/6a0WXcz5NmFZTnUuM18dlw'
 		},
@@ -11594,7 +11597,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025fe2fe49703f2864c264e505', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515fe2fe49703f2864c264e505', width: 64}
 				]),
-			id: '4518MUZ88OM9mkXRjHNb3I',
+			id: $author$project$AlbumIds$AlbumId('4518MUZ88OM9mkXRjHNb3I'),
 			name: '026/Die Diener der Pest',
 			urlToOpen: 'https://open.spotify.com/album/4518MUZ88OM9mkXRjHNb3I'
 		},
@@ -11605,7 +11608,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0280e3c933d45ef76d633d12ab', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485180e3c933d45ef76d633d12ab', width: 64}
 				]),
-			id: '3Ym71NN9uily2fTT3esHSM',
+			id: $author$project$AlbumIds$AlbumId('3Ym71NN9uily2fTT3esHSM'),
 			name: '025/Die fiebrigen Tränen',
 			urlToOpen: 'https://open.spotify.com/album/3Ym71NN9uily2fTT3esHSM'
 		},
@@ -11616,7 +11619,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024273b12a44c76eb80caffdf7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514273b12a44c76eb80caffdf7', width: 64}
 				]),
-			id: '5GQRBo93yteU7quPJ0wPQq',
+			id: $author$project$AlbumIds$AlbumId('5GQRBo93yteU7quPJ0wPQq'),
 			name: '024/Am Tag der großen Flut',
 			urlToOpen: 'https://open.spotify.com/album/5GQRBo93yteU7quPJ0wPQq'
 		},
@@ -11627,7 +11630,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ad81a0213eddb0d2b9365b21', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ad81a0213eddb0d2b9365b21', width: 64}
 				]),
-			id: '242vCdSs4RXNQF0GjW5S7M',
+			id: $author$project$AlbumIds$AlbumId('242vCdSs4RXNQF0GjW5S7M'),
 			name: '023/Der Duft der Finsternis',
 			urlToOpen: 'https://open.spotify.com/album/242vCdSs4RXNQF0GjW5S7M'
 		},
@@ -11638,7 +11641,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0204dd15b32f19734702d0bee8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485104dd15b32f19734702d0bee8', width: 64}
 				]),
-			id: '1YEHLtjH9ft1ii6Naj3fNs',
+			id: $author$project$AlbumIds$AlbumId('1YEHLtjH9ft1ii6Naj3fNs'),
 			name: '022/Die blutenden Schlüssel',
 			urlToOpen: 'https://open.spotify.com/album/1YEHLtjH9ft1ii6Naj3fNs'
 		},
@@ -11649,7 +11652,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e2c8ab714542014b51c4f174', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e2c8ab714542014b51c4f174', width: 64}
 				]),
-			id: '178RDBhOQSqYMhDXksWUcr',
+			id: $author$project$AlbumIds$AlbumId('178RDBhOQSqYMhDXksWUcr'),
 			name: '021/Gefahr am schwarzen Wasser',
 			urlToOpen: 'https://open.spotify.com/album/178RDBhOQSqYMhDXksWUcr'
 		},
@@ -11660,7 +11663,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0241e755ac87b97c14e5537ad6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485141e755ac87b97c14e5537ad6', width: 64}
 				]),
-			id: '3f3ohDkzsCIh8QYJ85ts7F',
+			id: $author$project$AlbumIds$AlbumId('3f3ohDkzsCIh8QYJ85ts7F'),
 			name: '020/Der Bund des Zorns',
 			urlToOpen: 'https://open.spotify.com/album/3f3ohDkzsCIh8QYJ85ts7F'
 		},
@@ -11671,7 +11674,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024613cc98dbb0afefa02b3ea5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514613cc98dbb0afefa02b3ea5', width: 64}
 				]),
-			id: '4z5hZT12F5hDvYMAKryvC2',
+			id: $author$project$AlbumIds$AlbumId('4z5hZT12F5hDvYMAKryvC2'),
 			name: '019/Der Weg zur Dunkelmühle',
 			urlToOpen: 'https://open.spotify.com/album/4z5hZT12F5hDvYMAKryvC2'
 		},
@@ -11682,7 +11685,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023b16ba9d7f5851aa29e4f4d8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513b16ba9d7f5851aa29e4f4d8', width: 64}
 				]),
-			id: '2MgpquYqWDwNq10vQQsgDA',
+			id: $author$project$AlbumIds$AlbumId('2MgpquYqWDwNq10vQQsgDA'),
 			name: '018/Im Sog der Sirenen',
 			urlToOpen: 'https://open.spotify.com/album/2MgpquYqWDwNq10vQQsgDA'
 		},
@@ -11693,7 +11696,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c411594ba04cac07fc9b7f72', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c411594ba04cac07fc9b7f72', width: 64}
 				]),
-			id: '7I7CGeWzZ9yzbWwn4fkhe7',
+			id: $author$project$AlbumIds$AlbumId('7I7CGeWzZ9yzbWwn4fkhe7'),
 			name: '017/Der steinerne Fluch',
 			urlToOpen: 'https://open.spotify.com/album/7I7CGeWzZ9yzbWwn4fkhe7'
 		},
@@ -11704,7 +11707,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02429f18f2c3ef3c0f0a656928', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851429f18f2c3ef3c0f0a656928', width: 64}
 				]),
-			id: '3D4N1ciYARjBISBXDjb5nS',
+			id: $author$project$AlbumIds$AlbumId('3D4N1ciYARjBISBXDjb5nS'),
 			name: '016/Die Zeit des Knochenfängers',
 			urlToOpen: 'https://open.spotify.com/album/3D4N1ciYARjBISBXDjb5nS'
 		},
@@ -11715,7 +11718,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02794a98a70dbfb9b96638b382', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851794a98a70dbfb9b96638b382', width: 64}
 				]),
-			id: '07gknPYvIxHO6tAvzbuSE0',
+			id: $author$project$AlbumIds$AlbumId('07gknPYvIxHO6tAvzbuSE0'),
 			name: '015/Das Geheimnis des Scherbendiebes',
 			urlToOpen: 'https://open.spotify.com/album/07gknPYvIxHO6tAvzbuSE0'
 		},
@@ -11726,7 +11729,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02353d41c7e96581f4fb0ca11d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851353d41c7e96581f4fb0ca11d', width: 64}
 				]),
-			id: '37Bx2rbtTu2f9PuUABtABZ',
+			id: $author$project$AlbumIds$AlbumId('37Bx2rbtTu2f9PuUABtABZ'),
 			name: '014/Die Kammer des schweigenden Ritters',
 			urlToOpen: 'https://open.spotify.com/album/37Bx2rbtTu2f9PuUABtABZ'
 		},
@@ -11737,7 +11740,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020c7ceed17befa33d77522c72', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510c7ceed17befa33d77522c72', width: 64}
 				]),
-			id: '5AIOJmeTo8qcHIyPVJAvRh',
+			id: $author$project$AlbumIds$AlbumId('5AIOJmeTo8qcHIyPVJAvRh'),
 			name: '013/Die Würfel des Hexenmeisters',
 			urlToOpen: 'https://open.spotify.com/album/5AIOJmeTo8qcHIyPVJAvRh'
 		},
@@ -11748,7 +11751,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0298049190ee309dda37c8a68e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485198049190ee309dda37c8a68e', width: 64}
 				]),
-			id: '6G6Pwdg1BW8yRp2rM2jRsC',
+			id: $author$project$AlbumIds$AlbumId('6G6Pwdg1BW8yRp2rM2jRsC'),
 			name: '012/Im Bann der Totenmelodie',
 			urlToOpen: 'https://open.spotify.com/album/6G6Pwdg1BW8yRp2rM2jRsC'
 		},
@@ -11759,7 +11762,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a788155bf081da4d48b0e0fb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a788155bf081da4d48b0e0fb', width: 64}
 				]),
-			id: '61MJJekB95apDZ10mrtRhu',
+			id: $author$project$AlbumIds$AlbumId('61MJJekB95apDZ10mrtRhu'),
 			name: '011/Die Nacht der ewigen Fliegen',
 			urlToOpen: 'https://open.spotify.com/album/61MJJekB95apDZ10mrtRhu'
 		},
@@ -11770,7 +11773,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022ab8d5a5d9da478d75112de4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512ab8d5a5d9da478d75112de4', width: 64}
 				]),
-			id: '7Ghr2xv8LjhwYvsrSiwypI',
+			id: $author$project$AlbumIds$AlbumId('7Ghr2xv8LjhwYvsrSiwypI'),
 			name: '010/Der Schattenadmiral',
 			urlToOpen: 'https://open.spotify.com/album/7Ghr2xv8LjhwYvsrSiwypI'
 		},
@@ -11781,7 +11784,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0287d9afaaa08d6e1ba5f54722', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485187d9afaaa08d6e1ba5f54722', width: 64}
 				]),
-			id: '04Mlg1WlnLgp4CvwpVZ9KX',
+			id: $author$project$AlbumIds$AlbumId('04Mlg1WlnLgp4CvwpVZ9KX'),
 			name: '009/Das Buch des Grauenjägers',
 			urlToOpen: 'https://open.spotify.com/album/04Mlg1WlnLgp4CvwpVZ9KX'
 		},
@@ -11792,7 +11795,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e7ed3a614c3d5e165f5c0423', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e7ed3a614c3d5e165f5c0423', width: 64}
 				]),
-			id: '1vyik7uzgbTcPsvWuTb51f',
+			id: $author$project$AlbumIds$AlbumId('1vyik7uzgbTcPsvWuTb51f'),
 			name: '008/Am Berg der Nebelspinne',
 			urlToOpen: 'https://open.spotify.com/album/1vyik7uzgbTcPsvWuTb51f'
 		},
@@ -11803,7 +11806,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0275819f2d3b4248c0d0099a31', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485175819f2d3b4248c0d0099a31', width: 64}
 				]),
-			id: '2sKCEbqp7QaGDDpL1G9X8n',
+			id: $author$project$AlbumIds$AlbumId('2sKCEbqp7QaGDDpL1G9X8n'),
 			name: '007/Das Grab aus Wüstensand',
 			urlToOpen: 'https://open.spotify.com/album/2sKCEbqp7QaGDDpL1G9X8n'
 		},
@@ -11814,7 +11817,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025d5bb0616f97d1c1e1ee8241', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515d5bb0616f97d1c1e1ee8241', width: 64}
 				]),
-			id: '2uvaDV7QrxOuGqJf3akIUM',
+			id: $author$project$AlbumIds$AlbumId('2uvaDV7QrxOuGqJf3akIUM'),
 			name: '006/Das kalte Phantom',
 			urlToOpen: 'https://open.spotify.com/album/2uvaDV7QrxOuGqJf3akIUM'
 		},
@@ -11825,7 +11828,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0205dd63fc40831d862f2e9112', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485105dd63fc40831d862f2e9112', width: 64}
 				]),
-			id: '17orTTG8YfprnvUrspGdzP',
+			id: $author$project$AlbumIds$AlbumId('17orTTG8YfprnvUrspGdzP'),
 			name: '005/Tief in den nördlichen Minen',
 			urlToOpen: 'https://open.spotify.com/album/17orTTG8YfprnvUrspGdzP'
 		},
@@ -11836,7 +11839,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f8d8279f5a103e98ea83fe83', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f8d8279f5a103e98ea83fe83', width: 64}
 				]),
-			id: '28PkAZAWYVLSyqnmBs6wjG',
+			id: $author$project$AlbumIds$AlbumId('28PkAZAWYVLSyqnmBs6wjG'),
 			name: '004/Das Haus der vergifteten Bilder',
 			urlToOpen: 'https://open.spotify.com/album/28PkAZAWYVLSyqnmBs6wjG'
 		},
@@ -11847,7 +11850,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02558cedc176a6436e29a0afca', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851558cedc176a6436e29a0afca', width: 64}
 				]),
-			id: '2CvGZuUXzX3E9JqpzcURyc',
+			id: $author$project$AlbumIds$AlbumId('2CvGZuUXzX3E9JqpzcURyc'),
 			name: '003/Die Insel der letzten Rache',
 			urlToOpen: 'https://open.spotify.com/album/2CvGZuUXzX3E9JqpzcURyc'
 		},
@@ -11858,7 +11861,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0252368f78374827fbe994c308', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485152368f78374827fbe994c308', width: 64}
 				]),
-			id: '5xcbKCy2wyHnfTVKlWnjmm',
+			id: $author$project$AlbumIds$AlbumId('5xcbKCy2wyHnfTVKlWnjmm'),
 			name: '002/Die rote Hand des Teufels',
 			urlToOpen: 'https://open.spotify.com/album/5xcbKCy2wyHnfTVKlWnjmm'
 		},
@@ -11869,7 +11872,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02979d7c31f68beb395a832879', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851979d7c31f68beb395a832879', width: 64}
 				]),
-			id: '0uXKtcuIDwz6Gzpu6cuDDo',
+			id: $author$project$AlbumIds$AlbumId('0uXKtcuIDwz6Gzpu6cuDDo'),
 			name: '001/Die Bucht der 22 Schreie',
 			urlToOpen: 'https://open.spotify.com/album/0uXKtcuIDwz6Gzpu6cuDDo'
 		},
@@ -11880,7 +11883,7 @@ var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02edaebf1aaf4484276eff93e7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851edaebf1aaf4484276eff93e7', width: 64}
 				]),
-			id: '4iu5aeXV2NraXliNiqhRFw',
+			id: $author$project$AlbumIds$AlbumId('4iu5aeXV2NraXliNiqhRFw'),
 			name: '042/Der Ruf des Wellengängers',
 			urlToOpen: 'https://open.spotify.com/album/4iu5aeXV2NraXliNiqhRFw'
 		}
@@ -11895,7 +11898,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0274c86cc686ab4f557509bd93', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485174c86cc686ab4f557509bd93', width: 64}
 				]),
-			id: '59BLZAmLAZBmciKqzS7dHr',
+			id: $author$project$AlbumIds$AlbumId('59BLZAmLAZBmciKqzS7dHr'),
 			name: 'Folge 231: Knackis streicheln mit der Faust',
 			urlToOpen: 'https://open.spotify.com/album/59BLZAmLAZBmciKqzS7dHr'
 		},
@@ -11906,7 +11909,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022fd344afb7f396fda09fa41f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512fd344afb7f396fda09fa41f', width: 64}
 				]),
-			id: '0fAjtQp9fFhA4pmFaiYHFt',
+			id: $author$project$AlbumIds$AlbumId('0fAjtQp9fFhA4pmFaiYHFt'),
 			name: 'Folge 230: Die Tesla-Verschwörung',
 			urlToOpen: 'https://open.spotify.com/album/0fAjtQp9fFhA4pmFaiYHFt'
 		},
@@ -11917,7 +11920,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022e32898ea16cb29888daf7ac', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512e32898ea16cb29888daf7ac', width: 64}
 				]),
-			id: '4J6f92iCMn6Vt537vnYIJJ',
+			id: $author$project$AlbumIds$AlbumId('4J6f92iCMn6Vt537vnYIJJ'),
 			name: 'Auch Gauner feiern Weihnachten (Adventskalender)',
 			urlToOpen: 'https://open.spotify.com/album/4J6f92iCMn6Vt537vnYIJJ'
 		},
@@ -11928,7 +11931,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022d18cefd5a708811035291ec', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512d18cefd5a708811035291ec', width: 64}
 				]),
-			id: '1wFG3EuNbzvdnRa9ldvdPj',
+			id: $author$project$AlbumIds$AlbumId('1wFG3EuNbzvdnRa9ldvdPj'),
 			name: 'Folge 229: Auf den Schwingen des Totenvogels',
 			urlToOpen: 'https://open.spotify.com/album/1wFG3EuNbzvdnRa9ldvdPj'
 		},
@@ -11939,7 +11942,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d9418465290abf6db2b03473', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d9418465290abf6db2b03473', width: 64}
 				]),
-			id: '4U1BMpYgIMEeuUgt5XY3qe',
+			id: $author$project$AlbumIds$AlbumId('4U1BMpYgIMEeuUgt5XY3qe'),
 			name: 'Folge 228: Das Geld, das niemand wollte',
 			urlToOpen: 'https://open.spotify.com/album/4U1BMpYgIMEeuUgt5XY3qe'
 		},
@@ -11950,7 +11953,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e1f5cd31868b02fbc8e53e0d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e1f5cd31868b02fbc8e53e0d', width: 64}
 				]),
-			id: '4nbBHXEO1IHvP7gBCW1I8T',
+			id: $author$project$AlbumIds$AlbumId('4nbBHXEO1IHvP7gBCW1I8T'),
 			name: 'Folge 227: Zwei für Zwölf',
 			urlToOpen: 'https://open.spotify.com/album/4nbBHXEO1IHvP7gBCW1I8T'
 		},
@@ -11961,7 +11964,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029e808d6654e414951b61a152', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519e808d6654e414951b61a152', width: 64}
 				]),
-			id: '4FHfFcYa1kkdJcPwVBfurR',
+			id: $author$project$AlbumIds$AlbumId('4FHfFcYa1kkdJcPwVBfurR'),
 			name: 'Folge 226: Der Täter ist unter uns',
 			urlToOpen: 'https://open.spotify.com/album/4FHfFcYa1kkdJcPwVBfurR'
 		},
@@ -11972,7 +11975,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d783fba665d90909b0d3e33f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d783fba665d90909b0d3e33f', width: 64}
 				]),
-			id: '3HdsHQ8A2N5qxIV8nBJ1ep',
+			id: $author$project$AlbumIds$AlbumId('3HdsHQ8A2N5qxIV8nBJ1ep'),
 			name: 'Folge 225: Tanz mit der Giftschlange',
 			urlToOpen: 'https://open.spotify.com/album/3HdsHQ8A2N5qxIV8nBJ1ep'
 		},
@@ -11983,7 +11986,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029f11d30dc14c482c6478e81c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519f11d30dc14c482c6478e81c', width: 64}
 				]),
-			id: '4r0RiXY8OwasAI0D6wDtWg',
+			id: $author$project$AlbumIds$AlbumId('4r0RiXY8OwasAI0D6wDtWg'),
 			name: 'Folge 224: Bilderdiebe haben kein Gesicht',
 			urlToOpen: 'https://open.spotify.com/album/4r0RiXY8OwasAI0D6wDtWg'
 		},
@@ -11994,7 +11997,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02371aaf6fd50fab1b56326b2e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851371aaf6fd50fab1b56326b2e', width: 64}
 				]),
-			id: '1IAUjWyGg7xD7DoYhBReb2',
+			id: $author$project$AlbumIds$AlbumId('1IAUjWyGg7xD7DoYhBReb2'),
 			name: 'Folge 223: Betrüger Super Sauber',
 			urlToOpen: 'https://open.spotify.com/album/1IAUjWyGg7xD7DoYhBReb2'
 		},
@@ -12005,7 +12008,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028c724ffb931a8c201a57872f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518c724ffb931a8c201a57872f', width: 64}
 				]),
-			id: '2rCVsuxWrsy9SZjUUOIwek',
+			id: $author$project$AlbumIds$AlbumId('2rCVsuxWrsy9SZjUUOIwek'),
 			name: 'Folge 222: Roter Drache 222',
 			urlToOpen: 'https://open.spotify.com/album/2rCVsuxWrsy9SZjUUOIwek'
 		},
@@ -12016,7 +12019,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ceef48ef5b99e89b8ac35727', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ceef48ef5b99e89b8ac35727', width: 64}
 				]),
-			id: '47aNHa9s0fPkdWInnNmgNe',
+			id: $author$project$AlbumIds$AlbumId('47aNHa9s0fPkdWInnNmgNe'),
 			name: 'Folge 221: Beim Raubzug helfen Ahnungslose',
 			urlToOpen: 'https://open.spotify.com/album/47aNHa9s0fPkdWInnNmgNe'
 		},
@@ -12027,7 +12030,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bcd09b3e1d1e3a644d37b253', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bcd09b3e1d1e3a644d37b253', width: 64}
 				]),
-			id: '70yAbYpe9FH4XgwDk0rmeE',
+			id: $author$project$AlbumIds$AlbumId('70yAbYpe9FH4XgwDk0rmeE'),
 			name: 'Schreckliche Weihnacht überall (Adventskalender)',
 			urlToOpen: 'https://open.spotify.com/album/70yAbYpe9FH4XgwDk0rmeE'
 		},
@@ -12038,7 +12041,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027cf07bc595e03d48ecb04c4b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517cf07bc595e03d48ecb04c4b', width: 64}
 				]),
-			id: '7mhVkGevfl8GCCZsYH7ch2',
+			id: $author$project$AlbumIds$AlbumId('7mhVkGevfl8GCCZsYH7ch2'),
 			name: 'Folge 220: Attentat am Gämsengrat',
 			urlToOpen: 'https://open.spotify.com/album/7mhVkGevfl8GCCZsYH7ch2'
 		},
@@ -12049,7 +12052,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ba10062fee95611fb0a2eecf', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ba10062fee95611fb0a2eecf', width: 64}
 				]),
-			id: '65b6rQAtUIFQAySC4lDKpL',
+			id: $author$project$AlbumIds$AlbumId('65b6rQAtUIFQAySC4lDKpL'),
 			name: 'Folge 219: Terror frei Haus',
 			urlToOpen: 'https://open.spotify.com/album/65b6rQAtUIFQAySC4lDKpL'
 		},
@@ -12060,7 +12063,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a49ad9dcd073ff8a4f3d33b1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a49ad9dcd073ff8a4f3d33b1', width: 64}
 				]),
-			id: '1JBdOPbN661RjpdWNm9Xfo',
+			id: $author$project$AlbumIds$AlbumId('1JBdOPbN661RjpdWNm9Xfo'),
 			name: 'Folge 218: Schutzgeld für Dämonen',
 			urlToOpen: 'https://open.spotify.com/album/1JBdOPbN661RjpdWNm9Xfo'
 		},
@@ -12071,7 +12074,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027cfb2e93a9f43e3141987ba9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517cfb2e93a9f43e3141987ba9', width: 64}
 				]),
-			id: '6QOwlbBlHs6Cxs8aB6kgGL',
+			id: $author$project$AlbumIds$AlbumId('6QOwlbBlHs6Cxs8aB6kgGL'),
 			name: 'Morgen kommt das Weihnachtsgrauen (Adventskalender)',
 			urlToOpen: 'https://open.spotify.com/album/6QOwlbBlHs6Cxs8aB6kgGL'
 		},
@@ -12082,7 +12085,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027cfc78283cc84cfe7e03000e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517cfc78283cc84cfe7e03000e', width: 64}
 				]),
-			id: '4hcEstENZX32EUjk7ehyiL',
+			id: $author$project$AlbumIds$AlbumId('4hcEstENZX32EUjk7ehyiL'),
 			name: '217/Tödliche Klarinette',
 			urlToOpen: 'https://open.spotify.com/album/4hcEstENZX32EUjk7ehyiL'
 		},
@@ -12093,7 +12096,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02712b9f44bc246ac5125dc2d9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851712b9f44bc246ac5125dc2d9', width: 64}
 				]),
-			id: '5FvGyMLEy4vIasPH8E0ELE',
+			id: $author$project$AlbumIds$AlbumId('5FvGyMLEy4vIasPH8E0ELE'),
 			name: '216/Das Geheimnis im Jagdschloss (Kopfhörer-Hörspiel)',
 			urlToOpen: 'https://open.spotify.com/album/5FvGyMLEy4vIasPH8E0ELE'
 		},
@@ -12104,7 +12107,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e2fd58747d77b17e48c8ab46', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e2fd58747d77b17e48c8ab46', width: 64}
 				]),
-			id: '4Q2dNebUPEFTWBlD4gxuKL',
+			id: $author$project$AlbumIds$AlbumId('4Q2dNebUPEFTWBlD4gxuKL'),
 			name: '216/Das Geheimnis im Jagdschloss',
 			urlToOpen: 'https://open.spotify.com/album/4Q2dNebUPEFTWBlD4gxuKL'
 		},
@@ -12115,7 +12118,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0250440f7e948d381cf5afdafe', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485150440f7e948d381cf5afdafe', width: 64}
 				]),
-			id: '1RNnc029KEtPfTRx7ZUQ2g',
+			id: $author$project$AlbumIds$AlbumId('1RNnc029KEtPfTRx7ZUQ2g'),
 			name: '215/Verbrechen im Moorsteiner Wald',
 			urlToOpen: 'https://open.spotify.com/album/1RNnc029KEtPfTRx7ZUQ2g'
 		},
@@ -12126,7 +12129,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ed644a5b2ab53481024a20b1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ed644a5b2ab53481024a20b1', width: 64}
 				]),
-			id: '3PncQqKj6wsDOpBTK9HXhV',
+			id: $author$project$AlbumIds$AlbumId('3PncQqKj6wsDOpBTK9HXhV'),
 			name: '214/Diamantenrausch auf der A9',
 			urlToOpen: 'https://open.spotify.com/album/3PncQqKj6wsDOpBTK9HXhV'
 		},
@@ -12137,7 +12140,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02597cae10e5ac7001327a4040', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851597cae10e5ac7001327a4040', width: 64}
 				]),
-			id: '16V0thHq3uD87lNEbxRRs6',
+			id: $author$project$AlbumIds$AlbumId('16V0thHq3uD87lNEbxRRs6'),
 			name: '213/Das unheimliche Dorf',
 			urlToOpen: 'https://open.spotify.com/album/16V0thHq3uD87lNEbxRRs6'
 		},
@@ -12148,7 +12151,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0236b7fba491f6129b44a1c48b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485136b7fba491f6129b44a1c48b', width: 64}
 				]),
-			id: '5JePYOyA6XhEaukPbQwlCI',
+			id: $author$project$AlbumIds$AlbumId('5JePYOyA6XhEaukPbQwlCI'),
 			name: '212/Tyrannei Kommando Eins',
 			urlToOpen: 'https://open.spotify.com/album/5JePYOyA6XhEaukPbQwlCI'
 		},
@@ -12159,7 +12162,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0214f56432102e8baf8f7eccb0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485114f56432102e8baf8f7eccb0', width: 64}
 				]),
-			id: '2iMSyHHEwiZ3og3WrDFiUj',
+			id: $author$project$AlbumIds$AlbumId('2iMSyHHEwiZ3og3WrDFiUj'),
 			name: '211/Geiselnahme im Villenviertel',
 			urlToOpen: 'https://open.spotify.com/album/2iMSyHHEwiZ3og3WrDFiUj'
 		},
@@ -12170,7 +12173,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b239c7cc7efd4e774886f15f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b239c7cc7efd4e774886f15f', width: 64}
 				]),
-			id: '5f9cgdn1nSYN0EdsPztwQn',
+			id: $author$project$AlbumIds$AlbumId('5f9cgdn1nSYN0EdsPztwQn'),
 			name: 'Jede Legende hat ihren Anfang (Hörspiel zum Kinofilm 2019)',
 			urlToOpen: 'https://open.spotify.com/album/5f9cgdn1nSYN0EdsPztwQn'
 		},
@@ -12181,7 +12184,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025a363b4b57ad6a3468386ea2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515a363b4b57ad6a3468386ea2', width: 64}
 				]),
-			id: '1rWuaRKYr1DGZ6wzq0SgAb',
+			id: $author$project$AlbumIds$AlbumId('1rWuaRKYr1DGZ6wzq0SgAb'),
 			name: '210/Raubzug im Casino',
 			urlToOpen: 'https://open.spotify.com/album/1rWuaRKYr1DGZ6wzq0SgAb'
 		},
@@ -12192,7 +12195,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02005c55d5671ba122428f628d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851005c55d5671ba122428f628d', width: 64}
 				]),
-			id: '2wLBVzlRA3dcDqhu9Uxdcc',
+			id: $author$project$AlbumIds$AlbumId('2wLBVzlRA3dcDqhu9Uxdcc'),
 			name: '209/Drohbriefe von Unbekannt',
 			urlToOpen: 'https://open.spotify.com/album/2wLBVzlRA3dcDqhu9Uxdcc'
 		},
@@ -12203,7 +12206,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028ad4f4062e250a18888dd32a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518ad4f4062e250a18888dd32a', width: 64}
 				]),
-			id: '6yQhG36kGFjmCWNIq05qsR',
+			id: $author$project$AlbumIds$AlbumId('6yQhG36kGFjmCWNIq05qsR'),
 			name: 'Das Geheimnis um TKKG (Neuaufnahme)',
 			urlToOpen: 'https://open.spotify.com/album/6yQhG36kGFjmCWNIq05qsR'
 		},
@@ -12214,7 +12217,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d11ad6d3476ba0a06ec29ba5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d11ad6d3476ba0a06ec29ba5', width: 64}
 				]),
-			id: '12JCZMzqKa1UnttQOTbKYl',
+			id: $author$project$AlbumIds$AlbumId('12JCZMzqKa1UnttQOTbKYl'),
 			name: '208/Geheimnis im Tresor',
 			urlToOpen: 'https://open.spotify.com/album/12JCZMzqKa1UnttQOTbKYl'
 		},
@@ -12225,7 +12228,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ba7006b79b3e2e7b9bed66a7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ba7006b79b3e2e7b9bed66a7', width: 64}
 				]),
-			id: '3im4BSgNZoZUZMrBVnqPT0',
+			id: $author$project$AlbumIds$AlbumId('3im4BSgNZoZUZMrBVnqPT0'),
 			name: 'Ein fast perfektes Weihnachtsmenü',
 			urlToOpen: 'https://open.spotify.com/album/3im4BSgNZoZUZMrBVnqPT0'
 		},
@@ -12236,7 +12239,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e37f246fee20c455499e5726', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e37f246fee20c455499e5726', width: 64}
 				]),
-			id: '6IuKwwxl6rpnj9nYZjfoa2',
+			id: $author$project$AlbumIds$AlbumId('6IuKwwxl6rpnj9nYZjfoa2'),
 			name: '207/Doppelte Entführung',
 			urlToOpen: 'https://open.spotify.com/album/6IuKwwxl6rpnj9nYZjfoa2'
 		},
@@ -12247,7 +12250,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022bc755a107326bb7a8d491e7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512bc755a107326bb7a8d491e7', width: 64}
 				]),
-			id: '4XZXbwQnj4ucfX65Gpgd2M',
+			id: $author$project$AlbumIds$AlbumId('4XZXbwQnj4ucfX65Gpgd2M'),
 			name: '206/Achtung, UFO-Kult!',
 			urlToOpen: 'https://open.spotify.com/album/4XZXbwQnj4ucfX65Gpgd2M'
 		},
@@ -12258,7 +12261,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025906d23024b6bb3b18c328fb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515906d23024b6bb3b18c328fb', width: 64}
 				]),
-			id: '1PEY35jHKZezCkE0EbYGjv',
+			id: $author$project$AlbumIds$AlbumId('1PEY35jHKZezCkE0EbYGjv'),
 			name: '205/Teuflische Kaffeefahrt',
 			urlToOpen: 'https://open.spotify.com/album/1PEY35jHKZezCkE0EbYGjv'
 		},
@@ -12269,7 +12272,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0200139d2c17de59410a8a6a7b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485100139d2c17de59410a8a6a7b', width: 64}
 				]),
-			id: '2HHyk7w3vEopXwNNiq5aNX',
+			id: $author$project$AlbumIds$AlbumId('2HHyk7w3vEopXwNNiq5aNX'),
 			name: '204/Verschwörung auf hoher See',
 			urlToOpen: 'https://open.spotify.com/album/2HHyk7w3vEopXwNNiq5aNX'
 		},
@@ -12280,7 +12283,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0273e8cbbb9905fe0340ff26de', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485173e8cbbb9905fe0340ff26de', width: 64}
 				]),
-			id: '0W8SgAXgJVSRtgrbw6Th5V',
+			id: $author$project$AlbumIds$AlbumId('0W8SgAXgJVSRtgrbw6Th5V'),
 			name: '203/Der Räuber mit der Weihnachtsmaske',
 			urlToOpen: 'https://open.spotify.com/album/0W8SgAXgJVSRtgrbw6Th5V'
 		},
@@ -12291,7 +12294,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d1a57255f159f1ea73a79c17', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d1a57255f159f1ea73a79c17', width: 64}
 				]),
-			id: '2URUpf8ElYaZxNgiWEapKo',
+			id: $author$project$AlbumIds$AlbumId('2URUpf8ElYaZxNgiWEapKo'),
 			name: '202/Ein Paradies für Diebe',
 			urlToOpen: 'https://open.spotify.com/album/2URUpf8ElYaZxNgiWEapKo'
 		},
@@ -12302,7 +12305,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ecc9c5c1f4f24d32b3b0486e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ecc9c5c1f4f24d32b3b0486e', width: 64}
 				]),
-			id: '4Tch4Zq90nImDlQbLjNb2L',
+			id: $author$project$AlbumIds$AlbumId('4Tch4Zq90nImDlQbLjNb2L'),
 			name: '201/Vom Goldschatz besessen',
 			urlToOpen: 'https://open.spotify.com/album/4Tch4Zq90nImDlQbLjNb2L'
 		},
@@ -12313,7 +12316,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a58fe02810b607de91ea424e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a58fe02810b607de91ea424e', width: 64}
 				]),
-			id: '40AzKKVoE6d4TxqlZ2N4Fr',
+			id: $author$project$AlbumIds$AlbumId('40AzKKVoE6d4TxqlZ2N4Fr'),
 			name: '200/Der große Coup',
 			urlToOpen: 'https://open.spotify.com/album/40AzKKVoE6d4TxqlZ2N4Fr'
 		},
@@ -12324,7 +12327,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029deebf8c00df077718d98abf', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519deebf8c00df077718d98abf', width: 64}
 				]),
-			id: '1C1AXO3YHL4KVeQTHbK0tH',
+			id: $author$project$AlbumIds$AlbumId('1C1AXO3YHL4KVeQTHbK0tH'),
 			name: '199/Verfolgungsjagd vor Mitternacht',
 			urlToOpen: 'https://open.spotify.com/album/1C1AXO3YHL4KVeQTHbK0tH'
 		},
@@ -12335,7 +12338,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ace436a8c8f50172cb8d5ab3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ace436a8c8f50172cb8d5ab3', width: 64}
 				]),
-			id: '5k0cgRXinvmrHqwHGtFB0x',
+			id: $author$project$AlbumIds$AlbumId('5k0cgRXinvmrHqwHGtFB0x'),
 			name: '198/Der Golem vom Dunkelsee',
 			urlToOpen: 'https://open.spotify.com/album/5k0cgRXinvmrHqwHGtFB0x'
 		},
@@ -12346,7 +12349,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a6f33042988cbcfa39f1e4d0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a6f33042988cbcfa39f1e4d0', width: 64}
 				]),
-			id: '34NTZ398LKn30D8SN8RwZ1',
+			id: $author$project$AlbumIds$AlbumId('34NTZ398LKn30D8SN8RwZ1'),
 			name: '197/Bei Anpfiff Übergabe',
 			urlToOpen: 'https://open.spotify.com/album/34NTZ398LKn30D8SN8RwZ1'
 		},
@@ -12357,7 +12360,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ce1c1230edd7f9ce0834b2ef', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ce1c1230edd7f9ce0834b2ef', width: 64}
 				]),
-			id: '2fojM7wYwYuliNzYTmFzOX',
+			id: $author$project$AlbumIds$AlbumId('2fojM7wYwYuliNzYTmFzOX'),
 			name: '196/Tatort Wagenburg',
 			urlToOpen: 'https://open.spotify.com/album/2fojM7wYwYuliNzYTmFzOX'
 		},
@@ -12368,7 +12371,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0290127ca9141ebc020434d9e3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485190127ca9141ebc020434d9e3', width: 64}
 				]),
-			id: '1O2InxIny6VBypt5DB3gTU',
+			id: $author$project$AlbumIds$AlbumId('1O2InxIny6VBypt5DB3gTU'),
 			name: '195/Dem Sonnenkönig auf der Spur',
 			urlToOpen: 'https://open.spotify.com/album/1O2InxIny6VBypt5DB3gTU'
 		},
@@ -12379,7 +12382,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0255a94435108b45d14d0c67dc', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485155a94435108b45d14d0c67dc', width: 64}
 				]),
-			id: '4cNiU8PZr45LNg7kzGLipx',
+			id: $author$project$AlbumIds$AlbumId('4cNiU8PZr45LNg7kzGLipx'),
 			name: '194/Der Friedhof der Namenlosen',
 			urlToOpen: 'https://open.spotify.com/album/4cNiU8PZr45LNg7kzGLipx'
 		},
@@ -12390,7 +12393,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029860a14cbdd4f14743dd4bef', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519860a14cbdd4f14743dd4bef', width: 64}
 				]),
-			id: '1WkgLbhl2Qigtc55DXP93S',
+			id: $author$project$AlbumIds$AlbumId('1WkgLbhl2Qigtc55DXP93S'),
 			name: '193/Das Weihnachts-Phantom',
 			urlToOpen: 'https://open.spotify.com/album/1WkgLbhl2Qigtc55DXP93S'
 		},
@@ -12401,7 +12404,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b5d2e3d9f441ab3aef894360', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b5d2e3d9f441ab3aef894360', width: 64}
 				]),
-			id: '0NyIaGxbQlRPnA201NEbkE',
+			id: $author$project$AlbumIds$AlbumId('0NyIaGxbQlRPnA201NEbkE'),
 			name: '192/Feuer auf Gut Ribbeck!',
 			urlToOpen: 'https://open.spotify.com/album/0NyIaGxbQlRPnA201NEbkE'
 		},
@@ -12412,7 +12415,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02915080df23056b133aadf99d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851915080df23056b133aadf99d', width: 64}
 				]),
-			id: '1kZIlUYCKUvmfEHXku1ter',
+			id: $author$project$AlbumIds$AlbumId('1kZIlUYCKUvmfEHXku1ter'),
 			name: '191/Nord-Nordwest zum Hexenplatz',
 			urlToOpen: 'https://open.spotify.com/album/1kZIlUYCKUvmfEHXku1ter'
 		},
@@ -12423,7 +12426,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0244ca54c07f42ad4e2ffe9dd8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485144ca54c07f42ad4e2ffe9dd8', width: 64}
 				]),
-			id: '5CabKO4dpZJ0wUwX8MMDk6',
+			id: $author$project$AlbumIds$AlbumId('5CabKO4dpZJ0wUwX8MMDk6'),
 			name: '190/Der eiskalte Clown',
 			urlToOpen: 'https://open.spotify.com/album/5CabKO4dpZJ0wUwX8MMDk6'
 		},
@@ -12434,7 +12437,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0260e218e94ff0ca76b3d2a96d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485160e218e94ff0ca76b3d2a96d', width: 64}
 				]),
-			id: '7aMulTBM9qpGtoT0GUoAsZ',
+			id: $author$project$AlbumIds$AlbumId('7aMulTBM9qpGtoT0GUoAsZ'),
 			name: '189/Iwan, der Schreckliche',
 			urlToOpen: 'https://open.spotify.com/album/7aMulTBM9qpGtoT0GUoAsZ'
 		},
@@ -12445,7 +12448,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b82664fb9299bc204b2e1464', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b82664fb9299bc204b2e1464', width: 64}
 				]),
-			id: '3ZJPztovzVLCZ5wMyErFyd',
+			id: $author$project$AlbumIds$AlbumId('3ZJPztovzVLCZ5wMyErFyd'),
 			name: '188/Die blauen Schafe von Artelsbach',
 			urlToOpen: 'https://open.spotify.com/album/3ZJPztovzVLCZ5wMyErFyd'
 		},
@@ -12456,7 +12459,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b74e48b7ac16d2758cea59d0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b74e48b7ac16d2758cea59d0', width: 64}
 				]),
-			id: '7MNjtmClWBiJvqK7LDVDdH',
+			id: $author$project$AlbumIds$AlbumId('7MNjtmClWBiJvqK7LDVDdH'),
 			name: '187/Ausspioniert!',
 			urlToOpen: 'https://open.spotify.com/album/7MNjtmClWBiJvqK7LDVDdH'
 		},
@@ -12467,7 +12470,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b6cc82b097f8c8937901da46', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b6cc82b097f8c8937901da46', width: 64}
 				]),
-			id: '4dOQ5SfUGPEX5BrkvnGnSM',
+			id: $author$project$AlbumIds$AlbumId('4dOQ5SfUGPEX5BrkvnGnSM'),
 			name: '186/Die schlafende Chinesin',
 			urlToOpen: 'https://open.spotify.com/album/4dOQ5SfUGPEX5BrkvnGnSM'
 		},
@@ -12478,7 +12481,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02dfcd547e0a5af2d01d34fc15', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851dfcd547e0a5af2d01d34fc15', width: 64}
 				]),
-			id: '4ExVTdTtEh9QMKG6F0ilIA',
+			id: $author$project$AlbumIds$AlbumId('4ExVTdTtEh9QMKG6F0ilIA'),
 			name: '185/der unsichtbare Dieb',
 			urlToOpen: 'https://open.spotify.com/album/4ExVTdTtEh9QMKG6F0ilIA'
 		},
@@ -12489,7 +12492,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c6b05e423024207fc1252f52', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c6b05e423024207fc1252f52', width: 64}
 				]),
-			id: '7qglq750T0LjXZbsDzEeSn',
+			id: $author$project$AlbumIds$AlbumId('7qglq750T0LjXZbsDzEeSn'),
 			name: '184/Die ewige Finsternis',
 			urlToOpen: 'https://open.spotify.com/album/7qglq750T0LjXZbsDzEeSn'
 		},
@@ -12500,7 +12503,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0223883417f16d92db78ef9a4f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485123883417f16d92db78ef9a4f', width: 64}
 				]),
-			id: '2kUywGimNzj3YRKAkwVf3S',
+			id: $author$project$AlbumIds$AlbumId('2kUywGimNzj3YRKAkwVf3S'),
 			name: '183/Blindgänger im Villenviertel',
 			urlToOpen: 'https://open.spotify.com/album/2kUywGimNzj3YRKAkwVf3S'
 		},
@@ -12511,7 +12514,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ac7e876a73baa9954e450d20', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ac7e876a73baa9954e450d20', width: 64}
 				]),
-			id: '3hz4bWxTDtHzDwKTRmOcDQ',
+			id: $author$project$AlbumIds$AlbumId('3hz4bWxTDtHzDwKTRmOcDQ'),
 			name: '182/Im Bann des Übersinnlichen',
 			urlToOpen: 'https://open.spotify.com/album/3hz4bWxTDtHzDwKTRmOcDQ'
 		},
@@ -12522,7 +12525,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c97b279f20b693ab6e706428', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c97b279f20b693ab6e706428', width: 64}
 				]),
-			id: '1rYzkmCLyYvGllBZ3y2AGV',
+			id: $author$project$AlbumIds$AlbumId('1rYzkmCLyYvGllBZ3y2AGV'),
 			name: '181/Der vertauschte Koffer',
 			urlToOpen: 'https://open.spotify.com/album/1rYzkmCLyYvGllBZ3y2AGV'
 		},
@@ -12533,7 +12536,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024d7c60f60b71d3341a0a9d0f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514d7c60f60b71d3341a0a9d0f', width: 64}
 				]),
-			id: '7adgwW3gVPH7l2mzfgzC6t',
+			id: $author$project$AlbumIds$AlbumId('7adgwW3gVPH7l2mzfgzC6t'),
 			name: '180/Alarm im Raubtierhaus',
 			urlToOpen: 'https://open.spotify.com/album/7adgwW3gVPH7l2mzfgzC6t'
 		},
@@ -12544,7 +12547,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02077eaeea265ea9ab2624797c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851077eaeea265ea9ab2624797c', width: 64}
 				]),
-			id: '5H9JYToGoYk8mGnUkCX3Z9',
+			id: $author$project$AlbumIds$AlbumId('5H9JYToGoYk8mGnUkCX3Z9'),
 			name: '179/Abzocke im Online-Chat',
 			urlToOpen: 'https://open.spotify.com/album/5H9JYToGoYk8mGnUkCX3Z9'
 		},
@@ -12555,7 +12558,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b2c68cdbec5a06e3b35e8055', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b2c68cdbec5a06e3b35e8055', width: 64}
 				]),
-			id: '4LrP9x8HI2f0wkRgN5VLMe',
+			id: $author$project$AlbumIds$AlbumId('4LrP9x8HI2f0wkRgN5VLMe'),
 			name: '178/Hai-Alarm im Aquapark',
 			urlToOpen: 'https://open.spotify.com/album/4LrP9x8HI2f0wkRgN5VLMe'
 		},
@@ -12566,7 +12569,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0201338cabb142eef106b6a704', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485101338cabb142eef106b6a704', width: 64}
 				]),
-			id: '5D6dTe3cuMxZtHhKYf2Nph',
+			id: $author$project$AlbumIds$AlbumId('5D6dTe3cuMxZtHhKYf2Nph'),
 			name: '177/Die Spur der Wölfin',
 			urlToOpen: 'https://open.spotify.com/album/5D6dTe3cuMxZtHhKYf2Nph'
 		},
@@ -12577,7 +12580,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c5f3234925d860ec2cd1b8c3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c5f3234925d860ec2cd1b8c3', width: 64}
 				]),
-			id: '4cs4K4fFEFFgz3gtobHW9S',
+			id: $author$project$AlbumIds$AlbumId('4cs4K4fFEFFgz3gtobHW9S'),
 			name: '176/Verbrechen im Rampenlicht',
 			urlToOpen: 'https://open.spotify.com/album/4cs4K4fFEFFgz3gtobHW9S'
 		},
@@ -12588,7 +12591,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0234d456e2f2fdc6d1b2ce7b05', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485134d456e2f2fdc6d1b2ce7b05', width: 64}
 				]),
-			id: '7z37XBrYgYo7DCs9dFeHvq',
+			id: $author$project$AlbumIds$AlbumId('7z37XBrYgYo7DCs9dFeHvq'),
 			name: '175/Nachtwanderung mit Schrecken',
 			urlToOpen: 'https://open.spotify.com/album/7z37XBrYgYo7DCs9dFeHvq'
 		},
@@ -12599,7 +12602,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02681821b926c57bcfa69ff3d6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851681821b926c57bcfa69ff3d6', width: 64}
 				]),
-			id: '37jFIur7xvS8bjE8CeXyWA',
+			id: $author$project$AlbumIds$AlbumId('37jFIur7xvS8bjE8CeXyWA'),
 			name: '174/Doppelgänger auf der Rennbahn',
 			urlToOpen: 'https://open.spotify.com/album/37jFIur7xvS8bjE8CeXyWA'
 		},
@@ -12610,7 +12613,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0272abd13905aab712f231d087', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485172abd13905aab712f231d087', width: 64}
 				]),
-			id: '6RlfZAsHvD4G00fxBiWeN1',
+			id: $author$project$AlbumIds$AlbumId('6RlfZAsHvD4G00fxBiWeN1'),
 			name: '173/Die Skelettbande',
 			urlToOpen: 'https://open.spotify.com/album/6RlfZAsHvD4G00fxBiWeN1'
 		},
@@ -12621,7 +12624,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ad024c7a1a0ca65242b8b325', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ad024c7a1a0ca65242b8b325', width: 64}
 				]),
-			id: '2z4tH8k3YDSgSB8QQqrkfG',
+			id: $author$project$AlbumIds$AlbumId('2z4tH8k3YDSgSB8QQqrkfG'),
 			name: '172/Das Geheimnis der Moorleiche',
 			urlToOpen: 'https://open.spotify.com/album/2z4tH8k3YDSgSB8QQqrkfG'
 		},
@@ -12632,7 +12635,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023800407afe4161e8c89d3667', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513800407afe4161e8c89d3667', width: 64}
 				]),
-			id: '2nJDDgf2DvDDtxiTVwyfhW',
+			id: $author$project$AlbumIds$AlbumId('2nJDDgf2DvDDtxiTVwyfhW'),
 			name: '171/Das lebende Gemälde',
 			urlToOpen: 'https://open.spotify.com/album/2nJDDgf2DvDDtxiTVwyfhW'
 		},
@@ -12643,7 +12646,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c6e4a9b3e3b91695325953ac', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c6e4a9b3e3b91695325953ac', width: 64}
 				]),
-			id: '0zpxGRczKxY7teFkuOitzO',
+			id: $author$project$AlbumIds$AlbumId('0zpxGRczKxY7teFkuOitzO'),
 			name: '170/Schock im Schnee',
 			urlToOpen: 'https://open.spotify.com/album/0zpxGRczKxY7teFkuOitzO'
 		},
@@ -12654,7 +12657,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0237146be95d72b5c5c472e6ca', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485137146be95d72b5c5c472e6ca', width: 64}
 				]),
-			id: '64DTYY344b4JLlsHlpUG7r',
+			id: $author$project$AlbumIds$AlbumId('64DTYY344b4JLlsHlpUG7r'),
 			name: '169/Tatort Dschungel',
 			urlToOpen: 'https://open.spotify.com/album/64DTYY344b4JLlsHlpUG7r'
 		},
@@ -12665,7 +12668,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ee81ed798e222010897ea968', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ee81ed798e222010897ea968', width: 64}
 				]),
-			id: '4w7Qr51Uw16dBHDcfzgvHk',
+			id: $author$project$AlbumIds$AlbumId('4w7Qr51Uw16dBHDcfzgvHk'),
 			name: '168/Millionencoup im Stadion',
 			urlToOpen: 'https://open.spotify.com/album/4w7Qr51Uw16dBHDcfzgvHk'
 		},
@@ -12676,7 +12679,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02dde88856cec700670712e53f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851dde88856cec700670712e53f', width: 64}
 				]),
-			id: '7mu7o53PrOlRVxErUufaSL',
+			id: $author$project$AlbumIds$AlbumId('7mu7o53PrOlRVxErUufaSL'),
 			name: '167/Der Unsichtbare',
 			urlToOpen: 'https://open.spotify.com/album/7mu7o53PrOlRVxErUufaSL'
 		},
@@ -12687,7 +12690,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020acf6c6c1d9ddb9481361721', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510acf6c6c1d9ddb9481361721', width: 64}
 				]),
-			id: '6zI9fZd9Fk9LeUwM7uoWSq',
+			id: $author$project$AlbumIds$AlbumId('6zI9fZd9Fk9LeUwM7uoWSq'),
 			name: '166/Das Mädchen mit der Kristallkugel',
 			urlToOpen: 'https://open.spotify.com/album/6zI9fZd9Fk9LeUwM7uoWSq'
 		},
@@ -12698,7 +12701,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021535bc54215fad094879f4ca', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511535bc54215fad094879f4ca', width: 64}
 				]),
-			id: '0eav6341Txr3YF4aAmJ2O2',
+			id: $author$project$AlbumIds$AlbumId('0eav6341Txr3YF4aAmJ2O2'),
 			name: '165/Advent mit Knall-Effekt',
 			urlToOpen: 'https://open.spotify.com/album/0eav6341Txr3YF4aAmJ2O2'
 		},
@@ -12709,7 +12712,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ad668f501ed086c0621c45b4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ad668f501ed086c0621c45b4', width: 64}
 				]),
-			id: '7Dh3Sr5DdK6OT2M7FBUwhg',
+			id: $author$project$AlbumIds$AlbumId('7Dh3Sr5DdK6OT2M7FBUwhg'),
 			name: '164/Operation Hexen-Graffiti',
 			urlToOpen: 'https://open.spotify.com/album/7Dh3Sr5DdK6OT2M7FBUwhg'
 		},
@@ -12720,7 +12723,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024ce7f0a79f866c7747a57ca8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514ce7f0a79f866c7747a57ca8', width: 64}
 				]),
-			id: '6nFRXqUzqgusdraaxsOGqa',
+			id: $author$project$AlbumIds$AlbumId('6nFRXqUzqgusdraaxsOGqa'),
 			name: '163/Die Makler-Mafia',
 			urlToOpen: 'https://open.spotify.com/album/6nFRXqUzqgusdraaxsOGqa'
 		},
@@ -12731,7 +12734,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b2b102f0d2a94f79ecab57ac', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b2b102f0d2a94f79ecab57ac', width: 64}
 				]),
-			id: '4rSBDuSHYujCYFhrazbtnA',
+			id: $author$project$AlbumIds$AlbumId('4rSBDuSHYujCYFhrazbtnA'),
 			name: '162/Gefahr für Oskar!',
 			urlToOpen: 'https://open.spotify.com/album/4rSBDuSHYujCYFhrazbtnA'
 		},
@@ -12742,7 +12745,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02243ec841a01c9a7b6403103f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851243ec841a01c9a7b6403103f', width: 64}
 				]),
-			id: '6dneQXVs3r2JnZZxcwLtyK',
+			id: $author$project$AlbumIds$AlbumId('6dneQXVs3r2JnZZxcwLtyK'),
 			name: '161/Ein Yeti in der Millionenstadt',
 			urlToOpen: 'https://open.spotify.com/album/6dneQXVs3r2JnZZxcwLtyK'
 		},
@@ -12753,7 +12756,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f94163c3e42c0977fcff28d8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f94163c3e42c0977fcff28d8', width: 64}
 				]),
-			id: '7DPQuaR0bI58tJzkSQMllp',
+			id: $author$project$AlbumIds$AlbumId('7DPQuaR0bI58tJzkSQMllp'),
 			name: '160/Das Grauen naht um Zwölf',
 			urlToOpen: 'https://open.spotify.com/album/7DPQuaR0bI58tJzkSQMllp'
 		},
@@ -12764,7 +12767,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d9a6c66e971054ceded09e74', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d9a6c66e971054ceded09e74', width: 64}
 				]),
-			id: '4qR8In8uET1hBWHPGmhaWO',
+			id: $author$project$AlbumIds$AlbumId('4qR8In8uET1hBWHPGmhaWO'),
 			name: '159/Böses Spiel im Sommercamp',
 			urlToOpen: 'https://open.spotify.com/album/4qR8In8uET1hBWHPGmhaWO'
 		},
@@ -12775,7 +12778,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c3e540efa32e14296d2128c9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c3e540efa32e14296d2128c9', width: 64}
 				]),
-			id: '3OQqrEZzRYgYDcBIqsTeXS',
+			id: $author$project$AlbumIds$AlbumId('3OQqrEZzRYgYDcBIqsTeXS'),
 			name: '158/Trainer unter Verdacht',
 			urlToOpen: 'https://open.spotify.com/album/3OQqrEZzRYgYDcBIqsTeXS'
 		},
@@ -12786,7 +12789,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0241e056bbe1baecfbf8f29f0e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485141e056bbe1baecfbf8f29f0e', width: 64}
 				]),
-			id: '55nP0alEiObRF2c151bhTv',
+			id: $author$project$AlbumIds$AlbumId('55nP0alEiObRF2c151bhTv'),
 			name: '157/Oskar und die sieben Zwerge',
 			urlToOpen: 'https://open.spotify.com/album/55nP0alEiObRF2c151bhTv'
 		},
@@ -12797,7 +12800,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02371fee3fe0ce20fea57c4bf9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851371fee3fe0ce20fea57c4bf9', width: 64}
 				]),
-			id: '20WDNq4KvOibx87TFa2eXP',
+			id: $author$project$AlbumIds$AlbumId('20WDNq4KvOibx87TFa2eXP'),
 			name: '156/Erpresser fahren Achterbahn',
 			urlToOpen: 'https://open.spotify.com/album/20WDNq4KvOibx87TFa2eXP'
 		},
@@ -12808,7 +12811,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0231b05fa607ad79333f314dd3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485131b05fa607ad79333f314dd3', width: 64}
 				]),
-			id: '5XPVfzwtpBFF9CrmLb8Ilm',
+			id: $author$project$AlbumIds$AlbumId('5XPVfzwtpBFF9CrmLb8Ilm'),
 			name: '155/Gefangen im Spukhaus',
 			urlToOpen: 'https://open.spotify.com/album/5XPVfzwtpBFF9CrmLb8Ilm'
 		},
@@ -12819,7 +12822,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0295b1cd6d77e8c1582c000583', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485195b1cd6d77e8c1582c000583', width: 64}
 				]),
-			id: '0K30SpThDKymGkKlRgtUv2',
+			id: $author$project$AlbumIds$AlbumId('0K30SpThDKymGkKlRgtUv2'),
 			name: '154/Das Geheimnis der Burgruine',
 			urlToOpen: 'https://open.spotify.com/album/0K30SpThDKymGkKlRgtUv2'
 		},
@@ -12830,7 +12833,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0213eff56f5a91bb50bb62f4a9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485113eff56f5a91bb50bb62f4a9', width: 64}
 				]),
-			id: '4olYXMWX664H8ZJHZbXmAT',
+			id: $author$project$AlbumIds$AlbumId('4olYXMWX664H8ZJHZbXmAT'),
 			name: '153/Es geschah in einer Regennacht',
 			urlToOpen: 'https://open.spotify.com/album/4olYXMWX664H8ZJHZbXmAT'
 		},
@@ -12841,7 +12844,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0238e1adfee8a4f65e7fd7c89e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485138e1adfee8a4f65e7fd7c89e', width: 64}
 				]),
-			id: '5j81oYcn0kptiSEPrEHmkF',
+			id: $author$project$AlbumIds$AlbumId('5j81oYcn0kptiSEPrEHmkF'),
 			name: '152/Max und Anna, ein diebisches Paar',
 			urlToOpen: 'https://open.spotify.com/album/5j81oYcn0kptiSEPrEHmkF'
 		},
@@ -12852,7 +12855,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029a133073376e1b56164f8020', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519a133073376e1b56164f8020', width: 64}
 				]),
-			id: '7CLvIAy7Nzo03EQYWKa0yn',
+			id: $author$project$AlbumIds$AlbumId('7CLvIAy7Nzo03EQYWKa0yn'),
 			name: '151/Gekauftes Spiel',
 			urlToOpen: 'https://open.spotify.com/album/7CLvIAy7Nzo03EQYWKa0yn'
 		},
@@ -12863,7 +12866,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c36317344e1d867cde2f0cb0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c36317344e1d867cde2f0cb0', width: 64}
 				]),
-			id: '0ZqyFeMXxCyIJvYptGlnn1',
+			id: $author$project$AlbumIds$AlbumId('0ZqyFeMXxCyIJvYptGlnn1'),
 			name: '150/Heiße Nächte im Dezember',
 			urlToOpen: 'https://open.spotify.com/album/0ZqyFeMXxCyIJvYptGlnn1'
 		},
@@ -12874,7 +12877,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028397ec2d0762245f955098ae', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518397ec2d0762245f955098ae', width: 64}
 				]),
-			id: '1OWuX6xSnnC3oebl45X28K',
+			id: $author$project$AlbumIds$AlbumId('1OWuX6xSnnC3oebl45X28K'),
 			name: '149/Tims gefährlichster Gegner',
 			urlToOpen: 'https://open.spotify.com/album/1OWuX6xSnnC3oebl45X28K'
 		},
@@ -12885,7 +12888,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b79c95671aa3fe2e9f3eb241', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b79c95671aa3fe2e9f3eb241', width: 64}
 				]),
-			id: '0nFRzugvW1NVT1DUDxpQdb',
+			id: $author$project$AlbumIds$AlbumId('0nFRzugvW1NVT1DUDxpQdb'),
 			name: '148/Fieser Trick beim Finale',
 			urlToOpen: 'https://open.spotify.com/album/0nFRzugvW1NVT1DUDxpQdb'
 		},
@@ -12896,7 +12899,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c7d224d5608869859589315b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c7d224d5608869859589315b', width: 64}
 				]),
-			id: '642OtfJ54JziKQWOYbyiEa',
+			id: $author$project$AlbumIds$AlbumId('642OtfJ54JziKQWOYbyiEa'),
 			name: '147/Hölle ohne Hintertür',
 			urlToOpen: 'https://open.spotify.com/album/642OtfJ54JziKQWOYbyiEa'
 		},
@@ -12907,7 +12910,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025f9e81f7add380075e2878e4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515f9e81f7add380075e2878e4', width: 64}
 				]),
-			id: '74Qcbtr7f0KP3VpEgaWoaS',
+			id: $author$project$AlbumIds$AlbumId('74Qcbtr7f0KP3VpEgaWoaS'),
 			name: '146/Nonstop in die Raketenfalle',
 			urlToOpen: 'https://open.spotify.com/album/74Qcbtr7f0KP3VpEgaWoaS'
 		},
@@ -12918,7 +12921,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028e00fd7d7faf645afcda4237', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518e00fd7d7faf645afcda4237', width: 64}
 				]),
-			id: '3vAwRpp0YGKwWzLxctXHXe',
+			id: $author$project$AlbumIds$AlbumId('3vAwRpp0YGKwWzLxctXHXe'),
 			name: '145/Hinterhalt am schwarzen Fels',
 			urlToOpen: 'https://open.spotify.com/album/3vAwRpp0YGKwWzLxctXHXe'
 		},
@@ -12929,7 +12932,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023d8816549b74586cb3a10547', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513d8816549b74586cb3a10547', width: 64}
 				]),
-			id: '1DL2rSYjJIWqFpmGIRitMZ',
+			id: $author$project$AlbumIds$AlbumId('1DL2rSYjJIWqFpmGIRitMZ'),
 			name: '144/Schreckensnacht im Schlangenmaul',
 			urlToOpen: 'https://open.spotify.com/album/1DL2rSYjJIWqFpmGIRitMZ'
 		},
@@ -12940,7 +12943,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020a21e035d47c29480c449d92', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510a21e035d47c29480c449d92', width: 64}
 				]),
-			id: '6WKU3Zj4uxvrJnY5Kc03A0',
+			id: $author$project$AlbumIds$AlbumId('6WKU3Zj4uxvrJnY5Kc03A0'),
 			name: '143/Das unheimliche Haus',
 			urlToOpen: 'https://open.spotify.com/album/6WKU3Zj4uxvrJnY5Kc03A0'
 		},
@@ -12951,7 +12954,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e3ba8b727ae7483ec2affefa', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e3ba8b727ae7483ec2affefa', width: 64}
 				]),
-			id: '5SZxeVgh5JUHEgew4IKLsx',
+			id: $author$project$AlbumIds$AlbumId('5SZxeVgh5JUHEgew4IKLsx'),
 			name: '142/Bankräuber mit Supertrick',
 			urlToOpen: 'https://open.spotify.com/album/5SZxeVgh5JUHEgew4IKLsx'
 		},
@@ -12962,7 +12965,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c9aede7c5df48bdab75959b2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c9aede7c5df48bdab75959b2', width: 64}
 				]),
-			id: '34ZBbN1LTl2c2Qxzj2JwF1',
+			id: $author$project$AlbumIds$AlbumId('34ZBbN1LTl2c2Qxzj2JwF1'),
 			name: '141/Todesbiss der schwarzen Mamba',
 			urlToOpen: 'https://open.spotify.com/album/34ZBbN1LTl2c2Qxzj2JwF1'
 		},
@@ -12973,7 +12976,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0204d5ceb53a7fce99f4085e88', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485104d5ceb53a7fce99f4085e88', width: 64}
 				]),
-			id: '7BTjGCqexmQ947HDHR5e8J',
+			id: $author$project$AlbumIds$AlbumId('7BTjGCqexmQ947HDHR5e8J'),
 			name: '140/Draculas Erben',
 			urlToOpen: 'https://open.spotify.com/album/7BTjGCqexmQ947HDHR5e8J'
 		},
@@ -12984,7 +12987,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bbcad65709c19f0c28eb412f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bbcad65709c19f0c28eb412f', width: 64}
 				]),
-			id: '7pRJLfr0wOiudzUjSqitzN',
+			id: $author$project$AlbumIds$AlbumId('7pRJLfr0wOiudzUjSqitzN'),
 			name: '139/Oskar jagt die Drogendealer',
 			urlToOpen: 'https://open.spotify.com/album/7pRJLfr0wOiudzUjSqitzN'
 		},
@@ -12995,7 +12998,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021462e27990f35fe6e75e441c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511462e27990f35fe6e75e441c', width: 64}
 				]),
-			id: '78gbDWHGzUfxISjEQjhXXg',
+			id: $author$project$AlbumIds$AlbumId('78gbDWHGzUfxISjEQjhXXg'),
 			name: '138/Raubzug mit Bumerang',
 			urlToOpen: 'https://open.spotify.com/album/78gbDWHGzUfxISjEQjhXXg'
 		},
@@ -13006,7 +13009,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029f0287a81f67a13fa56ed5fd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519f0287a81f67a13fa56ed5fd', width: 64}
 				]),
-			id: '3S3RsaMPC1zpjYh9ibwLhb',
+			id: $author$project$AlbumIds$AlbumId('3S3RsaMPC1zpjYh9ibwLhb'),
 			name: '137/Verschleppt ins Tal Diabolo',
 			urlToOpen: 'https://open.spotify.com/album/3S3RsaMPC1zpjYh9ibwLhb'
 		},
@@ -13017,7 +13020,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c619c18e27da23800f989474', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c619c18e27da23800f989474', width: 64}
 				]),
-			id: '6Jw6ALN4jEqyhtHPuSGD7e',
+			id: $author$project$AlbumIds$AlbumId('6Jw6ALN4jEqyhtHPuSGD7e'),
 			name: '136/Argentinische Entführung',
 			urlToOpen: 'https://open.spotify.com/album/6Jw6ALN4jEqyhtHPuSGD7e'
 		},
@@ -13028,7 +13031,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02dfbe5b1152865935244fa679', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851dfbe5b1152865935244fa679', width: 64}
 				]),
-			id: '5GyWEEFbhvsUPk9pVR61p8',
+			id: $author$project$AlbumIds$AlbumId('5GyWEEFbhvsUPk9pVR61p8'),
 			name: '135/Der Meisterdieb und seine Feinde',
 			urlToOpen: 'https://open.spotify.com/album/5GyWEEFbhvsUPk9pVR61p8'
 		},
@@ -13039,7 +13042,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f58036b63184b03727182c58', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f58036b63184b03727182c58', width: 64}
 				]),
-			id: '1xOMCIhM742LDNn6Av7SaY',
+			id: $author$project$AlbumIds$AlbumId('1xOMCIhM742LDNn6Av7SaY'),
 			name: '134/Wer stoppt die Weihnachts-Gangster',
 			urlToOpen: 'https://open.spotify.com/album/1xOMCIhM742LDNn6Av7SaY'
 		},
@@ -13050,7 +13053,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a4ca4660190a86d43ad24c00', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a4ca4660190a86d43ad24c00', width: 64}
 				]),
-			id: '6u0Bbe6ewDB23wwN0XbU2J',
+			id: $author$project$AlbumIds$AlbumId('6u0Bbe6ewDB23wwN0XbU2J'),
 			name: '133/Auf vier Pfoten zur Millionenbeute',
 			urlToOpen: 'https://open.spotify.com/album/6u0Bbe6ewDB23wwN0XbU2J'
 		},
@@ -13061,7 +13064,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02eb9f37b6c3a118ea9b8f1d73', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851eb9f37b6c3a118ea9b8f1d73', width: 64}
 				]),
-			id: '7C5cT8kDPUKAiyV39QC9y6',
+			id: $author$project$AlbumIds$AlbumId('7C5cT8kDPUKAiyV39QC9y6'),
 			name: '132/Homejacker machen Überstunden',
 			urlToOpen: 'https://open.spotify.com/album/7C5cT8kDPUKAiyV39QC9y6'
 		},
@@ -13072,7 +13075,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fb8cf29d001ae4ddf073eb1d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fb8cf29d001ae4ddf073eb1d', width: 64}
 				]),
-			id: '3Hto454teGDtP3LANx45nV',
+			id: $author$project$AlbumIds$AlbumId('3Hto454teGDtP3LANx45nV'),
 			name: '131/Stundenlohn für flotte Gangster',
 			urlToOpen: 'https://open.spotify.com/album/3Hto454teGDtP3LANx45nV'
 		},
@@ -13083,7 +13086,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d512a9ec2d76217465e6b29d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d512a9ec2d76217465e6b29d', width: 64}
 				]),
-			id: '0readhKQChO0CavM03TBsG',
+			id: $author$project$AlbumIds$AlbumId('0readhKQChO0CavM03TBsG'),
 			name: '130/Die gefährliche Zeugin verschwindet',
 			urlToOpen: 'https://open.spotify.com/album/0readhKQChO0CavM03TBsG'
 		},
@@ -13094,7 +13097,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0257c95b17075b762a4a93d921', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485157c95b17075b762a4a93d921', width: 64}
 				]),
-			id: '1TjNjBs1qKh8atmJe9JBcz',
+			id: $author$project$AlbumIds$AlbumId('1TjNjBs1qKh8atmJe9JBcz'),
 			name: '129/Der Erpresser fährt bis Endstation',
 			urlToOpen: 'https://open.spotify.com/album/1TjNjBs1qKh8atmJe9JBcz'
 		},
@@ -13105,7 +13108,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fa2bd743c7f72911b01a389d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fa2bd743c7f72911b01a389d', width: 64}
 				]),
-			id: '5jjQAVPbdRAvDxeCdg8xsL',
+			id: $author$project$AlbumIds$AlbumId('5jjQAVPbdRAvDxeCdg8xsL'),
 			name: '128/Die Gehilfen des Terrors',
 			urlToOpen: 'https://open.spotify.com/album/5jjQAVPbdRAvDxeCdg8xsL'
 		},
@@ -13116,7 +13119,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ca5147cc80623ffb33a7fc64', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ca5147cc80623ffb33a7fc64', width: 64}
 				]),
-			id: '4HNxicEEVUbZHI4GvvBEVH',
+			id: $author$project$AlbumIds$AlbumId('4HNxicEEVUbZHI4GvvBEVH'),
 			name: '127/Im Schlauchboot durch die Unterwelt',
 			urlToOpen: 'https://open.spotify.com/album/4HNxicEEVUbZHI4GvvBEVH'
 		},
@@ -13127,7 +13130,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a297fc91c3a9153ec300f385', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a297fc91c3a9153ec300f385', width: 64}
 				]),
-			id: '59XpRNxoOO21j2bfXr4u8v',
+			id: $author$project$AlbumIds$AlbumId('59XpRNxoOO21j2bfXr4u8v'),
 			name: '126/Teddy Talers Höllenfahrt',
 			urlToOpen: 'https://open.spotify.com/album/59XpRNxoOO21j2bfXr4u8v'
 		},
@@ -13138,7 +13141,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02dde0a4007eee70fc774e2853', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851dde0a4007eee70fc774e2853', width: 64}
 				]),
-			id: '6HtJ1gsoOlPlMHl6BBIedU',
+			id: $author$project$AlbumIds$AlbumId('6HtJ1gsoOlPlMHl6BBIedU'),
 			name: '125/Der Mörder aus einer anderen Zeit',
 			urlToOpen: 'https://open.spotify.com/album/6HtJ1gsoOlPlMHl6BBIedU'
 		},
@@ -13149,7 +13152,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b8a1fd32c90e60ebba228bcf', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b8a1fd32c90e60ebba228bcf', width: 64}
 				]),
-			id: '3i8iFxVoBzO7HLAmH5WTc8',
+			id: $author$project$AlbumIds$AlbumId('3i8iFxVoBzO7HLAmH5WTc8'),
 			name: '124/Vergebliche Suche nach Gaby',
 			urlToOpen: 'https://open.spotify.com/album/3i8iFxVoBzO7HLAmH5WTc8'
 		},
@@ -13160,7 +13163,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f5c7c11baa8937dfdc7ef661', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f5c7c11baa8937dfdc7ef661', width: 64}
 				]),
-			id: '0Uw592E81r73YlcfdrXTqe',
+			id: $author$project$AlbumIds$AlbumId('0Uw592E81r73YlcfdrXTqe'),
 			name: '123/Mordkomplott im Luxus-Klo',
 			urlToOpen: 'https://open.spotify.com/album/0Uw592E81r73YlcfdrXTqe'
 		},
@@ -13171,7 +13174,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d8f4468fc42b5077265b6409', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d8f4468fc42b5077265b6409', width: 64}
 				]),
-			id: '0ZQupaN55cZsgjnaZc3ce8',
+			id: $author$project$AlbumIds$AlbumId('0ZQupaN55cZsgjnaZc3ce8'),
 			name: '122/Der Goldschatz, der vom Himmel fiel',
 			urlToOpen: 'https://open.spotify.com/album/0ZQupaN55cZsgjnaZc3ce8'
 		},
@@ -13182,7 +13185,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ba0295b0f6df98c4ca4321fa', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ba0295b0f6df98c4ca4321fa', width: 64}
 				]),
-			id: '3af1Ne9SXRGDBsyhn1OcbX',
+			id: $author$project$AlbumIds$AlbumId('3af1Ne9SXRGDBsyhn1OcbX'),
 			name: '121/Ein cooler Typ aus der Hölle',
 			urlToOpen: 'https://open.spotify.com/album/3af1Ne9SXRGDBsyhn1OcbX'
 		},
@@ -13193,7 +13196,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02285379f8d341d5c4f555c9c3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851285379f8d341d5c4f555c9c3', width: 64}
 				]),
-			id: '6MZ8GjwkBao0glkAguCYpx',
+			id: $author$project$AlbumIds$AlbumId('6MZ8GjwkBao0glkAguCYpx'),
 			name: '120/Bei Anruf Angst',
 			urlToOpen: 'https://open.spotify.com/album/6MZ8GjwkBao0glkAguCYpx'
 		},
@@ -13204,7 +13207,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0245ee01bfd571760a5c28d853', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485145ee01bfd571760a5c28d853', width: 64}
 				]),
-			id: '6u7TXxm1pFVUceAkdl5EMo',
+			id: $author$project$AlbumIds$AlbumId('6u7TXxm1pFVUceAkdl5EMo'),
 			name: '119/Frische Spur nach 70 Jahren',
 			urlToOpen: 'https://open.spotify.com/album/6u7TXxm1pFVUceAkdl5EMo'
 		},
@@ -13215,7 +13218,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02db58f1ae9eeaebb2ea04e384', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851db58f1ae9eeaebb2ea04e384', width: 64}
 				]),
-			id: '5TX9govv5QXwFLZT2fiHSe',
+			id: $author$project$AlbumIds$AlbumId('5TX9govv5QXwFLZT2fiHSe'),
 			name: '118/Im Kaufhaus ist der Teufel los',
 			urlToOpen: 'https://open.spotify.com/album/5TX9govv5QXwFLZT2fiHSe'
 		},
@@ -13226,7 +13229,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021e8e8f3da90e5e0cb1ace0b8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511e8e8f3da90e5e0cb1ace0b8', width: 64}
 				]),
-			id: '2NlUe7bw93isGjrvmXneYt',
+			id: $author$project$AlbumIds$AlbumId('2NlUe7bw93isGjrvmXneYt'),
 			name: '117/Im Schloß der schlafenden Vampire',
 			urlToOpen: 'https://open.spotify.com/album/2NlUe7bw93isGjrvmXneYt'
 		},
@@ -13237,7 +13240,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022e7eb038cdad7667dea16f12', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512e7eb038cdad7667dea16f12', width: 64}
 				]),
-			id: '1qnXN4G8JKVo2cBe3YiBYu',
+			id: $author$project$AlbumIds$AlbumId('1qnXN4G8JKVo2cBe3YiBYu'),
 			name: '116/Klassenfahrt zur Hexenburg',
 			urlToOpen: 'https://open.spotify.com/album/1qnXN4G8JKVo2cBe3YiBYu'
 		},
@@ -13248,7 +13251,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024dd918c1dd5f6def93a3ba52', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514dd918c1dd5f6def93a3ba52', width: 64}
 				]),
-			id: '3HLVIwjC3e7nR0blSiR0Cf',
+			id: $author$project$AlbumIds$AlbumId('3HLVIwjC3e7nR0blSiR0Cf'),
 			name: '115/Der Diamant im Bauch der Kobra',
 			urlToOpen: 'https://open.spotify.com/album/3HLVIwjC3e7nR0blSiR0Cf'
 		},
@@ -13259,7 +13262,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0248169644f16833f40b7bad9e', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485148169644f16833f40b7bad9e', width: 64}
 				]),
-			id: '1EOt95N1umfsGDDi2RGyLx',
+			id: $author$project$AlbumIds$AlbumId('1EOt95N1umfsGDDi2RGyLx'),
 			name: '114/Die Sekte Satans',
 			urlToOpen: 'https://open.spotify.com/album/1EOt95N1umfsGDDi2RGyLx'
 		},
@@ -13270,7 +13273,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02842c7654a4a1d72acb2bbda5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851842c7654a4a1d72acb2bbda5', width: 64}
 				]),
-			id: '47XIAkJhFj1O5J6bFF061G',
+			id: $author$project$AlbumIds$AlbumId('47XIAkJhFj1O5J6bFF061G'),
 			name: '113/Mit heißer Nadel Jagd auf Kids',
 			urlToOpen: 'https://open.spotify.com/album/47XIAkJhFj1O5J6bFF061G'
 		},
@@ -13281,7 +13284,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ca1ca0f7bf58b1282db089ad', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ca1ca0f7bf58b1282db089ad', width: 64}
 				]),
-			id: '0hvicgoCbgvXmwjV2FhPOK',
+			id: $author$project$AlbumIds$AlbumId('0hvicgoCbgvXmwjV2FhPOK'),
 			name: '112/Bombenspaß bei Kies & Knete',
 			urlToOpen: 'https://open.spotify.com/album/0hvicgoCbgvXmwjV2FhPOK'
 		},
@@ -13292,7 +13295,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c6de8671affe99160b11ee54', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c6de8671affe99160b11ee54', width: 64}
 				]),
-			id: '7v5o8fgiM0AUoibGLX7mNR',
+			id: $author$project$AlbumIds$AlbumId('7v5o8fgiM0AUoibGLX7mNR'),
 			name: '111/Die tödliche Falle',
 			urlToOpen: 'https://open.spotify.com/album/7v5o8fgiM0AUoibGLX7mNR'
 		},
@@ -13303,7 +13306,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020b65872ffc092f8a531a6a9f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510b65872ffc092f8a531a6a9f', width: 64}
 				]),
-			id: '7aMc9Dk7FhceVhhSRvGVKi',
+			id: $author$project$AlbumIds$AlbumId('7aMc9Dk7FhceVhhSRvGVKi'),
 			name: '110/Das Phantom im Schokoladenmuseum',
 			urlToOpen: 'https://open.spotify.com/album/7aMc9Dk7FhceVhhSRvGVKi'
 		},
@@ -13314,7 +13317,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02aaa29403bcbef337b237665b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851aaa29403bcbef337b237665b', width: 64}
 				]),
-			id: '0Av7I4rxIH4l2iy4eonNqQ',
+			id: $author$project$AlbumIds$AlbumId('0Av7I4rxIH4l2iy4eonNqQ'),
 			name: '109/Mörderspiel im Burghotel',
 			urlToOpen: 'https://open.spotify.com/album/0Av7I4rxIH4l2iy4eonNqQ'
 		},
@@ -13325,7 +13328,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02245b83f6ec889cdb5f1aca68', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851245b83f6ec889cdb5f1aca68', width: 64}
 				]),
-			id: '5UowH6UQ4hHv0pDp7XC73F',
+			id: $author$project$AlbumIds$AlbumId('5UowH6UQ4hHv0pDp7XC73F'),
 			name: '108/Das Konzert bei den Ratten',
 			urlToOpen: 'https://open.spotify.com/album/5UowH6UQ4hHv0pDp7XC73F'
 		},
@@ -13336,7 +13339,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025c1facd4093ff584d49571ad', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515c1facd4093ff584d49571ad', width: 64}
 				]),
-			id: '20Ei5hMuzN4aIaubhwZGCh',
+			id: $author$project$AlbumIds$AlbumId('20Ei5hMuzN4aIaubhwZGCh'),
 			name: '107/Lösegeld für einen Irrtum',
 			urlToOpen: 'https://open.spotify.com/album/20Ei5hMuzN4aIaubhwZGCh'
 		},
@@ -13347,7 +13350,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d6fd97244f51f74b10888db9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d6fd97244f51f74b10888db9', width: 64}
 				]),
-			id: '6vx49wKEFKejjPiqtr6PZV',
+			id: $author$project$AlbumIds$AlbumId('6vx49wKEFKejjPiqtr6PZV'),
 			name: '106/Mädchenraub im Ferienhaus',
 			urlToOpen: 'https://open.spotify.com/album/6vx49wKEFKejjPiqtr6PZV'
 		},
@@ -13358,7 +13361,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f75e759646e7ab1f83f71773', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f75e759646e7ab1f83f71773', width: 64}
 				]),
-			id: '1rFO6xC24qh08d1wCvKDC8',
+			id: $author$project$AlbumIds$AlbumId('1rFO6xC24qh08d1wCvKDC8'),
 			name: '105/Vermißte Kids und Killerpflanzen',
 			urlToOpen: 'https://open.spotify.com/album/1rFO6xC24qh08d1wCvKDC8'
 		},
@@ -13369,7 +13372,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e22cfd79b8e932ab30935378', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e22cfd79b8e932ab30935378', width: 64}
 				]),
-			id: '5YwL93GA7APpy21xMum8Wt',
+			id: $author$project$AlbumIds$AlbumId('5YwL93GA7APpy21xMum8Wt'),
 			name: '104/Im Wettbüro des Teufels',
 			urlToOpen: 'https://open.spotify.com/album/5YwL93GA7APpy21xMum8Wt'
 		},
@@ -13380,7 +13383,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022340444d98b80cf5e4b92cd4', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512340444d98b80cf5e4b92cd4', width: 64}
 				]),
-			id: '0Bgt28WUbkcFYGYFZDkVMk',
+			id: $author$project$AlbumIds$AlbumId('0Bgt28WUbkcFYGYFZDkVMk'),
 			name: '103/Mörderischer Stammbaum',
 			urlToOpen: 'https://open.spotify.com/album/0Bgt28WUbkcFYGYFZDkVMk'
 		},
@@ -13391,7 +13394,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0254e9a1c89d3a16ec0aa44a10', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485154e9a1c89d3a16ec0aa44a10', width: 64}
 				]),
-			id: '6b6XofBfdNQOrTQ5OYNzxI',
+			id: $author$project$AlbumIds$AlbumId('6b6XofBfdNQOrTQ5OYNzxI'),
 			name: '102/Angst auf der Autobahn',
 			urlToOpen: 'https://open.spotify.com/album/6b6XofBfdNQOrTQ5OYNzxI'
 		},
@@ -13402,7 +13405,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a5c1e95d1730d78d54851ab8', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a5c1e95d1730d78d54851ab8', width: 64}
 				]),
-			id: '2jU1HQIl8BvRK2k5xd1rnf',
+			id: $author$project$AlbumIds$AlbumId('2jU1HQIl8BvRK2k5xd1rnf'),
 			name: '101/Opfer fliegen 1. Klasse',
 			urlToOpen: 'https://open.spotify.com/album/2jU1HQIl8BvRK2k5xd1rnf'
 		},
@@ -13413,7 +13416,7 @@ var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0214ac6c46868f8c51be7d33b2', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485114ac6c46868f8c51be7d33b2', width: 64}
 				]),
-			id: '2roFEQcxTR8srR0sWgm456',
+			id: $author$project$AlbumIds$AlbumId('2roFEQcxTR8srR0sWgm456'),
 			name: '100/Fieser Trick mit Nr. 100',
 			urlToOpen: 'https://open.spotify.com/album/2roFEQcxTR8srR0sWgm456'
 		}
@@ -13428,7 +13431,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e91ea41595937dfdbfc2684f', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e91ea41595937dfdbfc2684f', width: 64}
 				]),
-			id: '7GEeLJHM26JEPsMphuGdpv',
+			id: $author$project$AlbumIds$AlbumId('7GEeLJHM26JEPsMphuGdpv'),
 			name: '099/Hilflos in eisiger Nacht',
 			urlToOpen: 'https://open.spotify.com/album/7GEeLJHM26JEPsMphuGdpv'
 		},
@@ -13439,7 +13442,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021b229f1b91cfea58aa02e8a0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511b229f1b91cfea58aa02e8a0', width: 64}
 				]),
-			id: '5XIQ7snWep9Ve5R6TEAbKe',
+			id: $author$project$AlbumIds$AlbumId('5XIQ7snWep9Ve5R6TEAbKe'),
 			name: '098/Die Haie vom Lotus-Garten',
 			urlToOpen: 'https://open.spotify.com/album/5XIQ7snWep9Ve5R6TEAbKe'
 		},
@@ -13450,7 +13453,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02dcea2a5e46c0dd2765fbff59', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851dcea2a5e46c0dd2765fbff59', width: 64}
 				]),
-			id: '62ubTJeNMqXACrW43uK1fV',
+			id: $author$project$AlbumIds$AlbumId('62ubTJeNMqXACrW43uK1fV'),
 			name: '097/Die Hand an den Sternen',
 			urlToOpen: 'https://open.spotify.com/album/62ubTJeNMqXACrW43uK1fV'
 		},
@@ -13461,7 +13464,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0289654b1d7bcbd6004ee5ab10', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485189654b1d7bcbd6004ee5ab10', width: 64}
 				]),
-			id: '3xv5DyV1HzdZOtHkRwGOul',
+			id: $author$project$AlbumIds$AlbumId('3xv5DyV1HzdZOtHkRwGOul'),
 			name: '096/Die Entführung des Popstars',
 			urlToOpen: 'https://open.spotify.com/album/3xv5DyV1HzdZOtHkRwGOul'
 		},
@@ -13472,7 +13475,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0249b3feca0e3fe45f24e0598c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485149b3feca0e3fe45f24e0598c', width: 64}
 				]),
-			id: '4JuBG4ko46TyAF2R1A0APA',
+			id: $author$project$AlbumIds$AlbumId('4JuBG4ko46TyAF2R1A0APA'),
 			name: '095/U-Bahn des Schreckens',
 			urlToOpen: 'https://open.spotify.com/album/4JuBG4ko46TyAF2R1A0APA'
 		},
@@ -13483,7 +13486,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02046109bd4415a6cbdc28b01c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851046109bd4415a6cbdc28b01c', width: 64}
 				]),
-			id: '0in2tMW0QlYkCN4xZGMKFw',
+			id: $author$project$AlbumIds$AlbumId('0in2tMW0QlYkCN4xZGMKFw'),
 			name: '094/In dunkler Nacht am Marmor-Grab',
 			urlToOpen: 'https://open.spotify.com/album/0in2tMW0QlYkCN4xZGMKFw'
 		},
@@ -13494,7 +13497,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02aa143b56f3071eb152ef0dce', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851aa143b56f3071eb152ef0dce', width: 64}
 				]),
-			id: '2rwdnrSrnLwwNt3fVB4dj5',
+			id: $author$project$AlbumIds$AlbumId('2rwdnrSrnLwwNt3fVB4dj5'),
 			name: '093/Die Opfer mit der kühlen Schnauze',
 			urlToOpen: 'https://open.spotify.com/album/2rwdnrSrnLwwNt3fVB4dj5'
 		},
@@ -13505,7 +13508,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024a2b105037b57e7fc496ce85', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514a2b105037b57e7fc496ce85', width: 64}
 				]),
-			id: '2XWTTxWMfvyYmCOIgSDCbX',
+			id: $author$project$AlbumIds$AlbumId('2XWTTxWMfvyYmCOIgSDCbX'),
 			name: '092/Der grausame Rächer',
 			urlToOpen: 'https://open.spotify.com/album/2XWTTxWMfvyYmCOIgSDCbX'
 		},
@@ -13516,7 +13519,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0274a914fe3635503c5bc083f1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485174a914fe3635503c5bc083f1', width: 64}
 				]),
-			id: '4NP8OOY8jxn9vVrc2YHMnY',
+			id: $author$project$AlbumIds$AlbumId('4NP8OOY8jxn9vVrc2YHMnY'),
 			name: '091/Crash-Kids riskieren ihr Leben',
 			urlToOpen: 'https://open.spotify.com/album/4NP8OOY8jxn9vVrc2YHMnY'
 		},
@@ -13527,7 +13530,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ca132eb530857af934cd4087', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ca132eb530857af934cd4087', width: 64}
 				]),
-			id: '1eLwikBnqjNWSaczaR5cgO',
+			id: $author$project$AlbumIds$AlbumId('1eLwikBnqjNWSaczaR5cgO'),
 			name: '090/Schmuggler reisen unerkannt',
 			urlToOpen: 'https://open.spotify.com/album/1eLwikBnqjNWSaczaR5cgO'
 		},
@@ -13538,7 +13541,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d9786fecfec05cbf45822f76', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d9786fecfec05cbf45822f76', width: 64}
 				]),
-			id: '3MnUfnTrRAtu2NQzUS2QSK',
+			id: $author$project$AlbumIds$AlbumId('3MnUfnTrRAtu2NQzUS2QSK'),
 			name: '089/Feind aus der Vergangenheit',
 			urlToOpen: 'https://open.spotify.com/album/3MnUfnTrRAtu2NQzUS2QSK'
 		},
@@ -13549,7 +13552,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ad7fa75922a5d99cfab58200', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ad7fa75922a5d99cfab58200', width: 64}
 				]),
-			id: '0t5UTq7hP9bwyfOQVwo4t6',
+			id: $author$project$AlbumIds$AlbumId('0t5UTq7hP9bwyfOQVwo4t6'),
 			name: '088/Kampf um das Zauberschwert \"Drachenauge\"',
 			urlToOpen: 'https://open.spotify.com/album/0t5UTq7hP9bwyfOQVwo4t6'
 		},
@@ -13560,7 +13563,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029ad0fb607728cd858c925389', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519ad0fb607728cd858c925389', width: 64}
 				]),
-			id: '0jDEX8MeGHhO2y6YnG6hSc',
+			id: $author$project$AlbumIds$AlbumId('0jDEX8MeGHhO2y6YnG6hSc'),
 			name: '087/Der böse Geist vom Waisenhaus',
 			urlToOpen: 'https://open.spotify.com/album/0jDEX8MeGHhO2y6YnG6hSc'
 		},
@@ -13571,7 +13574,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02592d75216ab0319a2a64b8df', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851592d75216ab0319a2a64b8df', width: 64}
 				]),
-			id: '4LR2bwS219DfsOZCXUtf9W',
+			id: $author$project$AlbumIds$AlbumId('4LR2bwS219DfsOZCXUtf9W'),
 			name: '086/Die Schatzsucher-Mafia schlägt zu',
 			urlToOpen: 'https://open.spotify.com/album/4LR2bwS219DfsOZCXUtf9W'
 		},
@@ -13582,7 +13585,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0278e1d87d803c2db12f375b32', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485178e1d87d803c2db12f375b32', width: 64}
 				]),
-			id: '6wQkT3EBgw4lzKjjK4RLje',
+			id: $author$project$AlbumIds$AlbumId('6wQkT3EBgw4lzKjjK4RLje'),
 			name: '085/Freiheit für gequälte Tiere',
 			urlToOpen: 'https://open.spotify.com/album/6wQkT3EBgw4lzKjjK4RLje'
 		},
@@ -13593,7 +13596,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02dde1a606a87e30906fc2af0c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851dde1a606a87e30906fc2af0c', width: 64}
 				]),
-			id: '0pqrBK8Iyz8zrFEhdLXUXb',
+			id: $author$project$AlbumIds$AlbumId('0pqrBK8Iyz8zrFEhdLXUXb'),
 			name: '084/Dynamit im Kofferraum',
 			urlToOpen: 'https://open.spotify.com/album/0pqrBK8Iyz8zrFEhdLXUXb'
 		},
@@ -13604,7 +13607,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0207d765dc1545fb12496fa7a0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485107d765dc1545fb12496fa7a0', width: 64}
 				]),
-			id: '0aCNZDvswOwzDT0tMmzc0y',
+			id: $author$project$AlbumIds$AlbumId('0aCNZDvswOwzDT0tMmzc0y'),
 			name: '083/Hilfe! Gaby in Gefahr',
 			urlToOpen: 'https://open.spotify.com/album/0aCNZDvswOwzDT0tMmzc0y'
 		},
@@ -13615,7 +13618,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02db8f25c70b738a124b014c07', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851db8f25c70b738a124b014c07', width: 64}
 				]),
-			id: '69eO2hzbouPoPBrcDf4JWx',
+			id: $author$project$AlbumIds$AlbumId('69eO2hzbouPoPBrcDf4JWx'),
 			name: '082/Spuk aus dem Jenseits',
 			urlToOpen: 'https://open.spotify.com/album/69eO2hzbouPoPBrcDf4JWx'
 		},
@@ -13626,7 +13629,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f4d0be571e417462c30d2c27', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f4d0be571e417462c30d2c27', width: 64}
 				]),
-			id: '2TjBhMvnNmCpvITGAS9p6v',
+			id: $author$project$AlbumIds$AlbumId('2TjBhMvnNmCpvITGAS9p6v'),
 			name: '081/Horror-Trip im Luxusauto',
 			urlToOpen: 'https://open.spotify.com/album/2TjBhMvnNmCpvITGAS9p6v'
 		},
@@ -13637,7 +13640,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0245bb99fa72e0619288231863', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485145bb99fa72e0619288231863', width: 64}
 				]),
-			id: '03jgLfxIX1vVDXMn7tjW0e',
+			id: $author$project$AlbumIds$AlbumId('03jgLfxIX1vVDXMn7tjW0e'),
 			name: '080/Weißes Gift im Nachtexpress',
 			urlToOpen: 'https://open.spotify.com/album/03jgLfxIX1vVDXMn7tjW0e'
 		},
@@ -13648,7 +13651,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fc773fcbd4a488edffc0ed38', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fc773fcbd4a488edffc0ed38', width: 64}
 				]),
-			id: '3MUa6rKq5BGATlYUMD14jO',
+			id: $author$project$AlbumIds$AlbumId('3MUa6rKq5BGATlYUMD14jO'),
 			name: '079/Ein Toter braucht Hilfe',
 			urlToOpen: 'https://open.spotify.com/album/3MUa6rKq5BGATlYUMD14jO'
 		},
@@ -13659,7 +13662,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a5ac03828f3261ad117681c9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a5ac03828f3261ad117681c9', width: 64}
 				]),
-			id: '4pngmVzpD9i8f4F3cjobAU',
+			id: $author$project$AlbumIds$AlbumId('4pngmVzpD9i8f4F3cjobAU'),
 			name: '078/Heißer Draht nach Paradiso',
 			urlToOpen: 'https://open.spotify.com/album/4pngmVzpD9i8f4F3cjobAU'
 		},
@@ -13670,7 +13673,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c8913ffe285c4a40b8a5e715', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c8913ffe285c4a40b8a5e715', width: 64}
 				]),
-			id: '0rp0SCiA1hcrCJqiiG9dNO',
+			id: $author$project$AlbumIds$AlbumId('0rp0SCiA1hcrCJqiiG9dNO'),
 			name: '077/Der erpresste Erpresser',
 			urlToOpen: 'https://open.spotify.com/album/0rp0SCiA1hcrCJqiiG9dNO'
 		},
@@ -13681,7 +13684,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02996d67303bc02ae2b9f1d0a7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851996d67303bc02ae2b9f1d0a7', width: 64}
 				]),
-			id: '6Ju9fXwVzHhLjpzbMzMti5',
+			id: $author$project$AlbumIds$AlbumId('6Ju9fXwVzHhLjpzbMzMti5'),
 			name: '076/Die Goldgräber-Bande',
 			urlToOpen: 'https://open.spotify.com/album/6Ju9fXwVzHhLjpzbMzMti5'
 		},
@@ -13692,7 +13695,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020b5e9b27170f88c62f684cd0', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510b5e9b27170f88c62f684cd0', width: 64}
 				]),
-			id: '1C0atYAGpLJLcxdSu6iQZJ',
+			id: $author$project$AlbumIds$AlbumId('1C0atYAGpLJLcxdSu6iQZJ'),
 			name: '075/Lösegeld am Henkersberg',
 			urlToOpen: 'https://open.spotify.com/album/1C0atYAGpLJLcxdSu6iQZJ'
 		},
@@ -13703,7 +13706,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024a13785cf094239e1e026ec6', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514a13785cf094239e1e026ec6', width: 64}
 				]),
-			id: '1qwf1F06HyFYSvQpcGNuU0',
+			id: $author$project$AlbumIds$AlbumId('1qwf1F06HyFYSvQpcGNuU0'),
 			name: '074/Im Schattenreich des Dr. Mubase',
 			urlToOpen: 'https://open.spotify.com/album/1qwf1F06HyFYSvQpcGNuU0'
 		},
@@ -13714,7 +13717,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029adde3e3fe52106541557b7a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519adde3e3fe52106541557b7a', width: 64}
 				]),
-			id: '2pjIisAo6RrFZe4fgoAJNe',
+			id: $author$project$AlbumIds$AlbumId('2pjIisAo6RrFZe4fgoAJNe'),
 			name: '073/Herr der Schlangeninsel',
 			urlToOpen: 'https://open.spotify.com/album/2pjIisAo6RrFZe4fgoAJNe'
 		},
@@ -13725,7 +13728,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028f45285e3e23d91017ac7b21', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518f45285e3e23d91017ac7b21', width: 64}
 				]),
-			id: '280pPhAMoxhHFqrBe7TopM',
+			id: $author$project$AlbumIds$AlbumId('280pPhAMoxhHFqrBe7TopM'),
 			name: '072/Taschengeld für ein Gespenst',
 			urlToOpen: 'https://open.spotify.com/album/280pPhAMoxhHFqrBe7TopM'
 		},
@@ -13736,7 +13739,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fd671b7a29af945287917c83', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fd671b7a29af945287917c83', width: 64}
 				]),
-			id: '5SWVBdSwIh4erbo6Hw3WO8',
+			id: $author$project$AlbumIds$AlbumId('5SWVBdSwIh4erbo6Hw3WO8'),
 			name: '071/Stimme aus der Unterwelt',
 			urlToOpen: 'https://open.spotify.com/album/5SWVBdSwIh4erbo6Hw3WO8'
 		},
@@ -13747,7 +13750,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02720e5294616b584985ebee94', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851720e5294616b584985ebee94', width: 64}
 				]),
-			id: '3vHzoGBo7WHbIbIEhVyp8H',
+			id: $author$project$AlbumIds$AlbumId('3vHzoGBo7WHbIbIEhVyp8H'),
 			name: '070/Wer hat Tims Mutter entführt?',
 			urlToOpen: 'https://open.spotify.com/album/3vHzoGBo7WHbIbIEhVyp8H'
 		},
@@ -13758,7 +13761,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026058bcee1c037bce33b91655', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516058bcee1c037bce33b91655', width: 64}
 				]),
-			id: '4li0i9hTORZh4lb2pvH7H4',
+			id: $author$project$AlbumIds$AlbumId('4li0i9hTORZh4lb2pvH7H4'),
 			name: '069/Achtung! Die \"Monsters\" kommen',
 			urlToOpen: 'https://open.spotify.com/album/4li0i9hTORZh4lb2pvH7H4'
 		},
@@ -13769,7 +13772,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02694483ade1ba284ef7621cc3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851694483ade1ba284ef7621cc3', width: 64}
 				]),
-			id: '5lkSDRBNtYBR7jXqLgGIPM',
+			id: $author$project$AlbumIds$AlbumId('5lkSDRBNtYBR7jXqLgGIPM'),
 			name: '068/Rauschgift-Razzia im Internat',
 			urlToOpen: 'https://open.spotify.com/album/5lkSDRBNtYBR7jXqLgGIPM'
 		},
@@ -13780,7 +13783,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02359a21603d49910f557ac94c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851359a21603d49910f557ac94c', width: 64}
 				]),
-			id: '6d7ve3mWIxMyLtvmrDe3oN',
+			id: $author$project$AlbumIds$AlbumId('6d7ve3mWIxMyLtvmrDe3oN'),
 			name: '067/Hinterhalt im Eulenforst',
 			urlToOpen: 'https://open.spotify.com/album/6d7ve3mWIxMyLtvmrDe3oN'
 		},
@@ -13791,7 +13794,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0220d8f9cbbbe6e1db97e4636d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485120d8f9cbbbe6e1db97e4636d', width: 64}
 				]),
-			id: '2dH5NcZY7KT82TjA3mR0IL',
+			id: $author$project$AlbumIds$AlbumId('2dH5NcZY7KT82TjA3mR0IL'),
 			name: '066/Gauner mit der \"Goldenen Hand\"',
 			urlToOpen: 'https://open.spotify.com/album/2dH5NcZY7KT82TjA3mR0IL'
 		},
@@ -13802,7 +13805,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bf923c0c94c629722180bb34', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bf923c0c94c629722180bb34', width: 64}
 				]),
-			id: '2ubE3axmR41kSXAjEcluEz',
+			id: $author$project$AlbumIds$AlbumId('2ubE3axmR41kSXAjEcluEz'),
 			name: '065/Sklaven für Wutawia',
 			urlToOpen: 'https://open.spotify.com/album/2ubE3axmR41kSXAjEcluEz'
 		},
@@ -13813,7 +13816,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c951dacde6ab695b36c76ba5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c951dacde6ab695b36c76ba5', width: 64}
 				]),
-			id: '2IRabdIB4ipjSfWGfJJz1p',
+			id: $author$project$AlbumIds$AlbumId('2IRabdIB4ipjSfWGfJJz1p'),
 			name: '064/Schwarze Pest aus Indien',
 			urlToOpen: 'https://open.spotify.com/album/2IRabdIB4ipjSfWGfJJz1p'
 		},
@@ -13824,7 +13827,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e5efecc16455374e3781baf7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e5efecc16455374e3781baf7', width: 64}
 				]),
-			id: '2bOBGz1gR4iSubZIpQXAYP',
+			id: $author$project$AlbumIds$AlbumId('2bOBGz1gR4iSubZIpQXAYP'),
 			name: '063/Die Falle am Fuchsbach',
 			urlToOpen: 'https://open.spotify.com/album/2bOBGz1gR4iSubZIpQXAYP'
 		},
@@ -13835,7 +13838,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c2122aa0912f26e80ab1d5ea', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c2122aa0912f26e80ab1d5ea', width: 64}
 				]),
-			id: '3qSQqJtFmTznYTrNBqPyyw',
+			id: $author$project$AlbumIds$AlbumId('3qSQqJtFmTznYTrNBqPyyw'),
 			name: '062/Terror aus dem \"Pulverfaß\"',
 			urlToOpen: 'https://open.spotify.com/album/3qSQqJtFmTznYTrNBqPyyw'
 		},
@@ -13846,7 +13849,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021cb07b8d9aab6f33a94d11a7', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511cb07b8d9aab6f33a94d11a7', width: 64}
 				]),
-			id: '6gkTtqPnKizQNP2Wku47ye',
+			id: $author$project$AlbumIds$AlbumId('6gkTtqPnKizQNP2Wku47ye'),
 			name: '061/Im Schatten des Dämons',
 			urlToOpen: 'https://open.spotify.com/album/6gkTtqPnKizQNP2Wku47ye'
 		},
@@ -13857,7 +13860,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021a6435002b84cb33116285ad', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511a6435002b84cb33116285ad', width: 64}
 				]),
-			id: '1m43QTxE0cdGCpSaFED1mb',
+			id: $author$project$AlbumIds$AlbumId('1m43QTxE0cdGCpSaFED1mb'),
 			name: '060/Der Teufel vom Waiga-See',
 			urlToOpen: 'https://open.spotify.com/album/1m43QTxE0cdGCpSaFED1mb'
 		},
@@ -13868,7 +13871,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0238563fae409d33c0f08e4130', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485138563fae409d33c0f08e4130', width: 64}
 				]),
-			id: '49t3y9iAQqThpImvvQos0s',
+			id: $author$project$AlbumIds$AlbumId('49t3y9iAQqThpImvvQos0s'),
 			name: '059/Trickdieb auf Burg Drachenstein',
 			urlToOpen: 'https://open.spotify.com/album/49t3y9iAQqThpImvvQos0s'
 		},
@@ -13879,7 +13882,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f37407bf2bdf858a591e0672', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f37407bf2bdf858a591e0672', width: 64}
 				]),
-			id: '44DE85CejNlCyUQOK1DMym',
+			id: $author$project$AlbumIds$AlbumId('44DE85CejNlCyUQOK1DMym'),
 			name: '058/Der doppelte Pedro',
 			urlToOpen: 'https://open.spotify.com/album/44DE85CejNlCyUQOK1DMym'
 		},
@@ -13890,7 +13893,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0219a29fcc56158c2b120f8910', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485119a29fcc56158c2b120f8910', width: 64}
 				]),
-			id: '75Sbt9YzxwmT50cdOpQuwi',
+			id: $author$project$AlbumIds$AlbumId('75Sbt9YzxwmT50cdOpQuwi'),
 			name: '057/Jagt das rote Geisterauto!',
 			urlToOpen: 'https://open.spotify.com/album/75Sbt9YzxwmT50cdOpQuwi'
 		},
@@ -13901,7 +13904,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d1dd81b1726d9766d9c7bce3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d1dd81b1726d9766d9c7bce3', width: 64}
 				]),
-			id: '1Og3x45AhCqdmif9zWopbY',
+			id: $author$project$AlbumIds$AlbumId('1Og3x45AhCqdmif9zWopbY'),
 			name: '056/Todesgruß vom Gelben Drachen',
 			urlToOpen: 'https://open.spotify.com/album/1Og3x45AhCqdmif9zWopbY'
 		},
@@ -13912,7 +13915,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b7f5753d39f3d4f033b1d444', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b7f5753d39f3d4f033b1d444', width: 64}
 				]),
-			id: '2Lm9p4iJstI3iwOD8oEZMo',
+			id: $author$project$AlbumIds$AlbumId('2Lm9p4iJstI3iwOD8oEZMo'),
 			name: '055/Der Mörder aus dem Schauerwald',
 			urlToOpen: 'https://open.spotify.com/album/2Lm9p4iJstI3iwOD8oEZMo'
 		},
@@ -13923,7 +13926,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b9b80227647ab1d3ca9e04a5', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b9b80227647ab1d3ca9e04a5', width: 64}
 				]),
-			id: '2tQjarBMugwtJGLPISSqkx',
+			id: $author$project$AlbumIds$AlbumId('2tQjarBMugwtJGLPISSqkx'),
 			name: '054/Alarm! Klößchen ist verschwunden',
 			urlToOpen: 'https://open.spotify.com/album/2tQjarBMugwtJGLPISSqkx'
 		},
@@ -13934,7 +13937,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023c9649103cc78e9e2d296f56', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513c9649103cc78e9e2d296f56', width: 64}
 				]),
-			id: '4qoN8RkWifzeVqzLIGBGBL',
+			id: $author$project$AlbumIds$AlbumId('4qoN8RkWifzeVqzLIGBGBL'),
 			name: '053/Schüsse aus der Rosenhecke',
 			urlToOpen: 'https://open.spotify.com/album/4qoN8RkWifzeVqzLIGBGBL'
 		},
@@ -13945,7 +13948,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023a9e9b6d7f3cf61502a3f284', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513a9e9b6d7f3cf61502a3f284', width: 64}
 				]),
-			id: '3GwBNJd3vbi33MkAOgWhWL',
+			id: $author$project$AlbumIds$AlbumId('3GwBNJd3vbi33MkAOgWhWL'),
 			name: '052/Überfall im Hafen',
 			urlToOpen: 'https://open.spotify.com/album/3GwBNJd3vbi33MkAOgWhWL'
 		},
@@ -13956,7 +13959,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02081184f45643a7eafbf6e90a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851081184f45643a7eafbf6e90a', width: 64}
 				]),
-			id: '4WOjS2gDgi6sCFNN2xbXz1',
+			id: $author$project$AlbumIds$AlbumId('4WOjS2gDgi6sCFNN2xbXz1'),
 			name: '051/Gangster auf der Gartenparty',
 			urlToOpen: 'https://open.spotify.com/album/4WOjS2gDgi6sCFNN2xbXz1'
 		},
@@ -13967,7 +13970,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02da1f5d303584b0d303e64a20', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851da1f5d303584b0d303e64a20', width: 64}
 				]),
-			id: '1CAidQFFQWvxTFUZZ94TEm',
+			id: $author$project$AlbumIds$AlbumId('1CAidQFFQWvxTFUZZ94TEm'),
 			name: '050/Spion auf der Flucht',
 			urlToOpen: 'https://open.spotify.com/album/1CAidQFFQWvxTFUZZ94TEm'
 		},
@@ -13978,7 +13981,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fa12b51f4009ae83a5a8fc0a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fa12b51f4009ae83a5a8fc0a', width: 64}
 				]),
-			id: '517mEgMBkbNEOKvbKkAQVy',
+			id: $author$project$AlbumIds$AlbumId('517mEgMBkbNEOKvbKkAQVy'),
 			name: '049/Bombe an Bord',
 			urlToOpen: 'https://open.spotify.com/album/517mEgMBkbNEOKvbKkAQVy'
 		},
@@ -13989,7 +13992,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a41b51a9cb08c3ca506994bb', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a41b51a9cb08c3ca506994bb', width: 64}
 				]),
-			id: '4WgadnXmyPlFzQ6GyHUqRw',
+			id: $author$project$AlbumIds$AlbumId('4WgadnXmyPlFzQ6GyHUqRw'),
 			name: '048/Bestien der Finsternis',
 			urlToOpen: 'https://open.spotify.com/album/4WgadnXmyPlFzQ6GyHUqRw'
 		},
@@ -14000,7 +14003,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0255ec92325aab28412e102d91', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485155ec92325aab28412e102d91', width: 64}
 				]),
-			id: '1d38ND8yadbLTLEhehVWRp',
+			id: $author$project$AlbumIds$AlbumId('1d38ND8yadbLTLEhehVWRp'),
 			name: '047/Todesfracht im Jaguar',
 			urlToOpen: 'https://open.spotify.com/album/1d38ND8yadbLTLEhehVWRp'
 		},
@@ -14011,7 +14014,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ea2e2d51c77af2c80761f50c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ea2e2d51c77af2c80761f50c', width: 64}
 				]),
-			id: '6epiNHYc23EgElvraBVTUB',
+			id: $author$project$AlbumIds$AlbumId('6epiNHYc23EgElvraBVTUB'),
 			name: '046/Hotel in Flammen',
 			urlToOpen: 'https://open.spotify.com/album/6epiNHYc23EgElvraBVTUB'
 		},
@@ -14022,7 +14025,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02922d41285f4b2ec43fd00cf3', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851922d41285f4b2ec43fd00cf3', width: 64}
 				]),
-			id: '1KNZFZQYNPJOlX3sxrBOSE',
+			id: $author$project$AlbumIds$AlbumId('1KNZFZQYNPJOlX3sxrBOSE'),
 			name: '045/Unternehmen Grüne Hölle',
 			urlToOpen: 'https://open.spotify.com/album/1KNZFZQYNPJOlX3sxrBOSE'
 		},
@@ -14033,7 +14036,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029abff053658000ec790c1fb9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519abff053658000ec790c1fb9', width: 64}
 				]),
-			id: '6L8cRmK9LrR4OYbwIb4prW',
+			id: $author$project$AlbumIds$AlbumId('6L8cRmK9LrR4OYbwIb4prW'),
 			name: '044/Um Mitternacht am schwarzen Fluß',
 			urlToOpen: 'https://open.spotify.com/album/6L8cRmK9LrR4OYbwIb4prW'
 		},
@@ -14044,7 +14047,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029bf6e80db0f2bc72cb9764b9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519bf6e80db0f2bc72cb9764b9', width: 64}
 				]),
-			id: '6LlaB9vjnahov25yQWlGfG',
+			id: $author$project$AlbumIds$AlbumId('6LlaB9vjnahov25yQWlGfG'),
 			name: '043/Gefangen in der Schreckenskammer',
 			urlToOpen: 'https://open.spotify.com/album/6LlaB9vjnahov25yQWlGfG'
 		},
@@ -14055,7 +14058,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021fd5761732adf56b2335066b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511fd5761732adf56b2335066b', width: 64}
 				]),
-			id: '5ww0350exp0oCRS9arplvu',
+			id: $author$project$AlbumIds$AlbumId('5ww0350exp0oCRS9arplvu'),
 			name: '042/Anschlag auf den Silberpfeil',
 			urlToOpen: 'https://open.spotify.com/album/5ww0350exp0oCRS9arplvu'
 		},
@@ -14066,7 +14069,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022e68c4b5ef818ac62434654a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512e68c4b5ef818ac62434654a', width: 64}
 				]),
-			id: '0Ebu2fMGeXFXX9uJdLPxPO',
+			id: $author$project$AlbumIds$AlbumId('0Ebu2fMGeXFXX9uJdLPxPO'),
 			name: '041/Heißes Gold im Silbersee',
 			urlToOpen: 'https://open.spotify.com/album/0Ebu2fMGeXFXX9uJdLPxPO'
 		},
@@ -14077,7 +14080,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024a3c207244523df7f8643f98', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514a3c207244523df7f8643f98', width: 64}
 				]),
-			id: '07xFaDO6M3YzpSE5FrEJUj',
+			id: $author$project$AlbumIds$AlbumId('07xFaDO6M3YzpSE5FrEJUj'),
 			name: '040/Duell im Morgengrauen',
 			urlToOpen: 'https://open.spotify.com/album/07xFaDO6M3YzpSE5FrEJUj'
 		},
@@ -14088,7 +14091,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0236427b5643980f4230c9de61', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485136427b5643980f4230c9de61', width: 64}
 				]),
-			id: '50ns4wTGElvzJtYF7J6TYS',
+			id: $author$project$AlbumIds$AlbumId('50ns4wTGElvzJtYF7J6TYS'),
 			name: '039/Die Gift-Party',
 			urlToOpen: 'https://open.spotify.com/album/50ns4wTGElvzJtYF7J6TYS'
 		},
@@ -14099,7 +14102,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fa7461b899e9ffa414480660', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fa7461b899e9ffa414480660', width: 64}
 				]),
-			id: '2w7g51yGAlnfRpsbmanami',
+			id: $author$project$AlbumIds$AlbumId('2w7g51yGAlnfRpsbmanami'),
 			name: '038/Die weiße Schmuggler-Yacht',
 			urlToOpen: 'https://open.spotify.com/album/2w7g51yGAlnfRpsbmanami'
 		},
@@ -14110,7 +14113,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021850f728e306fbee61161c12', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511850f728e306fbee61161c12', width: 64}
 				]),
-			id: '3AoA7wKNOW7rmtpzSCijcR',
+			id: $author$project$AlbumIds$AlbumId('3AoA7wKNOW7rmtpzSCijcR'),
 			name: '036/Das Geschenk des Bösen',
 			urlToOpen: 'https://open.spotify.com/album/3AoA7wKNOW7rmtpzSCijcR'
 		},
@@ -14121,7 +14124,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c08dd3915977d2d288220056', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c08dd3915977d2d288220056', width: 64}
 				]),
-			id: '3PE3WIY7dTLhAS6WzTb2gx',
+			id: $author$project$AlbumIds$AlbumId('3PE3WIY7dTLhAS6WzTb2gx'),
 			name: '035/Die Nacht des Überfalls',
 			urlToOpen: 'https://open.spotify.com/album/3PE3WIY7dTLhAS6WzTb2gx'
 		},
@@ -14132,7 +14135,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d696bf8514ef74c119a7fe2d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d696bf8514ef74c119a7fe2d', width: 64}
 				]),
-			id: '0r50DZDZPJdUgqprZH8Uiz',
+			id: $author$project$AlbumIds$AlbumId('0r50DZDZPJdUgqprZH8Uiz'),
 			name: '034/Vampir der Autobahn',
 			urlToOpen: 'https://open.spotify.com/album/0r50DZDZPJdUgqprZH8Uiz'
 		},
@@ -14143,7 +14146,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c763b243a7894ff32592084a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c763b243a7894ff32592084a', width: 64}
 				]),
-			id: '0dfv6DKH5AQmscC7xXTENC',
+			id: $author$project$AlbumIds$AlbumId('0dfv6DKH5AQmscC7xXTENC'),
 			name: '033/Wer raubte das Millionenpferd?',
 			urlToOpen: 'https://open.spotify.com/album/0dfv6DKH5AQmscC7xXTENC'
 		},
@@ -14154,7 +14157,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029d741f3f199c4c9ebbfc840c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519d741f3f199c4c9ebbfc840c', width: 64}
 				]),
-			id: '4PjUBvlQ01A9LRfZ27reQb',
+			id: $author$project$AlbumIds$AlbumId('4PjUBvlQ01A9LRfZ27reQb'),
 			name: '032/Wilddiebe im Teufelsmoor',
 			urlToOpen: 'https://open.spotify.com/album/4PjUBvlQ01A9LRfZ27reQb'
 		},
@@ -14165,7 +14168,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e02e06d6cba6b7adf571aa78', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e02e06d6cba6b7adf571aa78', width: 64}
 				]),
-			id: '1nEMgpdr0RTPYPdAmeblSx',
+			id: $author$project$AlbumIds$AlbumId('1nEMgpdr0RTPYPdAmeblSx'),
 			name: '031/Die Entführung in der Mondscheingasse',
 			urlToOpen: 'https://open.spotify.com/album/1nEMgpdr0RTPYPdAmeblSx'
 		},
@@ -14176,7 +14179,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02152fb7fd712aeb20f0fc91ac', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851152fb7fd712aeb20f0fc91ac', width: 64}
 				]),
-			id: '28C564LrC7JsVlHe3e0Btv',
+			id: $author$project$AlbumIds$AlbumId('28C564LrC7JsVlHe3e0Btv'),
 			name: '030/Die Mafia kommt zur Geisterstunde',
 			urlToOpen: 'https://open.spotify.com/album/28C564LrC7JsVlHe3e0Btv'
 		},
@@ -14187,7 +14190,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b02d7ecc208e9092cd555e95', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b02d7ecc208e9092cd555e95', width: 64}
 				]),
-			id: '2Sg92NzoOMzEuQIpgIhgOO',
+			id: $author$project$AlbumIds$AlbumId('2Sg92NzoOMzEuQIpgIhgOO'),
 			name: '029/Hundediebe kennen keine Gnade',
 			urlToOpen: 'https://open.spotify.com/album/2Sg92NzoOMzEuQIpgIhgOO'
 		},
@@ -14198,7 +14201,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b66bd26d9591739a99071e55', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b66bd26d9591739a99071e55', width: 64}
 				]),
-			id: '4QGudxuEAcnfuNllrivq5W',
+			id: $author$project$AlbumIds$AlbumId('4QGudxuEAcnfuNllrivq5W'),
 			name: '028/Verrat im Höllental',
 			urlToOpen: 'https://open.spotify.com/album/4QGudxuEAcnfuNllrivq5W'
 		},
@@ -14209,7 +14212,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fbbd971fa2aad81e984d9e87', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fbbd971fa2aad81e984d9e87', width: 64}
 				]),
-			id: '34KfrLQf8eqtIlHPiniXgN',
+			id: $author$project$AlbumIds$AlbumId('34KfrLQf8eqtIlHPiniXgN'),
 			name: '027/Banditen im Palasthotel',
 			urlToOpen: 'https://open.spotify.com/album/34KfrLQf8eqtIlHPiniXgN'
 		},
@@ -14220,7 +14223,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0268ab7480f4013009d6d04a7a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485168ab7480f4013009d6d04a7a', width: 64}
 				]),
-			id: '6QeaqV74RWxGdh0J4QBIww',
+			id: $author$project$AlbumIds$AlbumId('6QeaqV74RWxGdh0J4QBIww'),
 			name: '026/Das Geiseldrama',
 			urlToOpen: 'https://open.spotify.com/album/6QeaqV74RWxGdh0J4QBIww'
 		},
@@ -14231,7 +14234,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029b318a565f09633fd1a44028', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519b318a565f09633fd1a44028', width: 64}
 				]),
-			id: '5fIqw30fRsl0RNHAamxD0h',
+			id: $author$project$AlbumIds$AlbumId('5fIqw30fRsl0RNHAamxD0h'),
 			name: '025/Die Stunde der schwarzen Maske',
 			urlToOpen: 'https://open.spotify.com/album/5fIqw30fRsl0RNHAamxD0h'
 		},
@@ -14242,7 +14245,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027b56ce6c9d320d4635a02b6a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517b56ce6c9d320d4635a02b6a', width: 64}
 				]),
-			id: '0BdEwpfNwNkJUTwxIXJo5Z',
+			id: $author$project$AlbumIds$AlbumId('0BdEwpfNwNkJUTwxIXJo5Z'),
 			name: '024/Gefährliche Diamanten',
 			urlToOpen: 'https://open.spotify.com/album/0BdEwpfNwNkJUTwxIXJo5Z'
 		},
@@ -14253,7 +14256,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02cac7baada389d734d3059e1c', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851cac7baada389d734d3059e1c', width: 64}
 				]),
-			id: '26dIpIYfi9fSeEeoHfRRqR',
+			id: $author$project$AlbumIds$AlbumId('26dIpIYfi9fSeEeoHfRRqR'),
 			name: '023/Kampf der Spione',
 			urlToOpen: 'https://open.spotify.com/album/26dIpIYfi9fSeEeoHfRRqR'
 		},
@@ -14264,7 +14267,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02661a14045134ba1609a82e76', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851661a14045134ba1609a82e76', width: 64}
 				]),
-			id: '7gHX31YKrpfWBFTlTjWpzt',
+			id: $author$project$AlbumIds$AlbumId('7gHX31YKrpfWBFTlTjWpzt'),
 			name: '022/In den Klauen des Tigers',
 			urlToOpen: 'https://open.spotify.com/album/7gHX31YKrpfWBFTlTjWpzt'
 		},
@@ -14275,7 +14278,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0220443ab0d1a1571908798679', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485120443ab0d1a1571908798679', width: 64}
 				]),
-			id: '4CUF3gCdwhOg1EdpSaIH2y',
+			id: $author$project$AlbumIds$AlbumId('4CUF3gCdwhOg1EdpSaIH2y'),
 			name: '021/Die Rache des Bombenlegers',
 			urlToOpen: 'https://open.spotify.com/album/4CUF3gCdwhOg1EdpSaIH2y'
 		},
@@ -14286,7 +14289,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020c2b575f950c215cdf884078', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510c2b575f950c215cdf884078', width: 64}
 				]),
-			id: '6KmOIZoB1FWJrYwSLMQVKH',
+			id: $author$project$AlbumIds$AlbumId('6KmOIZoB1FWJrYwSLMQVKH'),
 			name: '018/Hexenjagd in Lerchenbach',
 			urlToOpen: 'https://open.spotify.com/album/6KmOIZoB1FWJrYwSLMQVKH'
 		},
@@ -14297,7 +14300,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a97acc8ea0543332cc17489b', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a97acc8ea0543332cc17489b', width: 64}
 				]),
-			id: '028hFwVAqF3qtl2rqM5nlD',
+			id: $author$project$AlbumIds$AlbumId('028hFwVAqF3qtl2rqM5nlD'),
 			name: '017/Die Doppelgängerin',
 			urlToOpen: 'https://open.spotify.com/album/028hFwVAqF3qtl2rqM5nlD'
 		},
@@ -14308,7 +14311,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027d84da4c1e69811d283525d9', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517d84da4c1e69811d283525d9', width: 64}
 				]),
-			id: '2z2U3d7vEXBmQm8IBg0mFj',
+			id: $author$project$AlbumIds$AlbumId('2z2U3d7vEXBmQm8IBg0mFj'),
 			name: '016/X7 antwortet nicht',
 			urlToOpen: 'https://open.spotify.com/album/2z2U3d7vEXBmQm8IBg0mFj'
 		},
@@ -14319,7 +14322,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02da0880ac8a1da398eb93c4f1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851da0880ac8a1da398eb93c4f1', width: 64}
 				]),
-			id: '3xr2gj74ceKjRFScuN0uWS',
+			id: $author$project$AlbumIds$AlbumId('3xr2gj74ceKjRFScuN0uWS'),
 			name: '015/Ufos in Bad Finkenstein',
 			urlToOpen: 'https://open.spotify.com/album/3xr2gj74ceKjRFScuN0uWS'
 		},
@@ -14330,7 +14333,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d9e600e7ebf82dc7c97e223a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d9e600e7ebf82dc7c97e223a', width: 64}
 				]),
-			id: '2Tnj8gSYW5FKa9qcyG46uS',
+			id: $author$project$AlbumIds$AlbumId('2Tnj8gSYW5FKa9qcyG46uS'),
 			name: '014/Der Schlangenmensch',
 			urlToOpen: 'https://open.spotify.com/album/2Tnj8gSYW5FKa9qcyG46uS'
 		},
@@ -14341,7 +14344,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028291078c1b158b9524dca175', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518291078c1b158b9524dca175', width: 64}
 				]),
-			id: '1pSX9vO6inD71umv5SoDxV',
+			id: $author$project$AlbumIds$AlbumId('1pSX9vO6inD71umv5SoDxV'),
 			name: '013/Die Bettelmönche aus Atlantis',
 			urlToOpen: 'https://open.spotify.com/album/1pSX9vO6inD71umv5SoDxV'
 		},
@@ -14352,7 +14355,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02da5bf20facb98f2c9c06ee4d', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851da5bf20facb98f2c9c06ee4d', width: 64}
 				]),
-			id: '2KaWF3eANzWbtnpEHuxHVh',
+			id: $author$project$AlbumIds$AlbumId('2KaWF3eANzWbtnpEHuxHVh'),
 			name: '012/Nachts, wenn der Feuerteufel kommt',
 			urlToOpen: 'https://open.spotify.com/album/2KaWF3eANzWbtnpEHuxHVh'
 		},
@@ -14363,7 +14366,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ea903c7255d7bf3e3c8e83f1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ea903c7255d7bf3e3c8e83f1', width: 64}
 				]),
-			id: '4yeVIdrGglPUWEl86T2Sgz',
+			id: $author$project$AlbumIds$AlbumId('4yeVIdrGglPUWEl86T2Sgz'),
 			name: '011/Die Falschmünzer vom Mäuseweg',
 			urlToOpen: 'https://open.spotify.com/album/4yeVIdrGglPUWEl86T2Sgz'
 		},
@@ -14374,7 +14377,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02864d69b596d04541756fef52', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851864d69b596d04541756fef52', width: 64}
 				]),
-			id: '7egcWhxwfDEyfW1iddazLc',
+			id: $author$project$AlbumIds$AlbumId('7egcWhxwfDEyfW1iddazLc'),
 			name: '010/Alarm im Zirkus Sarani!',
 			urlToOpen: 'https://open.spotify.com/album/7egcWhxwfDEyfW1iddazLc'
 		},
@@ -14385,7 +14388,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023b46159957a4c0618ea72883', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513b46159957a4c0618ea72883', width: 64}
 				]),
-			id: '6fv4ajGQ8VOEWkPGCBM8Bk',
+			id: $author$project$AlbumIds$AlbumId('6fv4ajGQ8VOEWkPGCBM8Bk'),
 			name: '009/Abenteuer im Ferienlager',
 			urlToOpen: 'https://open.spotify.com/album/6fv4ajGQ8VOEWkPGCBM8Bk'
 		},
@@ -14396,7 +14399,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029eb1152af097e6fce17349c1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519eb1152af097e6fce17349c1', width: 64}
 				]),
-			id: '6nDOtfqoFRO3cEbvn0dA7F',
+			id: $author$project$AlbumIds$AlbumId('6nDOtfqoFRO3cEbvn0dA7F'),
 			name: '008/Auf der Spur der Vogeljäger',
 			urlToOpen: 'https://open.spotify.com/album/6nDOtfqoFRO3cEbvn0dA7F'
 		},
@@ -14407,7 +14410,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c042f94a6f4458b984b351ff', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c042f94a6f4458b984b351ff', width: 64}
 				]),
-			id: '1lHBw6I0KkJIJy7K3azKp0',
+			id: $author$project$AlbumIds$AlbumId('1lHBw6I0KkJIJy7K3azKp0'),
 			name: '007/Rätsel um die alte Villa',
 			urlToOpen: 'https://open.spotify.com/album/1lHBw6I0KkJIJy7K3azKp0'
 		},
@@ -14418,7 +14421,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021f536fc02df72b945d88b2ff', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511f536fc02df72b945d88b2ff', width: 64}
 				]),
-			id: '5f3BW9l3gt2IceokHZ6nhB',
+			id: $author$project$AlbumIds$AlbumId('5f3BW9l3gt2IceokHZ6nhB'),
 			name: '006/Angst in der 9a',
 			urlToOpen: 'https://open.spotify.com/album/5f3BW9l3gt2IceokHZ6nhB'
 		},
@@ -14429,7 +14432,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02317b3efc19e51a3fe4263cdf', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851317b3efc19e51a3fe4263cdf', width: 64}
 				]),
-			id: '6L5QghMB2McNx1mlxvA9jY',
+			id: $author$project$AlbumIds$AlbumId('6L5QghMB2McNx1mlxvA9jY'),
 			name: '005/Das Phantom auf dem Feuerstuhl',
 			urlToOpen: 'https://open.spotify.com/album/6L5QghMB2McNx1mlxvA9jY'
 		},
@@ -14440,7 +14443,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0265c75bc6e2837f4d4a83040a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485165c75bc6e2837f4d4a83040a', width: 64}
 				]),
-			id: '7C0OqMlXzeiZIB4TZsygY7',
+			id: $author$project$AlbumIds$AlbumId('7C0OqMlXzeiZIB4TZsygY7'),
 			name: '004/Das Paket mit dem Totenkopf',
 			urlToOpen: 'https://open.spotify.com/album/7C0OqMlXzeiZIB4TZsygY7'
 		},
@@ -14451,7 +14454,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0235d8f58b091f6cbfa745e0fd', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485135d8f58b091f6cbfa745e0fd', width: 64}
 				]),
-			id: '4AoqWaIGkLmowNAfQZieas',
+			id: $author$project$AlbumIds$AlbumId('4AoqWaIGkLmowNAfQZieas'),
 			name: '003/Das leere Grab im Moor',
 			urlToOpen: 'https://open.spotify.com/album/4AoqWaIGkLmowNAfQZieas'
 		},
@@ -14462,7 +14465,7 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02779e7a554bfa1025a8c0af5a', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851779e7a554bfa1025a8c0af5a', width: 64}
 				]),
-			id: '6Qq9RYcZ4nZfD4IiHRF78v',
+			id: $author$project$AlbumIds$AlbumId('6Qq9RYcZ4nZfD4IiHRF78v'),
 			name: '002/Der blinde Hellseher',
 			urlToOpen: 'https://open.spotify.com/album/6Qq9RYcZ4nZfD4IiHRF78v'
 		},
@@ -14473,17 +14476,74 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021619ae75f70ad3f07fff31f1', width: 300},
 					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511619ae75f70ad3f07fff31f1', width: 64}
 				]),
-			id: '699XT7D0ROiM2lVjwHAHg9',
+			id: $author$project$AlbumIds$AlbumId('699XT7D0ROiM2lVjwHAHg9'),
 			name: '001/Die Jagd nach den Millionendieben',
 			urlToOpen: 'https://open.spotify.com/album/699XT7D0ROiM2lVjwHAHg9'
 		}
 		]));
-var $author$project$AlbumStorageDdf$artistInfo = {coverColorA: '#DF030E', coverColorB: '#04A5E3', httpFriendlyShortName: 'ddf', icon: 'img/ddf_transparent.png', id: '3meJIgRw7YleJrmbpbJK6S', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb7de827ab626c867816052015', name: 'Die drei ???', shortName: 'DDF'};
-var $author$project$AlbumStorageDdfk$artistInfo = {coverColorA: '#DF030E', coverColorB: '#04A5E3', httpFriendlyShortName: 'ddfk', icon: 'img/ddfk_transparent.png', id: '0vLsqW05dyLvjuKKftAEGA', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb4b258838de4271df70886fb8', name: 'Die drei ??? Kids', shortName: 'DDF Kids'};
-var $author$project$AlbumStorageFf$artistInfo = {coverColorA: '#D91E27', coverColorB: '#F2C716', httpFriendlyShortName: 'ff', icon: 'img/ff_transparent.png', id: '1hD52edfn6aNsK3fb5c2OT', imageUrl: 'https://i.scdn.co/image/ab6761610000e5ebfd1fc9ff3040cfb38d7225ac', name: 'Fünf Freunde', shortName: 'FF'};
-var $author$project$AlbumStoragePw$artistInfo = {coverColorA: '#DF030E', coverColorB: '#04A5E3', httpFriendlyShortName: 'pw', icon: 'img/pw_transparent.png', id: '39cu39Rn69BTbnblNDijGN', imageUrl: 'https://i.scdn.co/image/ab6761610000e5ebc3329ea6fc2160392bc912d9', name: 'Point Whitmark', shortName: 'PW'};
-var $author$project$AlbumStorageTkkg$artistInfo = {coverColorA: '#0B2D74', coverColorB: '#0F40A6', httpFriendlyShortName: 'tkkg', icon: 'img/tkkg_transparent.png', id: '61qDotnjM0jnY5lkfOP7ve', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb1e8366050ddb70f1267cde51', name: 'TKKG', shortName: 'TKKG'};
-var $author$project$AlbumStorageTkkgr$artistInfo = {coverColorA: '#C40004', coverColorB: '#FFEC01', httpFriendlyShortName: 'tkkgr', icon: 'img/tkkg_retro_transparent.png', id: '0i38tQX5j4gZ0KS3eCMoIl', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb60367627a2292ba3bc27fe58', name: 'TKKG Retro-Archiv', shortName: 'TKKG(R)'};
+var $author$project$ArtistIds$ArtistId = function (a) {
+	return {$: 'ArtistId', a: a};
+};
+var $author$project$AlbumStorageDdf$artistInfo = {
+	coverColorA: '#DF030E',
+	coverColorB: '#04A5E3',
+	httpFriendlyShortName: 'ddf',
+	icon: 'img/ddf_transparent.png',
+	id: $author$project$ArtistIds$ArtistId('3meJIgRw7YleJrmbpbJK6S'),
+	imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb7de827ab626c867816052015',
+	name: 'Die drei ???',
+	shortName: 'DDF'
+};
+var $author$project$AlbumStorageDdfk$artistInfo = {
+	coverColorA: '#DF030E',
+	coverColorB: '#04A5E3',
+	httpFriendlyShortName: 'ddfk',
+	icon: 'img/ddfk_transparent.png',
+	id: $author$project$ArtistIds$ArtistId('0vLsqW05dyLvjuKKftAEGA'),
+	imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb4b258838de4271df70886fb8',
+	name: 'Die drei ??? Kids',
+	shortName: 'DDF Kids'
+};
+var $author$project$AlbumStorageFf$artistInfo = {
+	coverColorA: '#D91E27',
+	coverColorB: '#F2C716',
+	httpFriendlyShortName: 'ff',
+	icon: 'img/ff_transparent.png',
+	id: $author$project$ArtistIds$ArtistId('1hD52edfn6aNsK3fb5c2OT'),
+	imageUrl: 'https://i.scdn.co/image/ab6761610000e5ebfd1fc9ff3040cfb38d7225ac',
+	name: 'Fünf Freunde',
+	shortName: 'FF'
+};
+var $author$project$AlbumStoragePw$artistInfo = {
+	coverColorA: '#DF030E',
+	coverColorB: '#04A5E3',
+	httpFriendlyShortName: 'pw',
+	icon: 'img/pw_transparent.png',
+	id: $author$project$ArtistIds$ArtistId('39cu39Rn69BTbnblNDijGN'),
+	imageUrl: 'https://i.scdn.co/image/ab6761610000e5ebc3329ea6fc2160392bc912d9',
+	name: 'Point Whitmark',
+	shortName: 'PW'
+};
+var $author$project$AlbumStorageTkkg$artistInfo = {
+	coverColorA: '#0B2D74',
+	coverColorB: '#0F40A6',
+	httpFriendlyShortName: 'tkkg',
+	icon: 'img/tkkg_transparent.png',
+	id: $author$project$ArtistIds$ArtistId('61qDotnjM0jnY5lkfOP7ve'),
+	imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb1e8366050ddb70f1267cde51',
+	name: 'TKKG',
+	shortName: 'TKKG'
+};
+var $author$project$AlbumStorageTkkgr$artistInfo = {
+	coverColorA: '#C40004',
+	coverColorB: '#FFEC01',
+	httpFriendlyShortName: 'tkkgr',
+	icon: 'img/tkkg_retro_transparent.png',
+	id: $author$project$ArtistIds$ArtistId('0i38tQX5j4gZ0KS3eCMoIl'),
+	imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb60367627a2292ba3bc27fe58',
+	name: 'TKKG Retro-Archiv',
+	shortName: 'TKKG(R)'
+};
 var $author$project$ArtistsWithAlbums$albumStorage = _List_fromArray(
 	[
 		{albums: $author$project$AlbumStorageDdf$albumStorage, artist: $author$project$AlbumStorageDdf$artistInfo},
@@ -14917,6 +14977,10 @@ var $author$project$Main$resetModel = function (artist) {
 					$author$project$Main$startShuffleAlbums(resettedModel.albums)
 				])));
 };
+var $author$project$AlbumIds$value = function (id) {
+	var a = id.a;
+	return a;
+};
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
@@ -14925,7 +14989,7 @@ var $author$project$Main$update = F2(
 				return $author$project$Main$resetModel(artist);
 			case 'GotBlacklist':
 				var text = msg.a;
-				var albumsToBlacklist = text;
+				var albumsToBlacklist = A2($elm$core$List$map, $author$project$AlbumIds$AlbumId, text);
 				var filteredAlbums = A2(
 					$elm$core$Array$filter,
 					function (a) {
@@ -14971,8 +15035,11 @@ var $author$project$Main$update = F2(
 							model.albums),
 						blacklistedAlbums: A2($elm$core$List$cons, albumId, model.blacklistedAlbums)
 					});
-				var newCmd = $author$project$Main$setBlacklistedAlbums(
-					A2($elm$core$List$cons, albumId, model.blacklistedAlbums));
+				var newCmd = function () {
+					var combined = A2($elm$core$List$cons, albumId, model.blacklistedAlbums);
+					var mapped = A2($elm$core$List$map, $author$project$AlbumIds$value, combined);
+					return $author$project$Main$setBlacklistedAlbums(mapped);
+				}();
 				return _Utils_Tuple2(updatedModel, newCmd);
 			case 'AlbumsShuffled':
 				var albums = msg.a;
@@ -15204,6 +15271,10 @@ var $author$project$Main$tryAlbumNumberFrom = function (input) {
 			$elm$core$List$head(
 				A2($elm$regex$Regex$find, albumNumber, input))));
 };
+var $author$project$ArtistIds$value = function (id) {
+	var a = id.a;
+	return a;
+};
 var $author$project$Main$view = function (model) {
 	if (!model.isInitialized) {
 		return A2(
@@ -15328,7 +15399,10 @@ var $author$project$Main$view = function (model) {
 						function (isSelected, a) {
 							var isSelectedClass = isSelected ? ' artist-list-selected-element' : '';
 							var _v5 = A2($elm$core$Debug$log, a.name, isSelectedClass);
-							var _v6 = A2($elm$core$Debug$log, 'comparing ' + artist.id, a.id);
+							var _v6 = A2(
+								$elm$core$Debug$log,
+								'comparing ' + $author$project$ArtistIds$value(artist.id),
+								a.id);
 							return A2(
 								$elm$html$Html$a,
 								_List_fromArray(

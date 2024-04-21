@@ -2,11 +2,12 @@ module AlbumStorageDdfk exposing ( albumStorage, artistInfo )
 
 import Array exposing(Array)
 import Albums exposing (Album, ArtistInfo)
-
+import ArtistIds exposing (ArtistId(..))
+import AlbumIds exposing (AlbumId(..))
 
 artistInfo : ArtistInfo
 artistInfo =
-  { id = "0vLsqW05dyLvjuKKftAEGA"
+  { id = "0vLsqW05dyLvjuKKftAEGA" |> ArtistId
   , name = "Die drei ??? Kids" 
   , imageUrl = "https://i.scdn.co/image/ab6761610000e5eb4b258838de4271df70886fb8" 
   , shortName = "DDF Kids"
@@ -19,7 +20,7 @@ artistInfo =
 
 albumStorage : Array Album
 albumStorage =
-    [ { id = "3xIGmydqrJOShru5bQmSVa"
+    [ { id = "3xIGmydqrJOShru5bQmSVa" |> AlbumId
       , name = "Folge 95: Geheime Zeichen"
       , urlToOpen = "https://open.spotify.com/album/3xIGmydqrJOShru5bQmSVa"
       , covers =
@@ -36,7 +37,7 @@ albumStorage =
               , height = 64 
               }
             ] }
-    , { id = "2SW10jAJqdxfbJZCW6hlEF"
+    , { id = "2SW10jAJqdxfbJZCW6hlEF" |> AlbumId
       , name = "Mini-Fall/Die Piratenbande (Mini-Fall 03)"
       , urlToOpen = "https://open.spotify.com/album/2SW10jAJqdxfbJZCW6hlEF"
       , covers =
@@ -54,7 +55,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4I3xNROKxdLC2GFcpp8o2R"
+    , { id = "4I3xNROKxdLC2GFcpp8o2R" |> AlbumId
       , name = "Folge 94: Falsche Vampire"
       , urlToOpen = "https://open.spotify.com/album/4I3xNROKxdLC2GFcpp8o2R"
       , covers =
@@ -72,7 +73,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5o3ryPeYmpRkmgEv4hnDmJ"
+    , { id = "5o3ryPeYmpRkmgEv4hnDmJ" |> AlbumId
       , name = "Adventskalender - 24 Tage Weihnachtsspuk"
       , urlToOpen = "https://open.spotify.com/album/5o3ryPeYmpRkmgEv4hnDmJ"
       , covers =
@@ -90,7 +91,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6FLO3ExDCl0GwkzjCQGq0x"
+    , { id = "6FLO3ExDCl0GwkzjCQGq0x" |> AlbumId
       , name = "Folge 93: Die Geistermühle"
       , urlToOpen = "https://open.spotify.com/album/6FLO3ExDCl0GwkzjCQGq0x"
       , covers =
@@ -108,7 +109,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2AeYE1PVAulFFJlfp6GYZL"
+    , { id = "2AeYE1PVAulFFJlfp6GYZL" |> AlbumId
       , name = "Mini-Fall/Die Räuberjagd"
       , urlToOpen = "https://open.spotify.com/album/2AeYE1PVAulFFJlfp6GYZL"
       , covers =
@@ -126,7 +127,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4793v2qgBpisdJjWcSCjt2"
+    , { id = "4793v2qgBpisdJjWcSCjt2" |> AlbumId
       , name = "Folge 92: Spuk im Leuchtturm"
       , urlToOpen = "https://open.spotify.com/album/4793v2qgBpisdJjWcSCjt2"
       , covers =
@@ -144,7 +145,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1IrBxq3kgqabhcp6xfIezB"
+    , { id = "1IrBxq3kgqabhcp6xfIezB" |> AlbumId
       , name = "Mini-Fall/Vorsicht, Zaubertinte!"
       , urlToOpen = "https://open.spotify.com/album/1IrBxq3kgqabhcp6xfIezB"
       , covers =
@@ -162,7 +163,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3cbOXb1xkJF65KRjBBqlmL"
+    , { id = "3cbOXb1xkJF65KRjBBqlmL" |> AlbumId
       , name = "Folge 91: Gefahr im Spiegelkabinett"
       , urlToOpen = "https://open.spotify.com/album/3cbOXb1xkJF65KRjBBqlmL"
       , covers =
@@ -180,7 +181,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "41Wrbk3iySSFbBnbixychu"
+    , { id = "41Wrbk3iySSFbBnbixychu" |> AlbumId
       , name = "Folge 90: Flug ins Nichts"
       , urlToOpen = "https://open.spotify.com/album/41Wrbk3iySSFbBnbixychu"
       , covers =
@@ -198,7 +199,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5MXAyx7ZeQGGbHdR1HEbtU"
+    , { id = "5MXAyx7ZeQGGbHdR1HEbtU" |> AlbumId
       , name = "Adventskalender - 24 Tage eingeschneit"
       , urlToOpen = "https://open.spotify.com/album/5MXAyx7ZeQGGbHdR1HEbtU"
       , covers =
@@ -216,7 +217,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7HIZJWnLo11Fsv68HPhjgj"
+    , { id = "7HIZJWnLo11Fsv68HPhjgj" |> AlbumId
       , name = "Folge 89: Im Geistergarten"
       , urlToOpen = "https://open.spotify.com/album/7HIZJWnLo11Fsv68HPhjgj"
       , covers =
@@ -234,7 +235,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1wzirotAAliqPA1p0GPl08"
+    , { id = "1wzirotAAliqPA1p0GPl08" |> AlbumId
       , name = "Folge 88: Schatz aus dem All"
       , urlToOpen = "https://open.spotify.com/album/1wzirotAAliqPA1p0GPl08"
       , covers =
@@ -252,7 +253,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3M7f1Ta7DdY49Cj0bsHchW"
+    , { id = "3M7f1Ta7DdY49Cj0bsHchW" |> AlbumId
       , name = "Folge 87: Das Geisterspiel"
       , urlToOpen = "https://open.spotify.com/album/3M7f1Ta7DdY49Cj0bsHchW"
       , covers =
@@ -270,7 +271,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3CVr8yD3EmmbTAD3mgdkst"
+    , { id = "3CVr8yD3EmmbTAD3mgdkst" |> AlbumId
       , name = "Folge 86: Riesen in Rocky Beach"
       , urlToOpen = "https://open.spotify.com/album/3CVr8yD3EmmbTAD3mgdkst"
       , covers =
@@ -288,7 +289,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2FRfGv6pQommVYHmqJKqU5"
+    , { id = "2FRfGv6pQommVYHmqJKqU5" |> AlbumId
       , name = "Folge 85: Falscher Alarm"
       , urlToOpen = "https://open.spotify.com/album/2FRfGv6pQommVYHmqJKqU5"
       , covers =
@@ -306,7 +307,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5ZcAMixtzUYEBZNVSrixNE"
+    , { id = "5ZcAMixtzUYEBZNVSrixNE" |> AlbumId
       , name = "Adventskalender - 24 Tage Chaos im Zoo"
       , urlToOpen = "https://open.spotify.com/album/5ZcAMixtzUYEBZNVSrixNE"
       , covers =
@@ -324,7 +325,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "11uIA0NksKWJ2xjjTMvO8x"
+    , { id = "11uIA0NksKWJ2xjjTMvO8x" |> AlbumId
       , name = "Folge 84: Tatort Skater-Park"
       , urlToOpen = "https://open.spotify.com/album/11uIA0NksKWJ2xjjTMvO8x"
       , covers =
@@ -342,7 +343,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0rjlBTxlkcd3aFoYS1HPCn"
+    , { id = "0rjlBTxlkcd3aFoYS1HPCn" |> AlbumId
       , name = "Folge 83: Fußball-Diebe"
       , urlToOpen = "https://open.spotify.com/album/0rjlBTxlkcd3aFoYS1HPCn"
       , covers =
@@ -360,7 +361,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5n6gdqMbunkR1J0MhqTaV8"
+    , { id = "5n6gdqMbunkR1J0MhqTaV8" |> AlbumId
       , name = "Folge 82: Die Delfin-Piraten"
       , urlToOpen = "https://open.spotify.com/album/5n6gdqMbunkR1J0MhqTaV8"
       , covers =
@@ -378,7 +379,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3NOIKGCYKsL3nCCgzksldt"
+    , { id = "3NOIKGCYKsL3nCCgzksldt" |> AlbumId
       , name = "Folge 81: Turbo-Rennen"
       , urlToOpen = "https://open.spotify.com/album/3NOIKGCYKsL3nCCgzksldt"
       , covers =
@@ -396,7 +397,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5EeUZitOFX7Nad5yp2CFud"
+    , { id = "5EeUZitOFX7Nad5yp2CFud" |> AlbumId
       , name = "080/Gefährlicher Nebel"
       , urlToOpen = "https://open.spotify.com/album/5EeUZitOFX7Nad5yp2CFud"
       , covers =
@@ -414,7 +415,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5GOZBi4hHD6rvJI1zp7ryf"
+    , { id = "5GOZBi4hHD6rvJI1zp7ryf" |> AlbumId
       , name = "079/Achtung, Abenteuer!"
       , urlToOpen = "https://open.spotify.com/album/5GOZBi4hHD6rvJI1zp7ryf"
       , covers =
@@ -432,7 +433,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "15aFL9eaT1bjrURanvEKEn"
+    , { id = "15aFL9eaT1bjrURanvEKEn" |> AlbumId
       , name = "078/Schrottplatz in Gefahr"
       , urlToOpen = "https://open.spotify.com/album/15aFL9eaT1bjrURanvEKEn"
       , covers =
@@ -450,7 +451,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "75If2drFgUUJdC6eQ0dZYl"
+    , { id = "75If2drFgUUJdC6eQ0dZYl" |> AlbumId
       , name = "077/Die Musikdiebe"
       , urlToOpen = "https://open.spotify.com/album/75If2drFgUUJdC6eQ0dZYl"
       , covers =
@@ -468,7 +469,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6nSehzQCvelIRQu84k5N7E"
+    , { id = "6nSehzQCvelIRQu84k5N7E" |> AlbumId
       , name = "076/Blinde Passagiere"
       , urlToOpen = "https://open.spotify.com/album/6nSehzQCvelIRQu84k5N7E"
       , covers =
@@ -486,7 +487,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4M3VGzWy7xxm93zGw0xqAU"
+    , { id = "4M3VGzWy7xxm93zGw0xqAU" |> AlbumId
       , name = "075/Der Fußball-Roboter"
       , urlToOpen = "https://open.spotify.com/album/4M3VGzWy7xxm93zGw0xqAU"
       , covers =
@@ -504,7 +505,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7KEMmRYdYTyOkHaoocjwp7"
+    , { id = "7KEMmRYdYTyOkHaoocjwp7" |> AlbumId
       , name = "074/Das Schienen-Monster"
       , urlToOpen = "https://open.spotify.com/album/7KEMmRYdYTyOkHaoocjwp7"
       , covers =
@@ -522,7 +523,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7JrHsowbMVguSku3JG2tLS"
+    , { id = "7JrHsowbMVguSku3JG2tLS" |> AlbumId
       , name = "073/Surfstrand in Gefahr"
       , urlToOpen = "https://open.spotify.com/album/7JrHsowbMVguSku3JG2tLS"
       , covers =
@@ -540,7 +541,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0xynCTUxYMlBA1IcPfAgKq"
+    , { id = "0xynCTUxYMlBA1IcPfAgKq" |> AlbumId
       , name = "072/Die Laser-Falle"
       , urlToOpen = "https://open.spotify.com/album/0xynCTUxYMlBA1IcPfAgKq"
       , covers =
@@ -558,7 +559,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0tuslnSb2vi63lqnROhlSl"
+    , { id = "0tuslnSb2vi63lqnROhlSl" |> AlbumId
       , name = "Adventskalender - 24 Tage im Weihnachtszirkus"
       , urlToOpen = "https://open.spotify.com/album/0tuslnSb2vi63lqnROhlSl"
       , covers =
@@ -576,7 +577,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1RrOzTtLYceG05edrb7YNQ"
+    , { id = "1RrOzTtLYceG05edrb7YNQ" |> AlbumId
       , name = "071/Tatort Trampolin"
       , urlToOpen = "https://open.spotify.com/album/1RrOzTtLYceG05edrb7YNQ"
       , covers =
@@ -594,7 +595,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1ntNbHEo93jDj2JgZtLMrS"
+    , { id = "1ntNbHEo93jDj2JgZtLMrS" |> AlbumId
       , name = "070/Aufbruch ins All"
       , urlToOpen = "https://open.spotify.com/album/1ntNbHEo93jDj2JgZtLMrS"
       , covers =
@@ -612,7 +613,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6QpCsN1do9sWdzxMzP6vAm"
+    , { id = "6QpCsN1do9sWdzxMzP6vAm" |> AlbumId
       , name = "069/Die Rätselfalle"
       , urlToOpen = "https://open.spotify.com/album/6QpCsN1do9sWdzxMzP6vAm"
       , covers =
@@ -630,7 +631,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0zDRwoqvJYhvfhcvQYzfcZ"
+    , { id = "0zDRwoqvJYhvfhcvQYzfcZ" |> AlbumId
       , name = "068/Chaos im Dunkeln"
       , urlToOpen = "https://open.spotify.com/album/0zDRwoqvJYhvfhcvQYzfcZ"
       , covers =
@@ -648,7 +649,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5qvokPibHLO3e47oV4wyhz"
+    , { id = "5qvokPibHLO3e47oV4wyhz" |> AlbumId
       , name = "067/Der goldene Drache"
       , urlToOpen = "https://open.spotify.com/album/5qvokPibHLO3e47oV4wyhz"
       , covers =
@@ -666,7 +667,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6xSlKWjaEpc6SMJ69uVKYT"
+    , { id = "6xSlKWjaEpc6SMJ69uVKYT" |> AlbumId
       , name = "066/Geheimnis im Meer"
       , urlToOpen = "https://open.spotify.com/album/6xSlKWjaEpc6SMJ69uVKYT"
       , covers =
@@ -684,7 +685,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0Pg0kbjNl7PC22ghcSqKih"
+    , { id = "0Pg0kbjNl7PC22ghcSqKih" |> AlbumId
       , name = "Adventskalender"
       , urlToOpen = "https://open.spotify.com/album/0Pg0kbjNl7PC22ghcSqKih"
       , covers =
@@ -702,7 +703,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4ErYqkUdfkAmsgltEPJKH7"
+    , { id = "4ErYqkUdfkAmsgltEPJKH7" |> AlbumId
       , name = "065/Mission Goldhund"
       , urlToOpen = "https://open.spotify.com/album/4ErYqkUdfkAmsgltEPJKH7"
       , covers =
@@ -720,7 +721,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6Om3zELCMatFreSN4FMeOG"
+    , { id = "6Om3zELCMatFreSN4FMeOG" |> AlbumId
       , name = "064/In der Schatzhöhle"
       , urlToOpen = "https://open.spotify.com/album/6Om3zELCMatFreSN4FMeOG"
       , covers =
@@ -738,7 +739,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "39QjW5XIE81HsWRjjyaVH0"
+    , { id = "39QjW5XIE81HsWRjjyaVH0" |> AlbumId
       , name = "063/Monster-Wolken"
       , urlToOpen = "https://open.spotify.com/album/39QjW5XIE81HsWRjjyaVH0"
       , covers =
@@ -756,7 +757,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3KD5QNC2k1328SsuYFIjiq"
+    , { id = "3KD5QNC2k1328SsuYFIjiq" |> AlbumId
       , name = "062/Gefahr im Dschungel"
       , urlToOpen = "https://open.spotify.com/album/3KD5QNC2k1328SsuYFIjiq"
       , covers =
@@ -774,7 +775,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2ZQKn9GVeJalLEuh3BvuOB"
+    , { id = "2ZQKn9GVeJalLEuh3BvuOB" |> AlbumId
       , name = "061/Alarm im Dino-Park"
       , urlToOpen = "https://open.spotify.com/album/2ZQKn9GVeJalLEuh3BvuOB"
       , covers =
@@ -792,7 +793,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5XKW97txqaNv82dIUDWf6D"
+    , { id = "5XKW97txqaNv82dIUDWf6D" |> AlbumId
       , name = "060/Gespensterjagd"
       , urlToOpen = "https://open.spotify.com/album/5XKW97txqaNv82dIUDWf6D"
       , covers =
@@ -810,7 +811,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "66YZOif5ogyl1O0rFT28HM"
+    , { id = "66YZOif5ogyl1O0rFT28HM" |> AlbumId
       , name = "059/Fußballhelden"
       , urlToOpen = "https://open.spotify.com/album/66YZOif5ogyl1O0rFT28HM"
       , covers =
@@ -828,7 +829,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2KpYeQgAWPq3skEUb1A8qb"
+    , { id = "2KpYeQgAWPq3skEUb1A8qb" |> AlbumId
       , name = "058/Spur des Drachen"
       , urlToOpen = "https://open.spotify.com/album/2KpYeQgAWPq3skEUb1A8qb"
       , covers =
@@ -846,7 +847,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "23RIS8PEXnZUs0AwqmstMS"
+    , { id = "23RIS8PEXnZUs0AwqmstMS" |> AlbumId
       , name = "057/Der Weihnachtsdieb"
       , urlToOpen = "https://open.spotify.com/album/23RIS8PEXnZUs0AwqmstMS"
       , covers =
@@ -864,7 +865,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0zmK2RPZSiThN6xwxDFNrL"
+    , { id = "0zmK2RPZSiThN6xwxDFNrL" |> AlbumId
       , name = "056/Das Rätsel der Könige"
       , urlToOpen = "https://open.spotify.com/album/0zmK2RPZSiThN6xwxDFNrL"
       , covers =
@@ -882,7 +883,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2UNXd8SieHWtTM5g0VMeGv"
+    , { id = "2UNXd8SieHWtTM5g0VMeGv" |> AlbumId
       , name = "055/Der schwarze Joker"
       , urlToOpen = "https://open.spotify.com/album/2UNXd8SieHWtTM5g0VMeGv"
       , covers =
@@ -900,7 +901,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4bM4QL65khBjHgvAEW1glL"
+    , { id = "4bM4QL65khBjHgvAEW1glL" |> AlbumId
       , name = "054/Zombie-Alarm"
       , urlToOpen = "https://open.spotify.com/album/4bM4QL65khBjHgvAEW1glL"
       , covers =
@@ -918,7 +919,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4SVQrvQkXzYC1nU7DfDJx2"
+    , { id = "4SVQrvQkXzYC1nU7DfDJx2" |> AlbumId
       , name = "Adventskalender - Ein Rätsel in 24 Tagen"
       , urlToOpen = "https://open.spotify.com/album/4SVQrvQkXzYC1nU7DfDJx2"
       , covers =
@@ -936,7 +937,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7d8GIfIRWUNIZZXc5bjsrT"
+    , { id = "7d8GIfIRWUNIZZXc5bjsrT" |> AlbumId
       , name = "Adventskalender - 24 Tage im Weihnachtsland"
       , urlToOpen = "https://open.spotify.com/album/7d8GIfIRWUNIZZXc5bjsrT"
       , covers =
@@ -954,7 +955,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3ahySlDFUrzxatkaJUC2hV"
+    , { id = "3ahySlDFUrzxatkaJUC2hV" |> AlbumId
       , name = "053/Geheimnis der Tiere"
       , urlToOpen = "https://open.spotify.com/album/3ahySlDFUrzxatkaJUC2hV"
       , covers =
@@ -972,7 +973,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6g5MSdVTrKY3f1ZzsqUhXw"
+    , { id = "6g5MSdVTrKY3f1ZzsqUhXw" |> AlbumId
       , name = "052/Mächtige Magier"
       , urlToOpen = "https://open.spotify.com/album/6g5MSdVTrKY3f1ZzsqUhXw"
       , covers =
@@ -990,7 +991,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2Vu69KfWoS6eAzwnhqssWk"
+    , { id = "2Vu69KfWoS6eAzwnhqssWk" |> AlbumId
       , name = "051/Tatort Kletterpark"
       , urlToOpen = "https://open.spotify.com/album/2Vu69KfWoS6eAzwnhqssWk"
       , covers =
@@ -1008,7 +1009,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7zUg7xSxAAkwntDiX1yhGJ"
+    , { id = "7zUg7xSxAAkwntDiX1yhGJ" |> AlbumId
       , name = "050/Schatz der Piraten"
       , urlToOpen = "https://open.spotify.com/album/7zUg7xSxAAkwntDiX1yhGJ"
       , covers =
@@ -1026,7 +1027,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "105UQAEjLpiqUCUK6x6i3g"
+    , { id = "105UQAEjLpiqUCUK6x6i3g" |> AlbumId
       , name = "048/Tanz der Skelette"
       , urlToOpen = "https://open.spotify.com/album/105UQAEjLpiqUCUK6x6i3g"
       , covers =
@@ -1044,7 +1045,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "42cBTxTbzCzbYm0sd4VUxU"
+    , { id = "42cBTxTbzCzbYm0sd4VUxU" |> AlbumId
       , name = "047/Falsche Fußball-Freunde"
       , urlToOpen = "https://open.spotify.com/album/42cBTxTbzCzbYm0sd4VUxU"
       , covers =
@@ -1062,7 +1063,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6eQDj0n1wU2dEXO7vr1Bmm"
+    , { id = "6eQDj0n1wU2dEXO7vr1Bmm" |> AlbumId
       , name = "046/Jagd auf das Dino-Ei"
       , urlToOpen = "https://open.spotify.com/album/6eQDj0n1wU2dEXO7vr1Bmm"
       , covers =
@@ -1080,7 +1081,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4Al8xe9LlMxHWhIddbienL"
+    , { id = "4Al8xe9LlMxHWhIddbienL" |> AlbumId
       , name = "045/Ein Fall für Superhelden"
       , urlToOpen = "https://open.spotify.com/album/4Al8xe9LlMxHWhIddbienL"
       , covers =
@@ -1098,7 +1099,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5fIxmzKdFvtbRIeRBEeptA"
+    , { id = "5fIxmzKdFvtbRIeRBEeptA" |> AlbumId
       , name = "044/Monster in Rocky Beach"
       , urlToOpen = "https://open.spotify.com/album/5fIxmzKdFvtbRIeRBEeptA"
       , covers =
@@ -1116,7 +1117,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5J0AsPaix5KTMNjTFpj624"
+    , { id = "5J0AsPaix5KTMNjTFpj624" |> AlbumId
       , name = "043/Duell der Ritter"
       , urlToOpen = "https://open.spotify.com/album/5J0AsPaix5KTMNjTFpj624"
       , covers =
@@ -1134,7 +1135,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6sS4r99PFfzH6Gxc1Z3evg"
+    , { id = "6sS4r99PFfzH6Gxc1Z3evg" |> AlbumId
       , name = "042/Fußballgötter"
       , urlToOpen = "https://open.spotify.com/album/6sS4r99PFfzH6Gxc1Z3evg"
       , covers =
@@ -1152,7 +1153,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3ixBUKtl7HtxSZECC3YnNb"
+    , { id = "3ixBUKtl7HtxSZECC3YnNb" |> AlbumId
       , name = "041/Insel der Haie"
       , urlToOpen = "https://open.spotify.com/album/3ixBUKtl7HtxSZECC3YnNb"
       , covers =
@@ -1170,7 +1171,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "12IDORrv50mRmb7501PgiI"
+    , { id = "12IDORrv50mRmb7501PgiI" |> AlbumId
       , name = "040/Brennendes Eis"
       , urlToOpen = "https://open.spotify.com/album/12IDORrv50mRmb7501PgiI"
       , covers =
@@ -1188,7 +1189,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6NkPN8kGJftA5ZURbZTKve"
+    , { id = "6NkPN8kGJftA5ZURbZTKve" |> AlbumId
       , name = "039/Der verrückte Erfinder"
       , urlToOpen = "https://open.spotify.com/album/6NkPN8kGJftA5ZURbZTKve"
       , covers =
@@ -1206,7 +1207,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7o6y1qwFIJolo0ZKUpPTR9"
+    , { id = "7o6y1qwFIJolo0ZKUpPTR9" |> AlbumId
       , name = "038/Stunde der Wahrheit"
       , urlToOpen = "https://open.spotify.com/album/7o6y1qwFIJolo0ZKUpPTR9"
       , covers =
@@ -1224,7 +1225,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "24r6U8cWYIB4bQeMGhNB2Q"
+    , { id = "24r6U8cWYIB4bQeMGhNB2Q" |> AlbumId
       , name = "037/Der Fluch der Indianer"
       , urlToOpen = "https://open.spotify.com/album/24r6U8cWYIB4bQeMGhNB2Q"
       , covers =
@@ -1242,7 +1243,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6GUPPV35zx22eO4g9tctKN"
+    , { id = "6GUPPV35zx22eO4g9tctKN" |> AlbumId
       , name = "036/Mission Mars"
       , urlToOpen = "https://open.spotify.com/album/6GUPPV35zx22eO4g9tctKN"
       , covers =
@@ -1260,7 +1261,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1bK1QqLOaESZgs2pXYY4J6"
+    , { id = "1bK1QqLOaESZgs2pXYY4J6" |> AlbumId
       , name = "035/Im Wilden Westen"
       , urlToOpen = "https://open.spotify.com/album/1bK1QqLOaESZgs2pXYY4J6"
       , covers =
@@ -1278,7 +1279,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7ATza45Jb2B3MhSD0icgPi"
+    , { id = "7ATza45Jb2B3MhSD0icgPi" |> AlbumId
       , name = "034/Falsches Gold"
       , urlToOpen = "https://open.spotify.com/album/7ATza45Jb2B3MhSD0icgPi"
       , covers =
@@ -1296,7 +1297,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5cJ4xmPFjEhOCQIBoYwmWi"
+    , { id = "5cJ4xmPFjEhOCQIBoYwmWi" |> AlbumId
       , name = "033/Nacht im Kerker"
       , urlToOpen = "https://open.spotify.com/album/5cJ4xmPFjEhOCQIBoYwmWi"
       , covers =
@@ -1314,7 +1315,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3UzZjgfXxnjPigAfCYQCr5"
+    , { id = "3UzZjgfXxnjPigAfCYQCr5" |> AlbumId
       , name = "032/Die Gruselfalle"
       , urlToOpen = "https://open.spotify.com/album/3UzZjgfXxnjPigAfCYQCr5"
       , covers =
@@ -1332,7 +1333,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "49GuQzqAa08WMB8fjtEBj4"
+    , { id = "49GuQzqAa08WMB8fjtEBj4" |> AlbumId
       , name = "031/Rückkehr der Saurier"
       , urlToOpen = "https://open.spotify.com/album/49GuQzqAa08WMB8fjtEBj4"
       , covers =
@@ -1350,7 +1351,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5Dlq8pYslsD1dstLQR7NFw"
+    , { id = "5Dlq8pYslsD1dstLQR7NFw" |> AlbumId
       , name = "030/Im Geisterschiff"
       , urlToOpen = "https://open.spotify.com/album/5Dlq8pYslsD1dstLQR7NFw"
       , covers =
@@ -1368,7 +1369,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4fIWqTa6s849HB2NInOgyF"
+    , { id = "4fIWqTa6s849HB2NInOgyF" |> AlbumId
       , name = "029/Monsterpilze"
       , urlToOpen = "https://open.spotify.com/album/4fIWqTa6s849HB2NInOgyF"
       , covers =
@@ -1386,7 +1387,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4BTfGkg67lPD7pnV9YABGC"
+    , { id = "4BTfGkg67lPD7pnV9YABGC" |> AlbumId
       , name = "028/Diamantenjagd"
       , urlToOpen = "https://open.spotify.com/album/4BTfGkg67lPD7pnV9YABGC"
       , covers =
@@ -1404,7 +1405,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0BiK4U6FaICuYqpUQ553Qo"
+    , { id = "0BiK4U6FaICuYqpUQ553Qo" |> AlbumId
       , name = "027/Die Schokofalle"
       , urlToOpen = "https://open.spotify.com/album/0BiK4U6FaICuYqpUQ553Qo"
       , covers =
@@ -1422,7 +1423,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7zlnjYjJotwmyxPWee0s9W"
+    , { id = "7zlnjYjJotwmyxPWee0s9W" |> AlbumId
       , name = "026/Fußball-Alarm"
       , urlToOpen = "https://open.spotify.com/album/7zlnjYjJotwmyxPWee0s9W"
       , covers =
@@ -1440,7 +1441,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5nCCuIqR5MsRi3tI90Vu4T"
+    , { id = "5nCCuIqR5MsRi3tI90Vu4T" |> AlbumId
       , name = "025/In letzter Sekunde"
       , urlToOpen = "https://open.spotify.com/album/5nCCuIqR5MsRi3tI90Vu4T"
       , covers =
@@ -1458,7 +1459,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1GsVIL0B05ykaxM0sjjik8"
+    , { id = "1GsVIL0B05ykaxM0sjjik8" |> AlbumId
       , name = "024/Im Bann des Zauberers"
       , urlToOpen = "https://open.spotify.com/album/1GsVIL0B05ykaxM0sjjik8"
       , covers =
@@ -1476,7 +1477,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1cCB23DWt7mRHBFvTsX87C"
+    , { id = "1cCB23DWt7mRHBFvTsX87C" |> AlbumId
       , name = "049/Der singende Geist"
       , urlToOpen = "https://open.spotify.com/album/1cCB23DWt7mRHBFvTsX87C"
       , covers =
@@ -1494,7 +1495,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5PEjckgsqkxbpDlgz30wTk"
+    , { id = "5PEjckgsqkxbpDlgz30wTk" |> AlbumId
       , name = "023/Feuer in Rocky Beach"
       , urlToOpen = "https://open.spotify.com/album/5PEjckgsqkxbpDlgz30wTk"
       , covers =
@@ -1512,7 +1513,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2ILrLgqLA1pterp2pZoChc"
+    , { id = "2ILrLgqLA1pterp2pZoChc" |> AlbumId
       , name = "022/Einarmige Banditen"
       , urlToOpen = "https://open.spotify.com/album/2ILrLgqLA1pterp2pZoChc"
       , covers =
@@ -1530,7 +1531,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3sMdBpUspSRJxhr2oze3le"
+    , { id = "3sMdBpUspSRJxhr2oze3le" |> AlbumId
       , name = "021/Die Geisterjäger"
       , urlToOpen = "https://open.spotify.com/album/3sMdBpUspSRJxhr2oze3le"
       , covers =
@@ -1548,7 +1549,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0WwfV73hIbVsEfIUJxFCMN"
+    , { id = "0WwfV73hIbVsEfIUJxFCMN" |> AlbumId
       , name = "020/Die Schmugglerinsel"
       , urlToOpen = "https://open.spotify.com/album/0WwfV73hIbVsEfIUJxFCMN"
       , covers =
@@ -1566,7 +1567,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5NmTdnYuPpnDlF9zBTnwHT"
+    , { id = "5NmTdnYuPpnDlF9zBTnwHT" |> AlbumId
       , name = "019/Spur in die Wildnis"
       , urlToOpen = "https://open.spotify.com/album/5NmTdnYuPpnDlF9zBTnwHT"
       , covers =
@@ -1584,7 +1585,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5Z6HPLDixzbX8TNK889Fr8"
+    , { id = "5Z6HPLDixzbX8TNK889Fr8" |> AlbumId
       , name = "018/Mission Maulwurf"
       , urlToOpen = "https://open.spotify.com/album/5Z6HPLDixzbX8TNK889Fr8"
       , covers =
@@ -1602,7 +1603,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2RJHP6Kw1jZrp56WCqtiQW"
+    , { id = "2RJHP6Kw1jZrp56WCqtiQW" |> AlbumId
       , name = "017/Rettet Atlantis!"
       , urlToOpen = "https://open.spotify.com/album/2RJHP6Kw1jZrp56WCqtiQW"
       , covers =
@@ -1620,7 +1621,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2xo9X40JoJuDO64Iy5mpNY"
+    , { id = "2xo9X40JoJuDO64Iy5mpNY" |> AlbumId
       , name = "016/Der magische Brunnen"
       , urlToOpen = "https://open.spotify.com/album/2xo9X40JoJuDO64Iy5mpNY"
       , covers =
@@ -1638,7 +1639,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3Dn23cUQU7RehW7QeBt3cJ"
+    , { id = "3Dn23cUQU7RehW7QeBt3cJ" |> AlbumId
       , name = "015/In der Geisterstadt"
       , urlToOpen = "https://open.spotify.com/album/3Dn23cUQU7RehW7QeBt3cJ"
       , covers =
@@ -1656,7 +1657,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1WTFQcnnJZRhRLkA6Pemom"
+    , { id = "1WTFQcnnJZRhRLkA6Pemom" |> AlbumId
       , name = "014/Gefahr aus dem All"
       , urlToOpen = "https://open.spotify.com/album/1WTFQcnnJZRhRLkA6Pemom"
       , covers =
@@ -1674,7 +1675,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7xFfmSVyP8y9gcXRPG7xmT"
+    , { id = "7xFfmSVyP8y9gcXRPG7xmT" |> AlbumId
       , name = "013/Im Reich der Rätsel"
       , urlToOpen = "https://open.spotify.com/album/7xFfmSVyP8y9gcXRPG7xmT"
       , covers =
@@ -1692,7 +1693,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3aYsZOOX3BVsCcHC0MQq3f"
+    , { id = "3aYsZOOX3BVsCcHC0MQq3f" |> AlbumId
       , name = "012/Internetpiraten"
       , urlToOpen = "https://open.spotify.com/album/3aYsZOOX3BVsCcHC0MQq3f"
       , covers =
@@ -1710,7 +1711,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6GPxCYDZkEqCLPc7BeCFYb"
+    , { id = "6GPxCYDZkEqCLPc7BeCFYb" |> AlbumId
       , name = "011/Fluch des Goldes"
       , urlToOpen = "https://open.spotify.com/album/6GPxCYDZkEqCLPc7BeCFYb"
       , covers =
@@ -1728,7 +1729,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6PRRmyf0vuFwPeuVLdDq4q"
+    , { id = "6PRRmyf0vuFwPeuVLdDq4q" |> AlbumId
       , name = "010/Spuk in Rocky Beach"
       , urlToOpen = "https://open.spotify.com/album/6PRRmyf0vuFwPeuVLdDq4q"
       , covers =
@@ -1746,7 +1747,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7A5GQZrirxYgjWCTGpbnbs"
+    , { id = "7A5GQZrirxYgjWCTGpbnbs" |> AlbumId
       , name = "009/SOS über den Wolken"
       , urlToOpen = "https://open.spotify.com/album/7A5GQZrirxYgjWCTGpbnbs"
       , covers =
@@ -1764,7 +1765,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3RRqQIyDs7AkO3TPbmuRpt"
+    , { id = "3RRqQIyDs7AkO3TPbmuRpt" |> AlbumId
       , name = "008/Nacht unter Wölfen"
       , urlToOpen = "https://open.spotify.com/album/3RRqQIyDs7AkO3TPbmuRpt"
       , covers =
@@ -1782,7 +1783,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2rleLzoiSWt5IVyZpkkVHA"
+    , { id = "2rleLzoiSWt5IVyZpkkVHA" |> AlbumId
       , name = "007/Gruft der Piraten"
       , urlToOpen = "https://open.spotify.com/album/2rleLzoiSWt5IVyZpkkVHA"
       , covers =
@@ -1800,7 +1801,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4TSPWdUo2J4w6VuwQgUK2e"
+    , { id = "4TSPWdUo2J4w6VuwQgUK2e" |> AlbumId
       , name = "006/Gefahr im Gruselgarten"
       , urlToOpen = "https://open.spotify.com/album/4TSPWdUo2J4w6VuwQgUK2e"
       , covers =
@@ -1818,7 +1819,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1wNy1x9hCcnmU1vhT7S2Tc"
+    , { id = "1wNy1x9hCcnmU1vhT7S2Tc" |> AlbumId
       , name = "005/Flucht in die Zukunft"
       , urlToOpen = "https://open.spotify.com/album/1wNy1x9hCcnmU1vhT7S2Tc"
       , covers =
@@ -1836,7 +1837,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "30w9IzSbHHevllaU299TMh"
+    , { id = "30w9IzSbHHevllaU299TMh" |> AlbumId
       , name = "004/Chaos vor der Kamera"
       , urlToOpen = "https://open.spotify.com/album/30w9IzSbHHevllaU299TMh"
       , covers =
@@ -1854,7 +1855,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0jhxRM2HsImXg5W28JfUv8"
+    , { id = "0jhxRM2HsImXg5W28JfUv8" |> AlbumId
       , name = "003/Invasion der Fliegen"
       , urlToOpen = "https://open.spotify.com/album/0jhxRM2HsImXg5W28JfUv8"
       , covers =
@@ -1872,7 +1873,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "50d2KMK7GtbCTfLqxDfHIS"
+    , { id = "50d2KMK7GtbCTfLqxDfHIS" |> AlbumId
       , name = "002/Radio Rocky Beach"
       , urlToOpen = "https://open.spotify.com/album/50d2KMK7GtbCTfLqxDfHIS"
       , covers =
@@ -1890,7 +1891,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5mQg8r5ivI0IX5bTV57KyN"
+    , { id = "5mQg8r5ivI0IX5bTV57KyN" |> AlbumId
       , name = "001/Panik im Paradies"
       , urlToOpen = "https://open.spotify.com/album/5mQg8r5ivI0IX5bTV57KyN"
       , covers =

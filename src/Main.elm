@@ -1,6 +1,8 @@
 port module Main exposing (..)
 
 import Albums exposing (Album, ArtistInfo)
+import AlbumIds
+import ArtistIds
 import Array exposing (Array)
 import ArtistsWithAlbums exposing (albumStorage)
 import Browser
@@ -25,7 +27,7 @@ type alias Flags =
 
 
 type alias Model =
-    { blacklistedAlbums : List String
+    { blacklistedAlbums : List AlbumIds.AlbumId
     , albums : Array Album
     , current : Int
     , isInitialized : Bool
@@ -103,7 +105,7 @@ type Msg
     | NextAlbum
     | PreviousAlbum
     | AlbumsShuffled (List Album)
-    | BlackListAlbum String
+    | BlackListAlbum AlbumIds.AlbumId
     | OpenArtistOverlay ArtistInfo
     | CloseArtistOverlay ArtistInfo
 
@@ -146,7 +148,7 @@ update msg model =
                     Debug.log "GotBlacklist" text
 
                 albumsToBlacklist =
-                    text
+                    text |> List.map AlbumIds.AlbumId
 
                 filteredAlbums =
                     model.albums |> Array.filter (\a -> not (albumsToBlacklist |> List.member a.id))
@@ -180,7 +182,11 @@ update msg model =
                     }
 
                 newCmd =
-                    setBlacklistedAlbums (albumId :: model.blacklistedAlbums)
+                    let
+                        combined = albumId :: model.blacklistedAlbums
+                        mapped = combined |> List.map AlbumIds.value
+                    in
+                    mapped |> setBlacklistedAlbums
             in
             ( updatedModel, newCmd )
 
@@ -300,7 +306,7 @@ view model =
                         let
                             isSelectedClass = if isSelected then " artist-list-selected-element" else ""
                             _ = Debug.log a.name isSelectedClass
-                            _ = Debug.log ("comparing " ++ artist.id) a.id
+                            _ = Debug.log ("comparing " ++ (artist.id |> ArtistIds.value)) a.id
                         in
                         Html.a
                             [ onClick (CloseArtistOverlay a) ]

@@ -1,5 +1,7 @@
 module Albums exposing ( Album, ArtistInfo, CoverImage, ArtistWithAlbums )
 
+import ArtistIds exposing (ArtistId(..))
+import AlbumIds exposing (AlbumId(..))
 import Array exposing(Array)
 
 type alias CoverImage =
@@ -14,7 +16,7 @@ type alias ArtistInfo =
     , imageUrl: String
     , shortName: String
     , httpFriendlyShortName: String
-    , id: String
+    , id: ArtistId
     , icon: String
     , coverColorA: String
     , coverColorB: String
@@ -22,7 +24,7 @@ type alias ArtistInfo =
 
 
 type alias Album =
-    { id : String
+    { id : AlbumId
     , name : String
     , urlToOpen : String
     , covers: List CoverImage

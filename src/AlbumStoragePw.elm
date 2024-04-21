@@ -2,11 +2,12 @@ module AlbumStoragePw exposing ( albumStorage, artistInfo )
 
 import Array exposing(Array)
 import Albums exposing (Album, ArtistInfo)
-
+import ArtistIds exposing (ArtistId(..))
+import AlbumIds exposing (AlbumId(..))
 
 artistInfo : ArtistInfo
 artistInfo =
-  { id = "39cu39Rn69BTbnblNDijGN"
+  { id = "39cu39Rn69BTbnblNDijGN" |> ArtistId
   , name = "Point Whitmark" 
   , imageUrl = "https://i.scdn.co/image/ab6761610000e5ebc3329ea6fc2160392bc912d9" 
   , shortName = "PW"
@@ -19,7 +20,7 @@ artistInfo =
 
 albumStorage : Array Album
 albumStorage =
-    [ { id = "0a4wVcZXBQscT2vuhFpPiK"
+    [ { id = "0a4wVcZXBQscT2vuhFpPiK" |> AlbumId
       , name = "041/Rückkehr aus dem Totenland"
       , urlToOpen = "https://open.spotify.com/album/0a4wVcZXBQscT2vuhFpPiK"
       , covers =
@@ -36,7 +37,7 @@ albumStorage =
               , height = 64 
               }
             ] }
-    , { id = "7JwVMCynTyUCVP7MQXfLMa"
+    , { id = "7JwVMCynTyUCVP7MQXfLMa" |> AlbumId
       , name = "040/Das Orakel des Unheils"
       , urlToOpen = "https://open.spotify.com/album/7JwVMCynTyUCVP7MQXfLMa"
       , covers =
@@ -54,7 +55,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1bPR2nzf4qsqWlB7firtz1"
+    , { id = "1bPR2nzf4qsqWlB7firtz1" |> AlbumId
       , name = "039/Das Feld beim Krähenhaus"
       , urlToOpen = "https://open.spotify.com/album/1bPR2nzf4qsqWlB7firtz1"
       , covers =
@@ -72,7 +73,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "30uaNuNAk3sImmBsL8YZPt"
+    , { id = "30uaNuNAk3sImmBsL8YZPt" |> AlbumId
       , name = "038/Der glühende Mönch"
       , urlToOpen = "https://open.spotify.com/album/30uaNuNAk3sImmBsL8YZPt"
       , covers =
@@ -90,7 +91,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3trVlEw7g1hQxdb5wU8bEZ"
+    , { id = "3trVlEw7g1hQxdb5wU8bEZ" |> AlbumId
       , name = "037/Das Moor der Vergangenen"
       , urlToOpen = "https://open.spotify.com/album/3trVlEw7g1hQxdb5wU8bEZ"
       , covers =
@@ -108,7 +109,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0nZXSqm1UQPmcP4MawBRJy"
+    , { id = "0nZXSqm1UQPmcP4MawBRJy" |> AlbumId
       , name = "036/Geschöpf der bösen Träume"
       , urlToOpen = "https://open.spotify.com/album/0nZXSqm1UQPmcP4MawBRJy"
       , covers =
@@ -126,7 +127,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5ZXy5Bz2cVK1y9H7wLp1bG"
+    , { id = "5ZXy5Bz2cVK1y9H7wLp1bG" |> AlbumId
       , name = "035/Verirrt im Spinnenwald"
       , urlToOpen = "https://open.spotify.com/album/5ZXy5Bz2cVK1y9H7wLp1bG"
       , covers =
@@ -144,7 +145,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2ew1hyzMxQc2bAp0KatPOs"
+    , { id = "2ew1hyzMxQc2bAp0KatPOs" |> AlbumId
       , name = "034/Die einäugigen Puppen"
       , urlToOpen = "https://open.spotify.com/album/2ew1hyzMxQc2bAp0KatPOs"
       , covers =
@@ -162,7 +163,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1mWALaBj7EexbtibGLmAsZ"
+    , { id = "1mWALaBj7EexbtibGLmAsZ" |> AlbumId
       , name = "033/Das Schloss des Blutmalers"
       , urlToOpen = "https://open.spotify.com/album/1mWALaBj7EexbtibGLmAsZ"
       , covers =
@@ -180,7 +181,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "01VHWlPRHkqwFPp0WtmQZ5"
+    , { id = "01VHWlPRHkqwFPp0WtmQZ5" |> AlbumId
       , name = "032/Hauptrolle: tot"
       , urlToOpen = "https://open.spotify.com/album/01VHWlPRHkqwFPp0WtmQZ5"
       , covers =
@@ -198,7 +199,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "74LgIPfaXk0dB4d17bhxYL"
+    , { id = "74LgIPfaXk0dB4d17bhxYL" |> AlbumId
       , name = "031/Das Menschenkabinett"
       , urlToOpen = "https://open.spotify.com/album/74LgIPfaXk0dB4d17bhxYL"
       , covers =
@@ -216,7 +217,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0j7WSaEq9vMj5qqfEL2uBy"
+    , { id = "0j7WSaEq9vMj5qqfEL2uBy" |> AlbumId
       , name = "030/Der Seelenkünder II"
       , urlToOpen = "https://open.spotify.com/album/0j7WSaEq9vMj5qqfEL2uBy"
       , covers =
@@ -234,7 +235,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "25Wl1t6ZIurjI28oE6ISaM"
+    , { id = "25Wl1t6ZIurjI28oE6ISaM" |> AlbumId
       , name = "029/Der Seelenkünder I"
       , urlToOpen = "https://open.spotify.com/album/25Wl1t6ZIurjI28oE6ISaM"
       , covers =
@@ -252,7 +253,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "60rNEZqzvDRlDv89SM4UYj"
+    , { id = "60rNEZqzvDRlDv89SM4UYj" |> AlbumId
       , name = "028/Der Leere Raum"
       , urlToOpen = "https://open.spotify.com/album/60rNEZqzvDRlDv89SM4UYj"
       , covers =
@@ -270,7 +271,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6a0WXcz5NmFZTnUuM18dlw"
+    , { id = "6a0WXcz5NmFZTnUuM18dlw" |> AlbumId
       , name = "027/Eiland der Gespenster"
       , urlToOpen = "https://open.spotify.com/album/6a0WXcz5NmFZTnUuM18dlw"
       , covers =
@@ -288,7 +289,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4518MUZ88OM9mkXRjHNb3I"
+    , { id = "4518MUZ88OM9mkXRjHNb3I" |> AlbumId
       , name = "026/Die Diener der Pest"
       , urlToOpen = "https://open.spotify.com/album/4518MUZ88OM9mkXRjHNb3I"
       , covers =
@@ -306,7 +307,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3Ym71NN9uily2fTT3esHSM"
+    , { id = "3Ym71NN9uily2fTT3esHSM" |> AlbumId
       , name = "025/Die fiebrigen Tränen"
       , urlToOpen = "https://open.spotify.com/album/3Ym71NN9uily2fTT3esHSM"
       , covers =
@@ -324,7 +325,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5GQRBo93yteU7quPJ0wPQq"
+    , { id = "5GQRBo93yteU7quPJ0wPQq" |> AlbumId
       , name = "024/Am Tag der großen Flut"
       , urlToOpen = "https://open.spotify.com/album/5GQRBo93yteU7quPJ0wPQq"
       , covers =
@@ -342,7 +343,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "242vCdSs4RXNQF0GjW5S7M"
+    , { id = "242vCdSs4RXNQF0GjW5S7M" |> AlbumId
       , name = "023/Der Duft der Finsternis"
       , urlToOpen = "https://open.spotify.com/album/242vCdSs4RXNQF0GjW5S7M"
       , covers =
@@ -360,7 +361,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1YEHLtjH9ft1ii6Naj3fNs"
+    , { id = "1YEHLtjH9ft1ii6Naj3fNs" |> AlbumId
       , name = "022/Die blutenden Schlüssel"
       , urlToOpen = "https://open.spotify.com/album/1YEHLtjH9ft1ii6Naj3fNs"
       , covers =
@@ -378,7 +379,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "178RDBhOQSqYMhDXksWUcr"
+    , { id = "178RDBhOQSqYMhDXksWUcr" |> AlbumId
       , name = "021/Gefahr am schwarzen Wasser"
       , urlToOpen = "https://open.spotify.com/album/178RDBhOQSqYMhDXksWUcr"
       , covers =
@@ -396,7 +397,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3f3ohDkzsCIh8QYJ85ts7F"
+    , { id = "3f3ohDkzsCIh8QYJ85ts7F" |> AlbumId
       , name = "020/Der Bund des Zorns"
       , urlToOpen = "https://open.spotify.com/album/3f3ohDkzsCIh8QYJ85ts7F"
       , covers =
@@ -414,7 +415,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4z5hZT12F5hDvYMAKryvC2"
+    , { id = "4z5hZT12F5hDvYMAKryvC2" |> AlbumId
       , name = "019/Der Weg zur Dunkelmühle"
       , urlToOpen = "https://open.spotify.com/album/4z5hZT12F5hDvYMAKryvC2"
       , covers =
@@ -432,7 +433,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2MgpquYqWDwNq10vQQsgDA"
+    , { id = "2MgpquYqWDwNq10vQQsgDA" |> AlbumId
       , name = "018/Im Sog der Sirenen"
       , urlToOpen = "https://open.spotify.com/album/2MgpquYqWDwNq10vQQsgDA"
       , covers =
@@ -450,7 +451,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7I7CGeWzZ9yzbWwn4fkhe7"
+    , { id = "7I7CGeWzZ9yzbWwn4fkhe7" |> AlbumId
       , name = "017/Der steinerne Fluch"
       , urlToOpen = "https://open.spotify.com/album/7I7CGeWzZ9yzbWwn4fkhe7"
       , covers =
@@ -468,7 +469,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "3D4N1ciYARjBISBXDjb5nS"
+    , { id = "3D4N1ciYARjBISBXDjb5nS" |> AlbumId
       , name = "016/Die Zeit des Knochenfängers"
       , urlToOpen = "https://open.spotify.com/album/3D4N1ciYARjBISBXDjb5nS"
       , covers =
@@ -486,7 +487,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "07gknPYvIxHO6tAvzbuSE0"
+    , { id = "07gknPYvIxHO6tAvzbuSE0" |> AlbumId
       , name = "015/Das Geheimnis des Scherbendiebes"
       , urlToOpen = "https://open.spotify.com/album/07gknPYvIxHO6tAvzbuSE0"
       , covers =
@@ -504,7 +505,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "37Bx2rbtTu2f9PuUABtABZ"
+    , { id = "37Bx2rbtTu2f9PuUABtABZ" |> AlbumId
       , name = "014/Die Kammer des schweigenden Ritters"
       , urlToOpen = "https://open.spotify.com/album/37Bx2rbtTu2f9PuUABtABZ"
       , covers =
@@ -522,7 +523,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5AIOJmeTo8qcHIyPVJAvRh"
+    , { id = "5AIOJmeTo8qcHIyPVJAvRh" |> AlbumId
       , name = "013/Die Würfel des Hexenmeisters"
       , urlToOpen = "https://open.spotify.com/album/5AIOJmeTo8qcHIyPVJAvRh"
       , covers =
@@ -540,7 +541,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "6G6Pwdg1BW8yRp2rM2jRsC"
+    , { id = "6G6Pwdg1BW8yRp2rM2jRsC" |> AlbumId
       , name = "012/Im Bann der Totenmelodie"
       , urlToOpen = "https://open.spotify.com/album/6G6Pwdg1BW8yRp2rM2jRsC"
       , covers =
@@ -558,7 +559,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "61MJJekB95apDZ10mrtRhu"
+    , { id = "61MJJekB95apDZ10mrtRhu" |> AlbumId
       , name = "011/Die Nacht der ewigen Fliegen"
       , urlToOpen = "https://open.spotify.com/album/61MJJekB95apDZ10mrtRhu"
       , covers =
@@ -576,7 +577,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "7Ghr2xv8LjhwYvsrSiwypI"
+    , { id = "7Ghr2xv8LjhwYvsrSiwypI" |> AlbumId
       , name = "010/Der Schattenadmiral"
       , urlToOpen = "https://open.spotify.com/album/7Ghr2xv8LjhwYvsrSiwypI"
       , covers =
@@ -594,7 +595,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "04Mlg1WlnLgp4CvwpVZ9KX"
+    , { id = "04Mlg1WlnLgp4CvwpVZ9KX" |> AlbumId
       , name = "009/Das Buch des Grauenjägers"
       , urlToOpen = "https://open.spotify.com/album/04Mlg1WlnLgp4CvwpVZ9KX"
       , covers =
@@ -612,7 +613,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "1vyik7uzgbTcPsvWuTb51f"
+    , { id = "1vyik7uzgbTcPsvWuTb51f" |> AlbumId
       , name = "008/Am Berg der Nebelspinne"
       , urlToOpen = "https://open.spotify.com/album/1vyik7uzgbTcPsvWuTb51f"
       , covers =
@@ -630,7 +631,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2sKCEbqp7QaGDDpL1G9X8n"
+    , { id = "2sKCEbqp7QaGDDpL1G9X8n" |> AlbumId
       , name = "007/Das Grab aus Wüstensand"
       , urlToOpen = "https://open.spotify.com/album/2sKCEbqp7QaGDDpL1G9X8n"
       , covers =
@@ -648,7 +649,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2uvaDV7QrxOuGqJf3akIUM"
+    , { id = "2uvaDV7QrxOuGqJf3akIUM" |> AlbumId
       , name = "006/Das kalte Phantom"
       , urlToOpen = "https://open.spotify.com/album/2uvaDV7QrxOuGqJf3akIUM"
       , covers =
@@ -666,7 +667,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "17orTTG8YfprnvUrspGdzP"
+    , { id = "17orTTG8YfprnvUrspGdzP" |> AlbumId
       , name = "005/Tief in den nördlichen Minen"
       , urlToOpen = "https://open.spotify.com/album/17orTTG8YfprnvUrspGdzP"
       , covers =
@@ -684,7 +685,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "28PkAZAWYVLSyqnmBs6wjG"
+    , { id = "28PkAZAWYVLSyqnmBs6wjG" |> AlbumId
       , name = "004/Das Haus der vergifteten Bilder"
       , urlToOpen = "https://open.spotify.com/album/28PkAZAWYVLSyqnmBs6wjG"
       , covers =
@@ -702,7 +703,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "2CvGZuUXzX3E9JqpzcURyc"
+    , { id = "2CvGZuUXzX3E9JqpzcURyc" |> AlbumId
       , name = "003/Die Insel der letzten Rache"
       , urlToOpen = "https://open.spotify.com/album/2CvGZuUXzX3E9JqpzcURyc"
       , covers =
@@ -720,7 +721,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "5xcbKCy2wyHnfTVKlWnjmm"
+    , { id = "5xcbKCy2wyHnfTVKlWnjmm" |> AlbumId
       , name = "002/Die rote Hand des Teufels"
       , urlToOpen = "https://open.spotify.com/album/5xcbKCy2wyHnfTVKlWnjmm"
       , covers =
@@ -738,7 +739,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "0uXKtcuIDwz6Gzpu6cuDDo"
+    , { id = "0uXKtcuIDwz6Gzpu6cuDDo" |> AlbumId
       , name = "001/Die Bucht der 22 Schreie"
       , urlToOpen = "https://open.spotify.com/album/0uXKtcuIDwz6Gzpu6cuDDo"
       , covers =
@@ -756,7 +757,7 @@ albumStorage =
               }
             ]
       }
-    , { id = "4iu5aeXV2NraXliNiqhRFw"
+    , { id = "4iu5aeXV2NraXliNiqhRFw" |> AlbumId
       , name = "042/Der Ruf des Wellengängers"
       , urlToOpen = "https://open.spotify.com/album/4iu5aeXV2NraXliNiqhRFw"
       , covers =
