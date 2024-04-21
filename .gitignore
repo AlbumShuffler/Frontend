@@ -2,3 +2,4 @@ elm-live
 node_modules/
 elm-stuff/
 .idea/
+.stignore

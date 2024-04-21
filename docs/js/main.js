@@ -8463,6 +8463,1165 @@ var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 			urlToOpen: 'https://open.spotify.com/album/4N9tvSjWfZXx3eHKblYEWQ'
 		}
 		]));
+var $author$project$AlbumStorageDdfk$albumStorage = $elm$core$Array$fromList(
+	_List_fromArray(
+		[
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273231cea674889237c6b7bcb29', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02231cea674889237c6b7bcb29', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851231cea674889237c6b7bcb29', width: 64}
+				]),
+			id: '3xIGmydqrJOShru5bQmSVa',
+			name: 'Folge 95: Geheime Zeichen',
+			urlToOpen: 'https://open.spotify.com/album/3xIGmydqrJOShru5bQmSVa'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273bfffc8f2a48803021c9cfef7', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bfffc8f2a48803021c9cfef7', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bfffc8f2a48803021c9cfef7', width: 64}
+				]),
+			id: '2SW10jAJqdxfbJZCW6hlEF',
+			name: 'Mini-Fall/Die Piratenbande (Mini-Fall 03)',
+			urlToOpen: 'https://open.spotify.com/album/2SW10jAJqdxfbJZCW6hlEF'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27351faf41bf0a9ded536853d77', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0251faf41bf0a9ded536853d77', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485151faf41bf0a9ded536853d77', width: 64}
+				]),
+			id: '4I3xNROKxdLC2GFcpp8o2R',
+			name: 'Folge 94: Falsche Vampire',
+			urlToOpen: 'https://open.spotify.com/album/4I3xNROKxdLC2GFcpp8o2R'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27364efc25345a96c26cdac317f', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0264efc25345a96c26cdac317f', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485164efc25345a96c26cdac317f', width: 64}
+				]),
+			id: '5o3ryPeYmpRkmgEv4hnDmJ',
+			name: 'Adventskalender - 24 Tage Weihnachtsspuk',
+			urlToOpen: 'https://open.spotify.com/album/5o3ryPeYmpRkmgEv4hnDmJ'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2737f7171f1d31d5b10fb0b0c92', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027f7171f1d31d5b10fb0b0c92', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517f7171f1d31d5b10fb0b0c92', width: 64}
+				]),
+			id: '6FLO3ExDCl0GwkzjCQGq0x',
+			name: 'Folge 93: Die Geistermühle',
+			urlToOpen: 'https://open.spotify.com/album/6FLO3ExDCl0GwkzjCQGq0x'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27301f4c8ebcac54aa50b9205d1', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0201f4c8ebcac54aa50b9205d1', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485101f4c8ebcac54aa50b9205d1', width: 64}
+				]),
+			id: '2AeYE1PVAulFFJlfp6GYZL',
+			name: 'Mini-Fall/Die Räuberjagd',
+			urlToOpen: 'https://open.spotify.com/album/2AeYE1PVAulFFJlfp6GYZL'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273c44fd2f8a2eb34d2adf26487', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c44fd2f8a2eb34d2adf26487', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c44fd2f8a2eb34d2adf26487', width: 64}
+				]),
+			id: '4793v2qgBpisdJjWcSCjt2',
+			name: 'Folge 92: Spuk im Leuchtturm',
+			urlToOpen: 'https://open.spotify.com/album/4793v2qgBpisdJjWcSCjt2'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2735fbe80d354e3197606dcbf13', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025fbe80d354e3197606dcbf13', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515fbe80d354e3197606dcbf13', width: 64}
+				]),
+			id: '1IrBxq3kgqabhcp6xfIezB',
+			name: 'Mini-Fall/Vorsicht, Zaubertinte!',
+			urlToOpen: 'https://open.spotify.com/album/1IrBxq3kgqabhcp6xfIezB'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2739c6568aed19b926455fc10e5', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029c6568aed19b926455fc10e5', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519c6568aed19b926455fc10e5', width: 64}
+				]),
+			id: '3cbOXb1xkJF65KRjBBqlmL',
+			name: 'Folge 91: Gefahr im Spiegelkabinett',
+			urlToOpen: 'https://open.spotify.com/album/3cbOXb1xkJF65KRjBBqlmL'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27329db10f4944680a9f7f7f60d', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0229db10f4944680a9f7f7f60d', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485129db10f4944680a9f7f7f60d', width: 64}
+				]),
+			id: '41Wrbk3iySSFbBnbixychu',
+			name: 'Folge 90: Flug ins Nichts',
+			urlToOpen: 'https://open.spotify.com/album/41Wrbk3iySSFbBnbixychu'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27367d3d2d917e1783d4ffc42e6', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0267d3d2d917e1783d4ffc42e6', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485167d3d2d917e1783d4ffc42e6', width: 64}
+				]),
+			id: '5MXAyx7ZeQGGbHdR1HEbtU',
+			name: 'Adventskalender - 24 Tage eingeschneit',
+			urlToOpen: 'https://open.spotify.com/album/5MXAyx7ZeQGGbHdR1HEbtU'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2737f0b83382835dc4c4d4ec4e8', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027f0b83382835dc4c4d4ec4e8', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517f0b83382835dc4c4d4ec4e8', width: 64}
+				]),
+			id: '7HIZJWnLo11Fsv68HPhjgj',
+			name: 'Folge 89: Im Geistergarten',
+			urlToOpen: 'https://open.spotify.com/album/7HIZJWnLo11Fsv68HPhjgj'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273e26770b07eea81752fe5c4b5', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e26770b07eea81752fe5c4b5', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e26770b07eea81752fe5c4b5', width: 64}
+				]),
+			id: '1wzirotAAliqPA1p0GPl08',
+			name: 'Folge 88: Schatz aus dem All',
+			urlToOpen: 'https://open.spotify.com/album/1wzirotAAliqPA1p0GPl08'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2735c765ae7916cf96edeedd028', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025c765ae7916cf96edeedd028', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515c765ae7916cf96edeedd028', width: 64}
+				]),
+			id: '3M7f1Ta7DdY49Cj0bsHchW',
+			name: 'Folge 87: Das Geisterspiel',
+			urlToOpen: 'https://open.spotify.com/album/3M7f1Ta7DdY49Cj0bsHchW'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273f033185cc58310a1e253c108', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f033185cc58310a1e253c108', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f033185cc58310a1e253c108', width: 64}
+				]),
+			id: '3CVr8yD3EmmbTAD3mgdkst',
+			name: 'Folge 86: Riesen in Rocky Beach',
+			urlToOpen: 'https://open.spotify.com/album/3CVr8yD3EmmbTAD3mgdkst'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273e1019b3acdee54f7535d472f', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e1019b3acdee54f7535d472f', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e1019b3acdee54f7535d472f', width: 64}
+				]),
+			id: '2FRfGv6pQommVYHmqJKqU5',
+			name: 'Folge 85: Falscher Alarm',
+			urlToOpen: 'https://open.spotify.com/album/2FRfGv6pQommVYHmqJKqU5'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27371669617bbc9900658520187', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0271669617bbc9900658520187', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485171669617bbc9900658520187', width: 64}
+				]),
+			id: '5ZcAMixtzUYEBZNVSrixNE',
+			name: 'Adventskalender - 24 Tage Chaos im Zoo',
+			urlToOpen: 'https://open.spotify.com/album/5ZcAMixtzUYEBZNVSrixNE'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27309988e9d1da207c3528f53d6', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0209988e9d1da207c3528f53d6', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485109988e9d1da207c3528f53d6', width: 64}
+				]),
+			id: '11uIA0NksKWJ2xjjTMvO8x',
+			name: 'Folge 84: Tatort Skater-Park',
+			urlToOpen: 'https://open.spotify.com/album/11uIA0NksKWJ2xjjTMvO8x'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2734ed77c444dc4093549d15559', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024ed77c444dc4093549d15559', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514ed77c444dc4093549d15559', width: 64}
+				]),
+			id: '0rjlBTxlkcd3aFoYS1HPCn',
+			name: 'Folge 83: Fußball-Diebe',
+			urlToOpen: 'https://open.spotify.com/album/0rjlBTxlkcd3aFoYS1HPCn'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273f19cf89ed26ddd1875b019ef', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f19cf89ed26ddd1875b019ef', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f19cf89ed26ddd1875b019ef', width: 64}
+				]),
+			id: '5n6gdqMbunkR1J0MhqTaV8',
+			name: 'Folge 82: Die Delfin-Piraten',
+			urlToOpen: 'https://open.spotify.com/album/5n6gdqMbunkR1J0MhqTaV8'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2730ce9634828f912a3e300d6cd', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020ce9634828f912a3e300d6cd', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510ce9634828f912a3e300d6cd', width: 64}
+				]),
+			id: '3NOIKGCYKsL3nCCgzksldt',
+			name: 'Folge 81: Turbo-Rennen',
+			urlToOpen: 'https://open.spotify.com/album/3NOIKGCYKsL3nCCgzksldt'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2732f78a5d30d5856957105c995', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022f78a5d30d5856957105c995', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512f78a5d30d5856957105c995', width: 64}
+				]),
+			id: '5EeUZitOFX7Nad5yp2CFud',
+			name: '080/Gefährlicher Nebel',
+			urlToOpen: 'https://open.spotify.com/album/5EeUZitOFX7Nad5yp2CFud'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273ea2c91abdc1ef6d436b3a61e', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ea2c91abdc1ef6d436b3a61e', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ea2c91abdc1ef6d436b3a61e', width: 64}
+				]),
+			id: '5GOZBi4hHD6rvJI1zp7ryf',
+			name: '079/Achtung, Abenteuer!',
+			urlToOpen: 'https://open.spotify.com/album/5GOZBi4hHD6rvJI1zp7ryf'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2734af1d18d20a87f49559a35f8', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024af1d18d20a87f49559a35f8', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514af1d18d20a87f49559a35f8', width: 64}
+				]),
+			id: '15aFL9eaT1bjrURanvEKEn',
+			name: '078/Schrottplatz in Gefahr',
+			urlToOpen: 'https://open.spotify.com/album/15aFL9eaT1bjrURanvEKEn'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27341d1a9421e0b0c8e9568fba0', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0241d1a9421e0b0c8e9568fba0', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485141d1a9421e0b0c8e9568fba0', width: 64}
+				]),
+			id: '75If2drFgUUJdC6eQ0dZYl',
+			name: '077/Die Musikdiebe',
+			urlToOpen: 'https://open.spotify.com/album/75If2drFgUUJdC6eQ0dZYl'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2737b35f1912f7fe1e1ee325a03', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027b35f1912f7fe1e1ee325a03', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517b35f1912f7fe1e1ee325a03', width: 64}
+				]),
+			id: '6nSehzQCvelIRQu84k5N7E',
+			name: '076/Blinde Passagiere',
+			urlToOpen: 'https://open.spotify.com/album/6nSehzQCvelIRQu84k5N7E'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273a2fb4748ffdd348d9466fe02', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a2fb4748ffdd348d9466fe02', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a2fb4748ffdd348d9466fe02', width: 64}
+				]),
+			id: '4M3VGzWy7xxm93zGw0xqAU',
+			name: '075/Der Fußball-Roboter',
+			urlToOpen: 'https://open.spotify.com/album/4M3VGzWy7xxm93zGw0xqAU'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273e9a09c4f0a0a8ecb4c19b095', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e9a09c4f0a0a8ecb4c19b095', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e9a09c4f0a0a8ecb4c19b095', width: 64}
+				]),
+			id: '7KEMmRYdYTyOkHaoocjwp7',
+			name: '074/Das Schienen-Monster',
+			urlToOpen: 'https://open.spotify.com/album/7KEMmRYdYTyOkHaoocjwp7'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273a71f1d96f3d83e362aa47072', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a71f1d96f3d83e362aa47072', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a71f1d96f3d83e362aa47072', width: 64}
+				]),
+			id: '7JrHsowbMVguSku3JG2tLS',
+			name: '073/Surfstrand in Gefahr',
+			urlToOpen: 'https://open.spotify.com/album/7JrHsowbMVguSku3JG2tLS'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273bf0d49278a5379ed3f38c81c', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bf0d49278a5379ed3f38c81c', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bf0d49278a5379ed3f38c81c', width: 64}
+				]),
+			id: '0xynCTUxYMlBA1IcPfAgKq',
+			name: '072/Die Laser-Falle',
+			urlToOpen: 'https://open.spotify.com/album/0xynCTUxYMlBA1IcPfAgKq'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2737a5764d903735d7e97e5f43b', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027a5764d903735d7e97e5f43b', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517a5764d903735d7e97e5f43b', width: 64}
+				]),
+			id: '0tuslnSb2vi63lqnROhlSl',
+			name: 'Adventskalender - 24 Tage im Weihnachtszirkus',
+			urlToOpen: 'https://open.spotify.com/album/0tuslnSb2vi63lqnROhlSl'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273afbb4e9559ad3183d112116f', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02afbb4e9559ad3183d112116f', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851afbb4e9559ad3183d112116f', width: 64}
+				]),
+			id: '1RrOzTtLYceG05edrb7YNQ',
+			name: '071/Tatort Trampolin',
+			urlToOpen: 'https://open.spotify.com/album/1RrOzTtLYceG05edrb7YNQ'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273114126e610c1e7301a93e882', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02114126e610c1e7301a93e882', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851114126e610c1e7301a93e882', width: 64}
+				]),
+			id: '1ntNbHEo93jDj2JgZtLMrS',
+			name: '070/Aufbruch ins All',
+			urlToOpen: 'https://open.spotify.com/album/1ntNbHEo93jDj2JgZtLMrS'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27381fa18a8804b8b02731945e1', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0281fa18a8804b8b02731945e1', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485181fa18a8804b8b02731945e1', width: 64}
+				]),
+			id: '6QpCsN1do9sWdzxMzP6vAm',
+			name: '069/Die Rätselfalle',
+			urlToOpen: 'https://open.spotify.com/album/6QpCsN1do9sWdzxMzP6vAm'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2736972e5f163f3376e24d05017', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026972e5f163f3376e24d05017', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516972e5f163f3376e24d05017', width: 64}
+				]),
+			id: '0zDRwoqvJYhvfhcvQYzfcZ',
+			name: '068/Chaos im Dunkeln',
+			urlToOpen: 'https://open.spotify.com/album/0zDRwoqvJYhvfhcvQYzfcZ'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273a2bf2e257a27ce92fe0945b6', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a2bf2e257a27ce92fe0945b6', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a2bf2e257a27ce92fe0945b6', width: 64}
+				]),
+			id: '5qvokPibHLO3e47oV4wyhz',
+			name: '067/Der goldene Drache',
+			urlToOpen: 'https://open.spotify.com/album/5qvokPibHLO3e47oV4wyhz'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273524bc84639b04c3b2e7bbf51', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02524bc84639b04c3b2e7bbf51', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851524bc84639b04c3b2e7bbf51', width: 64}
+				]),
+			id: '6xSlKWjaEpc6SMJ69uVKYT',
+			name: '066/Geheimnis im Meer',
+			urlToOpen: 'https://open.spotify.com/album/6xSlKWjaEpc6SMJ69uVKYT'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2739547c11b4f57252c1ae76be0', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029547c11b4f57252c1ae76be0', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519547c11b4f57252c1ae76be0', width: 64}
+				]),
+			id: '0Pg0kbjNl7PC22ghcSqKih',
+			name: 'Adventskalender',
+			urlToOpen: 'https://open.spotify.com/album/0Pg0kbjNl7PC22ghcSqKih'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2735a66ef1673945efe895eed1a', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025a66ef1673945efe895eed1a', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515a66ef1673945efe895eed1a', width: 64}
+				]),
+			id: '4ErYqkUdfkAmsgltEPJKH7',
+			name: '065/Mission Goldhund',
+			urlToOpen: 'https://open.spotify.com/album/4ErYqkUdfkAmsgltEPJKH7'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273471176cec591137f97f2cec3', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02471176cec591137f97f2cec3', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851471176cec591137f97f2cec3', width: 64}
+				]),
+			id: '6Om3zELCMatFreSN4FMeOG',
+			name: '064/In der Schatzhöhle',
+			urlToOpen: 'https://open.spotify.com/album/6Om3zELCMatFreSN4FMeOG'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273e59b2c9c816a5e948aaa15ce', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e59b2c9c816a5e948aaa15ce', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e59b2c9c816a5e948aaa15ce', width: 64}
+				]),
+			id: '39QjW5XIE81HsWRjjyaVH0',
+			name: '063/Monster-Wolken',
+			urlToOpen: 'https://open.spotify.com/album/39QjW5XIE81HsWRjjyaVH0'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27360e3945f0743e9901f309b8c', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0260e3945f0743e9901f309b8c', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485160e3945f0743e9901f309b8c', width: 64}
+				]),
+			id: '3KD5QNC2k1328SsuYFIjiq',
+			name: '062/Gefahr im Dschungel',
+			urlToOpen: 'https://open.spotify.com/album/3KD5QNC2k1328SsuYFIjiq'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27370687f58b2e826d0aad6a69b', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0270687f58b2e826d0aad6a69b', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485170687f58b2e826d0aad6a69b', width: 64}
+				]),
+			id: '2ZQKn9GVeJalLEuh3BvuOB',
+			name: '061/Alarm im Dino-Park',
+			urlToOpen: 'https://open.spotify.com/album/2ZQKn9GVeJalLEuh3BvuOB'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273e6c60a44f3efed3f8975421b', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e6c60a44f3efed3f8975421b', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e6c60a44f3efed3f8975421b', width: 64}
+				]),
+			id: '5XKW97txqaNv82dIUDWf6D',
+			name: '060/Gespensterjagd',
+			urlToOpen: 'https://open.spotify.com/album/5XKW97txqaNv82dIUDWf6D'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273fcf5fe0d2e1b2fba4556f423', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fcf5fe0d2e1b2fba4556f423', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fcf5fe0d2e1b2fba4556f423', width: 64}
+				]),
+			id: '66YZOif5ogyl1O0rFT28HM',
+			name: '059/Fußballhelden',
+			urlToOpen: 'https://open.spotify.com/album/66YZOif5ogyl1O0rFT28HM'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27377fb91113e71b40d0971b8d7', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0277fb91113e71b40d0971b8d7', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485177fb91113e71b40d0971b8d7', width: 64}
+				]),
+			id: '2KpYeQgAWPq3skEUb1A8qb',
+			name: '058/Spur des Drachen',
+			urlToOpen: 'https://open.spotify.com/album/2KpYeQgAWPq3skEUb1A8qb'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2732ac6e611c31d824c35c46575', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022ac6e611c31d824c35c46575', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512ac6e611c31d824c35c46575', width: 64}
+				]),
+			id: '23RIS8PEXnZUs0AwqmstMS',
+			name: '057/Der Weihnachtsdieb',
+			urlToOpen: 'https://open.spotify.com/album/23RIS8PEXnZUs0AwqmstMS'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2733b5f101159170219a3bda6b3', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023b5f101159170219a3bda6b3', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513b5f101159170219a3bda6b3', width: 64}
+				]),
+			id: '0zmK2RPZSiThN6xwxDFNrL',
+			name: '056/Das Rätsel der Könige',
+			urlToOpen: 'https://open.spotify.com/album/0zmK2RPZSiThN6xwxDFNrL'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2738b43f3723a260ac6d516f8c1', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028b43f3723a260ac6d516f8c1', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518b43f3723a260ac6d516f8c1', width: 64}
+				]),
+			id: '2UNXd8SieHWtTM5g0VMeGv',
+			name: '055/Der schwarze Joker',
+			urlToOpen: 'https://open.spotify.com/album/2UNXd8SieHWtTM5g0VMeGv'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27377d4691e0746fb37320f9bca', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0277d4691e0746fb37320f9bca', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485177d4691e0746fb37320f9bca', width: 64}
+				]),
+			id: '4bM4QL65khBjHgvAEW1glL',
+			name: '054/Zombie-Alarm',
+			urlToOpen: 'https://open.spotify.com/album/4bM4QL65khBjHgvAEW1glL'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27301159baf0f3774e2e8a7d87f', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0201159baf0f3774e2e8a7d87f', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485101159baf0f3774e2e8a7d87f', width: 64}
+				]),
+			id: '4SVQrvQkXzYC1nU7DfDJx2',
+			name: 'Adventskalender - Ein Rätsel in 24 Tagen',
+			urlToOpen: 'https://open.spotify.com/album/4SVQrvQkXzYC1nU7DfDJx2'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2737a8d774bfa80d91f97ad0af8', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027a8d774bfa80d91f97ad0af8', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517a8d774bfa80d91f97ad0af8', width: 64}
+				]),
+			id: '7d8GIfIRWUNIZZXc5bjsrT',
+			name: 'Adventskalender - 24 Tage im Weihnachtsland',
+			urlToOpen: 'https://open.spotify.com/album/7d8GIfIRWUNIZZXc5bjsrT'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27361bb72e92694f2e9d36219fb', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0261bb72e92694f2e9d36219fb', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485161bb72e92694f2e9d36219fb', width: 64}
+				]),
+			id: '3ahySlDFUrzxatkaJUC2hV',
+			name: '053/Geheimnis der Tiere',
+			urlToOpen: 'https://open.spotify.com/album/3ahySlDFUrzxatkaJUC2hV'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273b918b08449e2d13bb54ab5c4', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b918b08449e2d13bb54ab5c4', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b918b08449e2d13bb54ab5c4', width: 64}
+				]),
+			id: '6g5MSdVTrKY3f1ZzsqUhXw',
+			name: '052/Mächtige Magier',
+			urlToOpen: 'https://open.spotify.com/album/6g5MSdVTrKY3f1ZzsqUhXw'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273d292bef65c720423a922af66', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d292bef65c720423a922af66', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d292bef65c720423a922af66', width: 64}
+				]),
+			id: '2Vu69KfWoS6eAzwnhqssWk',
+			name: '051/Tatort Kletterpark',
+			urlToOpen: 'https://open.spotify.com/album/2Vu69KfWoS6eAzwnhqssWk'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273985849157addc6243e77e6f3', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02985849157addc6243e77e6f3', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851985849157addc6243e77e6f3', width: 64}
+				]),
+			id: '7zUg7xSxAAkwntDiX1yhGJ',
+			name: '050/Schatz der Piraten',
+			urlToOpen: 'https://open.spotify.com/album/7zUg7xSxAAkwntDiX1yhGJ'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273c276e1e6a3b1efad416cd692', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c276e1e6a3b1efad416cd692', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c276e1e6a3b1efad416cd692', width: 64}
+				]),
+			id: '105UQAEjLpiqUCUK6x6i3g',
+			name: '048/Tanz der Skelette',
+			urlToOpen: 'https://open.spotify.com/album/105UQAEjLpiqUCUK6x6i3g'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2739f74ad497ed8a48b81143fbd', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029f74ad497ed8a48b81143fbd', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519f74ad497ed8a48b81143fbd', width: 64}
+				]),
+			id: '42cBTxTbzCzbYm0sd4VUxU',
+			name: '047/Falsche Fußball-Freunde',
+			urlToOpen: 'https://open.spotify.com/album/42cBTxTbzCzbYm0sd4VUxU'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27387933e865bff365b57d80aa6', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0287933e865bff365b57d80aa6', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485187933e865bff365b57d80aa6', width: 64}
+				]),
+			id: '6eQDj0n1wU2dEXO7vr1Bmm',
+			name: '046/Jagd auf das Dino-Ei',
+			urlToOpen: 'https://open.spotify.com/album/6eQDj0n1wU2dEXO7vr1Bmm'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2738cf20611b5f0e2749ecae9dc', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028cf20611b5f0e2749ecae9dc', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518cf20611b5f0e2749ecae9dc', width: 64}
+				]),
+			id: '4Al8xe9LlMxHWhIddbienL',
+			name: '045/Ein Fall für Superhelden',
+			urlToOpen: 'https://open.spotify.com/album/4Al8xe9LlMxHWhIddbienL'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273c0e2b002e3b50e8b49db071a', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c0e2b002e3b50e8b49db071a', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c0e2b002e3b50e8b49db071a', width: 64}
+				]),
+			id: '5fIxmzKdFvtbRIeRBEeptA',
+			name: '044/Monster in Rocky Beach',
+			urlToOpen: 'https://open.spotify.com/album/5fIxmzKdFvtbRIeRBEeptA'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2732cd0a447c965c5c6b825eed0', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022cd0a447c965c5c6b825eed0', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512cd0a447c965c5c6b825eed0', width: 64}
+				]),
+			id: '5J0AsPaix5KTMNjTFpj624',
+			name: '043/Duell der Ritter',
+			urlToOpen: 'https://open.spotify.com/album/5J0AsPaix5KTMNjTFpj624'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2739a1e011f3bdc73aa383db17f', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e029a1e011f3bdc73aa383db17f', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048519a1e011f3bdc73aa383db17f', width: 64}
+				]),
+			id: '6sS4r99PFfzH6Gxc1Z3evg',
+			name: '042/Fußballgötter',
+			urlToOpen: 'https://open.spotify.com/album/6sS4r99PFfzH6Gxc1Z3evg'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273361f23cc9e1fb50df5f57c05', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02361f23cc9e1fb50df5f57c05', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851361f23cc9e1fb50df5f57c05', width: 64}
+				]),
+			id: '3ixBUKtl7HtxSZECC3YnNb',
+			name: '041/Insel der Haie',
+			urlToOpen: 'https://open.spotify.com/album/3ixBUKtl7HtxSZECC3YnNb'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273456f397e2b2b71395e3eeefd', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02456f397e2b2b71395e3eeefd', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851456f397e2b2b71395e3eeefd', width: 64}
+				]),
+			id: '12IDORrv50mRmb7501PgiI',
+			name: '040/Brennendes Eis',
+			urlToOpen: 'https://open.spotify.com/album/12IDORrv50mRmb7501PgiI'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273f8ce1bbb4ebaf721fbe8e9e6', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f8ce1bbb4ebaf721fbe8e9e6', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f8ce1bbb4ebaf721fbe8e9e6', width: 64}
+				]),
+			id: '6NkPN8kGJftA5ZURbZTKve',
+			name: '039/Der verrückte Erfinder',
+			urlToOpen: 'https://open.spotify.com/album/6NkPN8kGJftA5ZURbZTKve'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273b75b145f738a1e91bf9f3f2c', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b75b145f738a1e91bf9f3f2c', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b75b145f738a1e91bf9f3f2c', width: 64}
+				]),
+			id: '7o6y1qwFIJolo0ZKUpPTR9',
+			name: '038/Stunde der Wahrheit',
+			urlToOpen: 'https://open.spotify.com/album/7o6y1qwFIJolo0ZKUpPTR9'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273ac3a7e06c6f691cea0dc2e0b', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ac3a7e06c6f691cea0dc2e0b', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ac3a7e06c6f691cea0dc2e0b', width: 64}
+				]),
+			id: '24r6U8cWYIB4bQeMGhNB2Q',
+			name: '037/Der Fluch der Indianer',
+			urlToOpen: 'https://open.spotify.com/album/24r6U8cWYIB4bQeMGhNB2Q'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2737f872297501bd203d824daf6', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027f872297501bd203d824daf6', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517f872297501bd203d824daf6', width: 64}
+				]),
+			id: '6GUPPV35zx22eO4g9tctKN',
+			name: '036/Mission Mars',
+			urlToOpen: 'https://open.spotify.com/album/6GUPPV35zx22eO4g9tctKN'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273e443b137e1404a51cd715c56', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e443b137e1404a51cd715c56', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e443b137e1404a51cd715c56', width: 64}
+				]),
+			id: '1bK1QqLOaESZgs2pXYY4J6',
+			name: '035/Im Wilden Westen',
+			urlToOpen: 'https://open.spotify.com/album/1bK1QqLOaESZgs2pXYY4J6'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273c1f9f753b20b48e82fed6ab4', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c1f9f753b20b48e82fed6ab4', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c1f9f753b20b48e82fed6ab4', width: 64}
+				]),
+			id: '7ATza45Jb2B3MhSD0icgPi',
+			name: '034/Falsches Gold',
+			urlToOpen: 'https://open.spotify.com/album/7ATza45Jb2B3MhSD0icgPi'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27374f060a34ff5f5d029254b38', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0274f060a34ff5f5d029254b38', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485174f060a34ff5f5d029254b38', width: 64}
+				]),
+			id: '5cJ4xmPFjEhOCQIBoYwmWi',
+			name: '033/Nacht im Kerker',
+			urlToOpen: 'https://open.spotify.com/album/5cJ4xmPFjEhOCQIBoYwmWi'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273aadef40886ceec7f21f1e45a', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02aadef40886ceec7f21f1e45a', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851aadef40886ceec7f21f1e45a', width: 64}
+				]),
+			id: '3UzZjgfXxnjPigAfCYQCr5',
+			name: '032/Die Gruselfalle',
+			urlToOpen: 'https://open.spotify.com/album/3UzZjgfXxnjPigAfCYQCr5'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2738580a1bb3b7375baf452547b', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e028580a1bb3b7375baf452547b', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048518580a1bb3b7375baf452547b', width: 64}
+				]),
+			id: '49GuQzqAa08WMB8fjtEBj4',
+			name: '031/Rückkehr der Saurier',
+			urlToOpen: 'https://open.spotify.com/album/49GuQzqAa08WMB8fjtEBj4'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273fca6edf9e29235c7bfa6f226', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fca6edf9e29235c7bfa6f226', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fca6edf9e29235c7bfa6f226', width: 64}
+				]),
+			id: '5Dlq8pYslsD1dstLQR7NFw',
+			name: '030/Im Geisterschiff',
+			urlToOpen: 'https://open.spotify.com/album/5Dlq8pYslsD1dstLQR7NFw'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2731192c2a856f8592dd1a6db9a', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e021192c2a856f8592dd1a6db9a', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048511192c2a856f8592dd1a6db9a', width: 64}
+				]),
+			id: '4fIWqTa6s849HB2NInOgyF',
+			name: '029/Monsterpilze',
+			urlToOpen: 'https://open.spotify.com/album/4fIWqTa6s849HB2NInOgyF'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273bf99590d6c6432c286517813', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bf99590d6c6432c286517813', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bf99590d6c6432c286517813', width: 64}
+				]),
+			id: '4BTfGkg67lPD7pnV9YABGC',
+			name: '028/Diamantenjagd',
+			urlToOpen: 'https://open.spotify.com/album/4BTfGkg67lPD7pnV9YABGC'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273394fe0cfa0f07bde1a024816', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02394fe0cfa0f07bde1a024816', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851394fe0cfa0f07bde1a024816', width: 64}
+				]),
+			id: '0BiK4U6FaICuYqpUQ553Qo',
+			name: '027/Die Schokofalle',
+			urlToOpen: 'https://open.spotify.com/album/0BiK4U6FaICuYqpUQ553Qo'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273e79e919801a43249e08443d0', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e79e919801a43249e08443d0', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e79e919801a43249e08443d0', width: 64}
+				]),
+			id: '7zlnjYjJotwmyxPWee0s9W',
+			name: '026/Fußball-Alarm',
+			urlToOpen: 'https://open.spotify.com/album/7zlnjYjJotwmyxPWee0s9W'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273fef74e7276d071978640f04c', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fef74e7276d071978640f04c', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fef74e7276d071978640f04c', width: 64}
+				]),
+			id: '5nCCuIqR5MsRi3tI90Vu4T',
+			name: '025/In letzter Sekunde',
+			urlToOpen: 'https://open.spotify.com/album/5nCCuIqR5MsRi3tI90Vu4T'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27311eb8a5b14af27e82480e9ac', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0211eb8a5b14af27e82480e9ac', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485111eb8a5b14af27e82480e9ac', width: 64}
+				]),
+			id: '1GsVIL0B05ykaxM0sjjik8',
+			name: '024/Im Bann des Zauberers',
+			urlToOpen: 'https://open.spotify.com/album/1GsVIL0B05ykaxM0sjjik8'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2730932a0708b098ae5623034a3', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020932a0708b098ae5623034a3', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510932a0708b098ae5623034a3', width: 64}
+				]),
+			id: '1cCB23DWt7mRHBFvTsX87C',
+			name: '049/Der singende Geist',
+			urlToOpen: 'https://open.spotify.com/album/1cCB23DWt7mRHBFvTsX87C'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273a63e6b5a3cd67a151c5ecc67', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a63e6b5a3cd67a151c5ecc67', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a63e6b5a3cd67a151c5ecc67', width: 64}
+				]),
+			id: '5PEjckgsqkxbpDlgz30wTk',
+			name: '023/Feuer in Rocky Beach',
+			urlToOpen: 'https://open.spotify.com/album/5PEjckgsqkxbpDlgz30wTk'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273ec590be3a8ce4a01b2744290', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ec590be3a8ce4a01b2744290', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ec590be3a8ce4a01b2744290', width: 64}
+				]),
+			id: '2ILrLgqLA1pterp2pZoChc',
+			name: '022/Einarmige Banditen',
+			urlToOpen: 'https://open.spotify.com/album/2ILrLgqLA1pterp2pZoChc'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273aff9ac46c4253d03575a9911', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02aff9ac46c4253d03575a9911', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851aff9ac46c4253d03575a9911', width: 64}
+				]),
+			id: '3sMdBpUspSRJxhr2oze3le',
+			name: '021/Die Geisterjäger',
+			urlToOpen: 'https://open.spotify.com/album/3sMdBpUspSRJxhr2oze3le'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273223b6839f90855c098455e81', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02223b6839f90855c098455e81', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851223b6839f90855c098455e81', width: 64}
+				]),
+			id: '0WwfV73hIbVsEfIUJxFCMN',
+			name: '020/Die Schmugglerinsel',
+			urlToOpen: 'https://open.spotify.com/album/0WwfV73hIbVsEfIUJxFCMN'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273fbed0f6c99c1ddb5a3de3bf0', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fbed0f6c99c1ddb5a3de3bf0', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fbed0f6c99c1ddb5a3de3bf0', width: 64}
+				]),
+			id: '5NmTdnYuPpnDlF9zBTnwHT',
+			name: '019/Spur in die Wildnis',
+			urlToOpen: 'https://open.spotify.com/album/5NmTdnYuPpnDlF9zBTnwHT'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273f16e3e0914eda3b1c0b27435', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f16e3e0914eda3b1c0b27435', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f16e3e0914eda3b1c0b27435', width: 64}
+				]),
+			id: '5Z6HPLDixzbX8TNK889Fr8',
+			name: '018/Mission Maulwurf',
+			urlToOpen: 'https://open.spotify.com/album/5Z6HPLDixzbX8TNK889Fr8'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273ce8c101375618001ba6588de', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ce8c101375618001ba6588de', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ce8c101375618001ba6588de', width: 64}
+				]),
+			id: '2RJHP6Kw1jZrp56WCqtiQW',
+			name: '017/Rettet Atlantis!',
+			urlToOpen: 'https://open.spotify.com/album/2RJHP6Kw1jZrp56WCqtiQW'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273ff5d0b75f33fbee81d58f40a', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ff5d0b75f33fbee81d58f40a', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ff5d0b75f33fbee81d58f40a', width: 64}
+				]),
+			id: '2xo9X40JoJuDO64Iy5mpNY',
+			name: '016/Der magische Brunnen',
+			urlToOpen: 'https://open.spotify.com/album/2xo9X40JoJuDO64Iy5mpNY'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273d3e02b09cbbf796eadd00d35', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d3e02b09cbbf796eadd00d35', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d3e02b09cbbf796eadd00d35', width: 64}
+				]),
+			id: '3Dn23cUQU7RehW7QeBt3cJ',
+			name: '015/In der Geisterstadt',
+			urlToOpen: 'https://open.spotify.com/album/3Dn23cUQU7RehW7QeBt3cJ'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273fa7d6b3255b2d9455ba1b363', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fa7d6b3255b2d9455ba1b363', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fa7d6b3255b2d9455ba1b363', width: 64}
+				]),
+			id: '1WTFQcnnJZRhRLkA6Pemom',
+			name: '014/Gefahr aus dem All',
+			urlToOpen: 'https://open.spotify.com/album/1WTFQcnnJZRhRLkA6Pemom'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273369263e27ea131e478d9d6dd', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02369263e27ea131e478d9d6dd', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851369263e27ea131e478d9d6dd', width: 64}
+				]),
+			id: '7xFfmSVyP8y9gcXRPG7xmT',
+			name: '013/Im Reich der Rätsel',
+			urlToOpen: 'https://open.spotify.com/album/7xFfmSVyP8y9gcXRPG7xmT'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273e81ac99bc15871f625fdcceb', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e81ac99bc15871f625fdcceb', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e81ac99bc15871f625fdcceb', width: 64}
+				]),
+			id: '3aYsZOOX3BVsCcHC0MQq3f',
+			name: '012/Internetpiraten',
+			urlToOpen: 'https://open.spotify.com/album/3aYsZOOX3BVsCcHC0MQq3f'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273f59681b7755f4bc0ed79e661', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f59681b7755f4bc0ed79e661', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f59681b7755f4bc0ed79e661', width: 64}
+				]),
+			id: '6GPxCYDZkEqCLPc7BeCFYb',
+			name: '011/Fluch des Goldes',
+			urlToOpen: 'https://open.spotify.com/album/6GPxCYDZkEqCLPc7BeCFYb'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2732d2d56cf42e8669f3d4a5837', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022d2d56cf42e8669f3d4a5837', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512d2d56cf42e8669f3d4a5837', width: 64}
+				]),
+			id: '6PRRmyf0vuFwPeuVLdDq4q',
+			name: '010/Spuk in Rocky Beach',
+			urlToOpen: 'https://open.spotify.com/album/6PRRmyf0vuFwPeuVLdDq4q'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2734c1c2ac7bef7269f27eecbc3', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024c1c2ac7bef7269f27eecbc3', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514c1c2ac7bef7269f27eecbc3', width: 64}
+				]),
+			id: '7A5GQZrirxYgjWCTGpbnbs',
+			name: '009/SOS über den Wolken',
+			urlToOpen: 'https://open.spotify.com/album/7A5GQZrirxYgjWCTGpbnbs'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2735c7f65e95f2d2f3e0b85b2df', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025c7f65e95f2d2f3e0b85b2df', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515c7f65e95f2d2f3e0b85b2df', width: 64}
+				]),
+			id: '3RRqQIyDs7AkO3TPbmuRpt',
+			name: '008/Nacht unter Wölfen',
+			urlToOpen: 'https://open.spotify.com/album/3RRqQIyDs7AkO3TPbmuRpt'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273dfd8b8cc826b1b02de8a6cc5', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02dfd8b8cc826b1b02de8a6cc5', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851dfd8b8cc826b1b02de8a6cc5', width: 64}
+				]),
+			id: '2rleLzoiSWt5IVyZpkkVHA',
+			name: '007/Gruft der Piraten',
+			urlToOpen: 'https://open.spotify.com/album/2rleLzoiSWt5IVyZpkkVHA'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2737d655efcd6acea1b902caf4a', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e027d655efcd6acea1b902caf4a', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048517d655efcd6acea1b902caf4a', width: 64}
+				]),
+			id: '4TSPWdUo2J4w6VuwQgUK2e',
+			name: '006/Gefahr im Gruselgarten',
+			urlToOpen: 'https://open.spotify.com/album/4TSPWdUo2J4w6VuwQgUK2e'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2733fd64dd83c0d3a7fe3370a60', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023fd64dd83c0d3a7fe3370a60', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513fd64dd83c0d3a7fe3370a60', width: 64}
+				]),
+			id: '1wNy1x9hCcnmU1vhT7S2Tc',
+			name: '005/Flucht in die Zukunft',
+			urlToOpen: 'https://open.spotify.com/album/1wNy1x9hCcnmU1vhT7S2Tc'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27370c7c26dc7a1b152b581cf23', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0270c7c26dc7a1b152b581cf23', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485170c7c26dc7a1b152b581cf23', width: 64}
+				]),
+			id: '30w9IzSbHHevllaU299TMh',
+			name: '004/Chaos vor der Kamera',
+			urlToOpen: 'https://open.spotify.com/album/30w9IzSbHHevllaU299TMh'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2730d9e068defeb50399324e50e', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020d9e068defeb50399324e50e', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510d9e068defeb50399324e50e', width: 64}
+				]),
+			id: '0jhxRM2HsImXg5W28JfUv8',
+			name: '003/Invasion der Fliegen',
+			urlToOpen: 'https://open.spotify.com/album/0jhxRM2HsImXg5W28JfUv8'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273ecf6240d0429ec8069380d8a', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ecf6240d0429ec8069380d8a', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ecf6240d0429ec8069380d8a', width: 64}
+				]),
+			id: '50d2KMK7GtbCTfLqxDfHIS',
+			name: '002/Radio Rocky Beach',
+			urlToOpen: 'https://open.spotify.com/album/50d2KMK7GtbCTfLqxDfHIS'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2735cffe8a80b9933f9164d7a54', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025cffe8a80b9933f9164d7a54', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515cffe8a80b9933f9164d7a54', width: 64}
+				]),
+			id: '5mQg8r5ivI0IX5bTV57KyN',
+			name: '001/Panik im Paradies',
+			urlToOpen: 'https://open.spotify.com/album/5mQg8r5ivI0IX5bTV57KyN'
+		}
+		]));
 var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 	_List_fromArray(
 		[
@@ -10258,6 +11417,472 @@ var $author$project$AlbumStorageFf$albumStorage = $elm$core$Array$fromList(
 			id: '7Hx03j0oo3eLfuijiUXAHg',
 			name: '001/beim Wanderzirkus',
 			urlToOpen: 'https://open.spotify.com/album/7Hx03j0oo3eLfuijiUXAHg'
+		}
+		]));
+var $author$project$AlbumStoragePw$albumStorage = $elm$core$Array$fromList(
+	_List_fromArray(
+		[
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273ba7ec1e28a29aed63b8f3718', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ba7ec1e28a29aed63b8f3718', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ba7ec1e28a29aed63b8f3718', width: 64}
+				]),
+			id: '0a4wVcZXBQscT2vuhFpPiK',
+			name: '041/Rückkehr aus dem Totenland',
+			urlToOpen: 'https://open.spotify.com/album/0a4wVcZXBQscT2vuhFpPiK'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273c4340ad6173f5019ef3eb8ad', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c4340ad6173f5019ef3eb8ad', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c4340ad6173f5019ef3eb8ad', width: 64}
+				]),
+			id: '7JwVMCynTyUCVP7MQXfLMa',
+			name: '040/Das Orakel des Unheils',
+			urlToOpen: 'https://open.spotify.com/album/7JwVMCynTyUCVP7MQXfLMa'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273babf7803431fe0c67e599995', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02babf7803431fe0c67e599995', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851babf7803431fe0c67e599995', width: 64}
+				]),
+			id: '1bPR2nzf4qsqWlB7firtz1',
+			name: '039/Das Feld beim Krähenhaus',
+			urlToOpen: 'https://open.spotify.com/album/1bPR2nzf4qsqWlB7firtz1'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2736790ca38e9463d4fd33478d8', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e026790ca38e9463d4fd33478d8', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048516790ca38e9463d4fd33478d8', width: 64}
+				]),
+			id: '30uaNuNAk3sImmBsL8YZPt',
+			name: '038/Der glühende Mönch',
+			urlToOpen: 'https://open.spotify.com/album/30uaNuNAk3sImmBsL8YZPt'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27319cfaaba2c1a2ac09f331db9', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0219cfaaba2c1a2ac09f331db9', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485119cfaaba2c1a2ac09f331db9', width: 64}
+				]),
+			id: '3trVlEw7g1hQxdb5wU8bEZ',
+			name: '037/Das Moor der Vergangenen',
+			urlToOpen: 'https://open.spotify.com/album/3trVlEw7g1hQxdb5wU8bEZ'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2735ea30bfe1032e51f58b48dab', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025ea30bfe1032e51f58b48dab', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515ea30bfe1032e51f58b48dab', width: 64}
+				]),
+			id: '0nZXSqm1UQPmcP4MawBRJy',
+			name: '036/Geschöpf der bösen Träume',
+			urlToOpen: 'https://open.spotify.com/album/0nZXSqm1UQPmcP4MawBRJy'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273d25ef0138c868ce59083cea9', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02d25ef0138c868ce59083cea9', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851d25ef0138c868ce59083cea9', width: 64}
+				]),
+			id: '5ZXy5Bz2cVK1y9H7wLp1bG',
+			name: '035/Verirrt im Spinnenwald',
+			urlToOpen: 'https://open.spotify.com/album/5ZXy5Bz2cVK1y9H7wLp1bG'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2732c88bfface9586f32dc1e598', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022c88bfface9586f32dc1e598', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512c88bfface9586f32dc1e598', width: 64}
+				]),
+			id: '2ew1hyzMxQc2bAp0KatPOs',
+			name: '034/Die einäugigen Puppen',
+			urlToOpen: 'https://open.spotify.com/album/2ew1hyzMxQc2bAp0KatPOs'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2734cfc546105714a8016d44196', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024cfc546105714a8016d44196', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514cfc546105714a8016d44196', width: 64}
+				]),
+			id: '1mWALaBj7EexbtibGLmAsZ',
+			name: '033/Das Schloss des Blutmalers',
+			urlToOpen: 'https://open.spotify.com/album/1mWALaBj7EexbtibGLmAsZ'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273bc80326674eb03b91311782e', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bc80326674eb03b91311782e', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bc80326674eb03b91311782e', width: 64}
+				]),
+			id: '01VHWlPRHkqwFPp0WtmQZ5',
+			name: '032/Hauptrolle: tot',
+			urlToOpen: 'https://open.spotify.com/album/01VHWlPRHkqwFPp0WtmQZ5'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273b85c89eadbe5a0f53c32db58', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02b85c89eadbe5a0f53c32db58', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851b85c89eadbe5a0f53c32db58', width: 64}
+				]),
+			id: '74LgIPfaXk0dB4d17bhxYL',
+			name: '031/Das Menschenkabinett',
+			urlToOpen: 'https://open.spotify.com/album/74LgIPfaXk0dB4d17bhxYL'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27369a3322e42a2930a7f526cef', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0269a3322e42a2930a7f526cef', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485169a3322e42a2930a7f526cef', width: 64}
+				]),
+			id: '0j7WSaEq9vMj5qqfEL2uBy',
+			name: '030/Der Seelenkünder II',
+			urlToOpen: 'https://open.spotify.com/album/0j7WSaEq9vMj5qqfEL2uBy'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273bd041fc0a09902ab3b376865', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02bd041fc0a09902ab3b376865', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851bd041fc0a09902ab3b376865', width: 64}
+				]),
+			id: '25Wl1t6ZIurjI28oE6ISaM',
+			name: '029/Der Seelenkünder I',
+			urlToOpen: 'https://open.spotify.com/album/25Wl1t6ZIurjI28oE6ISaM'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273fcc24fdd10b672a0a166d938', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02fcc24fdd10b672a0a166d938', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851fcc24fdd10b672a0a166d938', width: 64}
+				]),
+			id: '60rNEZqzvDRlDv89SM4UYj',
+			name: '028/Der Leere Raum',
+			urlToOpen: 'https://open.spotify.com/album/60rNEZqzvDRlDv89SM4UYj'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27369cce5ce202db48165e5bf40', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0269cce5ce202db48165e5bf40', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485169cce5ce202db48165e5bf40', width: 64}
+				]),
+			id: '6a0WXcz5NmFZTnUuM18dlw',
+			name: '027/Eiland der Gespenster',
+			urlToOpen: 'https://open.spotify.com/album/6a0WXcz5NmFZTnUuM18dlw'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2735fe2fe49703f2864c264e505', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025fe2fe49703f2864c264e505', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515fe2fe49703f2864c264e505', width: 64}
+				]),
+			id: '4518MUZ88OM9mkXRjHNb3I',
+			name: '026/Die Diener der Pest',
+			urlToOpen: 'https://open.spotify.com/album/4518MUZ88OM9mkXRjHNb3I'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27380e3c933d45ef76d633d12ab', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0280e3c933d45ef76d633d12ab', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485180e3c933d45ef76d633d12ab', width: 64}
+				]),
+			id: '3Ym71NN9uily2fTT3esHSM',
+			name: '025/Die fiebrigen Tränen',
+			urlToOpen: 'https://open.spotify.com/album/3Ym71NN9uily2fTT3esHSM'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2734273b12a44c76eb80caffdf7', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024273b12a44c76eb80caffdf7', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514273b12a44c76eb80caffdf7', width: 64}
+				]),
+			id: '5GQRBo93yteU7quPJ0wPQq',
+			name: '024/Am Tag der großen Flut',
+			urlToOpen: 'https://open.spotify.com/album/5GQRBo93yteU7quPJ0wPQq'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273ad81a0213eddb0d2b9365b21', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02ad81a0213eddb0d2b9365b21', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851ad81a0213eddb0d2b9365b21', width: 64}
+				]),
+			id: '242vCdSs4RXNQF0GjW5S7M',
+			name: '023/Der Duft der Finsternis',
+			urlToOpen: 'https://open.spotify.com/album/242vCdSs4RXNQF0GjW5S7M'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27304dd15b32f19734702d0bee8', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0204dd15b32f19734702d0bee8', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485104dd15b32f19734702d0bee8', width: 64}
+				]),
+			id: '1YEHLtjH9ft1ii6Naj3fNs',
+			name: '022/Die blutenden Schlüssel',
+			urlToOpen: 'https://open.spotify.com/album/1YEHLtjH9ft1ii6Naj3fNs'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273e2c8ab714542014b51c4f174', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e2c8ab714542014b51c4f174', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e2c8ab714542014b51c4f174', width: 64}
+				]),
+			id: '178RDBhOQSqYMhDXksWUcr',
+			name: '021/Gefahr am schwarzen Wasser',
+			urlToOpen: 'https://open.spotify.com/album/178RDBhOQSqYMhDXksWUcr'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27341e755ac87b97c14e5537ad6', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0241e755ac87b97c14e5537ad6', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485141e755ac87b97c14e5537ad6', width: 64}
+				]),
+			id: '3f3ohDkzsCIh8QYJ85ts7F',
+			name: '020/Der Bund des Zorns',
+			urlToOpen: 'https://open.spotify.com/album/3f3ohDkzsCIh8QYJ85ts7F'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2734613cc98dbb0afefa02b3ea5', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e024613cc98dbb0afefa02b3ea5', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048514613cc98dbb0afefa02b3ea5', width: 64}
+				]),
+			id: '4z5hZT12F5hDvYMAKryvC2',
+			name: '019/Der Weg zur Dunkelmühle',
+			urlToOpen: 'https://open.spotify.com/album/4z5hZT12F5hDvYMAKryvC2'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2733b16ba9d7f5851aa29e4f4d8', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e023b16ba9d7f5851aa29e4f4d8', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048513b16ba9d7f5851aa29e4f4d8', width: 64}
+				]),
+			id: '2MgpquYqWDwNq10vQQsgDA',
+			name: '018/Im Sog der Sirenen',
+			urlToOpen: 'https://open.spotify.com/album/2MgpquYqWDwNq10vQQsgDA'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273c411594ba04cac07fc9b7f72', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02c411594ba04cac07fc9b7f72', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851c411594ba04cac07fc9b7f72', width: 64}
+				]),
+			id: '7I7CGeWzZ9yzbWwn4fkhe7',
+			name: '017/Der steinerne Fluch',
+			urlToOpen: 'https://open.spotify.com/album/7I7CGeWzZ9yzbWwn4fkhe7'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273429f18f2c3ef3c0f0a656928', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02429f18f2c3ef3c0f0a656928', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851429f18f2c3ef3c0f0a656928', width: 64}
+				]),
+			id: '3D4N1ciYARjBISBXDjb5nS',
+			name: '016/Die Zeit des Knochenfängers',
+			urlToOpen: 'https://open.spotify.com/album/3D4N1ciYARjBISBXDjb5nS'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273794a98a70dbfb9b96638b382', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02794a98a70dbfb9b96638b382', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851794a98a70dbfb9b96638b382', width: 64}
+				]),
+			id: '07gknPYvIxHO6tAvzbuSE0',
+			name: '015/Das Geheimnis des Scherbendiebes',
+			urlToOpen: 'https://open.spotify.com/album/07gknPYvIxHO6tAvzbuSE0'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273353d41c7e96581f4fb0ca11d', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02353d41c7e96581f4fb0ca11d', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851353d41c7e96581f4fb0ca11d', width: 64}
+				]),
+			id: '37Bx2rbtTu2f9PuUABtABZ',
+			name: '014/Die Kammer des schweigenden Ritters',
+			urlToOpen: 'https://open.spotify.com/album/37Bx2rbtTu2f9PuUABtABZ'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2730c7ceed17befa33d77522c72', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e020c7ceed17befa33d77522c72', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048510c7ceed17befa33d77522c72', width: 64}
+				]),
+			id: '5AIOJmeTo8qcHIyPVJAvRh',
+			name: '013/Die Würfel des Hexenmeisters',
+			urlToOpen: 'https://open.spotify.com/album/5AIOJmeTo8qcHIyPVJAvRh'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27398049190ee309dda37c8a68e', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0298049190ee309dda37c8a68e', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485198049190ee309dda37c8a68e', width: 64}
+				]),
+			id: '6G6Pwdg1BW8yRp2rM2jRsC',
+			name: '012/Im Bann der Totenmelodie',
+			urlToOpen: 'https://open.spotify.com/album/6G6Pwdg1BW8yRp2rM2jRsC'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273a788155bf081da4d48b0e0fb', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02a788155bf081da4d48b0e0fb', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851a788155bf081da4d48b0e0fb', width: 64}
+				]),
+			id: '61MJJekB95apDZ10mrtRhu',
+			name: '011/Die Nacht der ewigen Fliegen',
+			urlToOpen: 'https://open.spotify.com/album/61MJJekB95apDZ10mrtRhu'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2732ab8d5a5d9da478d75112de4', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e022ab8d5a5d9da478d75112de4', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048512ab8d5a5d9da478d75112de4', width: 64}
+				]),
+			id: '7Ghr2xv8LjhwYvsrSiwypI',
+			name: '010/Der Schattenadmiral',
+			urlToOpen: 'https://open.spotify.com/album/7Ghr2xv8LjhwYvsrSiwypI'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27387d9afaaa08d6e1ba5f54722', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0287d9afaaa08d6e1ba5f54722', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485187d9afaaa08d6e1ba5f54722', width: 64}
+				]),
+			id: '04Mlg1WlnLgp4CvwpVZ9KX',
+			name: '009/Das Buch des Grauenjägers',
+			urlToOpen: 'https://open.spotify.com/album/04Mlg1WlnLgp4CvwpVZ9KX'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273e7ed3a614c3d5e165f5c0423', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02e7ed3a614c3d5e165f5c0423', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851e7ed3a614c3d5e165f5c0423', width: 64}
+				]),
+			id: '1vyik7uzgbTcPsvWuTb51f',
+			name: '008/Am Berg der Nebelspinne',
+			urlToOpen: 'https://open.spotify.com/album/1vyik7uzgbTcPsvWuTb51f'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27375819f2d3b4248c0d0099a31', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0275819f2d3b4248c0d0099a31', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485175819f2d3b4248c0d0099a31', width: 64}
+				]),
+			id: '2sKCEbqp7QaGDDpL1G9X8n',
+			name: '007/Das Grab aus Wüstensand',
+			urlToOpen: 'https://open.spotify.com/album/2sKCEbqp7QaGDDpL1G9X8n'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b2735d5bb0616f97d1c1e1ee8241', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e025d5bb0616f97d1c1e1ee8241', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d000048515d5bb0616f97d1c1e1ee8241', width: 64}
+				]),
+			id: '2uvaDV7QrxOuGqJf3akIUM',
+			name: '006/Das kalte Phantom',
+			urlToOpen: 'https://open.spotify.com/album/2uvaDV7QrxOuGqJf3akIUM'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27305dd63fc40831d862f2e9112', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0205dd63fc40831d862f2e9112', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485105dd63fc40831d862f2e9112', width: 64}
+				]),
+			id: '17orTTG8YfprnvUrspGdzP',
+			name: '005/Tief in den nördlichen Minen',
+			urlToOpen: 'https://open.spotify.com/album/17orTTG8YfprnvUrspGdzP'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273f8d8279f5a103e98ea83fe83', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02f8d8279f5a103e98ea83fe83', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851f8d8279f5a103e98ea83fe83', width: 64}
+				]),
+			id: '28PkAZAWYVLSyqnmBs6wjG',
+			name: '004/Das Haus der vergifteten Bilder',
+			urlToOpen: 'https://open.spotify.com/album/28PkAZAWYVLSyqnmBs6wjG'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273558cedc176a6436e29a0afca', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02558cedc176a6436e29a0afca', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851558cedc176a6436e29a0afca', width: 64}
+				]),
+			id: '2CvGZuUXzX3E9JqpzcURyc',
+			name: '003/Die Insel der letzten Rache',
+			urlToOpen: 'https://open.spotify.com/album/2CvGZuUXzX3E9JqpzcURyc'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b27352368f78374827fbe994c308', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e0252368f78374827fbe994c308', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d0000485152368f78374827fbe994c308', width: 64}
+				]),
+			id: '5xcbKCy2wyHnfTVKlWnjmm',
+			name: '002/Die rote Hand des Teufels',
+			urlToOpen: 'https://open.spotify.com/album/5xcbKCy2wyHnfTVKlWnjmm'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273979d7c31f68beb395a832879', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02979d7c31f68beb395a832879', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851979d7c31f68beb395a832879', width: 64}
+				]),
+			id: '0uXKtcuIDwz6Gzpu6cuDDo',
+			name: '001/Die Bucht der 22 Schreie',
+			urlToOpen: 'https://open.spotify.com/album/0uXKtcuIDwz6Gzpu6cuDDo'
+		},
+			{
+			covers: _List_fromArray(
+				[
+					{height: 640, url: 'https://i.scdn.co/image/ab67616d0000b273edaebf1aaf4484276eff93e7', width: 640},
+					{height: 300, url: 'https://i.scdn.co/image/ab67616d00001e02edaebf1aaf4484276eff93e7', width: 300},
+					{height: 64, url: 'https://i.scdn.co/image/ab67616d00004851edaebf1aaf4484276eff93e7', width: 64}
+				]),
+			id: '4iu5aeXV2NraXliNiqhRFw',
+			name: '042/Der Ruf des Wellengängers',
+			urlToOpen: 'https://open.spotify.com/album/4iu5aeXV2NraXliNiqhRFw'
 		}
 		]));
 var $author$project$AlbumStorageTkkg$albumStorage = $elm$core$Array$fromList(
@@ -12854,14 +14479,18 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 		}
 		]));
 var $author$project$AlbumStorageDdf$artistInfo = {coverColorA: '#DF030E', coverColorB: '#04A5E3', httpFriendlyShortName: 'ddf', icon: 'img/ddf_transparent.png', id: '3meJIgRw7YleJrmbpbJK6S', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb7de827ab626c867816052015', name: 'Die drei ???', shortName: 'DDF'};
+var $author$project$AlbumStorageDdfk$artistInfo = {coverColorA: '#DF030E', coverColorB: '#04A5E3', httpFriendlyShortName: 'ddfk', icon: 'img/ddfk_transparent.png', id: '0vLsqW05dyLvjuKKftAEGA', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb4b258838de4271df70886fb8', name: 'Die drei ??? Kids', shortName: 'DDF Kids'};
 var $author$project$AlbumStorageFf$artistInfo = {coverColorA: '#D91E27', coverColorB: '#F2C716', httpFriendlyShortName: 'ff', icon: 'img/ff_transparent.png', id: '1hD52edfn6aNsK3fb5c2OT', imageUrl: 'https://i.scdn.co/image/ab6761610000e5ebfd1fc9ff3040cfb38d7225ac', name: 'Fünf Freunde', shortName: 'FF'};
+var $author$project$AlbumStoragePw$artistInfo = {coverColorA: '#DF030E', coverColorB: '#04A5E3', httpFriendlyShortName: 'pw', icon: 'img/pw_transparent.png', id: '39cu39Rn69BTbnblNDijGN', imageUrl: 'https://i.scdn.co/image/ab6761610000e5ebc3329ea6fc2160392bc912d9', name: 'Point Whitmark', shortName: 'PW'};
 var $author$project$AlbumStorageTkkg$artistInfo = {coverColorA: '#0B2D74', coverColorB: '#0F40A6', httpFriendlyShortName: 'tkkg', icon: 'img/tkkg_transparent.png', id: '61qDotnjM0jnY5lkfOP7ve', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb1e8366050ddb70f1267cde51', name: 'TKKG', shortName: 'TKKG'};
 var $author$project$AlbumStorageTkkgr$artistInfo = {coverColorA: '#C40004', coverColorB: '#FFEC01', httpFriendlyShortName: 'tkkgr', icon: 'img/tkkg_retro_transparent.png', id: '0i38tQX5j4gZ0KS3eCMoIl', imageUrl: 'https://i.scdn.co/image/ab6761610000e5eb60367627a2292ba3bc27fe58', name: 'TKKG Retro-Archiv', shortName: 'TKKG(R)'};
 var $author$project$ArtistsWithAlbums$albumStorage = _List_fromArray(
 	[
 		{albums: $author$project$AlbumStorageDdf$albumStorage, artist: $author$project$AlbumStorageDdf$artistInfo},
+		{albums: $author$project$AlbumStorageDdfk$albumStorage, artist: $author$project$AlbumStorageDdfk$artistInfo},
 		{albums: $author$project$AlbumStorageTkkg$albumStorage, artist: $author$project$AlbumStorageTkkg$artistInfo},
 		{albums: $author$project$AlbumStorageTkkgr$albumStorage, artist: $author$project$AlbumStorageTkkgr$artistInfo},
+		{albums: $author$project$AlbumStoragePw$albumStorage, artist: $author$project$AlbumStoragePw$artistInfo},
 		{albums: $author$project$AlbumStorageFf$albumStorage, artist: $author$project$AlbumStorageFf$artistInfo}
 	]);
 var $elm$core$List$any = F2(
