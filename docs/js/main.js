@@ -14574,6 +14574,11 @@ var $elm$core$List$any = F2(
 			}
 		}
 	});
+var $author$project$ArtistIds$empty = $author$project$ArtistIds$ArtistId('');
+var $pzp1997$assoc_list$AssocList$D = function (a) {
+	return {$: 'D', a: a};
+};
+var $pzp1997$assoc_list$AssocList$empty = $pzp1997$assoc_list$AssocList$D(_List_Nil);
 var $elm$core$Array$filter = F2(
 	function (isGood, array) {
 		return $elm$core$Array$fromList(
@@ -14607,6 +14612,30 @@ var $elm_community$list_extra$List$Extra$find = F2(
 			}
 		}
 	});
+var $pzp1997$assoc_list$AssocList$get = F2(
+	function (targetKey, _v0) {
+		get:
+		while (true) {
+			var alist = _v0.a;
+			if (!alist.b) {
+				return $elm$core$Maybe$Nothing;
+			} else {
+				var _v2 = alist.a;
+				var key = _v2.a;
+				var value = _v2.b;
+				var rest = alist.b;
+				if (_Utils_eq(key, targetKey)) {
+					return $elm$core$Maybe$Just(value);
+				} else {
+					var $temp$targetKey = targetKey,
+						$temp$_v0 = $pzp1997$assoc_list$AssocList$D(rest);
+					targetKey = $temp$targetKey;
+					_v0 = $temp$_v0;
+					continue get;
+				}
+			}
+		}
+	});
 var $elm$core$Maybe$map = F2(
 	function (f, maybe) {
 		if (maybe.$ === 'Just') {
@@ -14616,6 +14645,15 @@ var $elm$core$Maybe$map = F2(
 		} else {
 			return $elm$core$Maybe$Nothing;
 		}
+	});
+var $elm$core$List$member = F2(
+	function (x, xs) {
+		return A2(
+			$elm$core$List$any,
+			function (a) {
+				return _Utils_eq(a, x);
+			},
+			xs);
 	});
 var $elm$core$Basics$not = _Basics_not;
 var $elm$core$String$toLower = _String_toLower;
@@ -14628,51 +14666,68 @@ var $elm$core$Maybe$withDefault = F2(
 			return _default;
 		}
 	});
-var $author$project$Main$emptyModel = function (artistShortName) {
-	var filteredAlbumNames = _List_fromArray(
-		['Outro', 'liest...', 'liest ...', 'Originalmusik']);
-	var artistWithAlbums = A2(
-		$elm_community$list_extra$List$Extra$find,
-		function (a) {
-			return _Utils_eq(
-				$elm$core$String$toLower(a.artist.httpFriendlyShortName),
-				$elm$core$String$toLower(artistShortName));
-		},
-		$author$project$ArtistsWithAlbums$albumStorage);
-	var albums = A2(
-		$elm$core$Maybe$withDefault,
-		$elm$core$Array$empty,
-		A2(
-			$elm$core$Maybe$map,
+var $author$project$Main$emptyModel = F2(
+	function (artistShortName, blacklistOption) {
+		var filteredAlbumNames = _List_fromArray(
+			['Outro', 'liest...', 'liest ...', 'Originalmusik']);
+		var blacklist = A2($elm$core$Maybe$withDefault, $pzp1997$assoc_list$AssocList$empty, blacklistOption);
+		var artistWithAlbums = A2(
+			$elm_community$list_extra$List$Extra$find,
 			function (a) {
-				return a.albums;
+				return _Utils_eq(
+					$elm$core$String$toLower(a.artist.httpFriendlyShortName),
+					$elm$core$String$toLower(artistShortName));
 			},
-			artistWithAlbums));
-	var filteredAlbums = A2(
-		$elm$core$Array$filter,
-		function (a) {
-			return !A2(
-				$elm$core$List$any,
-				function (name) {
-					return A2($elm$core$String$contains, name, a.name);
-				},
-				filteredAlbumNames);
-		},
-		albums);
-	return {
-		albums: filteredAlbums,
-		blacklistedAlbums: _List_Nil,
-		current: 0,
-		currentArtist: A2(
+			$author$project$ArtistsWithAlbums$albumStorage);
+		var artist = A2(
 			$elm$core$Maybe$map,
 			function (a) {
 				return a.artist;
 			},
-			artistWithAlbums),
-		isArtistOverlayOpen: false,
-		isInitialized: false
-	};
-};
+			artistWithAlbums);
+		var blacklistedForCurrentArtist = function () {
+			var artistId = A2(
+				$elm$core$Maybe$withDefault,
+				$author$project$ArtistIds$empty,
+				A2(
+					$elm$core$Maybe$map,
+					function (a) {
+						return a.id;
+					},
+					artist));
+			return A2(
+				$elm$core$Maybe$withDefault,
+				_List_Nil,
+				A2($pzp1997$assoc_list$AssocList$get, artistId, blacklist));
+		}();
+		var albums = A2(
+			$elm$core$Maybe$withDefault,
+			$elm$core$Array$empty,
+			A2(
+				$elm$core$Maybe$map,
+				function (a) {
+					return a.albums;
+				},
+				artistWithAlbums));
+		var filteredAlbums = A2(
+			$elm$core$Array$filter,
+			function (a) {
+				return !A2(
+					$elm$core$List$any,
+					function (name) {
+						return A2($elm$core$String$contains, name, a.name);
+					},
+					filteredAlbumNames);
+			},
+			albums);
+		var filteredNonblacklistedAlbums = A2(
+			$elm$core$Array$filter,
+			function (album) {
+				return !A2($elm$core$List$member, album.id, blacklistedForCurrentArtist);
+			},
+			filteredAlbums);
+		return {albums: filteredNonblacklistedAlbums, blacklistedAlbums: blacklist, current: 0, currentArtist: artist, isArtistOverlayOpen: false, isInitialized: false};
+	});
 var $elm$json$Json$Encode$null = _Json_encodeNull;
 var $author$project$Main$fetchBlacklisted = _Platform_outgoingPort(
 	'fetchBlacklisted',
@@ -14681,7 +14736,7 @@ var $author$project$Main$fetchBlacklisted = _Platform_outgoingPort(
 	});
 var $author$project$Main$init = function (_v0) {
 	return _Utils_Tuple2(
-		$author$project$Main$emptyModel($author$project$Main$defaultArtistShortName),
+		A2($author$project$Main$emptyModel, $author$project$Main$defaultArtistShortName, $elm$core$Maybe$Nothing),
 		$author$project$Main$fetchBlacklisted(_Utils_Tuple0));
 };
 var $author$project$Main$GotBlacklist = function (a) {
@@ -14695,24 +14750,221 @@ var $author$project$Main$blacklistReceiver = _Platform_incomingPort(
 var $author$project$Main$subscriptions = function (_v0) {
 	return $author$project$Main$blacklistReceiver($author$project$Main$GotBlacklist);
 };
+var $elm$core$List$filter = F2(
+	function (isGood, list) {
+		return A3(
+			$elm$core$List$foldr,
+			F2(
+				function (x, xs) {
+					return isGood(x) ? A2($elm$core$List$cons, x, xs) : xs;
+				}),
+			_List_Nil,
+			list);
+	});
+var $elm$core$Basics$neq = _Utils_notEqual;
+var $pzp1997$assoc_list$AssocList$remove = F2(
+	function (targetKey, _v0) {
+		var alist = _v0.a;
+		return $pzp1997$assoc_list$AssocList$D(
+			A2(
+				$elm$core$List$filter,
+				function (_v1) {
+					var key = _v1.a;
+					return !_Utils_eq(key, targetKey);
+				},
+				alist));
+	});
+var $pzp1997$assoc_list$AssocList$insert = F3(
+	function (key, value, dict) {
+		var _v0 = A2($pzp1997$assoc_list$AssocList$remove, key, dict);
+		var alteredAlist = _v0.a;
+		return $pzp1997$assoc_list$AssocList$D(
+			A2(
+				$elm$core$List$cons,
+				_Utils_Tuple2(key, value),
+				alteredAlist));
+	});
+var $author$project$Main$addToBlacklist = F3(
+	function (artistId, albumId, dict) {
+		var _v0 = A2($pzp1997$assoc_list$AssocList$get, artistId, dict);
+		if (_v0.$ === 'Just') {
+			var existing = _v0.a;
+			return A3(
+				$pzp1997$assoc_list$AssocList$insert,
+				artistId,
+				A2($elm$core$List$cons, albumId, existing),
+				A2($pzp1997$assoc_list$AssocList$remove, artistId, dict));
+		} else {
+			return A3(
+				$pzp1997$assoc_list$AssocList$insert,
+				artistId,
+				_List_fromArray(
+					[albumId]),
+				dict);
+		}
+	});
+var $elm$core$List$maybeCons = F3(
+	function (f, mx, xs) {
+		var _v0 = f(mx);
+		if (_v0.$ === 'Just') {
+			var x = _v0.a;
+			return A2($elm$core$List$cons, x, xs);
+		} else {
+			return xs;
+		}
+	});
+var $elm$core$List$filterMap = F2(
+	function (f, xs) {
+		return A3(
+			$elm$core$List$foldr,
+			$elm$core$List$maybeCons(f),
+			_List_Nil,
+			xs);
+	});
+var $pzp1997$assoc_list$AssocList$fromList = function (alist) {
+	return A3(
+		$elm$core$List$foldl,
+		F2(
+			function (_v0, result) {
+				var key = _v0.a;
+				var value = _v0.b;
+				return A3($pzp1997$assoc_list$AssocList$insert, key, value, result);
+			}),
+		$pzp1997$assoc_list$AssocList$D(_List_Nil),
+		alist);
+};
+var $elm$core$List$head = function (list) {
+	if (list.b) {
+		var x = list.a;
+		var xs = list.b;
+		return $elm$core$Maybe$Just(x);
+	} else {
+		return $elm$core$Maybe$Nothing;
+	}
+};
+var $elm$core$Tuple$second = function (_v0) {
+	var y = _v0.b;
+	return y;
+};
+var $elm$core$List$tail = function (list) {
+	if (list.b) {
+		var x = list.a;
+		var xs = list.b;
+		return $elm$core$Maybe$Just(xs);
+	} else {
+		return $elm$core$Maybe$Nothing;
+	}
+};
+var $author$project$Main$blackListFromStringList = function (list) {
+	var tuples = A2(
+		$elm$core$List$filterMap,
+		$elm$core$Basics$identity,
+		A2(
+			$elm$core$List$map,
+			function (t) {
+				var parts = A2($elm$core$String$split, ';;', t);
+				var second = $elm$core$List$head(
+					A2(
+						$elm$core$Maybe$withDefault,
+						_List_Nil,
+						$elm$core$List$tail(parts)));
+				var first = $elm$core$List$head(parts);
+				var _v1 = _Utils_Tuple2(first, second);
+				if (_v1.a.$ === 'Just') {
+					if (_v1.b.$ === 'Just') {
+						var f = _v1.a.a;
+						var s = _v1.b.a;
+						return $elm$core$Maybe$Just(
+							_Utils_Tuple2(
+								$author$project$ArtistIds$ArtistId(f),
+								$author$project$AlbumIds$AlbumId(s)));
+					} else {
+						var _v2 = _v1.b;
+						return $elm$core$Maybe$Nothing;
+					}
+				} else {
+					if (_v1.b.$ === 'Just') {
+						var _v3 = _v1.a;
+						return $elm$core$Maybe$Nothing;
+					} else {
+						var _v4 = _v1.a;
+						var _v5 = _v1.b;
+						return $elm$core$Maybe$Nothing;
+					}
+				}
+			},
+			list));
+	var grouped = A2(
+		$elm$core$List$map,
+		function (artistId) {
+			return _Utils_Tuple2(
+				artistId,
+				A2(
+					$elm$core$List$map,
+					$elm$core$Tuple$second,
+					A2(
+						$elm$core$List$filter,
+						function (_v0) {
+							var artId = _v0.a;
+							return _Utils_eq(artId, artistId);
+						},
+						tuples)));
+		},
+		A2($elm$core$List$map, $elm$core$Tuple$first, tuples));
+	return $pzp1997$assoc_list$AssocList$fromList(grouped);
+};
+var $elm$core$List$append = F2(
+	function (xs, ys) {
+		if (!ys.b) {
+			return xs;
+		} else {
+			return A3($elm$core$List$foldr, $elm$core$List$cons, ys, xs);
+		}
+	});
+var $elm$core$List$concat = function (lists) {
+	return A3($elm$core$List$foldr, $elm$core$List$append, _List_Nil, lists);
+};
+var $pzp1997$assoc_list$AssocList$toList = function (_v0) {
+	var alist = _v0.a;
+	return alist;
+};
+var $author$project$AlbumIds$value = function (id) {
+	var a = id.a;
+	return a;
+};
+var $author$project$ArtistIds$value = function (id) {
+	var a = id.a;
+	return a;
+};
+var $author$project$Main$blackListToStringList = function (blacklist) {
+	var pairs = $pzp1997$assoc_list$AssocList$toList(blacklist);
+	return $elm$core$List$concat(
+		A2(
+			$elm$core$List$map,
+			function (_v0) {
+				var artistId = _v0.a;
+				var albumIds = _v0.b;
+				return A2(
+					$elm$core$List$map,
+					function (albumId) {
+						return $author$project$ArtistIds$value(artistId) + (';;' + $author$project$AlbumIds$value(albumId));
+					},
+					albumIds);
+			},
+			pairs));
+};
 var $elm$core$Array$length = function (_v0) {
 	var len = _v0.a;
 	return len;
 };
 var $elm$core$Debug$log = _Debug_log;
-var $elm$core$List$member = F2(
-	function (x, xs) {
-		return A2(
-			$elm$core$List$any,
-			function (a) {
-				return _Utils_eq(a, x);
-			},
-			xs);
-	});
 var $elm$core$Basics$modBy = _Basics_modBy;
-var $elm$core$Basics$neq = _Utils_notEqual;
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
+var $author$project$Main$removeFromBlacklist = F2(
+	function (artistId, blacklist) {
+		return A2($pzp1997$assoc_list$AssocList$remove, artistId, blacklist);
+	});
 var $elm$json$Json$Encode$list = F2(
 	function (func, entries) {
 		return _Json_wrap(
@@ -14916,10 +15168,6 @@ var $elm$random$Random$independentSeed = $elm$random$Random$Generator(
 			A4($elm$random$Random$map3, makeIndependentSeed, gen, gen, gen),
 			seed0);
 	});
-var $elm$core$Tuple$second = function (_v0) {
-	var y = _v0.b;
-	return y;
-};
 var $elm$core$List$sortBy = _List_sortBy;
 var $elm_community$random_extra$Random$List$shuffle = function (list) {
 	return A2(
@@ -14957,9 +15205,13 @@ var $author$project$Main$startShuffleAlbums = function (albums) {
 		$elm$core$Array$toList(albums));
 	return A2($elm$random$Random$generate, $author$project$Main$AlbumsShuffled, generator);
 };
-var $author$project$Main$resetModel = function (artist) {
-	var resettedModel = $author$project$Main$emptyModel(
-		A2(
+var $author$project$Main$resetModel = F2(
+	function (artist, blacklist) {
+		var serializedBlacklist = A2(
+			$elm$core$Maybe$withDefault,
+			_List_Nil,
+			A2($elm$core$Maybe$map, $author$project$Main$blackListToStringList, blacklist));
+		var artistShortname = A2(
 			$elm$core$Maybe$withDefault,
 			$author$project$Main$defaultArtistShortName,
 			A2(
@@ -14967,40 +15219,62 @@ var $author$project$Main$resetModel = function (artist) {
 				function (a) {
 					return a.httpFriendlyShortName;
 				},
-				artist)));
-	return _Utils_Tuple2(
-		resettedModel,
-		$elm$core$Platform$Cmd$batch(
-			_List_fromArray(
-				[
-					$author$project$Main$setBlacklistedAlbums(_List_Nil),
-					$author$project$Main$startShuffleAlbums(resettedModel.albums)
-				])));
-};
-var $author$project$AlbumIds$value = function (id) {
-	var a = id.a;
-	return a;
-};
+				artist));
+		var resettedModel = A2($author$project$Main$emptyModel, artistShortname, blacklist);
+		return _Utils_Tuple2(
+			resettedModel,
+			$elm$core$Platform$Cmd$batch(
+				_List_fromArray(
+					[
+						$author$project$Main$setBlacklistedAlbums(serializedBlacklist),
+						$author$project$Main$startShuffleAlbums(resettedModel.albums)
+					])));
+	});
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
 			case 'Reset':
 				var artist = msg.a;
-				return $author$project$Main$resetModel(artist);
+				var artistId = A2(
+					$elm$core$Maybe$withDefault,
+					$author$project$ArtistIds$empty,
+					A2(
+						$elm$core$Maybe$map,
+						function (a) {
+							return a.id;
+						},
+						artist));
+				return A2(
+					$author$project$Main$resetModel,
+					artist,
+					$elm$core$Maybe$Just(
+						A2($author$project$Main$removeFromBlacklist, artistId, model.blacklistedAlbums)));
 			case 'GotBlacklist':
-				var text = msg.a;
-				var albumsToBlacklist = A2($elm$core$List$map, $author$project$AlbumIds$AlbumId, text);
+				var strings = msg.a;
+				var blacklist = $author$project$Main$blackListFromStringList(strings);
+				var artistId = A2(
+					$elm$core$Maybe$withDefault,
+					$author$project$ArtistIds$empty,
+					A2(
+						$elm$core$Maybe$map,
+						function (a) {
+							return a.id;
+						},
+						model.currentArtist));
+				var blacklistedForCurrentArtist = A2(
+					$elm$core$Maybe$withDefault,
+					_List_Nil,
+					A2($pzp1997$assoc_list$AssocList$get, artistId, blacklist));
 				var filteredAlbums = A2(
 					$elm$core$Array$filter,
 					function (a) {
-						return !A2($elm$core$List$member, a.id, albumsToBlacklist);
+						return !A2($elm$core$List$member, a.id, blacklistedForCurrentArtist);
 					},
 					model.albums);
-				var _v1 = A2($elm$core$Debug$log, 'GotBlacklist', text);
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{albums: filteredAlbums, blacklistedAlbums: albumsToBlacklist}),
+						{albums: filteredAlbums, blacklistedAlbums: blacklist}),
 					$author$project$Main$startShuffleAlbums(filteredAlbums));
 			case 'NextAlbum':
 				var newModel = _Utils_update(
@@ -15023,7 +15297,9 @@ var $author$project$Main$update = F2(
 					});
 				return _Utils_Tuple2(newModel, $elm$core$Platform$Cmd$none);
 			case 'BlackListAlbum':
-				var albumId = msg.a;
+				var _v1 = msg.a;
+				var artistId = _v1.a;
+				var albumId = _v1.b;
 				var updatedModel = _Utils_update(
 					model,
 					{
@@ -15033,13 +15309,13 @@ var $author$project$Main$update = F2(
 								return !_Utils_eq(a.id, albumId);
 							},
 							model.albums),
-						blacklistedAlbums: A2($elm$core$List$cons, albumId, model.blacklistedAlbums)
+						blacklistedAlbums: A3($author$project$Main$addToBlacklist, artistId, albumId, model.blacklistedAlbums)
 					});
 				var newCmd = function () {
-					var combined = A2($elm$core$List$cons, albumId, model.blacklistedAlbums);
-					var mapped = A2($elm$core$List$map, $author$project$AlbumIds$value, combined);
+					var mapped = $author$project$Main$blackListToStringList(updatedModel.blacklistedAlbums);
 					return $author$project$Main$setBlacklistedAlbums(mapped);
 				}();
+				var _v2 = A2($elm$core$Debug$log, 'blacklist', model.blacklistedAlbums);
 				return _Utils_Tuple2(updatedModel, newCmd);
 			case 'AlbumsShuffled':
 				var albums = msg.a;
@@ -15066,8 +15342,10 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{isArtistOverlayOpen: false}),
-					$elm$core$Platform$Cmd$none) : $author$project$Main$resetModel(
-					$elm$core$Maybe$Just(newArtist));
+					$elm$core$Platform$Cmd$none) : A2(
+					$author$project$Main$resetModel,
+					$elm$core$Maybe$Just(newArtist),
+					$elm$core$Maybe$Just(model.blacklistedAlbums));
 		}
 	});
 var $author$project$Main$BlackListAlbum = function (a) {
@@ -15102,11 +15380,6 @@ var $elm$virtual_dom$VirtualDom$attribute = F2(
 	});
 var $elm$html$Html$Attributes$attribute = $elm$virtual_dom$VirtualDom$attribute;
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
-var $elm$core$Basics$composeL = F3(
-	function (g, f, x) {
-		return g(
-			f(x));
-	});
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$core$String$fromFloat = _String_fromNumber;
 var $elm$core$Basics$ge = _Utils_ge;
@@ -15160,13 +15433,6 @@ var $elm$html$Html$img = _VirtualDom_node('img');
 var $elm$core$Array$isEmpty = function (_v0) {
 	var len = _v0.a;
 	return !len;
-};
-var $elm$core$List$isEmpty = function (xs) {
-	if (!xs.b) {
-		return true;
-	} else {
-		return false;
-	}
 };
 var $elm_community$list_extra$List$Extra$maximumBy = F2(
 	function (f, ls) {
@@ -15245,15 +15511,6 @@ var $elm$regex$Regex$fromString = function (string) {
 		{caseInsensitive: false, multiline: false},
 		string);
 };
-var $elm$core$List$head = function (list) {
-	if (list.b) {
-		var x = list.a;
-		var xs = list.b;
-		return $elm$core$Maybe$Just(x);
-	} else {
-		return $elm$core$Maybe$Nothing;
-	}
-};
 var $elm$regex$Regex$never = _Regex_never;
 var $author$project$Main$tryAlbumNumberFrom = function (input) {
 	var albumNumber = A2(
@@ -15271,11 +15528,21 @@ var $author$project$Main$tryAlbumNumberFrom = function (input) {
 			$elm$core$List$head(
 				A2($elm$regex$Regex$find, albumNumber, input))));
 };
-var $author$project$ArtistIds$value = function (id) {
-	var a = id.a;
-	return a;
-};
 var $author$project$Main$view = function (model) {
+	var artistId = A2(
+		$elm$core$Maybe$withDefault,
+		$author$project$ArtistIds$empty,
+		A2(
+			$elm$core$Maybe$map,
+			function (a) {
+				return a.id;
+			},
+			model.currentArtist));
+	var numberOfBlacklistedAlbums = $elm$core$List$length(
+		A2(
+			$elm$core$Maybe$withDefault,
+			_List_Nil,
+			A2($pzp1997$assoc_list$AssocList$get, artistId, model.blacklistedAlbums)));
 	if (!model.isInitialized) {
 		return A2(
 			$elm$html$Html$div,
@@ -15297,7 +15564,7 @@ var $author$project$Main$view = function (model) {
 						]))
 				]));
 	} else {
-		if (model.isInitialized && ($elm$core$Array$isEmpty(model.albums) && A3($elm$core$Basics$composeL, $elm$core$Basics$not, $elm$core$List$isEmpty, model.blacklistedAlbums))) {
+		if (model.isInitialized && ($elm$core$Array$isEmpty(model.albums) && (numberOfBlacklistedAlbums > 0))) {
 			return A2(
 				$elm$html$Html$div,
 				_List_fromArray(
@@ -15317,8 +15584,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$text(
-								'No albums available but ' + ($elm$core$String$fromInt(
-									$elm$core$List$length(model.blacklistedAlbums)) + ' are blacklisteed. Clear blacklist?'))
+								'No albums available but ' + ($elm$core$String$fromInt(numberOfBlacklistedAlbums) + ' are blacklisteed. Clear blacklist?'))
 							]))
 					]));
 		} else {
@@ -15398,11 +15664,6 @@ var $author$project$Main$view = function (model) {
 					var overlayItem = F2(
 						function (isSelected, a) {
 							var isSelectedClass = isSelected ? ' artist-list-selected-element' : '';
-							var _v5 = A2($elm$core$Debug$log, a.name, isSelectedClass);
-							var _v6 = A2(
-								$elm$core$Debug$log,
-								'comparing ' + $author$project$ArtistIds$value(artist.id),
-								a.id);
 							return A2(
 								$elm$html$Html$a,
 								_List_fromArray(
@@ -15764,7 +16025,8 @@ var $author$project$Main$view = function (model) {
 																		_List_fromArray(
 																			[
 																				$elm$html$Html$Events$onClick(
-																				$author$project$Main$BlackListAlbum(album.id)),
+																				$author$project$Main$BlackListAlbum(
+																					_Utils_Tuple2(artist.id, album.id))),
 																				$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center mr-10')
 																			]),
 																		_List_fromArray(
@@ -15787,7 +16049,7 @@ var $author$project$Main$view = function (model) {
 																						$elm$html$Html$text('block')
 																					]))
 																			])),
-																		$elm$core$List$isEmpty(model.blacklistedAlbums) ? A2(
+																		(!numberOfBlacklistedAlbums) ? A2(
 																		$elm$html$Html$a,
 																		_List_fromArray(
 																			[
@@ -15838,8 +16100,7 @@ var $author$project$Main$view = function (model) {
 																				_List_fromArray(
 																					[
 																						$elm$html$Html$text(
-																						'clear blocked (' + ($elm$core$String$fromInt(
-																							$elm$core$List$length(model.blacklistedAlbums)) + ')'))
+																						'clear blocked (' + ($elm$core$String$fromInt(numberOfBlacklistedAlbums) + ')'))
 																					]))
 																			]))
 																	]))

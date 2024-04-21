@@ -1,10 +1,11 @@
 port module Main exposing (..)
 
-import Albums exposing (Album, ArtistInfo)
 import AlbumIds
-import ArtistIds
+import Albums exposing (Album, ArtistInfo)
 import Array exposing (Array)
+import ArtistIds
 import ArtistsWithAlbums exposing (albumStorage)
+import AssocList as Dict exposing (Dict)
 import Browser
 import Debug
 import Html exposing (Html, a, div, img, text)
@@ -26,20 +27,17 @@ type alias Flags =
     {}
 
 
+type alias Blacklist =
+    Dict ArtistIds.ArtistId (List AlbumIds.AlbumId)
+
+
 type alias Model =
-    { blacklistedAlbums : List AlbumIds.AlbumId
+    { blacklistedAlbums : Blacklist
     , albums : Array Album
     , current : Int
     , isInitialized : Bool
     , currentArtist : Maybe ArtistInfo
     , isArtistOverlayOpen : Bool
-    }
-
-
-type alias AlbumArt =
-    { url : String
-    , height : Int
-    , width : Int
     }
 
 
@@ -57,12 +55,15 @@ subscriptions _ =
     blacklistReceiver GotBlacklist
 
 
-emptyModel : String -> Model
-emptyModel artistShortName =
+emptyModel : String -> Maybe Blacklist -> Model
+emptyModel artistShortName blacklistOption =
     let
         artistWithAlbums =
             ArtistsWithAlbums.albumStorage
                 |> List.find (\a -> (a.artist.httpFriendlyShortName |> String.toLower) == (artistShortName |> String.toLower))
+
+        artist =
+            artistWithAlbums |> Maybe.map (\a -> a.artist)
 
         albums =
             artistWithAlbums
@@ -79,12 +80,26 @@ emptyModel artistShortName =
         filteredAlbums =
             albums
                 |> Array.filter (\a -> not <| (filteredAlbumNames |> List.any (\name -> a.name |> String.contains name)))
+
+        blacklist =
+            blacklistOption |> Maybe.withDefault Dict.empty
+
+        blacklistedForCurrentArtist =
+            let
+                artistId =
+                    artist |> Maybe.map (\a -> a.id) |> Maybe.withDefault ArtistIds.empty
+            in
+            blacklist |> Dict.get artistId |> Maybe.withDefault []
+
+        filteredNonblacklistedAlbums =
+            filteredAlbums
+                |> Array.filter (\album -> not <| (blacklistedForCurrentArtist |> List.member album.id))
     in
-    { blacklistedAlbums = []
-    , albums = filteredAlbums
+    { blacklistedAlbums = blacklist
+    , albums = filteredNonblacklistedAlbums
     , current = 0
     , isInitialized = False
-    , currentArtist = artistWithAlbums |> Maybe.map (\a -> a.artist)
+    , currentArtist = artist
     , isArtistOverlayOpen = False
     }
 
@@ -105,14 +120,14 @@ type Msg
     | NextAlbum
     | PreviousAlbum
     | AlbumsShuffled (List Album)
-    | BlackListAlbum AlbumIds.AlbumId
+    | BlackListAlbum ( ArtistIds.ArtistId, AlbumIds.AlbumId )
     | OpenArtistOverlay ArtistInfo
     | CloseArtistOverlay ArtistInfo
 
 
 init : Flags -> ( Model, Cmd Msg )
 init _ =
-    ( emptyModel defaultArtistShortName, fetchBlacklisted () )
+    ( emptyModel defaultArtistShortName Nothing, fetchBlacklisted () )
 
 
 startShuffleAlbums : Array Album -> Cmd Msg
@@ -124,36 +139,117 @@ startShuffleAlbums albums =
     generator |> Random.generate AlbumsShuffled
 
 
-resetModel : Maybe ArtistInfo -> ( Model, Cmd Msg )
-resetModel artist =
+resetModel : Maybe ArtistInfo -> Maybe Blacklist -> ( Model, Cmd Msg )
+resetModel artist blacklist =
     let
-        resettedModel =
+        artistShortname =
             artist
                 |> Maybe.map (\a -> a.httpFriendlyShortName)
                 |> Maybe.withDefault defaultArtistShortName
-                |> emptyModel
+
+        resettedModel =
+            emptyModel artistShortname blacklist
+
+        serializedBlacklist =
+            blacklist |> Maybe.map blackListToStringList |> Maybe.withDefault []
     in
-    ( resettedModel, Cmd.batch [ setBlacklistedAlbums [], resettedModel.albums |> startShuffleAlbums ] )
+    ( resettedModel, Cmd.batch [ serializedBlacklist |> setBlacklistedAlbums, resettedModel.albums |> startShuffleAlbums ] )
+
+
+addToBlacklist : ArtistIds.ArtistId -> AlbumIds.AlbumId -> Blacklist -> Blacklist
+addToBlacklist artistId albumId dict =
+    case dict |> Dict.get artistId of
+        Just existing ->
+            dict |> Dict.remove artistId |> Dict.insert artistId (albumId :: existing)
+
+        Nothing ->
+            dict |> Dict.insert artistId [ albumId ]
+
+
+removeFromBlacklist : ArtistIds.ArtistId -> Blacklist -> Blacklist
+removeFromBlacklist artistId blacklist =
+    blacklist |> Dict.remove artistId
+
+
+blackListToStringList : Blacklist -> List String
+blackListToStringList blacklist =
+    let
+        pairs =
+            blacklist |> Dict.toList
+    in
+    pairs
+        |> List.map
+            (\( artistId, albumIds ) ->
+                albumIds |> List.map (\albumId -> (artistId |> ArtistIds.value) ++ ";;" ++ (albumId |> AlbumIds.value))
+            )
+        |> List.concat
+
+
+blackListFromStringList : List String -> Blacklist
+blackListFromStringList list =
+    let
+        tuples =
+            list
+                |> List.map
+                    (\t ->
+                        let
+                            parts =
+                                t |> String.split ";;"
+
+                            first =
+                                parts |> List.head
+
+                            second =
+                                parts |> List.tail |> Maybe.withDefault [] |> List.head
+                        in
+                        case ( first, second ) of
+                            ( Just f, Just s ) ->
+                                Just ( f |> ArtistIds.ArtistId, s |> AlbumIds.AlbumId )
+
+                            ( Just _, Nothing ) ->
+                                Nothing
+
+                            ( Nothing, Just _ ) ->
+                                Nothing
+
+                            ( Nothing, Nothing ) ->
+                                Nothing
+                    )
+                |> List.filterMap identity
+
+        grouped =
+            tuples
+                |> List.map Tuple.first
+                |> List.map (\artistId -> ( artistId, tuples |> List.filter (\( artId, _ ) -> artId == artistId) |> List.map Tuple.second ))
+    in
+    grouped |> Dict.fromList
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Reset artist ->
-            artist |> resetModel
-
-        GotBlacklist text ->
             let
-                _ =
-                    Debug.log "GotBlacklist" text
+                artistId =
+                    artist |> Maybe.map (\a -> a.id) |> Maybe.withDefault ArtistIds.empty
+            in
+            resetModel artist (model.blacklistedAlbums |> removeFromBlacklist artistId |> Just)
 
-                albumsToBlacklist =
-                    text |> List.map AlbumIds.AlbumId
+        GotBlacklist strings ->
+            let
+                blacklist =
+                    strings |> blackListFromStringList
+
+                artistId =
+                    model.currentArtist |> Maybe.map (\a -> a.id) |> Maybe.withDefault ArtistIds.empty
+
+                blacklistedForCurrentArtist =
+                    blacklist |> Dict.get artistId |> Maybe.withDefault []
 
                 filteredAlbums =
-                    model.albums |> Array.filter (\a -> not (albumsToBlacklist |> List.member a.id))
+                    model.albums |> Array.filter (\a -> not (blacklistedForCurrentArtist |> List.member a.id))
             in
-            ( { model | blacklistedAlbums = albumsToBlacklist, albums = filteredAlbums }, filteredAlbums |> startShuffleAlbums )
+            ( { model | blacklistedAlbums = blacklist, albums = filteredAlbums }, filteredAlbums |> startShuffleAlbums )
 
         NextAlbum ->
             let
@@ -169,22 +265,25 @@ update msg model =
             in
             ( newModel, Cmd.none )
 
-        BlackListAlbum albumId ->
+        BlackListAlbum ( artistId, albumId ) ->
             {- Blacklisting an album removes it from the current album array.
                Since the array is traversed by a counter nothing needs to change as the counter will now
                point to the next album.
             -}
             let
+                _ =
+                    Debug.log "blacklist" model.blacklistedAlbums
+
                 updatedModel =
                     { model
                         | albums = model.albums |> Array.filter (\a -> a.id /= albumId)
-                        , blacklistedAlbums = albumId :: model.blacklistedAlbums
+                        , blacklistedAlbums = addToBlacklist artistId albumId model.blacklistedAlbums
                     }
 
                 newCmd =
                     let
-                        combined = albumId :: model.blacklistedAlbums
-                        mapped = combined |> List.map AlbumIds.value
+                        mapped =
+                            updatedModel.blacklistedAlbums |> blackListToStringList
                     in
                     mapped |> setBlacklistedAlbums
             in
@@ -201,7 +300,7 @@ update msg model =
                 ( { model | isArtistOverlayOpen = False }, Cmd.none )
 
             else
-                Just newArtist |> resetModel
+                resetModel (Just newArtist) (Just model.blacklistedAlbums)
 
 
 tryAlbumNumberFrom : String -> Maybe Int
@@ -218,15 +317,30 @@ tryAlbumNumberFrom input =
 
 view : Model -> Html Msg
 view model =
+    let
+        artistId =
+            model.currentArtist |> Maybe.map (\a -> a.id) |> Maybe.withDefault ArtistIds.empty
+
+        numberOfBlacklistedAlbums =
+            model.blacklistedAlbums
+                |> Dict.get artistId
+                |> Maybe.withDefault []
+                |> List.length
+    in
     if model.isInitialized == False then
         div
             [ class "white-text status-text-container" ]
             [ div [ class "status-text" ] [ text "Loading ..." ] ]
 
-    else if model.isInitialized == True && (model.albums |> Array.isEmpty) && (model.blacklistedAlbums |> (not << List.isEmpty)) then
+    else if
+        model.isInitialized
+            == True
+            && (model.albums |> Array.isEmpty)
+            && (numberOfBlacklistedAlbums > 0)
+    then
         div
             [ class "white-text status-text-container" ]
-            [ a [ onClick (Reset model.currentArtist), class "status-text pointer" ] [ text ("No albums available but " ++ (model.blacklistedAlbums |> List.length |> String.fromInt) ++ " are blacklisteed. Clear blacklist?") ] ]
+            [ a [ onClick (Reset model.currentArtist), class "status-text pointer" ] [ text ("No albums available but " ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ " are blacklisteed. Clear blacklist?") ] ]
 
     else
         case ( model.albums |> Array.get model.current, model.currentArtist ) of
@@ -304,9 +418,12 @@ view model =
                     overlayItem : Bool -> ArtistInfo -> Html Msg
                     overlayItem isSelected a =
                         let
-                            isSelectedClass = if isSelected then " artist-list-selected-element" else ""
-                            _ = Debug.log a.name isSelectedClass
-                            _ = Debug.log ("comparing " ++ (artist.id |> ArtistIds.value)) a.id
+                            isSelectedClass =
+                                if isSelected then
+                                    " artist-list-selected-element"
+
+                                else
+                                    ""
                         in
                         Html.a
                             [ onClick (CloseArtistOverlay a) ]
@@ -318,11 +435,16 @@ view model =
                     overlayGrid artists =
                         div
                             [ class "artist-list m-20" ]
-                            (artists |> List.map (\a -> 
-                                let
-                                    isCurrentArtist = artist == a
-                                in
-                                overlayItem isCurrentArtist a))
+                            (artists
+                                |> List.map
+                                    (\a ->
+                                        let
+                                            isCurrentArtist =
+                                                artist == a
+                                        in
+                                        overlayItem isCurrentArtist a
+                                    )
+                            )
 
                     overlay =
                         let
@@ -412,9 +534,9 @@ view model =
                                     [ div
                                         [ style "font-weight" "1000", style "height" "4rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center pointer urbanist-font" ]
                                         [ a
-                                            [ onClick (BlackListAlbum album.id), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
+                                            [ onClick (BlackListAlbum ( artist.id, album.id )), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
                                             [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt "block current album" ] [], div [] [ text "block" ] ]
-                                        , if model.blacklistedAlbums |> List.isEmpty then
+                                        , if numberOfBlacklistedAlbums == 0 then
                                             a
                                                 [ class "z-2 small-text non-styled-link d-flex align-items-center ml-10 disabled" ]
                                                 [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist" ] [], div [] [ text "clear blocked" ] ]
@@ -422,7 +544,7 @@ view model =
                                           else
                                             a
                                                 [ onClick (Reset model.currentArtist), class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
-                                                [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist" ] [], div [] [ text ("clear blocked (" ++ (model.blacklistedAlbums |> List.length |> String.fromInt) ++ ")") ] ]
+                                                [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist" ] [], div [] [ text ("clear blocked (" ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ ")") ] ]
                                         ]
                                     ]
                                 ]
