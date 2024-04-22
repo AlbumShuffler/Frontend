@@ -16275,7 +16275,7 @@ var $author$project$Main$view = function (model) {
 																				_List_fromArray(
 																					[
 																						$elm$html$Html$text(
-																						model.text.clear_blocked + ($elm$core$String$fromInt(numberOfBlacklistedAlbums) + ')'))
+																						model.text.clear_blocked + (' (' + ($elm$core$String$fromInt(numberOfBlacklistedAlbums) + ')')))
 																					]))
 																			]))
 																	]))

@@ -601,7 +601,7 @@ view model =
                                           else
                                             Html.a
                                                 [ onClick (Reset model.currentArtist), class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
-                                                [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt model.text.clear_blocked ] [], div [] [ text (model.text.clear_blocked ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ ")") ] ]
+                                                [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt model.text.clear_blocked ] [], div [] [ text (model.text.clear_blocked ++ " (" ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ ")") ] ]
                                         ]
                                     ]
                                 ]
