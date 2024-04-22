@@ -274,3 +274,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
+
+.z-1 {
+    z-index: 1;
+}

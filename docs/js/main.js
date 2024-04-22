@@ -16106,7 +16106,7 @@ var $author$project$Main$view = function (model) {
 												_List_fromArray(
 													[
 														$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center'),
-														A2($elm$html$Html$Attributes$style, 'z-index', '1')
+														A2($elm$html$Html$Attributes$style, 'z-index', '2')
 													]),
 												_List_fromArray(
 													[
@@ -16173,6 +16173,7 @@ var $author$project$Main$view = function (model) {
 												$elm$html$Html$div,
 												_List_fromArray(
 													[
+														A2($elm$html$Html$Attributes$style, 'z-index', '2'),
 														A2($elm$html$Html$Attributes$style, 'text-decoration', 'none'),
 														A2($elm$html$Html$Attributes$style, 'color', 'white')
 													]),

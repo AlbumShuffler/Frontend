@@ -579,14 +579,14 @@ view model =
                                 ]
                             , div
                                 [ class "d-flex align-items-center justify-content-center"
-                                , style "z-index" "1"
+                                , style "z-index" "2"
                                 ]
                                 [ Html.a [ href "#", onClick PreviousAlbum ] [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/next.svg" ] [] ]
                                 , Html.a [ href album.urlToOpen ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
                                 , Html.a [ href "#", onClick NextAlbum ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
                                 ]
                             , div
-                                [ style "text-decoration" "none", style "color" "white" ]
+                                [ style "z-index" "2", style "text-decoration" "none", style "color" "white" ]
                                 [ div []
                                     [ div
                                         [ style "font-weight" "1000", style "height" "4rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center pointer urbanist-font" ]
