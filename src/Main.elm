@@ -572,6 +572,12 @@ view model =
                                 , div [ id "cover-text", style "display" "none" ] [ text album.name ]
                                 ]
                             , div
+                                [ class "z-1", style "opacity" "0.4", style "width" "239.62px", style "height" "244.60px", style "left" "calc(50vw - 120px)", style "top" "calc(100vh)", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0"
+                                ] 
+                                [ div [class "z-1", style "width" "133.77px", style "height" "179.56px", style "left" "0", style "top" "0", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0", style "background" "#DF030E", style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px", style "filter" "blur(210.86px)" ] []
+                                , div [class "z-1", style "width" "133.54px", style "height" "183.31px", style "left" "119.12px", style "top" "-28.67px", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0", style "background" "#04A5E3", style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px", style "filter" "blur(210.86px)"] []
+                                ]
+                            , div
                                 [ class "d-flex align-items-center justify-content-center"
                                 , style "z-index" "1"
                                 ]

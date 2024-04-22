@@ -16054,6 +16054,57 @@ var $author$project$Main$view = function (model) {
 												$elm$html$Html$div,
 												_List_fromArray(
 													[
+														$elm$html$Html$Attributes$class('z-1'),
+														A2($elm$html$Html$Attributes$style, 'opacity', '0.4'),
+														A2($elm$html$Html$Attributes$style, 'width', '239.62px'),
+														A2($elm$html$Html$Attributes$style, 'height', '244.60px'),
+														A2($elm$html$Html$Attributes$style, 'left', 'calc(50vw - 120px)'),
+														A2($elm$html$Html$Attributes$style, 'top', 'calc(100vh)'),
+														A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
+														A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
+														A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0')
+													]),
+												_List_fromArray(
+													[
+														A2(
+														$elm$html$Html$div,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('z-1'),
+																A2($elm$html$Html$Attributes$style, 'width', '133.77px'),
+																A2($elm$html$Html$Attributes$style, 'height', '179.56px'),
+																A2($elm$html$Html$Attributes$style, 'left', '0'),
+																A2($elm$html$Html$Attributes$style, 'top', '0'),
+																A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
+																A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
+																A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0'),
+																A2($elm$html$Html$Attributes$style, 'background', '#DF030E'),
+																A2($elm$html$Html$Attributes$style, 'box-shadow', '210.86053466796875px 210.86053466796875px 210.86053466796875px'),
+																A2($elm$html$Html$Attributes$style, 'filter', 'blur(210.86px)')
+															]),
+														_List_Nil),
+														A2(
+														$elm$html$Html$div,
+														_List_fromArray(
+															[
+																$elm$html$Html$Attributes$class('z-1'),
+																A2($elm$html$Html$Attributes$style, 'width', '133.54px'),
+																A2($elm$html$Html$Attributes$style, 'height', '183.31px'),
+																A2($elm$html$Html$Attributes$style, 'left', '119.12px'),
+																A2($elm$html$Html$Attributes$style, 'top', '-28.67px'),
+																A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
+																A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
+																A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0'),
+																A2($elm$html$Html$Attributes$style, 'background', '#04A5E3'),
+																A2($elm$html$Html$Attributes$style, 'box-shadow', '210.86053466796875px 210.86053466796875px 210.86053466796875px'),
+																A2($elm$html$Html$Attributes$style, 'filter', 'blur(210.86px)')
+															]),
+														_List_Nil)
+													])),
+												A2(
+												$elm$html$Html$div,
+												_List_fromArray(
+													[
 														$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center'),
 														A2($elm$html$Html$Attributes$style, 'z-index', '1')
 													]),
