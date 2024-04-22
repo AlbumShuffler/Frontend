@@ -20,7 +20,10 @@ import Regex
 
 defaultArtistShortName : String
 defaultArtistShortName =
-    "ddf"
+    albumStorage 
+    |> List.head
+    |> Maybe.map (\a -> a.artist.httpFriendlyShortName)
+    |> Maybe.withDefault "<could not set defaultArtistShortName, is data available?>"
 
 
 type alias Flags =
