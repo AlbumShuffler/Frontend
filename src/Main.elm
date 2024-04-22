@@ -8,7 +8,7 @@ import ArtistsWithAlbums exposing (albumStorage)
 import AssocList as Dict exposing (Dict)
 import Browser
 import Debug
-import Html exposing (Html, a, div, img, text)
+import Html exposing (Html, div, img, text)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
 import List.Extra as List
@@ -16,6 +16,7 @@ import Platform.Cmd as Cmd
 import Random
 import Random.List
 import Regex
+import TextRessources
 
 
 defaultArtistShortName : String
@@ -24,6 +25,10 @@ defaultArtistShortName =
     |> List.head
     |> Maybe.map (\a -> a.artist.httpFriendlyShortName)
     |> Maybe.withDefault "<could not set defaultArtistShortName, is data available?>"
+
+
+defaultText : TextRessources.Text
+defaultText = TextRessources.englishText
 
 
 type alias Flags =
@@ -41,6 +46,7 @@ type alias Model =
     , isInitialized : Bool
     , currentArtist : Maybe ArtistInfo
     , isArtistOverlayOpen : Bool
+    , text : TextRessources.Text
     }
 
 
@@ -53,14 +59,25 @@ port fetchBlacklisted : () -> Cmd msg
 port setBlacklistedAlbums : List String -> Cmd msg
 
 
+port browserLanguageReceiver : (String -> msg) -> Sub msg
+
+
+port fetchBrowserLanguage : () -> Cmd msg
+
+
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    blacklistReceiver GotBlacklist
+    Sub.batch
+    [ blacklistReceiver GotBlacklist
+    , browserLanguageReceiver GotBrowserLanguage
+    ]
 
 
-emptyModel : String -> Maybe Blacklist -> Model
-emptyModel artistShortName blacklistOption =
+emptyModel : String -> Maybe Blacklist -> Maybe TextRessources.Text -> Model
+emptyModel artistShortName blacklistOption language =
     let
+        text =  language |> Maybe.withDefault defaultText
+
         artistWithAlbums =
             ArtistsWithAlbums.albumStorage
                 |> List.find (\a -> (a.artist.httpFriendlyShortName |> String.toLower) == (artistShortName |> String.toLower))
@@ -104,6 +121,7 @@ emptyModel artistShortName blacklistOption =
     , isInitialized = False
     , currentArtist = artist
     , isArtistOverlayOpen = False
+    , text = text
     }
 
 
@@ -120,17 +138,19 @@ main =
 type Msg
     = Reset (Maybe ArtistInfo)
     | GotBlacklist (List String)
+    | GotBrowserLanguage String
     | NextAlbum
     | PreviousAlbum
     | AlbumsShuffled (List Album)
     | BlackListAlbum ( ArtistIds.ArtistId, AlbumIds.AlbumId )
-    | OpenArtistOverlay ArtistInfo
+    | OpenArtistOverlay
     | CloseArtistOverlay ArtistInfo
+    | ToggleLanguage
 
 
 init : Flags -> ( Model, Cmd Msg )
 init _ =
-    ( emptyModel defaultArtistShortName Nothing, fetchBlacklisted () )
+    ( emptyModel defaultArtistShortName Nothing Nothing, Cmd.batch [ fetchBlacklisted (), fetchBrowserLanguage () ] )
 
 
 startShuffleAlbums : Array Album -> Cmd Msg
@@ -142,8 +162,8 @@ startShuffleAlbums albums =
     generator |> Random.generate AlbumsShuffled
 
 
-resetModel : Maybe ArtistInfo -> Maybe Blacklist -> ( Model, Cmd Msg )
-resetModel artist blacklist =
+resetModel : Maybe ArtistInfo -> Maybe Blacklist -> TextRessources.Text -> ( Model, Cmd Msg )
+resetModel artist blacklist text =
     let
         artistShortname =
             artist
@@ -151,7 +171,7 @@ resetModel artist blacklist =
                 |> Maybe.withDefault defaultArtistShortName
 
         resettedModel =
-            emptyModel artistShortname blacklist
+            emptyModel artistShortname blacklist (Just text)
 
         serializedBlacklist =
             blacklist |> Maybe.map blackListToStringList |> Maybe.withDefault []
@@ -236,7 +256,7 @@ update msg model =
                 artistId =
                     artist |> Maybe.map (\a -> a.id) |> Maybe.withDefault ArtistIds.empty
             in
-            resetModel artist (model.blacklistedAlbums |> removeFromBlacklist artistId |> Just)
+            resetModel artist (model.blacklistedAlbums |> removeFromBlacklist artistId |> Just) model.text
 
         GotBlacklist strings ->
             let
@@ -253,6 +273,18 @@ update msg model =
                     model.albums |> Array.filter (\a -> not (blacklistedForCurrentArtist |> List.member a.id))
             in
             ( { model | blacklistedAlbums = blacklist, albums = filteredAlbums }, filteredAlbums |> startShuffleAlbums )
+            
+
+        GotBrowserLanguage rawLanguage ->
+            let
+                language =
+                    case (if rawLanguage == "" then "en" else rawLanguage) of
+                        "en" -> TextRessources.englishText
+                        "de" -> TextRessources.germanText
+                        _ -> TextRessources.englishText
+            in
+            ( { model | text = language }, Cmd.none )
+
 
         NextAlbum ->
             let
@@ -295,7 +327,7 @@ update msg model =
         AlbumsShuffled albums ->
             ( { model | albums = albums |> Array.fromList, isInitialized = True }, Cmd.none )
 
-        OpenArtistOverlay currentArtist ->
+        OpenArtistOverlay ->
             ( { model | isArtistOverlayOpen = True }, Cmd.none )
 
         CloseArtistOverlay newArtist ->
@@ -303,7 +335,20 @@ update msg model =
                 ( { model | isArtistOverlayOpen = False }, Cmd.none )
 
             else
-                resetModel (Just newArtist) (Just model.blacklistedAlbums)
+                resetModel (Just newArtist) (Just model.blacklistedAlbums) model.text
+
+        ToggleLanguage ->
+            let
+                nextLanguage =
+                    TextRessources.all
+                    |> Array.toIndexedList
+                    |> List.find (\(_, t) -> t == model.text)
+                    |> Maybe.map Tuple.first 
+                    |> Maybe.andThen (\i -> TextRessources.all |> Array.get (modBy (TextRessources.all |> Array.length) (i + 1)))
+                    |> Maybe.withDefault TextRessources.fallback
+
+            in
+            ( { model | text = nextLanguage }, Cmd.none )
 
 
 tryAlbumNumberFrom : String -> Maybe Int
@@ -343,24 +388,24 @@ view model =
     then
         div
             [ class "white-text status-text-container" ]
-            [ a [ onClick (Reset model.currentArtist), class "status-text pointer" ] [ text ("No albums available but " ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ " are blacklisteed. Clear blacklist?") ] ]
+            [ Html.a [ onClick (Reset model.currentArtist), class "status-text pointer" ] [ text (model.text.no_albums_available_but ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ model.text.are_blacklisted_clear_blocklist_question) ] ]
 
     else
         case ( model.albums |> Array.get model.current, model.currentArtist ) of
             ( Nothing, Just _ ) ->
                 div
                     [ class "white-text status-text-container" ]
-                    [ div [ class "status-text" ] [ text "No album data available :(" ] ]
+                    [ div [ class "status-text" ] [ text model.text.no_album_data_available ] ]
 
             ( Just _, Nothing ) ->
                 div
                     [ class "white-text status-text-container" ]
-                    [ div [ class "status-text" ] [ text "No artist data available :(" ] ]
+                    [ div [ class "status-text" ] [ text model.text.no_artist_data_available ] ]
 
             ( Nothing, Nothing ) ->
                 div
                     [ class "white-text status-text-container" ]
-                    [ div [ class "status-text" ] [ text "Neither artist nor album data available :(" ] ]
+                    [ div [ class "status-text" ] [ text model.text.no_album_and_no_artist_data_available ] ]
 
             ( Just album, Just artist ) ->
                 let
@@ -401,9 +446,12 @@ view model =
                     githubLink =
                         Html.a [ class "mr-05 p-15", href "https://github.com/b0wter/shuffler-frontend" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
 
+                    language =
+                        Html.a [ class "non-styled-link p-15", style "font-size" "1.5rem", onClick ToggleLanguage, href "#" ] [ text model.text.flag ]
+
                     artistImage =
-                        a
-                            [ class "ml-05 p-15 d-flex align-items-center white-text pointer", onClick (OpenArtistOverlay artist) ]
+                        Html.a
+                            [ class "ml-05 p-15 d-flex align-items-center white-text pointer", onClick OpenArtistOverlay ]
                             [ img [ class "social-button", src artist.icon, alt ("Current artist: " ++ artist.name) ] []
                             , div [ class "ml-025", style "font-size" "9px" ] [ text "▼" ]
                             ]
@@ -485,7 +533,7 @@ view model =
                                 [ id "social-links-container" ]
                                 [ div
                                     [ class "d-flex justify-content-center align-items-center" ]
-                                    [ githubLink, artistImage ]
+                                    [ githubLink, language, artistImage ]
 
                                 {- xLink ] -}
                                 ]
@@ -496,7 +544,7 @@ view model =
                                 ]
                                 [ div
                                     [ id "cover-container", class "", style "width" coverMaxWidth, style "position" "relative", style "height" "100%" ]
-                                    [ a
+                                    [ Html.a
                                         [ href album.urlToOpen ]
                                         [ img
                                             [ id "cover-img"
@@ -527,27 +575,27 @@ view model =
                                 [ class "d-flex align-items-center justify-content-center"
                                 , style "z-index" "1"
                                 ]
-                                [ a [ href "#", onClick PreviousAlbum ] [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/next.svg" ] [] ]
-                                , a [ href album.urlToOpen ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
-                                , a [ href "#", onClick NextAlbum ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
+                                [ Html.a [ href "#", onClick PreviousAlbum ] [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/next.svg" ] [] ]
+                                , Html.a [ href album.urlToOpen ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
+                                , Html.a [ href "#", onClick NextAlbum ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
                                 ]
                             , div
                                 [ style "text-decoration" "none", style "color" "white" ]
                                 [ div []
                                     [ div
                                         [ style "font-weight" "1000", style "height" "4rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center pointer urbanist-font" ]
-                                        [ a
+                                        [ Html.a
                                             [ onClick (BlackListAlbum ( artist.id, album.id )), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
-                                            [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt "block current album" ] [], div [] [ text "block" ] ]
+                                            [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt model.text.block_current_album ] [], div [] [ text model.text.block ] ]
                                         , if numberOfBlacklistedAlbums == 0 then
-                                            a
+                                            Html.a
                                                 [ class "z-2 small-text non-styled-link d-flex align-items-center ml-10 disabled" ]
-                                                [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist" ] [], div [] [ text "clear blocked" ] ]
+                                                [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt model.text.clear_blocked ] [], div [] [ text model.text.clear_blocked ] ]
 
                                           else
-                                            a
+                                            Html.a
                                                 [ onClick (Reset model.currentArtist), class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
-                                                [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt "clear album blacklist" ] [], div [] [ text ("clear blocked (" ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ ")") ] ]
+                                                [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt model.text.clear_blocked ] [], div [] [ text (model.text.clear_blocked ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ ")") ] ]
                                         ]
                                     ]
                                 ]

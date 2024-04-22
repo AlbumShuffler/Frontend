@@ -5343,7 +5343,7 @@ var $elm$core$Task$perform = F2(
 				A2($elm$core$Task$map, toMessage, task)));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $author$project$Main$defaultArtistShortName = 'ddf';
+var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $author$project$AlbumIds$AlbumId = function (a) {
 	return {$: 'AlbumId', a: a};
 };
@@ -14553,6 +14553,43 @@ var $author$project$ArtistsWithAlbums$albumStorage = _List_fromArray(
 		{albums: $author$project$AlbumStoragePw$albumStorage, artist: $author$project$AlbumStoragePw$artistInfo},
 		{albums: $author$project$AlbumStorageFf$albumStorage, artist: $author$project$AlbumStorageFf$artistInfo}
 	]);
+var $elm$core$List$head = function (list) {
+	if (list.b) {
+		var x = list.a;
+		var xs = list.b;
+		return $elm$core$Maybe$Just(x);
+	} else {
+		return $elm$core$Maybe$Nothing;
+	}
+};
+var $elm$core$Maybe$map = F2(
+	function (f, maybe) {
+		if (maybe.$ === 'Just') {
+			var value = maybe.a;
+			return $elm$core$Maybe$Just(
+				f(value));
+		} else {
+			return $elm$core$Maybe$Nothing;
+		}
+	});
+var $elm$core$Maybe$withDefault = F2(
+	function (_default, maybe) {
+		if (maybe.$ === 'Just') {
+			var value = maybe.a;
+			return value;
+		} else {
+			return _default;
+		}
+	});
+var $author$project$Main$defaultArtistShortName = A2(
+	$elm$core$Maybe$withDefault,
+	'<could not set defaultArtistShortName, is data available?>',
+	A2(
+		$elm$core$Maybe$map,
+		function (a) {
+			return a.artist.httpFriendlyShortName;
+		},
+		$elm$core$List$head($author$project$ArtistsWithAlbums$albumStorage)));
 var $elm$core$List$any = F2(
 	function (isOkay, list) {
 		any:
@@ -14574,6 +14611,8 @@ var $elm$core$List$any = F2(
 			}
 		}
 	});
+var $author$project$TextRessources$englishText = {are_blacklisted_clear_blocklist_question: ' are blacklisted. Clear blacklist?', block: 'block', block_current_album: 'block current album', clear_blocked: 'clear blocked', flag: '🇬🇧', no_album_and_no_artist_data_available: 'Neither artist nor album data available :(', no_album_data_available: 'No album data available :(', no_albums_available_but: 'No albums available but ', no_artist_data_available: 'No artist data available :('};
+var $author$project$Main$defaultText = $author$project$TextRessources$englishText;
 var $author$project$ArtistIds$empty = $author$project$ArtistIds$ArtistId('');
 var $pzp1997$assoc_list$AssocList$D = function (a) {
 	return {$: 'D', a: a};
@@ -14636,16 +14675,6 @@ var $pzp1997$assoc_list$AssocList$get = F2(
 			}
 		}
 	});
-var $elm$core$Maybe$map = F2(
-	function (f, maybe) {
-		if (maybe.$ === 'Just') {
-			var value = maybe.a;
-			return $elm$core$Maybe$Just(
-				f(value));
-		} else {
-			return $elm$core$Maybe$Nothing;
-		}
-	});
 var $elm$core$List$member = F2(
 	function (x, xs) {
 		return A2(
@@ -14657,17 +14686,9 @@ var $elm$core$List$member = F2(
 	});
 var $elm$core$Basics$not = _Basics_not;
 var $elm$core$String$toLower = _String_toLower;
-var $elm$core$Maybe$withDefault = F2(
-	function (_default, maybe) {
-		if (maybe.$ === 'Just') {
-			var value = maybe.a;
-			return value;
-		} else {
-			return _default;
-		}
-	});
-var $author$project$Main$emptyModel = F2(
-	function (artistShortName, blacklistOption) {
+var $author$project$Main$emptyModel = F3(
+	function (artistShortName, blacklistOption, language) {
+		var text = A2($elm$core$Maybe$withDefault, $author$project$Main$defaultText, language);
 		var filteredAlbumNames = _List_fromArray(
 			['Outro', 'liest...', 'liest ...', 'Originalmusik']);
 		var blacklist = A2($elm$core$Maybe$withDefault, $pzp1997$assoc_list$AssocList$empty, blacklistOption);
@@ -14726,7 +14747,7 @@ var $author$project$Main$emptyModel = F2(
 				return !A2($elm$core$List$member, album.id, blacklistedForCurrentArtist);
 			},
 			filteredAlbums);
-		return {albums: filteredNonblacklistedAlbums, blacklistedAlbums: blacklist, current: 0, currentArtist: artist, isArtistOverlayOpen: false, isInitialized: false};
+		return {albums: filteredNonblacklistedAlbums, blacklistedAlbums: blacklist, current: 0, currentArtist: artist, isArtistOverlayOpen: false, isInitialized: false, text: text};
 	});
 var $elm$json$Json$Encode$null = _Json_encodeNull;
 var $author$project$Main$fetchBlacklisted = _Platform_outgoingPort(
@@ -14734,21 +14755,41 @@ var $author$project$Main$fetchBlacklisted = _Platform_outgoingPort(
 	function ($) {
 		return $elm$json$Json$Encode$null;
 	});
+var $author$project$Main$fetchBrowserLanguage = _Platform_outgoingPort(
+	'fetchBrowserLanguage',
+	function ($) {
+		return $elm$json$Json$Encode$null;
+	});
 var $author$project$Main$init = function (_v0) {
 	return _Utils_Tuple2(
-		A2($author$project$Main$emptyModel, $author$project$Main$defaultArtistShortName, $elm$core$Maybe$Nothing),
-		$author$project$Main$fetchBlacklisted(_Utils_Tuple0));
+		A3($author$project$Main$emptyModel, $author$project$Main$defaultArtistShortName, $elm$core$Maybe$Nothing, $elm$core$Maybe$Nothing),
+		$elm$core$Platform$Cmd$batch(
+			_List_fromArray(
+				[
+					$author$project$Main$fetchBlacklisted(_Utils_Tuple0),
+					$author$project$Main$fetchBrowserLanguage(_Utils_Tuple0)
+				])));
 };
 var $author$project$Main$GotBlacklist = function (a) {
 	return {$: 'GotBlacklist', a: a};
 };
+var $author$project$Main$GotBrowserLanguage = function (a) {
+	return {$: 'GotBrowserLanguage', a: a};
+};
+var $elm$core$Platform$Sub$batch = _Platform_batch;
 var $elm$json$Json$Decode$list = _Json_decodeList;
 var $elm$json$Json$Decode$string = _Json_decodeString;
 var $author$project$Main$blacklistReceiver = _Platform_incomingPort(
 	'blacklistReceiver',
 	$elm$json$Json$Decode$list($elm$json$Json$Decode$string));
+var $author$project$Main$browserLanguageReceiver = _Platform_incomingPort('browserLanguageReceiver', $elm$json$Json$Decode$string);
 var $author$project$Main$subscriptions = function (_v0) {
-	return $author$project$Main$blacklistReceiver($author$project$Main$GotBlacklist);
+	return $elm$core$Platform$Sub$batch(
+		_List_fromArray(
+			[
+				$author$project$Main$blacklistReceiver($author$project$Main$GotBlacklist),
+				$author$project$Main$browserLanguageReceiver($author$project$Main$GotBrowserLanguage)
+			]));
 };
 var $elm$core$List$filter = F2(
 	function (isGood, list) {
@@ -14803,6 +14844,19 @@ var $author$project$Main$addToBlacklist = F3(
 				dict);
 		}
 	});
+var $author$project$TextRessources$germanText = {are_blacklisted_clear_blocklist_question: ' sind blockiert. Blockliste löschen?', block: 'blocken', block_current_album: 'aktuelles Album blockieren', clear_blocked: 'Blockliste löschen', flag: '🇩🇪', no_album_and_no_artist_data_available: 'Weder Album- noch Interpreteninformationen verfügbar :(', no_album_data_available: 'Keine Albuminformationen verfügbar :(', no_albums_available_but: 'Keine Albenverfügbar, aber', no_artist_data_available: 'Keine Interpreteninformationen verfügbar :('};
+var $author$project$TextRessources$all = $elm$core$Array$fromList(
+	_List_fromArray(
+		[$author$project$TextRessources$germanText, $author$project$TextRessources$englishText]));
+var $elm$core$Maybe$andThen = F2(
+	function (callback, maybeValue) {
+		if (maybeValue.$ === 'Just') {
+			var value = maybeValue.a;
+			return callback(value);
+		} else {
+			return $elm$core$Maybe$Nothing;
+		}
+	});
 var $elm$core$List$maybeCons = F3(
 	function (f, mx, xs) {
 		var _v0 = f(mx);
@@ -14832,15 +14886,6 @@ var $pzp1997$assoc_list$AssocList$fromList = function (alist) {
 			}),
 		$pzp1997$assoc_list$AssocList$D(_List_Nil),
 		alist);
-};
-var $elm$core$List$head = function (list) {
-	if (list.b) {
-		var x = list.a;
-		var xs = list.b;
-		return $elm$core$Maybe$Just(x);
-	} else {
-		return $elm$core$Maybe$Nothing;
-	}
 };
 var $elm$core$Tuple$second = function (_v0) {
 	var y = _v0.b;
@@ -14953,13 +14998,55 @@ var $author$project$Main$blackListToStringList = function (blacklist) {
 			},
 			pairs));
 };
+var $author$project$TextRessources$fallback = $author$project$TextRessources$englishText;
+var $elm$core$Bitwise$and = _Bitwise_and;
+var $elm$core$Bitwise$shiftRightZfBy = _Bitwise_shiftRightZfBy;
+var $elm$core$Array$bitMask = 4294967295 >>> (32 - $elm$core$Array$shiftStep);
+var $elm$core$Basics$ge = _Utils_ge;
+var $elm$core$Elm$JsArray$unsafeGet = _JsArray_unsafeGet;
+var $elm$core$Array$getHelp = F3(
+	function (shift, index, tree) {
+		getHelp:
+		while (true) {
+			var pos = $elm$core$Array$bitMask & (index >>> shift);
+			var _v0 = A2($elm$core$Elm$JsArray$unsafeGet, pos, tree);
+			if (_v0.$ === 'SubTree') {
+				var subTree = _v0.a;
+				var $temp$shift = shift - $elm$core$Array$shiftStep,
+					$temp$index = index,
+					$temp$tree = subTree;
+				shift = $temp$shift;
+				index = $temp$index;
+				tree = $temp$tree;
+				continue getHelp;
+			} else {
+				var values = _v0.a;
+				return A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, values);
+			}
+		}
+	});
+var $elm$core$Bitwise$shiftLeftBy = _Bitwise_shiftLeftBy;
+var $elm$core$Array$tailIndex = function (len) {
+	return (len >>> 5) << 5;
+};
+var $elm$core$Array$get = F2(
+	function (index, _v0) {
+		var len = _v0.a;
+		var startShift = _v0.b;
+		var tree = _v0.c;
+		var tail = _v0.d;
+		return ((index < 0) || (_Utils_cmp(index, len) > -1)) ? $elm$core$Maybe$Nothing : ((_Utils_cmp(
+			index,
+			$elm$core$Array$tailIndex(len)) > -1) ? $elm$core$Maybe$Just(
+			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
+			A3($elm$core$Array$getHelp, startShift, index, tree)));
+	});
 var $elm$core$Array$length = function (_v0) {
 	var len = _v0.a;
 	return len;
 };
 var $elm$core$Debug$log = _Debug_log;
 var $elm$core$Basics$modBy = _Basics_modBy;
-var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$Main$removeFromBlacklist = F2(
 	function (artistId, blacklist) {
@@ -14988,7 +15075,6 @@ var $elm$random$Random$Seed = F2(
 	function (a, b) {
 		return {$: 'Seed', a: a, b: b};
 	});
-var $elm$core$Bitwise$shiftRightZfBy = _Bitwise_shiftRightZfBy;
 var $elm$random$Random$next = function (_v0) {
 	var state0 = _v0.a;
 	var incr = _v0.b;
@@ -15088,7 +15174,6 @@ var $elm$random$Random$generate = F2(
 			$elm$random$Random$Generate(
 				A2($elm$random$Random$map, tagger, generator)));
 	});
-var $elm$core$Bitwise$and = _Bitwise_and;
 var $elm$core$Basics$negate = function (n) {
 	return -n;
 };
@@ -15205,8 +15290,8 @@ var $author$project$Main$startShuffleAlbums = function (albums) {
 		$elm$core$Array$toList(albums));
 	return A2($elm$random$Random$generate, $author$project$Main$AlbumsShuffled, generator);
 };
-var $author$project$Main$resetModel = F2(
-	function (artist, blacklist) {
+var $author$project$Main$resetModel = F3(
+	function (artist, blacklist, text) {
 		var serializedBlacklist = A2(
 			$elm$core$Maybe$withDefault,
 			_List_Nil,
@@ -15220,7 +15305,11 @@ var $author$project$Main$resetModel = F2(
 					return a.httpFriendlyShortName;
 				},
 				artist));
-		var resettedModel = A2($author$project$Main$emptyModel, artistShortname, blacklist);
+		var resettedModel = A3(
+			$author$project$Main$emptyModel,
+			artistShortname,
+			blacklist,
+			$elm$core$Maybe$Just(text));
 		return _Utils_Tuple2(
 			resettedModel,
 			$elm$core$Platform$Cmd$batch(
@@ -15230,6 +15319,25 @@ var $author$project$Main$resetModel = F2(
 						$author$project$Main$startShuffleAlbums(resettedModel.albums)
 					])));
 	});
+var $elm$core$Array$toIndexedList = function (array) {
+	var len = array.a;
+	var helper = F2(
+		function (entry, _v0) {
+			var index = _v0.a;
+			var list = _v0.b;
+			return _Utils_Tuple2(
+				index - 1,
+				A2(
+					$elm$core$List$cons,
+					_Utils_Tuple2(index, entry),
+					list));
+		});
+	return A3(
+		$elm$core$Array$foldr,
+		helper,
+		_Utils_Tuple2(len - 1, _List_Nil),
+		array).b;
+};
 var $author$project$Main$update = F2(
 	function (msg, model) {
 		switch (msg.$) {
@@ -15244,11 +15352,12 @@ var $author$project$Main$update = F2(
 							return a.id;
 						},
 						artist));
-				return A2(
+				return A3(
 					$author$project$Main$resetModel,
 					artist,
 					$elm$core$Maybe$Just(
-						A2($author$project$Main$removeFromBlacklist, artistId, model.blacklistedAlbums)));
+						A2($author$project$Main$removeFromBlacklist, artistId, model.blacklistedAlbums)),
+					model.text);
 			case 'GotBlacklist':
 				var strings = msg.a;
 				var blacklist = $author$project$Main$blackListFromStringList(strings);
@@ -15276,6 +15385,24 @@ var $author$project$Main$update = F2(
 						model,
 						{albums: filteredAlbums, blacklistedAlbums: blacklist}),
 					$author$project$Main$startShuffleAlbums(filteredAlbums));
+			case 'GotBrowserLanguage':
+				var rawLanguage = msg.a;
+				var language = function () {
+					var _v1 = (rawLanguage === '') ? 'en' : rawLanguage;
+					switch (_v1) {
+						case 'en':
+							return $author$project$TextRessources$englishText;
+						case 'de':
+							return $author$project$TextRessources$germanText;
+						default:
+							return $author$project$TextRessources$englishText;
+					}
+				}();
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{text: language}),
+					$elm$core$Platform$Cmd$none);
 			case 'NextAlbum':
 				var newModel = _Utils_update(
 					model,
@@ -15297,9 +15424,9 @@ var $author$project$Main$update = F2(
 					});
 				return _Utils_Tuple2(newModel, $elm$core$Platform$Cmd$none);
 			case 'BlackListAlbum':
-				var _v1 = msg.a;
-				var artistId = _v1.a;
-				var albumId = _v1.b;
+				var _v2 = msg.a;
+				var artistId = _v2.a;
+				var albumId = _v2.b;
 				var updatedModel = _Utils_update(
 					model,
 					{
@@ -15315,7 +15442,7 @@ var $author$project$Main$update = F2(
 					var mapped = $author$project$Main$blackListToStringList(updatedModel.blacklistedAlbums);
 					return $author$project$Main$setBlacklistedAlbums(mapped);
 				}();
-				var _v2 = A2($elm$core$Debug$log, 'blacklist', model.blacklistedAlbums);
+				var _v3 = A2($elm$core$Debug$log, 'blacklist', model.blacklistedAlbums);
 				return _Utils_Tuple2(updatedModel, newCmd);
 			case 'AlbumsShuffled':
 				var albums = msg.a;
@@ -15328,13 +15455,12 @@ var $author$project$Main$update = F2(
 						}),
 					$elm$core$Platform$Cmd$none);
 			case 'OpenArtistOverlay':
-				var currentArtist = msg.a;
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
 						{isArtistOverlayOpen: true}),
 					$elm$core$Platform$Cmd$none);
-			default:
+			case 'CloseArtistOverlay':
 				var newArtist = msg.a;
 				return _Utils_eq(
 					$elm$core$Maybe$Just(newArtist),
@@ -15342,10 +15468,41 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{isArtistOverlayOpen: false}),
-					$elm$core$Platform$Cmd$none) : A2(
+					$elm$core$Platform$Cmd$none) : A3(
 					$author$project$Main$resetModel,
 					$elm$core$Maybe$Just(newArtist),
-					$elm$core$Maybe$Just(model.blacklistedAlbums));
+					$elm$core$Maybe$Just(model.blacklistedAlbums),
+					model.text);
+			default:
+				var nextLanguage = A2(
+					$elm$core$Maybe$withDefault,
+					$author$project$TextRessources$fallback,
+					A2(
+						$elm$core$Maybe$andThen,
+						function (i) {
+							return A2(
+								$elm$core$Array$get,
+								A2(
+									$elm$core$Basics$modBy,
+									$elm$core$Array$length($author$project$TextRessources$all),
+									i + 1),
+								$author$project$TextRessources$all);
+						},
+						A2(
+							$elm$core$Maybe$map,
+							$elm$core$Tuple$first,
+							A2(
+								$elm_community$list_extra$List$Extra$find,
+								function (_v4) {
+									var t = _v4.b;
+									return _Utils_eq(t, model.text);
+								},
+								$elm$core$Array$toIndexedList($author$project$TextRessources$all)))));
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{text: nextLanguage}),
+					$elm$core$Platform$Cmd$none);
 		}
 	});
 var $author$project$Main$BlackListAlbum = function (a) {
@@ -15355,13 +15512,12 @@ var $author$project$Main$CloseArtistOverlay = function (a) {
 	return {$: 'CloseArtistOverlay', a: a};
 };
 var $author$project$Main$NextAlbum = {$: 'NextAlbum'};
-var $author$project$Main$OpenArtistOverlay = function (a) {
-	return {$: 'OpenArtistOverlay', a: a};
-};
+var $author$project$Main$OpenArtistOverlay = {$: 'OpenArtistOverlay'};
 var $author$project$Main$PreviousAlbum = {$: 'PreviousAlbum'};
 var $author$project$Main$Reset = function (a) {
 	return {$: 'Reset', a: a};
 };
+var $author$project$Main$ToggleLanguage = {$: 'ToggleLanguage'};
 var $elm$html$Html$a = _VirtualDom_node('a');
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -15382,46 +15538,6 @@ var $elm$html$Html$Attributes$attribute = $elm$virtual_dom$VirtualDom$attribute;
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$core$String$fromFloat = _String_fromNumber;
-var $elm$core$Basics$ge = _Utils_ge;
-var $elm$core$Array$bitMask = 4294967295 >>> (32 - $elm$core$Array$shiftStep);
-var $elm$core$Elm$JsArray$unsafeGet = _JsArray_unsafeGet;
-var $elm$core$Array$getHelp = F3(
-	function (shift, index, tree) {
-		getHelp:
-		while (true) {
-			var pos = $elm$core$Array$bitMask & (index >>> shift);
-			var _v0 = A2($elm$core$Elm$JsArray$unsafeGet, pos, tree);
-			if (_v0.$ === 'SubTree') {
-				var subTree = _v0.a;
-				var $temp$shift = shift - $elm$core$Array$shiftStep,
-					$temp$index = index,
-					$temp$tree = subTree;
-				shift = $temp$shift;
-				index = $temp$index;
-				tree = $temp$tree;
-				continue getHelp;
-			} else {
-				var values = _v0.a;
-				return A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, values);
-			}
-		}
-	});
-var $elm$core$Bitwise$shiftLeftBy = _Bitwise_shiftLeftBy;
-var $elm$core$Array$tailIndex = function (len) {
-	return (len >>> 5) << 5;
-};
-var $elm$core$Array$get = F2(
-	function (index, _v0) {
-		var len = _v0.a;
-		var startShift = _v0.b;
-		var tree = _v0.c;
-		var tail = _v0.d;
-		return ((index < 0) || (_Utils_cmp(index, len) > -1)) ? $elm$core$Maybe$Nothing : ((_Utils_cmp(
-			index,
-			$elm$core$Array$tailIndex(len)) > -1) ? $elm$core$Maybe$Just(
-			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
-			A3($elm$core$Array$getHelp, startShift, index, tree)));
-	});
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -15490,15 +15606,6 @@ var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $elm$core$Maybe$andThen = F2(
-	function (callback, maybeValue) {
-		if (maybeValue.$ === 'Just') {
-			var value = maybeValue.a;
-			return callback(value);
-		} else {
-			return $elm$core$Maybe$Nothing;
-		}
-	});
 var $elm$regex$Regex$Match = F4(
 	function (match, index, number, submatches) {
 		return {index: index, match: match, number: number, submatches: submatches};
@@ -15584,7 +15691,11 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$text(
-								'No albums available but ' + ($elm$core$String$fromInt(numberOfBlacklistedAlbums) + ' are blacklisteed. Clear blacklist?'))
+								_Utils_ap(
+									model.text.no_albums_available_but,
+									_Utils_ap(
+										$elm$core$String$fromInt(numberOfBlacklistedAlbums),
+										model.text.are_blacklisted_clear_blocklist_question)))
 							]))
 					]));
 		} else {
@@ -15610,7 +15721,7 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('No album data available :(')
+										$elm$html$Html$text(model.text.no_album_data_available)
 									]))
 							]));
 				} else {
@@ -15632,7 +15743,7 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('Neither artist nor album data available :(')
+										$elm$html$Html$text(model.text.no_album_and_no_artist_data_available)
 									]))
 							]));
 				}
@@ -15655,7 +15766,7 @@ var $author$project$Main$view = function (model) {
 									]),
 								_List_fromArray(
 									[
-										$elm$html$Html$text('No artist data available :(')
+										$elm$html$Html$text(model.text.no_artist_data_available)
 									]))
 							]));
 				} else {
@@ -15738,6 +15849,19 @@ var $author$project$Main$view = function (model) {
 								return a.width;
 							},
 							album.covers));
+					var language = A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('non-styled-link p-15'),
+								A2($elm$html$Html$Attributes$style, 'font-size', '1.5rem'),
+								$elm$html$Html$Events$onClick($author$project$Main$ToggleLanguage),
+								$elm$html$Html$Attributes$href('#')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text(model.text.flag)
+							]));
 					var githubLink = A2(
 						$elm$html$Html$a,
 						_List_fromArray(
@@ -15772,8 +15896,7 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$Attributes$class('ml-05 p-15 d-flex align-items-center white-text pointer'),
-								$elm$html$Html$Events$onClick(
-								$author$project$Main$OpenArtistOverlay(artist))
+								$elm$html$Html$Events$onClick($author$project$Main$OpenArtistOverlay)
 							]),
 						_List_fromArray(
 							[
@@ -15851,7 +15974,7 @@ var $author$project$Main$view = function (model) {
 																$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center')
 															]),
 														_List_fromArray(
-															[githubLink, artistImage]))
+															[githubLink, language, artistImage]))
 													])),
 												A2(
 												$elm$html$Html$div,
@@ -16038,7 +16161,7 @@ var $author$project$Main$view = function (model) {
 																						A2($elm$html$Html$Attributes$style, 'height', '2rem'),
 																						$elm$html$Html$Attributes$class('mr-05'),
 																						$elm$html$Html$Attributes$src('img/block.svg'),
-																						$elm$html$Html$Attributes$alt('block current album')
+																						$elm$html$Html$Attributes$alt(model.text.block_current_album)
 																					]),
 																				_List_Nil),
 																				A2(
@@ -16046,7 +16169,7 @@ var $author$project$Main$view = function (model) {
 																				_List_Nil,
 																				_List_fromArray(
 																					[
-																						$elm$html$Html$text('block')
+																						$elm$html$Html$text(model.text.block)
 																					]))
 																			])),
 																		(!numberOfBlacklistedAlbums) ? A2(
@@ -16064,7 +16187,7 @@ var $author$project$Main$view = function (model) {
 																						A2($elm$html$Html$Attributes$style, 'height', '2rem'),
 																						$elm$html$Html$Attributes$class('mr-05'),
 																						$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
-																						$elm$html$Html$Attributes$alt('clear album blacklist')
+																						$elm$html$Html$Attributes$alt(model.text.clear_blocked)
 																					]),
 																				_List_Nil),
 																				A2(
@@ -16072,7 +16195,7 @@ var $author$project$Main$view = function (model) {
 																				_List_Nil,
 																				_List_fromArray(
 																					[
-																						$elm$html$Html$text('clear blocked')
+																						$elm$html$Html$text(model.text.clear_blocked)
 																					]))
 																			])) : A2(
 																		$elm$html$Html$a,
@@ -16091,7 +16214,7 @@ var $author$project$Main$view = function (model) {
 																						A2($elm$html$Html$Attributes$style, 'height', '2rem'),
 																						$elm$html$Html$Attributes$class('mr-05'),
 																						$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
-																						$elm$html$Html$Attributes$alt('clear album blacklist')
+																						$elm$html$Html$Attributes$alt(model.text.clear_blocked)
 																					]),
 																				_List_Nil),
 																				A2(
@@ -16100,7 +16223,7 @@ var $author$project$Main$view = function (model) {
 																				_List_fromArray(
 																					[
 																						$elm$html$Html$text(
-																						'clear blocked (' + ($elm$core$String$fromInt(numberOfBlacklistedAlbums) + ')'))
+																						model.text.clear_blocked + ($elm$core$String$fromInt(numberOfBlacklistedAlbums) + ')'))
 																					]))
 																			]))
 																	]))

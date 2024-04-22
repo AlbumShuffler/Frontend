@@ -67,6 +67,19 @@
     }
     app.ports.fetchBlacklisted.subscribe(fetchBlacklistedAlbums);
 
+    function fetchBrowserLanguage() {
+      const languages = navigator.languages;
+      languages.forEach((language) => {
+        if (language.startsWith('de')) {
+          app.ports.languageReceiver.send('de');
+        } else if (language.startsWith('en')) {
+          app.ports.browserLanguageReceiver.send('en');
+        }
+      });
+      app.ports.browserLanguageReceiver.send("");
+    }
+    app.ports.fetchBrowserLanguage.subscribe(fetchBrowserLanguage);
+
   </script>
 </body>
 
