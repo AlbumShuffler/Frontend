@@ -16,6 +16,7 @@ import Random
 import Random.List
 import Regex
 import TextRessources
+import Debug
 
 
 defaultArtistShortName : String
@@ -54,6 +55,9 @@ type alias Model =
 
 
 port setBlacklistedAlbums : List String -> Cmd msg
+
+
+port setLastSelectedArtist : String -> Cmd msg
 
 
 subscriptions : Model -> Sub Msg
@@ -170,8 +174,14 @@ resetModel artist blacklist text =
 
         serializedBlacklist =
             blacklist |> Maybe.map blackListToStringList |> Maybe.withDefault []
+
+        commands =
+            [ serializedBlacklist |> setBlacklistedAlbums
+            , resettedModel.albums |> startShuffleAlbums
+            , artistShortname |> setLastSelectedArtist
+            ]
     in
-    ( resettedModel, Cmd.batch [ serializedBlacklist |> setBlacklistedAlbums, resettedModel.albums |> startShuffleAlbums ] )
+    ( resettedModel, Cmd.batch commands )
 
 
 addToBlacklist : ArtistIds.ArtistId -> AlbumIds.AlbumId -> Blacklist -> Blacklist

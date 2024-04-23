@@ -15274,6 +15274,7 @@ var $elm$json$Json$Encode$string = _Json_wrap;
 var $author$project$Main$setBlacklistedAlbums = _Platform_outgoingPort(
 	'setBlacklistedAlbums',
 	$elm$json$Json$Encode$list($elm$json$Json$Encode$string));
+var $author$project$Main$setLastSelectedArtist = _Platform_outgoingPort('setLastSelectedArtist', $elm$json$Json$Encode$string);
 var $author$project$Main$resetModel = F3(
 	function (artist, blacklist, text) {
 		var serializedBlacklist = A2(
@@ -15294,14 +15295,15 @@ var $author$project$Main$resetModel = F3(
 			artistShortname,
 			blacklist,
 			$elm$core$Maybe$Just(text));
+		var commands = _List_fromArray(
+			[
+				$author$project$Main$setBlacklistedAlbums(serializedBlacklist),
+				$author$project$Main$startShuffleAlbums(resettedModel.albums),
+				$author$project$Main$setLastSelectedArtist(artistShortname)
+			]);
 		return _Utils_Tuple2(
 			resettedModel,
-			$elm$core$Platform$Cmd$batch(
-				_List_fromArray(
-					[
-						$author$project$Main$setBlacklistedAlbums(serializedBlacklist),
-						$author$project$Main$startShuffleAlbums(resettedModel.albums)
-					])));
+			$elm$core$Platform$Cmd$batch(commands));
 	});
 var $elm$core$Array$toIndexedList = function (array) {
 	var len = array.a;

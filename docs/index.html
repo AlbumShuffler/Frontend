@@ -40,6 +40,7 @@
   <div id="elm-node"></div>
   <script>
     const blacklistedAlbumsKey = "blacklisted-albums";
+    const lastSelectedArtistKey = "lastSelectedArtist";
     
     const flags = {
       blockedAlbums: fetchBlacklistedAlbums(),
@@ -96,13 +97,18 @@
     }
 
     function fetchLastSelectedArtist() {
-      const artist = localStorage.getItem('preferredArtist');
+      const artist = localStorage.getItem(lastSelectedArtistKey);
       if (artist) {
-        app.ports.preferredArtistReceiver.send(artist);
+        return artist;
       } else {
         return "";
       }
     }
+
+    function setLastSelectedArtist(httpFriendlyShortName) {
+      localStorage.setItem(lastSelectedArtistKey, httpFriendlyShortName);
+    }
+    app.ports.setLastSelectedArtist.subscribe(setLastSelectedArtist);
 
   </script>
 </body>
