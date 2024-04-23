@@ -80,271 +80,6 @@ function A9(fun, a, b, c, d, e, f, g, h, i) {
 console.warn('Compiled in DEV mode. Follow the advice at https://elm-lang.org/0.19.1/optimize for better performance and smaller assets.');
 
 
-// EQUALITY
-
-function _Utils_eq(x, y)
-{
-	for (
-		var pair, stack = [], isEqual = _Utils_eqHelp(x, y, 0, stack);
-		isEqual && (pair = stack.pop());
-		isEqual = _Utils_eqHelp(pair.a, pair.b, 0, stack)
-		)
-	{}
-
-	return isEqual;
-}
-
-function _Utils_eqHelp(x, y, depth, stack)
-{
-	if (x === y)
-	{
-		return true;
-	}
-
-	if (typeof x !== 'object' || x === null || y === null)
-	{
-		typeof x === 'function' && _Debug_crash(5);
-		return false;
-	}
-
-	if (depth > 100)
-	{
-		stack.push(_Utils_Tuple2(x,y));
-		return true;
-	}
-
-	/**/
-	if (x.$ === 'Set_elm_builtin')
-	{
-		x = $elm$core$Set$toList(x);
-		y = $elm$core$Set$toList(y);
-	}
-	if (x.$ === 'RBNode_elm_builtin' || x.$ === 'RBEmpty_elm_builtin')
-	{
-		x = $elm$core$Dict$toList(x);
-		y = $elm$core$Dict$toList(y);
-	}
-	//*/
-
-	/**_UNUSED/
-	if (x.$ < 0)
-	{
-		x = $elm$core$Dict$toList(x);
-		y = $elm$core$Dict$toList(y);
-	}
-	//*/
-
-	for (var key in x)
-	{
-		if (!_Utils_eqHelp(x[key], y[key], depth + 1, stack))
-		{
-			return false;
-		}
-	}
-	return true;
-}
-
-var _Utils_equal = F2(_Utils_eq);
-var _Utils_notEqual = F2(function(a, b) { return !_Utils_eq(a,b); });
-
-
-
-// COMPARISONS
-
-// Code in Generate/JavaScript.hs, Basics.js, and List.js depends on
-// the particular integer values assigned to LT, EQ, and GT.
-
-function _Utils_cmp(x, y, ord)
-{
-	if (typeof x !== 'object')
-	{
-		return x === y ? /*EQ*/ 0 : x < y ? /*LT*/ -1 : /*GT*/ 1;
-	}
-
-	/**/
-	if (x instanceof String)
-	{
-		var a = x.valueOf();
-		var b = y.valueOf();
-		return a === b ? 0 : a < b ? -1 : 1;
-	}
-	//*/
-
-	/**_UNUSED/
-	if (typeof x.$ === 'undefined')
-	//*/
-	/**/
-	if (x.$[0] === '#')
-	//*/
-	{
-		return (ord = _Utils_cmp(x.a, y.a))
-			? ord
-			: (ord = _Utils_cmp(x.b, y.b))
-				? ord
-				: _Utils_cmp(x.c, y.c);
-	}
-
-	// traverse conses until end of a list or a mismatch
-	for (; x.b && y.b && !(ord = _Utils_cmp(x.a, y.a)); x = x.b, y = y.b) {} // WHILE_CONSES
-	return ord || (x.b ? /*GT*/ 1 : y.b ? /*LT*/ -1 : /*EQ*/ 0);
-}
-
-var _Utils_lt = F2(function(a, b) { return _Utils_cmp(a, b) < 0; });
-var _Utils_le = F2(function(a, b) { return _Utils_cmp(a, b) < 1; });
-var _Utils_gt = F2(function(a, b) { return _Utils_cmp(a, b) > 0; });
-var _Utils_ge = F2(function(a, b) { return _Utils_cmp(a, b) >= 0; });
-
-var _Utils_compare = F2(function(x, y)
-{
-	var n = _Utils_cmp(x, y);
-	return n < 0 ? $elm$core$Basics$LT : n ? $elm$core$Basics$GT : $elm$core$Basics$EQ;
-});
-
-
-// COMMON VALUES
-
-var _Utils_Tuple0_UNUSED = 0;
-var _Utils_Tuple0 = { $: '#0' };
-
-function _Utils_Tuple2_UNUSED(a, b) { return { a: a, b: b }; }
-function _Utils_Tuple2(a, b) { return { $: '#2', a: a, b: b }; }
-
-function _Utils_Tuple3_UNUSED(a, b, c) { return { a: a, b: b, c: c }; }
-function _Utils_Tuple3(a, b, c) { return { $: '#3', a: a, b: b, c: c }; }
-
-function _Utils_chr_UNUSED(c) { return c; }
-function _Utils_chr(c) { return new String(c); }
-
-
-// RECORDS
-
-function _Utils_update(oldRecord, updatedFields)
-{
-	var newRecord = {};
-
-	for (var key in oldRecord)
-	{
-		newRecord[key] = oldRecord[key];
-	}
-
-	for (var key in updatedFields)
-	{
-		newRecord[key] = updatedFields[key];
-	}
-
-	return newRecord;
-}
-
-
-// APPEND
-
-var _Utils_append = F2(_Utils_ap);
-
-function _Utils_ap(xs, ys)
-{
-	// append Strings
-	if (typeof xs === 'string')
-	{
-		return xs + ys;
-	}
-
-	// append Lists
-	if (!xs.b)
-	{
-		return ys;
-	}
-	var root = _List_Cons(xs.a, ys);
-	xs = xs.b
-	for (var curr = root; xs.b; xs = xs.b) // WHILE_CONS
-	{
-		curr = curr.b = _List_Cons(xs.a, ys);
-	}
-	return root;
-}
-
-
-
-var _List_Nil_UNUSED = { $: 0 };
-var _List_Nil = { $: '[]' };
-
-function _List_Cons_UNUSED(hd, tl) { return { $: 1, a: hd, b: tl }; }
-function _List_Cons(hd, tl) { return { $: '::', a: hd, b: tl }; }
-
-
-var _List_cons = F2(_List_Cons);
-
-function _List_fromArray(arr)
-{
-	var out = _List_Nil;
-	for (var i = arr.length; i--; )
-	{
-		out = _List_Cons(arr[i], out);
-	}
-	return out;
-}
-
-function _List_toArray(xs)
-{
-	for (var out = []; xs.b; xs = xs.b) // WHILE_CONS
-	{
-		out.push(xs.a);
-	}
-	return out;
-}
-
-var _List_map2 = F3(function(f, xs, ys)
-{
-	for (var arr = []; xs.b && ys.b; xs = xs.b, ys = ys.b) // WHILE_CONSES
-	{
-		arr.push(A2(f, xs.a, ys.a));
-	}
-	return _List_fromArray(arr);
-});
-
-var _List_map3 = F4(function(f, xs, ys, zs)
-{
-	for (var arr = []; xs.b && ys.b && zs.b; xs = xs.b, ys = ys.b, zs = zs.b) // WHILE_CONSES
-	{
-		arr.push(A3(f, xs.a, ys.a, zs.a));
-	}
-	return _List_fromArray(arr);
-});
-
-var _List_map4 = F5(function(f, ws, xs, ys, zs)
-{
-	for (var arr = []; ws.b && xs.b && ys.b && zs.b; ws = ws.b, xs = xs.b, ys = ys.b, zs = zs.b) // WHILE_CONSES
-	{
-		arr.push(A4(f, ws.a, xs.a, ys.a, zs.a));
-	}
-	return _List_fromArray(arr);
-});
-
-var _List_map5 = F6(function(f, vs, ws, xs, ys, zs)
-{
-	for (var arr = []; vs.b && ws.b && xs.b && ys.b && zs.b; vs = vs.b, ws = ws.b, xs = xs.b, ys = ys.b, zs = zs.b) // WHILE_CONSES
-	{
-		arr.push(A5(f, vs.a, ws.a, xs.a, ys.a, zs.a));
-	}
-	return _List_fromArray(arr);
-});
-
-var _List_sortBy = F2(function(f, xs)
-{
-	return _List_fromArray(_List_toArray(xs).sort(function(a, b) {
-		return _Utils_cmp(f(a), f(b));
-	}));
-});
-
-var _List_sortWith = F2(function(f, xs)
-{
-	return _List_fromArray(_List_toArray(xs).sort(function(a, b) {
-		var ord = A2(f, a, b);
-		return ord === $elm$core$Basics$EQ ? 0 : ord === $elm$core$Basics$LT ? -1 : 1;
-	}));
-});
-
-
-
 var _JsArray_empty = [];
 
 function _JsArray_singleton(value)
@@ -790,6 +525,271 @@ function _Debug_regionToString(region)
 	}
 	return 'on lines ' + region.start.line + ' through ' + region.end.line;
 }
+
+
+
+// EQUALITY
+
+function _Utils_eq(x, y)
+{
+	for (
+		var pair, stack = [], isEqual = _Utils_eqHelp(x, y, 0, stack);
+		isEqual && (pair = stack.pop());
+		isEqual = _Utils_eqHelp(pair.a, pair.b, 0, stack)
+		)
+	{}
+
+	return isEqual;
+}
+
+function _Utils_eqHelp(x, y, depth, stack)
+{
+	if (x === y)
+	{
+		return true;
+	}
+
+	if (typeof x !== 'object' || x === null || y === null)
+	{
+		typeof x === 'function' && _Debug_crash(5);
+		return false;
+	}
+
+	if (depth > 100)
+	{
+		stack.push(_Utils_Tuple2(x,y));
+		return true;
+	}
+
+	/**/
+	if (x.$ === 'Set_elm_builtin')
+	{
+		x = $elm$core$Set$toList(x);
+		y = $elm$core$Set$toList(y);
+	}
+	if (x.$ === 'RBNode_elm_builtin' || x.$ === 'RBEmpty_elm_builtin')
+	{
+		x = $elm$core$Dict$toList(x);
+		y = $elm$core$Dict$toList(y);
+	}
+	//*/
+
+	/**_UNUSED/
+	if (x.$ < 0)
+	{
+		x = $elm$core$Dict$toList(x);
+		y = $elm$core$Dict$toList(y);
+	}
+	//*/
+
+	for (var key in x)
+	{
+		if (!_Utils_eqHelp(x[key], y[key], depth + 1, stack))
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
+var _Utils_equal = F2(_Utils_eq);
+var _Utils_notEqual = F2(function(a, b) { return !_Utils_eq(a,b); });
+
+
+
+// COMPARISONS
+
+// Code in Generate/JavaScript.hs, Basics.js, and List.js depends on
+// the particular integer values assigned to LT, EQ, and GT.
+
+function _Utils_cmp(x, y, ord)
+{
+	if (typeof x !== 'object')
+	{
+		return x === y ? /*EQ*/ 0 : x < y ? /*LT*/ -1 : /*GT*/ 1;
+	}
+
+	/**/
+	if (x instanceof String)
+	{
+		var a = x.valueOf();
+		var b = y.valueOf();
+		return a === b ? 0 : a < b ? -1 : 1;
+	}
+	//*/
+
+	/**_UNUSED/
+	if (typeof x.$ === 'undefined')
+	//*/
+	/**/
+	if (x.$[0] === '#')
+	//*/
+	{
+		return (ord = _Utils_cmp(x.a, y.a))
+			? ord
+			: (ord = _Utils_cmp(x.b, y.b))
+				? ord
+				: _Utils_cmp(x.c, y.c);
+	}
+
+	// traverse conses until end of a list or a mismatch
+	for (; x.b && y.b && !(ord = _Utils_cmp(x.a, y.a)); x = x.b, y = y.b) {} // WHILE_CONSES
+	return ord || (x.b ? /*GT*/ 1 : y.b ? /*LT*/ -1 : /*EQ*/ 0);
+}
+
+var _Utils_lt = F2(function(a, b) { return _Utils_cmp(a, b) < 0; });
+var _Utils_le = F2(function(a, b) { return _Utils_cmp(a, b) < 1; });
+var _Utils_gt = F2(function(a, b) { return _Utils_cmp(a, b) > 0; });
+var _Utils_ge = F2(function(a, b) { return _Utils_cmp(a, b) >= 0; });
+
+var _Utils_compare = F2(function(x, y)
+{
+	var n = _Utils_cmp(x, y);
+	return n < 0 ? $elm$core$Basics$LT : n ? $elm$core$Basics$GT : $elm$core$Basics$EQ;
+});
+
+
+// COMMON VALUES
+
+var _Utils_Tuple0_UNUSED = 0;
+var _Utils_Tuple0 = { $: '#0' };
+
+function _Utils_Tuple2_UNUSED(a, b) { return { a: a, b: b }; }
+function _Utils_Tuple2(a, b) { return { $: '#2', a: a, b: b }; }
+
+function _Utils_Tuple3_UNUSED(a, b, c) { return { a: a, b: b, c: c }; }
+function _Utils_Tuple3(a, b, c) { return { $: '#3', a: a, b: b, c: c }; }
+
+function _Utils_chr_UNUSED(c) { return c; }
+function _Utils_chr(c) { return new String(c); }
+
+
+// RECORDS
+
+function _Utils_update(oldRecord, updatedFields)
+{
+	var newRecord = {};
+
+	for (var key in oldRecord)
+	{
+		newRecord[key] = oldRecord[key];
+	}
+
+	for (var key in updatedFields)
+	{
+		newRecord[key] = updatedFields[key];
+	}
+
+	return newRecord;
+}
+
+
+// APPEND
+
+var _Utils_append = F2(_Utils_ap);
+
+function _Utils_ap(xs, ys)
+{
+	// append Strings
+	if (typeof xs === 'string')
+	{
+		return xs + ys;
+	}
+
+	// append Lists
+	if (!xs.b)
+	{
+		return ys;
+	}
+	var root = _List_Cons(xs.a, ys);
+	xs = xs.b
+	for (var curr = root; xs.b; xs = xs.b) // WHILE_CONS
+	{
+		curr = curr.b = _List_Cons(xs.a, ys);
+	}
+	return root;
+}
+
+
+
+var _List_Nil_UNUSED = { $: 0 };
+var _List_Nil = { $: '[]' };
+
+function _List_Cons_UNUSED(hd, tl) { return { $: 1, a: hd, b: tl }; }
+function _List_Cons(hd, tl) { return { $: '::', a: hd, b: tl }; }
+
+
+var _List_cons = F2(_List_Cons);
+
+function _List_fromArray(arr)
+{
+	var out = _List_Nil;
+	for (var i = arr.length; i--; )
+	{
+		out = _List_Cons(arr[i], out);
+	}
+	return out;
+}
+
+function _List_toArray(xs)
+{
+	for (var out = []; xs.b; xs = xs.b) // WHILE_CONS
+	{
+		out.push(xs.a);
+	}
+	return out;
+}
+
+var _List_map2 = F3(function(f, xs, ys)
+{
+	for (var arr = []; xs.b && ys.b; xs = xs.b, ys = ys.b) // WHILE_CONSES
+	{
+		arr.push(A2(f, xs.a, ys.a));
+	}
+	return _List_fromArray(arr);
+});
+
+var _List_map3 = F4(function(f, xs, ys, zs)
+{
+	for (var arr = []; xs.b && ys.b && zs.b; xs = xs.b, ys = ys.b, zs = zs.b) // WHILE_CONSES
+	{
+		arr.push(A3(f, xs.a, ys.a, zs.a));
+	}
+	return _List_fromArray(arr);
+});
+
+var _List_map4 = F5(function(f, ws, xs, ys, zs)
+{
+	for (var arr = []; ws.b && xs.b && ys.b && zs.b; ws = ws.b, xs = xs.b, ys = ys.b, zs = zs.b) // WHILE_CONSES
+	{
+		arr.push(A4(f, ws.a, xs.a, ys.a, zs.a));
+	}
+	return _List_fromArray(arr);
+});
+
+var _List_map5 = F6(function(f, vs, ws, xs, ys, zs)
+{
+	for (var arr = []; vs.b && ws.b && xs.b && ys.b && zs.b; vs = vs.b, ws = ws.b, xs = xs.b, ys = ys.b, zs = zs.b) // WHILE_CONSES
+	{
+		arr.push(A5(f, vs.a, ws.a, xs.a, ys.a, zs.a));
+	}
+	return _List_fromArray(arr);
+});
+
+var _List_sortBy = F2(function(f, xs)
+{
+	return _List_fromArray(_List_toArray(xs).sort(function(a, b) {
+		return _Utils_cmp(f(a), f(b));
+	}));
+});
+
+var _List_sortWith = F2(function(f, xs)
+{
+	return _List_fromArray(_List_toArray(xs).sort(function(a, b) {
+		var ord = A2(f, a, b);
+		return ord === $elm$core$Basics$EQ ? 0 : ord === $elm$core$Basics$LT ? -1 : 1;
+	}));
+});
 
 
 
@@ -4554,10 +4554,31 @@ var _Regex_splitAtMost = F3(function(n, re, str)
 });
 
 var _Regex_infinity = Infinity;
-var $elm$core$Basics$EQ = {$: 'EQ'};
-var $elm$core$Basics$GT = {$: 'GT'};
-var $elm$core$Basics$LT = {$: 'LT'};
 var $elm$core$List$cons = _List_cons;
+var $elm$core$Elm$JsArray$foldr = _JsArray_foldr;
+var $elm$core$Array$foldr = F3(
+	function (func, baseCase, _v0) {
+		var tree = _v0.c;
+		var tail = _v0.d;
+		var helper = F2(
+			function (node, acc) {
+				if (node.$ === 'SubTree') {
+					var subTree = node.a;
+					return A3($elm$core$Elm$JsArray$foldr, helper, acc, subTree);
+				} else {
+					var values = node.a;
+					return A3($elm$core$Elm$JsArray$foldr, func, acc, values);
+				}
+			});
+		return A3(
+			$elm$core$Elm$JsArray$foldr,
+			helper,
+			A3($elm$core$Elm$JsArray$foldr, func, baseCase, tail),
+			tree);
+	});
+var $elm$core$Array$toList = function (array) {
+	return A3($elm$core$Array$foldr, $elm$core$List$cons, _List_Nil, array);
+};
 var $elm$core$Dict$foldr = F3(
 	function (func, acc, t) {
 		foldr:
@@ -4610,30 +4631,9 @@ var $elm$core$Set$toList = function (_v0) {
 	var dict = _v0.a;
 	return $elm$core$Dict$keys(dict);
 };
-var $elm$core$Elm$JsArray$foldr = _JsArray_foldr;
-var $elm$core$Array$foldr = F3(
-	function (func, baseCase, _v0) {
-		var tree = _v0.c;
-		var tail = _v0.d;
-		var helper = F2(
-			function (node, acc) {
-				if (node.$ === 'SubTree') {
-					var subTree = node.a;
-					return A3($elm$core$Elm$JsArray$foldr, helper, acc, subTree);
-				} else {
-					var values = node.a;
-					return A3($elm$core$Elm$JsArray$foldr, func, acc, values);
-				}
-			});
-		return A3(
-			$elm$core$Elm$JsArray$foldr,
-			helper,
-			A3($elm$core$Elm$JsArray$foldr, func, baseCase, tail),
-			tree);
-	});
-var $elm$core$Array$toList = function (array) {
-	return A3($elm$core$Array$foldr, $elm$core$List$cons, _List_Nil, array);
-};
+var $elm$core$Basics$EQ = {$: 'EQ'};
+var $elm$core$Basics$GT = {$: 'GT'};
+var $elm$core$Basics$LT = {$: 'LT'};
 var $elm$core$Result$Err = function (a) {
 	return {$: 'Err', a: a};
 };
@@ -5029,6 +5029,7 @@ var $elm$core$Result$isOk = function (result) {
 		return false;
 	}
 };
+var $elm$json$Json$Decode$andThen = _Json_andThen;
 var $elm$json$Json$Decode$map = _Json_map1;
 var $elm$json$Json$Decode$map2 = _Json_map2;
 var $elm$json$Json$Decode$succeed = _Json_succeed;
@@ -5343,10 +5344,8 @@ var $elm$core$Task$perform = F2(
 				A2($elm$core$Task$map, toMessage, task)));
 	});
 var $elm$browser$Browser$element = _Browser_element;
-var $elm$core$Platform$Cmd$batch = _Platform_batch;
-var $author$project$AlbumIds$AlbumId = function (a) {
-	return {$: 'AlbumId', a: a};
-};
+var $elm$json$Json$Decode$field = _Json_decodeField;
+var $author$project$TextRessources$englishText = {are_blacklisted_clear_blocklist_question: ' are blacklisted. Clear blacklist?', block: 'block', block_current_album: 'block current album', clear_blocked: 'clear blocked', flag: '🇬🇧', key: 'en', no_album_and_no_artist_data_available: 'Neither artist nor album data available :(', no_album_data_available: 'No album data available :(', no_albums_available_but: 'No albums available but ', no_artist_data_available: 'No artist data available :('};
 var $elm$core$Array$fromListHelp = F3(
 	function (list, nodeList, nodeListSize) {
 		fromListHelp:
@@ -5381,6 +5380,172 @@ var $elm$core$Array$fromList = function (list) {
 	} else {
 		return A3($elm$core$Array$fromListHelp, list, _List_Nil, 0);
 	}
+};
+var $author$project$TextRessources$germanText = {are_blacklisted_clear_blocklist_question: ' sind blockiert. Blockliste löschen?', block: 'blocken', block_current_album: 'aktuelles Album blockieren', clear_blocked: 'Blockliste löschen', flag: '🇩🇪', key: 'de', no_album_and_no_artist_data_available: 'Weder Album- noch Interpreteninformationen verfügbar :(', no_album_data_available: 'Keine Albuminformationen verfügbar :(', no_albums_available_but: 'Keine Albenverfügbar, aber', no_artist_data_available: 'Keine Interpreteninformationen verfügbar :('};
+var $author$project$TextRessources$all = $elm$core$Array$fromList(
+	_List_fromArray(
+		[$author$project$TextRessources$germanText, $author$project$TextRessources$englishText]));
+var $author$project$AlbumIds$AlbumId = function (a) {
+	return {$: 'AlbumId', a: a};
+};
+var $author$project$ArtistIds$ArtistId = function (a) {
+	return {$: 'ArtistId', a: a};
+};
+var $elm$core$List$filter = F2(
+	function (isGood, list) {
+		return A3(
+			$elm$core$List$foldr,
+			F2(
+				function (x, xs) {
+					return isGood(x) ? A2($elm$core$List$cons, x, xs) : xs;
+				}),
+			_List_Nil,
+			list);
+	});
+var $elm$core$List$maybeCons = F3(
+	function (f, mx, xs) {
+		var _v0 = f(mx);
+		if (_v0.$ === 'Just') {
+			var x = _v0.a;
+			return A2($elm$core$List$cons, x, xs);
+		} else {
+			return xs;
+		}
+	});
+var $elm$core$List$filterMap = F2(
+	function (f, xs) {
+		return A3(
+			$elm$core$List$foldr,
+			$elm$core$List$maybeCons(f),
+			_List_Nil,
+			xs);
+	});
+var $pzp1997$assoc_list$AssocList$D = function (a) {
+	return {$: 'D', a: a};
+};
+var $elm$core$Basics$neq = _Utils_notEqual;
+var $pzp1997$assoc_list$AssocList$remove = F2(
+	function (targetKey, _v0) {
+		var alist = _v0.a;
+		return $pzp1997$assoc_list$AssocList$D(
+			A2(
+				$elm$core$List$filter,
+				function (_v1) {
+					var key = _v1.a;
+					return !_Utils_eq(key, targetKey);
+				},
+				alist));
+	});
+var $pzp1997$assoc_list$AssocList$insert = F3(
+	function (key, value, dict) {
+		var _v0 = A2($pzp1997$assoc_list$AssocList$remove, key, dict);
+		var alteredAlist = _v0.a;
+		return $pzp1997$assoc_list$AssocList$D(
+			A2(
+				$elm$core$List$cons,
+				_Utils_Tuple2(key, value),
+				alteredAlist));
+	});
+var $pzp1997$assoc_list$AssocList$fromList = function (alist) {
+	return A3(
+		$elm$core$List$foldl,
+		F2(
+			function (_v0, result) {
+				var key = _v0.a;
+				var value = _v0.b;
+				return A3($pzp1997$assoc_list$AssocList$insert, key, value, result);
+			}),
+		$pzp1997$assoc_list$AssocList$D(_List_Nil),
+		alist);
+};
+var $elm$core$List$head = function (list) {
+	if (list.b) {
+		var x = list.a;
+		var xs = list.b;
+		return $elm$core$Maybe$Just(x);
+	} else {
+		return $elm$core$Maybe$Nothing;
+	}
+};
+var $elm$core$Tuple$second = function (_v0) {
+	var y = _v0.b;
+	return y;
+};
+var $elm$core$List$tail = function (list) {
+	if (list.b) {
+		var x = list.a;
+		var xs = list.b;
+		return $elm$core$Maybe$Just(xs);
+	} else {
+		return $elm$core$Maybe$Nothing;
+	}
+};
+var $elm$core$Maybe$withDefault = F2(
+	function (_default, maybe) {
+		if (maybe.$ === 'Just') {
+			var value = maybe.a;
+			return value;
+		} else {
+			return _default;
+		}
+	});
+var $author$project$Main$blackListFromStringList = function (list) {
+	var tuples = A2(
+		$elm$core$List$filterMap,
+		$elm$core$Basics$identity,
+		A2(
+			$elm$core$List$map,
+			function (t) {
+				var parts = A2($elm$core$String$split, ';;', t);
+				var second = $elm$core$List$head(
+					A2(
+						$elm$core$Maybe$withDefault,
+						_List_Nil,
+						$elm$core$List$tail(parts)));
+				var first = $elm$core$List$head(parts);
+				var _v1 = _Utils_Tuple2(first, second);
+				if (_v1.a.$ === 'Just') {
+					if (_v1.b.$ === 'Just') {
+						var f = _v1.a.a;
+						var s = _v1.b.a;
+						return $elm$core$Maybe$Just(
+							_Utils_Tuple2(
+								$author$project$ArtistIds$ArtistId(f),
+								$author$project$AlbumIds$AlbumId(s)));
+					} else {
+						var _v2 = _v1.b;
+						return $elm$core$Maybe$Nothing;
+					}
+				} else {
+					if (_v1.b.$ === 'Just') {
+						var _v3 = _v1.a;
+						return $elm$core$Maybe$Nothing;
+					} else {
+						var _v4 = _v1.a;
+						var _v5 = _v1.b;
+						return $elm$core$Maybe$Nothing;
+					}
+				}
+			},
+			list));
+	var grouped = A2(
+		$elm$core$List$map,
+		function (artistId) {
+			return _Utils_Tuple2(
+				artistId,
+				A2(
+					$elm$core$List$map,
+					$elm$core$Tuple$second,
+					A2(
+						$elm$core$List$filter,
+						function (_v0) {
+							var artId = _v0.a;
+							return _Utils_eq(artId, artistId);
+						},
+						tuples)));
+		},
+		A2($elm$core$List$map, $elm$core$Tuple$first, tuples));
+	return $pzp1997$assoc_list$AssocList$fromList(grouped);
 };
 var $author$project$AlbumStorageDdf$albumStorage = $elm$core$Array$fromList(
 	_List_fromArray(
@@ -14481,9 +14646,6 @@ var $author$project$AlbumStorageTkkgr$albumStorage = $elm$core$Array$fromList(
 			urlToOpen: 'https://open.spotify.com/album/699XT7D0ROiM2lVjwHAHg9'
 		}
 		]));
-var $author$project$ArtistIds$ArtistId = function (a) {
-	return {$: 'ArtistId', a: a};
-};
 var $author$project$AlbumStorageDdf$artistInfo = {
 	coverColorA: '#DF030E',
 	coverColorB: '#04A5E3',
@@ -14553,15 +14715,6 @@ var $author$project$ArtistsWithAlbums$albumStorage = _List_fromArray(
 		{albums: $author$project$AlbumStoragePw$albumStorage, artist: $author$project$AlbumStoragePw$artistInfo},
 		{albums: $author$project$AlbumStorageFf$albumStorage, artist: $author$project$AlbumStorageFf$artistInfo}
 	]);
-var $elm$core$List$head = function (list) {
-	if (list.b) {
-		var x = list.a;
-		var xs = list.b;
-		return $elm$core$Maybe$Just(x);
-	} else {
-		return $elm$core$Maybe$Nothing;
-	}
-};
 var $elm$core$Maybe$map = F2(
 	function (f, maybe) {
 		if (maybe.$ === 'Just') {
@@ -14570,15 +14723,6 @@ var $elm$core$Maybe$map = F2(
 				f(value));
 		} else {
 			return $elm$core$Maybe$Nothing;
-		}
-	});
-var $elm$core$Maybe$withDefault = F2(
-	function (_default, maybe) {
-		if (maybe.$ === 'Just') {
-			var value = maybe.a;
-			return value;
-		} else {
-			return _default;
 		}
 	});
 var $author$project$Main$defaultArtistShortName = A2(
@@ -14611,12 +14755,8 @@ var $elm$core$List$any = F2(
 			}
 		}
 	});
-var $author$project$TextRessources$englishText = {are_blacklisted_clear_blocklist_question: ' are blacklisted. Clear blacklist?', block: 'block', block_current_album: 'block current album', clear_blocked: 'clear blocked', flag: '🇬🇧', no_album_and_no_artist_data_available: 'Neither artist nor album data available :(', no_album_data_available: 'No album data available :(', no_albums_available_but: 'No albums available but ', no_artist_data_available: 'No artist data available :('};
 var $author$project$Main$defaultText = $author$project$TextRessources$englishText;
 var $author$project$ArtistIds$empty = $author$project$ArtistIds$ArtistId('');
-var $pzp1997$assoc_list$AssocList$D = function (a) {
-	return {$: 'D', a: a};
-};
 var $pzp1997$assoc_list$AssocList$empty = $pzp1997$assoc_list$AssocList$D(_List_Nil);
 var $elm$core$Array$filter = F2(
 	function (isGood, array) {
@@ -14749,322 +14889,6 @@ var $author$project$Main$emptyModel = F3(
 			filteredAlbums);
 		return {albums: filteredNonblacklistedAlbums, blacklistedAlbums: blacklist, current: 0, currentArtist: artist, isArtistOverlayOpen: false, isInitialized: false, text: text};
 	});
-var $elm$json$Json$Encode$null = _Json_encodeNull;
-var $author$project$Main$fetchBlacklisted = _Platform_outgoingPort(
-	'fetchBlacklisted',
-	function ($) {
-		return $elm$json$Json$Encode$null;
-	});
-var $author$project$Main$fetchBrowserLanguage = _Platform_outgoingPort(
-	'fetchBrowserLanguage',
-	function ($) {
-		return $elm$json$Json$Encode$null;
-	});
-var $author$project$Main$init = function (_v0) {
-	return _Utils_Tuple2(
-		A3($author$project$Main$emptyModel, $author$project$Main$defaultArtistShortName, $elm$core$Maybe$Nothing, $elm$core$Maybe$Nothing),
-		$elm$core$Platform$Cmd$batch(
-			_List_fromArray(
-				[
-					$author$project$Main$fetchBlacklisted(_Utils_Tuple0),
-					$author$project$Main$fetchBrowserLanguage(_Utils_Tuple0)
-				])));
-};
-var $author$project$Main$GotBlacklist = function (a) {
-	return {$: 'GotBlacklist', a: a};
-};
-var $author$project$Main$GotBrowserLanguage = function (a) {
-	return {$: 'GotBrowserLanguage', a: a};
-};
-var $elm$core$Platform$Sub$batch = _Platform_batch;
-var $elm$json$Json$Decode$list = _Json_decodeList;
-var $elm$json$Json$Decode$string = _Json_decodeString;
-var $author$project$Main$blacklistReceiver = _Platform_incomingPort(
-	'blacklistReceiver',
-	$elm$json$Json$Decode$list($elm$json$Json$Decode$string));
-var $author$project$Main$browserLanguageReceiver = _Platform_incomingPort('browserLanguageReceiver', $elm$json$Json$Decode$string);
-var $author$project$Main$subscriptions = function (_v0) {
-	return $elm$core$Platform$Sub$batch(
-		_List_fromArray(
-			[
-				$author$project$Main$blacklistReceiver($author$project$Main$GotBlacklist),
-				$author$project$Main$browserLanguageReceiver($author$project$Main$GotBrowserLanguage)
-			]));
-};
-var $elm$core$List$filter = F2(
-	function (isGood, list) {
-		return A3(
-			$elm$core$List$foldr,
-			F2(
-				function (x, xs) {
-					return isGood(x) ? A2($elm$core$List$cons, x, xs) : xs;
-				}),
-			_List_Nil,
-			list);
-	});
-var $elm$core$Basics$neq = _Utils_notEqual;
-var $pzp1997$assoc_list$AssocList$remove = F2(
-	function (targetKey, _v0) {
-		var alist = _v0.a;
-		return $pzp1997$assoc_list$AssocList$D(
-			A2(
-				$elm$core$List$filter,
-				function (_v1) {
-					var key = _v1.a;
-					return !_Utils_eq(key, targetKey);
-				},
-				alist));
-	});
-var $pzp1997$assoc_list$AssocList$insert = F3(
-	function (key, value, dict) {
-		var _v0 = A2($pzp1997$assoc_list$AssocList$remove, key, dict);
-		var alteredAlist = _v0.a;
-		return $pzp1997$assoc_list$AssocList$D(
-			A2(
-				$elm$core$List$cons,
-				_Utils_Tuple2(key, value),
-				alteredAlist));
-	});
-var $author$project$Main$addToBlacklist = F3(
-	function (artistId, albumId, dict) {
-		var _v0 = A2($pzp1997$assoc_list$AssocList$get, artistId, dict);
-		if (_v0.$ === 'Just') {
-			var existing = _v0.a;
-			return A3(
-				$pzp1997$assoc_list$AssocList$insert,
-				artistId,
-				A2($elm$core$List$cons, albumId, existing),
-				A2($pzp1997$assoc_list$AssocList$remove, artistId, dict));
-		} else {
-			return A3(
-				$pzp1997$assoc_list$AssocList$insert,
-				artistId,
-				_List_fromArray(
-					[albumId]),
-				dict);
-		}
-	});
-var $author$project$TextRessources$germanText = {are_blacklisted_clear_blocklist_question: ' sind blockiert. Blockliste löschen?', block: 'blocken', block_current_album: 'aktuelles Album blockieren', clear_blocked: 'Blockliste löschen', flag: '🇩🇪', no_album_and_no_artist_data_available: 'Weder Album- noch Interpreteninformationen verfügbar :(', no_album_data_available: 'Keine Albuminformationen verfügbar :(', no_albums_available_but: 'Keine Albenverfügbar, aber', no_artist_data_available: 'Keine Interpreteninformationen verfügbar :('};
-var $author$project$TextRessources$all = $elm$core$Array$fromList(
-	_List_fromArray(
-		[$author$project$TextRessources$germanText, $author$project$TextRessources$englishText]));
-var $elm$core$Maybe$andThen = F2(
-	function (callback, maybeValue) {
-		if (maybeValue.$ === 'Just') {
-			var value = maybeValue.a;
-			return callback(value);
-		} else {
-			return $elm$core$Maybe$Nothing;
-		}
-	});
-var $elm$core$List$maybeCons = F3(
-	function (f, mx, xs) {
-		var _v0 = f(mx);
-		if (_v0.$ === 'Just') {
-			var x = _v0.a;
-			return A2($elm$core$List$cons, x, xs);
-		} else {
-			return xs;
-		}
-	});
-var $elm$core$List$filterMap = F2(
-	function (f, xs) {
-		return A3(
-			$elm$core$List$foldr,
-			$elm$core$List$maybeCons(f),
-			_List_Nil,
-			xs);
-	});
-var $pzp1997$assoc_list$AssocList$fromList = function (alist) {
-	return A3(
-		$elm$core$List$foldl,
-		F2(
-			function (_v0, result) {
-				var key = _v0.a;
-				var value = _v0.b;
-				return A3($pzp1997$assoc_list$AssocList$insert, key, value, result);
-			}),
-		$pzp1997$assoc_list$AssocList$D(_List_Nil),
-		alist);
-};
-var $elm$core$Tuple$second = function (_v0) {
-	var y = _v0.b;
-	return y;
-};
-var $elm$core$List$tail = function (list) {
-	if (list.b) {
-		var x = list.a;
-		var xs = list.b;
-		return $elm$core$Maybe$Just(xs);
-	} else {
-		return $elm$core$Maybe$Nothing;
-	}
-};
-var $author$project$Main$blackListFromStringList = function (list) {
-	var tuples = A2(
-		$elm$core$List$filterMap,
-		$elm$core$Basics$identity,
-		A2(
-			$elm$core$List$map,
-			function (t) {
-				var parts = A2($elm$core$String$split, ';;', t);
-				var second = $elm$core$List$head(
-					A2(
-						$elm$core$Maybe$withDefault,
-						_List_Nil,
-						$elm$core$List$tail(parts)));
-				var first = $elm$core$List$head(parts);
-				var _v1 = _Utils_Tuple2(first, second);
-				if (_v1.a.$ === 'Just') {
-					if (_v1.b.$ === 'Just') {
-						var f = _v1.a.a;
-						var s = _v1.b.a;
-						return $elm$core$Maybe$Just(
-							_Utils_Tuple2(
-								$author$project$ArtistIds$ArtistId(f),
-								$author$project$AlbumIds$AlbumId(s)));
-					} else {
-						var _v2 = _v1.b;
-						return $elm$core$Maybe$Nothing;
-					}
-				} else {
-					if (_v1.b.$ === 'Just') {
-						var _v3 = _v1.a;
-						return $elm$core$Maybe$Nothing;
-					} else {
-						var _v4 = _v1.a;
-						var _v5 = _v1.b;
-						return $elm$core$Maybe$Nothing;
-					}
-				}
-			},
-			list));
-	var grouped = A2(
-		$elm$core$List$map,
-		function (artistId) {
-			return _Utils_Tuple2(
-				artistId,
-				A2(
-					$elm$core$List$map,
-					$elm$core$Tuple$second,
-					A2(
-						$elm$core$List$filter,
-						function (_v0) {
-							var artId = _v0.a;
-							return _Utils_eq(artId, artistId);
-						},
-						tuples)));
-		},
-		A2($elm$core$List$map, $elm$core$Tuple$first, tuples));
-	return $pzp1997$assoc_list$AssocList$fromList(grouped);
-};
-var $elm$core$List$append = F2(
-	function (xs, ys) {
-		if (!ys.b) {
-			return xs;
-		} else {
-			return A3($elm$core$List$foldr, $elm$core$List$cons, ys, xs);
-		}
-	});
-var $elm$core$List$concat = function (lists) {
-	return A3($elm$core$List$foldr, $elm$core$List$append, _List_Nil, lists);
-};
-var $pzp1997$assoc_list$AssocList$toList = function (_v0) {
-	var alist = _v0.a;
-	return alist;
-};
-var $author$project$AlbumIds$value = function (id) {
-	var a = id.a;
-	return a;
-};
-var $author$project$ArtistIds$value = function (id) {
-	var a = id.a;
-	return a;
-};
-var $author$project$Main$blackListToStringList = function (blacklist) {
-	var pairs = $pzp1997$assoc_list$AssocList$toList(blacklist);
-	return $elm$core$List$concat(
-		A2(
-			$elm$core$List$map,
-			function (_v0) {
-				var artistId = _v0.a;
-				var albumIds = _v0.b;
-				return A2(
-					$elm$core$List$map,
-					function (albumId) {
-						return $author$project$ArtistIds$value(artistId) + (';;' + $author$project$AlbumIds$value(albumId));
-					},
-					albumIds);
-			},
-			pairs));
-};
-var $author$project$TextRessources$fallback = $author$project$TextRessources$englishText;
-var $elm$core$Bitwise$and = _Bitwise_and;
-var $elm$core$Bitwise$shiftRightZfBy = _Bitwise_shiftRightZfBy;
-var $elm$core$Array$bitMask = 4294967295 >>> (32 - $elm$core$Array$shiftStep);
-var $elm$core$Basics$ge = _Utils_ge;
-var $elm$core$Elm$JsArray$unsafeGet = _JsArray_unsafeGet;
-var $elm$core$Array$getHelp = F3(
-	function (shift, index, tree) {
-		getHelp:
-		while (true) {
-			var pos = $elm$core$Array$bitMask & (index >>> shift);
-			var _v0 = A2($elm$core$Elm$JsArray$unsafeGet, pos, tree);
-			if (_v0.$ === 'SubTree') {
-				var subTree = _v0.a;
-				var $temp$shift = shift - $elm$core$Array$shiftStep,
-					$temp$index = index,
-					$temp$tree = subTree;
-				shift = $temp$shift;
-				index = $temp$index;
-				tree = $temp$tree;
-				continue getHelp;
-			} else {
-				var values = _v0.a;
-				return A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, values);
-			}
-		}
-	});
-var $elm$core$Bitwise$shiftLeftBy = _Bitwise_shiftLeftBy;
-var $elm$core$Array$tailIndex = function (len) {
-	return (len >>> 5) << 5;
-};
-var $elm$core$Array$get = F2(
-	function (index, _v0) {
-		var len = _v0.a;
-		var startShift = _v0.b;
-		var tree = _v0.c;
-		var tail = _v0.d;
-		return ((index < 0) || (_Utils_cmp(index, len) > -1)) ? $elm$core$Maybe$Nothing : ((_Utils_cmp(
-			index,
-			$elm$core$Array$tailIndex(len)) > -1) ? $elm$core$Maybe$Just(
-			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
-			A3($elm$core$Array$getHelp, startShift, index, tree)));
-	});
-var $elm$core$Array$length = function (_v0) {
-	var len = _v0.a;
-	return len;
-};
-var $elm$core$Debug$log = _Debug_log;
-var $elm$core$Basics$modBy = _Basics_modBy;
-var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
-var $author$project$Main$removeFromBlacklist = F2(
-	function (artistId, blacklist) {
-		return A2($pzp1997$assoc_list$AssocList$remove, artistId, blacklist);
-	});
-var $elm$json$Json$Encode$list = F2(
-	function (func, entries) {
-		return _Json_wrap(
-			A3(
-				$elm$core$List$foldl,
-				_Json_addEntry(func),
-				_Json_emptyArray(_Utils_Tuple0),
-				entries));
-	});
-var $elm$json$Json$Encode$string = _Json_wrap;
-var $author$project$Main$setBlacklistedAlbums = _Platform_outgoingPort(
-	'setBlacklistedAlbums',
-	$elm$json$Json$Encode$list($elm$json$Json$Encode$string));
 var $author$project$Main$AlbumsShuffled = function (a) {
 	return {$: 'AlbumsShuffled', a: a};
 };
@@ -15075,6 +14899,7 @@ var $elm$random$Random$Seed = F2(
 	function (a, b) {
 		return {$: 'Seed', a: a, b: b};
 	});
+var $elm$core$Bitwise$shiftRightZfBy = _Bitwise_shiftRightZfBy;
 var $elm$random$Random$next = function (_v0) {
 	var state0 = _v0.a;
 	var incr = _v0.b;
@@ -15174,6 +14999,7 @@ var $elm$random$Random$generate = F2(
 			$elm$random$Random$Generate(
 				A2($elm$random$Random$map, tagger, generator)));
 	});
+var $elm$core$Bitwise$and = _Bitwise_and;
 var $elm$core$Basics$negate = function (n) {
 	return -n;
 };
@@ -15290,6 +15116,164 @@ var $author$project$Main$startShuffleAlbums = function (albums) {
 		$elm$core$Array$toList(albums));
 	return A2($elm$random$Random$generate, $author$project$Main$AlbumsShuffled, generator);
 };
+var $author$project$Main$init = function (flags) {
+	var text = A2(
+		$elm_community$list_extra$List$Extra$find,
+		function (t) {
+			return _Utils_eq(t.key, flags.language);
+		},
+		$elm$core$Array$toList($author$project$TextRessources$all));
+	var blacklist = $author$project$Main$blackListFromStringList(flags.blockedAlbums);
+	var artistShortName = (flags.lastSelectedArtist === '') ? $author$project$Main$defaultArtistShortName : flags.lastSelectedArtist;
+	var model = A3(
+		$author$project$Main$emptyModel,
+		artistShortName,
+		$elm$core$Maybe$Just(blacklist),
+		text);
+	return _Utils_Tuple2(
+		model,
+		$author$project$Main$startShuffleAlbums(model.albums));
+};
+var $elm$json$Json$Decode$list = _Json_decodeList;
+var $elm$json$Json$Decode$string = _Json_decodeString;
+var $elm$core$Platform$Sub$batch = _Platform_batch;
+var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
+var $author$project$Main$subscriptions = function (_v0) {
+	return $elm$core$Platform$Sub$none;
+};
+var $author$project$Main$addToBlacklist = F3(
+	function (artistId, albumId, dict) {
+		var _v0 = A2($pzp1997$assoc_list$AssocList$get, artistId, dict);
+		if (_v0.$ === 'Just') {
+			var existing = _v0.a;
+			return A3(
+				$pzp1997$assoc_list$AssocList$insert,
+				artistId,
+				A2($elm$core$List$cons, albumId, existing),
+				A2($pzp1997$assoc_list$AssocList$remove, artistId, dict));
+		} else {
+			return A3(
+				$pzp1997$assoc_list$AssocList$insert,
+				artistId,
+				_List_fromArray(
+					[albumId]),
+				dict);
+		}
+	});
+var $elm$core$Maybe$andThen = F2(
+	function (callback, maybeValue) {
+		if (maybeValue.$ === 'Just') {
+			var value = maybeValue.a;
+			return callback(value);
+		} else {
+			return $elm$core$Maybe$Nothing;
+		}
+	});
+var $elm$core$List$append = F2(
+	function (xs, ys) {
+		if (!ys.b) {
+			return xs;
+		} else {
+			return A3($elm$core$List$foldr, $elm$core$List$cons, ys, xs);
+		}
+	});
+var $elm$core$List$concat = function (lists) {
+	return A3($elm$core$List$foldr, $elm$core$List$append, _List_Nil, lists);
+};
+var $pzp1997$assoc_list$AssocList$toList = function (_v0) {
+	var alist = _v0.a;
+	return alist;
+};
+var $author$project$AlbumIds$value = function (id) {
+	var a = id.a;
+	return a;
+};
+var $author$project$ArtistIds$value = function (id) {
+	var a = id.a;
+	return a;
+};
+var $author$project$Main$blackListToStringList = function (blacklist) {
+	var pairs = $pzp1997$assoc_list$AssocList$toList(blacklist);
+	return $elm$core$List$concat(
+		A2(
+			$elm$core$List$map,
+			function (_v0) {
+				var artistId = _v0.a;
+				var albumIds = _v0.b;
+				return A2(
+					$elm$core$List$map,
+					function (albumId) {
+						return $author$project$ArtistIds$value(artistId) + (';;' + $author$project$AlbumIds$value(albumId));
+					},
+					albumIds);
+			},
+			pairs));
+};
+var $author$project$TextRessources$fallback = $author$project$TextRessources$englishText;
+var $elm$core$Array$bitMask = 4294967295 >>> (32 - $elm$core$Array$shiftStep);
+var $elm$core$Basics$ge = _Utils_ge;
+var $elm$core$Elm$JsArray$unsafeGet = _JsArray_unsafeGet;
+var $elm$core$Array$getHelp = F3(
+	function (shift, index, tree) {
+		getHelp:
+		while (true) {
+			var pos = $elm$core$Array$bitMask & (index >>> shift);
+			var _v0 = A2($elm$core$Elm$JsArray$unsafeGet, pos, tree);
+			if (_v0.$ === 'SubTree') {
+				var subTree = _v0.a;
+				var $temp$shift = shift - $elm$core$Array$shiftStep,
+					$temp$index = index,
+					$temp$tree = subTree;
+				shift = $temp$shift;
+				index = $temp$index;
+				tree = $temp$tree;
+				continue getHelp;
+			} else {
+				var values = _v0.a;
+				return A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, values);
+			}
+		}
+	});
+var $elm$core$Bitwise$shiftLeftBy = _Bitwise_shiftLeftBy;
+var $elm$core$Array$tailIndex = function (len) {
+	return (len >>> 5) << 5;
+};
+var $elm$core$Array$get = F2(
+	function (index, _v0) {
+		var len = _v0.a;
+		var startShift = _v0.b;
+		var tree = _v0.c;
+		var tail = _v0.d;
+		return ((index < 0) || (_Utils_cmp(index, len) > -1)) ? $elm$core$Maybe$Nothing : ((_Utils_cmp(
+			index,
+			$elm$core$Array$tailIndex(len)) > -1) ? $elm$core$Maybe$Just(
+			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
+			A3($elm$core$Array$getHelp, startShift, index, tree)));
+	});
+var $elm$core$Array$length = function (_v0) {
+	var len = _v0.a;
+	return len;
+};
+var $elm$core$Basics$modBy = _Basics_modBy;
+var $elm$core$Platform$Cmd$batch = _Platform_batch;
+var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
+var $author$project$Main$removeFromBlacklist = F2(
+	function (artistId, blacklist) {
+		return A2($pzp1997$assoc_list$AssocList$remove, artistId, blacklist);
+	});
+var $elm$json$Json$Encode$list = F2(
+	function (func, entries) {
+		return _Json_wrap(
+			A3(
+				$elm$core$List$foldl,
+				_Json_addEntry(func),
+				_Json_emptyArray(_Utils_Tuple0),
+				entries));
+	});
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $author$project$Main$setBlacklistedAlbums = _Platform_outgoingPort(
+	'setBlacklistedAlbums',
+	$elm$json$Json$Encode$list($elm$json$Json$Encode$string));
 var $author$project$Main$resetModel = F3(
 	function (artist, blacklist, text) {
 		var serializedBlacklist = A2(
@@ -15442,7 +15426,6 @@ var $author$project$Main$update = F2(
 					var mapped = $author$project$Main$blackListToStringList(updatedModel.blacklistedAlbums);
 					return $author$project$Main$setBlacklistedAlbums(mapped);
 				}();
-				var _v3 = A2($elm$core$Debug$log, 'blacklist', model.blacklistedAlbums);
 				return _Utils_Tuple2(updatedModel, newCmd);
 			case 'AlbumsShuffled':
 				var albums = msg.a;
@@ -15493,8 +15476,8 @@ var $author$project$Main$update = F2(
 							$elm$core$Tuple$first,
 							A2(
 								$elm_community$list_extra$List$Extra$find,
-								function (_v4) {
-									var t = _v4.b;
+								function (_v3) {
+									var t = _v3.b;
 									return _Utils_eq(t, model.text);
 								},
 								$elm$core$Array$toIndexedList($author$project$TextRessources$all)))));
@@ -15889,7 +15872,6 @@ var $author$project$Main$view = function (model) {
 					var backgroundImageUrl = largestCover.url;
 					var coverSourceSet = backgroundImageUrl + (' ' + ($elm$core$String$fromInt(largestCover.width) + 'w'));
 					var backgroundGlowStyle = A2($elm$html$Html$Attributes$style, 'background', 'linear-gradient(45deg, ' + (artist.coverColorA + (' , ' + (artist.coverColorB + ' 100%)'))));
-					var backgroundFadeEase = '3000ms';
 					var backgroundFadeDuration = '0';
 					var artistImage = A2(
 						$elm$html$Html$a,
@@ -16292,5 +16274,23 @@ var $author$project$Main$view = function (model) {
 var $author$project$Main$main = $elm$browser$Browser$element(
 	{init: $author$project$Main$init, subscriptions: $author$project$Main$subscriptions, update: $author$project$Main$update, view: $author$project$Main$view});
 _Platform_export({'Main':{'init':$author$project$Main$main(
-	$elm$json$Json$Decode$succeed(
-		{}))(0)}});}(this));
+	A2(
+		$elm$json$Json$Decode$andThen,
+		function (lastSelectedArtist) {
+			return A2(
+				$elm$json$Json$Decode$andThen,
+				function (language) {
+					return A2(
+						$elm$json$Json$Decode$andThen,
+						function (blockedAlbums) {
+							return $elm$json$Json$Decode$succeed(
+								{blockedAlbums: blockedAlbums, language: language, lastSelectedArtist: lastSelectedArtist});
+						},
+						A2(
+							$elm$json$Json$Decode$field,
+							'blockedAlbums',
+							$elm$json$Json$Decode$list($elm$json$Json$Decode$string)));
+				},
+				A2($elm$json$Json$Decode$field, 'language', $elm$json$Json$Decode$string));
+		},
+		A2($elm$json$Json$Decode$field, 'lastSelectedArtist', $elm$json$Json$Decode$string)))(0)}});}(this));

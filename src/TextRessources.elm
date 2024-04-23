@@ -2,7 +2,8 @@ module TextRessources exposing (..)
 import Array exposing (Array)
 
 type alias Text = 
-    { flag : String
+    { key: String
+    , flag : String
     , block : String
     , block_current_album : String
     , clear_blocked : String
@@ -17,6 +18,7 @@ type alias Text =
 germanText : Text
 germanText =
     { flag = "🇩🇪"
+    , key = "de"
     , block = "blocken"
     , block_current_album = "aktuelles Album blockieren"
     , clear_blocked = "Blockliste löschen"
@@ -31,6 +33,7 @@ germanText =
 englishText : Text
 englishText =
     { flag = "🇬🇧"
+    , key = "en"
     , block = "block"
     , block_current_album = "block current album"
     , clear_blocked = "clear blocked"

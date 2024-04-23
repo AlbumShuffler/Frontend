@@ -43,10 +43,19 @@
   <div id="elm-node"></div>
   <script>
     const blacklistedAlbumsKey = "blacklisted-albums";
+    
+    const flags = {
+      blockedAlbums: fetchBlacklistedAlbums(),
+      language: fetchBrowserLanguage(),
+      lastSelectedArtist: fetchLastSelectedArtist()
+    }
+
     const node = document.getElementById('elm-node');
     var app = Elm.Main.init({
-      node: node
+      node: node,
+      flags: flags
     });
+
     function getLegacyBlocklistEntries() {
       if (document.cookie && document.cookie.length > 0) {
         try
@@ -62,6 +71,14 @@
       }
     }
 
+    function fetchBlacklistedAlbums() {
+      const fromCookie = getLegacyBlocklistEntries().map((x) => `3meJIgRw7YleJrmbpbJK6S;;${x}`);
+      let content = localStorage.getItem(blacklistedAlbumsKey);
+      content = content ? JSON.parse(content) : [];
+      const merged = fromCookie.concat(content);
+      return merged;
+    }
+
     function setBlacklistedAlbums(albumIdList) {
       console.log('backlisting', albumIdList.length, 'albums');
       localStorage.removeItem(blacklistedAlbumsKey);
@@ -69,27 +86,26 @@
     }
     app.ports.setBlacklistedAlbums.subscribe(albumIdList => setBlacklistedAlbums(albumIdList));
 
-    function fetchBlacklistedAlbums() {
-      const fromCookie = getLegacyBlocklistEntries().map((x) => `3meJIgRw7YleJrmbpbJK6S;;${x}`);
-      let content = localStorage.getItem(blacklistedAlbumsKey);
-      content = content ? JSON.parse(content) : [];
-      const merged = fromCookie.concat(content);
-      app.ports.blacklistReceiver.send(merged);
-    }
-    app.ports.fetchBlacklisted.subscribe(fetchBlacklistedAlbums);
-
     function fetchBrowserLanguage() {
       const languages = navigator.languages;
       languages.forEach((language) => {
         if (language.startsWith('de')) {
-          app.ports.languageReceiver.send('de');
+          return 'de';
         } else if (language.startsWith('en')) {
-          app.ports.browserLanguageReceiver.send('en');
+          return 'en';
         }
       });
-      app.ports.browserLanguageReceiver.send("");
+      return 'en';
     }
-    app.ports.fetchBrowserLanguage.subscribe(fetchBrowserLanguage);
+
+    function fetchLastSelectedArtist() {
+      const artist = localStorage.getItem('preferredArtist');
+      if (artist) {
+        app.ports.preferredArtistReceiver.send(artist);
+      } else {
+        return "";
+      }
+    }
 
   </script>
 </body>

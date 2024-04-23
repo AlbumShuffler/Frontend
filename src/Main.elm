@@ -7,7 +7,6 @@ import ArtistIds
 import ArtistsWithAlbums exposing (albumStorage)
 import AssocList as Dict exposing (Dict)
 import Browser
-import Debug
 import Html exposing (Html, div, img, text)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
@@ -33,7 +32,10 @@ defaultText =
 
 
 type alias Flags =
-    {}
+    { blockedAlbums : List String
+    , language : String
+    , lastSelectedArtist : String
+    }
 
 
 type alias Blacklist =
@@ -51,27 +53,12 @@ type alias Model =
     }
 
 
-port blacklistReceiver : (List String -> msg) -> Sub msg
-
-
-port fetchBlacklisted : () -> Cmd msg
-
-
 port setBlacklistedAlbums : List String -> Cmd msg
-
-
-port browserLanguageReceiver : (String -> msg) -> Sub msg
-
-
-port fetchBrowserLanguage : () -> Cmd msg
 
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    Sub.batch
-        [ blacklistReceiver GotBlacklist
-        , browserLanguageReceiver GotBrowserLanguage
-        ]
+    Sub.none
 
 
 emptyModel : String -> Maybe Blacklist -> Maybe TextRessources.Text -> Model
@@ -151,8 +138,14 @@ type Msg
 
 
 init : Flags -> ( Model, Cmd Msg )
-init _ =
-    ( emptyModel defaultArtistShortName Nothing Nothing, Cmd.batch [ fetchBlacklisted (), fetchBrowserLanguage () ] )
+init flags =
+    let
+        artistShortName = if flags.lastSelectedArtist == "" then defaultArtistShortName else flags.lastSelectedArtist
+        text = TextRessources.all |> Array.toList |> List.find (\t -> t.key == flags.language)
+        blacklist = flags.blockedAlbums |> blackListFromStringList
+        model = emptyModel artistShortName (Just blacklist) text
+    in
+    (  model, model.albums |> startShuffleAlbums )
 
 
 startShuffleAlbums : Array Album -> Cmd Msg
@@ -317,9 +310,6 @@ update msg model =
                point to the next album.
             -}
             let
-                _ =
-                    Debug.log "blacklist" model.blacklistedAlbums
-
                 updatedModel =
                     { model
                         | albums = model.albums |> Array.filter (\a -> a.id /= albumId)
@@ -468,10 +458,6 @@ view model =
 
                     backgroundFadeDuration =
                         "0"
-
-                    {- "5000ms" -}
-                    backgroundFadeEase =
-                        "3000ms"
 
                     backgroundGlowStyle =
                         style "background" ("linear-gradient(45deg, " ++ artist.coverColorA ++ " , " ++ artist.coverColorB ++ " 100%)")
