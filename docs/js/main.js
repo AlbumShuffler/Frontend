@@ -14505,8 +14505,8 @@ var $author$project$AlbumStorageDdfk$artistInfo = {
 	shortName: 'DDF Kids'
 };
 var $author$project$AlbumStorageFf$artistInfo = {
-	coverColorA: '#D91E27',
-	coverColorB: '#F2C716',
+	coverColorA: '#666666',
+	coverColorB: '#AAAAAA',
 	httpFriendlyShortName: 'ff',
 	icon: 'img/ff_transparent.png',
 	id: $author$project$ArtistIds$ArtistId('1hD52edfn6aNsK3fb5c2OT'),
@@ -14535,8 +14535,8 @@ var $author$project$AlbumStorageTkkg$artistInfo = {
 	shortName: 'TKKG'
 };
 var $author$project$AlbumStorageTkkgr$artistInfo = {
-	coverColorA: '#C40004',
-	coverColorB: '#FFEC01',
+	coverColorA: '#FFE85A',
+	coverColorB: '#284193',
 	httpFriendlyShortName: 'tkkgr',
 	icon: 'img/tkkg_retro_transparent.png',
 	id: $author$project$ArtistIds$ArtistId('0i38tQX5j4gZ0KS3eCMoIl'),
@@ -16078,9 +16078,9 @@ var $author$project$Main$view = function (model) {
 																A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
 																A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
 																A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0'),
-																A2($elm$html$Html$Attributes$style, 'background', '#DF030E'),
+																A2($elm$html$Html$Attributes$style, 'background', artist.coverColorA),
 																A2($elm$html$Html$Attributes$style, 'box-shadow', '210.86053466796875px 210.86053466796875px 210.86053466796875px'),
-																A2($elm$html$Html$Attributes$style, 'filter', 'blur(210.86px)')
+																A2($elm$html$Html$Attributes$style, 'filter', 'blur(min(20vw, 210.86px))')
 															]),
 														_List_Nil),
 														A2(
@@ -16095,9 +16095,9 @@ var $author$project$Main$view = function (model) {
 																A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
 																A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
 																A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0'),
-																A2($elm$html$Html$Attributes$style, 'background', '#04A5E3'),
+																A2($elm$html$Html$Attributes$style, 'background', artist.coverColorB),
 																A2($elm$html$Html$Attributes$style, 'box-shadow', '210.86053466796875px 210.86053466796875px 210.86053466796875px'),
-																A2($elm$html$Html$Attributes$style, 'filter', 'blur(210.86px)')
+																A2($elm$html$Html$Attributes$style, 'filter', 'blur(min(20vw, 210.86px))')
 															]),
 														_List_Nil)
 													])),

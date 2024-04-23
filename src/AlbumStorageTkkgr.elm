@@ -13,8 +13,9 @@ artistInfo =
   , shortName = "TKKG(R)"
   , httpFriendlyShortName = "tkkgr"
   , icon = "img/tkkg_retro_transparent.png"
-  , coverColorA = "#C40004"
-  , coverColorB = "#FFEC01"
+  {-, coverColorA = "#B0C3FF"-}
+  , coverColorA = "#FFE85A"
+  , coverColorB = "#284193"
   }
 
 

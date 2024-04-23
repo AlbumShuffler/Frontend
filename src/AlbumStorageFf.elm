@@ -13,8 +13,8 @@ artistInfo =
   , shortName = "FF"
   , httpFriendlyShortName = "ff"
   , icon = "img/ff_transparent.png"
-  , coverColorA = "#D91E27"
-  , coverColorB = "#F2C716"
+  , coverColorA = "#666666"
+  , coverColorB = "#AAAAAA"
   }
 
 

@@ -7,9 +7,9 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#000000">
-  <meta name="description" content="Randomly selects an album from 'Die drei ???' for you to listen to on Spotify">
-  <meta name="og:title" content="Die drei ??? Shuffler">
-  <meta name="og:description" content="Randomly selects an album from 'Die drei ???' for you to listen to on Spotify">
+  <meta name="description" content="Randomly selects an album for you to listen to on Spotify">
+  <meta name="og:title" content="Spotify Shuffler">
+  <meta name="og:description" content="Randomly selects an album for you to listen to on Spotify">
   <meta name="og:image" content="/ms-icon-144x144.png">
   <meta name="og:type" content="website">
   <!--<title></title>-->
@@ -38,7 +38,6 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/animations.css">
   <script src="js/main.js"></script>
-  <!--<script src="js/native.js"></script>-->
 </head>
 <body style="background-color: black;" onload="">
   <div id="elm-node"></div>
@@ -48,6 +47,20 @@
     var app = Elm.Main.init({
       node: node
     });
+    function getLegacyBlocklistEntries() {
+      if (document.cookie && document.cookie.length > 0) {
+        try
+        {
+          const key = "ignoredEpisodes="
+          return document.cookie.replace(key, "").split("%");
+        } catch (e) {
+          console.error("Could not load legacy cookie because:", e)
+          return [];
+        }
+      } else {
+        return [];
+      }
+    }
 
     function setBlacklistedAlbums(albumIdList) {
       console.log('backlisting', albumIdList.length, 'albums');
@@ -57,13 +70,11 @@
     app.ports.setBlacklistedAlbums.subscribe(albumIdList => setBlacklistedAlbums(albumIdList));
 
     function fetchBlacklistedAlbums() {
-      const content = localStorage.getItem(blacklistedAlbumsKey);
-      if (content) {
-        const deserialized = JSON.parse(content);
-        app.ports.blacklistReceiver.send(deserialized);
-      } else {
-        app.ports.blacklistReceiver.send([]);
-      }
+      const fromCookie = getLegacyBlocklistEntries().map((x) => `3meJIgRw7YleJrmbpbJK6S;;${x}`);
+      let content = localStorage.getItem(blacklistedAlbumsKey);
+      content = content ? JSON.parse(content) : [];
+      const merged = fromCookie.concat(content);
+      app.ports.blacklistReceiver.send(merged);
     }
     app.ports.fetchBlacklisted.subscribe(fetchBlacklistedAlbums);
 
