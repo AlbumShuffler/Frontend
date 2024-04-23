@@ -15305,6 +15305,7 @@ var $author$project$Main$resetModel = F3(
 			resettedModel,
 			$elm$core$Platform$Cmd$batch(commands));
 	});
+var $author$project$Main$setLastSelectedLanguage = _Platform_outgoingPort('setLastSelectedLanguage', $elm$json$Json$Encode$string);
 var $elm$core$Array$toIndexedList = function (array) {
 	var len = array.a;
 	var helper = F2(
@@ -15487,7 +15488,7 @@ var $author$project$Main$update = F2(
 					_Utils_update(
 						model,
 						{text: nextLanguage}),
-					$elm$core$Platform$Cmd$none);
+					$author$project$Main$setLastSelectedLanguage(nextLanguage.key));
 		}
 	});
 var $author$project$Main$BlackListAlbum = function (a) {

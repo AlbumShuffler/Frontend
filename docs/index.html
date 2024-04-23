@@ -41,10 +41,11 @@
   <script>
     const blacklistedAlbumsKey = "blacklisted-albums";
     const lastSelectedArtistKey = "lastSelectedArtist";
+    const lastSelectedLanguageKey = "lastSelectedLanguage";
     
     const flags = {
       blockedAlbums: fetchBlacklistedAlbums(),
-      language: fetchBrowserLanguage(),
+      language: fetchLanguage(),
       lastSelectedArtist: fetchLastSelectedArtist()
     }
 
@@ -95,6 +96,29 @@
       });
       return 'en';
     }
+
+    function fetchLastSelectedLanguage() {
+      const language = localStorage.getItem(lastSelectedLanguageKey);
+      if (!language && language !== 'en' && language !== 'de') {
+        return "";
+      } else {
+        return language;
+      }
+    }
+
+    function fetchLanguage() {
+      const lastSelected = fetchLastSelectedLanguage();
+      if (lastSelected && lastSelected !== "") {
+        return lastSelected
+      } else {
+        return fetchBrowserLanguage();
+      }
+    }
+
+    function setLastSelectedLanguage(language) {
+      localStorage.setItem(lastSelectedLanguageKey, language);
+    }
+    app.ports.setLastSelectedLanguage.subscribe(setLastSelectedLanguage);
 
     function fetchLastSelectedArtist() {
       const artist = localStorage.getItem(lastSelectedArtistKey);

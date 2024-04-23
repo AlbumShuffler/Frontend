@@ -60,6 +60,9 @@ port setBlacklistedAlbums : List String -> Cmd msg
 port setLastSelectedArtist : String -> Cmd msg
 
 
+port setLastSelectedLanguage : String -> Cmd msg
+
+
 subscriptions : Model -> Sub Msg
 subscriptions _ =
     Sub.none
@@ -358,7 +361,7 @@ update msg model =
                         |> Maybe.andThen (\i -> TextRessources.all |> Array.get (modBy (TextRessources.all |> Array.length) (i + 1)))
                         |> Maybe.withDefault TextRessources.fallback
             in
-            ( { model | text = nextLanguage }, Cmd.none )
+            ( { model | text = nextLanguage }, nextLanguage.key |> setLastSelectedLanguage )
 
 
 tryAlbumNumberFrom : String -> Maybe Int
