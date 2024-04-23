@@ -21,14 +21,15 @@ import TextRessources
 
 defaultArtistShortName : String
 defaultArtistShortName =
-    albumStorage 
-    |> List.head
-    |> Maybe.map (\a -> a.artist.httpFriendlyShortName)
-    |> Maybe.withDefault "<could not set defaultArtistShortName, is data available?>"
+    albumStorage
+        |> List.head
+        |> Maybe.map (\a -> a.artist.httpFriendlyShortName)
+        |> Maybe.withDefault "<could not set defaultArtistShortName, is data available?>"
 
 
 defaultText : TextRessources.Text
-defaultText = TextRessources.englishText
+defaultText =
+    TextRessources.englishText
 
 
 type alias Flags =
@@ -68,15 +69,16 @@ port fetchBrowserLanguage : () -> Cmd msg
 subscriptions : Model -> Sub Msg
 subscriptions _ =
     Sub.batch
-    [ blacklistReceiver GotBlacklist
-    , browserLanguageReceiver GotBrowserLanguage
-    ]
+        [ blacklistReceiver GotBlacklist
+        , browserLanguageReceiver GotBrowserLanguage
+        ]
 
 
 emptyModel : String -> Maybe Blacklist -> Maybe TextRessources.Text -> Model
 emptyModel artistShortName blacklistOption language =
     let
-        text =  language |> Maybe.withDefault defaultText
+        text =
+            language |> Maybe.withDefault defaultText
 
         artistWithAlbums =
             ArtistsWithAlbums.albumStorage
@@ -273,18 +275,27 @@ update msg model =
                     model.albums |> Array.filter (\a -> not (blacklistedForCurrentArtist |> List.member a.id))
             in
             ( { model | blacklistedAlbums = blacklist, albums = filteredAlbums }, filteredAlbums |> startShuffleAlbums )
-            
 
         GotBrowserLanguage rawLanguage ->
             let
                 language =
-                    case (if rawLanguage == "" then "en" else rawLanguage) of
-                        "en" -> TextRessources.englishText
-                        "de" -> TextRessources.germanText
-                        _ -> TextRessources.englishText
+                    case
+                        if rawLanguage == "" then
+                            "en"
+
+                        else
+                            rawLanguage
+                    of
+                        "en" ->
+                            TextRessources.englishText
+
+                        "de" ->
+                            TextRessources.germanText
+
+                        _ ->
+                            TextRessources.englishText
             in
             ( { model | text = language }, Cmd.none )
-
 
         NextAlbum ->
             let
@@ -341,12 +352,11 @@ update msg model =
             let
                 nextLanguage =
                     TextRessources.all
-                    |> Array.toIndexedList
-                    |> List.find (\(_, t) -> t == model.text)
-                    |> Maybe.map Tuple.first 
-                    |> Maybe.andThen (\i -> TextRessources.all |> Array.get (modBy (TextRessources.all |> Array.length) (i + 1)))
-                    |> Maybe.withDefault TextRessources.fallback
-
+                        |> Array.toIndexedList
+                        |> List.find (\( _, t ) -> t == model.text)
+                        |> Maybe.map Tuple.first
+                        |> Maybe.andThen (\i -> TextRessources.all |> Array.get (modBy (TextRessources.all |> Array.length) (i + 1)))
+                        |> Maybe.withDefault TextRessources.fallback
             in
             ( { model | text = nextLanguage }, Cmd.none )
 
@@ -572,10 +582,44 @@ view model =
                                 , div [ id "cover-text", style "display" "none" ] [ text album.name ]
                                 ]
                             , div
-                                [ class "z-1", style "opacity" "0.4", style "width" "239.62px", style "height" "244.60px", style "left" "calc(50vw - 120px)", style "top" "calc(100vh)", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0"
-                                ] 
-                                [ div [class "z-1", style "width" "133.77px", style "height" "179.56px", style "left" "0", style "top" "0", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0", style "background" artist.coverColorA, style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px", style "filter" "blur(min(20vw, 210.86px))" ] []
-                                , div [class "z-1", style "width" "133.54px", style "height" "183.31px", style "left" "119.12px", style "top" "-28.67px", style "position" "absolute", style "transform" "rotate(-43.55deg)", style "transform-origin" "0 0", style "background" artist.coverColorB, style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px", style "filter" "blur(min(20vw, 210.86px))"] []
+                                [ class "z-1"
+                                , style "opacity" "0.4"
+                                , style "width" "239.62px"
+                                , style "height" "244.60px"
+                                , style "left" "calc(50vw - 120px)"
+                                , style "top" "calc(100vh)"
+                                , style "position" "absolute"
+                                , style "transform" "rotate(-43.55deg)"
+                                , style "transform-origin" "0 0"
+                                ]
+                                [ div
+                                    [ class "z-1"
+                                    , style "width" "133.77px"
+                                    , style "height" "179.56px"
+                                    , style "left" "0"
+                                    , style "top" "0"
+                                    , style "position" "absolute"
+                                    , style "transform" "rotate(-43.55deg)"
+                                    , style "transform-origin" "0 0"
+                                    , style "background" artist.coverColorA
+                                    , style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px"
+                                    , style "filter" "blur(min(20vw, 210.86px))"
+                                    ]
+                                    []
+                                , div
+                                    [ class "z-1"
+                                    , style "width" "133.54px"
+                                    , style "height" "183.31px"
+                                    , style "left" "119.12px"
+                                    , style "top" "-28.67px"
+                                    , style "position" "absolute"
+                                    , style "transform" "rotate(-43.55deg)"
+                                    , style "transform-origin" "0 0"
+                                    , style "background" artist.coverColorB
+                                    , style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px"
+                                    , style "filter" "blur(min(20vw, 210.86px))"
+                                    ]
+                                    []
                                 ]
                             , div
                                 [ class "d-flex align-items-center justify-content-center"
