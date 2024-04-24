@@ -1,0 +1,1 @@
+[![Deployment on GitHub Pages](https://github.com/b0wter/shuffler-frontend/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/b0wter/shuffler-frontend/actions/workflows/build.yml)
