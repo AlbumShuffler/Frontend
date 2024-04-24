@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Randomly selects an album for you to listen to on Spotify">
+  <meta name="og:title" content="Spotify Shuffler">
+  <meta name="og:description" content="Randomly selects an album for you to listen to on Spotify">
+  <meta name="og:image" content="/ms-icon-144x144.png">
+  <meta name="og:type" content="website">
+  <!--<title></title>-->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+  <link rel="preload" as="image" href="img/block.svg">
+  <link rel="preload" as="image" href="img/clear-format-white.svg">
+  <link rel="preload" as="image" href="img/github.svg">
+  <link rel="preload" as="image" href="img/next.svg">
+  <link rel="preload" as="image" href="img/play.svg">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/animations.css">
+  <script src="js/main.js"></script>
+</head>
+<body style="background-color: black;" onload="">
+  <div id="elm-node"></div>
+  <script>
+    const blacklistedAlbumsKey = "blacklisted-albums";
+    const lastSelectedArtistKey = "lastSelectedArtist";
+    const lastSelectedLanguageKey = "lastSelectedLanguage";
+    
+    const flags = {
+      blockedAlbums: fetchBlacklistedAlbums(),
+      language: fetchLanguage(),
+      lastSelectedArtist: fetchLastSelectedArtist()
+    }
+
+    const node = document.getElementById('elm-node');
+    var app = Elm.Main.init({
+      node: node,
+      flags: flags
+    });
+
+    function getLegacyBlocklistEntries() {
+      if (document.cookie && document.cookie.length > 0) {
+        try
+        {
+          const key = "ignoredEpisodes="
+          return document.cookie.replace(key, "").split("%");
+        } catch (e) {
+          console.error("Could not load legacy cookie because:", e)
+          return [];
+        }
+      } else {
+        return [];
+      }
+    }
+
+    function fetchBlacklistedAlbums() {
+      const fromCookie = getLegacyBlocklistEntries().map((x) => `3meJIgRw7YleJrmbpbJK6S;;${x}`);
+      let content = localStorage.getItem(blacklistedAlbumsKey);
+      content = content ? JSON.parse(content) : [];
+      const merged = fromCookie.concat(content);
+      return merged;
+    }
+
+    function setBlacklistedAlbums(albumIdList) {
+      console.log('backlisting', albumIdList.length, 'albums');
+      localStorage.removeItem(blacklistedAlbumsKey);
+      localStorage.setItem(blacklistedAlbumsKey, JSON.stringify(albumIdList));
+    }
+    app.ports.setBlacklistedAlbums.subscribe(albumIdList => setBlacklistedAlbums(albumIdList));
+
+    function fetchBrowserLanguage() {
+      const languages = navigator.languages;
+      for(const language of languages) {
+        if (language.startsWith('de')) {
+          return 'de';
+        } else if (language.startsWith('en')) {
+          return 'en';
+        }
+      }
+      return 'en';
+    }
+
+    function fetchLastSelectedLanguage() {
+      const language = localStorage.getItem(lastSelectedLanguageKey);
+      if (!language && language !== 'en' && language !== 'de') {
+        return "";
+      } else {
+        return language;
+      }
+    }
+
+    function fetchLanguage() {
+      const lastSelected = fetchLastSelectedLanguage();
+      if (lastSelected && lastSelected !== "") {
+        return lastSelected
+      } else {
+        return fetchBrowserLanguage();
+      }
+    }
+
+    function setLastSelectedLanguage(language) {
+      localStorage.setItem(lastSelectedLanguageKey, language);
+    }
+    app.ports.setLastSelectedLanguage.subscribe(setLastSelectedLanguage);
+
+    function fetchLastSelectedArtist() {
+      const artist = localStorage.getItem(lastSelectedArtistKey);
+      if (artist) {
+        return artist;
+      } else {
+        return "";
+      }
+    }
+
+    function setLastSelectedArtist(httpFriendlyShortName) {
+      localStorage.setItem(lastSelectedArtistKey, httpFriendlyShortName);
+    }
+    app.ports.setLastSelectedArtist.subscribe(setLastSelectedArtist);
+
+  </script>
+</body>
+
+</html>
