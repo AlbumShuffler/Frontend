@@ -87,13 +87,13 @@
 
     function fetchBrowserLanguage() {
       const languages = navigator.languages;
-      languages.forEach((language) => {
+      for(const language of languages) {
         if (language.startsWith('de')) {
           return 'de';
         } else if (language.startsWith('en')) {
           return 'en';
         }
-      });
+      }
       return 'en';
     }
 
