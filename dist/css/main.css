@@ -1,7 +1,13 @@
 body {
     margin: 0;
-    background-color: black;
+    background-color: #111111;
     overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+    }
 }
 
 #background-image-container {
