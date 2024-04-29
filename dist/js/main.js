@@ -5345,7 +5345,7 @@ var $elm$core$Task$perform = F2(
 	});
 var $elm$browser$Browser$element = _Browser_element;
 var $elm$json$Json$Decode$field = _Json_decodeField;
-var $author$project$TextRessources$englishText = {are_blacklisted_clear_blocklist_question: ' are blacklisted. Clear blacklist?', block: 'block', block_current_album: 'block current album', clear_blocked: 'clear blocked', flag: '🇬🇧', key: 'en', no_album_and_no_artist_data_available: 'Neither artist nor album data available :(', no_album_data_available: 'No album data available :(', no_albums_available_but: 'No albums available but ', no_artist_data_available: 'No artist data available :('};
+var $author$project$TextRessources$englishText = {are_blacklisted_clear_blocklist_question: ' are blacklisted. Clear blacklist?', block: 'block', block_current_album: 'block current album', clear_blocked: 'clear blocked', flag: '🇬🇧', key: 'en', no_album_and_no_artist_data_available: 'Neither artist nor album data available :(', no_album_data_available: 'No album data available :(', no_albums_available: 'No albums available. This is most likely the result of a failed initialization', no_albums_available_but: 'No albums available but ', no_artist_data_available: 'No artist data available :('};
 var $elm$core$Array$fromListHelp = F3(
 	function (list, nodeList, nodeListSize) {
 		fromListHelp:
@@ -5381,7 +5381,7 @@ var $elm$core$Array$fromList = function (list) {
 		return A3($elm$core$Array$fromListHelp, list, _List_Nil, 0);
 	}
 };
-var $author$project$TextRessources$germanText = {are_blacklisted_clear_blocklist_question: ' sind blockiert. Blockliste löschen?', block: 'blocken', block_current_album: 'aktuelles Album blockieren', clear_blocked: 'Blockliste löschen', flag: '🇩🇪', key: 'de', no_album_and_no_artist_data_available: 'Weder Album- noch Interpreteninformationen verfügbar :(', no_album_data_available: 'Keine Albuminformationen verfügbar :(', no_albums_available_but: 'Keine Albenverfügbar, aber', no_artist_data_available: 'Keine Interpreteninformationen verfügbar :('};
+var $author$project$TextRessources$germanText = {are_blacklisted_clear_blocklist_question: ' sind blockiert. Blockliste löschen?', block: 'blocken', block_current_album: 'aktuelles Album blockieren', clear_blocked: 'Blockliste löschen', flag: '🇩🇪', key: 'de', no_album_and_no_artist_data_available: 'Weder Album- noch Interpreteninformationen verfügbar :(', no_album_data_available: 'Keine Albuminformationen verfügbar :(', no_albums_available: 'Keine Alben verfügbar, vermutlich ist die Initialisierung fehlgeschlagen', no_albums_available_but: 'Keine Albenverfügbar, aber', no_artist_data_available: 'Keine Interpreteninformationen verfügbar :('};
 var $author$project$TextRessources$all = $elm$core$Array$fromList(
 	_List_fromArray(
 		[$author$project$TextRessources$germanText, $author$project$TextRessources$englishText]));
@@ -15491,15 +15491,7 @@ var $author$project$Main$update = F2(
 					$author$project$Main$setLastSelectedLanguage(nextLanguage.key));
 		}
 	});
-var $author$project$Main$BlackListAlbum = function (a) {
-	return {$: 'BlackListAlbum', a: a};
-};
-var $author$project$Main$CloseArtistOverlay = function (a) {
-	return {$: 'CloseArtistOverlay', a: a};
-};
-var $author$project$Main$NextAlbum = {$: 'NextAlbum'};
 var $author$project$Main$OpenArtistOverlay = {$: 'OpenArtistOverlay'};
-var $author$project$Main$PreviousAlbum = {$: 'PreviousAlbum'};
 var $author$project$Main$Reset = function (a) {
 	return {$: 'Reset', a: a};
 };
@@ -15513,6 +15505,109 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 			$elm$json$Json$Encode$string(string));
 	});
 var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
+var $author$project$Main$CloseArtistOverlay = function (a) {
+	return {$: 'CloseArtistOverlay', a: a};
+};
+var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
+var $elm$html$Html$img = _VirtualDom_node('img');
+var $elm$virtual_dom$VirtualDom$Normal = function (a) {
+	return {$: 'Normal', a: a};
+};
+var $elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
+var $elm$html$Html$Events$on = F2(
+	function (event, decoder) {
+		return A2(
+			$elm$virtual_dom$VirtualDom$on,
+			event,
+			$elm$virtual_dom$VirtualDom$Normal(decoder));
+	});
+var $elm$html$Html$Events$onClick = function (msg) {
+	return A2(
+		$elm$html$Html$Events$on,
+		'click',
+		$elm$json$Json$Decode$succeed(msg));
+};
+var $elm$html$Html$Attributes$src = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'src',
+		_VirtualDom_noJavaScriptOrHtmlUri(url));
+};
+var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
+var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$Main$artistOverlay = F2(
+	function (isOverlayOpen, artist) {
+		var overlayItem = F2(
+			function (isSelected, a) {
+				var isSelectedClass = isSelected ? ' artist-list-selected-element' : '';
+				return A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Events$onClick(
+							$author$project$Main$CloseArtistOverlay(a))
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$img,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('mb-025 artist-list' + isSelectedClass),
+									$elm$html$Html$Attributes$src(a.imageUrl)
+								]),
+							_List_Nil),
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('mb-10 artist-list-caption')
+								]),
+							_List_fromArray(
+								[
+									$elm$html$Html$text(a.name)
+								]))
+						]));
+			});
+		var overlayGrid = function (artists) {
+			return A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('artist-list m-20')
+					]),
+				A2(
+					$elm$core$List$map,
+					function (a) {
+						var isCurrentArtist = _Utils_eq(artist, a);
+						return A2(overlayItem, isCurrentArtist, a);
+					},
+					artists));
+		};
+		var display = isOverlayOpen ? A2($elm$html$Html$Attributes$style, 'display', 'flex') : A2($elm$html$Html$Attributes$style, 'display', 'none');
+		return A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$id('artist-selection-overview'),
+					$elm$html$Html$Attributes$class('white-text urbanist-font'),
+					display
+				]),
+			_List_fromArray(
+				[
+					overlayGrid(
+					A2(
+						$elm$core$List$map,
+						function (a) {
+							return a.artist;
+						},
+						$author$project$ArtistsWithAlbums$albumStorage))
+				]));
+	});
 var $elm$virtual_dom$VirtualDom$attribute = F2(
 	function (key, value) {
 		return A2(
@@ -15521,8 +15616,166 @@ var $elm$virtual_dom$VirtualDom$attribute = F2(
 			_VirtualDom_noJavaScriptOrHtmlUri(value));
 	});
 var $elm$html$Html$Attributes$attribute = $elm$virtual_dom$VirtualDom$attribute;
-var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
-var $elm$html$Html$div = _VirtualDom_node('div');
+var $author$project$Main$BlackListAlbum = function (a) {
+	return {$: 'BlackListAlbum', a: a};
+};
+var $author$project$Main$blacklistControls = F4(
+	function (numberOfBlacklistedAlbums, artist, albumId, text) {
+		return A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$id('blocklist-controls'),
+					A2($elm$html$Html$Attributes$style, 'z-index', '2'),
+					A2($elm$html$Html$Attributes$style, 'text-decoration', 'none'),
+					A2($elm$html$Html$Attributes$style, 'color', 'white')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$div,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									A2($elm$html$Html$Attributes$style, 'font-weight', '1000'),
+									A2($elm$html$Html$Attributes$style, 'height', '4rem'),
+									A2($elm$html$Html$Attributes$style, 'text-transform', 'uppercase'),
+									$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center pointer urbanist-font')
+								]),
+							_List_fromArray(
+								[
+									A2(
+									$elm$html$Html$a,
+									_List_fromArray(
+										[
+											$elm$html$Html$Events$onClick(
+											$author$project$Main$BlackListAlbum(
+												_Utils_Tuple2(artist.id, albumId))),
+											$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center mr-10')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$img,
+											_List_fromArray(
+												[
+													A2($elm$html$Html$Attributes$style, 'height', '2rem'),
+													$elm$html$Html$Attributes$class('mr-05'),
+													$elm$html$Html$Attributes$src('img/block.svg'),
+													$elm$html$Html$Attributes$alt(text.block_current_album)
+												]),
+											_List_Nil),
+											A2(
+											$elm$html$Html$div,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text(text.block)
+												]))
+										])),
+									(!numberOfBlacklistedAlbums) ? A2(
+									$elm$html$Html$a,
+									_List_fromArray(
+										[
+											$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center ml-10 disabled')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$img,
+											_List_fromArray(
+												[
+													A2($elm$html$Html$Attributes$style, 'height', '2rem'),
+													$elm$html$Html$Attributes$class('mr-05'),
+													$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
+													$elm$html$Html$Attributes$alt(text.clear_blocked)
+												]),
+											_List_Nil),
+											A2(
+											$elm$html$Html$div,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text(text.clear_blocked)
+												]))
+										])) : A2(
+									$elm$html$Html$a,
+									_List_fromArray(
+										[
+											$elm$html$Html$Events$onClick(
+											$author$project$Main$Reset(
+												$elm$core$Maybe$Just(artist))),
+											$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center ml-10')
+										]),
+									_List_fromArray(
+										[
+											A2(
+											$elm$html$Html$img,
+											_List_fromArray(
+												[
+													A2($elm$html$Html$Attributes$style, 'height', '2rem'),
+													$elm$html$Html$Attributes$class('mr-05'),
+													$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
+													$elm$html$Html$Attributes$alt(text.clear_blocked)
+												]),
+											_List_Nil),
+											A2(
+											$elm$html$Html$div,
+											_List_Nil,
+											_List_fromArray(
+												[
+													$elm$html$Html$text(
+													text.clear_blocked + (' (' + ($elm$core$String$fromInt(numberOfBlacklistedAlbums) + ')')))
+												]))
+										]))
+								]))
+						]))
+				]));
+	});
+var $author$project$Main$controlsGlowEffect = F2(
+	function (colorA, colorB) {
+		return A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					A2($elm$html$Html$Attributes$style, 'position', 'absolute')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$div,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$id('controls-glow-parent'),
+							$elm$html$Html$Attributes$class('z-1')
+						]),
+					_List_fromArray(
+						[
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$id('controls-glow-1'),
+									$elm$html$Html$Attributes$class('z-1'),
+									A2($elm$html$Html$Attributes$style, 'background', colorA)
+								]),
+							_List_Nil),
+							A2(
+							$elm$html$Html$div,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$id('controls-glow-2'),
+									$elm$html$Html$Attributes$class('z-1'),
+									A2($elm$html$Html$Attributes$style, 'background', colorB)
+								]),
+							_List_Nil)
+						]))
+				]));
+	});
 var $elm$core$String$fromFloat = _String_fromNumber;
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
@@ -15530,8 +15783,6 @@ var $elm$html$Html$Attributes$href = function (url) {
 		'href',
 		_VirtualDom_noJavaScriptUri(url));
 };
-var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
-var $elm$html$Html$img = _VirtualDom_node('img');
 var $elm$core$Array$isEmpty = function (_v0) {
 	var len = _v0.a;
 	return !len;
@@ -15565,33 +15816,82 @@ var $elm_community$list_extra$List$Extra$maximumBy = F2(
 			return $elm$core$Maybe$Nothing;
 		}
 	});
-var $elm$virtual_dom$VirtualDom$Normal = function (a) {
-	return {$: 'Normal', a: a};
-};
-var $elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
-var $elm$html$Html$Events$on = F2(
-	function (event, decoder) {
-		return A2(
-			$elm$virtual_dom$VirtualDom$on,
-			event,
-			$elm$virtual_dom$VirtualDom$Normal(decoder));
-	});
-var $elm$html$Html$Events$onClick = function (msg) {
+var $author$project$Main$NextAlbum = {$: 'NextAlbum'};
+var $author$project$Main$PreviousAlbum = {$: 'PreviousAlbum'};
+var $author$project$Main$navigationControls = function (urlToOpen) {
 	return A2(
-		$elm$html$Html$Events$on,
-		'click',
-		$elm$json$Json$Decode$succeed(msg));
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$id('navigation-controls'),
+				$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center'),
+				A2($elm$html$Html$Attributes$style, 'z-index', '2')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$a,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('z-2'),
+						$elm$html$Html$Attributes$href('#'),
+						$elm$html$Html$Events$onClick($author$project$Main$PreviousAlbum)
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$img,
+						_List_fromArray(
+							[
+								A2($elm$html$Html$Attributes$style, 'padding', '1.5rem'),
+								A2($elm$html$Html$Attributes$style, 'height', '25px'),
+								A2($elm$html$Html$Attributes$style, 'width', '25px'),
+								A2($elm$html$Html$Attributes$style, 'transform', 'scaleX(-1)'),
+								$elm$html$Html$Attributes$src('img/next.svg')
+							]),
+						_List_Nil)
+					])),
+				A2(
+				$elm$html$Html$a,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('z-2'),
+						$elm$html$Html$Attributes$href(urlToOpen)
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$img,
+						_List_fromArray(
+							[
+								A2($elm$html$Html$Attributes$style, 'height', '10rem'),
+								$elm$html$Html$Attributes$src('img/play.svg'),
+								$elm$html$Html$Attributes$alt('play current album on Spotify')
+							]),
+						_List_Nil)
+					])),
+				A2(
+				$elm$html$Html$a,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('z-2'),
+						$elm$html$Html$Attributes$href('#'),
+						$elm$html$Html$Events$onClick($author$project$Main$NextAlbum)
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$img,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('p-15'),
+								$elm$html$Html$Attributes$src('img/next.svg'),
+								$elm$html$Html$Attributes$alt('get next suggestion')
+							]),
+						_List_Nil)
+					]))
+			]));
 };
-var $elm$html$Html$Attributes$src = function (url) {
-	return A2(
-		$elm$html$Html$Attributes$stringProperty,
-		'src',
-		_VirtualDom_noJavaScriptOrHtmlUri(url));
-};
-var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
-var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$regex$Regex$Match = F4(
 	function (match, index, number, submatches) {
 		return {index: index, match: match, number: number, submatches: submatches};
@@ -15758,74 +16058,6 @@ var $author$project$Main$view = function (model) {
 				} else {
 					var album = _v0.a.a;
 					var artist = _v0.b.a;
-					var overlayItem = F2(
-						function (isSelected, a) {
-							var isSelectedClass = isSelected ? ' artist-list-selected-element' : '';
-							return A2(
-								$elm$html$Html$a,
-								_List_fromArray(
-									[
-										$elm$html$Html$Events$onClick(
-										$author$project$Main$CloseArtistOverlay(a))
-									]),
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$img,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('mb-025 artist-list' + isSelectedClass),
-												$elm$html$Html$Attributes$src(a.imageUrl)
-											]),
-										_List_Nil),
-										A2(
-										$elm$html$Html$div,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$class('mb-10 artist-list-caption')
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text(a.name)
-											]))
-									]));
-						});
-					var overlayGrid = function (artists) {
-						return A2(
-							$elm$html$Html$div,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$class('artist-list m-20')
-								]),
-							A2(
-								$elm$core$List$map,
-								function (a) {
-									var isCurrentArtist = _Utils_eq(artist, a);
-									return A2(overlayItem, isCurrentArtist, a);
-								},
-								artists));
-					};
-					var overlay = function () {
-						var display = model.isArtistOverlayOpen ? A2($elm$html$Html$Attributes$style, 'display', 'flex') : A2($elm$html$Html$Attributes$style, 'display', 'none');
-						return A2(
-							$elm$html$Html$div,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$id('artist-selection-overview'),
-									$elm$html$Html$Attributes$class('white-text urbanist-font'),
-									display
-								]),
-							_List_fromArray(
-								[
-									overlayGrid(
-									A2(
-										$elm$core$List$map,
-										function (a) {
-											return a.artist;
-										},
-										$author$project$ArtistsWithAlbums$albumStorage))
-								]));
-					}();
 					var largestCover = A2(
 						$elm$core$Maybe$withDefault,
 						{height: 640, url: 'https://fakeimg.pl/640x640', width: 640},
@@ -15921,16 +16153,12 @@ var $author$project$Main$view = function (model) {
 							]),
 						_List_fromArray(
 							[
-								overlay,
+								A2($author$project$Main$artistOverlay, model.isArtistOverlayOpen, artist),
 								A2(
 								$elm$html$Html$div,
 								_List_fromArray(
 									[
-										$elm$html$Html$Attributes$id('background-color-overlay'),
-										A2($elm$html$Html$Attributes$style, '-webkit-transition', 'background ' + (backgroundFadeDuration + ' linear')),
-										A2($elm$html$Html$Attributes$style, '-moz-transition', 'background ' + (backgroundFadeDuration + ' linear')),
-										A2($elm$html$Html$Attributes$style, '-o-transition', 'background ' + (backgroundFadeDuration + ' linear')),
-										A2($elm$html$Html$Attributes$style, 'transition', 'background ' + (backgroundFadeDuration + ' linear'))
+										$elm$html$Html$Attributes$id('background-color-overlay')
 									]),
 								_List_fromArray(
 									[
@@ -15996,12 +16224,9 @@ var $author$project$Main$view = function (model) {
 																		_List_fromArray(
 																			[
 																				$elm$html$Html$Attributes$id('cover-img'),
+																				$elm$html$Html$Attributes$class('z-1 absolute-center-vertically'),
 																				A2($elm$html$Html$Attributes$attribute, 'srcset', coverSourceSet),
-																				A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-																				A2($elm$html$Html$Attributes$style, 'top', '0'),
-																				A2($elm$html$Html$Attributes$style, 'bottom', '0'),
-																				A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth),
-																				A2($elm$html$Html$Attributes$style, 'z-index', '1')
+																				A2($elm$html$Html$Attributes$style, 'width', coverMaxWidth)
 																			]),
 																		_List_Nil)
 																	])),
@@ -16017,8 +16242,6 @@ var $author$project$Main$view = function (model) {
 																		$elm$core$String$fromFloat(coverAspectRatio)),
 																		A2($elm$html$Html$Attributes$style, 'max-height', coverMaxWidth),
 																		A2($elm$html$Html$Attributes$style, 'box-shadow', boxShadowSize + (' ' + (boxShadowSize + (' ' + boxShadowSize)))),
-																		A2($elm$html$Html$Attributes$style, 'border-radius', '20.02px'),
-																		A2($elm$html$Html$Attributes$style, 'filter', 'blur(7.5vw)'),
 																		backgroundGlowStyle
 																	]),
 																_List_Nil)
@@ -16039,232 +16262,13 @@ var $author$project$Main$view = function (model) {
 												$elm$html$Html$div,
 												_List_fromArray(
 													[
-														$elm$html$Html$Attributes$class('z-1'),
-														A2($elm$html$Html$Attributes$style, 'opacity', '0.4'),
-														A2($elm$html$Html$Attributes$style, 'width', '239.62px'),
-														A2($elm$html$Html$Attributes$style, 'height', '244.60px'),
-														A2($elm$html$Html$Attributes$style, 'left', 'calc(50vw - 120px)'),
-														A2($elm$html$Html$Attributes$style, 'top', 'calc(100vh)'),
-														A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-														A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
-														A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0')
+														A2($elm$html$Html$Attributes$style, 'position', 'relative')
 													]),
 												_List_fromArray(
 													[
-														A2(
-														$elm$html$Html$div,
-														_List_fromArray(
-															[
-																$elm$html$Html$Attributes$class('z-1'),
-																A2($elm$html$Html$Attributes$style, 'width', '133.77px'),
-																A2($elm$html$Html$Attributes$style, 'height', '179.56px'),
-																A2($elm$html$Html$Attributes$style, 'left', '0'),
-																A2($elm$html$Html$Attributes$style, 'top', '0'),
-																A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-																A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
-																A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0'),
-																A2($elm$html$Html$Attributes$style, 'background', artist.coverColorA),
-																A2($elm$html$Html$Attributes$style, 'box-shadow', '210.86053466796875px 210.86053466796875px 210.86053466796875px'),
-																A2($elm$html$Html$Attributes$style, 'filter', 'blur(min(20vw, 210.86px))')
-															]),
-														_List_Nil),
-														A2(
-														$elm$html$Html$div,
-														_List_fromArray(
-															[
-																$elm$html$Html$Attributes$class('z-1'),
-																A2($elm$html$Html$Attributes$style, 'width', '133.54px'),
-																A2($elm$html$Html$Attributes$style, 'height', '183.31px'),
-																A2($elm$html$Html$Attributes$style, 'left', '119.12px'),
-																A2($elm$html$Html$Attributes$style, 'top', '-28.67px'),
-																A2($elm$html$Html$Attributes$style, 'position', 'absolute'),
-																A2($elm$html$Html$Attributes$style, 'transform', 'rotate(-43.55deg)'),
-																A2($elm$html$Html$Attributes$style, 'transform-origin', '0 0'),
-																A2($elm$html$Html$Attributes$style, 'background', artist.coverColorB),
-																A2($elm$html$Html$Attributes$style, 'box-shadow', '210.86053466796875px 210.86053466796875px 210.86053466796875px'),
-																A2($elm$html$Html$Attributes$style, 'filter', 'blur(min(20vw, 210.86px))')
-															]),
-														_List_Nil)
-													])),
-												A2(
-												$elm$html$Html$div,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$class('d-flex align-items-center justify-content-center'),
-														A2($elm$html$Html$Attributes$style, 'z-index', '2')
-													]),
-												_List_fromArray(
-													[
-														A2(
-														$elm$html$Html$a,
-														_List_fromArray(
-															[
-																$elm$html$Html$Attributes$href('#'),
-																$elm$html$Html$Events$onClick($author$project$Main$PreviousAlbum)
-															]),
-														_List_fromArray(
-															[
-																A2(
-																$elm$html$Html$img,
-																_List_fromArray(
-																	[
-																		A2($elm$html$Html$Attributes$style, 'padding', '1.5rem'),
-																		A2($elm$html$Html$Attributes$style, 'height', '25px'),
-																		A2($elm$html$Html$Attributes$style, 'width', '25px'),
-																		A2($elm$html$Html$Attributes$style, 'transform', 'scaleX(-1)'),
-																		$elm$html$Html$Attributes$src('img/next.svg')
-																	]),
-																_List_Nil)
-															])),
-														A2(
-														$elm$html$Html$a,
-														_List_fromArray(
-															[
-																$elm$html$Html$Attributes$href(album.urlToOpen)
-															]),
-														_List_fromArray(
-															[
-																A2(
-																$elm$html$Html$img,
-																_List_fromArray(
-																	[
-																		A2($elm$html$Html$Attributes$style, 'height', '10rem'),
-																		$elm$html$Html$Attributes$src('img/play.svg'),
-																		$elm$html$Html$Attributes$alt('play current album on Spotify')
-																	]),
-																_List_Nil)
-															])),
-														A2(
-														$elm$html$Html$a,
-														_List_fromArray(
-															[
-																$elm$html$Html$Attributes$href('#'),
-																$elm$html$Html$Events$onClick($author$project$Main$NextAlbum)
-															]),
-														_List_fromArray(
-															[
-																A2(
-																$elm$html$Html$img,
-																_List_fromArray(
-																	[
-																		$elm$html$Html$Attributes$class('p-15'),
-																		$elm$html$Html$Attributes$src('img/next.svg'),
-																		$elm$html$Html$Attributes$alt('get next suggestion')
-																	]),
-																_List_Nil)
-															]))
-													])),
-												A2(
-												$elm$html$Html$div,
-												_List_fromArray(
-													[
-														A2($elm$html$Html$Attributes$style, 'z-index', '2'),
-														A2($elm$html$Html$Attributes$style, 'text-decoration', 'none'),
-														A2($elm$html$Html$Attributes$style, 'color', 'white')
-													]),
-												_List_fromArray(
-													[
-														A2(
-														$elm$html$Html$div,
-														_List_Nil,
-														_List_fromArray(
-															[
-																A2(
-																$elm$html$Html$div,
-																_List_fromArray(
-																	[
-																		A2($elm$html$Html$Attributes$style, 'font-weight', '1000'),
-																		A2($elm$html$Html$Attributes$style, 'height', '4rem'),
-																		A2($elm$html$Html$Attributes$style, 'text-transform', 'uppercase'),
-																		$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center pointer urbanist-font')
-																	]),
-																_List_fromArray(
-																	[
-																		A2(
-																		$elm$html$Html$a,
-																		_List_fromArray(
-																			[
-																				$elm$html$Html$Events$onClick(
-																				$author$project$Main$BlackListAlbum(
-																					_Utils_Tuple2(artist.id, album.id))),
-																				$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center mr-10')
-																			]),
-																		_List_fromArray(
-																			[
-																				A2(
-																				$elm$html$Html$img,
-																				_List_fromArray(
-																					[
-																						A2($elm$html$Html$Attributes$style, 'height', '2rem'),
-																						$elm$html$Html$Attributes$class('mr-05'),
-																						$elm$html$Html$Attributes$src('img/block.svg'),
-																						$elm$html$Html$Attributes$alt(model.text.block_current_album)
-																					]),
-																				_List_Nil),
-																				A2(
-																				$elm$html$Html$div,
-																				_List_Nil,
-																				_List_fromArray(
-																					[
-																						$elm$html$Html$text(model.text.block)
-																					]))
-																			])),
-																		(!numberOfBlacklistedAlbums) ? A2(
-																		$elm$html$Html$a,
-																		_List_fromArray(
-																			[
-																				$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center ml-10 disabled')
-																			]),
-																		_List_fromArray(
-																			[
-																				A2(
-																				$elm$html$Html$img,
-																				_List_fromArray(
-																					[
-																						A2($elm$html$Html$Attributes$style, 'height', '2rem'),
-																						$elm$html$Html$Attributes$class('mr-05'),
-																						$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
-																						$elm$html$Html$Attributes$alt(model.text.clear_blocked)
-																					]),
-																				_List_Nil),
-																				A2(
-																				$elm$html$Html$div,
-																				_List_Nil,
-																				_List_fromArray(
-																					[
-																						$elm$html$Html$text(model.text.clear_blocked)
-																					]))
-																			])) : A2(
-																		$elm$html$Html$a,
-																		_List_fromArray(
-																			[
-																				$elm$html$Html$Events$onClick(
-																				$author$project$Main$Reset(model.currentArtist)),
-																				$elm$html$Html$Attributes$class('z-2 small-text non-styled-link d-flex align-items-center ml-10')
-																			]),
-																		_List_fromArray(
-																			[
-																				A2(
-																				$elm$html$Html$img,
-																				_List_fromArray(
-																					[
-																						A2($elm$html$Html$Attributes$style, 'height', '2rem'),
-																						$elm$html$Html$Attributes$class('mr-05'),
-																						$elm$html$Html$Attributes$src('img/clear-format-white.svg'),
-																						$elm$html$Html$Attributes$alt(model.text.clear_blocked)
-																					]),
-																				_List_Nil),
-																				A2(
-																				$elm$html$Html$div,
-																				_List_Nil,
-																				_List_fromArray(
-																					[
-																						$elm$html$Html$text(
-																						model.text.clear_blocked + (' (' + ($elm$core$String$fromInt(numberOfBlacklistedAlbums) + ')')))
-																					]))
-																			]))
-																	]))
-															]))
+														A2($author$project$Main$controlsGlowEffect, artist.coverColorA, artist.coverColorB),
+														$author$project$Main$navigationControls(album.urlToOpen),
+														A4($author$project$Main$blacklistControls, numberOfBlacklistedAlbums, artist, album.id, model.text)
 													]))
 											]))
 									]))

@@ -7,6 +7,7 @@ import ArtistIds
 import ArtistsWithAlbums exposing (albumStorage)
 import AssocList as Dict exposing (Dict)
 import Browser
+import Debug
 import Html exposing (Html, div, img, text)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
@@ -16,7 +17,6 @@ import Random
 import Random.List
 import Regex
 import TextRessources
-import Debug
 
 
 defaultArtistShortName : String
@@ -147,12 +147,23 @@ type Msg
 init : Flags -> ( Model, Cmd Msg )
 init flags =
     let
-        artistShortName = if flags.lastSelectedArtist == "" then defaultArtistShortName else flags.lastSelectedArtist
-        text = TextRessources.all |> Array.toList |> List.find (\t -> t.key == flags.language)
-        blacklist = flags.blockedAlbums |> blackListFromStringList
-        model = emptyModel artistShortName (Just blacklist) text
+        artistShortName =
+            if flags.lastSelectedArtist == "" then
+                defaultArtistShortName
+
+            else
+                flags.lastSelectedArtist
+
+        text =
+            TextRessources.all |> Array.toList |> List.find (\t -> t.key == flags.language)
+
+        blacklist =
+            flags.blockedAlbums |> blackListFromStringList
+
+        model =
+            emptyModel artistShortName (Just blacklist) text
     in
-    (  model, model.albums |> startShuffleAlbums )
+    ( model, model.albums |> startShuffleAlbums )
 
 
 startShuffleAlbums : Array Album -> Cmd Msg
@@ -388,21 +399,32 @@ view model =
                 |> Maybe.withDefault []
                 |> List.length
     in
+    
+    {---------------------------
+        INITIAL BOOTSTRAPPING
+    ---------------------------}
     if model.isInitialized == False then
         div
             [ class "white-text status-text-container" ]
             [ div [ class "status-text" ] [ text "Loading ..." ] ]
 
+    {-------------------------------------------------------------
+        NO ALBUMS IN POOL
+        There is no need to check `model.albums |> Array.isEmpty`
+        because that is part of the regular view
+    -------------------------------------------------------------}
     else if
-        model.isInitialized
-            == True
-            && (model.albums |> Array.isEmpty)
-            && (numberOfBlacklistedAlbums > 0)
-    then
+        model.isInitialized == True 
+        && (model.albums |> Array.isEmpty) 
+        && (numberOfBlacklistedAlbums > 0)
+        then
         div
             [ class "white-text status-text-container" ]
             [ Html.a [ onClick (Reset model.currentArtist), class "status-text pointer" ] [ text (model.text.no_albums_available_but ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ model.text.are_blacklisted_clear_blocklist_question) ] ]
 
+    {------------------
+        REGULAR VIEW
+    ------------------}
     else
         case ( model.albums |> Array.get model.current, model.currentArtist ) of
             ( Nothing, Just _ ) ->
@@ -475,64 +497,15 @@ view model =
                     backgroundGlowStyle =
                         style "background" ("linear-gradient(45deg, " ++ artist.coverColorA ++ " , " ++ artist.coverColorB ++ " 100%)")
 
-                    overlayItem : Bool -> ArtistInfo -> Html Msg
-                    overlayItem isSelected a =
-                        let
-                            isSelectedClass =
-                                if isSelected then
-                                    " artist-list-selected-element"
-
-                                else
-                                    ""
-                        in
-                        Html.a
-                            [ onClick (CloseArtistOverlay a) ]
-                            [ img [ class ("mb-025 artist-list" ++ isSelectedClass), src a.imageUrl ] []
-                            , div [ class "mb-10 artist-list-caption" ] [ text a.name ]
-                            ]
-
-                    overlayGrid : List ArtistInfo -> Html Msg
-                    overlayGrid artists =
-                        div
-                            [ class "artist-list m-20" ]
-                            (artists
-                                |> List.map
-                                    (\a ->
-                                        let
-                                            isCurrentArtist =
-                                                artist == a
-                                        in
-                                        overlayItem isCurrentArtist a
-                                    )
-                            )
-
-                    overlay =
-                        let
-                            display =
-                                if model.isArtistOverlayOpen then
-                                    style "display" "flex"
-
-                                else
-                                    style "display" "none"
-                        in
-                        div
-                            [ id "artist-selection-overview", class "white-text urbanist-font", display ]
-                            [ overlayGrid (ArtistsWithAlbums.albumStorage |> List.map (\a -> a.artist))
-                            ]
                 in
                 div
                     [ id "background-image-container"
                     , style "background-image" ("url(" ++ backgroundImageUrl ++ ")")
                     , style "background-position" (coverCenterX ++ " " ++ coverCenterY)
                     ]
-                    [ overlay
+                    [ artist |> (artistOverlay model.isArtistOverlayOpen)
                     , div
-                        [ id "background-color-overlay"
-                        , style "-webkit-transition" ("background " ++ backgroundFadeDuration ++ " linear")
-                        , style "-moz-transition" ("background " ++ backgroundFadeDuration ++ " linear")
-                        , style "-o-transition" ("background " ++ backgroundFadeDuration ++ " linear")
-                        , style "transition" ("background " ++ backgroundFadeDuration ++ " linear")
-                        ]
+                        [ id "background-color-overlay" ]
                         [ div
                             [ id "inner-layout-container"
                             , class "d-flex flex-column"
@@ -543,8 +516,6 @@ view model =
                                 [ div
                                     [ class "d-flex justify-content-center align-items-center" ]
                                     [ githubLink, language, artistImage ]
-
-                                {- xLink ] -}
                                 ]
                             , div
                                 [ style "flex-grow" "1"
@@ -556,13 +527,9 @@ view model =
                                     [ Html.a
                                         [ href album.urlToOpen ]
                                         [ img
-                                            [ id "cover-img"
+                                            [ id "cover-img", class "z-1 absolute-center-vertically"
                                             , attribute "srcset" coverSourceSet
-                                            , style "position" "absolute"
-                                            , style "top" "0"
-                                            , style "bottom" "0"
                                             , style "width" coverMaxWidth
-                                            , style "z-index" "1"
                                             ]
                                             []
                                         ]
@@ -572,82 +539,112 @@ view model =
                                         , style "aspect-ratio" (coverAspectRatio |> String.fromFloat)
                                         , style "max-height" coverMaxWidth
                                         , style "box-shadow" (boxShadowSize ++ " " ++ boxShadowSize ++ " " ++ boxShadowSize)
-                                        , style "border-radius" "20.02px"
-                                        , style "filter" "blur(7.5vw)"
                                         , backgroundGlowStyle
                                         ]
                                         []
                                     ]
                                 , div [ id "cover-text", style "display" "none" ] [ text album.name ]
                                 ]
-                            , div
-                                [ class "z-1"
-                                , style "opacity" "0.4"
-                                , style "width" "239.62px"
-                                , style "height" "244.60px"
-                                , style "left" "calc(50vw - 120px)"
-                                , style "top" "calc(100vh)"
-                                , style "position" "absolute"
-                                , style "transform" "rotate(-43.55deg)"
-                                , style "transform-origin" "0 0"
-                                ]
-                                [ div
-                                    [ class "z-1"
-                                    , style "width" "133.77px"
-                                    , style "height" "179.56px"
-                                    , style "left" "0"
-                                    , style "top" "0"
-                                    , style "position" "absolute"
-                                    , style "transform" "rotate(-43.55deg)"
-                                    , style "transform-origin" "0 0"
-                                    , style "background" artist.coverColorA
-                                    , style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px"
-                                    , style "filter" "blur(min(20vw, 210.86px))"
-                                    ]
-                                    []
-                                , div
-                                    [ class "z-1"
-                                    , style "width" "133.54px"
-                                    , style "height" "183.31px"
-                                    , style "left" "119.12px"
-                                    , style "top" "-28.67px"
-                                    , style "position" "absolute"
-                                    , style "transform" "rotate(-43.55deg)"
-                                    , style "transform-origin" "0 0"
-                                    , style "background" artist.coverColorB
-                                    , style "box-shadow" "210.86053466796875px 210.86053466796875px 210.86053466796875px"
-                                    , style "filter" "blur(min(20vw, 210.86px))"
-                                    ]
-                                    []
-                                ]
-                            , div
-                                [ class "d-flex align-items-center justify-content-center"
-                                , style "z-index" "2"
-                                ]
-                                [ Html.a [ href "#", onClick PreviousAlbum ] [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/next.svg" ] [] ]
-                                , Html.a [ href album.urlToOpen ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
-                                , Html.a [ href "#", onClick NextAlbum ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
-                                ]
-                            , div
-                                [ style "z-index" "2", style "text-decoration" "none", style "color" "white" ]
-                                [ div []
-                                    [ div
-                                        [ style "font-weight" "1000", style "height" "4rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center pointer urbanist-font" ]
-                                        [ Html.a
-                                            [ onClick (BlackListAlbum ( artist.id, album.id )), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
-                                            [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt model.text.block_current_album ] [], div [] [ text model.text.block ] ]
-                                        , if numberOfBlacklistedAlbums == 0 then
-                                            Html.a
-                                                [ class "z-2 small-text non-styled-link d-flex align-items-center ml-10 disabled" ]
-                                                [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt model.text.clear_blocked ] [], div [] [ text model.text.clear_blocked ] ]
-
-                                          else
-                                            Html.a
-                                                [ onClick (Reset model.currentArtist), class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
-                                                [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt model.text.clear_blocked ] [], div [] [ text (model.text.clear_blocked ++ " (" ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ ")") ] ]
-                                        ]
-                                    ]
+                            , div [ style "position" "relative" ]
+                                [ controlsGlowEffect artist.coverColorA artist.coverColorB
+                                , navigationControls album.urlToOpen
+                                , blacklistControls numberOfBlacklistedAlbums artist album.id model.text
                                 ]
                             ]
                         ]
                     ]
+
+
+controlsGlowEffect : String -> String -> Html Msg
+controlsGlowEffect colorA colorB =
+    div [ style "position" "absolute" ]
+        [ div
+            [ id "controls-glow-parent", class "z-1" ]
+            [ div [ id "controls-glow-1", class "z-1", style "background" colorA ] []
+            , div [ id "controls-glow-2", class "z-1", style "background" colorB ] []
+            ]
+        ]
+
+
+navigationControls : String -> Html Msg
+navigationControls urlToOpen =
+    div
+        [ id "navigation-controls"
+        , class "d-flex align-items-center justify-content-center"
+        , style "z-index" "2"
+        ]
+        [ Html.a [ class "z-2", href "#", onClick PreviousAlbum ] [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/next.svg" ] [] ]
+        , Html.a [ class "z-2", href urlToOpen ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
+        , Html.a [ class "z-2", href "#", onClick NextAlbum ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
+        ]
+
+
+blacklistControls : Int -> ArtistInfo -> AlbumIds.AlbumId -> TextRessources.Text -> Html Msg
+blacklistControls numberOfBlacklistedAlbums artist albumId text =
+    div
+        [ id "blocklist-controls", style "z-index" "2", style "text-decoration" "none", style "color" "white" ]
+        [ div []
+            [ div
+                [ style "font-weight" "1000", style "height" "4rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center pointer urbanist-font" ]
+                [ Html.a
+                    [ onClick (BlackListAlbum ( artist.id, albumId )), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
+                    [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt text.block_current_album ] [], div [] [ Html.text (text.block) ] ]
+                , if numberOfBlacklistedAlbums == 0 then
+                    Html.a
+                        [ class "z-2 small-text non-styled-link d-flex align-items-center ml-10 disabled" ]
+                        [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt text.clear_blocked ] [], div [] [ Html.text text.clear_blocked ] ]
+
+                  else
+                    Html.a
+                        [ onClick (Reset (Just artist)), class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
+                        [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt text.clear_blocked ] [], div [] [ Html.text (text.clear_blocked ++ " (" ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ ")") ] ]
+                ]
+            ]
+        ]
+
+
+artistOverlay : Bool -> ArtistInfo -> Html Msg
+artistOverlay isOverlayOpen artist =
+    let
+        overlayItem : Bool -> ArtistInfo -> Html Msg
+        overlayItem isSelected a =
+            let
+                isSelectedClass =
+                    if isSelected then
+                        " artist-list-selected-element"
+
+                    else
+                        ""
+            in
+            Html.a
+                [ onClick (CloseArtistOverlay a) ]
+                [ img [ class ("mb-025 artist-list" ++ isSelectedClass), src a.imageUrl ] []
+                , div [ class "mb-10 artist-list-caption" ] [ text a.name ]
+                ]
+
+        overlayGrid : List ArtistInfo -> Html Msg
+        overlayGrid artists =
+            div
+                [ class "artist-list m-20" ]
+                (artists
+                    |> List.map
+                        (\a ->
+                            let
+                                isCurrentArtist =
+                                    artist == a
+                            in
+                            overlayItem isCurrentArtist a
+                        )
+                )
+                
+        display =
+            if isOverlayOpen then
+                style "display" "flex"
+
+            else
+                style "display" "none"
+    in
+    div
+        [ id "artist-selection-overview", class "white-text urbanist-font", display ]
+        [ overlayGrid (ArtistsWithAlbums.albumStorage |> List.map (\a -> a.artist))
+        ]

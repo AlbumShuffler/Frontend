@@ -45,6 +45,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
+    border-radius: 20.02px;
+    filter: blur(7.5vw);
     /*
     Additional options are required but need to be set dynamically;
      * background: linear-gradient(45deg, #DF030E 0%, #04A5E3 100%);
@@ -70,6 +72,43 @@ body {
     text-shadow: 0 0 10px black;
     width: 100%;
     text-align: center;
+}
+
+#controls-glow-parent {
+    opacity: 0.4;
+    width: 239.62px;
+    height: 244.60px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    transform: rotate(-43.55deg);
+    transform-origin: 250px 60px 0;
+}
+
+#controls-glow-1 {
+    width: 133.77px;
+    height: 179.56px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transform: rotate(-43.55deg);
+    transform-origin: 0 0;
+    box-shadow: 210.86053466796875px 210.86053466796875px 210.86053466796875px;
+    filter: blur(min(20vw, 210.86px));
+}
+
+#controls-glow-2 {
+    width: 133.54px;
+    height: 183.31px;
+    left: 119.12px;
+    top: -28.67px;
+    position: absolute;
+    transform: rotate(-43.55deg);
+    transform-origin: 0 0;
+    box-shadow: 210.86053466796875px 210.86053466796875px 210.86053466796875px;
+    filter: blur(min(20vw, 210.86px));
 }
 
 @media only screen and (max-height: 600px) {
@@ -283,4 +322,14 @@ body {
 
 .z-1 {
     z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+.absolute-center-vertically {
+    position: absolute;
+    bottom: 0;
+    top: 0;
 }
