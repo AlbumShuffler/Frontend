@@ -469,9 +469,14 @@ view model =
                         album.name |> tryAlbumNumberFrom |> Maybe.withDefault 0
 
                     coverCenterX =
-                        if albumNumber >= 126 then
+                        {- this part of the code contains some hardcoded checks and references because some artist do not
+                           have their cover art centered properly -}
+                        if (artist.httpFriendlyShortName == "ddf") && albumNumber >= 126 then
                             (60 |> String.fromInt) ++ "%"
-
+                        else if (artist.httpFriendlyShortName == "tkkgr") then
+                            (55 |> String.fromInt) ++ "%"
+                        else if (artist.httpFriendlyShortName == "pw") then
+                            (88 |> String.fromInt) ++ "%"
                         else
                             (50 |> String.fromInt) ++ "%"
 

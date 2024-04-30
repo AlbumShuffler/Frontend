@@ -16142,7 +16142,7 @@ var $author$project$Main$view = function (model) {
 						$elm$core$Maybe$withDefault,
 						0,
 						$author$project$Main$tryAlbumNumberFrom(album.name));
-					var coverCenterX = (albumNumber >= 126) ? ($elm$core$String$fromInt(60) + '%') : ($elm$core$String$fromInt(50) + '%');
+					var coverCenterX = ((artist.httpFriendlyShortName === 'ddf') && (albumNumber >= 126)) ? ($elm$core$String$fromInt(60) + '%') : ((artist.httpFriendlyShortName === 'tkkgr') ? ($elm$core$String$fromInt(55) + '%') : ((artist.httpFriendlyShortName === 'pw') ? ($elm$core$String$fromInt(88) + '%') : ($elm$core$String$fromInt(50) + '%')));
 					return A2(
 						$elm$html$Html$div,
 						_List_fromArray(
