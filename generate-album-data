@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+curl -LO https://github.com/AlbumShuffler/Generator/archive/refs/heads/master.zip
+rm -rf Generator-master
+unzip master.zip
+rm master.zip
+cd Generator-master
+npm i
+node index.js --destination=../src/
+cd -
+rm -rf Generator-master
