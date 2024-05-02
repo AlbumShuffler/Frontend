@@ -3,3 +3,5 @@ node_modules/
 elm-stuff/
 .idea/
 .stignore
+src/AlbumStorage*.elm
+src/ArtistsWithAlbums.elm
