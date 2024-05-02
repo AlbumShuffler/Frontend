@@ -9,6 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
+#
+# Preparation
+#
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -18,6 +21,18 @@ jobs:
       with:
         node-version: '20'
 
+#
+# Retrieve album data
+#
+    - name: Downlad album data generator
+      env:
+        SPOTIFY_ALBUM_REPO_ACCESS_TOKEN: ${{ secrets.SPOTIFY_ALBUM_REPO_ACCESS_TOKEN }}
+      run: 
+        ./generate-album-data
+
+#
+# Build the actual elm app
+#        
     - name: Install dependencies
       run: npm install
 
