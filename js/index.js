@@ -7,20 +7,6 @@ const blacklistedAlbumsKey = "blacklisted-albums";
 const lastSelectedArtistKey = "lastSelectedArtist";
 const lastSelectedLanguageKey = "lastSelectedLanguage";
 
-function tryRegisterServiceWorker() {
-    if (navigator.serviceWorker.controller) {
-        console.log("Active service worker found");
-    } else {
-        navigator.serviceWorker
-            .register("js/serviceWorker.js", {
-                scope: "./"
-            })
-            .then(function (reg) {
-                console.log("Service worker registered");
-            });
-    }
-}
-
 function getLegacyBlocklistEntries() {
     if (document.cookie && document.cookie.length > 0) {
         try {
