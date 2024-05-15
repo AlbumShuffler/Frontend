@@ -526,14 +526,24 @@ view model =
                                 ]
                                 [ div
                                     [ id "cover-container", class "", style "width" coverMaxWidth, style "position" "relative", style "height" "100%" ]
-                                    [ Html.a
-                                        [ href album.urlToOpen ]
-                                        [ img
-                                            [ id "cover-img", class "z-1 absolute-center-vertically"
-                                            , attribute "srcset" coverSourceSet
-                                            , style "width" coverMaxWidth
+                                    [ div [ class "flip-card" ]
+                                        [ div [ class "flip-card-inner" ]
+                                            [ div [ class "flip-card-front" ]
+                                                [ Html.a
+                                                    [ href album.urlToOpen ]
+                                                    [ img
+                                                        [ id "cover-img"
+                                                        , class "z-1 --absolute-center-vertically"
+                                                        , attribute "srcset" coverSourceSet
+                                                        , style "width" coverMaxWidth
+                                                        ]
+                                                        []
+                                                    ]
+                                                ]
+                                            , div [ class "flip-card-back" ]
+                                                [ text "Justus Jonas ist verschwunden! Während Peter und Bob den Ersten Detektiv verzweifelt suchen, stolpern sie über Spuren aus ihrer eigenen Vergangenheit: Der \"Fluch des Rubins\" – hat Justus‘ Verschwinden etwas mit diesem längst zu den Akten gelegten Fall zu tun? Ist das Rätsel um den mysteriösen Edelstein damals wirklich gelöst worden? Bei ihrer Suche ahnen sie nicht, dass sie damit dunkle Mächte heraufbeschwören. Denn das Feurige Auge birgt mehr Geheimnisse, als die drei ??? ahnen können ..."
+                                                ]
                                             ]
-                                            []
                                         ]
                                     , div
                                         [ id "cover-glow"
