@@ -399,7 +399,6 @@ view model =
                 |> Maybe.withDefault []
                 |> List.length
     in
-    
     {---------------------------
         INITIAL BOOTSTRAPPING
     ---------------------------}
@@ -407,24 +406,25 @@ view model =
         div
             [ class "white-text status-text-container" ]
             [ div [ class "status-text" ] [ text "Loading ..." ] ]
-
-    {-------------------------------------------------------------
+        {-------------------------------------------------------------
         NO ALBUMS IN POOL
         There is no need to check `model.albums |> Array.isEmpty`
         because that is part of the regular view
     -------------------------------------------------------------}
+
     else if
-        model.isInitialized == True 
-        && (model.albums |> Array.isEmpty) 
-        && (numberOfBlacklistedAlbums > 0)
-        then
+        model.isInitialized
+            == True
+            && (model.albums |> Array.isEmpty)
+            && (numberOfBlacklistedAlbums > 0)
+    then
         div
             [ class "white-text status-text-container" ]
             [ Html.a [ onClick (Reset model.currentArtist), class "status-text pointer" ] [ text (model.text.no_albums_available_but ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ model.text.are_blacklisted_clear_blocklist_question) ] ]
-
-    {------------------
+        {------------------
         REGULAR VIEW
     ------------------}
+
     else
         case ( model.albums |> Array.get model.current, model.currentArtist ) of
             ( Nothing, Just _ ) ->
@@ -474,6 +474,7 @@ view model =
                         -}
                         if (artist.httpFriendlyShortName == "ddf") && albumNumber >= 126 then
                             (artist.altCoverCenterX |> Maybe.withDefault artist.coverCenterX |> String.fromInt) ++ "%"
+
                         else
                             (artist.coverCenterX |> String.fromInt) ++ "%"
 
@@ -498,14 +499,13 @@ view model =
 
                     backgroundGlowStyle =
                         style "background" ("linear-gradient(45deg, " ++ artist.coverColorA ++ " , " ++ artist.coverColorB ++ " 100%)")
-
                 in
                 div
                     [ id "background-image-container"
                     , style "background-image" ("url(" ++ backgroundImageUrl ++ ")")
                     , style "background-position" (coverCenterX ++ " " ++ coverCenterY)
                     ]
-                    [ artist |> (artistOverlay model.isArtistOverlayOpen)
+                    [ artist |> artistOverlay model.isArtistOverlayOpen
                     , div
                         [ id "background-color-overlay" ]
                         [ div
@@ -590,7 +590,7 @@ blacklistControls numberOfBlacklistedAlbums artist albumId text =
                 [ style "font-weight" "1000", style "height" "4rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center pointer urbanist-font" ]
                 [ Html.a
                     [ onClick (BlackListAlbum ( artist.id, albumId )), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
-                    [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt text.block_current_album ] [], div [] [ Html.text (text.block) ] ]
+                    [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt text.block_current_album ] [], div [] [ Html.text text.block ] ]
                 , if numberOfBlacklistedAlbums == 0 then
                     Html.a
                         [ class "z-2 small-text non-styled-link d-flex align-items-center ml-10 disabled" ]
@@ -638,7 +638,7 @@ artistOverlay isOverlayOpen artist =
                             overlayItem isCurrentArtist a
                         )
                 )
-                
+
         display =
             if isOverlayOpen then
                 style "display" "flex"
