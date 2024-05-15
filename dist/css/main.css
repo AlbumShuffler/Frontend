@@ -314,6 +314,13 @@ body {
     }
 }
 
+@media only screen and (max-height: 1024px) and (orientation: portrait) {
+    .artist-list {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        font-size: 10px;
+    }
+}
+
 @media (max-width: 480px) {
     .bildliste {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
