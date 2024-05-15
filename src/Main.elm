@@ -470,18 +470,15 @@ view model =
 
                     coverCenterX =
                         {- this part of the code contains some hardcoded checks and references because some artist do not
-                           have their cover art centered properly -}
+                           have their cover art centered properly
+                        -}
                         if (artist.httpFriendlyShortName == "ddf") && albumNumber >= 126 then
-                            (60 |> String.fromInt) ++ "%"
-                        else if (artist.httpFriendlyShortName == "tkkgr") then
-                            (55 |> String.fromInt) ++ "%"
-                        else if (artist.httpFriendlyShortName == "pw") then
-                            (88 |> String.fromInt) ++ "%"
+                            (artist.altCoverCenterX |> Maybe.withDefault artist.coverCenterX |> String.fromInt) ++ "%"
                         else
-                            (50 |> String.fromInt) ++ "%"
+                            (artist.coverCenterX |> String.fromInt) ++ "%"
 
                     coverCenterY =
-                        (50 |> String.fromInt) ++ "%"
+                        (artist.coverCenterY |> String.fromInt) ++ "%"
 
                     githubLink =
                         Html.a [ class "mr-05 p-15", href "https://github.com/b0wter/shuffler-frontend" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
