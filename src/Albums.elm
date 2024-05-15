@@ -20,6 +20,10 @@ type alias ArtistInfo =
     , icon: String
     , coverColorA: String
     , coverColorB: String
+    , coverCenterX: Int
+    , coverCenterY: Int
+    , altCoverCenterX: Maybe Int
+    , altCoverCenterY: Maybe Int
     }
 
 
