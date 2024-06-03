@@ -35,7 +35,7 @@ jobs:
 # Build the actual elm app
 #        
     - name: Install dependencies
-      run: npm install
+      run: npm install --production
 
     - name: Install uglifyjs
       run: npm install -g uglify-js
