@@ -529,7 +529,8 @@ view model =
                                     [ Html.a
                                         [ href album.urlToOpen ]
                                         [ img
-                                            [ id "cover-img", class "z-1 absolute-center-vertically"
+                                            [ id "cover-img"
+                                            , class "z-1 absolute-center-vertically"
                                             , attribute "srcset" coverSourceSet
                                             , style "width" coverMaxWidth
                                             ]
@@ -617,10 +618,29 @@ artistOverlay isOverlayOpen artist =
 
                     else
                         ""
+
+                sourceSetValue =
+                    a.images
+                        |> List.map (\i -> i.url ++ " " ++ (i.width |> String.fromInt) ++ "w")
+                        |> List.foldl
+                            (\next acc ->
+                                if acc |> String.isEmpty then
+                                    next
+
+                                else
+                                    acc ++ ", " ++ next
+                            )
+                            ""
+
+                sourceSet = attribute "srcset" sourceSetValue
+
+                sizes =
+                    --attribute "sizes" "(max-width: 1024px) 300px, only screen and (max-height: 1024px) and (orientation: portrait) 64px, (max-width: 480px) 64px"
+                    attribute "sizes" "(max-width: 560px) 90px, (min-width: 561px) 200px"
             in
             Html.a
                 [ onClick (CloseArtistOverlay a) ]
-                [ img [ class ("mb-025 artist-list" ++ isSelectedClass), src a.imageUrl ] []
+                [ img [ class ("mb-025 artist-list" ++ isSelectedClass), sourceSet, sizes ] []
                 , div [ class "mb-10 artist-list-caption" ] [ text a.name ]
                 ]
 

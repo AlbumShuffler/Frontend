@@ -273,8 +273,6 @@ body {
 
 #artist-selection-overview {
     position: fixed;
-    width: 100%;
-    height: 100%;
     top: 0;
     bottom: 0;
     left: 0;
@@ -288,7 +286,7 @@ body {
 
 .artist-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(90px, 1fr));
     gap: 10px;
 }
 
@@ -302,12 +300,14 @@ body {
     text-align: center;
     font-weight: 1000;
     text-transform: uppercase;
+    font-size: 12px;
 }
 
 .artist-list-selected-element {
     box-shadow: 0 0 10px 1px white;
 }
 
+/*
 @media (max-width: 1024px) {
     .artist-list {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -326,6 +326,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
+*/
 
 .z-1 {
     z-index: 1;
