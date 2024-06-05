@@ -11,9 +11,16 @@ type alias CoverImage =
     }
 
 
+type alias ArtistImage =
+    { url : String
+    , width: Int
+    , height: Int
+    }
+
+
 type alias ArtistInfo =
     { name: String
-    , imageUrl: String
+    , images: List ArtistImage
     , shortName: String
     , httpFriendlyShortName: String
     , id: ArtistId
