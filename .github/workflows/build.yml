@@ -28,6 +28,9 @@ jobs:
     - name: Downlad album data generator
       env:
         SPOTIFY_ALBUM_REPO_ACCESS_TOKEN: ${{ secrets.SPOTIFY_ALBUM_REPO_ACCESS_TOKEN }}
+        ALBUM_SHUFFLER_GENERATOR_SOURCE_URL: ${{ vars.SOURCE_URL }}
+        ALBUM_SHUFFLER_GENERATOR_ARTIST_DETAILS_URL: ${{ vars.ARTIST_DETAILS_URL }}
+        ALBUM_SHUFFLER_GENERATOR_ALBUMS_URL: ${{ vars.ALBUMS_URL }}
       run: 
         ./generate-album-data; tree
 
