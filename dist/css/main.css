@@ -20,6 +20,11 @@ body {
     background-size: 250vh;
 }
 
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+    #background-image-container {
+        background-size: 350vh;
+    }
+}
 #background-color-overlay {
     background: #000000e0;
     overflow: hidden;
