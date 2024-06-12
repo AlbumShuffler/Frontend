@@ -23,3 +23,6 @@ This repository contains a `local-build` bash script that does all the heavy lif
 The `id` and `secret` are given to you by Spotify after creating an integration using their [api](https://developer.spotify.com/).
 You will need to write the input file yourself.
 Its content and structure is described in [the data retriever repository](https://developer.spotify.com/).
+
+After running the build all you need to do is to put the contents of the `dist` folder on a web server.
+Since all content is baked into the app there is no need for any backend service.
