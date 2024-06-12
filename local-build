@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+if [ $# -le 3 ] && [ $# -ge 4 ]; then
+    echo "Usage: $0 <client_id> <client_secret> <input_file>"
+    exit 1
+fi
+
+if [ ! -f "$3" ]; then
+    echo "Error: The file '$3' does not exist."
+    exit 1
+fi
+
+source_file=$(realpath $3)
+destination=$(realpath ../spotify_data)
+
+# Download the data retriever
+rm -rf spotify_data
+curl -LO https://github.com/AlbumShuffler/DataRetriever/archive/refs/heads/master.zip
+rm -rf DataRetriever-master
+unzip master.zip
+rm master.zip
+cd DataRetriever-master
+./refresh_all_data $1 $2 $source_file $destination
+cd ..
+rm -rf DataRetriever-master
+
+# Download the latest version of the generator project, extract it and install its dependencies
+curl -LO https://github.com/AlbumShuffler/Generator/archive/refs/heads/master.zip
+rm -rf Generator-master
+unzip master.zip
+rm master.zip
+cd Generator-master
+npm i
+export ALBUM_SHUFFLER_GENERATOR_SOURCE_URL=file://$source_file
+export ALBUM_SHUFFLER_GENERATOR_ARTIST_DETAILS_URL=file://$destination/'${artistId}'/artist
+export ALBUM_SHUFFLER_GENERATOR_ALBUMS_URL=file://$destination/'${artistId}'/albums
+node index.js --destination=../src/
+cd ..
+rm -rf Generator-master
