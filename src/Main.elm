@@ -482,7 +482,7 @@ view model =
                         (artist.coverCenterY |> String.fromInt) ++ "%"
 
                     githubLink =
-                        Html.a [ class "mr-05 p-15", href "https://github.com/b0wter/shuffler-frontend" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
+                        Html.a [ class "mr-05 p-15", href "https://github.com/AlbumShuffler/Frontend" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
 
                     language =
                         Html.a [ class "non-styled-link p-15", style "font-size" "1.5rem", onClick ToggleLanguage, href "#" ] [ text model.text.flag ]
