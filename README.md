@@ -23,6 +23,3 @@ This repository contains a `local-build` bash script that does all the heavy lif
 The `id` and `secret` are given to you by Spotify after creating an integration using their [api](https://developer.spotify.com/).
 You will need to write the input file yourself.
 Its content and structure is described in [the data retriever repository](https://developer.spotify.com/).
-
-### Define sources
-Write an input file. See [this](https://github.com/AlbumShuffler/DataRetriever) for details. Put the file somewhere where it is accessible 
