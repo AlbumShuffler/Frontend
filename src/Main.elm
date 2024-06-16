@@ -647,7 +647,7 @@ artistOverlay isOverlayOpen artist =
         overlayGrid : List ArtistInfo -> Html Msg
         overlayGrid artists =
             div
-                [ class "artist-list m-20" ]
+                [ class "artist-list" ]
                 (artists
                     |> List.map
                         (\a ->
