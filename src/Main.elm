@@ -639,9 +639,9 @@ artistOverlay isOverlayOpen artist =
                     attribute "sizes" "(max-width: 560px) 90px, (min-width: 561px) 200px"
             in
             Html.a
-                [ onClick (CloseArtistOverlay a) ]
-                [ img [ class ("mb-025 artist-list" ++ isSelectedClass), sourceSet, sizes ] []
-                , div [ class "mb-10 artist-list-caption" ] [ text a.name ]
+                [ class "artist-list-item", onClick (CloseArtistOverlay a) ]
+                [ img [ class ("mb-025 " ++ isSelectedClass), sourceSet, sizes ] []
+                , div [ class "artist-list-caption" ] [ text a.name ]
                 ]
 
         overlayGrid : List ArtistInfo -> Html Msg
