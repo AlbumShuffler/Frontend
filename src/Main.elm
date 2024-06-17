@@ -484,6 +484,9 @@ view model =
                     githubLink =
                         Html.a [ class "mr-05 p-15", href "https://github.com/AlbumShuffler/Frontend" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
 
+                    redditLink =
+                        Html.a [ class "mr-05 p-15", href "https://www.reddit.com/r/AlbumShuffler" ] [ img [ class "social-button", src "img/reddit.svg", alt "Link to Reddit" ] [] ]
+
                     language =
                         Html.a [ class "non-styled-link p-15", style "font-size" "1.5rem", onClick ToggleLanguage, href "#" ] [ text model.text.flag ]
 
@@ -517,7 +520,7 @@ view model =
                                 [ id "social-links-container" ]
                                 [ div
                                     [ class "d-flex justify-content-center align-items-center" ]
-                                    [ githubLink, language, artistImage ]
+                                    [ redditLink, githubLink, language, artistImage ]
                                 ]
                             , div
                                 [ style "flex-grow" "1"
