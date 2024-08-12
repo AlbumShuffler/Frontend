@@ -11,6 +11,7 @@ import Debug
 import Html exposing (Html, div, img, text)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
+import Html.Events.Extra
 import List.Extra as List
 import Platform.Cmd as Cmd
 import Random
@@ -642,7 +643,7 @@ artistOverlay isOverlayOpen artist =
                     attribute "sizes" "(max-width: 560px) 90px, (min-width: 561px) 200px"
             in
             Html.a
-                [ class "artist-list-item", onClick (CloseArtistOverlay a) ]
+                [ class "artist-list-item", Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseArtistOverlay a) ]
                 [ img [ class ("mb-025 " ++ isSelectedClass), sourceSet, sizes ] []
                 , div [ class "artist-list-caption" ] [ text a.name ]
                 ]
@@ -670,6 +671,6 @@ artistOverlay isOverlayOpen artist =
                 style "display" "none"
     in
     div
-        [ id "artist-selection-overview", class "white-text urbanist-font", display ]
+        [ id "artist-selection-overview", class "white-text urbanist-font", display, onClick (CloseArtistOverlay artist) ]
         [ overlayGrid (ArtistsWithAlbums.albumStorage |> List.map (\a -> a.artist))
         ]
