@@ -34,10 +34,16 @@
 <body>
   <div id="elm-node"></div>
   <script>
+    let lastArtists = fetchLastSelectedArtists();
+    if (!lastArtists || lastArtists.length === 0) {
+      lastArtists = []
+    }
+    console.warn('"allowMultipleSelection" is defaulting to "true"!')
     const flags = {
       blockedAlbums: fetchBlacklistedAlbums(),
       language: fetchLanguage(),
-      lastSelectedArtist: fetchLastSelectedArtist()
+      lastSelectedArtists: lastArtists,
+      allowMultipleSelection: true
     }
 
     const node = document.getElementById('elm-node');

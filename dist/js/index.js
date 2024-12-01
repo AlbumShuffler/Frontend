@@ -4,7 +4,7 @@
  */
 
 const blacklistedAlbumsKey = "blacklisted-albums";
-const lastSelectedArtistKey = "lastSelectedArtist";
+const lastSelectedArtistsKey = "lastSelectedArtists";
 const lastSelectedLanguageKey = "lastSelectedLanguage";
 
 function getLegacyBlocklistEntries() {
@@ -69,15 +69,17 @@ function setLastSelectedLanguage(language) {
     localStorage.setItem(lastSelectedLanguageKey, language);
 }
 
-function fetchLastSelectedArtist() {
-    const artist = localStorage.getItem(lastSelectedArtistKey);
-    if (artist) {
-        return artist;
+function fetchLastSelectedArtists() {
+    const artists = localStorage.getItem(lastSelectedArtistsKey);
+    if (artists) {
+        return JSON.parse(artists);
     } else {
-        return "";
+        return [];
     }
 }
 
-function setLastSelectedArtist(httpFriendlyShortName) {
-    localStorage.setItem(lastSelectedArtistKey, httpFriendlyShortName);
+function setLastSelectedArtist(httpFriendlyShortNames) {
+    console.log('setting selection', httpFriendlyShortNames.length, 'artits')
+    localStorage.removeItem(lastSelectedArtistsKey);
+    localStorage.setItem(lastSelectedArtistsKey, JSON.stringify(httpFriendlyShortNames));
 }

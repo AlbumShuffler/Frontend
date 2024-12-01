@@ -1,8 +1,10 @@
 port module Main exposing (..)
 
 import AlbumIds
+import ArtistSelection
 import Albums exposing (Album, ArtistInfo)
 import Array exposing (Array)
+import ArrayExtra as Array
 import ArtistIds
 import ArtistsWithAlbums exposing (albumStorage)
 import AssocList as Dict exposing (Dict)
@@ -28,6 +30,14 @@ defaultArtistShortName =
         |> Maybe.withDefault "<could not set defaultArtistShortName, is data available?>"
 
 
+defaultArtist : ArtistInfo
+defaultArtist =
+    albumStorage
+        |> List.head
+        |> Maybe.map (\a -> a.artist)
+        |> Maybe.withDefault Albums.emptyArtistInfo
+
+
 defaultText : TextRessources.Text
 defaultText =
     TextRessources.englishText
@@ -36,7 +46,8 @@ defaultText =
 type alias Flags =
     { blockedAlbums : List String
     , language : String
-    , lastSelectedArtist : String
+    , lastSelectedArtists : List String
+    , allowMultipleSelection : Bool
     }
 
 
@@ -49,8 +60,9 @@ type alias Model =
     , albums : Array Album
     , current : Int
     , isInitialized : Bool
-    , currentArtist : Maybe ArtistInfo
+    , currentArtist : ArtistSelection.ArtistSelection
     , isArtistOverlayOpen : Bool
+    , allowMultipleArtistSelection : Bool
     , text : TextRessources.Text
     }
 
@@ -58,7 +70,7 @@ type alias Model =
 port setBlacklistedAlbums : List String -> Cmd msg
 
 
-port setLastSelectedArtist : String -> Cmd msg
+port setLastSelectedArtist : List String -> Cmd msg
 
 
 port setLastSelectedLanguage : String -> Cmd msg
@@ -69,56 +81,54 @@ subscriptions _ =
     Sub.none
 
 
-emptyModel : String -> Maybe Blacklist -> Maybe TextRessources.Text -> Model
-emptyModel artistShortName blacklistOption language =
+emptyModel : Maybe Blacklist -> Maybe TextRessources.Text -> ArtistSelection.ArtistSelection -> Bool -> Model
+emptyModel blacklistOption language currentArtist allowMultipleArtistSelection =
     let
         text =
             language |> Maybe.withDefault defaultText
 
-        artistWithAlbums =
-            ArtistsWithAlbums.albumStorage
-                |> List.find (\a -> (a.artist.httpFriendlyShortName |> String.toLower) == (artistShortName |> String.toLower))
+        artists = currentArtist |> ArtistSelection.toList
 
-        artist =
-            artistWithAlbums |> Maybe.map (\a -> a.artist)
+        artistsWithAlbums =
+            artists
+                |> List.map
+                    (\a ->
+                        ArtistsWithAlbums.albumStorage
+                            |> List.find (\withAlbums -> (withAlbums.artist.httpFriendlyShortName |> String.toLower) == (a.httpFriendlyShortName |> String.toLower))
+                    )
+                |> List.filterMap identity
 
+        -- There is no concat/flat/select many for arrays
         albums =
-            artistWithAlbums
-                |> Maybe.map (\a -> a.albums)
-                |> Maybe.withDefault Array.empty
-
-        filteredAlbumNames =
-            [ "Outro"
-            , "liest..."
-            , "liest ..."
-            , "Originalmusik"
-            ]
-
-        filteredAlbums =
-            albums
-                |> Array.filter (\a -> not <| (filteredAlbumNames |> List.any (\name -> a.name |> String.contains name)))
+            artistsWithAlbums 
+            |> List.map (\a -> a.albums |> Array.toList)
+            |> List.concat
+            |> Array.fromList
 
         blacklist =
             blacklistOption |> Maybe.withDefault Dict.empty
 
         blacklistedForCurrentArtist =
             let
-                artistId =
-                    artist |> Maybe.map (\a -> a.id) |> Maybe.withDefault ArtistIds.empty
+                artistIds =
+                    artists |> List.map (\a -> a.id)
             in
-            blacklist |> Dict.get artistId |> Maybe.withDefault []
+            artistIds
+                |> List.map (\id -> blacklist |> Dict.get id |> Maybe.withDefault [])
+                |> List.concat
 
-        filteredNonblacklistedAlbums =
-            filteredAlbums
+        nonblacklistedAlbums =
+            albums
                 |> Array.filter (\album -> not <| (blacklistedForCurrentArtist |> List.member album.id))
     in
     { blacklistedAlbums = blacklist
-    , albums = filteredNonblacklistedAlbums
+    , albums = nonblacklistedAlbums
     , current = 0
     , isInitialized = False
-    , currentArtist = artist
+    , currentArtist = currentArtist
     , isArtistOverlayOpen = False
     , text = text
+    , allowMultipleArtistSelection = allowMultipleArtistSelection
     }
 
 
@@ -133,27 +143,61 @@ main =
 
 
 type Msg
-    = Reset (Maybe ArtistInfo)
+    -- Partially resets the model to change the current artist selection
+    = Reset ArtistSelection.ArtistSelection
+    -- Received from ports when the blacklist was read from local storage
     | GotBlacklist (List String)
+    -- Received from ports when the browser language was determined
     | GotBrowserLanguage String
     | NextAlbum
     | PreviousAlbum
+    -- Albums have been shuffled (required because it uses a random generator)
     | AlbumsShuffled (List Album)
+    -- Blacklists the given album; ArtistId required to clearly identify the song
     | BlackListAlbum ( ArtistIds.ArtistId, AlbumIds.AlbumId )
     | OpenArtistOverlay
-    | CloseArtistOverlay ArtistInfo
+    | CloseArtistOverlay ArtistSelection.ArtistSelection
     | ToggleLanguage
+    | ToggleAllowMultipleSelection
+    -- Changes the currenlty artist selection
+    | OverlayArtistSelected ArtistInfo
 
 
 init : Flags -> ( Model, Cmd Msg )
 init flags =
     let
-        artistShortName =
-            if flags.lastSelectedArtist == "" then
-                defaultArtistShortName
+        currentArtist =
+            if flags.lastSelectedArtists == [] then
+                defaultArtist |> ArtistSelection.SingleArtistSelected
+
+            else if flags.allowMultipleSelection then
+                let
+                    selection =
+                        if flags.lastSelectedArtists |> List.isEmpty then [ defaultArtistShortName ]
+                        else flags.lastSelectedArtists
+                in
+                selection
+                    |> List.map 
+                        (\shortName -> 
+                            albumStorage 
+                            |> List.find 
+                                (\storageItem -> 
+                                    (storageItem.artist.httpFriendlyShortName 
+                                     |> String.toLower) == (shortName |> String.toLower) ))
+                    |> List.filterMap identity
+                    |> List.map (\a -> a.artist)
+                    |> ArtistSelection.MultipleArtistsSelected
 
             else
-                flags.lastSelectedArtist
+                let
+                    shortName =
+                        flags.lastSelectedArtists |> List.head |> Maybe.withDefault defaultArtistShortName
+                in
+                albumStorage 
+                |> List.find (\a -> (a.artist.httpFriendlyShortName |> String.toLower) == shortName)
+                |> Maybe.map (\a -> a.artist)
+                |> Maybe.withDefault defaultArtist
+                |> ArtistSelection.SingleArtistSelected
 
         text =
             TextRessources.all |> Array.toList |> List.find (\t -> t.key == flags.language)
@@ -162,7 +206,7 @@ init flags =
             flags.blockedAlbums |> blackListFromStringList
 
         model =
-            emptyModel artistShortName (Just blacklist) text
+            emptyModel (Just blacklist) text currentArtist flags.allowMultipleSelection
     in
     ( model, model.albums |> startShuffleAlbums )
 
@@ -176,24 +220,24 @@ startShuffleAlbums albums =
     generator |> Random.generate AlbumsShuffled
 
 
-resetModel : Maybe ArtistInfo -> Maybe Blacklist -> TextRessources.Text -> ( Model, Cmd Msg )
-resetModel artist blacklist text =
+resetModel : ArtistSelection.ArtistSelection -> Maybe Blacklist -> TextRessources.Text -> Bool -> ( Model, Cmd Msg )
+resetModel artist blacklist text allowMultipleArtistSelection =
     let
-        artistShortname =
-            artist
-                |> Maybe.map (\a -> a.httpFriendlyShortName)
-                |> Maybe.withDefault defaultArtistShortName
-
         resettedModel =
-            emptyModel artistShortname blacklist (Just text)
+            emptyModel blacklist (Just text) artist allowMultipleArtistSelection
 
         serializedBlacklist =
             blacklist |> Maybe.map blackListToStringList |> Maybe.withDefault []
 
+        artistShortnames =
+            artist
+            |> ArtistSelection.toList
+            |> List.map (\a -> a.httpFriendlyShortName)
+
         commands =
             [ serializedBlacklist |> setBlacklistedAlbums
             , resettedModel.albums |> startShuffleAlbums
-            , artistShortname |> setLastSelectedArtist
+            , artistShortnames |> setLastSelectedArtist
             ]
     in
     ( resettedModel, Cmd.batch commands )
@@ -271,26 +315,27 @@ blackListFromStringList list =
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Reset artist ->
-            let
-                artistId =
-                    artist |> Maybe.map (\a -> a.id) |> Maybe.withDefault ArtistIds.empty
-            in
-            resetModel artist (model.blacklistedAlbums |> removeFromBlacklist artistId |> Just) model.text
+        Reset artistSelection ->
+            resetModel artistSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
 
         GotBlacklist strings ->
             let
                 blacklist =
                     strings |> blackListFromStringList
 
-                artistId =
-                    model.currentArtist |> Maybe.map (\a -> a.id) |> Maybe.withDefault ArtistIds.empty
+                artistIds =
+                    model.currentArtist
+                    |> ArtistSelection.toList
+                    |> List.map (\a -> a.id)
 
-                blacklistedForCurrentArtist =
-                    blacklist |> Dict.get artistId |> Maybe.withDefault []
+                blacklistedForCurrentArtists =
+                    artistIds
+                    |> List.map (\id -> blacklist |> Dict.get id)
+                    |> List.filterMap identity
+                    |> List.concat
 
                 filteredAlbums =
-                    model.albums |> Array.filter (\a -> not (blacklistedForCurrentArtist |> List.member a.id))
+                    model.albums |> Array.filter (\a -> not (blacklistedForCurrentArtists |> List.member a.id))
             in
             ( { model | blacklistedAlbums = blacklist, albums = filteredAlbums }, filteredAlbums |> startShuffleAlbums )
 
@@ -356,12 +401,13 @@ update msg model =
         OpenArtistOverlay ->
             ( { model | isArtistOverlayOpen = True }, Cmd.none )
 
-        CloseArtistOverlay newArtist ->
-            if Just newArtist == model.currentArtist then
-                ( { model | isArtistOverlayOpen = False }, Cmd.none )
-
-            else
-                resetModel (Just newArtist) (Just model.blacklistedAlbums) model.text
+        CloseArtistOverlay newSelection ->
+            case newSelection of
+                -- keep old selection, we do not want to enter a state where no artist is selected
+                ArtistSelection.NoArtistSelected ->
+                    ( { model | isArtistOverlayOpen = False }, Cmd.none )
+                _ ->
+                    resetModel newSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
 
         ToggleLanguage ->
             let
@@ -374,6 +420,12 @@ update msg model =
                         |> Maybe.withDefault TextRessources.fallback
             in
             ( { model | text = nextLanguage }, nextLanguage.key |> setLastSelectedLanguage )
+
+        ToggleAllowMultipleSelection ->
+            ( { model | allowMultipleArtistSelection = not <| model.allowMultipleArtistSelection }, Cmd.none )
+
+        OverlayArtistSelected artist ->
+            ( model, Cmd.none )
 
 
 tryAlbumNumberFrom : String -> Maybe Int
@@ -391,14 +443,18 @@ tryAlbumNumberFrom input =
 view : Model -> Html Msg
 view model =
     let
-        artistId =
-            model.currentArtist |> Maybe.map (\a -> a.id) |> Maybe.withDefault ArtistIds.empty
+        artistIds =
+            model.currentArtist
+            |> ArtistSelection.toList
+            |> List.map (\a -> a.id)
 
         numberOfBlacklistedAlbums =
-            model.blacklistedAlbums
-                |> Dict.get artistId
-                |> Maybe.withDefault []
-                |> List.length
+            artistIds
+            |> List.map (\id -> model.blacklistedAlbums |> Dict.get id)
+            |> List.foldl (\next acc -> 
+                case next of 
+                    Nothing -> acc
+                    Just d -> (d |> List.length) + acc) 0
     in
     {---------------------------
         INITIAL BOOTSTRAPPING
@@ -411,7 +467,7 @@ view model =
         NO ALBUMS IN POOL
         There is no need to check `model.albums |> Array.isEmpty`
         because that is part of the regular view
-    -------------------------------------------------------------}
+        -------------------------------------------------------------}
 
     else if
         model.isInitialized
@@ -421,13 +477,26 @@ view model =
     then
         div
             [ class "white-text status-text-container" ]
-            [ Html.a [ onClick (Reset model.currentArtist), class "status-text pointer" ] [ text (model.text.no_albums_available_but ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ model.text.are_blacklisted_clear_blocklist_question) ] ]
-        {------------------
+            [ Html.a
+                [ onClick (Reset model.currentArtist), class "status-text pointer" ]
+                [ text (model.text.no_albums_available_but ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ model.text.are_blacklisted_clear_blocklist_question) ]
+            ]
+    {------------------
         REGULAR VIEW
     ------------------}
-
     else
-        case ( model.albums |> Array.get model.current, model.currentArtist ) of
+        let
+            currentAlbum = model.albums |> Array.get model.current
+            currentArtist =
+                case currentAlbum of
+                    Just crtAlbum ->
+                        albumStorage
+                        |> List.find (\item -> item.albums |> Array.any (\album -> album.id == crtAlbum.id))
+                        |> Maybe.map (\item -> item.artist)
+                    Nothing -> Nothing
+                --|> Maybe.withDefault defaultArtist
+        in
+        case ( currentAlbum , currentArtist ) of
             ( Nothing, Just _ ) ->
                 div
                     [ class "white-text status-text-container" ]
@@ -445,6 +514,7 @@ view model =
 
             ( Just album, Just artist ) ->
                 let
+                    _ = Debug.log "artist" artist
                     largestCover =
                         album.covers |> List.maximumBy (\a -> a.width) |> Maybe.withDefault { width = 640, height = 640, url = "https://fakeimg.pl/640x640" }
 
@@ -483,10 +553,14 @@ view model =
                         (artist.coverCenterY |> String.fromInt) ++ "%"
 
                     githubLink =
-                        Html.a [ class "mr-05 p-15", href "https://github.com/AlbumShuffler/Frontend" ] [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
+                        Html.a
+                            [ class "mr-05 p-15", href "https://github.com/AlbumShuffler/Frontend" ]
+                            [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
 
                     redditLink =
-                        Html.a [ class "mr-05 p-15", href "https://www.reddit.com/r/AlbumShuffler" ] [ img [ class "social-button", src "img/reddit.svg", alt "Link to Reddit" ] [] ]
+                        Html.a
+                            [ class "mr-05 p-15", href "https://www.reddit.com/r/AlbumShuffler" ]
+                            [ img [ class "social-button", src "img/reddit.svg", alt "Link to Reddit" ] [] ]
 
                     language =
                         Html.a [ class "non-styled-link p-15", style "font-size" "1.5rem", onClick ToggleLanguage, href "#" ] [ text model.text.flag ]
@@ -509,7 +583,7 @@ view model =
                     , style "background-image" ("url(" ++ backgroundImageUrl ++ ")")
                     , style "background-position" (coverCenterX ++ " " ++ coverCenterY)
                     ]
-                    [ artist |> artistOverlay model.isArtistOverlayOpen
+                    [ artistOverlay model.isArtistOverlayOpen model.allowMultipleArtistSelection artist model.currentArtist model.text
                     , div
                         [ id "background-color-overlay" ]
                         [ div
@@ -555,7 +629,7 @@ view model =
                             , div [ style "position" "relative" ]
                                 [ controlsGlowEffect artist.coverColorA artist.coverColorB
                                 , navigationControls album.urlToOpen
-                                , blacklistControls numberOfBlacklistedAlbums artist album.id model.text
+                                , blacklistControls numberOfBlacklistedAlbums artist album.id model.text (Reset model.currentArtist)
                                 ]
                             ]
                         ]
@@ -580,38 +654,54 @@ navigationControls urlToOpen =
         , class "d-flex align-items-center justify-content-center"
         , style "z-index" "2"
         ]
-        [ Html.a [ class "z-2", href "#", onClick PreviousAlbum ] [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/next.svg" ] [] ]
-        , Html.a [ class "z-2", href urlToOpen ] [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
-        , Html.a [ class "z-2", href "#", onClick NextAlbum ] [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
+        [ Html.a
+            [ class "z-2", href "#", onClick PreviousAlbum ]
+            [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/next.svg" ] [] ]
+        , Html.a
+            [ class "z-2", href urlToOpen ]
+            [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
+        , Html.a
+            [ class "z-2", href "#", onClick NextAlbum ]
+            [ img [ class "p-15", src "img/next.svg", alt "get next suggestion" ] [] ]
         ]
 
 
-blacklistControls : Int -> ArtistInfo -> AlbumIds.AlbumId -> TextRessources.Text -> Html Msg
-blacklistControls numberOfBlacklistedAlbums artist albumId text =
+blacklistControls : Int -> ArtistInfo -> AlbumIds.AlbumId -> TextRessources.Text -> Msg -> Html Msg
+blacklistControls numberOfBlacklistedAlbums artistOfCurrentAlbum albumId text resetAction =
     div
         [ id "blocklist-controls", style "z-index" "2", style "text-decoration" "none", style "color" "white" ]
         [ div []
             [ div
-                [ style "font-weight" "1000", style "height" "4rem", style "text-transform" "uppercase", class "d-flex justify-content-center align-items-center pointer urbanist-font" ]
+                [ style "font-weight" "1000"
+                , style "height" "4rem"
+                , style "text-transform" "uppercase"
+                , class "d-flex justify-content-center align-items-center pointer urbanist-font"
+                ]
                 [ Html.a
-                    [ onClick (BlackListAlbum ( artist.id, albumId )), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
+                    [ onClick (BlackListAlbum ( artistOfCurrentAlbum.id, albumId )), class "z-2 small-text non-styled-link d-flex align-items-center mr-10" ]
                     [ img [ style "height" "2rem", class "mr-05", src "img/block.svg", alt text.block_current_album ] [], div [] [ Html.text text.block ] ]
                 , if numberOfBlacklistedAlbums == 0 then
                     Html.a
                         [ class "z-2 small-text non-styled-link d-flex align-items-center ml-10 disabled" ]
-                        [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt text.clear_blocked ] [], div [] [ Html.text text.clear_blocked ] ]
+                        [ img 
+                            [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt text.clear_blocked ] []
+                            , div [] [ Html.text text.clear_blocked ] ]
 
                   else
                     Html.a
-                        [ onClick (Reset (Just artist)), class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
-                        [ img [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt text.clear_blocked ] [], div [] [ Html.text (text.clear_blocked ++ " (" ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ ")") ] ]
+                        [ onClick resetAction, class "z-2 small-text non-styled-link d-flex align-items-center ml-10" ]
+                        [ img
+                            [ style "height" "2rem", class "mr-05", src "img/clear-format-white.svg", alt text.clear_blocked ]
+                            []
+                        , div [] [ Html.text (text.clear_blocked ++ " (" ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ ")") ]
+                        ]
                 ]
             ]
         ]
 
 
-artistOverlay : Bool -> ArtistInfo -> Html Msg
-artistOverlay isOverlayOpen artist =
+artistOverlay : Bool -> Bool -> ArtistInfo -> ArtistSelection.ArtistSelection -> TextRessources.Text -> Html Msg
+artistOverlay isOverlayOpen allowMultipleArtistSelection artist selection texts =
     let
         overlayItem : Bool -> ArtistInfo -> Html Msg
         overlayItem isSelected a =
@@ -636,22 +726,38 @@ artistOverlay isOverlayOpen artist =
                             )
                             ""
 
-                sourceSet = attribute "srcset" sourceSetValue
+                sourceSet =
+                    attribute "srcset" sourceSetValue
 
                 sizes =
                     --attribute "sizes" "(max-width: 1024px) 300px, only screen and (max-height: 1024px) and (orientation: portrait) 64px, (max-width: 480px) 64px"
                     attribute "sizes" "(max-width: 560px) 90px, (min-width: 561px) 200px"
             in
             Html.a
-                [ class "artist-list-item", Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseArtistOverlay a) ]
+                [ class "artist-list-item", Html.Events.Extra.onClickPreventDefaultAndStopPropagation (OverlayArtistSelected a) ]
                 [ img [ class ("mb-025 " ++ isSelectedClass), sourceSet, sizes ] []
                 , div [ class "artist-list-caption" ] [ text a.name ]
+                ]
+
+        allowMultipleSelectionControl : Html Msg
+        allowMultipleSelectionControl =
+            div [ class "mb-10" ]
+                [ Html.label
+                    [ Html.Attributes.for "allowMultipleSelectionCheckbox", Html.Events.Extra.onClickPreventDefaultAndStopPropagation ToggleAllowMultipleSelection ]
+                    [ text texts.allow_multiple_selection ]
+                , Html.input
+                    [ type_ "checkbox"
+                    , id "allowMultipleSelectionCheckbox"
+                    , Html.Attributes.checked allowMultipleArtistSelection
+                    , Html.Events.Extra.onClickPreventDefaultAndStopPropagation ToggleAllowMultipleSelection
+                    ]
+                    []
                 ]
 
         overlayGrid : List ArtistInfo -> Html Msg
         overlayGrid artists =
             div
-                [ class "artist-list" ]
+                [ class "artist-list d-flex" ]
                 (artists
                     |> List.map
                         (\a ->
@@ -671,6 +777,7 @@ artistOverlay isOverlayOpen artist =
                 style "display" "none"
     in
     div
-        [ id "artist-selection-overview", class "white-text urbanist-font", display, onClick (CloseArtistOverlay artist) ]
-        [ overlayGrid (ArtistsWithAlbums.albumStorage |> List.map (\a -> a.artist))
+        [ id "artist-selection-overview", class "white-text urbanist-font flex-column", display, onClick (CloseArtistOverlay selection) ]
+        [ allowMultipleSelectionControl
+        , overlayGrid (ArtistsWithAlbums.albumStorage |> List.map (\a -> a.artist))
         ]
