@@ -130,7 +130,6 @@ emptyModel blacklistOption language currentArtist allowMultipleArtistSelection =
     , isArtistOverlayOpen = False
     , text = text
     , allowMultipleArtistSelection = allowMultipleArtistSelection
-    , refreshArtistSelectionOnClose = False
     }
 
 
@@ -412,61 +411,13 @@ update msg model =
             ( { model | isArtistOverlayOpen = True }, Cmd.none )
 
         CloseArtistOverlay newSelection ->
-            let
-                -- For some reason comparing the new and current ArtistSelection does not give the proper result
-                isSameCase =
-                    case ( newSelection, model.currentArtist ) of
-                        ( ArtistSelection.NoArtistSelected, ArtistSelection.NoArtistSelected ) ->
-                            True
+            case newSelection of
+                -- keep old selection, we do not want to enter a state where no artist is selected
+                ArtistSelection.NoArtistSelected ->
+                    ( { model | isArtistOverlayOpen = False }, Cmd.none )
 
-                        ( ArtistSelection.SingleArtistSelected _, ArtistSelection.SingleArtistSelected _ ) ->
-                            True
-
-                        ( ArtistSelection.MultipleArtistsSelected _, ArtistSelection.MultipleArtistsSelected _ ) ->
-                            True
-
-                        ( _, _ ) ->
-                            False
-
-                idsOfCurrentSelection =
-                    model.currentArtist |> ArtistSelection.toList |> List.map (\a -> a.id)
-
-                idsOfNewSelection =
-                    newSelection |> ArtistSelection.toList |> List.map (\a -> a.id)
-
-                areIdsTheSame =
-                    idsOfCurrentSelection == idsOfNewSelection
-
-                _ =
-                    Debug.log "idsOfCurrentSelection" idsOfCurrentSelection
-
-                _ =
-                    Debug.log "idsOfNewSelection" idsOfNewSelection
-
-                _ =
-                    Debug.log "isSameCase" isSameCase
-
-                _ =
-                    Debug.log "areIdsTheSame" areIdsTheSame
-
-                hasSelectionChanged =
-                    not <| (isSameCase && areIdsTheSame)
-            in
-            if model.refreshArtistSelectionOnClose == False then
-                let
-                    _ =
-                        Debug.log "nothing changed" "goo"
-                in
-                ( { model | isArtistOverlayOpen = False }, Cmd.none )
-
-            else
-                case newSelection of
-                    -- keep old selection, we do not want to enter a state where no artist is selected
-                    ArtistSelection.NoArtistSelected ->
-                        ( { model | isArtistOverlayOpen = False, refreshArtistSelectionOnClose = False }, Cmd.none )
-
-                    _ ->
-                        resetModel newSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
+                _ ->
+                    resetModel newSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
 
         ToggleLanguage ->
             let
@@ -564,7 +515,7 @@ update msg model =
                             else
                                 selection
                     in
-                    ( { model | currentArtist = nonEmptySelection, refreshArtistSelectionOnClose = True }, Cmd.none )
+                    ( { model | currentArtist = nonEmptySelection }, Cmd.none )
 
 
 tryAlbumNumberFrom : String -> Maybe Int
