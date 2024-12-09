@@ -64,6 +64,7 @@ type alias Model =
     , isArtistOverlayOpen : Bool
     , allowMultipleArtistSelection : Bool
     , text : TextRessources.Text
+    , overlayActionTaken : Bool
     }
 
 
@@ -130,6 +131,7 @@ emptyModel blacklistOption language currentArtist allowMultipleArtistSelection =
     , isArtistOverlayOpen = False
     , text = text
     , allowMultipleArtistSelection = allowMultipleArtistSelection
+    , overlayActionTaken = False
     }
 
 
@@ -414,10 +416,14 @@ update msg model =
             case newSelection of
                 -- keep old selection, we do not want to enter a state where no artist is selected
                 ArtistSelection.NoArtistSelected ->
-                    ( { model | isArtistOverlayOpen = False }, Cmd.none )
+                    ( { model | isArtistOverlayOpen = False, overlayActionTaken = False }, Cmd.none )
 
                 _ ->
-                    resetModel newSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
+                    if model.overlayActionTaken then
+                        resetModel newSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
+
+                    else
+                        ( { model | isArtistOverlayOpen = False, overlayActionTaken = False }, Cmd.none )
 
         ToggleLanguage ->
             let
@@ -466,7 +472,7 @@ update msg model =
                             MultipleArtistsSelected many ->
                                 MultipleArtistsSelected (many |> List.head |> Maybe.map List.singleton |> Maybe.withDefault [])
             in
-            ( { model | allowMultipleArtistSelection = newState, currentArtist = newSelection }, Cmd.none )
+            ( { model | allowMultipleArtistSelection = newState, currentArtist = newSelection, overlayActionTaken = True }, Cmd.none )
 
         OverlayArtistSelected artist ->
             case model.currentArtist of
@@ -515,7 +521,7 @@ update msg model =
                             else
                                 selection
                     in
-                    ( { model | currentArtist = nonEmptySelection }, Cmd.none )
+                    ( { model | currentArtist = nonEmptySelection, overlayActionTaken = True }, Cmd.none )
 
 
 tryAlbumNumberFrom : String -> Maybe Int
