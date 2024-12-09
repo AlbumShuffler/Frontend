@@ -1,8 +1,10 @@
 module TextRessources exposing (..)
+
 import Array exposing (Array)
 
-type alias Text = 
-    { key: String
+
+type alias Text =
+    { key : String
     , flag : String
     , block : String
     , block_current_album : String
@@ -30,7 +32,7 @@ germanText =
     , no_album_data_available = "Keine Albuminformationen verfügbar :("
     , no_artist_data_available = "Keine Interpreteninformationen verfügbar :("
     , no_album_and_no_artist_data_available = "Weder Album- noch Interpreteninformationen verfügbar :("
-    , allow_multiple_selection = "erlaube Mehrfachauswahl"
+    , allow_multiple_selection = "Mehrfachauswahl"
     }
 
 
@@ -47,7 +49,7 @@ englishText =
     , no_album_data_available = "No album data available :("
     , no_artist_data_available = "No artist data available :("
     , no_album_and_no_artist_data_available = "Neither artist nor album data available :("
-    , allow_multiple_selection = "allow multiple selection"
+    , allow_multiple_selection = "multiple selection"
     }
 
 
@@ -55,8 +57,10 @@ all : Array Text
 all =
     [ germanText
     , englishText
-    ] |> Array.fromList
+    ]
+        |> Array.fromList
 
 
 fallback : Text
-fallback = englishText
+fallback =
+    englishText

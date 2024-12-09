@@ -146,6 +146,14 @@ body {
     }
 }
 
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
 .non-styled-link {
     text-decoration: none;
     color:white;
@@ -157,6 +165,10 @@ body {
 
 .urbanist-font {
     font-family: 'Urbanist', sans-serif;
+}
+
+.m-0 {
+    margin: 0;
 }
 
 .m-20 {
@@ -319,7 +331,7 @@ body {
 }
 
 .artist-list-selected-element {
-    box-shadow: 0 0 10px 1px white;
+    box-shadow: 0 0 10px 5px white !important;
 }
 
 .z-1 {
@@ -334,4 +346,31 @@ body {
     position: absolute;
     bottom: 0;
     top: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.overlay-button {
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0.4rem 0.6rem;
+}
+
+.background-primary {
+    background: #0394E9;
+}
+
+.background-secondary {
+    background: #333333;
+}
+
+.outline {
+    background: transparent;
+    border: 2px solid white;
 }
