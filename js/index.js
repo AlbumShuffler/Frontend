@@ -4,8 +4,9 @@
  */
 
 const blacklistedAlbumsKey = "blacklisted-albums";
-const lastSelectedArtistKey = "lastSelectedArtist";
+const lastSelectedArtistsKey = "lastSelectedArtists";
 const lastSelectedLanguageKey = "lastSelectedLanguage";
+const allowMultipleArtistsKey = "allowMultipleArtists";
 
 function getLegacyBlocklistEntries() {
     if (document.cookie && document.cookie.length > 0) {
@@ -69,15 +70,36 @@ function setLastSelectedLanguage(language) {
     localStorage.setItem(lastSelectedLanguageKey, language);
 }
 
-function fetchLastSelectedArtist() {
-    const artist = localStorage.getItem(lastSelectedArtistKey);
-    if (artist) {
-        return artist;
+function fetchLastSelectedArtists() {
+    const artists = localStorage.getItem(lastSelectedArtistsKey);
+    if (artists) {
+        return JSON.parse(artists);
     } else {
-        return "";
+        return [];
     }
 }
 
-function setLastSelectedArtist(httpFriendlyShortName) {
-    localStorage.setItem(lastSelectedArtistKey, httpFriendlyShortName);
+function setLastSelectedArtist(httpFriendlyShortNames) {
+    console.log('setting selection', httpFriendlyShortNames.length, 'artits')
+    localStorage.removeItem(lastSelectedArtistsKey);
+    localStorage.setItem(lastSelectedArtistsKey, JSON.stringify(httpFriendlyShortNames));
+}
+
+function fetchAllowMultipleSelection() {
+    try {
+        const result = JSON.parse(localStorage.getItem(allowMultipleArtistsKey));
+        if (result && result !== null) {
+            return result;
+        } else {
+            return false;
+        }
+    }
+    catch (e) {
+        console.error(e);
+        return false;
+    }
+}
+
+function setAllowMultipleSelection(allowMultipleArtists) {
+    localStorage.setItem(allowMultipleArtistsKey, JSON.stringify(allowMultipleArtists));
 }
