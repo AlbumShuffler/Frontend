@@ -9,6 +9,7 @@ import ArtistSelection exposing (ArtistSelection(..))
 import ArtistsWithAlbums exposing (albumStorage)
 import AssocList as Dict exposing (Dict)
 import Browser
+import Debug
 import Html exposing (Html, div, img, text)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
@@ -421,7 +422,17 @@ update msg model =
                 ArtistSelection.NoArtistSelected ->
                     ( { model | isArtistOverlayOpen = False, overlayActionTaken = False }, Cmd.none )
 
-                _ ->
+                SingleArtistSelected _ ->
+                    let
+                        _ = Debug.log "equals" (newSelection == model.currentArtist)
+                        _ = Debug.log "new selection" newSelection
+                    in
+                    if newSelection == model.currentArtist then
+                        ( { model | isArtistOverlayOpen = False }, Cmd.none )
+                    else
+                        resetModel newSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
+
+                MultipleArtistsSelected _ ->
                     if model.overlayActionTaken then
                         resetModel newSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
 
