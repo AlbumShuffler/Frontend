@@ -9,7 +9,6 @@ import ArtistSelection exposing (ArtistSelection(..))
 import ArtistsWithAlbums exposing (albumStorage)
 import AssocList as Dict exposing (Dict)
 import Browser
-import Debug
 import Html exposing (Html, div, img, text)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
@@ -75,6 +74,9 @@ port setLastSelectedArtist : List String -> Cmd msg
 
 
 port setLastSelectedLanguage : String -> Cmd msg
+
+
+port setAllowMultipleSelection : Bool -> Cmd msg
 
 
 subscriptions : Model -> Sub Msg
@@ -249,6 +251,7 @@ resetModel artist blacklist text allowMultipleArtistSelection =
             [ serializedBlacklist |> setBlacklistedAlbums
             , resettedModel.albums |> startShuffleAlbums
             , artistShortnames |> setLastSelectedArtist
+            , allowMultipleArtistSelection |> setAllowMultipleSelection
             ]
     in
     ( resettedModel, Cmd.batch commands )
@@ -439,9 +442,6 @@ update msg model =
 
         ToggleAllowMultipleSelection ->
             let
-                _ =
-                    Debug.log "toggle allow multiple, state before change:" model.allowMultipleArtistSelection
-
                 newState =
                     not <| model.allowMultipleArtistSelection
 

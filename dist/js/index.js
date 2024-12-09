@@ -6,6 +6,7 @@
 const blacklistedAlbumsKey = "blacklisted-albums";
 const lastSelectedArtistsKey = "lastSelectedArtists";
 const lastSelectedLanguageKey = "lastSelectedLanguage";
+const allowMultipleArtistsKey = "allowMultipleArtists";
 
 function getLegacyBlocklistEntries() {
     if (document.cookie && document.cookie.length > 0) {
@@ -82,4 +83,23 @@ function setLastSelectedArtist(httpFriendlyShortNames) {
     console.log('setting selection', httpFriendlyShortNames.length, 'artits')
     localStorage.removeItem(lastSelectedArtistsKey);
     localStorage.setItem(lastSelectedArtistsKey, JSON.stringify(httpFriendlyShortNames));
+}
+
+function fetchAllowMultipleSelection() {
+    try {
+        const result = JSON.parse(localStorage.getItem(allowMultipleArtistsKey));
+        if (result && result !== null) {
+            return result;
+        } else {
+            return false;
+        }
+    }
+    catch (e) {
+        console.error(e);
+        return false;
+    }
+}
+
+function setAllowMultipleSelection(allowMultipleArtists) {
+    localStorage.setItem(allowMultipleArtistsKey, JSON.stringify(allowMultipleArtists));
 }
