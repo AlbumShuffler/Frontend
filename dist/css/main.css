@@ -357,9 +357,11 @@ body {
 }
 
 .overlay-button {
-    cursor: pointer;
     border-radius: 20px;
-    padding: 0.4rem 0.6rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.8rem;
+    padding-right: 1.0rem;
 }
 
 .background-primary {
@@ -373,4 +375,8 @@ body {
 .outline {
     background: transparent;
     border: 2px solid white;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }

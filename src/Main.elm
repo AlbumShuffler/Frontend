@@ -862,7 +862,7 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection texts =
                         a.name
             in
             Html.a
-                [ class "artist-list-item", Html.Events.Extra.onClickPreventDefaultAndStopPropagation message ]
+                [ class "artist-list-item cursor-pointer", Html.Events.Extra.onClickPreventDefaultAndStopPropagation message ]
                 [ img [ class ("mb-025 " ++ isSelectedClass), sourceSet, sizes ] []
                 , div [ class "artist-list-caption" ] [ text artistName ]
                 ]
@@ -880,16 +880,21 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection texts =
             div [ class "mb-10 d-flex", style "width" "80vw" ]
                 [ div [ class "d-flex", style "flex-grow" "1", style "justify-content" "center" ]
                     [ Html.a
-                        [ class "urbanist-font uppercase bold overlay-button background-primary"
+                        [ class "urbanist-font uppercase bold overlay-button background-primary cursor-pointer"
+                        , style "line-height" "1.5rem"
                         , Html.Events.Extra.onClickPreventDefaultAndStopPropagation ToggleAllowMultipleSelection
                         ]
                         [ text multiSelectText ]
                     ]
-                , Html.a
-                    [ class "urbanist-font uppercase bold overlay-button ml-10 outline"
-                    , Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseArtistOverlay selection)
+                , div [ class "d-flex outline", style "align-items" "center", style "border-radius" "20px" ]
+                    [ Html.a
+                        [ class "urbanist-font uppercase bold cursor-pointer"
+                        , style "width" "2rem"
+                        , style "text-align" "center"
+                        , Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseArtistOverlay selection)
+                        ]
+                        [ text " X" ]
                     ]
-                    [ text "X" ]
                 ]
 
         overlayGrid : List ArtistInfo -> Html Msg
