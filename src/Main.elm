@@ -151,6 +151,8 @@ type
     Msg
     -- Partially resets the model to change the current artist selection
     = Reset ArtistSelection.ArtistSelection
+      -- Removes all blacklist entries for the currently selected artists
+    | ResetBlacklist
       -- Received from ports when the blacklist was read from local storage
     | GotBlacklist (List String)
       -- Received from ports when the browser language was determined
@@ -165,7 +167,7 @@ type
     | CloseArtistOverlay ArtistSelection.ArtistSelection
     | ToggleLanguage
     | ToggleAllowMultipleSelection
-      -- Changes the currenlty artist selection
+      -- Changes the currently artist selection
     | OverlayArtistSelected ArtistInfo
 
 
@@ -267,9 +269,33 @@ addToBlacklist artistId albumId dict =
             dict |> Dict.insert artistId [ albumId ]
 
 
-removeFromBlacklist : ArtistIds.ArtistId -> Blacklist -> Blacklist
-removeFromBlacklist artistId blacklist =
-    blacklist |> Dict.remove artistId
+resetBlackList : List ArtistIds.ArtistId -> Model -> ( Model, Cmd Msg )
+resetBlackList artistsToClear model =
+    let
+        updatedBlacklist =
+            artistsToClear |> List.foldl (\artistId dict -> dict |> Dict.remove artistId) model.blacklistedAlbums
+
+        artistsWithAlbums =
+            model.currentArtist
+                |> ArtistSelection.toList
+                |> List.map
+                    (\a ->
+                        ArtistsWithAlbums.albumStorage
+                            |> List.find (\withAlbums -> (withAlbums.artist.httpFriendlyShortName |> String.toLower) == (a.httpFriendlyShortName |> String.toLower))
+                    )
+                |> List.filterMap identity
+
+        -- There is no concat/flat/select many for arrays
+        albums =
+            artistsWithAlbums
+                |> List.map (\a -> a.albums |> Array.toList)
+                |> List.concat
+                |> Array.fromList
+
+        serializedBlacklist =
+            updatedBlacklist |> blackListToStringList
+    in
+    ( { model | albums = albums, blacklistedAlbums = updatedBlacklist }, Cmd.batch [ serializedBlacklist |> setBlacklistedAlbums, albums |> startShuffleAlbums ] )
 
 
 blackListToStringList : Blacklist -> List String
@@ -331,6 +357,9 @@ update msg model =
     case msg of
         Reset artistSelection ->
             resetModel artistSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
+
+        ResetBlacklist ->
+            resetBlackList (model.currentArtist |> ArtistSelection.toList |> List.map (\a -> a.id)) model
 
         GotBlacklist strings ->
             let
@@ -394,9 +423,20 @@ update msg model =
                point to the next album.
             -}
             let
+                updatedAlbums =
+                    model.albums |> Array.filter (\a -> a.id /= albumId)
+
+                updatedCounter =
+                    if model.current >= (updatedAlbums |> Array.length) then
+                        0
+
+                    else
+                        model.current
+
                 updatedModel =
                     { model
-                        | albums = model.albums |> Array.filter (\a -> a.id /= albumId)
+                        | albums = updatedAlbums
+                        , current = updatedCounter
                         , blacklistedAlbums = addToBlacklist artistId albumId model.blacklistedAlbums
                     }
 
@@ -424,6 +464,7 @@ update msg model =
                 SingleArtistSelected _ ->
                     if newSelection == model.currentArtist then
                         ( { model | isArtistOverlayOpen = False }, Cmd.none )
+
                     else
                         resetModel newSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
 
@@ -591,7 +632,7 @@ view model =
         div
             [ class "white-text status-text-container" ]
             [ Html.a
-                [ onClick (Reset model.currentArtist), class "status-text pointer" ]
+                [ onClick ResetBlacklist, class "status-text pointer" ]
                 [ text (model.text.no_albums_available_but ++ (numberOfBlacklistedAlbums |> String.fromInt) ++ model.text.are_blacklisted_clear_blocklist_question) ]
             ]
         {------------------
@@ -747,7 +788,7 @@ view model =
                             , div [ style "position" "relative" ]
                                 [ controlsGlowEffect artist.coverColorA artist.coverColorB
                                 , navigationControls album.urlToOpen
-                                , blacklistControls numberOfBlacklistedAlbums artist album.id model.text (Reset model.currentArtist)
+                                , blacklistControls numberOfBlacklistedAlbums artist album.id model.text ResetBlacklist
                                 ]
                             ]
                         ]
