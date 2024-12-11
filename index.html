@@ -59,6 +59,20 @@
         app.ports.arrowKeyReceiver.send("right");
       } else if (evt.key === "ArrowLeft") {
         app.ports.arrowKeyReceiver.send("left");
+      } else if (evt.key === "Enter") {
+        const playButton = document.getElementById('play-button');
+        if (!playButton) {
+          console.warn('Could not find play-button');
+          return;
+        }
+
+        const url = playButton.href;
+        if (!url) {
+          console.warn('Could not get href from play-button');
+          return;
+        }
+        
+        document.location = url;
       }
     };
 
