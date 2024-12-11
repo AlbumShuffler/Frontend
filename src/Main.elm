@@ -836,7 +836,7 @@ navigationControls urlToOpen =
             [ class "z-2", href "#", onClick PreviousAlbum ]
             [ img [ style "padding" "1.5rem", style "height" "25px", style "width" "25px", style "transform" "scaleX(-1)", src "img/next.svg" ] [] ]
         , Html.a
-            [ class "z-2", href urlToOpen ]
+            [ id "play-button", class "z-2", href urlToOpen ]
             [ img [ style "height" "10rem", src "img/play.svg", alt "play current album on Spotify" ] [] ]
         , Html.a
             [ class "z-2", href "#", onClick NextAlbum ]
