@@ -79,9 +79,11 @@ port setLastSelectedLanguage : String -> Cmd msg
 port setAllowMultipleSelection : Bool -> Cmd msg
 
 
+port arrowKeyReceiver : (String -> msg) -> Sub msg
+
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    Sub.none
+    arrowKeyReceiver ArrowKeyReceived
 
 
 emptyModel : Maybe Blacklist -> Maybe TextRessources.Text -> ArtistSelection.ArtistSelection -> Bool -> Model
@@ -169,6 +171,7 @@ type
     | ToggleAllowMultipleSelection
       -- Changes the currently artist selection
     | OverlayArtistSelected ArtistInfo
+    | ArrowKeyReceived String
 
 
 init : Flags -> ( Model, Cmd Msg )
@@ -569,6 +572,22 @@ update msg model =
                                 selection
                     in
                     ( { model | currentArtist = nonEmptySelection, overlayActionTaken = True }, Cmd.none )
+
+        ArrowKeyReceived direction ->
+            if direction == "right" then
+                let
+                    newModel =
+                        { model | current = modBy (model.albums |> Array.length) (model.current + 1) }
+                in
+                ( newModel, Cmd.none )
+            else if direction == "left" then
+                let
+                    newModel =
+                        { model | current = modBy (model.albums |> Array.length) (model.current - 1) }
+                in
+                ( newModel, Cmd.none )
+            else
+                (model, Cmd.none)
 
 
 tryAlbumNumberFrom : String -> Maybe Int

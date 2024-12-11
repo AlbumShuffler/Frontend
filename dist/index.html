@@ -53,6 +53,15 @@
       flags: flags
     });
 
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      if (evt.key === "ArrowRight") {
+        app.ports.arrowKeyReceiver.send("right");
+      } else if (evt.key === "ArrowLeft") {
+        app.ports.arrowKeyReceiver.send("left");
+      }
+    };
+
     app.ports.setBlacklistedAlbums.subscribe(albumIdList => setBlacklistedAlbums(albumIdList));
     app.ports.setLastSelectedLanguage.subscribe(setLastSelectedLanguage);
     app.ports.setLastSelectedArtist.subscribe(setLastSelectedArtist);
