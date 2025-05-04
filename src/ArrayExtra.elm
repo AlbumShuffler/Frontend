@@ -1,7 +1,6 @@
 module ArrayExtra exposing (any)
 
 import Array exposing (Array)
-import Maybe exposing (Maybe)
 
 any : (a -> Bool) -> Array a -> Bool
 any predicate array =

@@ -15,6 +15,7 @@ type alias Text =
     , no_album_data_available : String
     , no_artist_data_available : String
     , no_album_and_no_artist_data_available : String
+    , ask_to_clear_all_settings : String
     , allow_multiple_selection : String
     }
 
@@ -32,6 +33,7 @@ germanText =
     , no_album_data_available = "Keine Albuminformationen verfügbar :("
     , no_artist_data_available = "Keine Interpreteninformationen verfügbar :("
     , no_album_and_no_artist_data_available = "Weder Album- noch Interpreteninformationen verfügbar :("
+    , ask_to_clear_all_settings = "Einstellungen zurücksetzen?"
     , allow_multiple_selection = "Mehrfachauswahl"
     }
 
@@ -49,6 +51,7 @@ englishText =
     , no_album_data_available = "No album data available :("
     , no_artist_data_available = "No artist data available :("
     , no_album_and_no_artist_data_available = "Neither artist nor album data available :("
+    , ask_to_clear_all_settings = "Clear all settings?"
     , allow_multiple_selection = "multiple selection"
     }
 

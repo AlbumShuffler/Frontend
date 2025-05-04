@@ -4,10 +4,11 @@ import AlbumIds
 import Albums exposing (Album, ArtistInfo)
 import Array exposing (Array)
 import ArrayExtra as Array
+import MaybeExtra as Maybe
 import ArtistIds
 import ArtistSelection exposing (ArtistSelection(..))
 import ArtistsWithAlbums exposing (albumStorage)
-import AssocList as Dict exposing (Dict)
+import AssocList as AList exposing (Dict)
 import Browser
 import Html exposing (Html, div, img, text)
 import Html.Attributes exposing (..)
@@ -19,22 +20,44 @@ import Random
 import Random.List
 import Regex
 import TextRessources
+import Albums exposing (ArtistWithAlbums)
+import Dict as Dict
+
+{- 
+    The following function would be more at home in the ArtistsWithAlbums file but since
+    that file is auto-generated be keep the functionality here
+-}
+albumStorageForProvider : String -> Maybe (List ArtistWithAlbums)
+albumStorageForProvider providerName =
+    albumStorage |> Dict.get providerName
 
 
-defaultArtistShortName : String
-defaultArtistShortName =
-    albumStorage
+defaultProvider : String
+defaultProvider =
+    let
+        fallback = "spotify"
+    in
+        Dict.keys albumStorage
         |> List.head
-        |> Maybe.map (\a -> a.artist.httpFriendlyShortName)
-        |> Maybe.withDefault "<could not set defaultArtistShortName, is data available?>"
+        |> Maybe.withDefault fallback
 
 
-defaultArtist : ArtistInfo
-defaultArtist =
-    albumStorage
-        |> List.head
-        |> Maybe.map (\a -> a.artist)
-        |> Maybe.withDefault Albums.emptyArtistInfo
+defaultArtist : String -> ArtistInfo
+defaultArtist providerName =
+    case albumStorageForProvider providerName of
+        Just artist ->
+            artist
+            |> List.head
+            |> Maybe.map (\f -> f.artist)
+            |> Maybe.withDefault Albums.emptyArtistInfo
+
+        Nothing ->
+            Albums.emptyArtistInfo
+
+
+defaultArtistShortName : String -> String
+defaultArtistShortName providerName =
+    (providerName |> defaultArtist).httpFriendlyShortName
 
 
 defaultText : TextRessources.Text
@@ -46,6 +69,7 @@ type alias Flags =
     { blockedAlbums : List String
     , language : String
     , lastSelectedArtists : List String
+    , lastSelectedProvider: String
     , allowMultipleSelection : Bool
     }
 
@@ -60,6 +84,7 @@ type alias Model =
     , current : Int
     , isInitialized : Bool
     , currentArtist : ArtistSelection.ArtistSelection
+    , currentProvider: String
     , isArtistOverlayOpen : Bool
     , allowMultipleArtistSelection : Bool
     , text : TextRessources.Text
@@ -71,6 +96,9 @@ port setBlacklistedAlbums : List String -> Cmd msg
 
 
 port setLastSelectedArtist : List String -> Cmd msg
+
+
+port setLastSelectedProvider : String -> Cmd msg
 
 
 port setLastSelectedLanguage : String -> Cmd msg
@@ -86,8 +114,8 @@ subscriptions _ =
     arrowKeyReceiver ArrowKeyReceived
 
 
-emptyModel : Maybe Blacklist -> Maybe TextRessources.Text -> ArtistSelection.ArtistSelection -> Bool -> Model
-emptyModel blacklistOption language currentArtist allowMultipleArtistSelection =
+emptyModel : Maybe Blacklist -> Maybe TextRessources.Text -> ArtistSelection.ArtistSelection -> String -> Bool -> Model
+emptyModel blacklistOption language currentArtist currentProvider allowMultipleArtistSelection =
     let
         text =
             language |> Maybe.withDefault defaultText
@@ -95,12 +123,17 @@ emptyModel blacklistOption language currentArtist allowMultipleArtistSelection =
         artists =
             currentArtist |> ArtistSelection.toList
 
+
+        storage =
+            currentProvider
+            |> albumStorageForProvider
+            |> Maybe.withDefault []
+
         artistsWithAlbums =
             artists
                 |> List.map
                     (\a ->
-                        ArtistsWithAlbums.albumStorage
-                            |> List.find (\withAlbums -> (withAlbums.artist.httpFriendlyShortName |> String.toLower) == (a.httpFriendlyShortName |> String.toLower))
+                        storage |> List.find (\withAlbums -> (withAlbums.artist.httpFriendlyShortName |> String.toLower) == (a.httpFriendlyShortName |> String.toLower))
                     )
                 |> List.filterMap identity
 
@@ -112,7 +145,7 @@ emptyModel blacklistOption language currentArtist allowMultipleArtistSelection =
                 |> Array.fromList
 
         blacklist =
-            blacklistOption |> Maybe.withDefault Dict.empty
+            blacklistOption |> Maybe.withDefault AList.empty
 
         blacklistedForCurrentArtist =
             let
@@ -120,7 +153,7 @@ emptyModel blacklistOption language currentArtist allowMultipleArtistSelection =
                     artists |> List.map (\a -> a.id)
             in
             artistIds
-                |> List.map (\id -> blacklist |> Dict.get id |> Maybe.withDefault [])
+                |> List.map (\id -> blacklist |> AList.get id |> Maybe.withDefault [])
                 |> List.concat
 
         nonblacklistedAlbums =
@@ -132,6 +165,7 @@ emptyModel blacklistOption language currentArtist allowMultipleArtistSelection =
     , current = 0
     , isInitialized = False
     , currentArtist = currentArtist
+    , currentProvider = currentProvider
     , isArtistOverlayOpen = False
     , text = text
     , allowMultipleArtistSelection = allowMultipleArtistSelection
@@ -152,7 +186,7 @@ main =
 type
     Msg
     -- Partially resets the model to change the current artist selection
-    = Reset ArtistSelection.ArtistSelection
+    = Reset ArtistSelection.ArtistSelection (Maybe String)
       -- Removes all blacklist entries for the currently selected artists
     | ResetBlacklist
       -- Received from ports when the blacklist was read from local storage
@@ -172,20 +206,28 @@ type
       -- Changes the currently artist selection
     | OverlayArtistSelected ArtistInfo
     | ArrowKeyReceived String
+    | ChangeCurrentProvider
 
 
 init : Flags -> ( Model, Cmd Msg )
 init flags =
     let
+        currentProvider =
+            if flags.lastSelectedProvider |> String.isEmpty then defaultProvider
+            else flags.lastSelectedProvider
+
+        defaultArtistForCurrentProvider =
+            currentProvider |> defaultArtist
+
         currentArtist =
             if flags.lastSelectedArtists == [] then
-                defaultArtist |> ArtistSelection.SingleArtistSelected
+                currentProvider |> defaultArtist |> ArtistSelection.SingleArtistSelected
 
             else if flags.allowMultipleSelection then
                 let
                     selection =
                         if flags.lastSelectedArtists |> List.isEmpty then
-                            [ defaultArtistShortName ]
+                            [ currentProvider |> defaultArtistShortName ]
 
                         else
                             flags.lastSelectedArtists
@@ -193,7 +235,8 @@ init flags =
                 selection
                     |> List.map
                         (\shortName ->
-                            albumStorage
+                            (currentProvider |> albumStorageForProvider)
+                                |> Maybe.withDefault []
                                 |> List.find
                                     (\storageItem ->
                                         (storageItem.artist.httpFriendlyShortName
@@ -209,12 +252,14 @@ init flags =
             else
                 let
                     shortName =
-                        flags.lastSelectedArtists |> List.head |> Maybe.withDefault defaultArtistShortName
+                        flags.lastSelectedArtists |> List.head |> Maybe.withDefault (currentProvider |> defaultArtistShortName)
                 in
-                albumStorage
+                currentProvider
+                    |> albumStorageForProvider
+                    |> Maybe.withDefault []
                     |> List.find (\a -> (a.artist.httpFriendlyShortName |> String.toLower) == shortName)
                     |> Maybe.map (\a -> a.artist)
-                    |> Maybe.withDefault defaultArtist
+                    |> Maybe.withDefault defaultArtistForCurrentProvider
                     |> ArtistSelection.SingleArtistSelected
 
         text =
@@ -224,7 +269,7 @@ init flags =
             flags.blockedAlbums |> blackListFromStringList
 
         model =
-            emptyModel (Just blacklist) text currentArtist flags.allowMultipleSelection
+            emptyModel (Just blacklist) text currentArtist currentProvider flags.allowMultipleSelection
     in
     ( model, model.albums |> startShuffleAlbums )
 
@@ -238,11 +283,15 @@ startShuffleAlbums albums =
     generator |> Random.generate AlbumsShuffled
 
 
-resetModel : ArtistSelection.ArtistSelection -> Maybe Blacklist -> TextRessources.Text -> Bool -> ( Model, Cmd Msg )
-resetModel artist blacklist text allowMultipleArtistSelection =
+resetModel : ArtistSelection.ArtistSelection -> Maybe String -> Maybe Blacklist -> TextRessources.Text -> Bool -> ( Model, Cmd Msg )
+resetModel artist providerOption blacklist text allowMultipleArtistSelection =
     let
+        provider = 
+            providerOption
+            |> Maybe.withDefault defaultProvider
+
         resettedModel =
-            emptyModel blacklist (Just text) artist allowMultipleArtistSelection
+            emptyModel blacklist (Just text) artist provider allowMultipleArtistSelection
 
         serializedBlacklist =
             blacklist |> Maybe.map blackListToStringList |> Maybe.withDefault []
@@ -256,6 +305,7 @@ resetModel artist blacklist text allowMultipleArtistSelection =
             [ serializedBlacklist |> setBlacklistedAlbums
             , resettedModel.albums |> startShuffleAlbums
             , artistShortnames |> setLastSelectedArtist
+            , provider |> setLastSelectedProvider
             , allowMultipleArtistSelection |> setAllowMultipleSelection
             ]
     in
@@ -264,26 +314,27 @@ resetModel artist blacklist text allowMultipleArtistSelection =
 
 addToBlacklist : ArtistIds.ArtistId -> AlbumIds.AlbumId -> Blacklist -> Blacklist
 addToBlacklist artistId albumId dict =
-    case dict |> Dict.get artistId of
+    case dict |> AList.get artistId of
         Just existing ->
-            dict |> Dict.remove artistId |> Dict.insert artistId (albumId :: existing)
+            dict |> AList.remove artistId |> AList.insert artistId (albumId :: existing)
 
         Nothing ->
-            dict |> Dict.insert artistId [ albumId ]
+            dict |> AList.insert artistId [ albumId ]
 
 
 resetBlackList : List ArtistIds.ArtistId -> Model -> ( Model, Cmd Msg )
 resetBlackList artistsToClear model =
     let
         updatedBlacklist =
-            artistsToClear |> List.foldl (\artistId dict -> dict |> Dict.remove artistId) model.blacklistedAlbums
+            artistsToClear |> List.foldl (\artistId dict -> dict |> AList.remove artistId) model.blacklistedAlbums
 
         artistsWithAlbums =
             model.currentArtist
                 |> ArtistSelection.toList
                 |> List.map
                     (\a ->
-                        ArtistsWithAlbums.albumStorage
+                        albumStorageForProvider model.currentProvider
+                            |> Maybe.withDefault []
                             |> List.find (\withAlbums -> (withAlbums.artist.httpFriendlyShortName |> String.toLower) == (a.httpFriendlyShortName |> String.toLower))
                     )
                 |> List.filterMap identity
@@ -305,7 +356,7 @@ blackListToStringList : Blacklist -> List String
 blackListToStringList blacklist =
     let
         pairs =
-            blacklist |> Dict.toList
+            blacklist |> AList.toList
     in
     pairs
         |> List.map
@@ -352,14 +403,14 @@ blackListFromStringList list =
                 |> List.map Tuple.first
                 |> List.map (\artistId -> ( artistId, tuples |> List.filter (\( artId, _ ) -> artId == artistId) |> List.map Tuple.second ))
     in
-    grouped |> Dict.fromList
+    grouped |> AList.fromList
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Reset artistSelection ->
-            resetModel artistSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
+        Reset artistSelection provider ->
+            resetModel artistSelection provider (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
 
         ResetBlacklist ->
             resetBlackList (model.currentArtist |> ArtistSelection.toList |> List.map (\a -> a.id)) model
@@ -376,7 +427,7 @@ update msg model =
 
                 blacklistedForCurrentArtists =
                     artistIds
-                        |> List.map (\id -> blacklist |> Dict.get id)
+                        |> List.map (\id -> blacklist |> AList.get id)
                         |> List.filterMap identity
                         |> List.concat
 
@@ -469,11 +520,11 @@ update msg model =
                         ( { model | isArtistOverlayOpen = False }, Cmd.none )
 
                     else
-                        resetModel newSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
+                        resetModel newSelection (Just model.currentProvider) (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
 
                 MultipleArtistsSelected _ ->
                     if model.overlayActionTaken then
-                        resetModel newSelection (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
+                        resetModel newSelection (Just model.currentProvider) (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
 
                     else
                         ( { model | isArtistOverlayOpen = False, overlayActionTaken = False }, Cmd.none )
@@ -589,6 +640,10 @@ update msg model =
             else
                 (model, Cmd.none)
 
+        ChangeCurrentProvider ->
+            {- dummy implementation -}
+            (model, model.currentProvider |> setLastSelectedProvider)
+
 
 tryAlbumNumberFrom : String -> Maybe Int
 tryAlbumNumberFrom input =
@@ -610,14 +665,14 @@ view model =
                 |> ArtistSelection.toList
                 |> List.map (\a -> a.id)
 
-        artistNames =
-            model.currentArtist
-                |> ArtistSelection.toList
-                |> List.map (\a -> albumStorage |> List.find (\s -> s.artist.id == a.id) |> Maybe.map (\x -> x.artist.name) |> Maybe.withDefault "<>")
+        albumStorage = 
+            model.currentProvider
+            |> albumStorageForProvider
+            |> Maybe.withDefault []
 
         numberOfBlacklistedAlbums =
             artistIds
-                |> List.map (\id -> model.blacklistedAlbums |> Dict.get id)
+                |> List.map (\id -> model.blacklistedAlbums |> AList.get id)
                 |> List.foldl
                     (\next acc ->
                         case next of
@@ -687,9 +742,16 @@ view model =
                     [ div [ class "status-text" ] [ text model.text.no_artist_data_available ] ]
 
             ( Nothing, Nothing ) ->
-                div
-                    [ class "white-text status-text-container" ]
-                    [ div [ class "status-text" ] [ text model.text.no_album_and_no_artist_data_available ] ]
+                let
+                    -- TODO: inconsistent behaviour, we need to reset the artist selection manually at this point even though we call Reset; The provider gets reset easily
+                    resettedArtistSelection = defaultProvider |> defaultArtist |> SingleArtistSelected
+                in
+                    div
+                        [ class "white-text status-text-container d-flex" ]
+                        [ div [ class "w-100" ] 
+                        [ div [ class "status-text" ] [ text model.text.no_album_and_no_artist_data_available ]
+                        , Html.a [ class "status-text w-100 pointer underlined", style "display" "block", onClick (Reset resettedArtistSelection Nothing) ] [ text model.text.ask_to_clear_all_settings ] ] 
+                        ]
 
             ( Just album, Just artist ) ->
                 let
@@ -750,9 +812,6 @@ view model =
                             , div [ class "ml-025", style "font-size" "9px" ] [ text "▼" ]
                             ]
 
-                    backgroundFadeDuration =
-                        "0"
-
                     backgroundGlowStyle =
                         style "background" ("linear-gradient(45deg, " ++ artist.coverColorA ++ " , " ++ artist.coverColorB ++ " 100%)")
                 in
@@ -761,7 +820,7 @@ view model =
                     , style "background-image" ("url(" ++ backgroundImageUrl ++ ")")
                     , style "background-position" (coverCenterX ++ " " ++ coverCenterY)
                     ]
-                    [ artistOverlay model.isArtistOverlayOpen model.allowMultipleArtistSelection model.currentArtist model.text
+                    [ artistOverlay model.isArtistOverlayOpen model.allowMultipleArtistSelection model.currentArtist model.currentProvider model.text
                     , div
                         [ id "background-color-overlay" ]
                         [ div
@@ -880,8 +939,8 @@ blacklistControls numberOfBlacklistedAlbums artistOfCurrentAlbum albumId text re
         ]
 
 
-artistOverlay : Bool -> Bool -> ArtistSelection.ArtistSelection -> TextRessources.Text -> Html Msg
-artistOverlay isOverlayOpen allowMultipleArtistSelection selection texts =
+artistOverlay : Bool -> Bool -> ArtistSelection.ArtistSelection -> String -> TextRessources.Text -> Html Msg
+artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider texts =
     let
         overlayItem : Bool -> ArtistInfo -> Html Msg
         overlayItem isSelected a =
@@ -987,9 +1046,14 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection texts =
 
             else
                 style "display" "none"
+
+        albumStorage =
+            provider
+            |> albumStorageForProvider
+            |> Maybe.withDefault []
     in
     div
         [ id "artist-selection-overview", class "white-text urbanist-font flex-column", display, onClick (CloseArtistOverlay selection) ]
         [ allowMultipleSelectionControl
-        , overlayGrid (ArtistsWithAlbums.albumStorage |> List.map (\a -> a.artist))
+        , overlayGrid (albumStorage |> List.map (\a -> a.artist))
         ]

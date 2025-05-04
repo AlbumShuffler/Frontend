@@ -38,12 +38,17 @@
     if (!lastArtists || lastArtists.length === 0) {
       lastArtists = []
     }
-    console.warn('"allowMultipleSelection" is defaulting to "true"!')
+
+    let lastProvider = fetchLastSelectedProvider();
+    if (!lastProvider) {
+      lastProvider = "spotify";
+    }
     
     const flags = {
       blockedAlbums: fetchBlacklistedAlbums(),
       language: fetchLanguage(),
       lastSelectedArtists: lastArtists,
+      lastSelectedProvider: lastProvider,
       allowMultipleSelection: fetchAllowMultipleSelection(),
     }
 
@@ -80,6 +85,7 @@
     app.ports.setLastSelectedLanguage.subscribe(setLastSelectedLanguage);
     app.ports.setLastSelectedArtist.subscribe(setLastSelectedArtist);
     app.ports.setAllowMultipleSelection.subscribe(allow => setAllowMultipleSelection(allow));
+    app.ports.setLastSelectedProvider.subscribe(setLastSelectedProvider);
   </script>
 </body>
 

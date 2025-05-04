@@ -235,6 +235,10 @@ body {
     height: 100%;
 }
 
+.w-100 {
+    width: 100%;
+}
+
 .d-flex {
     display: flex;
 }
@@ -270,6 +274,10 @@ body {
 
 .pointer {
     cursor: pointer;
+}
+
+.underlined {
+    text-decoration: underline;
 }
 
 .status-text-container {
