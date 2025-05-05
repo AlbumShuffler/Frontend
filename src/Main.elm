@@ -36,10 +36,20 @@ defaultProvider : String
 defaultProvider =
     let
         fallback = "spotify"
+
+        firstProvider =
+            Dict.keys albumStorage
+            |> List.head
+
+        firstProviderAlbumCount =
+            firstProvider
+            |> Maybe.andThen albumStorageForProvider
+            |> Maybe.map (\s -> s |> List.length)
+            |> Maybe.withDefault 0
     in
-        Dict.keys albumStorage
-        |> List.head
-        |> Maybe.withDefault fallback
+        {- make sure that we do not select a provider without content -}
+        if firstProviderAlbumCount > 0 then firstProvider |> Maybe.withDefault fallback
+        else fallback
 
 
 defaultArtist : String -> ArtistInfo
@@ -719,16 +729,13 @@ view model =
                 model.albums |> Array.get model.current
 
             currentArtist =
-                case currentAlbum of
-                    Just crtAlbum ->
+                currentAlbum
+                |> Maybe.andThen (\crtAlbum ->
                         albumStorage
                             |> List.find (\item -> item.albums |> Array.any (\album -> album.id == crtAlbum.id))
                             |> Maybe.map (\item -> item.artist)
+                )
 
-                    Nothing ->
-                        Nothing
-
-            --|> Maybe.withDefault defaultArtist
         in
         case ( currentAlbum, currentArtist ) of
             ( Nothing, Just _ ) ->
@@ -805,6 +812,14 @@ view model =
                     language =
                         Html.a [ class "non-styled-link p-15", style "font-size" "1.5rem", onClick ToggleLanguage, href "#" ] [ text model.text.flag ]
 
+
+                    providerImage =
+                        Html.a
+                            [ class "ml-05 p-15 d-flex align-items-center white-text pointer", onClick OpenArtistOverlay ]
+                            [ img [ class "social-button", src "img/spotify.svg", alt ("Current artist: " ++ artist.name) ] []
+                            , div [ class "ml-025", style "font-size" "9px" ] [ text "▼" ]
+                            ]
+
                     artistImage =
                         Html.a
                             [ class "ml-05 p-15 d-flex align-items-center white-text pointer", onClick OpenArtistOverlay ]
@@ -832,7 +847,7 @@ view model =
                                 [ id "social-links-container" ]
                                 [ div
                                     [ class "d-flex justify-content-center align-items-center" ]
-                                    [ redditLink, githubLink, language, artistImage ]
+                                    [ githubLink, language, providerImage, artistImage ]
                                 ]
                             , div
                                 [ style "flex-grow" "1"
