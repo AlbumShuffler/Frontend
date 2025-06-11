@@ -23,7 +23,6 @@ type alias ArtistInfo =
     { name : String
     , images : List ArtistImage
     , shortName : String
-    , httpFriendlyShortName : String
     , id : ArtistId
     , icon : String
     , coverColorA : String
@@ -55,7 +54,6 @@ emptyArtistInfo =
     , name = "dummy artist info"
     , images = []
     , shortName = "dummy"
-    , httpFriendlyShortName = "dummy"
     , icon = "img/dummy.png"
     , coverColorA = "#ffffff"
     , coverColorB = "#ffffff"

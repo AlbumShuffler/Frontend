@@ -1,6 +1,8 @@
-module Providers exposing (..)
+module Providers exposing (Provider)
 
 type alias Provider =
-    { name : String
+    { id : String
+    , name : String
     , icon: String
+    , logo: String
     }

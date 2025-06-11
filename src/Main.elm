@@ -22,6 +22,9 @@ import Regex
 import TextRessources
 import Albums exposing (ArtistWithAlbums)
 import Dict as Dict
+import Providers
+import ProviderStorage
+import Debug
 
 {- 
     The following function would be more at home in the ArtistsWithAlbums file but since
@@ -30,26 +33,6 @@ import Dict as Dict
 albumStorageForProvider : String -> Maybe (List ArtistWithAlbums)
 albumStorageForProvider providerName =
     albumStorage |> Dict.get providerName
-
-
-defaultProvider : String
-defaultProvider =
-    let
-        fallback = "spotify"
-
-        firstProvider =
-            Dict.keys albumStorage
-            |> List.head
-
-        firstProviderAlbumCount =
-            firstProvider
-            |> Maybe.andThen albumStorageForProvider
-            |> Maybe.map (\s -> s |> List.length)
-            |> Maybe.withDefault 0
-    in
-        {- make sure that we do not select a provider without content -}
-        if firstProviderAlbumCount > 0 then firstProvider |> Maybe.withDefault fallback
-        else fallback
 
 
 defaultArtist : String -> ArtistInfo
@@ -67,7 +50,7 @@ defaultArtist providerName =
 
 defaultArtistShortName : String -> String
 defaultArtistShortName providerName =
-    (providerName |> defaultArtist).httpFriendlyShortName
+    (providerName |> defaultArtist).shortName
 
 
 defaultText : TextRessources.Text
@@ -94,8 +77,9 @@ type alias Model =
     , current : Int
     , isInitialized : Bool
     , currentArtist : ArtistSelection.ArtistSelection
-    , currentProvider: String
+    , currentProvider: Providers.Provider
     , isArtistOverlayOpen : Bool
+    , isProviderOverlayOpen : Bool
     , allowMultipleArtistSelection : Bool
     , text : TextRessources.Text
     , overlayActionTaken : Bool
@@ -124,7 +108,7 @@ subscriptions _ =
     arrowKeyReceiver ArrowKeyReceived
 
 
-emptyModel : Maybe Blacklist -> Maybe TextRessources.Text -> ArtistSelection.ArtistSelection -> String -> Bool -> Model
+emptyModel : Maybe Blacklist -> Maybe TextRessources.Text -> ArtistSelection.ArtistSelection -> Providers.Provider -> Bool -> Model
 emptyModel blacklistOption language currentArtist currentProvider allowMultipleArtistSelection =
     let
         text =
@@ -135,7 +119,7 @@ emptyModel blacklistOption language currentArtist currentProvider allowMultipleA
 
 
         storage =
-            currentProvider
+            currentProvider.id
             |> albumStorageForProvider
             |> Maybe.withDefault []
 
@@ -143,7 +127,7 @@ emptyModel blacklistOption language currentArtist currentProvider allowMultipleA
             artists
                 |> List.map
                     (\a ->
-                        storage |> List.find (\withAlbums -> (withAlbums.artist.httpFriendlyShortName |> String.toLower) == (a.httpFriendlyShortName |> String.toLower))
+                        storage |> List.find (\withAlbums -> (withAlbums.artist.shortName |> String.toLower) == (a.shortName |> String.toLower))
                     )
                 |> List.filterMap identity
 
@@ -177,6 +161,7 @@ emptyModel blacklistOption language currentArtist currentProvider allowMultipleA
     , currentArtist = currentArtist
     , currentProvider = currentProvider
     , isArtistOverlayOpen = False
+    , isProviderOverlayOpen = False
     , text = text
     , allowMultipleArtistSelection = allowMultipleArtistSelection
     , overlayActionTaken = False
@@ -196,7 +181,7 @@ main =
 type
     Msg
     -- Partially resets the model to change the current artist selection
-    = Reset ArtistSelection.ArtistSelection (Maybe String)
+    = Reset ArtistSelection.ArtistSelection (Maybe Providers.Provider)
       -- Removes all blacklist entries for the currently selected artists
     | ResetBlacklist
       -- Received from ports when the blacklist was read from local storage
@@ -211,6 +196,8 @@ type
     | BlackListAlbum ( ArtistIds.ArtistId, AlbumIds.AlbumId )
     | OpenArtistOverlay
     | CloseArtistOverlay ArtistSelection.ArtistSelection
+    | OpenProviderOverlay
+    | CloseProviderOverlay Providers.Provider
     | ToggleLanguage
     | ToggleAllowMultipleSelection
       -- Changes the currently artist selection
@@ -223,21 +210,23 @@ init : Flags -> ( Model, Cmd Msg )
 init flags =
     let
         currentProvider =
-            if flags.lastSelectedProvider |> String.isEmpty then defaultProvider
-            else flags.lastSelectedProvider
+            ProviderStorage.all 
+            |> List.find (\p -> p.id == flags.lastSelectedProvider)
+            |> Maybe.withDefault ProviderStorage.default
+
 
         defaultArtistForCurrentProvider =
-            currentProvider |> defaultArtist
+            currentProvider.id |> defaultArtist
 
         currentArtist =
             if flags.lastSelectedArtists == [] then
-                currentProvider |> defaultArtist |> ArtistSelection.SingleArtistSelected
+                currentProvider.id |> defaultArtist |> ArtistSelection.SingleArtistSelected
 
             else if flags.allowMultipleSelection then
                 let
                     selection =
                         if flags.lastSelectedArtists |> List.isEmpty then
-                            [ currentProvider |> defaultArtistShortName ]
+                            [ currentProvider.id |> defaultArtistShortName ]
 
                         else
                             flags.lastSelectedArtists
@@ -245,11 +234,11 @@ init flags =
                 selection
                     |> List.map
                         (\shortName ->
-                            (currentProvider |> albumStorageForProvider)
+                            (currentProvider.id |> albumStorageForProvider)
                                 |> Maybe.withDefault []
                                 |> List.find
                                     (\storageItem ->
-                                        (storageItem.artist.httpFriendlyShortName
+                                        (storageItem.artist.shortName
                                             |> String.toLower
                                         )
                                             == (shortName |> String.toLower)
@@ -262,12 +251,12 @@ init flags =
             else
                 let
                     shortName =
-                        flags.lastSelectedArtists |> List.head |> Maybe.withDefault (currentProvider |> defaultArtistShortName)
+                        flags.lastSelectedArtists |> List.head |> Maybe.withDefault (currentProvider.id |> defaultArtistShortName)
                 in
-                currentProvider
+                currentProvider.id
                     |> albumStorageForProvider
                     |> Maybe.withDefault []
-                    |> List.find (\a -> (a.artist.httpFriendlyShortName |> String.toLower) == shortName)
+                    |> List.find (\a -> (a.artist.shortName |> String.toLower) == shortName)
                     |> Maybe.map (\a -> a.artist)
                     |> Maybe.withDefault defaultArtistForCurrentProvider
                     |> ArtistSelection.SingleArtistSelected
@@ -280,6 +269,9 @@ init flags =
 
         model =
             emptyModel (Just blacklist) text currentArtist currentProvider flags.allowMultipleSelection
+
+        _ = Debug.log "current provider" currentProvider
+        _ = Debug.log "current artist" currentArtist
     in
     ( model, model.albums |> startShuffleAlbums )
 
@@ -293,29 +285,36 @@ startShuffleAlbums albums =
     generator |> Random.generate AlbumsShuffled
 
 
-resetModel : ArtistSelection.ArtistSelection -> Maybe String -> Maybe Blacklist -> TextRessources.Text -> Bool -> ( Model, Cmd Msg )
+resetModel : ArtistSelection.ArtistSelection -> Maybe Providers.Provider -> Maybe Blacklist -> TextRessources.Text -> Bool -> ( Model, Cmd Msg )
 resetModel artist providerOption blacklist text allowMultipleArtistSelection =
     let
         provider = 
             providerOption
-            |> Maybe.withDefault defaultProvider
+            |> Maybe.withDefault ProviderStorage.default
+
+        ensureArtist =
+            case artist of
+                NoArtistSelected ->
+                    defaultArtist provider.id |> ArtistSelection.SingleArtistSelected
+                SingleArtistSelected s -> SingleArtistSelected s
+                MultipleArtistsSelected many -> MultipleArtistsSelected many
 
         resettedModel =
-            emptyModel blacklist (Just text) artist provider allowMultipleArtistSelection
+            emptyModel blacklist (Just text) ensureArtist provider allowMultipleArtistSelection
 
         serializedBlacklist =
             blacklist |> Maybe.map blackListToStringList |> Maybe.withDefault []
 
         artistShortnames =
-            artist
+            ensureArtist
                 |> ArtistSelection.toList
-                |> List.map (\a -> a.httpFriendlyShortName)
+                |> List.map (\a -> a.shortName)
 
         commands =
             [ serializedBlacklist |> setBlacklistedAlbums
             , resettedModel.albums |> startShuffleAlbums
             , artistShortnames |> setLastSelectedArtist
-            , provider |> setLastSelectedProvider
+            , provider.id |> setLastSelectedProvider
             , allowMultipleArtistSelection |> setAllowMultipleSelection
             ]
     in
@@ -343,9 +342,9 @@ resetBlackList artistsToClear model =
                 |> ArtistSelection.toList
                 |> List.map
                     (\a ->
-                        albumStorageForProvider model.currentProvider
+                        albumStorageForProvider model.currentProvider.id
                             |> Maybe.withDefault []
-                            |> List.find (\withAlbums -> (withAlbums.artist.httpFriendlyShortName |> String.toLower) == (a.httpFriendlyShortName |> String.toLower))
+                            |> List.find (\withAlbums -> (withAlbums.artist.shortName |> String.toLower) == (a.shortName |> String.toLower))
                     )
                 |> List.filterMap identity
 
@@ -517,7 +516,7 @@ update msg model =
             ( { model | albums = albums |> Array.fromList, isInitialized = True }, Cmd.none )
 
         OpenArtistOverlay ->
-            ( { model | isArtistOverlayOpen = True }, Cmd.none )
+            ( { model | isArtistOverlayOpen = True, isProviderOverlayOpen = False }, Cmd.none )
 
         CloseArtistOverlay newSelection ->
             case newSelection of
@@ -538,6 +537,15 @@ update msg model =
 
                     else
                         ( { model | isArtistOverlayOpen = False, overlayActionTaken = False }, Cmd.none )
+
+        OpenProviderOverlay ->
+            ( { model | isArtistOverlayOpen = False, isProviderOverlayOpen = True }, Cmd.none)
+
+        CloseProviderOverlay provider ->
+            if provider == model.currentProvider then
+                ( { model | isProviderOverlayOpen = False }, Cmd.none )
+            else
+                resetModel NoArtistSelected (Just provider) (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
 
         ToggleLanguage ->
             let
@@ -652,7 +660,7 @@ update msg model =
 
         ChangeCurrentProvider ->
             {- dummy implementation -}
-            (model, model.currentProvider |> setLastSelectedProvider)
+            (model, model.currentProvider.id |> setLastSelectedProvider)
 
 
 tryAlbumNumberFrom : String -> Maybe Int
@@ -676,7 +684,7 @@ view model =
                 |> List.map (\a -> a.id)
 
         albumStorage = 
-            model.currentProvider
+            model.currentProvider.id
             |> albumStorageForProvider
             |> Maybe.withDefault []
 
@@ -751,7 +759,7 @@ view model =
             ( Nothing, Nothing ) ->
                 let
                     -- TODO: inconsistent behaviour, we need to reset the artist selection manually at this point even though we call Reset; The provider gets reset easily
-                    resettedArtistSelection = defaultProvider |> defaultArtist |> SingleArtistSelected
+                    resettedArtistSelection = ProviderStorage.default.id |> defaultArtist |> SingleArtistSelected
                 in
                     div
                         [ class "white-text status-text-container d-flex" ]
@@ -790,7 +798,7 @@ view model =
                         {- this part of the code contains some hardcoded checks and references because some artist do not
                            have their cover art centered properly
                         -}
-                        if (artist.httpFriendlyShortName == "ddf") && albumNumber >= 126 then
+                        if (artist.shortName == "ddf") && albumNumber >= 126 then
                             (artist.altCoverCenterX |> Maybe.withDefault artist.coverCenterX |> String.fromInt) ++ "%"
 
                         else
@@ -798,6 +806,11 @@ view model =
 
                     coverCenterY =
                         (artist.coverCenterY |> String.fromInt) ++ "%"
+
+                    informationLink =
+                        Html.a
+                            [ class "mr-05 p-15", href "" ]
+                            [ img [ class "social-button", src "img/info.svg", alt "Show information dialog" ] [] ]
 
                     githubLink =
                         Html.a
@@ -815,8 +828,8 @@ view model =
 
                     providerImage =
                         Html.a
-                            [ class "ml-05 p-15 d-flex align-items-center white-text pointer", onClick OpenArtistOverlay ]
-                            [ img [ class "social-button", src "img/spotify.svg", alt ("Current artist: " ++ artist.name) ] []
+                            [ class "ml-05 p-15 d-flex align-items-center white-text pointer", onClick OpenProviderOverlay ]
+                            [ img [ class "social-button", src model.currentProvider.icon, alt ("Current provider: " ++ model.currentProvider.name) ] []
                             , div [ class "ml-025", style "font-size" "9px" ] [ text "▼" ]
                             ]
 
@@ -836,6 +849,7 @@ view model =
                     , style "background-position" (coverCenterX ++ " " ++ coverCenterY)
                     ]
                     [ artistOverlay model.isArtistOverlayOpen model.allowMultipleArtistSelection model.currentArtist model.currentProvider model.text
+                    , providerOverlay ProviderStorage.all model.currentProvider model.text model.isProviderOverlayOpen
                     , div
                         [ id "background-color-overlay" ]
                         [ div
@@ -847,7 +861,7 @@ view model =
                                 [ id "social-links-container" ]
                                 [ div
                                     [ class "d-flex justify-content-center align-items-center" ]
-                                    [ githubLink, language, providerImage, artistImage ]
+                                    [ informationLink, language, providerImage, artistImage ]
                                 ]
                             , div
                                 [ style "flex-grow" "1"
@@ -954,7 +968,65 @@ blacklistControls numberOfBlacklistedAlbums artistOfCurrentAlbum albumId text re
         ]
 
 
-artistOverlay : Bool -> Bool -> ArtistSelection.ArtistSelection -> String -> TextRessources.Text -> Html Msg
+providerOverlay : List Providers.Provider -> Providers.Provider -> TextRessources.Text -> Bool -> Html Msg
+providerOverlay providers currentProvider texts isOverlayOpen =
+    let
+        overlayItem : Bool -> Providers.Provider -> Html Msg
+        overlayItem isSelected p =
+            let
+                isSelectedClass =
+                    if isSelected then
+                        " artist-list-selected-element"
+
+                    else
+                        ""
+
+                providerName =
+                    if (p.name |> String.length) > 18 then
+                        (p.name |> String.slice 0 18 |> String.trim) ++ "…"
+
+                    else
+                        p.name
+
+            in
+            div [ class ("provider-list-item-container" ++ isSelectedClass) ]
+            [
+                Html.a
+                    [ class "bg-black artist-list-item cursor-pointer", Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseProviderOverlay p) ]
+                    [ img [ class ("mb-025"), src p.logo, style "width" "120px", style "height" "120px" ] []
+                    , div [ class "artist-list-caption" ] [ text providerName ]
+                    ]
+            ]
+
+        overlayGrid : List Providers.Provider -> Html Msg
+        overlayGrid all =
+            div
+                [ class "artist-list d-flex" ]
+                (all
+                    |> List.map
+                        (\p ->
+                            let
+                                isCurrentProvider = p.name == currentProvider.name
+                            in
+                            overlayItem isCurrentProvider p
+                        )
+                )
+
+        display =
+            if isOverlayOpen then
+                style "display" "flex"
+
+            else
+                style "display" "none"
+
+    in
+    div
+        [ id "artist-selection-overview", class "white-text urbanist-font flex-column", display, onClick (CloseProviderOverlay currentProvider) ]
+        [ overlayGrid providers
+        ]
+
+
+artistOverlay : Bool -> Bool -> ArtistSelection.ArtistSelection -> Providers.Provider -> TextRessources.Text -> Html Msg
 artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider texts =
     let
         overlayItem : Bool -> ArtistInfo -> Html Msg
@@ -1003,7 +1075,7 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
             in
             Html.a
                 [ class "artist-list-item cursor-pointer", Html.Events.Extra.onClickPreventDefaultAndStopPropagation message ]
-                [ img [ class ("mb-025 " ++ isSelectedClass), sourceSet, sizes ] []
+                [ img [ class ("mb-025 artist-list-item-image " ++ isSelectedClass), sourceSet, sizes ] []
                 , div [ class "artist-list-caption" ] [ text artistName ]
                 ]
 
@@ -1062,13 +1134,16 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
             else
                 style "display" "none"
 
-        albumStorage =
-            provider
+        allArtistsWithAllAlbums =
+            provider.id
             |> albumStorageForProvider
             |> Maybe.withDefault []
+
+        _ = Debug.log "provider" provider
+        _ = Debug.log "current artist" selection
     in
     div
         [ id "artist-selection-overview", class "white-text urbanist-font flex-column", display, onClick (CloseArtistOverlay selection) ]
         [ allowMultipleSelectionControl
-        , overlayGrid (albumStorage |> List.map (\a -> a.artist))
+        , overlayGrid (allArtistsWithAllAlbums |> List.map (\a -> a.artist))
         ]

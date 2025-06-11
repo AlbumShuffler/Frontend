@@ -364,6 +364,16 @@ body {
     font-weight: bold;
 }
 
+.bg-black {
+    background-color: black;
+}
+
+.provider-list-item-container {
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 .overlay-button {
     border-radius: 20px;
     padding-top: 0.4rem;
@@ -387,4 +397,9 @@ body {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.artist-list-item-image  {
+    min-width: 200px;
+    min-height: 200px;
 }

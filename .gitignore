@@ -5,5 +5,6 @@ elm-stuff/
 .idea/
 .stignore
 src/AlbumStorage*.elm
+src/ProviderStorage.elm
 src/ArtistsWithAlbums.elm
 dist/js/main.js
