@@ -269,9 +269,6 @@ init flags =
 
         model =
             emptyModel (Just blacklist) text currentArtist currentProvider flags.allowMultipleSelection
-
-        _ = Debug.log "current provider" currentProvider
-        _ = Debug.log "current artist" currentArtist
     in
     ( model, model.albums |> startShuffleAlbums )
 
@@ -1029,6 +1026,134 @@ providerOverlay providers currentProvider texts isOverlayOpen =
 artistOverlay : Bool -> Bool -> ArtistSelection.ArtistSelection -> Providers.Provider -> TextRessources.Text -> Html Msg
 artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider texts =
     let
+        allArtistsWithAllAlbums =
+            provider.id
+            |> albumStorageForProvider
+            |> Maybe.withDefault []
+
+        idsOfSelectedArtists =
+            selection |> ArtistSelection.toList |> List.map (\artist -> artist.id)
+
+        overlayItem : Bool -> ArtistInfo -> Html Msg
+        overlayItem isSelected a =
+            let
+
+                _ = Debug.log "selected?" isSelected
+
+                isSelectedClass =
+                    if isSelected then
+                        " artist-list-selected-element"
+
+                    else
+                        ""
+
+                imageSource =
+                    let
+                        images =
+                            if a.images |> List.isEmpty then
+                                [ { url = "https://placehold.co/400x400?text=" ++ a.name, width = 400, height = 400 } ]
+                            else a.images
+
+                        sizes =
+                            -- the size gets smaller for bigger screens since more columns are used
+                            attribute "sizes" "(max-width: 430px) 160px, (max-width: 480px) 200px, (max-width: 560px) 300px, (min-width: 561px) 200px"
+
+                        imageSet =
+                            images
+                                |> List.map (\i -> i.url ++ " " ++ (i.width |> String.fromInt) ++ "w")
+                                |> List.foldl
+                                    (\next acc ->
+                                        if acc |> String.isEmpty then
+                                            next
+
+                                        else
+                                            acc ++ ", " ++ next
+                                    )
+                                    ""
+                    in
+                    [ attribute "srcset" imageSet, sizes ]
+
+
+                message =
+                    if allowMultipleArtistSelection then
+                        OverlayArtistSelected a
+
+                    else
+                        CloseArtistOverlay (SingleArtistSelected a)
+
+                artistName =
+                    if (a.name |> String.length) > 18 then
+                        (a.name |> String.slice 0 18 |> String.trim) ++ "…"
+
+                    else
+                        a.name
+
+            in
+            
+            Html.a
+                [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation message ]
+                [ div 
+                  [ class "artist-item" ]
+                  [ img (class isSelectedClass :: imageSource) []
+                  , div [ class "artist-name", class "urbanist-font" ] [ text artistName ]
+                  ]
+                ]
+
+
+        allowMultipleSelectionControl : Html Msg
+        allowMultipleSelectionControl =
+            let
+                multiSelectText =
+                    if allowMultipleArtistSelection then
+                        "☑ " ++ texts.allow_multiple_selection
+
+                    else
+                        "☐ " ++ texts.allow_multiple_selection
+            in
+            div
+            [ style "display" "flex", style "flex-grow" "1", style "justify-content" "center"]
+            [ Html.a
+                [ class "urbanist-font uppercase bold overlay-button background-primary cursor-pointer"
+                , style "margin-left" "1.4rem"
+                , Html.Events.Extra.onClickPreventDefaultAndStopPropagation ToggleAllowMultipleSelection
+                ]
+                [ text multiSelectText ]
+            ]
+
+        closeButton : Html Msg
+        closeButton =
+            Html.a
+                [ id "close-artist-overlay"
+                , Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseArtistOverlay selection)
+                ]
+                [ text " X" ]
+
+        header = 
+            div [ class "sticky-header" ] 
+                    [ allowMultipleSelectionControl
+                    , closeButton
+                    ]
+
+    in
+    if isOverlayOpen then
+        div [ class "overlay" ]
+        [ div [ class "overlay-content" ] 
+          [ header
+          , div [ class "artists-grid" ]
+              (allArtistsWithAllAlbums |> List.map (\a -> 
+              let
+                isSelected = idsOfSelectedArtists |> List.any (\aId -> aId == a.artist.id)
+              in
+              overlayItem isSelected a.artist))
+          ]
+        ]
+    else
+        div [] []
+    
+
+artistOverlay2 : Bool -> Bool -> ArtistSelection.ArtistSelection -> Providers.Provider -> TextRessources.Text -> Html Msg
+artistOverlay2 isOverlayOpen allowMultipleArtistSelection selection provider texts =
+    let
         overlayItem : Bool -> ArtistInfo -> Html Msg
         overlayItem isSelected a =
             let
@@ -1056,7 +1181,6 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
                     attribute "srcset" sourceSetValue
 
                 sizes =
-                    --attribute "sizes" "(max-width: 1024px) 300px, only screen and (max-height: 1024px) and (orientation: portrait) 64px, (max-width: 480px) 64px"
                     attribute "sizes" "(max-width: 560px) 90px, (min-width: 561px) 200px"
 
                 message =
