@@ -25,6 +25,8 @@ import Dict as Dict
 import Providers
 import ProviderStorage
 import Debug
+import Albums exposing (CoverImage)
+import Html exposing (s)
 
 {- 
     The following function would be more at home in the ArtistsWithAlbums file but since
@@ -83,6 +85,14 @@ type alias Model =
     , allowMultipleArtistSelection : Bool
     , text : TextRessources.Text
     , overlayActionTaken : Bool
+    }
+
+
+type alias OverlayItem a =
+    { id: String
+    , text: String
+    , images: List CoverImage
+    , data: a
     }
 
 
@@ -196,8 +206,9 @@ type
     | BlackListAlbum ( ArtistIds.ArtistId, AlbumIds.AlbumId )
     | OpenArtistOverlay
     | CloseArtistOverlay ArtistSelection.ArtistSelection
+    | CloseProviderOverlay (Maybe Providers.Provider)
+      -- Opens the provider overlay to select a different provider
     | OpenProviderOverlay
-    | CloseProviderOverlay Providers.Provider
     | ToggleLanguage
     | ToggleAllowMultipleSelection
       -- Changes the currently artist selection
@@ -538,11 +549,14 @@ update msg model =
         OpenProviderOverlay ->
             ( { model | isArtistOverlayOpen = False, isProviderOverlayOpen = True }, Cmd.none)
 
-        CloseProviderOverlay provider ->
+        CloseProviderOverlay (Just provider) ->
             if provider == model.currentProvider then
                 ( { model | isProviderOverlayOpen = False }, Cmd.none )
             else
                 resetModel NoArtistSelected (Just provider) (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
+
+        CloseProviderOverlay Nothing ->
+            ( { model | isProviderOverlayOpen = False }, Cmd.none )
 
         ToggleLanguage ->
             let
@@ -846,7 +860,7 @@ view model =
                     , style "background-position" (coverCenterX ++ " " ++ coverCenterY)
                     ]
                     [ artistOverlay model.isArtistOverlayOpen model.allowMultipleArtistSelection model.currentArtist model.currentProvider model.text
-                    , providerOverlay ProviderStorage.all model.currentProvider model.text model.isProviderOverlayOpen
+                    , providerOverlay model.isProviderOverlayOpen model.currentProvider ProviderStorage.all
                     , div
                         [ id "background-color-overlay" ]
                         [ div
@@ -965,64 +979,6 @@ blacklistControls numberOfBlacklistedAlbums artistOfCurrentAlbum albumId text re
         ]
 
 
-providerOverlay : List Providers.Provider -> Providers.Provider -> TextRessources.Text -> Bool -> Html Msg
-providerOverlay providers currentProvider texts isOverlayOpen =
-    let
-        overlayItem : Bool -> Providers.Provider -> Html Msg
-        overlayItem isSelected p =
-            let
-                isSelectedClass =
-                    if isSelected then
-                        " artist-list-selected-element"
-
-                    else
-                        ""
-
-                providerName =
-                    if (p.name |> String.length) > 18 then
-                        (p.name |> String.slice 0 18 |> String.trim) ++ "…"
-
-                    else
-                        p.name
-
-            in
-            div [ class ("provider-list-item-container" ++ isSelectedClass) ]
-            [
-                Html.a
-                    [ class "bg-black artist-list-item cursor-pointer", Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseProviderOverlay p) ]
-                    [ img [ class ("mb-025"), src p.logo, style "width" "120px", style "height" "120px" ] []
-                    , div [ class "artist-list-caption" ] [ text providerName ]
-                    ]
-            ]
-
-        overlayGrid : List Providers.Provider -> Html Msg
-        overlayGrid all =
-            div
-                [ class "artist-list d-flex" ]
-                (all
-                    |> List.map
-                        (\p ->
-                            let
-                                isCurrentProvider = p.name == currentProvider.name
-                            in
-                            overlayItem isCurrentProvider p
-                        )
-                )
-
-        display =
-            if isOverlayOpen then
-                style "display" "flex"
-
-            else
-                style "display" "none"
-
-    in
-    div
-        [ id "artist-selection-overview", class "white-text urbanist-font flex-column", display, onClick (CloseProviderOverlay currentProvider) ]
-        [ overlayGrid providers
-        ]
-
-
 artistOverlay : Bool -> Bool -> ArtistSelection.ArtistSelection -> Providers.Provider -> TextRessources.Text -> Html Msg
 artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider texts =
     let
@@ -1037,9 +993,6 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
         overlayItem : Bool -> ArtistInfo -> Html Msg
         overlayItem isSelected a =
             let
-
-                _ = Debug.log "selected?" isSelected
-
                 isSelectedClass =
                     if isSelected then
                         " artist-list-selected-element"
@@ -1151,11 +1104,11 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
         div [] []
     
 
-artistOverlay2 : Bool -> Bool -> ArtistSelection.ArtistSelection -> Providers.Provider -> TextRessources.Text -> Html Msg
-artistOverlay2 isOverlayOpen allowMultipleArtistSelection selection provider texts =
+providerOverlay : Bool -> Providers.Provider -> (List Providers.Provider) -> Html Msg
+providerOverlay isOverlayOpen currentProvider providers =
     let
-        overlayItem : Bool -> ArtistInfo -> Html Msg
-        overlayItem isSelected a =
+        overlayItem : Bool -> Providers.Provider -> Html Msg
+        overlayItem isSelected provider =
             let
                 isSelectedClass =
                     if isSelected then
@@ -1164,110 +1117,71 @@ artistOverlay2 isOverlayOpen allowMultipleArtistSelection selection provider tex
                     else
                         ""
 
-                sourceSetValue =
-                    a.images
-                        |> List.map (\i -> i.url ++ " " ++ (i.width |> String.fromInt) ++ "w")
-                        |> List.foldl
-                            (\next acc ->
-                                if acc |> String.isEmpty then
-                                    next
+                imageSource =
+                    let
+                        image =
+                            if provider.logo |> String.isEmpty then
+                                { url = "https://placehold.co/500x500?text=" ++ provider.name, width = 500, height = 500 }
+                            else { url = provider.logo, width = 500, height = 500 }
 
-                                else
-                                    acc ++ ", " ++ next
-                            )
-                            ""
+                        sizes =
+                            -- the size gets smaller for bigger screens since more columns are used
+                            -- we use the same sizes as in the artist overlay to give it a consistent look and feel
+                            attribute "sizes" "(max-width: 430px) 160px, (max-width: 480px) 200px, (max-width: 560px) 300px, (min-width: 561px) 200px"
 
-                sourceSet =
-                    attribute "srcset" sourceSetValue
+                        imageSet =
+                            image.url ++ " " ++ (image.width |> String.fromInt) ++ "w"
 
-                sizes =
-                    attribute "sizes" "(max-width: 560px) 90px, (min-width: 561px) 200px"
+                    in
+                    [ attribute "srcset" imageSet, sizes ]
+
 
                 message =
-                    if allowMultipleArtistSelection then
-                        OverlayArtistSelected a
+                    CloseProviderOverlay (Just provider)
+
+                providerName =
+                    if (provider.name |> String.length) > 18 then
+                        (provider.name |> String.slice 0 18 |> String.trim) ++ "…"
 
                     else
-                        CloseArtistOverlay (SingleArtistSelected a)
+                        provider.name
 
-                artistName =
-                    if (a.name |> String.length) > 18 then
-                        (a.name |> String.slice 0 18 |> String.trim) ++ "…"
-
-                    else
-                        a.name
             in
+            
             Html.a
-                [ class "artist-list-item cursor-pointer", Html.Events.Extra.onClickPreventDefaultAndStopPropagation message ]
-                [ img [ class ("mb-025 artist-list-item-image " ++ isSelectedClass), sourceSet, sizes ] []
-                , div [ class "artist-list-caption" ] [ text artistName ]
+                [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation message ]
+                [ div 
+                  [ class "artist-item" ]
+                  [ img (class isSelectedClass :: imageSource) []
+                  , div [ class "artist-name", class "urbanist-font" ] [ text providerName ]
+                  ]
                 ]
 
-        allowMultipleSelectionControl : Html Msg
-        allowMultipleSelectionControl =
-            let
-                multiSelectText =
-                    if allowMultipleArtistSelection then
-                        "☑ " ++ texts.allow_multiple_selection
 
-                    else
-                        "☐ " ++ texts.allow_multiple_selection
-            in
-            div [ class "mb-10 d-flex", style "width" "80vw" ]
-                [ div [ class "d-flex", style "flex-grow" "1", style "justify-content" "center" ]
-                    [ Html.a
-                        [ class "urbanist-font uppercase bold overlay-button background-primary cursor-pointer"
-                        , style "line-height" "1.5rem"
-                        , Html.Events.Extra.onClickPreventDefaultAndStopPropagation ToggleAllowMultipleSelection
-                        ]
-                        [ text multiSelectText ]
-                    ]
-                , div [ class "d-flex outline", style "align-items" "center", style "border-radius" "20px" ]
-                    [ Html.a
-                        [ class "urbanist-font uppercase bold cursor-pointer"
-                        , style "width" "2rem"
-                        , style "text-align" "center"
-                        , Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseArtistOverlay selection)
-                        ]
-                        [ text " X" ]
-                    ]
+        closeButton : Html Msg
+        closeButton =
+            Html.a
+                [ id "close-artist-overlay"
+                , Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseProviderOverlay Nothing)
                 ]
+                [ text " X" ]
 
-        overlayGrid : List ArtistInfo -> Html Msg
-        overlayGrid artists =
-            div
-                [ class "artist-list d-flex" ]
-                (artists
-                    |> List.map
-                        (\a ->
-                            let
-                                idsOfSelectedArtists =
-                                    selection |> ArtistSelection.toList |> List.map (\artist -> artist.id)
+        header = 
+            div [ class "sticky-header" ] [ closeButton ]
 
-                                isCurrentArtist =
-                                    idsOfSelectedArtists |> List.any (\aId -> aId == a.id)
-                            in
-                            overlayItem isCurrentArtist a
-                        )
-                )
-
-        display =
-            if isOverlayOpen then
-                style "display" "flex"
-
-            else
-                style "display" "none"
-
-        allArtistsWithAllAlbums =
-            provider.id
-            |> albumStorageForProvider
-            |> Maybe.withDefault []
-
-        _ = Debug.log "provider" provider
-        _ = Debug.log "current artist" selection
     in
-    div
-        [ id "artist-selection-overview", class "white-text urbanist-font flex-column", display, onClick (CloseArtistOverlay selection) ]
-        [ allowMultipleSelectionControl
-        , overlayGrid (allArtistsWithAllAlbums |> List.map (\a -> a.artist))
+    if isOverlayOpen then
+        div [ class "overlay" ]
+        [ div [ class "overlay-content" ] 
+          [ header
+          , div [ class "artists-grid" ]
+              (providers |> List.map (\p -> 
+              let
+                isSelected = p.id == currentProvider.id
+              in
+              overlayItem isSelected p))
+          ]
         ]
+    else
+        div [] []
+    
