@@ -100,7 +100,8 @@
 }
 
 .artist-list-selected-element {
-    box-shadow: 0 0 10px 5px white !important;
+    box-shadow: 0 0 10px 6px white !important;
+    background-color: #fffd;
 }
 
 #close-artist-overlay {
