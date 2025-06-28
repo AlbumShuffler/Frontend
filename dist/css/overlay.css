@@ -41,6 +41,28 @@
     cursor: pointer;
 }
 
+.sticky-header-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    flex: 2;
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.overlay-body-text {
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
 .artists-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -17,6 +17,13 @@ type alias Text =
     , no_album_and_no_artist_data_available : String
     , ask_to_clear_all_settings : String
     , allow_multiple_selection : String
+    , select_provider: String
+    , drei_metadaten_thanks: String
+    , information_overlay_title : String
+    , information_overlay_text : String
+    , information_overlay_provider_text : String
+    , information_overlay_artist_text : String
+    , information_overlay_copyright_text : String
     }
 
 
@@ -35,6 +42,13 @@ germanText =
     , no_album_and_no_artist_data_available = "Weder Album- noch Interpreteninformationen verfügbar :("
     , ask_to_clear_all_settings = "Einstellungen zurücksetzen?"
     , allow_multiple_selection = "Mehrfachauswahl"
+    , select_provider = "Dienst auswählen"
+    , drei_metadaten_thanks = "Vielen Dank an diedreimetadaten.de für die Bereitstellung von Teilen der Metadaten!"
+    , information_overlay_title = "Informationen"
+    , information_overlay_text = "Dies ist eine einfache App, um zufällig Hörbücher von verschiedenen Anbietern auszuwählen. Wenn dir Inhalte fehlen kannst du am unteren Ende der Seite den Reddit-Link nutzen, um mir Bescheid zu geben."
+    , information_overlay_provider_text = "Du kannst zwischen verschiedenen Anbietern (Spotify, Deezer, Apple Music, ...) wechseln, indem du den zweiten Button von rechts in der Titelleiste der Web-App verwendest. HINWEIS: Nicht alle Anbieter unterstützen alle Inhalte!"
+    , information_overlay_artist_text = "Du kannst Interpreten auswählen, indem du auf das Interpreten-Symbol in der Titelleiste der Web-App klickst (ganz rechts in der Menuleiste). Du kannst mehrere Interpreten auswählen, indem du den Mehrfachauswahlmodus im Interpreten-Auswahl-Overlay aktivierst."
+    , information_overlay_copyright_text = "Alle auf dieser Webseite verwendeten Bilder und Metadaten der Künstler und Hörspiele/bücher sind Eigentum der jeweiligen Anbieter und unterliegen deren Urheber- bzw. Nutzungsrechten."
     }
 
 
@@ -53,6 +67,13 @@ englishText =
     , no_album_and_no_artist_data_available = "Neither artist nor album data available :("
     , ask_to_clear_all_settings = "Clear all settings?"
     , allow_multiple_selection = "multiple selection"
+    , select_provider = "select provider"
+    , drei_metadaten_thanks = "Thanks to diedreimetadaten.de for providing some of the metadata!"
+    , information_overlay_title = "Information"
+    , information_overlay_text = "This is a simple app to help you randomly choose audiobooks from a variety of providers. If you are missing content, you can use the Reddit link at the bottom of the page to let me know."
+    , information_overlay_provider_text = "You can switch between different providers (Spotify, Deezer, Apple Music, ...) by using the second button from the right in the title bar of the web app. NOTE: not all providers support all of the content!"
+    , information_overlay_artist_text = "You can select artists by clicking on the artist icon in the title bar of the web app (rightmost icon in the menubar). You can select multiple artists by enabling the multi-selection mode in the artist selection overlay."
+    , information_overlay_copyright_text = "All images and metadata of artists and audiobooks used on this website are the property of the respective providers and are subject to their copyright or usage rights."
     }
 
 

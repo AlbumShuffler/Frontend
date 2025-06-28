@@ -82,6 +82,7 @@ type alias Model =
     , currentProvider: Providers.Provider
     , isArtistOverlayOpen : Bool
     , isProviderOverlayOpen : Bool
+    , isInformationOverlayOpen : Bool
     , allowMultipleArtistSelection : Bool
     , text : TextRessources.Text
     , overlayActionTaken : Bool
@@ -172,6 +173,7 @@ emptyModel blacklistOption language currentArtist currentProvider allowMultipleA
     , currentProvider = currentProvider
     , isArtistOverlayOpen = False
     , isProviderOverlayOpen = False
+    , isInformationOverlayOpen = False
     , text = text
     , allowMultipleArtistSelection = allowMultipleArtistSelection
     , overlayActionTaken = False
@@ -204,15 +206,19 @@ type
     | AlbumsShuffled (List Album)
       -- Blacklists the given album; ArtistId required to clearly identify the song
     | BlackListAlbum ( ArtistIds.ArtistId, AlbumIds.AlbumId )
+      -- Artist overlay
     | OpenArtistOverlay
     | CloseArtistOverlay ArtistSelection.ArtistSelection
-    | CloseProviderOverlay (Maybe Providers.Provider)
-      -- Opens the provider overlay to select a different provider
+    | OverlayArtistSelected ArtistInfo
+      -- Provider overlay
     | OpenProviderOverlay
+    | CloseProviderOverlay (Maybe Providers.Provider)
+      -- Information overlay
+    | OpenInformationOverlay
+    | CloseInformationOverlay
+      --
     | ToggleLanguage
     | ToggleAllowMultipleSelection
-      -- Changes the currently artist selection
-    | OverlayArtistSelected ArtistInfo
     | ArrowKeyReceived String
     | ChangeCurrentProvider
 
@@ -673,6 +679,12 @@ update msg model =
             {- dummy implementation -}
             (model, model.currentProvider.id |> setLastSelectedProvider)
 
+        OpenInformationOverlay ->
+            ( { model | isInformationOverlayOpen = True }, Cmd.none )
+
+        CloseInformationOverlay ->
+            ( { model | isInformationOverlayOpen = False }, Cmd.none )
+
 
 tryAlbumNumberFrom : String -> Maybe Int
 tryAlbumNumberFrom input =
@@ -820,18 +832,8 @@ view model =
 
                     informationLink =
                         Html.a
-                            [ class "mr-05 p-15", href "" ]
+                            [ class "mr-05 p-15", href "#", onClick OpenInformationOverlay ]
                             [ img [ class "social-button", src "img/info.svg", alt "Show information dialog" ] [] ]
-
-                    githubLink =
-                        Html.a
-                            [ class "mr-05 p-15", href "https://github.com/AlbumShuffler/Frontend" ]
-                            [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
-
-                    redditLink =
-                        Html.a
-                            [ class "mr-05 p-15", href "https://www.reddit.com/r/AlbumShuffler" ]
-                            [ img [ class "social-button", src "img/reddit.svg", alt "Link to Reddit" ] [] ]
 
                     language =
                         Html.a [ class "non-styled-link p-15", style "font-size" "1.5rem", onClick ToggleLanguage, href "#" ] [ text model.text.flag ]
@@ -860,7 +862,8 @@ view model =
                     , style "background-position" (coverCenterX ++ " " ++ coverCenterY)
                     ]
                     [ artistOverlay model.isArtistOverlayOpen model.allowMultipleArtistSelection model.currentArtist model.currentProvider model.text
-                    , providerOverlay model.isProviderOverlayOpen model.currentProvider ProviderStorage.all
+                    , providerOverlay model.isProviderOverlayOpen model.currentProvider ProviderStorage.all model.text
+                    , informationOverlay model.isInformationOverlayOpen model.text
                     , div
                         [ id "background-color-overlay" ]
                         [ div
@@ -1104,8 +1107,8 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
         div [] []
     
 
-providerOverlay : Bool -> Providers.Provider -> (List Providers.Provider) -> Html Msg
-providerOverlay isOverlayOpen currentProvider providers =
+providerOverlay : Bool -> Providers.Provider -> (List Providers.Provider) -> TextRessources.Text -> Html Msg
+providerOverlay isOverlayOpen currentProvider providers texts =
     let
         overlayItem : Bool -> Providers.Provider -> Html Msg
         overlayItem isSelected provider =
@@ -1167,7 +1170,10 @@ providerOverlay isOverlayOpen currentProvider providers =
                 [ text " X" ]
 
         header = 
-            div [ class "sticky-header" ] [ closeButton ]
+            div
+            [ class "sticky-header" ]
+            [ div [ class "sticky-header-text" ] [ text texts.select_provider ]
+            , closeButton ]
 
     in
     if isOverlayOpen then
@@ -1185,3 +1191,65 @@ providerOverlay isOverlayOpen currentProvider providers =
     else
         div [] []
     
+
+informationOverlay : Bool -> TextRessources.Text -> Html Msg
+informationOverlay isOverlayOpen texts =
+    let
+        header = 
+            div
+            [ class "sticky-header", style "max-width" "600px" ]
+            [ div [ class "sticky-header-text" ] [ text texts.information_overlay_title ]
+            , Html.a
+                [ id "close-artist-overlay"
+                , Html.Events.Extra.onClickPreventDefaultAndStopPropagation CloseInformationOverlay
+                ]
+                [ text " X" ] ]
+
+        informationText =
+            Html.p [ class "overlay-body-text"] [ text texts.information_overlay_text ]
+
+        providerSelectionText =
+            Html.p [ class "overlay-body-text"] [ text texts.information_overlay_provider_text ]
+
+        artistSelectionText =
+            Html.p [ class "overlay-body-text"] [ text texts.information_overlay_artist_text ]
+
+        providersAndArtistsHelp =
+            Html.ul [ class "overlay-body-text" ]
+            [ Html.li [] [ text texts.information_overlay_provider_text ]
+            , Html.li [] [ text texts.information_overlay_artist_text ]
+            ]
+
+        dreiMetadatenText =
+            Html.p [ class "overlay-body-text"] [ text texts.drei_metadaten_thanks ]
+        
+        copyrightText =
+            Html.p [ class "overlay-body-text"] [ text texts.information_overlay_copyright_text ]
+
+        githubLink =
+            Html.a
+                [ class "mr-05 p-15", href "https://github.com/AlbumShuffler/Frontend" ]
+                [ img [ class "social-button", src "img/github.svg", alt "Link to GitHub" ] [] ]
+
+        redditLink =
+            Html.a
+                [ class "mr-05 p-15", href "https://www.reddit.com/r/AlbumShuffler" ]
+                [ img [ class "social-button", src "img/reddit.svg", alt "Link to Reddit" ] [] ]
+    in
+    if isOverlayOpen then
+        div [ class "overlay" ]
+        [ div [ class "overlay-content" ] 
+          [ header
+          , informationText
+          , providersAndArtistsHelp
+          , Html.hr [ style "width" "100%", style "max-width" "calc(min(600px, 80vw))"] []
+          , dreiMetadatenText
+          , copyrightText
+          , div [ class "d-flex justify-content-center align-items-center" ]
+            [ githubLink
+            , redditLink
+            ]
+          ]
+        ]
+    else
+        div [] []
