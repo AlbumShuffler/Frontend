@@ -79,10 +79,18 @@ function fetchLastSelectedArtists() {
     }
 }
 
+function fetchLastSelectedProvider() {
+    return localStorage.getItem("lastSelectedProvider");
+}
+
 function setLastSelectedArtist(httpFriendlyShortNames) {
     console.log('setting selection', httpFriendlyShortNames.length, 'artits')
     localStorage.removeItem(lastSelectedArtistsKey);
     localStorage.setItem(lastSelectedArtistsKey, JSON.stringify(httpFriendlyShortNames));
+}
+
+function setLastSelectedProvider(provider) {
+    localStorage.setItem("lastSelectedProvider", provider);
 }
 
 function fetchAllowMultipleSelection() {

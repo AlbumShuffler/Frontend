@@ -235,6 +235,10 @@ body {
     height: 100%;
 }
 
+.w-100 {
+    width: 100%;
+}
+
 .d-flex {
     display: flex;
 }
@@ -272,6 +276,10 @@ body {
     cursor: pointer;
 }
 
+.underlined {
+    text-decoration: underline;
+}
+
 .status-text-container {
     height: 100vh;
     width: calc(100vw - 2rem);
@@ -286,52 +294,6 @@ body {
     font-family: monospace;
     font-size: 2rem;
     text-align: center;
-}
-
-#artist-selection-overview {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.75);
-    justify-content: center;
-    align-items: center;
-}
-
-.artist-list {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 80vw;
-    justify-content: center;
-    gap: 15px
-}
-
-.artist-list-item {
-    display: inline-block;
-}
-
-.artist-list-item img {
-    aspect-ratio: 1;
-    max-width: 20vw;
-    max-height: 20vh;
-    border-radius: 20px;
-}
-
-.artist-list-caption {
-    box-sizing: border-box;
-    min-width: 100%;
-    width: 0;
-    text-align: center;
-    font-weight: 1000;
-    text-transform: uppercase;
-    font-size: 12px;
-    color: white;
-}
-
-.artist-list-selected-element {
-    box-shadow: 0 0 10px 5px white !important;
 }
 
 .z-1 {
@@ -356,12 +318,18 @@ body {
     font-weight: bold;
 }
 
-.overlay-button {
-    border-radius: 20px;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-    padding-left: 0.8rem;
-    padding-right: 1.0rem;
+.italic {
+    font-style: italic;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.provider-list-item-container {
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .background-primary {

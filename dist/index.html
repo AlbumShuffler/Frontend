@@ -25,6 +25,7 @@
   <link rel="preload" as="image" href="img/play.svg">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/animations.css">
+  <link rel="stylesheet" type="text/css" href="css/overlay.css">
 
   <link rel="manifest" href="manifest.json" />
 
@@ -38,12 +39,17 @@
     if (!lastArtists || lastArtists.length === 0) {
       lastArtists = []
     }
-    console.warn('"allowMultipleSelection" is defaulting to "true"!')
+
+    let lastProvider = fetchLastSelectedProvider();
+    if (!lastProvider) {
+      lastProvider = "spotify";
+    }
     
     const flags = {
       blockedAlbums: fetchBlacklistedAlbums(),
       language: fetchLanguage(),
       lastSelectedArtists: lastArtists,
+      lastSelectedProvider: lastProvider,
       allowMultipleSelection: fetchAllowMultipleSelection(),
     }
 
@@ -80,6 +86,7 @@
     app.ports.setLastSelectedLanguage.subscribe(setLastSelectedLanguage);
     app.ports.setLastSelectedArtist.subscribe(setLastSelectedArtist);
     app.ports.setAllowMultipleSelection.subscribe(allow => setAllowMultipleSelection(allow));
+    app.ports.setLastSelectedProvider.subscribe(setLastSelectedProvider);
   </script>
 </body>
 
