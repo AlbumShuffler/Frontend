@@ -318,6 +318,10 @@ body {
     font-weight: bold;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .bg-black {
     background-color: black;
 }

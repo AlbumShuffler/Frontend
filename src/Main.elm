@@ -1079,10 +1079,8 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
         closeButton : Html Msg
         closeButton =
             Html.a
-                [ id "close-artist-overlay"
-                , Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseArtistOverlay selection)
-                ]
-                [ text " X" ]
+                [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseArtistOverlay selection), style "margin-top" "5px" ]
+                [ img [ src "img/close_button.svg", alt "Close artist selection", id "close-artist-overlay" ] [] ]
 
         header = 
             div [ class "sticky-header" ] 
@@ -1090,17 +1088,27 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
                     , closeButton
                     ]
 
+        content =
+            (allArtistsWithAllAlbums |> List.map (\a -> 
+            let
+                isSelected = idsOfSelectedArtists |> List.any (\aId -> aId == a.artist.id)
+
+            in
+            overlayItem isSelected a.artist))
+
+        unfinishedProviderIntegrationHint =
+            if provider.id |> String.endsWith "_dmd" then
+                div [ class "overlay-hint" ] [ text texts.information_unfinished_provider_integration ]
+            else
+                div [] []
+
     in
     if isOverlayOpen then
         div [ class "overlay" ]
         [ div [ class "overlay-content" ] 
           [ header
-          , div [ class "artists-grid" ]
-              (allArtistsWithAllAlbums |> List.map (\a -> 
-              let
-                isSelected = idsOfSelectedArtists |> List.any (\aId -> aId == a.artist.id)
-              in
-              overlayItem isSelected a.artist))
+          , unfinishedProviderIntegrationHint
+          , div [ class "artists-grid" ] content
           ]
         ]
     else
@@ -1164,10 +1172,8 @@ providerOverlay isOverlayOpen currentProvider providers texts =
         closeButton : Html Msg
         closeButton =
             Html.a
-                [ id "close-artist-overlay"
-                , Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseProviderOverlay Nothing)
-                ]
-                [ text " X" ]
+                [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseProviderOverlay Nothing) ]
+                [ img [ src "img/close_button.svg", alt "Close provider selection", id "close-artist-overlay" ] [] ]
 
         header = 
             div
@@ -1200,10 +1206,8 @@ informationOverlay isOverlayOpen texts =
             [ class "sticky-header", style "max-width" "600px" ]
             [ div [ class "sticky-header-text" ] [ text texts.information_overlay_title ]
             , Html.a
-                [ id "close-artist-overlay"
-                , Html.Events.Extra.onClickPreventDefaultAndStopPropagation CloseInformationOverlay
-                ]
-                [ text " X" ] ]
+                [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation CloseInformationOverlay ]
+                [ Html.img [ id "close-artist-overlay", src "img/close_button.svg" ] [] ] ]
 
         informationText =
             Html.p [ class "overlay-body-text"] [ text texts.information_overlay_text ]
@@ -1214,17 +1218,11 @@ informationOverlay isOverlayOpen texts =
         artistSelectionText =
             Html.p [ class "overlay-body-text"] [ text texts.information_overlay_artist_text ]
 
-        providersAndArtistsHelp =
-            Html.ul [ class "overlay-body-text" ]
-            [ Html.li [] [ text texts.information_overlay_provider_text ]
-            , Html.li [] [ text texts.information_overlay_artist_text ]
-            ]
-
         dreiMetadatenText =
-            Html.p [ class "overlay-body-text"] [ text texts.drei_metadaten_thanks ]
+            Html.p [ class "overlay-body-text italic"] [ text texts.drei_metadaten_thanks ]
         
         copyrightText =
-            Html.p [ class "overlay-body-text"] [ text texts.information_overlay_copyright_text ]
+            Html.p [ class "overlay-body-text italic"] [ text texts.information_overlay_copyright_text ]
 
         githubLink =
             Html.a
@@ -1238,11 +1236,14 @@ informationOverlay isOverlayOpen texts =
     in
     if isOverlayOpen then
         div [ class "overlay" ]
-        [ div [ class "overlay-content" ] 
+        [ div [ class "overlay-content", style "overflow-y" "scroll" ] 
           [ header
           , informationText
-          , providersAndArtistsHelp
-          , Html.hr [ style "width" "100%", style "max-width" "calc(min(600px, 80vw))"] []
+          , Html.h4 [ class "artist-name urbanist-font", style "margin" "10px"] [ text texts.information_overlay_provider_title ]
+          , providerSelectionText
+          , Html.h4 [ class "artist-name urbanist-font", style "margin" "10px"] [ text texts.information_overlay_artist_title ]
+          , artistSelectionText
+          , Html.hr [ style "width" "100%", style "max-width" "calc(min(600px, 90vw))"] []
           , dreiMetadatenText
           , copyrightText
           , div [ class "d-flex justify-content-center align-items-center" ]

@@ -24,6 +24,9 @@ type alias Text =
     , information_overlay_provider_text : String
     , information_overlay_artist_text : String
     , information_overlay_copyright_text : String
+    , information_overlay_artist_title : String
+    , information_overlay_provider_title : String
+    , information_unfinished_provider_integration : String
     }
 
 
@@ -49,6 +52,9 @@ germanText =
     , information_overlay_provider_text = "Du kannst zwischen verschiedenen Anbietern (Spotify, Deezer, Apple Music, ...) wechseln, indem du den zweiten Button von rechts in der Titelleiste der Web-App verwendest. HINWEIS: Nicht alle Anbieter unterstützen alle Inhalte!"
     , information_overlay_artist_text = "Du kannst Interpreten auswählen, indem du auf das Interpreten-Symbol in der Titelleiste der Web-App klickst (ganz rechts in der Menuleiste). Du kannst mehrere Interpreten auswählen, indem du den Mehrfachauswahlmodus im Interpreten-Auswahl-Overlay aktivierst."
     , information_overlay_copyright_text = "Alle auf dieser Webseite verwendeten Bilder und Metadaten der Künstler und Hörspiele/bücher sind Eigentum der jeweiligen Anbieter und unterliegen deren Urheber- bzw. Nutzungsrechten."
+    , information_overlay_artist_title = "Interpretenauswahl"
+    , information_overlay_provider_title = "Anbieterauswahl"
+    , information_unfinished_provider_integration = "Diese Provider-Integration ist noch nicht fertiggestellt, daher gibt es nur eine geringe Auswahl an Inhalten. Ich arbeite daran, diese Integration zu verbessern!"
     }
 
 
@@ -74,6 +80,9 @@ englishText =
     , information_overlay_provider_text = "You can switch between different providers (Spotify, Deezer, Apple Music, ...) by using the second button from the right in the title bar of the web app. NOTE: not all providers support all of the content!"
     , information_overlay_artist_text = "You can select artists by clicking on the artist icon in the title bar of the web app (rightmost icon in the menubar). You can select multiple artists by enabling the multi-selection mode in the artist selection overlay."
     , information_overlay_copyright_text = "All images and metadata of artists and audiobooks used on this website are the property of the respective providers and are subject to their copyright or usage rights."
+    , information_overlay_artist_title = "Artist selection"
+    , information_overlay_provider_title = "Provider selection"
+    , information_unfinished_provider_integration = "This provider integration is not yet finished, so there is only a limited selection of content available. I am working on improving this integration!"
     }
 
 
