@@ -27,6 +27,7 @@ import ProviderStorage
 import Debug
 import Albums exposing (CoverImage)
 import Html exposing (s)
+import Html.Events exposing (on)
 
 {- 
     The following function would be more at home in the ArtistsWithAlbums file but since
@@ -1104,7 +1105,7 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
 
     in
     if isOverlayOpen then
-        div [ class "overlay" ]
+        div [ class "overlay", onClick (CloseArtistOverlay selection) ]
         [ div [ class "overlay-content" ] 
           [ header
           , unfinishedProviderIntegrationHint
@@ -1183,7 +1184,7 @@ providerOverlay isOverlayOpen currentProvider providers texts =
 
     in
     if isOverlayOpen then
-        div [ class "overlay" ]
+        div [ class "overlay", onClick (CloseProviderOverlay Nothing) ]
         [ div [ class "overlay-content" ] 
           [ header
           , div [ class "artists-grid" ]
@@ -1235,7 +1236,7 @@ informationOverlay isOverlayOpen texts =
                 [ img [ class "social-button", src "img/reddit.svg", alt "Link to Reddit" ] [] ]
     in
     if isOverlayOpen then
-        div [ class "overlay" ]
+        div [ class "overlay", onClick CloseInformationOverlay ]
         [ div [ class "overlay-content", style "overflow-y" "scroll" ] 
           [ header
           , informationText
