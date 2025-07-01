@@ -1,11 +1,27 @@
 #!/usr/bin/env bash
+set -e
 
-curl -LO https://github.com/AlbumShuffler/Generator/archive/refs/heads/master.zip
-rm -rf Generator-master
-unzip master.zip
-rm master.zip
-cd Generator-master
-npm i
-node index.js --destination=../src/
-cd -
-rm -rf Generator-master
+BINARY_FILENAME="elm-generator-osx-linux64.tar.gz"
+
+curl --fail -L -H "Authorization: token ${SPOTIFY_ALBUM_REPO_ACCESS_TOKEN}" -o main.zip https://api.github.com/repos/AlbumShuffler/Albums/zipball/main
+rm -rf temp
+unzip -qq -d temp main.zip
+rm -rf albums
+mv temp/*/output albums
+rm -rf temp
+
+latest_tag=$(curl -sL https://api.github.com/repos/AlbumShuffler/Tools/tags | jq -r '.[0].name')
+echo "Trying to download latest elm-generator: ${latest_tag}"
+download_url=$(echo -e "https://github.com/AlbumShuffler/Tools/releases/download/${latest_tag}/${BINARY_FILENAME}")
+wget $download_url
+rm -rf elm-generator
+mkdir elm-generator
+tar -xf ${BINARY_FILENAME} -C elm-generator
+rm ${BINARY_FILENAME}
+
+
+cd elm-generator
+echo "Running elm generator"
+./AlbumShuffler.ElmGenerator ../albums ../src
+cd ..
+rm -rf elm-generator
