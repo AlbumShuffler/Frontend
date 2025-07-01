@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-BINARY_FILENAME="elm-generator-osx-linux64.tar.gz"
+BINARY_FILENAME="elm-generator-linux-x64.tar.gz"
 
 curl --fail -L -H "Authorization: token ${SPOTIFY_ALBUM_REPO_ACCESS_TOKEN}" -o main.zip https://api.github.com/repos/AlbumShuffler/Albums/zipball/main
 rm -rf temp
