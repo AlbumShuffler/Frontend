@@ -154,3 +154,7 @@
     max-width: 600px;
     text-align: center;
 }
+
+#dmd-link:visited {
+    color: white !important;
+}
