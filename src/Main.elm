@@ -1250,11 +1250,11 @@ informationOverlay isOverlayOpen lastUpdated texts =
         [ div [ class "overlay-content", style "overflow-y" "scroll" ] 
           [ header
           , informationText
-          , Html.h4 [ class "artist-name urbanist-font", style "margin" "10px"] [ text texts.information_overlay_provider_title ]
+          , Html.h4 [ class "artist-name urbanist-font", style "margin-top" "10px", style "margin-bottom" "4px"] [ text texts.information_overlay_provider_title ]
           , providerSelectionText
-          , Html.h4 [ class "artist-name urbanist-font", style "margin" "10px"] [ text texts.information_overlay_artist_title ]
+          , Html.h4 [ class "artist-name urbanist-font", style "margin-top" "10px", style "margin-bottom" "4px"] [ text texts.information_overlay_artist_title ]
           , artistSelectionText
-          , Html.hr [ style "width" "100%", style "max-width" "calc(min(600px, 90vw))"] []
+          , Html.hr [ style "width" "100%", style "max-width" "calc(min(600px, 90vw))", style "margin-top" "0", style "margin-bottom" "12px"] []
           , dreiMetadatenText
           , copyrightText
           , lastUpdatedText
