@@ -336,6 +336,11 @@ body {
     background: #0394E9;
 }
 
+
+.foreround-primary {
+    color: #0394E9;
+}
+
 .background-secondary {
     background: #333333;
 }

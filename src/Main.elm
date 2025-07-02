@@ -856,6 +856,9 @@ view model =
 
                     backgroundGlowStyle =
                         style "background" ("linear-gradient(45deg, " ++ artist.coverColorA ++ " , " ++ artist.coverColorB ++ " 100%)")
+
+                    lastUpdated =
+                        artist.lastUpdated
                 in
                 div
                     [ id "background-image-container"
@@ -864,7 +867,7 @@ view model =
                     ]
                     [ artistOverlay model.isArtistOverlayOpen model.allowMultipleArtistSelection model.currentArtist model.currentProvider model.text
                     , providerOverlay model.isProviderOverlayOpen model.currentProvider ProviderStorage.all model.text
-                    , informationOverlay model.isInformationOverlayOpen model.text
+                    , informationOverlay model.isInformationOverlayOpen lastUpdated model.text
                     , div
                         [ id "background-color-overlay" ]
                         [ div
@@ -1199,8 +1202,8 @@ providerOverlay isOverlayOpen currentProvider providers texts =
         div [] []
     
 
-informationOverlay : Bool -> TextRessources.Text -> Html Msg
-informationOverlay isOverlayOpen texts =
+informationOverlay : Bool -> String -> TextRessources.Text -> Html Msg
+informationOverlay isOverlayOpen lastUpdated texts =
     let
         header = 
             div
@@ -1220,10 +1223,17 @@ informationOverlay isOverlayOpen texts =
             Html.p [ class "overlay-body-text"] [ text texts.information_overlay_artist_text ]
 
         dreiMetadatenText =
-            Html.p [ class "overlay-body-text italic"] [ text texts.drei_metadaten_thanks ]
+            Html.p [ class "overlay-body-text italic"]
+            [ text texts.drei_metadaten_thanks_1
+            , Html.a [ href texts.drei_metadaten_link, id "dmd-link", class "foreground-primary" ] [ text texts.drei_metadaten_link ]
+            , text texts.drei_metadaten_thanks_2
+            ]
         
         copyrightText =
             Html.p [ class "overlay-body-text italic"] [ text texts.information_overlay_copyright_text ]
+
+        lastUpdatedText =
+            Html.p [ class "overlay-body-text white-text italic"] [ text (texts.last_updated ++ lastUpdated) ]
 
         githubLink =
             Html.a
@@ -1247,6 +1257,7 @@ informationOverlay isOverlayOpen texts =
           , Html.hr [ style "width" "100%", style "max-width" "calc(min(600px, 90vw))"] []
           , dreiMetadatenText
           , copyrightText
+          , lastUpdatedText
           , div [ class "d-flex justify-content-center align-items-center" ]
             [ githubLink
             , redditLink

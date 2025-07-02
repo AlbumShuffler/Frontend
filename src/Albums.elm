@@ -31,6 +31,7 @@ type alias ArtistInfo =
     , coverCenterY : Int
     , altCoverCenterX : Maybe Int
     , altCoverCenterY : Maybe Int
+    , lastUpdated : String
     }
 
 
@@ -61,4 +62,5 @@ emptyArtistInfo =
     , coverCenterY = 50
     , altCoverCenterX = Nothing
     , altCoverCenterY = Nothing
+    , lastUpdated = "<never updated>"
     }
