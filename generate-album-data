@@ -1,7 +1,19 @@
 #!/usr/bin/env bash
 set -e
 
-BINARY_FILENAME="elm-generator-linux-x64.tar.gz"
+ARCH=$(uname -m | tr '[:lower:]' '[:upper:]')
+OS=$(uname -s)
+
+if [[ "$ARCH" == "X86_64" && "$OS" == "Linux" ]]; then
+    BINARY_FILENAME="elm-generator-linux-x64.tar.gz"
+elif [[ ( "$ARCH" == "AARCH64" || "$ARCH" == "ARM64" ) && "$OS" == "Linux" ]]; then
+    BINARY_FILENAME="elm-generator-linux-arm64.tar.gz"
+elif [[ "$ARCH" == "ARM64" && "$OS" == "Darwin" ]]; then
+    BINARY_FILENAME="elm-generator-osx-arm64.tar.gz"
+else
+    echo "❌ Unsupported architecture or OS: $ARCH / $OS" >&2
+    exit 1
+fi
 
 curl --fail -L -H "Authorization: token ${SPOTIFY_ALBUM_REPO_ACCESS_TOKEN}" -o main.zip https://api.github.com/repos/AlbumShuffler/Albums/zipball/main
 rm -rf temp
