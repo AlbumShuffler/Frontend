@@ -38,6 +38,7 @@ type alias ArtistInfo =
 type alias Album =
     { id : AlbumId
     , name : String
+    , description : Maybe String
     , urlToOpen : String
     , covers : List CoverImage
     }

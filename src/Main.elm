@@ -1,38 +1,36 @@
 port module Main exposing (..)
 
 import AlbumIds
-import Albums exposing (Album, ArtistInfo)
+import Albums exposing (Album, ArtistInfo, ArtistWithAlbums, CoverImage)
 import Array exposing (Array)
 import ArrayExtra as Array
-import MaybeExtra as Maybe
 import ArtistIds
 import ArtistSelection exposing (ArtistSelection(..))
 import ArtistsWithAlbums exposing (albumStorage)
 import AssocList as AList exposing (Dict)
 import Browser
-import Html exposing (Html, div, img, text)
+import Dict
+import Html exposing (Html, div, img, s, text)
 import Html.Attributes exposing (..)
-import Html.Events exposing (onClick)
+import Html.Events exposing (on, onClick)
 import Html.Events.Extra
 import List.Extra as List
 import Platform.Cmd as Cmd
+import ProviderStorage
+import Providers
 import Random
 import Random.List
 import Regex
 import TextRessources
-import Albums exposing (ArtistWithAlbums)
-import Dict as Dict
-import Providers
-import ProviderStorage
-import Debug
-import Albums exposing (CoverImage)
-import Html exposing (s)
-import Html.Events exposing (on)
 
-{- 
-    The following function would be more at home in the ArtistsWithAlbums file but since
-    that file is auto-generated be keep the functionality here
+
+
+{-
+   The following function would be more at home in the ArtistsWithAlbums file but since
+   that file is auto-generated be keep the functionality here
 -}
+
+
 albumStorageForProvider : String -> Maybe (List ArtistWithAlbums)
 albumStorageForProvider providerName =
     albumStorage |> Dict.get providerName
@@ -43,9 +41,9 @@ defaultArtist providerName =
     case albumStorageForProvider providerName of
         Just artist ->
             artist
-            |> List.head
-            |> Maybe.map (\f -> f.artist)
-            |> Maybe.withDefault Albums.emptyArtistInfo
+                |> List.head
+                |> Maybe.map (\f -> f.artist)
+                |> Maybe.withDefault Albums.emptyArtistInfo
 
         Nothing ->
             Albums.emptyArtistInfo
@@ -65,7 +63,7 @@ type alias Flags =
     { blockedAlbums : List String
     , language : String
     , lastSelectedArtists : List String
-    , lastSelectedProvider: String
+    , lastSelectedProvider : String
     , allowMultipleSelection : Bool
     }
 
@@ -80,21 +78,22 @@ type alias Model =
     , current : Int
     , isInitialized : Bool
     , currentArtist : ArtistSelection.ArtistSelection
-    , currentProvider: Providers.Provider
+    , currentProvider : Providers.Provider
     , isArtistOverlayOpen : Bool
     , isProviderOverlayOpen : Bool
     , isInformationOverlayOpen : Bool
     , allowMultipleArtistSelection : Bool
     , text : TextRessources.Text
     , overlayActionTaken : Bool
+    , isAlbumDescriptionOverlayOpen : Bool
     }
 
 
 type alias OverlayItem a =
-    { id: String
-    , text: String
-    , images: List CoverImage
-    , data: a
+    { id : String
+    , text : String
+    , images : List CoverImage
+    , data : a
     }
 
 
@@ -115,6 +114,7 @@ port setAllowMultipleSelection : Bool -> Cmd msg
 
 port arrowKeyReceiver : (String -> msg) -> Sub msg
 
+
 subscriptions : Model -> Sub Msg
 subscriptions _ =
     arrowKeyReceiver ArrowKeyReceived
@@ -129,11 +129,10 @@ emptyModel blacklistOption language currentArtist currentProvider allowMultipleA
         artists =
             currentArtist |> ArtistSelection.toList
 
-
         storage =
             currentProvider.id
-            |> albumStorageForProvider
-            |> Maybe.withDefault []
+                |> albumStorageForProvider
+                |> Maybe.withDefault []
 
         artistsWithAlbums =
             artists
@@ -178,6 +177,7 @@ emptyModel blacklistOption language currentArtist currentProvider allowMultipleA
     , text = text
     , allowMultipleArtistSelection = allowMultipleArtistSelection
     , overlayActionTaken = False
+    , isAlbumDescriptionOverlayOpen = False
     }
 
 
@@ -222,16 +222,16 @@ type
     | ToggleAllowMultipleSelection
     | ArrowKeyReceived String
     | ChangeCurrentProvider
+    | ToggleAlbumDescriptionOverlay
 
 
 init : Flags -> ( Model, Cmd Msg )
 init flags =
     let
         currentProvider =
-            ProviderStorage.all 
-            |> List.find (\p -> p.id == flags.lastSelectedProvider)
-            |> Maybe.withDefault ProviderStorage.default
-
+            ProviderStorage.all
+                |> List.find (\p -> p.id == flags.lastSelectedProvider)
+                |> Maybe.withDefault ProviderStorage.default
 
         defaultArtistForCurrentProvider =
             currentProvider.id |> defaultArtist
@@ -303,16 +303,20 @@ startShuffleAlbums albums =
 resetModel : ArtistSelection.ArtistSelection -> Maybe Providers.Provider -> Maybe Blacklist -> TextRessources.Text -> Bool -> ( Model, Cmd Msg )
 resetModel artist providerOption blacklist text allowMultipleArtistSelection =
     let
-        provider = 
+        provider =
             providerOption
-            |> Maybe.withDefault ProviderStorage.default
+                |> Maybe.withDefault ProviderStorage.default
 
         ensureArtist =
             case artist of
                 NoArtistSelected ->
                     defaultArtist provider.id |> ArtistSelection.SingleArtistSelected
-                SingleArtistSelected s -> SingleArtistSelected s
-                MultipleArtistsSelected many -> MultipleArtistsSelected many
+
+                SingleArtistSelected s ->
+                    SingleArtistSelected s
+
+                MultipleArtistsSelected many ->
+                    MultipleArtistsSelected many
 
         resettedModel =
             emptyModel blacklist (Just text) ensureArtist provider allowMultipleArtistSelection
@@ -484,14 +488,14 @@ update msg model =
         NextAlbum ->
             let
                 newModel =
-                    { model | current = modBy (model.albums |> Array.length) (model.current + 1) }
+                    { model | isAlbumDescriptionOverlayOpen = False, current = modBy (model.albums |> Array.length) (model.current + 1) }
             in
             ( newModel, Cmd.none )
 
         PreviousAlbum ->
             let
                 newModel =
-                    { model | current = modBy (model.albums |> Array.length) (model.current - 1) }
+                    { model | isAlbumDescriptionOverlayOpen = False, current = modBy (model.albums |> Array.length) (model.current - 1) }
             in
             ( newModel, Cmd.none )
 
@@ -554,11 +558,12 @@ update msg model =
                         ( { model | isArtistOverlayOpen = False, overlayActionTaken = False }, Cmd.none )
 
         OpenProviderOverlay ->
-            ( { model | isArtistOverlayOpen = False, isProviderOverlayOpen = True }, Cmd.none)
+            ( { model | isArtistOverlayOpen = False, isProviderOverlayOpen = True }, Cmd.none )
 
         CloseProviderOverlay (Just provider) ->
             if provider == model.currentProvider then
                 ( { model | isProviderOverlayOpen = False }, Cmd.none )
+
             else
                 resetModel NoArtistSelected (Just provider) (Just model.blacklistedAlbums) model.text model.allowMultipleArtistSelection
 
@@ -667,24 +672,29 @@ update msg model =
                         { model | current = modBy (model.albums |> Array.length) (model.current + 1) }
                 in
                 ( newModel, Cmd.none )
+
             else if direction == "left" then
                 let
                     newModel =
                         { model | current = modBy (model.albums |> Array.length) (model.current - 1) }
                 in
                 ( newModel, Cmd.none )
+
             else
-                (model, Cmd.none)
+                ( model, Cmd.none )
 
         ChangeCurrentProvider ->
             {- dummy implementation -}
-            (model, model.currentProvider.id |> setLastSelectedProvider)
+            ( model, model.currentProvider.id |> setLastSelectedProvider )
 
         OpenInformationOverlay ->
             ( { model | isInformationOverlayOpen = True }, Cmd.none )
 
         CloseInformationOverlay ->
             ( { model | isInformationOverlayOpen = False }, Cmd.none )
+
+        ToggleAlbumDescriptionOverlay ->
+            ( { model | isAlbumDescriptionOverlayOpen = not model.isAlbumDescriptionOverlayOpen }, Cmd.none )
 
 
 tryAlbumNumberFrom : String -> Maybe Int
@@ -707,10 +717,10 @@ view model =
                 |> ArtistSelection.toList
                 |> List.map (\a -> a.id)
 
-        albumStorage = 
+        albumStorage =
             model.currentProvider.id
-            |> albumStorageForProvider
-            |> Maybe.withDefault []
+                |> albumStorageForProvider
+                |> Maybe.withDefault []
 
         numberOfBlacklistedAlbums =
             artistIds
@@ -762,12 +772,12 @@ view model =
 
             currentArtist =
                 currentAlbum
-                |> Maybe.andThen (\crtAlbum ->
-                        albumStorage
-                            |> List.find (\item -> item.albums |> Array.any (\album -> album.id == crtAlbum.id))
-                            |> Maybe.map (\item -> item.artist)
-                )
-
+                    |> Maybe.andThen
+                        (\crtAlbum ->
+                            albumStorage
+                                |> List.find (\item -> item.albums |> Array.any (\album -> album.id == crtAlbum.id))
+                                |> Maybe.map (\item -> item.artist)
+                        )
         in
         case ( currentAlbum, currentArtist ) of
             ( Nothing, Just _ ) ->
@@ -783,14 +793,16 @@ view model =
             ( Nothing, Nothing ) ->
                 let
                     -- TODO: inconsistent behaviour, we need to reset the artist selection manually at this point even though we call Reset; The provider gets reset easily
-                    resettedArtistSelection = ProviderStorage.default.id |> defaultArtist |> SingleArtistSelected
+                    resettedArtistSelection =
+                        ProviderStorage.default.id |> defaultArtist |> SingleArtistSelected
                 in
-                    div
-                        [ class "white-text status-text-container d-flex" ]
-                        [ div [ class "w-100" ] 
+                div
+                    [ class "white-text status-text-container d-flex" ]
+                    [ div [ class "w-100" ]
                         [ div [ class "status-text" ] [ text model.text.no_album_and_no_artist_data_available ]
-                        , Html.a [ class "status-text w-100 pointer underlined", style "display" "block", onClick (Reset resettedArtistSelection Nothing) ] [ text model.text.ask_to_clear_all_settings ] ] 
+                        , Html.a [ class "status-text w-100 pointer underlined", style "display" "block", onClick (Reset resettedArtistSelection Nothing) ] [ text model.text.ask_to_clear_all_settings ]
                         ]
+                    ]
 
             ( Just album, Just artist ) ->
                 let
@@ -839,7 +851,6 @@ view model =
                     language =
                         Html.a [ class "non-styled-link p-15", style "font-size" "1.5rem", onClick ToggleLanguage, href "#" ] [ text model.text.flag ]
 
-
                     providerImage =
                         Html.a
                             [ class "ml-05 p-15 d-flex align-items-center white-text pointer", onClick OpenProviderOverlay ]
@@ -859,6 +870,24 @@ view model =
 
                     lastUpdated =
                         artist.lastUpdated
+
+                    viewIcon showDescription =
+                        if showDescription then
+                            img [ src "img/cover.svg", alt "Back to cover", onClick ToggleAlbumDescriptionOverlay ] []
+
+                        else
+                            img [ src "img/document.svg", alt "Show description", onClick ToggleAlbumDescriptionOverlay ] []
+
+                    albumDescription =
+                        album.description |> Maybe.withDefault "<no description available>"
+
+                    shouldShowDescriptionButton =
+                        case album.description of
+                            Just _ ->
+                                True
+
+                            Nothing ->
+                                False
                 in
                 div
                     [ id "background-image-container"
@@ -899,6 +928,18 @@ view model =
                                             []
                                         ]
                                     , div
+                                        [ id "description-overlay"
+                                        , class
+                                            (if model.isAlbumDescriptionOverlayOpen then
+                                                "visible"
+
+                                             else
+                                                ""
+                                            )
+                                        ]
+                                        [ div [ id "description-content" ] [ text albumDescription ]
+                                        ]
+                                    , div
                                         [ id "cover-glow"
                                         , style "max-width" coverMaxWidth
                                         , style "aspect-ratio" (coverAspectRatio |> String.fromFloat)
@@ -907,6 +948,15 @@ view model =
                                         , backgroundGlowStyle
                                         ]
                                         []
+                                    , if shouldShowDescriptionButton then
+                                        div
+                                            [ id "info-button"
+                                            , onClick ToggleAlbumDescriptionOverlay
+                                            ]
+                                            [ viewIcon model.isAlbumDescriptionOverlayOpen ]
+
+                                      else
+                                        div [] []
                                     ]
                                 , div [ id "cover-text", style "display" "none" ] [ text album.name ]
                                 ]
@@ -991,8 +1041,8 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
     let
         allArtistsWithAllAlbums =
             provider.id
-            |> albumStorageForProvider
-            |> Maybe.withDefault []
+                |> albumStorageForProvider
+                |> Maybe.withDefault []
 
         idsOfSelectedArtists =
             selection |> ArtistSelection.toList |> List.map (\artist -> artist.id)
@@ -1012,7 +1062,9 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
                         images =
                             if a.images |> List.isEmpty then
                                 [ { url = "https://placehold.co/400x400?text=" ++ a.name, width = 400, height = 400 } ]
-                            else a.images
+
+                            else
+                                a.images
 
                         sizes =
                             -- the size gets smaller for bigger screens since more columns are used
@@ -1033,7 +1085,6 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
                     in
                     [ attribute "srcset" imageSet, sizes ]
 
-
                 message =
                     if allowMultipleArtistSelection then
                         OverlayArtistSelected a
@@ -1047,18 +1098,15 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
 
                     else
                         a.name
-
             in
-            
             Html.a
                 [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation message ]
-                [ div 
-                  [ class "artist-item" ]
-                  [ img (class isSelectedClass :: imageSource) []
-                  , div [ class "artist-name", class "urbanist-font" ] [ text artistName ]
-                  ]
+                [ div
+                    [ class "artist-item" ]
+                    [ img (class isSelectedClass :: imageSource) []
+                    , div [ class "artist-name", class "urbanist-font" ] [ text artistName ]
+                    ]
                 ]
-
 
         allowMultipleSelectionControl : Html Msg
         allowMultipleSelectionControl =
@@ -1071,14 +1119,14 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
                         "☐ " ++ texts.allow_multiple_selection
             in
             div
-            [ style "display" "flex", style "flex-grow" "1", style "justify-content" "center"]
-            [ Html.a
-                [ class "urbanist-font uppercase bold overlay-button background-primary cursor-pointer"
-                , style "margin-left" "1.4rem"
-                , Html.Events.Extra.onClickPreventDefaultAndStopPropagation ToggleAllowMultipleSelection
+                [ style "display" "flex", style "flex-grow" "1", style "justify-content" "center" ]
+                [ Html.a
+                    [ class "urbanist-font uppercase bold overlay-button background-primary cursor-pointer"
+                    , style "margin-left" "1.4rem"
+                    , Html.Events.Extra.onClickPreventDefaultAndStopPropagation ToggleAllowMultipleSelection
+                    ]
+                    [ text multiSelectText ]
                 ]
-                [ text multiSelectText ]
-            ]
 
         closeButton : Html Msg
         closeButton =
@@ -1086,40 +1134,44 @@ artistOverlay isOverlayOpen allowMultipleArtistSelection selection provider text
                 [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseArtistOverlay selection), style "margin-top" "5px" ]
                 [ img [ src "img/close_button.svg", alt "Close artist selection", id "close-artist-overlay" ] [] ]
 
-        header = 
-            div [ class "sticky-header" ] 
-                    [ allowMultipleSelectionControl
-                    , closeButton
-                    ]
+        header =
+            div [ class "sticky-header" ]
+                [ allowMultipleSelectionControl
+                , closeButton
+                ]
 
         content =
-            (allArtistsWithAllAlbums |> List.map (\a -> 
-            let
-                isSelected = idsOfSelectedArtists |> List.any (\aId -> aId == a.artist.id)
-
-            in
-            overlayItem isSelected a.artist))
+            allArtistsWithAllAlbums
+                |> List.map
+                    (\a ->
+                        let
+                            isSelected =
+                                idsOfSelectedArtists |> List.any (\aId -> aId == a.artist.id)
+                        in
+                        overlayItem isSelected a.artist
+                    )
 
         unfinishedProviderIntegrationHint =
             if provider.id |> String.endsWith "_dmd" then
                 div [ class "overlay-hint" ] [ text texts.information_unfinished_provider_integration ]
+
             else
                 div [] []
-
     in
     if isOverlayOpen then
         div [ class "overlay", onClick (CloseArtistOverlay selection) ]
-        [ div [ class "overlay-content" ] 
-          [ header
-          , unfinishedProviderIntegrationHint
-          , div [ class "artists-grid" ] content
-          ]
-        ]
+            [ div [ class "overlay-content" ]
+                [ header
+                , unfinishedProviderIntegrationHint
+                , div [ class "artists-grid" ] content
+                ]
+            ]
+
     else
         div [] []
-    
 
-providerOverlay : Bool -> Providers.Provider -> (List Providers.Provider) -> TextRessources.Text -> Html Msg
+
+providerOverlay : Bool -> Providers.Provider -> List Providers.Provider -> TextRessources.Text -> Html Msg
 providerOverlay isOverlayOpen currentProvider providers texts =
     let
         overlayItem : Bool -> Providers.Provider -> Html Msg
@@ -1137,7 +1189,9 @@ providerOverlay isOverlayOpen currentProvider providers texts =
                         image =
                             if provider.logo |> String.isEmpty then
                                 { url = "https://placehold.co/500x500?text=" ++ provider.name, width = 500, height = 500 }
-                            else { url = provider.logo, width = 500, height = 500 }
+
+                            else
+                                { url = provider.logo, width = 500, height = 500 }
 
                         sizes =
                             -- the size gets smaller for bigger screens since more columns are used
@@ -1146,10 +1200,8 @@ providerOverlay isOverlayOpen currentProvider providers texts =
 
                         imageSet =
                             image.url ++ " " ++ (image.width |> String.fromInt) ++ "w"
-
                     in
                     [ attribute "srcset" imageSet, sizes ]
-
 
                 message =
                     CloseProviderOverlay (Just provider)
@@ -1160,18 +1212,15 @@ providerOverlay isOverlayOpen currentProvider providers texts =
 
                     else
                         provider.name
-
             in
-            
             Html.a
                 [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation message ]
-                [ div 
-                  [ class "artist-item" ]
-                  [ img (class isSelectedClass :: imageSource) []
-                  , div [ class "artist-name", class "urbanist-font" ] [ text providerName ]
-                  ]
+                [ div
+                    [ class "artist-item" ]
+                    [ img (class isSelectedClass :: imageSource) []
+                    , div [ class "artist-name", class "urbanist-font" ] [ text providerName ]
+                    ]
                 ]
-
 
         closeButton : Html Msg
         closeButton =
@@ -1179,61 +1228,68 @@ providerOverlay isOverlayOpen currentProvider providers texts =
                 [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation (CloseProviderOverlay Nothing) ]
                 [ img [ src "img/close_button.svg", alt "Close provider selection", id "close-artist-overlay" ] [] ]
 
-        header = 
+        header =
             div
-            [ class "sticky-header" ]
-            [ div [ class "sticky-header-text" ] [ text texts.select_provider ]
-            , closeButton ]
-
+                [ class "sticky-header" ]
+                [ div [ class "sticky-header-text" ] [ text texts.select_provider ]
+                , closeButton
+                ]
     in
     if isOverlayOpen then
         div [ class "overlay", onClick (CloseProviderOverlay Nothing) ]
-        [ div [ class "overlay-content" ] 
-          [ header
-          , div [ class "artists-grid" ]
-              (providers |> List.map (\p -> 
-              let
-                isSelected = p.id == currentProvider.id
-              in
-              overlayItem isSelected p))
-          ]
-        ]
+            [ div [ class "overlay-content" ]
+                [ header
+                , div [ class "artists-grid" ]
+                    (providers
+                        |> List.map
+                            (\p ->
+                                let
+                                    isSelected =
+                                        p.id == currentProvider.id
+                                in
+                                overlayItem isSelected p
+                            )
+                    )
+                ]
+            ]
+
     else
         div [] []
-    
+
 
 informationOverlay : Bool -> String -> TextRessources.Text -> Html Msg
 informationOverlay isOverlayOpen lastUpdated texts =
     let
-        header = 
+        header =
             div
-            [ class "sticky-header", style "max-width" "600px" ]
-            [ div [ class "sticky-header-text" ] [ text texts.information_overlay_title ]
-            , Html.a
-                [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation CloseInformationOverlay ]
-                [ Html.img [ id "close-artist-overlay", src "img/close_button.svg" ] [] ] ]
+                [ class "sticky-header", style "max-width" "600px" ]
+                [ div [ class "sticky-header-text" ] [ text texts.information_overlay_title ]
+                , Html.a
+                    [ Html.Events.Extra.onClickPreventDefaultAndStopPropagation CloseInformationOverlay ]
+                    [ Html.img [ id "close-artist-overlay", src "img/close_button.svg" ] [] ]
+                ]
 
         informationText =
-            Html.p [ class "overlay-body-text"] [ text texts.information_overlay_text ]
+            Html.p [ class "overlay-body-text" ] [ text texts.information_overlay_text ]
 
         providerSelectionText =
-            Html.p [ class "overlay-body-text"] [ text texts.information_overlay_provider_text ]
+            Html.p [ class "overlay-body-text" ] [ text texts.information_overlay_provider_text ]
 
         artistSelectionText =
-            Html.p [ class "overlay-body-text"] [ text texts.information_overlay_artist_text ]
+            Html.p [ class "overlay-body-text" ] [ text texts.information_overlay_artist_text ]
 
         dreiMetadatenText =
-            Html.p [ class "overlay-body-text italic"]
-            [ text texts.drei_metadaten_thanks_1
-            , Html.a [ href texts.drei_metadaten_link, id "dmd-link", class "foreground-primary" ] [ text texts.drei_metadaten_link ]
-            , text texts.drei_metadaten_thanks_2
-            ]
-        
+            Html.p [ class "overlay-body-text italic" ]
+                [ text texts.drei_metadaten_thanks_1
+                , Html.a [ href texts.drei_metadaten_link, id "dmd-link", class "foreground-primary" ] [ text texts.drei_metadaten_link ]
+                , text texts.drei_metadaten_thanks_2
+                ]
+
         copyrightText =
-            Html.p [ class "overlay-body-text italic"] [ text texts.information_overlay_copyright_text ]
+            Html.p [ class "overlay-body-text italic" ] [ text texts.information_overlay_copyright_text ]
 
         lastUpdatedText =
-            Html.p [ class "overlay-body-text white-text italic"] [ text (texts.last_updated ++ lastUpdated) ]
+            Html.p [ class "overlay-body-text white-text italic" ] [ text (texts.last_updated ++ lastUpdated) ]
 
         githubLink =
             Html.a
@@ -1247,22 +1303,23 @@ informationOverlay isOverlayOpen lastUpdated texts =
     in
     if isOverlayOpen then
         div [ class "overlay", onClick CloseInformationOverlay ]
-        [ div [ class "overlay-content", style "overflow-y" "scroll" ] 
-          [ header
-          , informationText
-          , Html.h4 [ class "artist-name urbanist-font", style "margin-top" "10px", style "margin-bottom" "4px"] [ text texts.information_overlay_provider_title ]
-          , providerSelectionText
-          , Html.h4 [ class "artist-name urbanist-font", style "margin-top" "10px", style "margin-bottom" "4px"] [ text texts.information_overlay_artist_title ]
-          , artistSelectionText
-          , Html.hr [ style "width" "100%", style "max-width" "calc(min(600px, 90vw))", style "margin-top" "0", style "margin-bottom" "12px"] []
-          , dreiMetadatenText
-          , copyrightText
-          , lastUpdatedText
-          , div [ class "d-flex justify-content-center align-items-center" ]
-            [ githubLink
-            , redditLink
+            [ div [ class "overlay-content", style "overflow-y" "scroll" ]
+                [ header
+                , informationText
+                , Html.h4 [ class "artist-name urbanist-font", style "margin-top" "10px", style "margin-bottom" "4px" ] [ text texts.information_overlay_provider_title ]
+                , providerSelectionText
+                , Html.h4 [ class "artist-name urbanist-font", style "margin-top" "10px", style "margin-bottom" "4px" ] [ text texts.information_overlay_artist_title ]
+                , artistSelectionText
+                , Html.hr [ style "width" "100%", style "max-width" "calc(min(600px, 90vw))", style "margin-top" "0", style "margin-bottom" "12px" ] []
+                , dreiMetadatenText
+                , copyrightText
+                , lastUpdatedText
+                , div [ class "d-flex justify-content-center align-items-center" ]
+                    [ githubLink
+                    , redditLink
+                    ]
+                ]
             ]
-          ]
-        ]
+
     else
         div [] []
