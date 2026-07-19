@@ -353,3 +353,109 @@ body {
 .cursor-pointer {
     cursor: pointer;
 }
+
+#description-overlay {
+    position: absolute;
+    inset: 0;
+    aspect-ratio: 1 / 1;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 250ms ease;
+}
+
+#description-overlay {
+    background: rgba(0, 0, 0, 0.90);
+
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+#description-content {
+    color: white;
+
+    font-family: 'Urbanist', sans-serif;
+    line-height: 1.6;
+
+    padding: 2rem;
+
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#description-overlay::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 40px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.75)
+        );
+
+    pointer-events: none;
+
+    border-radius: 0 0 20px 20px;
+}
+
+#description-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#cover-img.description-visible {
+    opacity: 0.3;
+}
+
+#cover-img {
+    transition: opacity 250ms ease;
+}
+
+#info-button img {
+    width: 22px;
+    height: 22px;
+
+    display: block;
+
+    pointer-events: none; /* prevents weird click offset issues */
+}
+
+#info-button {
+    position: absolute;
+    right: 5px;
+    bottom: 45px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: black;
+    opacity: 0.5;
+    z-index: 3;
+}
+
+#info-button img {
+    transition: opacity 120ms ease;
+}
